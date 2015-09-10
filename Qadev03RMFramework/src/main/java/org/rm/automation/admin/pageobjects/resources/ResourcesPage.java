@@ -1,9 +1,6 @@
 package org.rm.automation.admin.pageobjects.resources;
 
 import org.testng.Assert;
-//import static org.junit.Assert.assertEquals;
-//import static org.junit.Assert.assertNotEquals;
-//import static org.junit.Assert.fail;
 
 import org.bouncycastle.jcajce.provider.asymmetric.util.ExtendedInvalidKeySpecException;
 import org.openqa.selenium.By;
@@ -12,14 +9,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.rm.automation.admin.pageobjects.NavigationBarPage;
+import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.utils.BrowserManager;
+import org.rm.automation.utils.Waiters;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
-public class ResourcesPage extends NavigationBarPage{
+public class ResourcesPage extends HomePage{
 
 	WebElement element;
 	
@@ -29,7 +27,7 @@ public class ResourcesPage extends NavigationBarPage{
 	 */
 	public AddResourcesPage AddResource()
 	{
-		WaitByXPath("//div/div/button");
+		Waiters.WaitByXPath("//div/div/button");
 		
 		WebElement element = BrowserManager.getInstance().getBrowser().findElement(By.xpath("//div/div/button"));
 		element.click();
@@ -43,7 +41,7 @@ public class ResourcesPage extends NavigationBarPage{
 	 */
 	public ResourcesPage SelectResource()
 	{
-		WaitByCss("input.ngSelectionCheckbox");
+		Waiters.WaitByCss("input.ngSelectionCheckbox");
 		
 		WebElement checkbox;
 		List<WebElement> list = GetListResources();
@@ -136,8 +134,6 @@ public class ResourcesPage extends NavigationBarPage{
 		displayNameElement = list.get(list.size()-1).findElement(By.cssSelector("div.ngCell.centeredColumn.col3.colt3"));
 		String displayName = displayNameElement.getText().replaceAll("\\s","");
 		
-//		System.out.println(nameElement);
-//		System.out.println(displayNameElement);
 		Assert.assertEquals(expName, name);
 		Assert.assertEquals(expDisplayName, displayName);
 		
@@ -152,13 +148,13 @@ public class ResourcesPage extends NavigationBarPage{
 	 */
 	public ResourcesPage VerifyResourceWasDeleted(String expName, String expDisplayName)
 	{
-		List<WebElement> list = GetListResources();
-		
 		WebElement nameElement;
 		WebElement displayNameElement;
 		
 		SelectRoomsOption();
 		SelectResourcesOption();
+		
+		List<WebElement> list = GetListResources();
 		
 		nameElement = list.get(list.size()-1).findElement(By.cssSelector("div.ngCell.centeredColumn.col2.colt2"));
 		String name = nameElement.getText().replaceAll("\\s","");
@@ -166,9 +162,6 @@ public class ResourcesPage extends NavigationBarPage{
 		displayNameElement = list.get(list.size()-1).findElement(By.cssSelector("div.ngCell.centeredColumn.col3.colt3"));
 		String displayName = displayNameElement.getText().replaceAll("\\s","");
 		
-//		System.out.println(nameElement);
-//		System.out.println(displayNameElement);
-//		System.out.println("newResource");
 		Assert.assertNotEquals(expName, name);
 		Assert.assertNotEquals(expDisplayName, displayName);
 		
@@ -182,7 +175,6 @@ public class ResourcesPage extends NavigationBarPage{
 	public ResourcesPage VerifyResourceNameWasUpdated(String expName)
 	{
 		WebElement nameElement;
-//		WebElement displayNameElement;
 
 		SelectRoomsOption();
 		SelectResourcesOption();
@@ -192,57 +184,8 @@ public class ResourcesPage extends NavigationBarPage{
 		nameElement = list.get(list.size()-1).findElement(By.cssSelector("div.ngCell.centeredColumn.col2.colt2"));
 		String name = nameElement.getText().replaceAll("\\s","");
 		
-//		displayNameElement = list.get(list.size()-1).findElement(By.cssSelector("div.ngCell.centeredColumn.col3.colt3"));
-//		String displayName = displayNameElement.getText().replaceAll("\\s","");
-		
-//		System.out.println(nameElement);
-//		System.out.println(displayNameElement);
 		Assert.assertEquals(expName, name);
-//		assertEquals(expDisplayName, displayName);
 		
 		return this;
-	}
-	
-	
-	/**
-	 * Wait by path
-	 * @param path
-	 */
-	private void WaitByXPath(String path)
-	{
-		WebDriverWait wait = new WebDriverWait(BrowserManager
-				.getInstance()
-				.getBrowser(), 10);
-		
-		wait.until(ExpectedConditions
-				.presenceOfElementLocated(By.xpath(path)));
-	}
-	
-	/**
-	 * Wait by css
-	 * @param path
-	 */
-	private void WaitByCss(String path)
-	{
-		WebDriverWait wait = new WebDriverWait(BrowserManager
-				.getInstance()
-				.getBrowser(), 5);
-		
-		wait.until(ExpectedConditions
-				.presenceOfElementLocated(By.cssSelector(path)));
-	}
-	
-	/**
-	 * Wait by id
-	 * @param id
-	 */
-	private void WaitById(String id)
-	{
-		WebDriverWait wait = new WebDriverWait(BrowserManager
-				.getInstance()
-				.getBrowser(), 5);
-		
-		wait.until(ExpectedConditions
-				.presenceOfElementLocated(By.id(id)));
 	}
 }

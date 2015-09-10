@@ -10,7 +10,7 @@ public class LoginPage {
 	{
 		WebElement username = BrowserManager.getInstance().getBrowser().findElement(By.id("loginUsername"));
 		username.sendKeys(name);
-		
+				
 		return this;
 	}
 	

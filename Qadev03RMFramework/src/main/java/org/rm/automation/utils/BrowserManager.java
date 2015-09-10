@@ -7,9 +7,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserManager {
 
-	WebDriver driver;
+	public WebDriver driver;
 	private static BrowserManager instance = null;
-	
+		
 	protected BrowserManager() {
 		String baseUrl = "http://172.20.208.79:4040/admin/#/admin";
 		driver = new FirefoxDriver();
@@ -38,8 +38,6 @@ public class BrowserManager {
 	public void exit()
 	{
 		this.driver.quit();
-//		System.out.println("Entering new instance ");
 		instance = null;
-//		System.out.println("Instance: "+ instance);
 	}
 }
