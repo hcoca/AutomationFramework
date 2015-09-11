@@ -1,34 +1,36 @@
 package org.rm.automation.admin.pageobjects.locations;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class FormAssociateRoomPage {
 	private WebDriver driver;
-	private By searchTextBox = By.xpath("//input[@ng-model='searchDisplayName']");
-	private By addRoomBtn = By.xpath("//button[@ng-click='assignRoom(room)']");
-	private By infoLink = By.xpath("//a[contains(.,'Location Info')]");
+	@FindBy(xpath="//input[@ng-model='searchDisplayName']")
+	  WebElement searchTextBox;
+	@FindBy(xpath="//button[@ng-click='assignRoom(room)']")
+	  WebElement addRoomBtn;
+	@FindBy(xpath="//a[contains(.,'Location Info')]")
+	  WebElement infoLink;
 	
 	public FormAssociateRoomPage(WebDriver driver) {
 		this.driver=driver;
+		PageFactory.initElements(driver, this);
 	}
 	public void searchConferenceRoom(String roomName) {
-		WebElement searchTxtBox = driver.findElement(searchTextBox);
-		if(searchTxtBox.isDisplayed())
-			searchTxtBox.sendKeys(roomName);
+		if(searchTextBox.isDisplayed())
+			searchTextBox.sendKeys(roomName);
 	}
 	public void addLocationsAssociate() {
-		WebElement addRoomBut = driver.findElement(addRoomBtn);
-		if(addRoomBut.isDisplayed())
-			addRoomBut.click();		
+		if(addRoomBtn.isDisplayed())
+			addRoomBtn.click();		
 	}
 	public FormLocationPage associateConferenceRoom(String roomName) {
 		searchConferenceRoom(roomName);
 		addLocationsAssociate();
-		WebElement infoLnk = driver.findElement(infoLink);
-		if(infoLnk.isDisplayed())
-			infoLnk.click();		
+		if(infoLink.isDisplayed())
+			infoLink.click();		
 		return new FormLocationPage(driver);
 	}
 
