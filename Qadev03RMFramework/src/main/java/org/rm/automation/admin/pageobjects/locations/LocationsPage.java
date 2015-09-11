@@ -3,20 +3,24 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.testng.Assert;
 
 public class LocationsPage extends HomePage{
-	private Actions ac;
-
-	private By addBtn = By.xpath("//button[@ui-sref='admin.locations.modal.add']");
-	private By removeBtn = By.xpath("//button[@ui-sref='admin.locations.remove']");
+	private Actions ac;	
 	private By cellName;
 	private By cellDisplayName;
 	private By cellConfRoom;
+	@FindBy(xpath="//button[@ui-sref='admin.locations.modal.add']")
+	  WebElement addBtn;
+	@FindBy(xpath="//button[@ui-sref='admin.locations.remove']")
+	  WebElement removeBtn;
 
 	public LocationsPage(WebDriver driver) {
 		super(driver);
+		PageFactory.initElements(driver, this);
 		ac = new Actions(driver);
 	}
 	public boolean verifyLocationName(String name) {
@@ -46,22 +50,9 @@ public class LocationsPage extends HomePage{
 		Assert.assertTrue(verifyLocationConfRooms(confRooms), "Location COnference Rooms doesn't match");
 		return this;
 	}
-	public boolean verifyAddButton() {
-		WebElement element = driver.findElement(addBtn);
-		String buttonText = element.getText();
-		String expectedButtonText = "Add";
-		return buttonText.contains(expectedButtonText);
-	}
-	public boolean verifyRemoveButton() {
-		WebElement element = driver.findElement(removeBtn);
-		String buttonText = element.getText();
-		String expectedButtonText = "Remove";
-		return buttonText.contains(expectedButtonText);
-	}
 	public FormLocationPage clickonAddButton() {
-		WebElement element=driver.findElement(addBtn);
-		if(element.isDisplayed()||element.isEnabled())
-			element.click();
+		if(addBtn.isDisplayed()||addBtn.isEnabled())
+			addBtn.click();
 		return new FormLocationPage(driver);
 	}
 	public FormLocationPage clickonLocation(String locationToChange) {
