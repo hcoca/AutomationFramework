@@ -5,17 +5,18 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
+import org.rm.automation.base.MyWebDriver;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.admin.pageobjects.LoginPage;
 
 public class createBasicLocation extends TestBaseSetup{
+	public static MyWebDriver myWebDriver;
 	private WebDriver driver;
 	private LoginPage loginPage;
 
   @BeforeClass
   public void setUp() throws Exception {
-	  driver=getDriver();
+	  driver=myWebDriver.myDriver;
   }
 
   @Test

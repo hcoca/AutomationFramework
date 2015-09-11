@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="16815" started-at="2015-09-11T02:00:13Z" finished-at="2015-09-11T02:00:30Z">
+  <suite name="Suite" duration-ms="29660" started-at="2015-09-11T16:16:28Z" finished-at="2015-09-11T16:16:58Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="16815" started-at="2015-09-11T02:00:13Z" finished-at="2015-09-11T02:00:30Z">
+    <test name="Test" duration-ms="29660" started-at="2015-09-11T16:16:28Z" finished-at="2015-09-11T16:16:58Z">
       <class name="org.rm.automation.admin.tests.locations.createBasicLocation">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String)[pri:0, instance:org.rm.automation.admin.tests.locations.createBasicLocation@54864c]" name="initializeTestBaseSetup" is-config="true" duration-ms="7356" started-at="2015-09-10T22:00:13Z" finished-at="2015-09-10T22:00:20Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:org.rm.automation.admin.tests.locations.createBasicLocation@d03350]" name="setUp" is-config="true" duration-ms="0" started-at="2015-09-11T12:16:28Z" finished-at="2015-09-11T12:16:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCreateBasicLocation()[pri:0, instance:org.rm.automation.admin.tests.locations.createBasicLocation@d03350]" name="testCreateBasicLocation" duration-ms="17628" started-at="2015-09-11T12:16:28Z" finished-at="2015-09-11T12:16:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateBasicLocation -->
+      </class> <!-- org.rm.automation.admin.tests.locations.createBasicLocation -->
+      <class name="org.rm.automation.admin.tests.locations.createAssociatedLocation">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String)[pri:0, instance:org.rm.automation.admin.tests.locations.createAssociatedLocation@40a47f]" name="initializeTestBaseSetup" is-config="true" duration-ms="37842" started-at="2015-09-11T12:15:50Z" finished-at="2015-09-11T12:16:28Z">
           <params>
             <param index="0">
               <value>
@@ -23,19 +33,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:org.rm.automation.admin.tests.locations.createBasicLocation@54864c]" name="setUp" is-config="true" duration-ms="171" started-at="2015-09-10T22:00:20Z" finished-at="2015-09-10T22:00:20Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:org.rm.automation.admin.tests.locations.createAssociatedLocation@40a47f]" name="setUp" is-config="true" duration-ms="0" started-at="2015-09-11T12:16:46Z" finished-at="2015-09-11T12:16:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testCreateBasicLocation()[pri:0, instance:org.rm.automation.admin.tests.locations.createBasicLocation@54864c]" name="testCreateBasicLocation" duration-ms="6233" started-at="2015-09-10T22:00:20Z" finished-at="2015-09-10T22:00:26Z">
+        <test-method status="PASS" signature="testCreateAssociatedLocation()[pri:0, instance:org.rm.automation.admin.tests.locations.createAssociatedLocation@40a47f]" name="testCreateAssociatedLocation" duration-ms="11796" started-at="2015-09-11T12:16:46Z" finished-at="2015-09-11T12:16:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCreateBasicLocation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.rm.automation.admin.tests.locations.createBasicLocation@54864c]" name="tearDown" is-config="true" duration-ms="3024" started-at="2015-09-10T22:00:26Z" finished-at="2015-09-10T22:00:30Z">
+        </test-method> <!-- testCreateAssociatedLocation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.rm.automation.admin.tests.locations.createAssociatedLocation@40a47f]" name="tearDown" is-config="true" duration-ms="10914" started-at="2015-09-11T12:16:59Z" finished-at="2015-09-11T12:17:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- org.rm.automation.admin.tests.locations.createBasicLocation -->
+      </class> <!-- org.rm.automation.admin.tests.locations.createAssociatedLocation -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

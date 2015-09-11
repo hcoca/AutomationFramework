@@ -5,10 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
 public class TestBaseSetup {
+	public static MyWebDriver myWebDriver;
 	private WebDriver driver = null;
 	static String driverPath = "D:\\Instaladores";
 
@@ -17,19 +20,23 @@ public class TestBaseSetup {
 	}
 
 	private void setDriver(String browserType, String appURL) {
-		
-		switch (browserType) {
-		case "chrome":
-			driver = initChromeDriver(appURL);
-			break;
-		case "firefox":
-			driver = initFirefoxDriver(appURL);
-			break;
-		default:
-			System.out.println("browser : " + browserType
-					+ " is invalid, Launching Firefox as browser of choice..");
-			driver = initFirefoxDriver(appURL);
+		if(driver == null)
+		{
+			switch (browserType) {
+			case "chrome":
+				driver = initChromeDriver(appURL);
+				break;
+			case "firefox":
+				driver = initFirefoxDriver(appURL);
+				break;
+			default:
+				System.out.println("browser : " + browserType
+						+ " is invalid, Launching Firefox as browser of choice..");
+				driver = initFirefoxDriver(appURL);
+			}
 		}
+		else
+			getDriver();
 	}
 
 	private static WebDriver initChromeDriver(String appURL) {
@@ -37,8 +44,9 @@ public class TestBaseSetup {
 		System.setProperty("webdriver.chrome.driver", driverPath
 				+ "chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		driver.manage().window().maximize();		
 		driver.navigate().to(appURL);
+		myWebDriver = new MyWebDriver(driver);
 		return driver;
 	}
 
@@ -46,12 +54,13 @@ public class TestBaseSetup {
 		System.out.println("Launching Firefox browser..");
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.navigate().to(appURL);		
+		driver.navigate().to(appURL);	
+		myWebDriver = new MyWebDriver(driver);
 		return driver;
 	}
 
 	@Parameters({ "browserType", "appURL" })
-	@BeforeClass
+	@BeforeSuite
 	public void initializeTestBaseSetup(String browserType, String appURL) {
 		try {
 			setDriver(browserType, appURL);
@@ -62,7 +71,7 @@ public class TestBaseSetup {
 		}
 	}
 	
-	@AfterClass
+	@AfterSuite
 	public void tearDown() {
 		driver.quit();
 	}
