@@ -6,6 +6,7 @@
   <test name="Test">
     <classes>
       <class name="org.rm.automation.admin.tests.locations.createBasicLocation"/>
+      <class name="org.rm.automation.admin.tests.locations.createAssociatedLocation"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
