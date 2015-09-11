@@ -9,6 +9,9 @@ public class DeleteResourcesPage {
 	private WebElement element;
 	private WebDriver driver;
 	
+	private String removePath = "button.info";
+	private By removeButton = By.cssSelector(removePath);
+	
 	public DeleteResourcesPage(WebDriver driver) {
 		this.driver=driver;
 	}
@@ -19,10 +22,10 @@ public class DeleteResourcesPage {
 	 */
 	public ResourcesPage Remove()
 	{
-		Waiters.WaitByCss("button.info", driver);
+		Waiters.WaitByCss(removePath, driver);
 		
 		element = driver
-				.findElement(By.cssSelector("button.info"));
+				.findElement(removeButton);
 		element.click();
 		
 		return new ResourcesPage(driver);

@@ -5,9 +5,7 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -37,7 +35,7 @@ public class ConferenceRoomsRequests {
 			
 	
 	/**
-	 * Get all the resources
+	 * Get all the rooms
 	 * @throws UnsupportedOperationException
 	 * @throws IOException
 	 */
@@ -81,7 +79,7 @@ public class ConferenceRoomsRequests {
 	}
 
 	/**
-	 * Create a resource
+	 * Update a room
 	 * @throws UnsupportedOperationException
 	 * @throws IOException
 	 */
@@ -116,6 +114,11 @@ public class ConferenceRoomsRequests {
         }
 	}
 	
+	/**
+	 * Get a room's id providing the customDisplayName of the room
+	 * @param name
+	 * @return
+	 */
 	public static String getRoomId(String name)
 	{
 		String id = "";

@@ -130,6 +130,12 @@ public class ResourcesRequests {
         }
 	}
 	
+	/**
+	 * Method to delete a resource
+	 * @param resourceId
+	 * @throws UnsupportedOperationException
+	 * @throws IOException
+	 */
 	public static void deleteResource(String resourceId) throws UnsupportedOperationException, IOException
 	{
 		String url = resourceByIdEp.replace("[id]", resourceId);
@@ -149,7 +155,11 @@ public class ResourcesRequests {
 		catch (IOException ex) {
         }
 	}
-	
+	/**
+	 * Get a resource's id providing the name of the resource
+	 * @param name
+	 * @return
+	 */
 	public static String getResourceId(String name)
 	{
 		String id = "";

@@ -30,7 +30,7 @@ public class ServicesRequests {
 			.replace("[port]", settings.getProperty("port"));
 	
 	/**
-	 * Get all the resources
+	 * Get all the services
 	 * @throws UnsupportedOperationException
 	 * @throws IOException
 	 */
@@ -76,6 +76,10 @@ public class ServicesRequests {
 		return listResponse;
 	}
 	
+	/**
+	 * Get the service's id
+	 * @return
+	 */
 	public static String getServiceId()
 	{
 		try {

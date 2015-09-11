@@ -80,7 +80,7 @@ public class LocationsRequests {
 	}
 
 	/**
-	 * Create a resource
+	 * Create a location
 	 * @throws UnsupportedOperationException
 	 * @throws IOException
 	 */
@@ -115,6 +115,12 @@ public class LocationsRequests {
         }
 	}
 	
+	/**
+	 * Delete a location
+	 * @param locationId
+	 * @throws UnsupportedOperationException
+	 * @throws IOException
+	 */
 	public static void deleteLocation(String locationId) throws UnsupportedOperationException, IOException
 	{
 		String url = locationByIdEp.replace("[id]", locationId);
@@ -135,6 +141,11 @@ public class LocationsRequests {
         }
 	}
 	
+	/**
+	 * Get a locations's id providing the name of the location
+	 * @param name
+	 * @return
+	 */
 	public static String getLocationId(String name)
 	{
 		String id = "";
