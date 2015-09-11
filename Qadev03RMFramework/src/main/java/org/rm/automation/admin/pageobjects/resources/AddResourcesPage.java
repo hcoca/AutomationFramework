@@ -10,6 +10,14 @@ public class AddResourcesPage {
 	private WebElement element;
 	private WebDriver driver;
 	
+	private String namePath = "(//input[@type='text'])[3]";
+	private String displayNamePath = "(//input[@type='text'])[4]";
+	private String savePath = "button.info";
+	
+	private By nameField = By.xpath(namePath);
+	private By displayNameField = By.xpath(displayNamePath);
+	private By saveButton = By.cssSelector(savePath);
+	
 	public AddResourcesPage(WebDriver driver) {
 		this.driver=driver;
 	}
@@ -21,13 +29,11 @@ public class AddResourcesPage {
 	 */
 	public AddResourcesPage setName(String name)
 	{
-		Waiters.WaitByXPath("(//input[@type='text'])[3]", driver);
+		Waiters.WaitByXPath(namePath, driver);
 		
-		element = driver
-				.findElement(By.xpath("(//input[@type='text'])[3]"));
+		element = driver.findElement(nameField);
 		element.clear();
 		element.sendKeys(name);
-		
 		return this;
 	}
 	
@@ -38,10 +44,8 @@ public class AddResourcesPage {
 	 */
 	public AddResourcesPage setDisplayName(String displayName)
 	{
-		element = driver
-				.findElement(By.xpath("(//input[@type='text'])[4]"));
+		element = driver.findElement(displayNameField);
 		element.sendKeys(displayName);
-		
 		return this;
 	}
 	
@@ -51,10 +55,8 @@ public class AddResourcesPage {
 	 */
 	public ResourcesPage Save()
 	{
-		
-		element = driver.findElement(By.cssSelector("button.info"));
+		element = driver.findElement(saveButton);
 		element.click();		
-		
 		return new ResourcesPage(driver);
 	}
 }

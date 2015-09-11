@@ -38,9 +38,6 @@ public class CreateResource extends TestBaseSetup {
 				.Save()
 				.VerifyResourceWasCreated(name, displayName)
 				.SignOut();
-		
-		
-		
 	}
 	
 	@AfterTest
@@ -51,7 +48,6 @@ public class CreateResource extends TestBaseSetup {
 		try {
 		id = ResourcesRequests.getResourceId(name);
 		ResourcesRequests.deleteResource(id);
-//		BrowserManager.getInstance().getBrowser().quit();
 	
 		} catch (UnsupportedOperationException | IOException e) {
 		e.printStackTrace();

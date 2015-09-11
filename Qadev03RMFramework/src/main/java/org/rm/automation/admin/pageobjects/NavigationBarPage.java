@@ -8,10 +8,7 @@ import org.rm.automation.admin.pageobjects.emailServers.EmailServersPage;
 import org.rm.automation.admin.pageobjects.locations.LocationsPage;
 import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
 import org.rm.automation.admin.pageobjects.locations.IssuesPage;
-//import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
-import org.rm.automation.utils.BrowserManager;
 import org.rm.automation.utils.Waiters;
-
 
 public class NavigationBarPage {
 	/*-------------------------------------------*/
@@ -70,7 +67,4 @@ public class NavigationBarPage {
 		
 		return new ConferenceRoomsPage(driver);
 	}
-
-
-
 }

@@ -2,20 +2,14 @@ package org.rm.automation.admin.pageobjects.resources;
 
 import org.testng.Assert;
 
-import org.bouncycastle.jcajce.provider.asymmetric.util.ExtendedInvalidKeySpecException;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.utils.Waiters;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 
 public class ResourcesPage extends HomePage{
 
@@ -81,7 +75,6 @@ public class ResourcesPage extends HomePage{
 		List<WebElement> list = GetListResources();
 		element = list.get(list.size()-1);
 		
-		Actions action = new Actions(driver);
 		action.moveToElement(element.findElement(By.cssSelector("div.ng-scope > span.ng-binding"))).doubleClick().build().perform();
 		
 		return new AddResourcesPage(driver);
