@@ -1,108 +1,71 @@
 package org.rm.automation.admin.pageobjects.emailServers;
 
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.rm.automation.utils.BrowserManager;
+import org.rm.automation.utils.LogManager;
+
+
+
+
 
 public class AddEmailServersPage {
+	
+	WebDriver driver ; 
+	  @FindBy(xpath="//h3")
+	  WebElement textaddserver;
+	  // text para agregar
+	  @FindBy(id="add-mailserver-hostname")
+	  WebElement serverinput;
+	  
+	  @FindBy(id="add-mailserver-username")
+	  WebElement usrname;
+	  
+	  @FindBy(id="add-mailserver-password")
+	  WebElement pwusrname;
+	  // botones luego de ingresar datos
+	  @FindBy(xpath="//button[@ng-click='sendRequest()']")
+	  WebElement addserverbtn;
+	  
+	  @FindBy(xpath="//button[@ng-click='cancel()']")
+	  WebElement cancelserverbtn;
+	  
+	  public AddEmailServersPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	  }
+	  
+	  public String returntext() {
+			return textaddserver.getText();
+	  }
+	  public void sethostname(String hostname) 
+	  {
+		  serverinput.sendKeys(hostname);
+	  }
+	  public void setUsrName(String usraddserver)
+	  {
+		  usrname.sendKeys(usraddserver);
+	  }
+	  public void setPassWord(String pwusr) {
+		  pwusrname.sendKeys(pwusr);
+	  }
+	  public EmailServersPage saveserverbtn() {
+		  (new WebDriverWait(driver, 20))
+			.until(ExpectedConditions.visibilityOf(addserverbtn));
+		  LogManager.info(" -- > click save button on panel Emailserver");
+		  addserverbtn.click();
+		  EmailServersPage email = new EmailServersPage(driver);
+		  (new WebDriverWait(driver, 50000))
+			.until(ExpectedConditions.visibilityOf(email.testexangeadded));
+		  return email;
+		  
+	  }
+	  public EmailServersPage cancelserverbtn() {
+		  cancelserverbtn.click();
+		  return new EmailServersPage(driver);
+	  }
 
-	WebElement element;
-	
-	/**
-	 * Method to set the hostname
-	 * @param hostname
-	 * @return
-	 */
-	public AddEmailServersPage SetHostname(String hostname)
-	{
-		element = BrowserManager
-				.getInstance()
-				.getBrowser()
-				.findElement(By.id("add-mailserver-hostname"));
-		element.sendKeys(hostname);
-		
-		return this;
-	}
-	
-	/**
-	 * Method to set the username of the exchange server
-	 * @param username
-	 * @return
-	 */
-	public AddEmailServersPage SetUsername(String username)
-	{
-		element = BrowserManager
-				.getInstance()
-				.getBrowser()
-				.findElement(By.id("add-mailserver-username"));
-		element.sendKeys(username);
-		
-		return this;
-	}
-	
-	/**
-	 * Method to set the password of the exchange server
-	 * @param password
-	 * @return
-	 */
-	public AddEmailServersPage SetPassword(String password)
-	{
-		element = BrowserManager
-				.getInstance()
-				.getBrowser()
-				.findElement(By.id("add-mailserver-password"));
-		element.sendKeys(password);
-		
-		return this;
-	}
-	
-	/**
-	 * Method to click the save button
-	 * @return
-	 */
-	public EmailServersPage Save()
-	{
-		WaitByCss("div.modal-footer.ng-scope > button.btn.btn-primary");
-		
-		element = BrowserManager
-				.getInstance()
-				.getBrowser()
-				.findElement(By.cssSelector("div.modal-footer.ng-scope > button.btn.btn-primary"));
-		element.click();
-		
-		return new EmailServersPage();
-	}
-		
-	/**
-	 * Wait by id
-	 * @param id
-	 */
-	private void WaitById(String id)
-	{
-		WebDriverWait wait = new WebDriverWait(BrowserManager
-				.getInstance()
-				.getBrowser(), 5);
-		
-		wait.until(ExpectedConditions
-				.presenceOfElementLocated(By.id(id)));
-	}
-	
-	/**
-	 * Wait by css
-	 * @param path
-	 */
-	private void WaitByCss(String path)
-	{
-		WebDriverWait wait = new WebDriverWait(BrowserManager
-				.getInstance()
-				.getBrowser(), 5);
-		
-		wait.until(ExpectedConditions
-				.presenceOfElementLocated(By.cssSelector(path)));
-	}
 }

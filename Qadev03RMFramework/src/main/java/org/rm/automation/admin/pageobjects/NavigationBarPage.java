@@ -1,13 +1,8 @@
 package org.rm.automation.admin.pageobjects;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.emailServers.EmailServersPage;
 import org.rm.automation.admin.pageobjects.locations.LocationsPage;
@@ -22,6 +17,8 @@ public class NavigationBarPage {
 	protected WebDriver driver;
 	private By locationsLink = By.linkText("Locations");
 	private By issuesLink = By.linkText("Issues");
+	private By EmailServer = By.linkText("Email Servers");
+	
 	public NavigationBarPage(WebDriver driver) {
 		this.driver=driver;
 	}
@@ -37,6 +34,14 @@ public class NavigationBarPage {
 		if(element.isDisplayed()||element.isEnabled())
 			element.click();
 		return new IssuesPage(driver);
+	}
+	
+	public EmailServersPage SelectEmailServersOption()
+	{
+		WebElement element=driver.findElement(EmailServer);
+		if(element.isDisplayed()||element.isEnabled())
+			element.click();
+		return new EmailServersPage(driver);
 	}
 	/*-------------------------------------------*/
 	/*public ResourcesPage SelectResourcesOption()
@@ -60,15 +65,7 @@ public class NavigationBarPage {
 		return new ConferenceRoomsPage();
 	}
 	
-	public EmailServersPage SelectEmailServersOption()
-	{
-		Waiters.WaitByLinkText("Email Servers");
-		
-		WebElement resources = BrowserManager.getInstance().getBrowser().findElement(By.linkText("Email Servers"));
-		resources.click();
-		
-		return new EmailServersPage();
-	}
+
 	
 	
 	
