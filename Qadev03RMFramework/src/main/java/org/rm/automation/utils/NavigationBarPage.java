@@ -9,10 +9,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.emailServers.EmailServersPage;
-import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
+//import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
 
 public class NavigationBarPage {
-	public ResourcesPage SelectResourcesOption()
+	/*public ResourcesPage SelectResourcesOption()
 	{
 		Waiters.WaitByLinkText("Resources");
 		
@@ -21,7 +21,7 @@ public class NavigationBarPage {
 		
 		return new ResourcesPage();
 	}
-	
+	*/
 	public ConferenceRoomsPage SelectRoomsOption()
 	{
 		Waiters.WaitByLinkText("Conference Rooms");

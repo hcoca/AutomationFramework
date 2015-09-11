@@ -4,17 +4,42 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.emailServers.EmailServersPage;
-import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
+import org.rm.automation.admin.pageobjects.locations.LocationsPage;
+import org.rm.automation.admin.pageobjects.locations.IssuesPage;
+//import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
 import org.rm.automation.utils.BrowserManager;
 import org.rm.automation.utils.Waiters;
 
+
 public class NavigationBarPage {
-	public ResourcesPage SelectResourcesOption()
+	/*-------------------------------------------*/
+	protected WebDriver driver;
+	private By locationsLink = By.linkText("Locations");
+	private By issuesLink = By.linkText("Issues");
+	public NavigationBarPage(WebDriver driver) {
+		this.driver=driver;
+	}
+	public LocationsPage SelectLocationsOption()
+	{
+		WebElement element=driver.findElement(locationsLink);
+		if(element.isDisplayed()||element.isEnabled())
+			element.click();
+		return new LocationsPage(driver);
+	}
+	public IssuesPage  SelectIssuesOption() {
+		WebElement element=driver.findElement(issuesLink);
+		if(element.isDisplayed()||element.isEnabled())
+			element.click();
+		return new IssuesPage(driver);
+	}
+	/*-------------------------------------------*/
+	/*public ResourcesPage SelectResourcesOption()
 	{
 		Waiters.WaitByLinkText("Resources");
 		
@@ -22,7 +47,8 @@ public class NavigationBarPage {
 		resources.click();
 		
 		return new ResourcesPage();
-	}
+	}*/
+	
 	
 	public ConferenceRoomsPage SelectRoomsOption()
 	{
@@ -43,6 +69,8 @@ public class NavigationBarPage {
 		
 		return new EmailServersPage();
 	}
+	
+	
 	
 //	private boolean isElementPresent(By by) {
 //	    try {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <parameter name="appURL" value="http://172.20.208.113:4040/admin/#/login"/>
+  <parameter name="browserType" value="firefox"/>
+  <test name="Test(failed)">
+    <classes>
+      <class name="org.rm.automation.admin.tests.locations.createBasicLocation">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="testCreateBasicLocation"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.locations.createBasicLocation -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
