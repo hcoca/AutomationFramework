@@ -11,17 +11,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.emailServers.EmailServersPage;
 import org.rm.automation.admin.pageobjects.locations.LocationsPage;
+import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
 import org.rm.automation.admin.pageobjects.locations.IssuesPage;
-//import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
 import org.rm.automation.utils.BrowserManager;
 import org.rm.automation.utils.Waiters;
-
 
 public class NavigationBarPage {
 	/*-------------------------------------------*/
 	protected WebDriver driver;
 	private By locationsLink = By.linkText("Locations");
 	private By issuesLink = By.linkText("Issues");
+	private By resourcesLink = By.linkText("Resources");
+	private By roomsLink = By.linkText("Conference Rooms");
+	
 	public NavigationBarPage(WebDriver driver) {
 		this.driver=driver;
 	}
@@ -38,57 +40,28 @@ public class NavigationBarPage {
 			element.click();
 		return new IssuesPage(driver);
 	}
-	/*-------------------------------------------*/
-	/*public ResourcesPage SelectResourcesOption()
+	public ResourcesPage SelectResourcesOption()
 	{
-		Waiters.WaitByLinkText("Resources");
 		
-		WebElement resources = BrowserManager.getInstance().getBrowser().findElement(By.linkText("Resources"));
-		resources.click();
+		Waiters.WaitByLinkText("Resources", driver);
+		System.out.println("Searching Resources link");
 		
-		return new ResourcesPage();
-	}*/
+		WebElement element=driver.findElement(resourcesLink);
+//		if(element.isDisplayed()||element.isEnabled())
+			element.click();
+		
+		return new ResourcesPage(driver);
+	}
 	
 	
 	public ConferenceRoomsPage SelectRoomsOption()
 	{
-		Waiters.WaitByLinkText("Conference Rooms");
+		Waiters.WaitByLinkText("Conference Rooms", driver);
 		
-		WebElement resources = BrowserManager.getInstance().getBrowser().findElement(By.linkText("Conference Rooms"));
-		resources.click();
+		WebElement element=driver.findElement(roomsLink);
+		if(element.isDisplayed()||element.isEnabled())
+			element.click();
 		
-		return new ConferenceRoomsPage();
+		return new ConferenceRoomsPage(driver);
 	}
-	
-	public EmailServersPage SelectEmailServersOption()
-	{
-		Waiters.WaitByLinkText("Email Servers");
-		
-		WebElement resources = BrowserManager.getInstance().getBrowser().findElement(By.linkText("Email Servers"));
-		resources.click();
-		
-		return new EmailServersPage();
-	}
-	
-	
-	
-//	private boolean isElementPresent(By by) {
-//	    try {
-//	    	BrowserManager.getInstance().getBrowser().findElement(by);
-//	      return true;
-//	    } catch (NoSuchElementException e) {
-//	      return false;
-//	    }
-//	  }
-	
-//	private void WaitByLinkText(String link)
-//	{
-//		WebDriverWait wait = new WebDriverWait(BrowserManager
-//				.getInstance()
-//				.getBrowser(), 10);
-//		
-//		wait.until(ExpectedConditions
-//				.presenceOfElementLocated(By.linkText(link)));
-//	}
-
 }

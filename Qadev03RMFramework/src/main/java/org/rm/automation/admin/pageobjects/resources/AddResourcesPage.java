@@ -1,16 +1,19 @@
 package org.rm.automation.admin.pageobjects.resources;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.rm.automation.utils.BrowserManager;
 import org.rm.automation.utils.Waiters;
 
 public class AddResourcesPage {
 	
-	WebElement element;
+	private WebElement element;
+	private WebDriver driver;
+	
+	public AddResourcesPage(WebDriver driver) {
+		this.driver=driver;
+	}
+	
 	/**
 	 * Method to set the name of a resource
 	 * @param name
@@ -18,11 +21,9 @@ public class AddResourcesPage {
 	 */
 	public AddResourcesPage setName(String name)
 	{
-		Waiters.WaitByXPath("(//input[@type='text'])[3]");
+		Waiters.WaitByXPath("(//input[@type='text'])[3]", driver);
 		
-		element = BrowserManager
-				.getInstance()
-				.getBrowser()
+		element = driver
 				.findElement(By.xpath("(//input[@type='text'])[3]"));
 		element.clear();
 		element.sendKeys(name);
@@ -37,9 +38,7 @@ public class AddResourcesPage {
 	 */
 	public AddResourcesPage setDisplayName(String displayName)
 	{
-		element = BrowserManager
-				.getInstance()
-				.getBrowser()
+		element = driver
 				.findElement(By.xpath("(//input[@type='text'])[4]"));
 		element.sendKeys(displayName);
 		
@@ -53,12 +52,9 @@ public class AddResourcesPage {
 	public ResourcesPage Save()
 	{
 		
-		element = BrowserManager
-				.getInstance()
-				.getBrowser()
-				.findElement(By.cssSelector("button.info"));
+		element = driver.findElement(By.cssSelector("button.info"));
 		element.click();		
 		
-		return new ResourcesPage();
+		return new ResourcesPage(driver);
 	}
 }

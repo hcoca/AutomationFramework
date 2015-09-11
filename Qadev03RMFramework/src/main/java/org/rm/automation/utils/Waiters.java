@@ -4,21 +4,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.rm.automation.base.TestBaseSetup;
 
-public class Waiters {
-	
-	static WebDriver driver = BrowserManager
-			.getInstance()
-			.getBrowser();
+
+public class Waiters extends TestBaseSetup{
 	
 	/**
 	 * Wait by path
 	 * @param path
 	 */
-	public static void WaitByXPath(String path)
+	public static void WaitByXPath(String path, WebDriver driver)
 	{
+		System.out.println("Entering wait 2");
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		
+		System.out.println("waiting 2");
 		wait.until(ExpectedConditions
 				.presenceOfElementLocated(By.xpath(path)));
 	}
@@ -27,7 +26,7 @@ public class Waiters {
 	 * Wait by css
 	 * @param path
 	 */
-	public static void WaitByCss(String path)
+	public static void WaitByCss(String path, WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		
@@ -39,7 +38,7 @@ public class Waiters {
 	 * Wait by id
 	 * @param id
 	 */
-	public static void WaitById(String id)
+	public static void WaitById(String id, WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		
@@ -51,10 +50,11 @@ public class Waiters {
 	 * Wait by link text
 	 * @param link
 	 */
-	public static void WaitByLinkText(String link)
+	public static void WaitByLinkText(String link, WebDriver driver)
 	{
+		System.out.println("entering wait");
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		
+		System.out.println("waiting");
 		wait.until(ExpectedConditions
 				.presenceOfElementLocated(By.linkText(link)));
 	}
@@ -63,7 +63,7 @@ public class Waiters {
 	 * Wait by tagname
 	 * @param link
 	 */
-	public static void WaitByTagname(String tagname)
+	public static void WaitByTagname(String tagname, WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		
@@ -75,7 +75,7 @@ public class Waiters {
 	 * Wait by class name
 	 * @param link
 	 */
-	public static void WaitByClassname(String className)
+	public static void WaitByClassname(String className, WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		
@@ -87,7 +87,7 @@ public class Waiters {
 	 * Wait by partial Link
 	 * @param link
 	 */
-	public static void WaitByPartialLink(String partialLink)
+	public static void WaitByPartialLink(String partialLink, WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		
