@@ -32,7 +32,7 @@ public class NavigationBarPage {
 		return new ConferenceRoomsPage();
 	}
 	
-	public EmailServersPage SelectEmailServersOption()
+/*	public EmailServersPage SelectEmailServersOption()
 	{
 		Waiters.WaitByLinkText("Email Servers");
 		
@@ -40,5 +40,5 @@ public class NavigationBarPage {
 		resources.click();
 		
 		return new EmailServersPage();
-	}
+	}*/
 }
