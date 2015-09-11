@@ -42,7 +42,7 @@ public class CreateResource extends TestBaseSetup {
 				.SignOut();
 	}
 	
-	@AfterTest
+	@AfterMethod
 	public void Postconditions()
 	{
 		System.out.println("After Test - Create Resource");

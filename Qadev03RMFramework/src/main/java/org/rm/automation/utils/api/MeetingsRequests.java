@@ -17,6 +17,7 @@ import org.apache.http.util.EntityUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.rm.automation.utils.ReadPropertyValues;
 
 public class MeetingsRequests {
@@ -41,8 +42,9 @@ public class MeetingsRequests {
 	 * Get all the resources
 	 * @throws UnsupportedOperationException
 	 * @throws IOException
+	 * @throws ParseException 
 	 */
-	public static ArrayList<JSONObject> getRoomMeetings() throws UnsupportedOperationException, IOException
+	public static ArrayList<JSONObject> getRoomMeetings() throws UnsupportedOperationException, IOException, ParseException
 	{
 		String service = ServicesRequests.getServiceId();
 		String room = ConferenceRoomsRequests.getRoomId("Conference Room 1");
@@ -86,7 +88,7 @@ public class MeetingsRequests {
 		return listResponse;
 	}
 	
-	public static void postMeeting()
+	public static void postMeeting() throws UnsupportedOperationException, ParseException, IOException
 	{
 		String str = "room.manager:M@nager";
 		byte[]   bytesEncoded = Base64.encodeBase64(str .getBytes());
@@ -135,7 +137,7 @@ public class MeetingsRequests {
         }
 	}
 	
-	public static void deleteMeeting(String meetingId) throws UnsupportedOperationException, IOException
+	public static void deleteMeeting(String meetingId) throws UnsupportedOperationException, IOException, ParseException
 	{
 		String service = ServicesRequests.getServiceId();
 		String room = ConferenceRoomsRequests.getRoomId("Conference Room 1");
@@ -163,7 +165,7 @@ public class MeetingsRequests {
         }
 	}
 	
-	public String getMeetingId(String name)
+	public String getMeetingId(String name) throws ParseException
 	{
 		String id = "";
 		ArrayList<JSONObject> list;

@@ -26,7 +26,7 @@ public class DeleteResource extends TestBaseSetup{
 		driver=myWebDriver.myDriver;
 	}
 	
-	@BeforeTest
+	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
 	{
 		ResourcesRequests
