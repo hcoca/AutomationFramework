@@ -11,48 +11,42 @@ import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ResourcesRequests;
 import org.testng.annotations.*;
 
-public class CreateResource extends TestBaseSetup {
+public class DeleteResource extends TestBaseSetup{
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
-	String username = settings.getProperty("username");
-	String password = settings.getProperty("password");
-	String name = "newResource";
-	String displayName = "newResource";
+	private String username = settings.getProperty("username");
+	private String password = settings.getProperty("password");
+
 	private WebDriver driver;
 	private LoginPage loginPage;
 	public static MyWebDriver myWebDriver;
-	
+
 	@BeforeClass
   	public void setUp() throws Exception {
 		driver=myWebDriver.myDriver;
 	}
 	
-	@Test
-	public void testCreateResource()
+	@BeforeTest
+	public void Preconditions() throws UnsupportedOperationException, IOException
 	{
-		System.out.println("Enter Create Resource Test Case");
+		ResourcesRequests
+		.postResource();
+	}
+	
+	@Test
+	public void testDeleteResource()
+	{
+		System.out.println("Enter Delete Resource Test Case");
+		String name = "gift";
+		String displayName = "gift";
+		
 		loginPage = new LoginPage(driver)
 		  		.SignIn(username, password)
 		  		.SelectResourcesOption()
-				.AddResource()
-				.setName(name)
-				.setDisplayName(displayName)
-				.Save()
-				.VerifyResourceWasCreated(name, displayName)
+		  		.SelectResource()
+				.RemoveResource()
+				.Remove()
+				.VerifyResourceWasDeleted(name, displayName)
 				.SignOut();
-	}
-	
-	@AfterTest
-	public void Postconditions()
-	{
-		System.out.println("After Test - Create Resource");
-		String id = "";
-		try {
-		id = ResourcesRequests.getResourceId(name);
-		ResourcesRequests.deleteResource(id);
-	
-		} catch (UnsupportedOperationException | IOException e) {
-		e.printStackTrace();
-		}
 	}
 }
