@@ -2,7 +2,6 @@ package org.rm.automation.utils;
 
 import org.apache.log4j.Logger;
 
-
 public class LogManager {
 	
 	static Logger log = Logger.getLogger(LogManager.class.getName());

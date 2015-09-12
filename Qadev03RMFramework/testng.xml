@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-<parameter name="appURL" value="http://172.20.208.79:4040/admin/#/admin"/>
-<parameter name="browserType" value="firefox"/>
- 
-   <test name="Locations">
+
+  <test name="Conference rooms">
     <classes>
       <class name="org.rm.automation.admin.tests.locations.createBasicLocation"/>
-    </classes>
-  </test> <!-- Test -->
- 
-  <test name="Resources">
-    <classes>
       <class name="org.rm.automation.admin.tests.resources.CreateResource"/>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomColumnBtn"/>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms"/>
     </classes>
   </test> <!-- Test -->
 
