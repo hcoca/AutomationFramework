@@ -48,7 +48,6 @@ public class NavigationBarPage {
 	{
 		
 		Waiters.WaitByLinkText("Resources", driver);
-		System.out.println("Searching Resources link");
 		
 		WebElement element=driver.findElement(resourcesLink);
 			element.click();

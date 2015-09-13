@@ -1,60 +1,51 @@
 package org.rm.automation.utils;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+import java.io.File; 
+import java.io.IOException; 
+import java.text.DateFormat; 
+import java.text.SimpleDateFormat; 
 import java.util.Date;
+import java.util.Properties;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.apache.commons.io.FileUtils; 
+import org.openqa.selenium.OutputType; 
+import org.openqa.selenium.TakesScreenshot; 
 import org.openqa.selenium.WebDriver;
-import org.testng.ITestContext;
-import org.testng.ITestListener;
-import org.testng.ITestResult;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
-import org.rm.automation.utils.BrowserManager;
-
-public class TestListener implements ITestListener {
-	WebDriver driver=null;
-	String filePath = System.getProperty("user.dir")+"\\Screenshots\\";
-	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd#HH.mm.ss");
-	Date date = new Date();
-	String current_datetime = dateFormat.format(date).toString();
+/*
+ * Class that manages screenshots.
+ */
+public class TestListener {
+	static String filePath = null;
 	
-	   
-    @Override
-    public void onTestFailure(ITestResult result) {
-    	System.out.println("***** Error "+result.getName()+" test has failed *****");
-    	String methodName= result.getName().toString().trim();
-    	takeScreenShot(methodName);
-    }
-    
-    public void takeScreenShot(String methodName) {
-    	methodName+=current_datetime+".png";    	
-    	System.out.println("Taking the screenshot in: "+filePath);    	
-    	//get the driver
-    	driver=BrowserManager.getInstance().getBrowser();
-    	File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-    	//The below method will save the screen shot in d drive with test method name
-    	try {
-    		FileUtils.copyFile(scrFile, new File(filePath+methodName));
-    		System.out.println("*** Screen shot stored in "+filePath+" ***");
-    		} 
-    	catch (IOException e) {
-    		e.printStackTrace();
-    		}       
-    }
-	public void onFinish(ITestContext context) {}
-  
-    public void onTestStart(ITestResult result) {   }
-  
-    public void onTestSuccess(ITestResult result) {   }
-
-    public void onTestSkipped(ITestResult result) {   }
-
-    public void onTestFailedButWithinSuccessPercentage(ITestResult result) {   }
-
-    public void onStart(ITestContext context) {   }
-}  
+	public static String takeScreenShot(String testName){
+		Properties settings = ReadPropertyValues
+				.getPropertyFile("./Config/settings.properties");
+		
+		testName = testName.replace(" ", "_");
+		
+		WebDriver driver = BrowserManager.getDriver(settings.getProperty("browser"));
+		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
+		DateFormat dateFormat = new SimpleDateFormat("dd_MMM_yyyy__hh_mm_ssaa"); /**/
+		String destDir = "./reports/screenshots"; 
+		new File(destDir).mkdirs(); 
+		String destFile = testName +"-"+dateFormat.format(new Date()) + ".png"; 
+		saveFile(scrFile, destFile, destDir);
+		
+		filePath = "..\\screenshots\\" + destFile;
+		
+		return filePath;
+	}
+	
+	//The below method will save the screenshot.
+	public static void saveFile(File sourceFile, String destinyFile, String destinyPath){
+		try { 
+			FileUtils.copyFile(sourceFile, new File(destinyPath + "/" + destinyFile)); 
+			System.out.println("*** Screen shot stored in "+filePath+" ***");
+		} 
+		catch (IOException e) { 
+			e.printStackTrace();
+		} 
+	}
+}

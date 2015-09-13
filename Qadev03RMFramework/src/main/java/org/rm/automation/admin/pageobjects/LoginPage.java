@@ -1,12 +1,18 @@
 package org.rm.automation.admin.pageobjects;
 
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.rm.automation.utils.ReadPropertyValues;
 
 public class LoginPage {
 	
 	/*----------------------------------------------------*/
+	Properties settings = ReadPropertyValues
+			.getPropertyFile("./Config/settings.properties");
+	
 	private WebDriver driver;
 	private By usernameTextBox = By.id("loginUsername");
 	private By passwordTextBox = By.id("loginPassword");
@@ -14,6 +20,7 @@ public class LoginPage {
 	public LoginPage() {}
 	public LoginPage(WebDriver driver) {
 		this.driver=driver;
+		driver.get(settings.getProperty("url_adminConsole"));
 	}
 	public void enterUserName(String userName) {
 		WebElement usernameTxtBox = driver.findElement(usernameTextBox);

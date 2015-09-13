@@ -5,10 +5,16 @@
   <parameter name="browserType" value="firefox"/>
   <test name="Test(failed)">
     <classes>
-      <class name="org.rm.automation.admin.tests.locations.createBasicLocation">
+      <class name="org.rm.automation.admin.tests.locations.createAssociatedLocation">
         <methods>
           <include name="tearDown"/>
+          <include name="testCreateAssociatedLocation"/>
+          <include name="setUp"/>
           <include name="initializeTestBaseSetup"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.locations.createAssociatedLocation -->
+      <class name="org.rm.automation.admin.tests.locations.createBasicLocation">
+        <methods>
           <include name="testCreateBasicLocation"/>
           <include name="setUp"/>
         </methods>

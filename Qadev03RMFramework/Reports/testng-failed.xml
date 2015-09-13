@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite]">
+  <test name="Acceptance Test cases(failed)">
+    <classes>
+      <class name="org.rm.automation.admin.tests.resources.CreateResource">
+        <methods>
+          <include name="Postconditions"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.resources.CreateResource -->
+      <class name="org.rm.automation.admin.tests.locations.createBasicLocation">
+        <methods>
+          <include name="testCreateBasicLocation"/>
+          <include name="Postconditions"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.locations.createBasicLocation -->
+    </classes>
+  </test> <!-- Acceptance Test cases(failed) -->
+</suite> <!-- Failed suite [Suite] -->

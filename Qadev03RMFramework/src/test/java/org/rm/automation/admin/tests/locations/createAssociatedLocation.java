@@ -1,60 +1,74 @@
 package org.rm.automation.admin.tests.locations;
 
-import java.util.concurrent.TimeUnit;
+import java.io.IOException;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.rm.automation.utils.ReadPropertyValues;
+import org.rm.automation.utils.api.LocationsRequests;
 import org.rm.automation.base.MyWebDriver;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.admin.pageobjects.LoginPage;
+import org.rm.automation.admin.pageobjects.HomePage;
+import org.rm.automation.admin.pageobjects.locations.LocationsPage;
+import org.rm.automation.admin.pageobjects.locations.FormLocationPage;
+import org.rm.automation.admin.pageobjects.locations.IssuesPage;
+import org.rm.automation.admin.pageobjects.locations.FormAssociateRoomPage;
 
 public class createAssociatedLocation extends TestBaseSetup {
-	public static MyWebDriver myWebDriver;
-	private WebDriver driver;
+	private Properties settings = ReadPropertyValues
+			.getPropertyFile("./Config/settings.properties");
 	private LoginPage loginPage;
-
-  @BeforeClass
-  public void setUp() throws Exception {
-	  driver=myWebDriver.myDriver;
-  }
+	private HomePage homePage;
+	private LocationsPage locationsPage;
+	private IssuesPage issuesPage;
+	private FormLocationPage formLocationPage;
+	private FormAssociateRoomPage formAssociateRoomPage;
+	String userName = settings.getProperty("username");
+	String password = settings.getProperty("password");
+	String name = "Location 2";
+	String displayName = "Loc2";
+	String confRooms = "x1";
+	String roomName = "B201"; 
 
   @Test
   public void testCreateAssociatedLocation() throws Exception {
-	  String userName = "qadev03\\userRM01";
-	  String password = "Control123!";
+	  
+	  String userName = settings.getProperty("username");
+	  String password = settings.getProperty("password");
 	  String name = "Location 2";
 	  String displayName = "Loc2";
 	  String confRooms = "x1";
 	  String roomName = "B201"; 
 	  
 	  System.out.println("Create Location with a room associated functionality details...");
-	  loginPage = new LoginPage(driver)
-		  		.SignIn(userName, password)
-		  		.SelectLocationsOption()
-		  		.clickonAddButton()
-		  		.gotoLocationsAssociations()
-		  		.associateConferenceRoom(roomName)
-		  		.fillFormAndSave(name, displayName)
-		  		.SelectIssuesOption()
-		  		.SelectLocationsOption()
-		  		.verifyLocationsWasCreated(name, displayName, confRooms)
-		  		.SignOut();	
-	  
-	  
-	  /*loginPage = new LoginPage(driver);
+	  loginPage = new LoginPage(driver);
 	  homePage = loginPage.SignIn(userName, password);
-	  locationsPage = homePage.clickonLocationsLink();
+	  locationsPage = homePage.SelectLocationsOption();
 	  formLocationPage = locationsPage.clickonAddButton();
 	  formAssociateRoomPage = formLocationPage.gotoLocationsAssociations();
 	  formLocationPage = formAssociateRoomPage.associateConferenceRoom(roomName);
-	  locationsPage = formLocationPage.fillFormAndSave(name, displayName);
-	  issuesPage = homePage.clickonIssuesLink();
-	  locationsPage = homePage.clickonLocationsLink();
-	  Assert.assertTrue(locationsPage.verifyLocationName(name), "Location Name doesn't match");
-	  Assert.assertTrue(locationsPage.verifyLocationDisplayName(displayName), "Location Display Name doesn't match");
-	  Assert.assertTrue(locationsPage.verifyLocationConfRooms(confRooms), "Location COnference Rooms doesn't match");
-	  loginPage = homePage.clickonSignOut();   */
+	  homePage = formLocationPage.fillFormAndSave(name, displayName);
+	  issuesPage = homePage.SelectIssuesOption();
+	  locationsPage = homePage.SelectLocationsOption();
+      homePage = locationsPage.verifyLocationsWasCreated(name, displayName, confRooms);
+	  homePage.SignOut();	 	  
   } 
+  @AfterTest
+	public void Postconditions()
+	{
+		System.out.println("After Test - Create Basic Location");
+		String id = "";
+		try {
+			id = LocationsRequests.getLocationId(name);
+			LocationsRequests.deleteLocation(id);
+	
+		} 
+		catch (UnsupportedOperationException | IOException e) {
+			e.printStackTrace();
+		}
+	}
 }
