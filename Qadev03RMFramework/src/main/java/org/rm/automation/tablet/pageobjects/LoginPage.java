@@ -1,9 +1,12 @@
 package org.rm.automation.tablet.pageobjects;
 
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.rm.automation.tablet.pageobjects.HomePage;
+import org.rm.automation.utils.ReadPropertyValues;
 
 public class LoginPage {
 	
@@ -16,9 +19,13 @@ public class LoginPage {
 	private By roomOption = By.xpath("//section[@id='rm-account-status']/div[3]/div[2]/div/rm-select-item/div/div[2]/div/a");	//setRoom()
 	private By accessTablet = By.cssSelector("button.btn.btn-primary"); //access()
 	
+	Properties settings = ReadPropertyValues
+			.getPropertyFile("./Config/settings.properties");
+	
 	public LoginPage(){}
 	public LoginPage(WebDriver driver){
-		this.driver = driver;		
+		this.driver = driver;
+		driver.get(settings.getProperty("url_tablet"));
 	}
 	
 	public void setUrl(String url)
