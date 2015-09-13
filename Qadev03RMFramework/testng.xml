@@ -5,7 +5,7 @@
   <test name="Acceptance Test cases">
     <classes>
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomColumnBtn"/>
-      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms"/>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName"/>
     </classes>
   </test> <!-- Test -->
 

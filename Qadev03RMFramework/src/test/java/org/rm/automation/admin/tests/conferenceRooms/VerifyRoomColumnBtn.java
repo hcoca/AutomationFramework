@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
-import org.rm.automation.admin.pageobjects.conferenceRooms.RMConferenceRoomsPage;
+import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.testng.Assert;
@@ -28,7 +28,7 @@ public class VerifyRoomColumnBtn extends TestBaseSetup{
 //	WebDriver driver;
 	LoginPage objLogin;
 	HomePage objHomePage;
-	RMConferenceRoomsPage objConferenceRooms;
+	ConferenceRoomsPage objConferenceRooms;
 	
 //	@BeforeTest
 //	public void setup(){
@@ -50,7 +50,7 @@ public class VerifyRoomColumnBtn extends TestBaseSetup{
 		objLogin.SignIn(userName, password);
 		objHomePage = new HomePage(driver);
 		objHomePage.SelectRoomsOption();
-		objConferenceRooms = new RMConferenceRoomsPage(driver);
+		objConferenceRooms = new ConferenceRoomsPage(driver);
 
 		WebElement roomColumnBtn = objConferenceRooms.roomColumnBtn;
 		AssertJUnit.assertTrue(roomColumnBtn.isDisplayed());
