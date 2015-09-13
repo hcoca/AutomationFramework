@@ -1,19 +1,18 @@
 package org.rm.automation.admin.test.emailServices;
 
 import org.testng.annotations.Test;
-
-
 import junit.framework.Assert;
 
+import java.io.IOException;
 import java.util.Properties;
-
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.emailServers.AddEmailServersPage;
 import org.rm.automation.admin.pageobjects.emailServers.EmailServersPage;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.utils.ReadPropertyValues;
-import org.testng.annotations.BeforeClass;
+import org.rm.automation.utils.api.ServicesRequests;
+import org.testng.annotations.BeforeTest;
 
 
 public class AddServer extends TestBaseSetup {
@@ -38,17 +37,23 @@ public class AddServer extends TestBaseSetup {
   public void f() {
 	  emailserver = objHomePage.SelectEmailServersOption();
 	  addser = emailserver.clickbtnadd();
-	  addser.sethostname("rmlocal.local");
-	  addser.setUsrName("Administrator");
-	  addser.setPassWord("Control123!");
+	  addser.sethostname(hostname);
+	  addser.setUsrName(userES);
+	  addser.setPassWord(pwES);
 	  emailserver = addser.saveserverbtn();
 	  String textexpect = emailserver.gettextExchange();
-	  Assert.assertTrue(textexpect.contains("rmlocal"));
+	  Assert.assertTrue(textexpect.contains(hostname));
   }
-  @BeforeClass
+  @BeforeTest
   public void beforeTest() {
+	try {
+		ServicesRequests.RemoveService();
+	} 
+	catch (UnsupportedOperationException | IOException e) {
+		e.printStackTrace();
+	}
 	  objLogin = new LoginPage(driver);
-	  objHomePage = objLogin.SignIn("rmlocal\\administrator" , "Control123!");
+	  objHomePage = objLogin.SignIn(username , password);
   }
  
 }
