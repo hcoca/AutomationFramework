@@ -47,6 +47,7 @@ public class AddServer extends TestBaseSetup {
   @BeforeTest
   public void beforeTest() {
 	try {
+		// new try
 		ServicesRequests.RemoveService();
 		objLogin = new LoginPage(driver);
 		objHomePage = objLogin.SignIn(username , password);
