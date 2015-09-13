@@ -9,8 +9,14 @@
       <class name="org.rm.automation.admin.tests.locations.createBasicLocation"/>
       <class name="org.rm.automation.admin.tests.locations.createAssociatedLocation"/>
       <class name="org.rm.automation.admin.tests.resources.CreateResource"/>
-      
+      <class name="org.rm.automation.tablet.tests.meetings.CreateMeeting"/>
     </classes>
   </test> <!-- Test -->
-
-</suite> <!-- Suite -->
+  
+  <!-- Tablet suite 
+  <suite-files>
+  	<suite-file path="tablet.xml" />
+  </suite-files>
+   -->
+  
+  </suite> <!-- Suite -->
