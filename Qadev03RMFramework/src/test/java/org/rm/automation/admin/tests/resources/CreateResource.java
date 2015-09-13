@@ -18,19 +18,11 @@ public class CreateResource extends TestBaseSetup {
 	String password = settings.getProperty("password");
 	String name = "newResource";
 	String displayName = "newResource";
-	private WebDriver driver;
 	private LoginPage loginPage;
-	public static MyWebDriver myWebDriver;
-	
-	@BeforeClass
-  	public void setUp() throws Exception {
-		driver=myWebDriver.myDriver;
-	}
 	
 	@Test
 	public void testCreateResource()
 	{
-		System.out.println("Enter Create Resource Test Case");
 		loginPage = new LoginPage(driver)
 		  		.SignIn(username, password)
 		  		.SelectResourcesOption()
@@ -45,7 +37,6 @@ public class CreateResource extends TestBaseSetup {
 	@AfterMethod
 	public void Postconditions()
 	{
-		System.out.println("After Test - Create Resource");
 		String id = "";
 		try {
 		id = ResourcesRequests.getResourceId(name);
