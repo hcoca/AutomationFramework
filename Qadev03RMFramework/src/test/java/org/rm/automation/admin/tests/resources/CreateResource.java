@@ -23,7 +23,6 @@ public class CreateResource extends TestBaseSetup {
 	@Test
 	public void testCreateResource()
 	{
-		System.out.println("Enter Create Resource Test Case");
 		loginPage = new LoginPage(driver)
 		  		.SignIn(username, password)
 		  		.SelectResourcesOption()
@@ -38,7 +37,6 @@ public class CreateResource extends TestBaseSetup {
 	@AfterMethod
 	public void Postconditions()
 	{
-		System.out.println("After Test - Create Resource");
 		String id = "";
 		try {
 		id = ResourcesRequests.getResourceId(name);

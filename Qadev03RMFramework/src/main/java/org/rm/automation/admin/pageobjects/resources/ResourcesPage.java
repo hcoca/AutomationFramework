@@ -27,7 +27,6 @@ public class ResourcesPage extends HomePage{
 	 */
 	public AddResourcesPage AddResource()
 	{
-		System.out.println("Entering add resource");
 		Waiters.WaitByXPath("//div/div/button", driver);
 		
 		WebElement element = driver.findElement(By.xpath("//div/div/button"));
