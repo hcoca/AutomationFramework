@@ -38,13 +38,12 @@ public class RemoveServer extends TestBaseSetup {
   public void beforeTest() {
 	try {
 		ServicesRequests.AddServices();
+		objLogin = new LoginPage(driver);
+		objHomePage = objLogin.SignIn(username, password);
 	} 
 	catch (UnsupportedOperationException | IOException e) {
 		e.printStackTrace();
 	}
-	objLogin = new LoginPage(driver);
-	objHomePage = objLogin.SignIn(username, password);
-
   }
 
 }

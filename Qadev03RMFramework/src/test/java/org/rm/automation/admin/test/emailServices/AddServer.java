@@ -48,12 +48,13 @@ public class AddServer extends TestBaseSetup {
   public void beforeTest() {
 	try {
 		ServicesRequests.RemoveService();
+		objLogin = new LoginPage(driver);
+		objHomePage = objLogin.SignIn(username , password);
 	} 
 	catch (UnsupportedOperationException | IOException e) {
 		e.printStackTrace();
 	}
-	  objLogin = new LoginPage(driver);
-	  objHomePage = objLogin.SignIn(username , password);
+	  
   }
  
 }
