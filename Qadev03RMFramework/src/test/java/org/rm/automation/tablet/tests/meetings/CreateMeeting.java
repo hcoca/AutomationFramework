@@ -1,20 +1,14 @@
 package org.rm.automation.tablet.tests.meetings;
 
-import org.openqa.selenium.WebDriver;
 import org.rm.automation.tablet.pageobjects.LoginPage;
-import org.rm.automation.tablet.pageobjects.HomePage;
-import org.rm.automation.base.MyWebDriver;
 import org.rm.automation.base.TestBaseSetup;
 import org.testng.annotations.*;
 
 public class CreateMeeting extends TestBaseSetup {
-	public static MyWebDriver myWebDriver;
-	private WebDriver driver;	
-	private HomePage homePage;
-	@BeforeClass
+	/*@BeforeClass
 	public void setUp() throws Exception {
 		driver=myWebDriver.myDriver;
-	}		
+	}	*/	
 	
 	@Test
 	public void createMeeting(){
@@ -27,7 +21,7 @@ public class CreateMeeting extends TestBaseSetup {
 		String beginTime = "12:45";
 		String endTime = "13:45";
 		
-		homePage = new LoginPage(driver)
+		new LoginPage(driver)
 		.access(url, username, password)
 		.selectSchedulePage()
 		.setOrganizer(organizer)
