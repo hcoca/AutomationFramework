@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="0" name="Failed suite [Suite]">
-  <test name="Conference rooms(failed)">
+  <test name="Acceptance Test cases(failed)">
     <classes>
       <class name="org.rm.automation.admin.tests.resources.CreateResource">
         <methods>
           <include name="Postconditions"/>
-          <include name="setUp"/>
-          <include name="testCreateResource"/>
         </methods>
       </class> <!-- org.rm.automation.admin.tests.resources.CreateResource -->
       <class name="org.rm.automation.admin.tests.locations.createBasicLocation">
         <methods>
           <include name="testCreateBasicLocation"/>
           <include name="Postconditions"/>
-          <include name="setUp"/>
         </methods>
       </class> <!-- org.rm.automation.admin.tests.locations.createBasicLocation -->
-      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms">
-        <methods>
-          <include name="verifyTotalConferenceRooms"/>
-        </methods>
-      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms -->
     </classes>
-  </test> <!-- Conference rooms(failed) -->
+  </test> <!-- Acceptance Test cases(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,3 +1,4 @@
+
 package org.rm.automation.admin.tests.locations;
 
 import java.io.IOException;
@@ -18,8 +19,8 @@ import org.rm.automation.admin.pageobjects.locations.IssuesPage;
 import org.rm.automation.admin.pageobjects.locations.LocationsPage;
 
 public class createBasicLocation extends TestBaseSetup{
-	public static MyWebDriver myWebDriver;
-	private WebDriver driver;
+	//public static MyWebDriver myWebDriver;
+	//private WebDriver driver;
 	private Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
 	private LoginPage loginPage;
@@ -33,10 +34,10 @@ public class createBasicLocation extends TestBaseSetup{
 	String displayName = "Loc1";
 	String confRooms = "x0";
 
-  @BeforeClass
+  /*@BeforeClass
   public void setUp() throws Exception {
 	  driver=myWebDriver.myDriver;
-  }
+  }*/
 
   @Test
   public void testCreateBasicLocation() throws Exception {

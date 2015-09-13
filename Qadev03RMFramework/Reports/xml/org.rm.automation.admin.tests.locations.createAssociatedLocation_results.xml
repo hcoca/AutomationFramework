@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="4.778">
+           time="16.224">
   <properties />
   
   
-            <testcase name="verifyRoomColumnBtn" time="4.778" classname="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomColumnBtn" />
+            <testcase name="testCreateAssociatedLocation" time="16.224" classname="org.rm.automation.admin.tests.locations.createAssociatedLocation" />
       
 </testsuite>

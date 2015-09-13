@@ -16,16 +16,7 @@ public class DeleteResource extends TestBaseSetup{
 			.getPropertyFile("./Config/settings.properties");
 	private String username = settings.getProperty("username");
 	private String password = settings.getProperty("password");
-
-	private WebDriver driver;
-	private LoginPage loginPage;
-	public static MyWebDriver myWebDriver;
-
-	@BeforeClass
-  	public void setUp() throws Exception {
-		driver=myWebDriver.myDriver;
-	}
-	
+	private LoginPage loginPage;	
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
 	{

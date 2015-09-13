@@ -46,10 +46,5 @@ public class BrowserManager {
 		}
 		return driver;
 	}
-	
-	public static BrowserManager getInstance(){
-		if(instance == null)
-			instance = new BrowserManager();
-		return instance;
-	}
+
 }

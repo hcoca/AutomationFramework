@@ -21,8 +21,6 @@ import org.rm.automation.admin.pageobjects.locations.FormAssociateRoomPage;
 public class createAssociatedLocation extends TestBaseSetup {
 	private Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
-	public static MyWebDriver myWebDriver;
-	private WebDriver driver;
 	private LoginPage loginPage;
 	private HomePage homePage;
 	private LocationsPage locationsPage;
@@ -35,11 +33,6 @@ public class createAssociatedLocation extends TestBaseSetup {
 	String displayName = "Loc2";
 	String confRooms = "x1";
 	String roomName = "B201"; 
-
-  @BeforeClass
-  public void setUp() throws Exception {
-	  driver=myWebDriver.myDriver;
-  }
 
   @Test
   public void testCreateAssociatedLocation() throws Exception {

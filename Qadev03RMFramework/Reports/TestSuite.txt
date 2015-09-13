@@ -1,20 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 44.595 sec <<< FAILURE! - in TestSuite
-testCreateBasicLocation(org.rm.automation.admin.tests.locations.createBasicLocation)  Time elapsed: 0.69 sec  <<< FAILURE!
-java.lang.NullPointerException: null
-	at org.rm.automation.admin.pageobjects.LoginPage.<init>(LoginPage.java:23)
-	at org.rm.automation.admin.tests.locations.createBasicLocation.testCreateBasicLocation(createBasicLocation.java:45)
-
-testCreateResource(org.rm.automation.admin.tests.resources.CreateResource)  Time elapsed: 0.81 sec  <<< FAILURE!
-java.lang.NullPointerException: null
-	at org.rm.automation.admin.pageobjects.LoginPage.<init>(LoginPage.java:23)
-	at org.rm.automation.admin.tests.resources.CreateResource.testCreateResource(CreateResource.java:34)
-
-verifyTotalConferenceRooms(org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms)  Time elapsed: 3.421 sec  <<< FAILURE!
-java.lang.AssertionError: expected:<Total Items: 0> but was:<Total Items: 3>
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:108)
-	at org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms.verifyTotalConferenceRooms(VerifyTotalConferenceRooms.java:52)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 67.897 sec - in TestSuite

@@ -18,14 +18,7 @@ public class CreateResource extends TestBaseSetup {
 	String password = settings.getProperty("password");
 	String name = "newResource";
 	String displayName = "newResource";
-	private WebDriver driver;
 	private LoginPage loginPage;
-	public static MyWebDriver myWebDriver;
-	
-	@BeforeClass
-  	public void setUp() throws Exception {
-		driver=myWebDriver.myDriver;
-	}
 	
 	@Test
 	public void testCreateResource()

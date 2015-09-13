@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>D:\gitrepoRM\QADEV03RoomManager\Qadev03RMFramework\testng.xml</span>
+                    <span>D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,31 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 3 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.rm.automation.admin.tests.locations.createBasicLocation" hash-for-method="testCreateBasicLocation">testCreateBasicLocation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.rm.automation.admin.tests.resources.CreateResource" hash-for-method="testCreateResource">testCreateResource</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms" hash-for-method="verifyTotalConferenceRooms">verifyTotalConferenceRooms</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -125,7 +101,27 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.rm.automation.admin.tests.locations.createAssociatedLocation" hash-for-method="testCreateAssociatedLocation">testCreateAssociatedLocation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.rm.automation.admin.tests.locations.createBasicLocation" hash-for-method="testCreateBasicLocation">testCreateBasicLocation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.rm.automation.admin.tests.resources.CreateResource" hash-for-method="testCreateResource">testCreateResource</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomColumnBtn" hash-for-method="verifyRoomColumnBtn">verifyRoomColumnBtn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName" hash-for-method="verifyRoomColumnBtn">verifyRoomColumnBtn</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -140,65 +136,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">org.rm.automation.admin.tests.resources.CreateResource</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testCreateResource">
-                  </a> <!-- testCreateResource -->
-                  <span class="method-name">testCreateResource</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at org.rm.automation.admin.pageobjects.LoginPage.&lt;init&gt;(LoginPage.java:23)
-	at org.rm.automation.admin.tests.resources.CreateResource.testCreateResource(CreateResource.java:34)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">org.rm.automation.admin.tests.locations.createBasicLocation</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testCreateBasicLocation">
-                  </a> <!-- testCreateBasicLocation -->
-                  <span class="method-name">testCreateBasicLocation</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at org.rm.automation.admin.pageobjects.LoginPage.&lt;init&gt;(LoginPage.java:23)
-	at org.rm.automation.admin.tests.locations.createBasicLocation.testCreateBasicLocation(createBasicLocation.java:45)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyTotalConferenceRooms">
-                  </a> <!-- verifyTotalConferenceRooms -->
-                  <span class="method-name">verifyTotalConferenceRooms</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected:&lt;Total Items: 0&gt; but was:&lt;Total Items: 3&gt;
-	at org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms.verifyTotalConferenceRooms(VerifyTotalConferenceRooms.java:52)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -214,24 +151,85 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRoomColumnBtn">
+                  </a> <!-- verifyRoomColumnBtn -->
+                  <span class="method-name">verifyRoomColumnBtn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.locations.createBasicLocation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateBasicLocation">
+                  </a> <!-- testCreateBasicLocation -->
+                  <span class="method-name">testCreateBasicLocation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.CreateResource</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateResource">
+                  </a> <!-- testCreateResource -->
+                  <span class="method-name">testCreateResource</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.locations.createAssociatedLocation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateAssociatedLocation">
+                  </a> <!-- testCreateAssociatedLocation -->
+                  <span class="method-name">testCreateAssociatedLocation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\gitrepoRM\QADEV03RoomManager\Qadev03RMFramework\testng.xml</span>
+            <span class="header-content">D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
-  &lt;test name=&quot;Conference rooms&quot;&gt;
+  &lt;test name=&quot;Acceptance Test cases&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;org.rm.automation.admin.tests.locations.createBasicLocation&quot;/&gt;
-      &lt;class name=&quot;org.rm.automation.admin.tests.resources.CreateResource&quot;/&gt;
       &lt;class name=&quot;org.rm.automation.admin.tests.conferenceRooms.VerifyRoomColumnBtn&quot;/&gt;
-      &lt;class name=&quot;org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.locations.createBasicLocation&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.locations.createAssociatedLocation&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.CreateResource&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Conference rooms --&gt;
+  &lt;/test&gt; &lt;!-- Acceptance Test cases --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -243,7 +241,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Conference rooms (4 classes)</span>
+                <span class="test-name">Acceptance Test cases (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -269,28 +267,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyRoomColumnBtn')
-data.setCell(0, 2, 'org.rm.automation.admin.tests.conferenceRooms.VerifyRoomColumnBtn')
-data.setCell(0, 3, 6273);
+data.setCell(0, 1, 'testCreateResource')
+data.setCell(0, 2, 'org.rm.automation.admin.tests.resources.CreateResource')
+data.setCell(0, 3, 23784);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyTotalConferenceRooms')
-data.setCell(1, 2, 'org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms')
-data.setCell(1, 3, 3257);
+data.setCell(1, 1, 'testCreateAssociatedLocation')
+data.setCell(1, 2, 'org.rm.automation.admin.tests.locations.createAssociatedLocation')
+data.setCell(1, 3, 16224);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testCreateBasicLocation')
 data.setCell(2, 2, 'org.rm.automation.admin.tests.locations.createBasicLocation')
-data.setCell(2, 3, 10);
+data.setCell(2, 3, 9342);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testCreateResource')
-data.setCell(3, 2, 'org.rm.automation.admin.tests.resources.CreateResource')
-data.setCell(3, 3, 0);
+data.setCell(3, 1, 'verifyRoomColumnBtn')
+data.setCell(3, 2, 'org.rm.automation.admin.tests.conferenceRooms.VerifyRoomColumnBtn')
+data.setCell(3, 3, 4778);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyRoomColumnBtn')
+data.setCell(4, 2, 'org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName')
+data.setCell(4, 3, 4202);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 58 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -304,28 +306,31 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">verifyRoomColumnBtn</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><b>Test Case Title: Conference rooms</b><br/></span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testCreateResource</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><b>Test Case Title: Conference rooms</b><br/></span>
-                <span class="reporter-method-output"><b>Screenshot: </b><br/><a href="..\screenshots\Conference_rooms-12_Sep_2015__08_46_15PM.png"><img src="..\screenshots\Conference_rooms-12_Sep_2015__08_46_15PM.png" alt=""height='100' width='100'/><br/></span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyTotalConferenceRooms</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><a href="javascript:toggleElement('Conference rooms', 'block')" title="Click to expand/collapse"><b>Test Case Title: Conference rooms</b></a><br /><div class="stackTrace" id="Conference rooms" style="display: none;">expected:<Total Items: 0> but was:<Total Items: 3></div><br /></span>
-                <span class="reporter-method-output"><b>Screenshot: </b><br/><a href="..\screenshots\Conference_rooms-12_Sep_2015__08_46_25PM.png"><img src="..\screenshots\Conference_rooms-12_Sep_2015__08_46_25PM.png" alt=""height='100' width='100'/><br/></span>
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">testCreateBasicLocation</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><b>Test Case Title: Conference rooms</b><br/></span>
-                <span class="reporter-method-output"><b>Screenshot: </b><br/><a href="..\screenshots\Conference_rooms-12_Sep_2015__08_46_14PM.png"><img src="..\screenshots\Conference_rooms-12_Sep_2015__08_46_14PM.png" alt=""height='100' width='100'/><br/></span>
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testCreateAssociatedLocation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyRoomColumnBtn</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testCreateResource</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -343,56 +348,63 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">org.rm.automation.admin.tests.locations.createBasicLocation</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUp</span>
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testCreateBasicLocation</span>
-                <span class="method-start">20 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.CreateResource</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">700 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testCreateResource</span>
-                <span class="method-start">700 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">Postconditions</span>
-                <span class="method-start">1520 ms</span>
-              </div> <!-- configuration-method after -->
+              </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomColumnBtn</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyRoomColumnBtn</span>
-                <span class="method-start">1700 ms</span>
+                <span class="method-start">93 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyTotalConferenceRooms</span>
-                <span class="method-start">7974 ms</span>
+                <span class="method-name">verifyRoomColumnBtn</span>
+                <span class="method-start">4878 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.locations.createBasicLocation</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testCreateBasicLocation</span>
+                <span class="method-start">9081 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.locations.createAssociatedLocation</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testCreateAssociatedLocation</span>
+                <span class="method-start">18424 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.CreateResource</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testCreateResource</span>
+                <span class="method-start">34649 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">58434 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.locations.createAssociatedLocation</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">58677 ms</span>
+              </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.rm.automation.admin.tests.locations.createBasicLocation</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">Postconditions</span>
-                <span class="method-start">11379 ms</span>
+                <span class="method-start">58751 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
