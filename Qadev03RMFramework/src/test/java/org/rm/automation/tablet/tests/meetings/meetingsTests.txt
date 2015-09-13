@@ -2,7 +2,7 @@ package org.rm.automation.tablet.tests.meetings;
 
 import java.lang.String;
 
-import org.rm.automation.tablet.pageobjects.BeginTest;
+import org.rm.automation.tablet.pageobjects.StartTest;
 import org.testng.annotations.*;
 
 public class meetingsTests {
@@ -22,7 +22,7 @@ public class meetingsTests {
 		//Optional variable of the function setBody();
 		//String body = "It's optional";
 		
-		BeginTest.getLogin()
+		StartTest.getLogin()
 		.setUrl(url)
 		.setUsername(username)
 		.setPassword(password)
@@ -55,7 +55,7 @@ public class meetingsTests {
 		///Optional variable of the function setBody();
 		String body = "Now I have a body :D";
 		
-		BeginTest.getLogin()
+		StartTest.getLogin()
 		.setUrl(url)
 		.setUsername(username)
 		.setPassword(password)
@@ -82,7 +82,7 @@ public class meetingsTests {
 		String username = "atxrm\\elver";
 		String password = "Control123";		
 		
-		BeginTest.getLogin()
+		StartTest.getLogin()
 		.setUrl(url)
 		.setUsername(username)
 		.setPassword(password)

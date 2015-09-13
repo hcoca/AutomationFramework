@@ -15,5 +15,11 @@
       <class name="org.rm.automation.admin.tests.resources.CreateResource"/>
     </classes>
   </test> <!-- Test -->
-
-</suite> <!-- Suite -->
+  
+  <!-- Tablet suite 
+  <suite-files>
+  	<suite-file path="tablet.xml" />
+  </suite-files>
+   -->
+  
+  </suite> <!-- Suite -->
