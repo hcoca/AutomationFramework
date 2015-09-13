@@ -41,13 +41,13 @@ public class VerifyTotalConferenceRooms extends TestBaseSetup{
 	@Test(priority = 2)
 	public void verifyTotalConferenceRooms(){
 		objLogin = new LoginPage(driver);
-		objLogin.SignIn("571Network\\Administrator", "Pilot571david77");
+		objLogin.SignIn("rmlocal\\administrator", "Control123!");
 		objHomePage = new HomePage(driver);
 		objHomePage.SelectRoomsOption();
 		objConferenceRooms = new RMConferenceRoomsPage(driver);
 		
 		String actualResult = objConferenceRooms.getTotalItemsLabelValue();
-		String expectedResult = "Total Items: 2";
+		String expectedResult = "Total Items: 3";
 		
 		AssertJUnit.assertEquals(actualResult, expectedResult);
 	}
