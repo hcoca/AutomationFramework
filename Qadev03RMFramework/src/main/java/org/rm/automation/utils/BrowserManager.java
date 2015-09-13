@@ -11,6 +11,10 @@ public class BrowserManager {
 	
 	private BrowserManager(){}
 	
+	/**
+	 * @param browser
+	 * @return WebDriver, either FirefoxDriver or ChromeDriver.
+	 */
 	public static WebDriver getDriver(String browser){
 		switch (browser) {
 			case "FIREFOX":
@@ -22,15 +26,21 @@ public class BrowserManager {
 		}
 	}
 	
+	/**
+	 * @return FirefoxDriver.
+	 */
 	public static WebDriver initFirefoxDriver(){
-		if(driver == null || driver.toString().contains("(null)")){
+		if(driver == null){
 			driver = new FirefoxDriver();
 		}
 		return driver;
 	}
 	
+	/**
+	 * @return ChromeDriver.
+	 */
 	public static WebDriver initChromeDriver(){
-		if(driver == null || driver.toString().contains("(null)")){
+		if(driver == null){
 			System.setProperty("webdriver.chrome.driver", ".\\lib\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}

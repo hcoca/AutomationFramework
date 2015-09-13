@@ -16,7 +16,7 @@ import org.rm.automation.utils.ReadPropertyValues;
 import org.testng.annotations.BeforeClass;
 
 
-public class addserver extends TestBaseSetup {
+public class AddServer extends TestBaseSetup {
 	
 	
 	Properties settings = ReadPropertyValues

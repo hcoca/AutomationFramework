@@ -2,6 +2,8 @@ package org.rm.automation.admin.tests.conferenceRooms;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -11,12 +13,18 @@ import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.RMConferenceRoomsPage;
 import org.rm.automation.base.TestBaseSetup;
+import org.rm.automation.utils.ReadPropertyValues;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
 public class VerifyRoomColumnBtn extends TestBaseSetup{
+	private Properties settings = ReadPropertyValues
+			.getPropertyFile("./Config/settings.properties");
+	String userName = settings.getProperty("username");
+	String password = settings.getProperty("password");
+	
 //	WebDriver driver;
 	LoginPage objLogin;
 	HomePage objHomePage;
@@ -39,7 +47,7 @@ public class VerifyRoomColumnBtn extends TestBaseSetup{
 	@Test(priority = 2)
 	public void verifyRoomColumnBtn(){
 		objLogin = new LoginPage(driver);
-		objLogin.SignIn("rmlocal\\administrator", "Control123!");
+		objLogin.SignIn(userName, password);
 		objHomePage = new HomePage(driver);
 		objHomePage.SelectRoomsOption();
 		objConferenceRooms = new RMConferenceRoomsPage(driver);

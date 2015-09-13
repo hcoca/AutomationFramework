@@ -11,7 +11,7 @@ import org.rm.automation.base.TestBaseSetup;
 import org.testng.annotations.BeforeClass;
 
 
-public class removeserver extends TestBaseSetup {
+public class RemoveServer extends TestBaseSetup {
  
     LoginPage objLogin;
     HomePage objHomePage;

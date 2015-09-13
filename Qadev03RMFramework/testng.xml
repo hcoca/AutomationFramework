@@ -2,10 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
-  <test name="Conference rooms">
+  <test name="Acceptance Test cases">
     <classes>
-      <class name="org.rm.automation.admin.tests.locations.createBasicLocation"/>
-      <class name="org.rm.automation.admin.tests.resources.CreateResource"/>
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomColumnBtn"/>
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms"/>
     </classes>

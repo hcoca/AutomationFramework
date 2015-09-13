@@ -24,7 +24,7 @@ public class TestListener {
 				.getPropertyFile("./Config/settings.properties");
 		
 		testName = testName.replace(" ", "_");
-//		String filePath = null;
+		
 		WebDriver driver = BrowserManager.getDriver(settings.getProperty("browser"));
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
 		DateFormat dateFormat = new SimpleDateFormat("dd_MMM_yyyy__hh_mm_ssaa"); /**/
@@ -33,12 +33,12 @@ public class TestListener {
 		String destFile = testName +"-"+dateFormat.format(new Date()) + ".png"; 
 		saveFile(scrFile, destFile, destDir);
 		
-		filePath ="..\\screenshots\\" + destFile;
+		filePath = "..\\screenshots\\" + destFile;
 		
 		return filePath;
 	}
 	
-	//The below method will save the screen shot.
+	//The below method will save the screenshot.
 	public static void saveFile(File sourceFile, String destinyFile, String destinyPath){
 		try { 
 			FileUtils.copyFile(sourceFile, new File(destinyPath + "/" + destinyFile)); 
