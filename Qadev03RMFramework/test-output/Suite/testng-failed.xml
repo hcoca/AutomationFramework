@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <parameter name="appURL" value="http://172.20.208.113:4040/admin/#/login"/>
-  <parameter name="browserType" value="firefox"/>
-  <test name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Acceptance Test cases(failed)">
     <classes>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName -->
       <class name="org.rm.automation.admin.tests.locations.createAssociatedLocation">
         <methods>
-          <include name="tearDown"/>
           <include name="testCreateAssociatedLocation"/>
-          <include name="setUp"/>
-          <include name="initializeTestBaseSetup"/>
+          <include name="Postconditions"/>
         </methods>
       </class> <!-- org.rm.automation.admin.tests.locations.createAssociatedLocation -->
       <class name="org.rm.automation.admin.tests.locations.createBasicLocation">
         <methods>
-          <include name="testCreateBasicLocation"/>
-          <include name="setUp"/>
+          <include name="Postconditions"/>
         </methods>
       </class> <!-- org.rm.automation.admin.tests.locations.createBasicLocation -->
+      <class name="org.rm.automation.admin.tests.resources.CreateResource">
+        <methods>
+          <include name="Postconditions"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.resources.CreateResource -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Acceptance Test cases(failed) -->
 </suite> <!-- Failed suite [Suite] -->
