@@ -41,7 +41,7 @@ public class BrowserManager {
 	 */
 	public static WebDriver initChromeDriver(){
 		if(driver == null){
-			System.setProperty("webdriver.chrome.driver", ".\\lib\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 		return driver;
