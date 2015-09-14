@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.admin.pageobjects.HomePage;
+import org.rm.automation.utils.LogManager;
 import org.openqa.selenium.support.FindBy;
 
 public class FormLocationPage {
@@ -32,6 +33,7 @@ public class FormLocationPage {
 	public void enterName(String name) {
 		if(nameTextBox.isDisplayed())
 		{
+			LogManager.info("FormLocationPage: Entering the name of the location");
 			nameTextBox.clear();
 			nameTextBox.sendKeys(name);
 		}
@@ -40,13 +42,17 @@ public class FormLocationPage {
 	public void enterDisplayName(String displayName) {
 		if(displayNameTextBox.isDisplayed())
 		{
+			LogManager.info("FormLocationPage: Entering the Display Name of the location");
 			displayNameTextBox.clear();
 			displayNameTextBox.sendKeys(displayName);
 		}
 	}
 	public void clickOnSave() {
 		if(saveBtn.isDisplayed())
+		{
+			LogManager.info("FormLocationPage: Click on Save button to save the changes");
 			saveBtn.click();
+		}
 	}
 	public HomePage fillFormAndSave(String name, String displayName) {
 		enterName(name);
@@ -57,7 +63,10 @@ public class FormLocationPage {
 	
 	public FormAssociateRoomPage gotoLocationsAssociations(){
 		if(associatedLink.isDisplayed())
+		{
+			LogManager.info("FormLocationPage: Selecting Location Associations option");
 			associatedLink.click();
+		}
 		return new FormAssociateRoomPage(driver);
 	}
 }

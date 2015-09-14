@@ -3,6 +3,7 @@ package org.rm.automation.admin.tests.locations;
 
 import java.io.IOException;
 import java.util.Properties;
+import org.rm.automation.utils.LogManager;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
@@ -19,8 +20,6 @@ import org.rm.automation.admin.pageobjects.locations.IssuesPage;
 import org.rm.automation.admin.pageobjects.locations.LocationsPage;
 
 public class createBasicLocation extends TestBaseSetup{
-	//public static MyWebDriver myWebDriver;
-	//private WebDriver driver;
 	private Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
 	private LoginPage loginPage;
@@ -34,15 +33,11 @@ public class createBasicLocation extends TestBaseSetup{
 	String displayName = "Loc1";
 	String confRooms = "x0";
 
-  /*@BeforeClass
-  public void setUp() throws Exception {
-	  driver=myWebDriver.myDriver;
-  }*/
-
   @Test
   public void testCreateBasicLocation() throws Exception {
 	  
-	  System.out.println("Create Basic Location functionality details...");
+	  System.out.println("Create Basic Location");
+	  LogManager.info("Executing createBasicLocation Test Case");
 	  loginPage = new LoginPage(driver);
 	  homePage = loginPage.SignIn(userName, password);
 	  locationsPage	= homePage.SelectLocationsOption();
@@ -58,12 +53,14 @@ public class createBasicLocation extends TestBaseSetup{
 	{
 		System.out.println("After Test - Create Basic Location");
 		String id = "";
-		try {
+		try {			
 			id = LocationsRequests.getLocationId(name);
 			LocationsRequests.deleteLocation(id);
+			LogManager.info("Executing after test method of createBasicLocation, removing location created");
 	
 		} 
 		catch (UnsupportedOperationException | IOException e) {
+			LogManager.info("Failed to execute after test method of createBasicLocation, location created was not removed");
 			e.printStackTrace();
 		}
 	}

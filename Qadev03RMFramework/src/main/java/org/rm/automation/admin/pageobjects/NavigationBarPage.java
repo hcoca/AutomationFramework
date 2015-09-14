@@ -1,57 +1,75 @@
 package org.rm.automation.admin.pageobjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.emailServers.EmailServersPage;
 import org.rm.automation.admin.pageobjects.locations.LocationsPage;
 import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
 import org.rm.automation.admin.pageobjects.locations.IssuesPage;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
 
 public class NavigationBarPage {
-	/*-------------------------------------------*/
+
 	protected WebDriver driver;
-	private By locationsLink = By.linkText("Locations");
-	private By issuesLink = By.linkText("Issues");
-	private By EmailServer = By.linkText("Email Servers");
-	private By resourcesLink = By.linkText("Resources");
-	private By roomsLink = By.linkText("Conference Rooms");
+	@FindBy(linkText="Locations")
+	  WebElement locationsLink;
+	@FindBy(linkText="Issues")
+	  WebElement issuesLink;
+	@FindBy(linkText="Email Servers")
+	  WebElement emailServerLink;
+	@FindBy(linkText="Resources")
+	  WebElement resourcesLink;
+	@FindBy(linkText="Conference Rooms")
+	  WebElement roomsLink;
 	
 	public NavigationBarPage(WebDriver driver) {
 		this.driver=driver;
+		PageFactory.initElements(driver, this);
 	}
 	public LocationsPage SelectLocationsOption()
 	{
-		WebElement element=driver.findElement(locationsLink);
-		if(element.isDisplayed()||element.isEnabled())
-			element.click();
+		Waiters.WaitByLinkText("Locations", driver);
+		if(locationsLink.isDisplayed()||locationsLink.isEnabled())
+		{
+			LogManager.info("NavigationBarPage: Selecting Locations option");
+			locationsLink.click();
+		}
 		return new LocationsPage(driver);
 	}
 	public IssuesPage  SelectIssuesOption() {
-		WebElement element=driver.findElement(issuesLink);
-		if(element.isDisplayed()||element.isEnabled())
-			element.click();
+		Waiters.WaitByLinkText("Issues", driver);
+		if(issuesLink.isDisplayed()||issuesLink.isEnabled())
+		{
+			LogManager.info("NavigationBarPage: Selecting Issues option");
+			issuesLink.click();
+		}
 		return new IssuesPage(driver);
 	}
 	
 	public EmailServersPage SelectEmailServersOption()
 	{
-		WebElement element=driver.findElement(EmailServer);
-		if(element.isDisplayed()||element.isEnabled())
-			element.click();
+		Waiters.WaitByLinkText("Email Servers", driver);
+		if(emailServerLink.isDisplayed()||emailServerLink.isEnabled())
+		{
+			LogManager.info("NavigationBarPage: Selecting Email Servers option");
+			emailServerLink.click();
+		}
 		return new EmailServersPage(driver);
 	}
 	
 	public ResourcesPage SelectResourcesOption()
 	{
 		
-		Waiters.WaitByLinkText("Resources", driver);
-		
-		WebElement element=driver.findElement(resourcesLink);
-			element.click();
-		
+		Waiters.WaitByLinkText("Resources", driver);		
+		if(resourcesLink.isDisplayed()||resourcesLink.isEnabled())
+		{
+			LogManager.info("NavigationBarPage: Selecting Resources option");
+			resourcesLink.click();
+		}		
 		return new ResourcesPage(driver);
 	}
 	
@@ -59,11 +77,11 @@ public class NavigationBarPage {
 	public ConferenceRoomsPage SelectRoomsOption()
 	{
 		Waiters.WaitByLinkText("Conference Rooms", driver);
-		
-		WebElement element=driver.findElement(roomsLink);
-		if(element.isDisplayed()||element.isEnabled())
-			element.click();
-		
+		if(roomsLink.isDisplayed()||roomsLink.isEnabled())
+		{
+			LogManager.info("NavigationBarPage: Selecting Resources option");
+			roomsLink.click();
+		}		
 		return new ConferenceRoomsPage(driver);
 	}
 }

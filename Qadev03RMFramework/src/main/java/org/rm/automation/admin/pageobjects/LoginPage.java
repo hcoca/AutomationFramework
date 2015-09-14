@@ -5,46 +5,56 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 
 public class LoginPage {
 	
-	/*----------------------------------------------------*/
 	Properties settings = ReadPropertyValues
-			.getPropertyFile("./Config/settings.properties");
-	
+			.getPropertyFile("./Config/settings.properties");	
 	private WebDriver driver;
-	private By usernameTextBox = By.id("loginUsername");
-	private By passwordTextBox = By.id("loginPassword");
-	private By loginBtn = By.xpath("//button[@class='btn btn-primary pull-right']");
+	@FindBy(id="loginUsername")
+	  WebElement usernameTextBox;
+	@FindBy(id="loginPassword")
+	  WebElement passwordTextBox;
+	@FindBy(xpath="//button[@class='btn btn-primary pull-right']")
+	  WebElement loginBtn;
 	public LoginPage() {}
 	public LoginPage(WebDriver driver) {
 		this.driver=driver;
 		driver.get(settings.getProperty("url_adminConsole"));
+		PageFactory.initElements(driver, this);
 	}
 	public void enterUserName(String userName) {
-		WebElement usernameTxtBox = driver.findElement(usernameTextBox);
-		if(usernameTxtBox.isDisplayed())
-			usernameTxtBox.sendKeys(userName);
+		if(usernameTextBox.isDisplayed())
+		{
+			LogManager.info("LoginPage: Entering the username to sign in");
+			usernameTextBox.sendKeys(userName);
+		}
 	}
 	
 	public void enterPassword(String password) {
-		WebElement passwordTxtBox = driver.findElement(passwordTextBox);
-		if(passwordTxtBox.isDisplayed())
-			passwordTxtBox.sendKeys(password);
+		if(passwordTextBox.isDisplayed())
+		{
+			LogManager.info("LoginPage: Entering the password to sign in");
+			passwordTextBox.sendKeys(password);
+		}
 	}
 	
 	public void clickOnSignIn() {
-		WebElement signInBtn = driver.findElement(loginBtn);
-		if(signInBtn.isDisplayed())
-			signInBtn.click();
+		if(loginBtn.isDisplayed())
+		{
+			LogManager.info("LoginPage: Logging in the application");
+			loginBtn.click();
+		}
 	}
 	public HomePage SignIn(String user, String pwd) {
-		WebElement signInBtn = driver.findElement(loginBtn);
+		LogManager.info("LoginPage: Entering the credentials");
 		enterUserName(user);
 		enterPassword(pwd);
-		clickOnSignIn();
-		
+		clickOnSignIn();		
 		return new HomePage(driver);
 	}
 }

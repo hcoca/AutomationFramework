@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.rm.automation.utils.LogManager;
 
 public class FormAssociateRoomPage {
 	private WebDriver driver;
@@ -20,17 +21,26 @@ public class FormAssociateRoomPage {
 	}
 	public void searchConferenceRoom(String roomName) {
 		if(searchTextBox.isDisplayed())
+		{
+			LogManager.info("FormAssociateRoomPage: Searching a conference room");
 			searchTextBox.sendKeys(roomName);
+		}
 	}
 	public void addLocationsAssociate() {
 		if(addRoomBtn.isDisplayed())
-			addRoomBtn.click();		
+		{
+			LogManager.info("FormAssociateRoomPage: Associating the conference room with the location");
+			addRoomBtn.click();	
+		}
 	}
 	public FormLocationPage associateConferenceRoom(String roomName) {
 		searchConferenceRoom(roomName);
 		addLocationsAssociate();
 		if(infoLink.isDisplayed())
-			infoLink.click();		
+		{
+			LogManager.info("FormAssociateRoomPage: Selecting Location Info option");
+			infoLink.click();	
+		}
 		return new FormLocationPage(driver);
 	}
 

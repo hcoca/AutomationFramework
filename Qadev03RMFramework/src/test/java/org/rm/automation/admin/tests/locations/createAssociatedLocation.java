@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.LocationsRequests;
 import org.rm.automation.base.MyWebDriver;
@@ -44,7 +45,8 @@ public class createAssociatedLocation extends TestBaseSetup {
 	  String confRooms = "x1";
 	  String roomName = "B201"; 
 	  
-	  System.out.println("Create Location with a room associated functionality details...");
+	  System.out.println("Create Location with a room associated");
+	  LogManager.info("Executing createAssociatedLocation Test Case");
 	  loginPage = new LoginPage(driver);
 	  homePage = loginPage.SignIn(userName, password);
 	  locationsPage = homePage.SelectLocationsOption();
@@ -65,9 +67,11 @@ public class createAssociatedLocation extends TestBaseSetup {
 		try {
 			id = LocationsRequests.getLocationId(name);
 			LocationsRequests.deleteLocation(id);
+			LogManager.info("Executing after test method of createAssociatedLocation, removing location created");
 	
 		} 
 		catch (UnsupportedOperationException | IOException e) {
+			LogManager.info("Failed to execute after test method of createAssociatedLocation, location created was not removed");
 			e.printStackTrace();
 		}
 	}
