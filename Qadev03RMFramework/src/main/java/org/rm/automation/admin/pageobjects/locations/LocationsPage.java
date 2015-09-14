@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.utils.LogManager;
+import org.rm.automation.utils.Waiters;
 import org.testng.Assert;
 
 public class LocationsPage extends HomePage{
@@ -26,7 +27,8 @@ public class LocationsPage extends HomePage{
 	}
 	public boolean verifyLocationName(String name) {
 		LogManager.info("LocationsPage: Verifying the correct Name of location created");
-		cellName = By.xpath("//span[contains(.,'"+name+"')]");;
+		Waiters.WaitByXPath("//span[contains(.,'"+name+"')]", driver);
+		cellName = By.xpath("//span[contains(.,'"+name+"')]");		
 		WebElement element = driver.findElement(cellName);
 		String locationName = element.getText();
 		String expectedLocationName = name;
@@ -34,7 +36,8 @@ public class LocationsPage extends HomePage{
 	}
 	public boolean verifyLocationDisplayName(String displayName) {
 		LogManager.info("LocationsPage: Verifying the correct Display Name of location created");
-		cellDisplayName = By.xpath("//div[@ng-dblclick='editLocation(row.entity)'and contains(.,'"+displayName+"')]");
+		Waiters.WaitByXPath("//div[@ng-dblclick='editLocation(row.entity)'and contains(.,'"+displayName+"')]", driver);
+		cellDisplayName = By.xpath("//div[@ng-dblclick='editLocation(row.entity)'and contains(.,'"+displayName+"')]");		
 		WebElement element = driver.findElement(cellDisplayName);
 		String locationDisplayName = element.getText();
 		String expectedLocationDisplayName = displayName;
@@ -42,6 +45,7 @@ public class LocationsPage extends HomePage{
 	}
 	public boolean verifyLocationConfRooms(String confRooms) {
 		LogManager.info("LocationsPage: Verifying the correct Locations Associated number of location created");
+		Waiters.WaitByXPath("//small[contains(.,'"+confRooms+"')]", driver);
 		cellConfRoom = By.xpath("//small[contains(.,'"+confRooms+"')]");
 		WebElement element = driver.findElement(cellConfRoom);
 		String locationConfRooms = element.getText();
@@ -56,6 +60,7 @@ public class LocationsPage extends HomePage{
 		return this;
 	}
 	public FormLocationPage clickonAddButton() {
+		Waiters.WaitByXPath("//button[@ui-sref='admin.locations.modal.add']", driver);
 		if(addBtn.isDisplayed()||addBtn.isEnabled())
 		{
 			LogManager.info("LocationsPage: Click on Add button to add a new location");

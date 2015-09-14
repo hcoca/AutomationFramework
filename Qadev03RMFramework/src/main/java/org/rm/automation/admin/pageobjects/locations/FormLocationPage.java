@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.utils.LogManager;
+import org.rm.automation.utils.Waiters;
 import org.openqa.selenium.support.FindBy;
 
 public class FormLocationPage {
@@ -31,6 +32,7 @@ public class FormLocationPage {
 	}
 	
 	public void enterName(String name) {
+		Waiters.WaitById("location-add-name", driver);
 		if(nameTextBox.isDisplayed())
 		{
 			LogManager.info("FormLocationPage: Entering the name of the location");
@@ -40,6 +42,7 @@ public class FormLocationPage {
 	}
 	
 	public void enterDisplayName(String displayName) {
+		Waiters.WaitById("location-add-display-name", driver);
 		if(displayNameTextBox.isDisplayed())
 		{
 			LogManager.info("FormLocationPage: Entering the Display Name of the location");
@@ -48,6 +51,7 @@ public class FormLocationPage {
 		}
 	}
 	public void clickOnSave() {
+		Waiters.WaitByXPath("//button[@ng-click='save()']", driver);
 		if(saveBtn.isDisplayed())
 		{
 			LogManager.info("FormLocationPage: Click on Save button to save the changes");
@@ -62,6 +66,7 @@ public class FormLocationPage {
 	}
 	
 	public FormAssociateRoomPage gotoLocationsAssociations(){
+		Waiters.WaitByXPath("//a[contains(.,'Location Associations')]", driver);
 		if(associatedLink.isDisplayed())
 		{
 			LogManager.info("FormLocationPage: Selecting Location Associations option");
