@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rm.automation.admin.pageobjects.HomePage;
 
 public class ConferenceRoomsPage extends HomePage{
-	WebDriver driver;
 	
 	@FindBy(xpath = "//div[text()='Enabled']")
 	public WebElement enabledColumnBtn;

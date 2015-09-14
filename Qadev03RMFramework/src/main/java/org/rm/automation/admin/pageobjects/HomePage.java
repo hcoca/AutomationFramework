@@ -14,7 +14,6 @@ public class HomePage extends NavigationBarPage{
 
 	public HomePage(WebDriver driver) {
 		super(driver);
-		PageFactory.initElements(driver, this);		
 	}
 	public LoginPage SignOut() {
 		if(signOutBtn.isDisplayed()||signOutBtn.isEnabled())

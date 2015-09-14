@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.emailServers.EmailServersPage;
 import org.rm.automation.admin.pageobjects.locations.LocationsPage;
@@ -73,10 +75,9 @@ public class NavigationBarPage {
 		return new ResourcesPage(driver);
 	}
 	
-	
 	public ConferenceRoomsPage SelectRoomsOption()
 	{
-		Waiters.WaitByLinkText("Conference Rooms", driver);
+		Waiters.WaitByVisibilityOfWebElement(roomsLink, driver);
 		if(roomsLink.isDisplayed()||roomsLink.isEnabled())
 		{
 			LogManager.info("NavigationBarPage: Selecting Resources option");
@@ -84,4 +85,16 @@ public class NavigationBarPage {
 		}		
 		return new ConferenceRoomsPage(driver);
 	}
+	
+	/*
+	 * TESTING METHOD. DO NOT USE FOR TEST IMPLEMENTATION.
+	 */
+	public ConferenceRoomsPage click571()
+	{
+		(new WebDriverWait(driver, 20))
+		.until(ExpectedConditions.visibilityOf(roomsLink));
+		roomsLink.click();
+				
+		return new ConferenceRoomsPage(driver);
+	} 
 }

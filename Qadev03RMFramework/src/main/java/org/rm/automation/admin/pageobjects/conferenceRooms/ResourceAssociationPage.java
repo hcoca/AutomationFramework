@@ -8,8 +8,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ResourceAssociationPage extends ConferenceRoomCommonPage{
 	
-	WebDriver driver;
-	
 	@FindBy(xpath = "/html/body/div[4]/div/div/div[2]/div/div/div[2]/div[1]/legend")
 	public WebElement availableLabel;
 	
