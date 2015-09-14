@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.rm.automation.tablet.pageobjects.HomePage;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 
 public class LoginPage {
@@ -30,6 +31,7 @@ public class LoginPage {
 	
 	public void setUrl(String url)
 	{
+		LogManager.info("LoginPage : Typing the URL from the RM server");
 		WebElement URL = driver.findElement(urlTextBox);
 		if(URL.isDisplayed()){
 			URL.clear();
@@ -38,6 +40,7 @@ public class LoginPage {
 	}
 		
 	public void setUserName(String userName) {
+		LogManager.info("LoginPage : Typing RM admininstrator's username");
 		WebElement usernameTxtBox = driver.findElement(usernameTextBox);
 		if(usernameTxtBox.isDisplayed()){
 			usernameTxtBox.clear();
@@ -47,6 +50,7 @@ public class LoginPage {
 	
 	public void setPassword(String password)
 	{
+		LogManager.info("LoginPage : Typing RM administrator's password");
 		WebElement passwordTxtBox = driver.findElement(passwordTextBox);
 		if(passwordTxtBox.isDisplayed()){
 			passwordTxtBox.clear();
@@ -56,12 +60,14 @@ public class LoginPage {
 	
 	public void login()
 	{
+		LogManager.info("LoginPage : Clicking on sign in button to authenticate the account and enable the room selection");
 		WebElement signButton = driver.findElement(signInButton);
 		if(signButton.isDisplayed())			
 			signButton.click();
 	}
 	
 	public void setRoom(){
+		LogManager.info("LoginPage : Selecting the conference room to manage");
 
 		WebElement roomPicker = driver.findElement(roomSelector);		
 		if(roomPicker.isDisplayed())			
@@ -74,6 +80,7 @@ public class LoginPage {
 	
 	public HomePage access(String url, String admin, String pass)
 	{	
+		LogManager.info("LoginPage : Accessing to the selected conference room");
 		setUrl(url);
 		setUserName(admin);
 		setPassword(pass);

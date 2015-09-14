@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.tablet.pageobjects.search.SearchPage;
+import org.rm.automation.utils.LogManager;
 
 //import framework.conferenceRooms.ConferenceRoomsPage;
 
@@ -20,6 +21,7 @@ public class TabletPage {
 
 	public MeetingsPage selectSchedulePage()
 	{
+		LogManager.info("HomePage <=> TabletPage : Clicking on Schedule button");
 		WebElement scheduleBtn = driver.findElement(scheduleButton);
 		if(scheduleBtn.isDisplayed())
 			scheduleBtn.click();
@@ -27,6 +29,7 @@ public class TabletPage {
 	}
 	
 	public SearchPage selectSearchPage(){
+		LogManager.info("HomePage <=> TabletPage : Clicking on Search button");
 		WebElement searchBtn = driver.findElement(searchButton);
 		if(searchBtn.isDisplayed())
 			searchBtn.click();
@@ -34,6 +37,7 @@ public class TabletPage {
 	}
 	
 	public HomePage goHomePage(){
+		LogManager.info("HomePage <=> TabletPage : Clicking on Home icon");
 		WebElement homeBtn = driver.findElement(homeButton);
 		if(homeBtn.isDisplayed())
 			homeBtn.click();
