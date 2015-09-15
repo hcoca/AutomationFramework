@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.base.MyWebDriver;
 import org.rm.automation.base.TestBaseSetup;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ResourcesRequests;
 import org.testng.annotations.*;
@@ -23,6 +24,7 @@ public class CreateResource extends TestBaseSetup {
 	@Test
 	public void testCreateResource()
 	{
+		LogManager.info("CreateResource: Executing Test Case");
 		loginPage = new LoginPage(driver)
 		  		.SignIn(username, password)
 		  		.SelectResourcesOption()
@@ -38,12 +40,8 @@ public class CreateResource extends TestBaseSetup {
 	public void Postconditions()
 	{
 		String id = "";
-		try {
 		id = ResourcesRequests.getResourceId(name);
 		ResourcesRequests.deleteResource(id);
-	
-		} catch (UnsupportedOperationException | IOException e) {
-		e.printStackTrace();
-		}
+		LogManager.info("CreateResource: Executing Postcondition, removing resource created");
 	}
 }

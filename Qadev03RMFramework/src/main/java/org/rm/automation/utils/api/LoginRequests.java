@@ -11,6 +11,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 
 public class LoginRequests {
@@ -29,7 +30,7 @@ public class LoginRequests {
 	 * @throws UnsupportedOperationException
 	 * @throws IOException
 	 */
-	public static String getToken() throws UnsupportedOperationException, IOException
+	public static String getToken()
 	{
 		try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
 			HttpPost request = new HttpPost(loginEp);
@@ -57,11 +58,12 @@ public class LoginRequests {
                 return obj.get("token").toString();
 
             } catch (Exception e) {
+        		LogManager.error("ResourceRequests: Error parsing the json response");
             }
 
         } catch (IOException ex) {
+			LogManager.error("ResourceRequests: Error stablishing the HTTP protocol");
         }
 		return null;
 	}
-
 }
