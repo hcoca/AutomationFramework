@@ -3,6 +3,7 @@ package org.rm.automation.admin.pageobjects.resources;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
 
 public class AddResourcesPage {
@@ -34,6 +35,7 @@ public class AddResourcesPage {
 		element = driver.findElement(nameField);
 		element.clear();
 		element.sendKeys(name);
+		LogManager.info("AddResourcesPage: Set the Name of a resource");
 		return this;
 	}
 	
@@ -46,6 +48,7 @@ public class AddResourcesPage {
 	{
 		element = driver.findElement(displayNameField);
 		element.sendKeys(displayName);
+		LogManager.info("AddResourcesPage: Set the DisplayName of a resource");
 		return this;
 	}
 	
@@ -57,6 +60,7 @@ public class AddResourcesPage {
 	{
 		element = driver.findElement(saveButton);
 		element.click();		
+		LogManager.info("AddResourcesPage: Click on the Save button");
 		return new ResourcesPage(driver);
 	}
 }

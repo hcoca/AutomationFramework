@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.rm.automation.admin.pageobjects.HomePage;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
 
 import java.util.List;
@@ -31,6 +32,7 @@ public class ResourcesPage extends HomePage{
 		
 		WebElement element = driver.findElement(By.xpath("//div/div/button"));
 		element.click();
+		LogManager.info("ResourcesPage: Click on Add button to create a new resource");
 	    
 		return new AddResourcesPage(driver);
 	}
@@ -47,6 +49,7 @@ public class ResourcesPage extends HomePage{
 		List<WebElement> list = GetListResources();
 		
 		checkbox = list.get(list.size()-1).findElement(By.cssSelector("input.ngSelectionCheckbox"));
+		LogManager.info("ResourcesPage: Select a resource from the resource's table");
 		checkbox.click();
 		
 		return this;
@@ -58,9 +61,9 @@ public class ResourcesPage extends HomePage{
 	 */
 	public DeleteResourcesPage RemoveResource()
 	{
-		element = driver
-				.findElement(By.id("btnRemove"));
+		element = driver.findElement(By.id("btnRemove"));
 		element.click();
+		LogManager.info("ResourcesPage: Click on Remove button to remove a resource");
 		
 		return new DeleteResourcesPage(driver);
 	}
@@ -75,7 +78,7 @@ public class ResourcesPage extends HomePage{
 		element = list.get(list.size()-1);
 		
 		action.moveToElement(element.findElement(By.cssSelector("div.ng-scope > span.ng-binding"))).doubleClick().build().perform();
-		
+		LogManager.info("ResourcesPage: Double click on a resource of the table");
 		return new AddResourcesPage(driver);
 	}
 	
@@ -114,6 +117,7 @@ public class ResourcesPage extends HomePage{
 	 */
 	public ResourcesPage VerifyResourceWasCreated(String expName, String expDisplayName)
 	{
+		LogManager.info("ResourcesPage: Verifying the correct data of the resource was created");
 		WebElement nameElement;
 		WebElement displayNameElement;
 
@@ -142,6 +146,7 @@ public class ResourcesPage extends HomePage{
 	 */
 	public ResourcesPage VerifyResourceWasDeleted(String expName, String expDisplayName)
 	{
+		LogManager.info("ResourcesPage: Verifying the resource was deleted");
 		WebElement nameElement;
 		WebElement displayNameElement;
 		
@@ -168,6 +173,7 @@ public class ResourcesPage extends HomePage{
 	 */
 	public ResourcesPage VerifyResourceNameWasUpdated(String expName)
 	{
+		LogManager.info("ResourcesPage: Verifying the correct Name of the resource was updated");
 		WebElement nameElement;
 
 		SelectRoomsOption();
