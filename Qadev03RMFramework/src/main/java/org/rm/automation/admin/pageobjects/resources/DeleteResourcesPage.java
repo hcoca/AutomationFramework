@@ -3,6 +3,7 @@ package org.rm.automation.admin.pageobjects.resources;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
 
 public class DeleteResourcesPage {	
@@ -24,9 +25,9 @@ public class DeleteResourcesPage {
 	{
 		Waiters.WaitByCss(removePath, driver);
 		
-		element = driver
-				.findElement(removeButton);
+		element = driver.findElement(removeButton);
 		element.click();
+		LogManager.info("DeleteResourcesPage: Click the Remove button");
 		
 		return new ResourcesPage(driver);
 	}

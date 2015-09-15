@@ -80,7 +80,7 @@ public class NavigationBarPage {
 		Waiters.WaitByVisibilityOfWebElement(roomsLink, driver);
 		if(roomsLink.isDisplayed()||roomsLink.isEnabled())
 		{
-			LogManager.info("NavigationBarPage: Selecting Resources option");
+			LogManager.info("NavigationBarPage: Selecting Conference Rooms option");
 			roomsLink.click();
 		}		
 		return new ConferenceRoomsPage(driver);
