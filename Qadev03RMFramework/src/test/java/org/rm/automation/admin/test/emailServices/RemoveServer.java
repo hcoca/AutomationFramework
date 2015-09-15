@@ -8,6 +8,7 @@ import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.emailServers.EmailServersPage;
 import org.rm.automation.admin.pageobjects.emailServers.RemoveServerpage;
 import org.rm.automation.base.TestBaseSetup;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ServicesRequests;
 import org.testng.annotations.BeforeTest;
@@ -29,21 +30,24 @@ public class RemoveServer extends TestBaseSetup {
     RemoveServerpage removeserv;
   @Test
   public void f() {
-	  emailserver = objHomePage.SelectEmailServersOption();
-	  removeserv=emailserver.clickbtnremove();
-	  emailserver = removeserv.yesdelete();
+	LogManager.info("RemoveServer Test: begin remove testcase");
+	objLogin = new LoginPage(driver);
+	objHomePage = objLogin.SignIn(username, password);
+	emailserver = objHomePage.SelectEmailServersOption();
+	removeserv=emailserver.clickbtnremove();
+	emailserver = removeserv.yesdelete();
 	  //Assert.assertFalse(emailserver.thereisExchange());
   }
   @BeforeTest
   public void beforeTest() {
 	try {
-		// new try
+		LogManager.info("RemoveServer Test: before test RemoveServer");
 		ServicesRequests.AddServices();
-		objLogin = new LoginPage(driver);
-		objHomePage = objLogin.SignIn(username, password);
+
 	} 
 	catch (UnsupportedOperationException | IOException e) {
 		e.printStackTrace();
+		LogManager.warn("RemoveServer: before test failet");
 	}
   }
 

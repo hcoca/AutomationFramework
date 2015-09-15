@@ -40,19 +40,22 @@ public class AddEmailServersPage {
 	  }
 	  public void sethostname(String hostname) 
 	  {
+		  LogManager.info("AddEmailServerPage: input EmailServer hostname");
 		  serverinput.sendKeys(hostname);
 	  }
 	  public void setUsrName(String usraddserver)
 	  {
+		  LogManager.info("AddEmailServerPage: input EmailServer User");
 		  usrname.sendKeys(usraddserver);
 	  }
 	  public void setPassWord(String pwusr) {
+		  LogManager.info("AddEmailServerPage: input EmailServer user password ");
 		  pwusrname.sendKeys(pwusr);
 	  }
 	  public EmailServersPage saveserverbtn() {
 		  (new WebDriverWait(driver, 20))
 			.until(ExpectedConditions.visibilityOf(addserverbtn));
-		  LogManager.info(" -- > click save button on panel Emailserver");
+		  LogManager.info("AddEmailServerPage: click save button");
 		  addserverbtn.click();
 		  EmailServersPage email = new EmailServersPage(driver);
 		  (new WebDriverWait(driver, 50000))
@@ -62,6 +65,7 @@ public class AddEmailServersPage {
 	  }
 	  public EmailServersPage cancelserverbtn() {
 		  cancelserverbtn.click();
+		  LogManager.info("AddEmailServerPage: click cancel button");
 		  return new EmailServersPage(driver);
 	  }
 

@@ -38,14 +38,15 @@ public class EmailServersPage {
 		
 	PageFactory.initElements(driver, this);  
   }
-  public boolean thereisExchange() {	  
+  public boolean thereisExchange() {
+	  
 	  return panelExchanges.isDisplayed();
   }
   
   public String gettextExchange() {
-	  
 	(new WebDriverWait(driver, 25))
 		.until(ExpectedConditions.visibilityOf(testexangeadded));
+	LogManager.info("EmailServerPage: return EmailServerExchage");
 	return testexangeadded.getText();
   }
   
@@ -53,7 +54,7 @@ public class EmailServersPage {
   public RemoveServerpage clickbtnremove(){
 	  (new WebDriverWait(driver, 20))
 		.until(ExpectedConditions.visibilityOf(buttremove));
-	  LogManager.info(" -- > click remove on button EmailserverPage");
+	  LogManager.info("EmailServerPage: click button remove Emailserver");
 	  buttremove.click();
 	  return new RemoveServerpage(driver);
   }
@@ -61,7 +62,7 @@ public class EmailServersPage {
   public AddEmailServersPage clickbtnadd(){
 	  (new WebDriverWait(driver, 20))
 		.until(ExpectedConditions.visibilityOf(buttonadd));
-	  LogManager.info(" -- > click add button EmailserverPage");
+	  LogManager.info("EmailServerPage: click button add Emailserver");
 	  buttonadd.click();
 	  return new AddEmailServersPage(driver);
   }

@@ -22,7 +22,6 @@ public class RemoveServerpage {
 	  public RemoveServerpage(WebDriver driver)
 	  {
 		this.driver = driver;
-		LogManager.info(" -- > open dilog delete");
 		PageFactory.initElements(driver, this);
 	  }
 
@@ -32,12 +31,12 @@ public class RemoveServerpage {
 		  return popdelete.getText();
 	  }
 	  public EmailServersPage yesdelete(){
-		  LogManager.info(" -- > click acept button remove server");
+		  LogManager.info("RemoveServerPage: press yes button Confirm delete EmailServer");
 		  btnyesdelete.click();
 		  return new EmailServersPage(driver);
 	  }
 	  public EmailServersPage nodelte() {
-		  LogManager.info("--> click no delete");
+		LogManager.info("RemoveServerPage: press no button cancel delete EmailServer");
 		btnnodelete.click();
 		return new EmailServersPage(driver);
 	  }

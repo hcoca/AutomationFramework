@@ -10,6 +10,7 @@ import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.emailServers.AddEmailServersPage;
 import org.rm.automation.admin.pageobjects.emailServers.EmailServersPage;
 import org.rm.automation.base.TestBaseSetup;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ServicesRequests;
 import org.testng.annotations.BeforeTest;
@@ -35,6 +36,9 @@ public class AddServer extends TestBaseSetup {
     EmailServersPage emailserver;
   @Test
   public void f() {
+	  LogManager.info("AddServer Test: begin Add server test cases");
+	  objLogin = new LoginPage(driver);
+	  objHomePage = objLogin.SignIn(username , password);
 	  emailserver = objHomePage.SelectEmailServersOption();
 	  addser = emailserver.clickbtnadd();
 	  addser.sethostname(hostname);
@@ -47,13 +51,12 @@ public class AddServer extends TestBaseSetup {
   @BeforeTest
   public void beforeTest() {
 	try {
-		// new try
+		LogManager.info("AddServer Test: Execute before test");
 		ServicesRequests.RemoveService();
-		objLogin = new LoginPage(driver);
-		objHomePage = objLogin.SignIn(username , password);
 	} 
 	catch (UnsupportedOperationException | IOException e) {
 		e.printStackTrace();
+		LogManager.warn("AddServer Test: before test failet");
 	}
 	  
   }
