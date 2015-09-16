@@ -20,6 +20,76 @@ import org.rm.automation.utils.api.ConferenceRoomsRequests;
 
 public class ThisTestCaseIsToVerifyThatXY {
 	
+	public static void main(String[] ar){
+		try {
+			JSONObject jo = ConferenceRoomsRequests.getRoom(ConferenceRoomsRequests.getRooms().get(0).get("_id").toString());
+			System.out.println(jo);
+			
+		} catch (UnsupportedOperationException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+//	public static void main(String[] ar){
+//		try {
+//			JSONObject jo = ConferenceRoomsRequests.getRooms().get(0);
+//			System.out.println(jo);
+//			ConferenceRoomsRequests.setValue(jo.get("_id").toString(), "code", "");
+//			//ConferenceRoomsRequests.putRoom(jo.get("_id").toString(), "eg");
+//			JSONObject eg = ConferenceRoomsRequests.getRooms().get(0);
+//			System.out.println(eg);
+//			
+//		} catch (UnsupportedOperationException | IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+}
+	
+//	public static void main(String[] ar){
+//		LoginPage login;
+//		HomePage homePage;
+//		ConferenceRoomsPage conferenceRoom;
+//		RoomInfoPage roomInfo;
+//		
+//		WebDriver driver = new FirefoxDriver();
+//		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//		driver.get("http://localhost:4040/admin");
+//		login = new LoginPage(driver);
+//		homePage = login.SignIn("571Network\\Administrator", "Pilot571david77");
+//		conferenceRoom = homePage.SelectRoomsOption();
+//		
+//		roomInfo = conferenceRoom.doubleClickConferenceRoom("room67");
+//		roomInfo.setCode("1234");
+//		
+//		conferenceRoom = roomInfo.clickSaveBtn();
+//		
+//		try {
+//			ArrayList<JSONObject> list = ConferenceRoomsRequests.getRooms();
+//			for(JSONObject json : list){
+//				if(json.get("customDisplayName").toString().equals("room67")){
+//					System.out.println("The code is: " + json.get("code"));
+//				}
+//			}
+//			
+//		} catch (UnsupportedOperationException | IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
+	
+//	public static void main(String[] ar){
+//		try {
+//			ArrayList<JSONObject> list = ConferenceRoomsRequests.getRooms();
+//			for(JSONObject json : list){
+//				System.out.println(json);
+//			}
+//			
+//		} catch (UnsupportedOperationException | IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
+	
 //	public static void main(String[] ar){
 //		LoginPage login;
 //		HomePage homePage;
@@ -40,18 +110,18 @@ public class ThisTestCaseIsToVerifyThatXY {
 //		System.out.println("The updated room is:" + res);
 //	}
 	
-	public static void main(String[] ar){
-		try {
-			ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-			String roomId = allRooms.get(0).get("_id").toString();
-			System.out.println("Before update: " + ConferenceRoomsRequests.getRooms().get(0).get("customDisplayName").toString());
-			ConferenceRoomsRequests.putRoom(roomId, "Hola");
-			System.out.println("After update: " + ConferenceRoomsRequests.getRooms().get(0).get("customDisplayName").toString());
-		} catch (UnsupportedOperationException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+//	public static void main(String[] ar){
+//		try {
+//			ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
+//			String roomId = allRooms.get(0).get("_id").toString();
+//			System.out.println("Before update: " + ConferenceRoomsRequests.getRooms().get(0).get("customDisplayName").toString());
+//			ConferenceRoomsRequests.putRoom(roomId, "Hola");
+//			System.out.println("After update: " + ConferenceRoomsRequests.getRooms().get(0).get("customDisplayName").toString());
+//		} catch (UnsupportedOperationException | IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
 	
 //	public static void main(String[] ar){
 //		WebDriver driver = new FirefoxDriver();

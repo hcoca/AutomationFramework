@@ -22,8 +22,21 @@ public class RoomInfoPage extends ConferenceRoomCommonPage{
 	@FindBy(xpath = "//div[3]/div[2]/button")
 	public WebElement saveBtn;
 	
+	@FindBy(xpath = "//input[@ng-model='selectedRoom.code']")
+	public WebElement codeInput;
+	
 	public RoomInfoPage(WebDriver driver){
 		super(driver);
+	}
+	
+	public RoomInfoPage setCode(String newCode){
+		(new WebDriverWait(super.driver, 20))
+		.until(ExpectedConditions.visibilityOf(codeInput));
+		codeInput.clear();
+		
+		codeInput.sendKeys(newCode);
+		
+		return this;
 	}
 	
 	public RoomInfoPage setDisplayName(String newDisplayName){

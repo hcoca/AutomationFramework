@@ -115,6 +115,54 @@ public class ConferenceRoomsRequests {
 	}
 	
 	/**
+	 * Updates a conference room's value that's available in its API.
+	 * @throws UnsupportedOperationException
+	 * @throws IOException
+	 */
+	public static void setValue(String roomId, String parameter, String value) throws UnsupportedOperationException, IOException
+	{
+		String url = roomByIdEp.replace("[id]", roomId);
+		
+		try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
+			HttpPut request = new HttpPut(url);
+			
+			token = LoginRequests.getToken();
+			
+			/**
+			 * Setting the headers
+			 */
+			request.addHeader("Content-type", "application/json");
+			request.setHeader("Accept", "application/json");
+			request.setHeader("Authorization", "jwt "+ token);
+			
+			/**
+			 * Request's body
+			 */
+			JSONObject body = new JSONObject();
+			switch(parameter){
+				case "emailAddress": body.put("emailAddress", value);break;
+				case "code": body.put("code", value);break;
+				case "displayName": body.put("displayName", value);break;
+				case "locationId": body.put("locationId", value);break;
+				case "__v": body.put("__v", value);break;
+				case "customDisplayName": body.put("customDisplayName", value);break;
+				case "_id": body.put("_id", value);break;
+				case "serviceId": body.put("serviceId", value);break;
+				case "enabled": body.put("enabled", value);break;
+			}
+		  	
+			//body.put("customDisplayName", updatedCustomDisplayName);
+		  	
+			StringEntity entity = new StringEntity(body.toString());
+		    request.setEntity(entity);
+
+            HttpResponse result = httpClient.execute(request);
+        } 
+		catch (IOException ex) {
+        }
+	}
+	
+	/**
 	 * Get a room's id providing the customDisplayName of the room
 	 * @param name
 	 * @return
@@ -133,5 +181,26 @@ public class ConferenceRoomsRequests {
 			e.printStackTrace();
 		}
 		return id;
+	}
+	
+	
+	/**
+	 * Get a conference room by ID.
+	 * @param roomId
+	 * @return
+	 * @throws UnsupportedOperationException
+	 * @throws IOException
+	 */
+	public static JSONObject getRoom(String roomId) throws UnsupportedOperationException, IOException{
+		JSONObject res = null;
+		
+		ArrayList<JSONObject> list = ConferenceRoomsRequests.getRooms();
+		for(JSONObject json : list){
+			if(json.get("_id").toString().equals(roomId)){
+				res = json;
+			}
+		}
+		
+		return res;
 	}
 }
