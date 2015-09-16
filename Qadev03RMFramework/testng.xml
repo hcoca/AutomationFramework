@@ -4,8 +4,8 @@
 
   <test name="Acceptance Test cases">
     <classes>
-      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomColumnBtn"/>
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName"/>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate"/>
       <class name="org.rm.automation.admin.tests.locations.createBasicLocation"/>
       <class name="org.rm.automation.admin.tests.locations.createAssociatedLocation"/>
       <class name="org.rm.automation.admin.tests.resources.CreateResource"/>

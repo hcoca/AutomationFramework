@@ -83,7 +83,7 @@ public class ConferenceRoomsRequests {
 	 * @throws UnsupportedOperationException
 	 * @throws IOException
 	 */
-	public static void putRoom(String roomId) throws UnsupportedOperationException, IOException
+	public static void putRoom(String roomId, String updatedCustomDisplayName) throws UnsupportedOperationException, IOException
 	{
 		String url = roomByIdEp.replace("[id]", roomId);
 		
@@ -103,7 +103,7 @@ public class ConferenceRoomsRequests {
 			 * Request's body
 			 */
 			JSONObject body = new JSONObject();
-		  	body.put("customDisplayName", "Conference Room 1");
+		  	body.put("customDisplayName", updatedCustomDisplayName);
 		  	
 			StringEntity entity = new StringEntity(body.toString());
 		    request.setEntity(entity);

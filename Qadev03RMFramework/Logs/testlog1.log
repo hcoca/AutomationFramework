@@ -1150,3 +1150,156 @@
 2015-09-14 16:36:20,366 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\Users\Administrator\new workspace\Qadev03RMFramework\reports\Suite for Acceptance test cases
 2015-09-14 16:36:20,367 [main] INFO org.rm.automation.utils.LogManager - Browser: "FIREFOX" was closed
 2015-09-14 16:36:20,367 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\Users\Administrator\new workspace\Qadev03RMFramework\reports\Suite for Acceptance test cases
+2015-09-16 05:03:00,842 [main] INFO org.rm.automation.utils.LogManager - Browser: "FIREFOX" was opened
+2015-09-16 05:03:00,849 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-16 05:03:00,943 [main] INFO org.rm.automation.utils.LogManager - Browser: "FIREFOX" was opened
+2015-09-16 05:03:00,943 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-16 05:03:00,987 [main] INFO org.rm.automation.utils.LogManager - Browser: "FIREFOX" was opened
+2015-09-16 05:03:00,987 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-16 05:03:01,022 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-16 05:03:01,936 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-16 05:03:02,008 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-16 05:03:02,144 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-16 05:03:03,090 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-16 05:03:03,415 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-16 05:03:03,812 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-16 05:03:03,815 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-16 05:03:04,222 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-16 05:03:04,250 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-16 05:03:04,368 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-16 05:03:04,495 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-16 05:03:04,886 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-16 05:03:05,938 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-16 05:03:05,947 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-16 05:03:05,948 [main] INFO org.rm.automation.utils.LogManager - Executing createBasicLocation Test Case
+2015-09-16 05:03:07,076 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-16 05:03:07,107 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-16 05:03:07,251 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-16 05:03:07,377 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-16 05:03:08,061 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-16 05:03:08,380 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Click on Add button to add a new location
+2015-09-16 05:03:08,600 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the Display Name of the location
+2015-09-16 05:03:08,931 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Click on Save button to save the changes
+2015-09-16 05:03:09,087 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-16 05:03:09,363 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-16 05:03:09,609 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct data of location created
+2015-09-16 05:03:09,609 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Name of location created
+2015-09-16 05:03:19,683 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-16 05:03:19,853 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-16 05:03:19,853 [main] INFO org.rm.automation.utils.LogManager - Executing createAssociatedLocation Test Case
+2015-09-16 05:03:20,258 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-16 05:03:20,360 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-16 05:03:20,607 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-16 05:03:20,846 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-16 05:03:21,299 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-16 05:03:21,883 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Click on Add button to add a new location
+2015-09-16 05:03:32,179 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-16 05:03:32,332 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-16 05:03:32,333 [main] INFO org.rm.automation.utils.LogManager - CreateResource: Executing Test Case
+2015-09-16 05:03:32,806 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-16 05:03:32,831 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-16 05:03:32,953 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-16 05:03:33,110 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-16 05:03:33,657 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-16 05:03:34,453 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Add button to create a new resource
+2015-09-16 05:03:34,913 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-16 05:03:35,005 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-16 05:03:35,445 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-16 05:03:35,446 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct data of the resource was created
+2015-09-16 05:03:35,576 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-16 05:03:35,974 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-16 05:03:46,342 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-16 05:03:46,949 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-16 05:03:47,166 [main] INFO org.rm.automation.utils.LogManager - CreateResource: Executing Postcondition, removing resource created
+2015-09-16 05:03:47,169 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-16 05:03:47,173 [main] INFO org.rm.automation.utils.LogManager - Executing: Create a new meeting test case
+2015-09-16 05:03:47,965 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-16 05:03:47,966 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-16 05:03:48,537 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-16 05:03:48,733 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-16 05:03:48,901 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-16 05:03:49,089 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Selecting the conference room to manage
+2015-09-16 05:03:59,197 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-16 05:03:59,363 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createAssociatedLocation, removing location created
+2015-09-16 05:03:59,397 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createBasicLocation, removing location created
+2015-09-16 05:03:59,804 [main] INFO org.rm.automation.utils.LogManager - Browser: "FIREFOX" was closed
+2015-09-16 05:03:59,804 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\Users\Administrator\workspace\Qadev03RMFramework\reports\Suite for Acceptance test cases
+2015-09-16 05:03:59,805 [main] INFO org.rm.automation.utils.LogManager - Browser: "FIREFOX" was closed
+2015-09-16 05:03:59,805 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\Users\Administrator\workspace\Qadev03RMFramework\reports\Suite for Acceptance test cases
+2015-09-16 05:21:01,050 [main] INFO org.rm.automation.utils.LogManager - Browser: "FIREFOX" was opened
+2015-09-16 05:21:01,064 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-16 05:21:01,149 [main] INFO org.rm.automation.utils.LogManager - Browser: "FIREFOX" was opened
+2015-09-16 05:21:01,151 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-16 05:21:01,177 [main] INFO org.rm.automation.utils.LogManager - Browser: "FIREFOX" was opened
+2015-09-16 05:21:01,177 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-16 05:21:01,225 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-16 05:21:02,061 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-16 05:21:02,120 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-16 05:21:02,252 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-16 05:21:02,394 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-16 05:21:02,822 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-16 05:21:03,597 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-16 05:21:03,606 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-16 05:21:04,000 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-16 05:21:04,062 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-16 05:21:04,215 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-16 05:21:04,465 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-16 05:21:06,297 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-16 05:21:08,225 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-16 05:21:08,226 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-16 05:21:08,228 [main] INFO org.rm.automation.utils.LogManager - Executing createBasicLocation Test Case
+2015-09-16 05:21:08,647 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-16 05:21:08,678 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-16 05:21:08,797 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-16 05:21:08,944 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-16 05:21:09,805 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-16 05:21:10,229 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Click on Add button to add a new location
+2015-09-16 05:21:10,773 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the name of the location
+2015-09-16 05:21:11,086 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the Display Name of the location
+2015-09-16 05:21:11,255 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Click on Save button to save the changes
+2015-09-16 05:21:11,514 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-16 05:21:11,938 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-16 05:21:12,166 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct data of location created
+2015-09-16 05:21:12,167 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Name of location created
+2015-09-16 05:21:12,212 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Display Name of location created
+2015-09-16 05:21:12,243 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Locations Associated number of location created
+2015-09-16 05:21:12,332 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-16 05:21:12,914 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-16 05:21:12,915 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-16 05:21:12,916 [main] INFO org.rm.automation.utils.LogManager - Executing createAssociatedLocation Test Case
+2015-09-16 05:21:13,915 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-16 05:21:13,937 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-16 05:21:14,070 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-16 05:21:14,209 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-16 05:21:14,545 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-16 05:21:14,872 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Click on Add button to add a new location
+2015-09-16 05:21:25,174 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-16 05:21:25,395 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-16 05:21:25,396 [main] INFO org.rm.automation.utils.LogManager - CreateResource: Executing Test Case
+2015-09-16 05:21:25,935 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-16 05:21:25,970 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-16 05:21:26,104 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-16 05:21:26,331 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-16 05:21:26,772 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-16 05:21:27,531 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Add button to create a new resource
+2015-09-16 05:21:27,806 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-16 05:21:27,934 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-16 05:21:28,019 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-16 05:21:28,021 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct data of the resource was created
+2015-09-16 05:21:38,503 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-16 05:21:38,718 [main] INFO org.rm.automation.utils.LogManager - CreateResource: Executing Postcondition, removing resource created
+2015-09-16 05:21:38,719 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-16 05:21:38,720 [main] INFO org.rm.automation.utils.LogManager - Executing: Create a new meeting test case
+2015-09-16 05:21:39,261 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-16 05:21:39,262 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-16 05:21:39,752 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-16 05:21:39,932 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-16 05:21:40,076 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-16 05:21:40,208 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Selecting the conference room to manage
+2015-09-16 05:21:50,262 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-16 05:21:50,459 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createAssociatedLocation, removing location created
+2015-09-16 05:21:50,502 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createBasicLocation, removing location created
+2015-09-16 05:21:50,991 [main] INFO org.rm.automation.utils.LogManager - Browser: "FIREFOX" was closed
+2015-09-16 05:21:50,992 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\Users\Administrator\workspace\Qadev03RMFramework\reports\Suite for Acceptance test cases
+2015-09-16 05:21:50,992 [main] INFO org.rm.automation.utils.LogManager - Browser: "FIREFOX" was closed
+2015-09-16 05:21:50,993 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\Users\Administrator\workspace\Qadev03RMFramework\reports\Suite for Acceptance test cases
