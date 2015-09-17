@@ -15,6 +15,7 @@ import org.apache.http.util.EntityUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 
 import bsh.util.Httpd;
@@ -103,9 +104,11 @@ public class ServicesRequests {
 		try {
 			ArrayList<JSONObject> list = getServices();
 			String id = list.get(0).get("_id").toString();
+			LogManager.info("SERVICEREQUESTS:return service ID ");
 			return id;
 		} catch (UnsupportedOperationException | IOException e) {
 			e.printStackTrace();
+			LogManager.info("SERVICEREQUESTS: there aren't services return null");
 		}
 		
 		return null;
@@ -120,54 +123,62 @@ public class ServicesRequests {
 	 */
 	public static void AddServices() throws UnsupportedOperationException, IOException
 	{
-		try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
-			HttpPost request = new HttpPost(servicespost);
-			
-			token = LoginRequests.getToken();
-			
-			/**
-			 * Setting the headers
-			 */
-			request.addHeader("Content-type", "application/json");
-			request.setHeader("Accept", "application/json");
-			request.setHeader("Authorization", "jwt "+ token);
-			
-			/**
-			 * Request's body
-			 */
-			JSONObject body = new JSONObject();
-			
-		  	body.put("username", Serverurs);
-		  	body.put("password", ServerPW);
-		  	body.put("hostname", ServerDom);
-
-		  	
-			StringEntity entity = new StringEntity(body.toString());
-		    request.setEntity(entity);
-
-            HttpResponse result = httpClient.execute(request);
-        } 
-		catch (IOException ex) {
-        }
+		if(getServiceId()==null){
+			try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
+				HttpPost request = new HttpPost(servicespost);
+				LogManager.info("SERVICEREQUESTS: add service");
+				token = LoginRequests.getToken();
+				/**
+				 * Setting the headers
+				 */
+				request.addHeader("Content-type", "application/json");
+				request.setHeader("Accept", "application/json");
+				request.setHeader("Authorization", "jwt "+ token);
+				/**
+				 * Request's body
+				 */
+				JSONObject body = new JSONObject();
+				
+			  	body.put("username", Serverurs);
+			  	body.put("password", ServerPW);
+			  	body.put("hostname", ServerDom);
+	
+			  	
+				StringEntity entity = new StringEntity(body.toString());
+			    request.setEntity(entity);
+	
+	            HttpResponse result = httpClient.execute(request);
+	        } 
+			catch (IOException ex) {
+				LogManager.error("SERVICEREQUESTS: error when try add a service");
+	        }
+		}else{
+			LogManager.warn("SERVICEREQUESTS: the service no is added because there is a service added");
+		}
 	}
 	
 	public static void RemoveService() throws UnsupportedOperationException, IOException
 	{
-		try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
-			HttpDelete request = new HttpDelete(ServiceEPRemove.replace("[serviceId]", getServiceId()));
-			
-			token = LoginRequests.getToken();
-			/**
-			 * Setting the headers
-			 */
-			request.addHeader("Content-type", "application/json");
-			request.setHeader("Accept", "application/json");
-			request.setHeader("Authorization", "jwt "+ token);
-
-            HttpResponse result = httpClient.execute(request);
-        } 
-		catch (IOException ex) {
-        }
+		if(getServiceId()!=null){
+			try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
+				HttpDelete request = new HttpDelete(ServiceEPRemove.replace("[serviceId]", getServiceId()));
+				LogManager.info("SERVICEREQUESTS: delete the service by API");
+				token = LoginRequests.getToken();
+				/**
+				 * Setting the headers
+				 */
+				request.addHeader("Content-type", "application/json");
+				request.setHeader("Accept", "application/json");
+				request.setHeader("Authorization", "jwt "+ token);
+	
+	            HttpResponse result = httpClient.execute(request);
+	        } 
+			catch (IOException ex) {
+				LogManager.error("SERVICEREQUESTS: delete the service by API FAIL");
+	        }
+		}else{
+			LogManager.warn("SERVICEREQUESTS: no there aren't any service for remove");
+		}
 	}
 	
 	

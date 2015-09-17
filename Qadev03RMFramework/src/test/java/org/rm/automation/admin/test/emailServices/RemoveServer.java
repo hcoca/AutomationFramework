@@ -11,6 +11,7 @@ import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ServicesRequests;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 
@@ -47,8 +48,21 @@ public class RemoveServer extends TestBaseSetup {
 	} 
 	catch (UnsupportedOperationException | IOException e) {
 		e.printStackTrace();
-		LogManager.warn("RemoveServer: before test failet");
+		LogManager.warn("RemoveServer: before test fail");
 	}
+  }
+  
+  @AfterTest
+  public void AfterTest(){
+	  try {
+			LogManager.info("RemoveServer Test: after test add service");
+			ServicesRequests.AddServices();
+
+		} 
+		catch (UnsupportedOperationException | IOException e) {
+			e.printStackTrace();
+			LogManager.warn("RemoveServer: after test fail");
+		}
   }
 
 }

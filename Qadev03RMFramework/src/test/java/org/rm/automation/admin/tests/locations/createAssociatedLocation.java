@@ -43,7 +43,7 @@ public class createAssociatedLocation extends TestBaseSetup {
 	  String name = "Location 2";
 	  String displayName = "Loc2";
 	  String confRooms = "x1";
-	  String roomName = "B201"; 
+	  String roomName = settings.getProperty("conferenceRoom"); 
 	  
 	  System.out.println("Create Location with a room associated");
 	  LogManager.info("Executing createAssociatedLocation Test Case");
