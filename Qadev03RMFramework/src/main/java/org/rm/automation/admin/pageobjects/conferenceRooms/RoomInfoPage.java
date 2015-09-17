@@ -25,6 +25,9 @@ public class RoomInfoPage extends ConferenceRoomCommonPage{
 	@FindBy(xpath = "//input[@ng-model='selectedRoom.code']")
 	public WebElement codeInput;
 	
+	@FindBy(xpath = "//input[@ng-model='selectedRoom.capacity']")
+	public WebElement capacityInput;
+	
 	public RoomInfoPage(WebDriver driver){
 		super(driver);
 	}
@@ -71,5 +74,15 @@ public class RoomInfoPage extends ConferenceRoomCommonPage{
 		saveBtn.click();
 		
 		return new ConferenceRoomsPage(driver);
+	}
+
+	public RoomInfoPage setCapacity(String updatedCapacity) {
+		(new WebDriverWait(super.driver, 20))
+		.until(ExpectedConditions.visibilityOf(capacityInput));
+		capacityInput.clear();
+		
+		capacityInput.sendKeys(updatedCapacity);
+		
+		return this;
 	}
 }

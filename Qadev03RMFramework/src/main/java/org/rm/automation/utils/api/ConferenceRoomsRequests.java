@@ -149,6 +149,7 @@ public class ConferenceRoomsRequests {
 				case "_id": body.put("_id", value);break;
 				case "serviceId": body.put("serviceId", value);break;
 				case "enabled": body.put("enabled", value);break;
+				case "capacity": body.put("capacity", value);break;
 			}
 		  	
 			//body.put("customDisplayName", updatedCustomDisplayName);
