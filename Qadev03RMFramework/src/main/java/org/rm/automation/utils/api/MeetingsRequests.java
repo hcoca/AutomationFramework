@@ -165,7 +165,7 @@ public class MeetingsRequests {
         }
 	}
 	
-	public String getMeetingId(String name) throws ParseException
+	public static String getMeetingId(String name) throws ParseException
 	{
 		String id = "";
 		ArrayList<JSONObject> list;
