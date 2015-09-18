@@ -14,6 +14,7 @@ import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
 import org.rm.automation.admin.pageobjects.locations.IssuesPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
+import org.testng.Assert;
 
 public class NavigationBarPage {
 
@@ -97,6 +98,28 @@ public class NavigationBarPage {
 			impersonationLink.click();
 		}		
 		return new ImpersonationPage(driver);
+	}
+	
+	public HomePage mainMenuIsDisplayed(){
+		Waiters.WaitByVisibilityOfWebElement(impersonationLink, driver);
+		Waiters.WaitByVisibilityOfWebElement(emailServerLink, driver);
+		Waiters.WaitByVisibilityOfWebElement(locationsLink, driver);
+		Waiters.WaitByVisibilityOfWebElement(resourcesLink, driver);
+		Waiters.WaitByVisibilityOfWebElement(roomsLink, driver);
+		Waiters.WaitByVisibilityOfWebElement(issuesLink, driver);
+		Assert.assertEquals(true, issuesLink.isDisplayed());
+		Assert.assertEquals(true, issuesLink.isEnabled());
+		Assert.assertEquals(true, impersonationLink.isDisplayed());
+		Assert.assertEquals(true, impersonationLink.isEnabled());
+		Assert.assertEquals(true, emailServerLink.isDisplayed());
+		Assert.assertEquals(true, emailServerLink.isEnabled());
+		Assert.assertEquals(true, locationsLink.isDisplayed());
+		Assert.assertEquals(true, locationsLink.isEnabled());
+		Assert.assertEquals(true, resourcesLink.isDisplayed());
+		Assert.assertEquals(true, resourcesLink.isEnabled());
+		Assert.assertEquals(true, roomsLink.isDisplayed());
+		Assert.assertEquals(true, roomsLink.isEnabled());
+		return new HomePage(driver);		
 	}
 	
 	
