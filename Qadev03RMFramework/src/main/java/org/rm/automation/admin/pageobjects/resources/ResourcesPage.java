@@ -117,18 +117,9 @@ public class ResourcesPage extends HomePage{
 	public List<WebElement> GetListResources()
 	{
 		element = driver.findElement(By.id("resourcesGrid"));
+		List<WebElement> list = element.findElements(By.xpath("//div[@ng-style='rowStyle(row)']"));
 		
-		List<WebElement> listEven = element.findElements(By.cssSelector("div.ng-scope.ngRow.even"));
-		List<WebElement> listOdd = element.findElements(By.cssSelector("div.ng-scope.ngRow.odd"));
-		
-		if (listEven.size() > listOdd.size()) {
-			return listEven;
-		}
-		else if(listEven.size() == listOdd.size()){
-			return listOdd;
-		}
-		
-		return null;
+		return list;
 	}
 	
 	/**
