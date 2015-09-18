@@ -84,7 +84,7 @@ public class LocationsRequests {
 	 * @throws UnsupportedOperationException
 	 * @throws IOException
 	 */
-	public static void postLocation() throws UnsupportedOperationException, IOException
+	public static void postLocation(String name, String displayName) throws UnsupportedOperationException, IOException
 	{
 		try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
 			HttpPost request = new HttpPost(locationEp);
@@ -102,8 +102,8 @@ public class LocationsRequests {
 			 * Request's body
 			 */
 			JSONObject body = new JSONObject();
-		  	body.put("name", "newLocation");
-		  	body.put("customName", "newLocation");		  	
+		  	body.put("name", name);
+		  	body.put("customName", displayName);		  	
 		  	
 			StringEntity entity = new StringEntity(body.toString());
 		    request.setEntity(entity);

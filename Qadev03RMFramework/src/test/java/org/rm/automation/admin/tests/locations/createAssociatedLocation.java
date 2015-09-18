@@ -3,14 +3,12 @@ package org.rm.automation.admin.tests.locations;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
+import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.rm.automation.utils.api.LocationsRequests;
-import org.rm.automation.base.MyWebDriver;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.HomePage;
@@ -33,18 +31,11 @@ public class createAssociatedLocation extends TestBaseSetup {
 	String name = "Location 2";
 	String displayName = "Loc2";
 	String confRooms = "x1";
-	String roomName = "B201"; 
-
+	
   @Test
   public void testCreateAssociatedLocation() throws Exception {
-	  
-	  String userName = settings.getProperty("username");
-	  String password = settings.getProperty("password");
-	  String name = "Location 2";
-	  String displayName = "Loc2";
-	  String confRooms = "x1";
-	  String roomName = settings.getProperty("conferenceRoom"); 
-	  
+	  String roomName = ConferenceRoomsRequests.getRooms().get(0).get("customDisplayName").toString();
+	  //System.out.println("NOMBRE "+roomName);
 	  System.out.println("Create Location with a room associated");
 	  LogManager.info("Executing createAssociatedLocation Test Case");
 	  loginPage = new LoginPage(driver);
@@ -56,10 +47,10 @@ public class createAssociatedLocation extends TestBaseSetup {
 	  homePage = formLocationPage.fillFormAndSave(name, displayName);
 	  issuesPage = homePage.SelectIssuesOption();
 	  locationsPage = homePage.SelectLocationsOption();
-      homePage = locationsPage.verifyLocationsWasCreated(name, displayName, confRooms);
+      homePage = locationsPage.verifyChangesWereMade(name, displayName, confRooms);
 	  homePage.SignOut();	 	  
   } 
-  @AfterTest
+  @AfterMethod
 	public void Postconditions()
 	{
 		System.out.println("After Test - Create Basic Location");
