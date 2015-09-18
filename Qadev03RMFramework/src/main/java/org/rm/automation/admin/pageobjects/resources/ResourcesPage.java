@@ -236,7 +236,7 @@ public class ResourcesPage extends HomePage{
 					.findElement(By.cssSelector(iconColumnPath))
 					.findElement(By.xpath("div[2]/div/span"));
 			actual = column.getAttribute("class");
-			Assert.assertEquals(expected, actual);
+			Assert.assertTrue(actual.contains(expected));
 
 			break;
 		}

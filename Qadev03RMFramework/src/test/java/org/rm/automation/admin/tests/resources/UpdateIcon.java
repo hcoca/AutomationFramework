@@ -19,11 +19,11 @@ public class UpdateIcon extends TestBaseSetup{
 	private String username = settings.getProperty("username");
 	private String password = settings.getProperty("password");
 	
-	private String iconNew = "fa fa-desktop";
+	private String iconNew = "fa-desktop";
 	String name = StringGenerator.getString();
 	String customName = StringGenerator.getString();
 	String description = StringGenerator.getString();
-	String icon = "fa-gift";
+	String icon = "fa fa-gift";
 	
 	private LoginPage loginPage;
 	
@@ -42,9 +42,9 @@ public class UpdateIcon extends TestBaseSetup{
 		  		.SignIn(username, password)
 				.SelectResourcesOption()
 				.UpdateResource()
-				.setIcon(icon)
+				.setIcon(iconNew)
 				.Save()
-				.VerifyResourceElementWasUpdated(icon, 4)
+				.VerifyResourceElementWasUpdated(iconNew, 4)
 				.SignOut();
 	}
 	
@@ -52,7 +52,7 @@ public class UpdateIcon extends TestBaseSetup{
 	public void Postconditions()
 	{
 		String id = "";
-		id = ResourcesRequests.getResourceId("gift");
+		id = ResourcesRequests.getResourceId(name);
 		ResourcesRequests.deleteResource(id);
 		LogManager.info("UpdateIcon: Executing Postcondition, removing resource created");
 	}

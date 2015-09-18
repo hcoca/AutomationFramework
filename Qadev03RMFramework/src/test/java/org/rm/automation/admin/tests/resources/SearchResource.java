@@ -22,7 +22,7 @@ public class SearchResource extends TestBaseSetup{
 	String name = StringGenerator.getString();
 	String customName = StringGenerator.getString();
 	String description = StringGenerator.getString();
-	String icon = "fa-gift";
+	String icon = "fa fa-gift";
 	
 	private LoginPage loginPage;
 	

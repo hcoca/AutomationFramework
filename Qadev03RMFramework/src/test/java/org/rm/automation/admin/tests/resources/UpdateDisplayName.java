@@ -17,11 +17,11 @@ public class UpdateDisplayName extends TestBaseSetup{
 	private String username = settings.getProperty("username");
 	private String password = settings.getProperty("password");
 	
-	private String displayName = "newResourceEdit";
-	String name = StringGenerator.getString();
-	String customName = StringGenerator.getString();
-	String description = StringGenerator.getString();
-	String icon = "fa-gift";
+	private String displayNameNew = StringGenerator.getString();
+	private String name = StringGenerator.getString();
+	private String customName = StringGenerator.getString();
+	private String description = StringGenerator.getString();
+	private String icon = "fa fa-gift";
 	
 	private LoginPage loginPage;
 	
@@ -40,9 +40,9 @@ public class UpdateDisplayName extends TestBaseSetup{
 		  		.SignIn(username, password)
 				.SelectResourcesOption()
 				.UpdateResource()
-				.setDisplayName(displayName)
+				.setDisplayName(displayNameNew)
 				.Save()
-				.VerifyResourceElementWasUpdated(displayName, 2)
+				.VerifyResourceElementWasUpdated(displayNameNew, 2)
 				.SignOut();
 	}
 	
@@ -50,7 +50,7 @@ public class UpdateDisplayName extends TestBaseSetup{
 	public void Postconditions()
 	{
 		String id = "";
-		id = ResourcesRequests.getResourceId("gift");
+		id = ResourcesRequests.getResourceId(name);
 		ResourcesRequests.deleteResource(id);
 		LogManager.info("UpdateDisplayName: Executing Postcondition, removing resource created");
 	}
