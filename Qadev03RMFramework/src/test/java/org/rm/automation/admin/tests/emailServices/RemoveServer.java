@@ -1,4 +1,4 @@
-package org.rm.automation.admin.test.emailServices;
+package org.rm.automation.admin.tests.emailServices;
 
 import org.testng.annotations.Test;
 import java.io.IOException;

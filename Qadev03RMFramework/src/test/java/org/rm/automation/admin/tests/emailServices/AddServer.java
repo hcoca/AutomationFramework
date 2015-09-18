@@ -1,4 +1,4 @@
-package org.rm.automation.admin.test.emailServices;
+package org.rm.automation.admin.tests.emailServices;
 
 import org.testng.annotations.Test;
 import junit.framework.Assert;
@@ -13,6 +13,8 @@ import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ServicesRequests;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 
@@ -34,8 +36,16 @@ public class AddServer extends TestBaseSetup {
     HomePage objHomePage;
     AddEmailServersPage addser;
     EmailServersPage emailserver;
-  @Test
-  public void f() {
+  @Test(priority = 1)
+  public void TestAddServer() {
+	  
+	  try {
+		  LogManager.info("AddServer Test: Execute before test");
+		  ServicesRequests.RemoveService();
+		} catch (Exception e) {
+		LogManager.warn("AddServer Test: before test failet");
+		}
+	  
 	  LogManager.info("AddServer Test: begin Add server test cases");
 	  objLogin = new LoginPage(driver);
 	  objHomePage = objLogin.SignIn(username , password);
@@ -48,16 +58,16 @@ public class AddServer extends TestBaseSetup {
 	  String textexpect = emailserver.gettextExchange();
 	  Assert.assertTrue(textexpect.contains(hostname));
   }
-  @BeforeTest
+  @BeforeClass
   public void beforeTest() {
-	try {
+	/*try {
 		LogManager.info("AddServer Test: Execute before test");
-		ServicesRequests.RemoveService();
+		//ServicesRequests.RemoveService();
 	} 
 	catch (UnsupportedOperationException | IOException e) {
 		e.printStackTrace();
 		LogManager.warn("AddServer Test: before test failet");
-	}
+	}*/
 	  
   }
  
