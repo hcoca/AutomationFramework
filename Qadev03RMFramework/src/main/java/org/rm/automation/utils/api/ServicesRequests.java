@@ -108,9 +108,8 @@ public class ServicesRequests {
 			return id;
 		} catch (UnsupportedOperationException | IOException e) {
 			e.printStackTrace();
-			LogManager.info("SERVICEREQUESTS: there aren't services return null");
-		}
-		
+			LogManager.error("SERVICEREQUESTS: there aren't services return null");
+		}		
 		return null;
 	}
 	

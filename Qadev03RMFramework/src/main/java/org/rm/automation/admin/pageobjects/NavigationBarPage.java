@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.emailServers.EmailServersPage;
+import org.rm.automation.admin.pageobjects.impersonation.ImpersonationPage;
 import org.rm.automation.admin.pageobjects.locations.LocationsPage;
 import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
 import org.rm.automation.admin.pageobjects.locations.IssuesPage;
@@ -27,6 +28,8 @@ public class NavigationBarPage {
 	  WebElement resourcesLink;
 	@FindBy(linkText="Conference Rooms")
 	  WebElement roomsLink;
+	@FindBy(linkText="Impersonation")
+	  WebElement impersonationLink;
 	
 	public NavigationBarPage(WebDriver driver) {
 		this.driver=driver;
@@ -86,6 +89,17 @@ public class NavigationBarPage {
 		return new ConferenceRoomsPage(driver);
 	}
 	
+	public ImpersonationPage SelectImpersonationOption(){
+		Waiters.WaitByVisibilityOfWebElement(impersonationLink, driver);
+		if(impersonationLink.isDisplayed()||impersonationLink.isEnabled())
+		{
+			LogManager.info("NavigationBarPage: Selecting Impersonation option");
+			impersonationLink.click();
+		}		
+		return new ImpersonationPage(driver);
+	}
+	
+	
 	/*
 	 * TESTING METHOD. DO NOT USE FOR TEST IMPLEMENTATION.
 	 */
@@ -93,8 +107,7 @@ public class NavigationBarPage {
 	{
 		(new WebDriverWait(driver, 20))
 		.until(ExpectedConditions.visibilityOf(roomsLink));
-		roomsLink.click();
-				
+		roomsLink.click();				
 		return new ConferenceRoomsPage(driver);
 	} 
 }
