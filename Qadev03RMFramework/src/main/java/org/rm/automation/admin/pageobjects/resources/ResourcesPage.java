@@ -33,8 +33,7 @@ public class ResourcesPage extends HomePage{
 	@FindBy(xpath=addPath) WebElement addButton;
 	@FindBy(id=removePath) WebElement removeButton;
 	@FindBy(xpath=searchPath) WebElement searchTextbox;
-//	@FindBy(css=checkboxPath) WebElement checkbox;
-	
+
 	public ResourcesPage(WebDriver driver) {
 		super(driver);
 		action = new Actions(driver);
@@ -151,7 +150,6 @@ public class ResourcesPage extends HomePage{
 		Assert.assertEquals(expName, name);
 		Assert.assertEquals(expDisplayName, displayName);
 		Assert.assertTrue(iconName.contains(expIcon));
-		System.out.println("*****Verification done******");
 		return this;
 	}
 	
@@ -168,8 +166,7 @@ public class ResourcesPage extends HomePage{
 		action.moveToElement(element.findElement(By.cssSelector("div.ng-scope > span.ng-binding"))).doubleClick().build().perform();
 		AddResourcesPage page = new AddResourcesPage(driver);
 		page.VerifyDescriptionResource(description);
-		
-		System.out.println("-----Verification done-----");
+
 		return this;
 	}
 	
@@ -276,3 +273,4 @@ public class ResourcesPage extends HomePage{
 			}
 	}
 }
+
