@@ -3,15 +3,16 @@
 <suite name="Suite for Acceptance test cases">
 
   <test name="Acceptance Test cases">
-    <classes>
+    <classes>      
+      <class name="org.rm.automation.admin.tests.login.DisplayLogon"/>
       <class name="org.rm.automation.admin.tests.login.DisplayHomeConsole"/>
-      <!--<class name="org.rm.automation.admin.tests.login.DisplayLogon"/>
-      <class name="org.rm.automation.admin.tests.impersonation.EnableImpersonation"/>
-      <class name="org.rm.automation.admin.tests.impersonation.DisableImpersonation"/>
+      <class name="org.rm.automation.admin.tests.login.DisplayMainMenu"/>      
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate"/>
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate"/>
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName"/>
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate"/>
+      <class name="org.rm.automation.admin.tests.impersonation.EnableImpersonation"/>
+      <class name="org.rm.automation.admin.tests.impersonation.DisableImpersonation"/>
       <class name="org.rm.automation.admin.tests.locations.createBasicLocation"/>
       <class name="org.rm.automation.admin.tests.locations.createAssociatedLocation"/>
       <class name="org.rm.automation.admin.tests.resources.CreateResource"/>
@@ -22,14 +23,7 @@
       <class name="org.rm.automation.admin.tests.resources.UpdateDescription"/>
       <class name="org.rm.automation.admin.tests.resources.SearchResource"/>
       <class name="org.rm.automation.admin.tests.resources.DeleteResource"/>
-      <class name="org.rm.automation.tablet.tests.meetings.CreateMeeting"/>  -->
+      <!-- <class name="org.rm.automation.tablet.tests.meetings.CreateMeeting"/> -->
     </classes>
-  </test> <!-- Test -->
-  
-  <!-- Tablet suite 
-  <suite-files>
-  	<suite-file path="tablet.xml" />
-  </suite-files>
-   -->
-  
+  </test> <!-- Test -->  
   </suite> <!-- Suite -->
