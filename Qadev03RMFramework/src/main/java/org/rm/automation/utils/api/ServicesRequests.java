@@ -108,13 +108,11 @@ public class ServicesRequests {
 			return id;
 		} catch (UnsupportedOperationException | IOException e) {
 			e.printStackTrace();
-			LogManager.error("SERVICEREQUESTS: there aren't services return null");
-		}		
+			LogManager.info("SERVICEREQUESTS: there aren't services return null");
+		}
+		
 		return null;
 	}
-	
-
-
 	/**
 	 * post a service
 	 * @throws UnsupportedOperationException
@@ -179,7 +177,4 @@ public class ServicesRequests {
 			LogManager.warn("SERVICEREQUESTS: no there aren't any service for remove");
 		}
 	}
-	
-	
-	
 }
