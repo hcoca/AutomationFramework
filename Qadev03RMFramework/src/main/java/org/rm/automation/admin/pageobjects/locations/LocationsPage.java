@@ -1,4 +1,6 @@
 package org.rm.automation.admin.pageobjects.locations;
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +21,8 @@ public class LocationsPage extends HomePage{
 	  WebElement addBtn;
 	@FindBy(xpath="//button[@ui-sref='admin.locations.remove']")
 	  WebElement removeBtn;
-
+	@FindBy(xpath ="//span[@class='ngLabel ng-binding' and contains(.,'Total Items:')]")
+	  WebElement locationsCounter;
 	public LocationsPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -52,10 +55,14 @@ public class LocationsPage extends HomePage{
 		String expectedLocationConfRooms = confRooms;
 		return locationConfRooms.equals(expectedLocationConfRooms);
 	}
-	public LocationsPage verifyLocationsWasCreated(String name, String displayName, String confRooms ){
+	public LocationsPage verifyChangesWereMade(String name, String displayName, String confRooms ){
 		LogManager.info("LocationsPage: Verifying the correct data of location created");
 		Assert.assertTrue(verifyLocationName(name), "Location Name doesn't match");
 		Assert.assertTrue(verifyLocationDisplayName(displayName), "Location Display Name doesn't match");
+		Assert.assertTrue(verifyLocationConfRooms(confRooms), "Location COnference Rooms doesn't match");
+		return this;
+	}
+	public LocationsPage verifyLocationsWasEdited(String confRooms ){
 		Assert.assertTrue(verifyLocationConfRooms(confRooms), "Location COnference Rooms doesn't match");
 		return this;
 	}
@@ -68,6 +75,19 @@ public class LocationsPage extends HomePage{
 		}
 		return new FormLocationPage(driver);
 	}
+	public void clickonRemoveButton() {
+		Waiters.WaitByXPath("//button[@ui-sref='admin.locations.remove']", driver);
+		if(removeBtn.isDisplayed()||removeBtn.isEnabled())
+		{
+			LogManager.info("LocationsPage: Click on Remove button to remove a location");
+			removeBtn.click();
+		}
+	}
+	public RemoveLocationsPage removeLocation(String locationToRemove){
+		selectLocation(locationToRemove);
+		clickonRemoveButton();
+		return new RemoveLocationsPage(driver);
+	}
 	public FormLocationPage clickonLocation(String locationToChange) {
 		if(verifyLocationDisplayName(locationToChange))
 		{
@@ -79,6 +99,25 @@ public class LocationsPage extends HomePage{
 			}
 		}
 		return new FormLocationPage(driver);
+	}
+	public void selectLocation(String locationToRemove) {
+		if(verifyLocationDisplayName(locationToRemove))
+		{
+			WebElement element=driver.findElement(cellDisplayName);
+			if(element.isDisplayed())
+			{
+				LogManager.info("LocationsPage: Selecting a location to remove");
+				(element).click();
+			}
+		}
+	}
+	public HomePage verifyLocationWasDeleted(String expectedTotal) {
+		Waiters.WaitByXPath("//span[@class='ngLabel ng-binding' and contains(.,'Total Items:')]", driver);
+		
+		String actualTotal = locationsCounter.getText();
+		
+		Assert.assertEquals(actualTotal, expectedTotal);
+		return new HomePage(driver);
 	}
 	
 	

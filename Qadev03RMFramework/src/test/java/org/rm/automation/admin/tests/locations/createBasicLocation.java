@@ -4,12 +4,8 @@ package org.rm.automation.admin.tests.locations;
 import java.io.IOException;
 import java.util.Properties;
 import org.rm.automation.utils.LogManager;
-
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-import org.rm.automation.base.MyWebDriver;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.LocationsRequests;
@@ -45,10 +41,10 @@ public class createBasicLocation extends TestBaseSetup{
 	  homePage = formLocationPage.fillFormAndSave(name, displayName);
 	  issuesPage = homePage.SelectIssuesOption();
 	  locationsPage = homePage.SelectLocationsOption();
-	  homePage = locationsPage.verifyLocationsWasCreated(name, displayName, confRooms);
+	  homePage = locationsPage.verifyChangesWereMade(name, displayName, confRooms);
 	  homePage.SignOut();	  	  		
   } 
-  @AfterTest
+  @AfterMethod
 	public void Postconditions()
 	{
 		System.out.println("After Test - Create Basic Location");

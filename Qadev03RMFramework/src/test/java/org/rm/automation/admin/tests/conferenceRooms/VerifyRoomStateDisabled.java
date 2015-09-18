@@ -21,10 +21,10 @@ import org.testng.annotations.Test;
 /**
  * @author Pedro David Fuentes Antezana.
  * 
- * This test case is to verify that the room name selected through GUI 
- * can be modified. 
+ * This test case is to verify that the room status can be set to disabled
+ * state using the GUI. 
  */
-public class VerifyRoomNameUpdate extends TestBaseSetup{
+public class VerifyRoomStateDisabled extends TestBaseSetup{
 	private Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
 	private String userName = settings.getProperty("username");
@@ -36,38 +36,39 @@ public class VerifyRoomNameUpdate extends TestBaseSetup{
 	private RoomInfoPage roomInfo;
 
 	private String roomId;
+	private String roomEnabled;
 	private String roomName;
-	private String updatedRoomName = "UPDATED";
 	
-	private boolean actualResult;
+	private String expectedResult = "false";
+	private String actualResult;
 	
  	@BeforeTest
  	public void setup() throws UnsupportedOperationException, IOException{
 		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
 		roomId = allRooms.get(0).get("_id").toString();
+		roomEnabled = allRooms.get(0).get("enabled").toString();
 		roomName = allRooms.get(0).get("displayName").toString();
+		if(roomEnabled.equals("false")){
+			ConferenceRoomsRequests.setValue(roomId, "enabled", "true");
+		}
  	}
 	
 	@Test(priority = 2)
-	public void verifyRoomNameUpdate(){
+	public void verifyRoomStateDisabled() throws UnsupportedOperationException, IOException{
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.SignIn(userName, password);
 		conferenceRoom = homePage.SelectRoomsOption();
 		roomInfo = conferenceRoom.doubleClickConferenceRoom(roomName);
-		roomInfo = roomInfo.setDisplayName(updatedRoomName);
+		roomInfo = roomInfo.clickPowerOnBtn();
 		conferenceRoom = roomInfo.clickSaveBtn();
 		
-		actualResult = conferenceRoom.isValidRoom(updatedRoomName);
+		actualResult = ConferenceRoomsRequests.getRoom(roomId).get("enabled").toString();
 		
-		AssertJUnit.assertTrue(actualResult);
+		AssertJUnit.assertEquals(expectedResult, actualResult);
 	}
 	
 	@AfterTest
 	public void tearDown() throws UnsupportedOperationException, IOException{
-		ConferenceRoomsRequests.putRoom(roomId, roomName);
+		ConferenceRoomsRequests.setValue(roomId, "enabled", roomEnabled);
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd

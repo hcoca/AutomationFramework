@@ -3,9 +3,12 @@ package org.rm.automation.admin.pageobjects.resources;
 import org.testng.Assert;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
@@ -17,9 +20,25 @@ public class ResourcesPage extends HomePage{
 	private Actions action;
 	private WebElement element;
 	
+	private final String addPath = "//div/div/button";
+	private final String removePath = "btnRemove";
+	private final String searchPath = "//input[@type='text']";
+	
+	private String checkboxPath = "input.ngSelectionCheckbox";
+	private String nameColumnPath = "div.ngCell.centeredColumn.col2.colt2";
+	private String displayNameColumnPath = "div.ngCell.centeredColumn.col3.colt3";
+	private String iconColumnPath = "div.ngCell.centeredColumn.col1.colt1";
+	
+	
+	@FindBy(xpath=addPath) WebElement addButton;
+	@FindBy(id=removePath) WebElement removeButton;
+	@FindBy(xpath=searchPath) WebElement searchTextbox;
+//	@FindBy(css=checkboxPath) WebElement checkbox;
+	
 	public ResourcesPage(WebDriver driver) {
 		super(driver);
 		action = new Actions(driver);
+		PageFactory.initElements(driver, this);
 	}
 	
 	/**
@@ -28,10 +47,9 @@ public class ResourcesPage extends HomePage{
 	 */
 	public AddResourcesPage AddResource()
 	{
-		Waiters.WaitByXPath("//div/div/button", driver);
+		Waiters.WaitByXPath(addPath, driver);
 		
-		WebElement element = driver.findElement(By.xpath("//div/div/button"));
-		element.click();
+		addButton.click();
 		LogManager.info("ResourcesPage: Click on Add button to create a new resource");
 	    
 		return new AddResourcesPage(driver);
@@ -43,12 +61,12 @@ public class ResourcesPage extends HomePage{
 	 */
 	public ResourcesPage SelectResource()
 	{
-		Waiters.WaitByCss("input.ngSelectionCheckbox", driver);
+		Waiters.WaitByCss(checkboxPath, driver);
 		
 		WebElement checkbox;
 		List<WebElement> list = GetListResources();
 		
-		checkbox = list.get(list.size()-1).findElement(By.cssSelector("input.ngSelectionCheckbox"));
+		checkbox = list.get(list.size()-1).findElement(By.cssSelector(checkboxPath));
 		LogManager.info("ResourcesPage: Select a resource from the resource's table");
 		checkbox.click();
 		
@@ -61,11 +79,21 @@ public class ResourcesPage extends HomePage{
 	 */
 	public DeleteResourcesPage RemoveResource()
 	{
-		element = driver.findElement(By.id("btnRemove"));
-		element.click();
+		removeButton.click();
 		LogManager.info("ResourcesPage: Click on Remove button to remove a resource");
 		
 		return new DeleteResourcesPage(driver);
+	}
+	
+	/**
+	 * Method to set a search field
+	 * @return
+	 */
+	public ResourcesPage SetSearch(String name)
+	{
+		searchTextbox.clear();
+		searchTextbox.sendKeys(name);
+		return this;
 	}
 	
 	/**
@@ -88,16 +116,10 @@ public class ResourcesPage extends HomePage{
 	 */
 	public List<WebElement> GetListResources()
 	{
-		WebElement element2;
-		WebElement element3;
-		
 		element = driver.findElement(By.id("resourcesGrid"));		
 		
-		element2 = element.findElement(By.xpath("div[2]"));
-		element3 = element2.findElement(By.tagName("div"));
-		
-		List<WebElement> listEven = element3.findElements(By.cssSelector("div.ng-scope.ngRow.even"));
-		List<WebElement> listOdd = element3.findElements(By.cssSelector("div.ng-scope.ngRow.odd"));
+		List<WebElement> listEven = element.findElements(By.cssSelector("div.ng-scope.ngRow.even"));
+		List<WebElement> listOdd = element.findElements(By.cssSelector("div.ng-scope.ngRow.odd"));
 		
 		if (listEven.size() > listOdd.size()) {
 			return listEven;
@@ -107,34 +129,55 @@ public class ResourcesPage extends HomePage{
 		}
 		return null;
 	}
-
 	
 	/**
-	 * Verify a resource was created
+	 * Verify a resource with the obligatory fields
 	 * @param expName
 	 * @param expDisplayName
 	 * @return
 	 */
-	public ResourcesPage VerifyResourceWasCreated(String expName, String expDisplayName)
+	public ResourcesPage VerifyResourceWasCreated(String expName, String expDisplayName, String expIcon)
 	{
 		LogManager.info("ResourcesPage: Verifying the correct data of the resource was created");
-		WebElement nameElement;
-		WebElement displayNameElement;
-
-		SelectRoomsOption();
-		SelectResourcesOption();
+		WebElement nameElement, displayNameElement, iconElement;
 		
 		List<WebElement> list = GetListResources();
+		element = list.get(list.size()-1);
 		
-		nameElement = list.get(list.size()-1).findElement(By.cssSelector("div.ngCell.centeredColumn.col2.colt2"));
+		nameElement = element.findElement(By.cssSelector(nameColumnPath));
 		String name = nameElement.getText().replaceAll("\\s","");
 		
-		displayNameElement = list.get(list.size()-1).findElement(By.cssSelector("div.ngCell.centeredColumn.col3.colt3"));
+		displayNameElement = element.findElement(By.cssSelector(displayNameColumnPath));
 		String displayName = displayNameElement.getText().replaceAll("\\s","");
+		
+		iconElement = element
+				.findElement(By.cssSelector(iconColumnPath))
+				.findElement(By.xpath("div[2]/div/span"));
+		String iconName = iconElement.getAttribute("class");
+		
 		
 		Assert.assertEquals(expName, name);
 		Assert.assertEquals(expDisplayName, displayName);
-		System.out.println("Verifycation done");
+		Assert.assertTrue(iconName.contains(expIcon));
+		System.out.println("*****Verification done******");
+		return this;
+	}
+	
+	/**
+	 * Verify a resource with all the fields
+	 * @param expName
+	 * @param expDisplayName
+	 * @return
+	 */
+	public ResourcesPage VerifyResourceWasCreated(String expName, String expDisplayName, String expIcon, String description)
+	{
+		VerifyResourceWasCreated(expName, expDisplayName, expIcon);
+		
+		action.moveToElement(element.findElement(By.cssSelector("div.ng-scope > span.ng-binding"))).doubleClick().build().perform();
+		AddResourcesPage page = new AddResourcesPage(driver);
+		page.VerifyDescriptionResource(description);
+		
+		System.out.println("-----Verification done-----");
 		return this;
 	}
 	
@@ -144,25 +187,12 @@ public class ResourcesPage extends HomePage{
 	 * @param expDisplayName
 	 * @return
 	 */
-	public ResourcesPage VerifyResourceWasDeleted(String expName, String expDisplayName)
+	public ResourcesPage VerifyResourceWasDeleted()
 	{
 		LogManager.info("ResourcesPage: Verifying the resource was deleted");
-		WebElement nameElement;
-		WebElement displayNameElement;
-		
-		SelectRoomsOption();
-		SelectResourcesOption();
-		
-		List<WebElement> list = GetListResources();
-		
-		nameElement = list.get(list.size()-1).findElement(By.cssSelector("div.ngCell.centeredColumn.col2.colt2"));
-		String name = nameElement.getText().replaceAll("\\s","");
-		
-		displayNameElement = list.get(list.size()-1).findElement(By.cssSelector("div.ngCell.centeredColumn.col3.colt3"));
-		String displayName = displayNameElement.getText().replaceAll("\\s","");
-		
-		Assert.assertNotEquals(expName, name);
-		Assert.assertNotEquals(expDisplayName, displayName);
+
+		Assert.assertFalse(isElementPresent(By.cssSelector("div.ng-scope.ngRow.even")));
+		Assert.assertFalse(isElementPresent(By.cssSelector("div.ng-scope.ngRow.odd")));
 		
 		return this;
 	}
@@ -171,21 +201,80 @@ public class ResourcesPage extends HomePage{
 	 * Method to verify a resource's name was updated
 	 * @param name
 	 */
-	public ResourcesPage VerifyResourceNameWasUpdated(String expName)
+	public ResourcesPage VerifyResourceElementWasUpdated(String expected, int option)
 	{
-		LogManager.info("ResourcesPage: Verifying the correct Name of the resource was updated");
-		WebElement nameElement;
-
-		SelectRoomsOption();
-		SelectResourcesOption();
-		
 		List<WebElement> list = GetListResources();
+		WebElement lastRow = list.get(list.size()-1);
+		WebElement column;
+		String actual;
+
+		switch(option)
+		{
+		case 1:
+			LogManager.info("ResourcesPage: Verifying the correct Name of the resource was updated");
+			column = lastRow.findElement(By.cssSelector(nameColumnPath));
+			actual = column.getText().replaceAll("\\s","");
+			
+			Assert.assertEquals(expected, actual);
+			break;
+		case 2:
+			LogManager.info("ResourcesPage: Verifying the correct DisplayName of the resource was updated");
+			column = lastRow.findElement(By.cssSelector(displayNameColumnPath));
+			actual = column.getText().replaceAll("\\s","");
+			
+			Assert.assertEquals(expected, actual);
+			break;
+		case 3:
+			LogManager.info("ResourcesPage: Verifying the correct Description of the resource was updated");
+			action.moveToElement(lastRow.findElement(By.cssSelector("div.ng-scope > span.ng-binding"))).doubleClick().build().perform();
+			AddResourcesPage page = new AddResourcesPage(driver);
+			page.VerifyDescriptionResource(expected);
+			break;
+		case 4:
+			LogManager.info("ResourcesPage: Verifying the correct Icon of the resource was updated");
+			column = lastRow
+					.findElement(By.cssSelector(iconColumnPath))
+					.findElement(By.xpath("div[2]/div/span"));
+			actual = column.getAttribute("class");
+			Assert.assertTrue(actual.contains(expected));
+
+			break;
+		}
+		return this;
+	}
+	
+	/**
+	 * Method to verify the search of a resource
+	 */
+	public ResourcesPage VerifySearch(String nameExpected)
+	{
+		LogManager.info("ResourcesPage: Verifying the search");
+
+		List<WebElement> list = GetListResources();
+		WebElement lastRow = list.get(0);
+		WebElement column;
+		String actual;
 		
-		nameElement = list.get(list.size()-1).findElement(By.cssSelector("div.ngCell.centeredColumn.col2.colt2"));
-		String name = nameElement.getText().replaceAll("\\s","");
+		column = lastRow.findElement(By.cssSelector(nameColumnPath));
+		actual = column.getText().replaceAll("\\s","");
 		
-		Assert.assertEquals(expName, name);
+		Assert.assertEquals(1, list.size());
+		Assert.assertEquals(nameExpected, actual);
 		
 		return this;
+	}
+	
+	private boolean isElementPresent(By by) {
+	    try {
+	    	WebElement element;
+			
+			List<WebElement> list = GetListResources();
+			
+			element = list.get(list.size()-1);
+	    	element.findElement(by);
+	      return true;
+	    } catch (NoSuchElementException e) {
+	      return false;
+	    }
 	}
 }

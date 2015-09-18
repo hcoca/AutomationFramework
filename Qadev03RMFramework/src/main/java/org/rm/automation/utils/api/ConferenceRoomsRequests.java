@@ -204,4 +204,21 @@ public class ConferenceRoomsRequests {
 		
 		return res;
 	}
+<<<<<<< HEAD
+=======
+	
+	public static ArrayList<String> getResourceIdAssociatedToRoom(String roomId) throws UnsupportedOperationException, IOException{
+		ArrayList<String> res = new ArrayList<String>();
+		
+		JSONObject room = ConferenceRoomsRequests.getRoom(roomId);
+		JSONArray resourceArray = (JSONArray)room.get("resources");
+		if(resourceArray.size() > 0){
+			for(int i = 0; i < resourceArray.size(); i++){
+				res.add(((JSONObject)resourceArray.get(i)).get("resourceId").toString());
+			}
+		}
+		
+		return res;
+	}
+>>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd
 }

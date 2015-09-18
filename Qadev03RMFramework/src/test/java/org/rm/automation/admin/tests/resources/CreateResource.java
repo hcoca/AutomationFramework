@@ -1,39 +1,51 @@
 package org.rm.automation.admin.tests.resources;
 
-import java.io.IOException;
 import java.util.Properties;
 
-import org.openqa.selenium.WebDriver;
+import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
-import org.rm.automation.base.MyWebDriver;
+import org.rm.automation.admin.pageobjects.locations.IssuesPage;
+import org.rm.automation.admin.pageobjects.resources.AddResourcesPage;
+import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
+import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.api.ResourcesRequests;
 import org.testng.annotations.*;
 
 public class CreateResource extends TestBaseSetup {
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
-	String username = settings.getProperty("username");
-	String password = settings.getProperty("password");
-	String name = "newResource";
-	String displayName = "newResource";
+	private String username = settings.getProperty("username");
+	private String password = settings.getProperty("password");
+	
+	private String name = StringGenerator.getString();
+	private String displayName = StringGenerator.getString();
+	private String iconName = "fa-gears";
+	
 	private LoginPage loginPage;
+	private HomePage homePage;
+	private ResourcesPage resourcesPage;
+	private AddResourcesPage addResourcesPage;
+	private IssuesPage issuesPage;
 	
 	@Test
 	public void testCreateResource()
 	{
 		LogManager.info("CreateResource: Executing Test Case");
-		loginPage = new LoginPage(driver)
-		  		.SignIn(username, password)
-		  		.SelectResourcesOption()
-				.AddResource()
+		loginPage = new LoginPage(driver);
+  		homePage = loginPage.SignIn(username, password);
+  		resourcesPage = homePage.SelectResourcesOption();		  		
+		addResourcesPage = resourcesPage.AddResource()
 				.setName(name)
 				.setDisplayName(displayName)
-				.Save()
-				.VerifyResourceWasCreated(name, displayName)
-				.SignOut();
+				.setIcon(iconName);
+		resourcesPage =	addResourcesPage.Save();		
+		issuesPage = resourcesPage.SelectIssuesOption();
+		resourcesPage = issuesPage.SelectResourcesOption()
+				.VerifyResourceWasCreated(name, displayName, iconName);
+		resourcesPage.SignOut();
 	}
 	
 	@AfterMethod

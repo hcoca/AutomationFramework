@@ -13,7 +13,8 @@ public class RoomInfoPage extends ConferenceRoomCommonPage{
 	@FindBy(xpath = "/html/body/div[4]/div/div/div[2]/div/div/div[2]/div/form/div[2]/input")
 	public WebElement displayName;
 	
-	@FindBy(xpath = "//div[4]/div/div/div[2]/div/div/div[1]/div[2]/button[1]")
+	///html/body/div[4]/div/div/div[2]/div/div/div[1]/div[2]/button[1]/span
+	@FindBy(xpath = "//div[4]/div/div/div[2]/div/div/div[1]/div[2]/button[1]/span")
 	public WebElement powerOnBtn;
 	
 	@FindBy(xpath = "//div[4]/div/div/div[2]/div/div/div[1]/div[2]/button[2]")
