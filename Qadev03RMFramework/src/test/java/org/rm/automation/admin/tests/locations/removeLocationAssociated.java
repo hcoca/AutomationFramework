@@ -31,7 +31,7 @@ public class removeLocationAssociated extends TestBaseSetup{
 	@BeforeMethod
 	public void Preconditions()
 	{
-		System.out.println("Before Test - Edit Location");
+		System.out.println("Before Test - Remove Location Associated");
 		try {	
 			LogManager.info("Executing before test method of removeLocationAssociated, creating location with a room associated");
 			LocationsRequests.postLocation(name, displayName);

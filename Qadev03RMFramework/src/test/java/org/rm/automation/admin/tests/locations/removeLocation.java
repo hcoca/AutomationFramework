@@ -31,7 +31,7 @@ public class removeLocation extends TestBaseSetup {
 	@BeforeMethod
 	public void Preconditions()
 	{
-		System.out.println("Before Test - Edit Location");
+		System.out.println("Before Test - Remove Location");
 		try {			
 			LocationsRequests.postLocation(name, displayName);
 			LogManager.info("Executing before test method of removeLocation, creating location");

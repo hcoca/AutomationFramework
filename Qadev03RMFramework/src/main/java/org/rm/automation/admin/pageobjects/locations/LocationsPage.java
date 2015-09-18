@@ -22,8 +22,8 @@ public class LocationsPage extends HomePage{
 	  WebElement addBtn;
 	@FindBy(xpath="//button[@ui-sref='admin.locations.remove']")
 	  WebElement removeBtn;
-	@FindBy(xpath ="//span[@class='ngLabel ng-binding' and contains(.,'Total Items:')]")
-	  WebElement locationsCounter;
+	/*@FindBy(xpath ="//span[@class='ngLabel ng-binding' and contains(.,'Total Items:')]")
+	  WebElement locationsCounter;*/
 	public LocationsPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);

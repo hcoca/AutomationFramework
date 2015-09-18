@@ -12,8 +12,8 @@ import org.testng.Assert;
 public class RemoveLocationsPage {
 	private WebDriver driver;
 	private By confRoomColumn;
-	@FindBy(xpath="//button[@ng-click='cancel()']")
-	  WebElement cancelBtn;
+	/*@FindBy(xpath="//button[@ng-click='cancel()']")
+	  WebElement cancelBtn;*/
 	@FindBy(xpath="//button[@ng-click='removeLocations()']")
 	  WebElement removeBtn;
 	
