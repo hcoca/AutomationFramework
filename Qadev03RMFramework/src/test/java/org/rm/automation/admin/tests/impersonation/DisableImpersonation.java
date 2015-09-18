@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 public class DisableImpersonation extends TestBaseSetup {
 	Properties settings = ReadPropertyValues.getPropertyFile("./Config/settings.properties");
 	String username = settings.getProperty("username");
-	String password = settings.getProperty("password");
+	String password = settings.getProperty("password");	
 	LoginPage loginPage;
 	
 	@BeforeMethod

@@ -1,14 +1,14 @@
 package org.rm.automation.admin.pageobjects;
 
 import java.util.Properties;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
+import org.rm.automation.utils.Waiters;
+import org.testng.Assert;
 
 public class LoginPage {
 	
@@ -56,5 +56,17 @@ public class LoginPage {
 		enterPassword(pwd);
 		clickOnSignIn();		
 		return new HomePage(driver);
+	}
+	
+	public LoginPage logonDisplay(String server, String port){
+		String URL = "http://"+server+":"+port+"/admin/#/login";
+		Waiters.WaitByXPath("//button[@class='btn btn-primary pull-right']", driver);
+		Waiters.WaitById("loginUsername", driver);
+		Waiters.WaitById("loginPassword", driver);
+		Assert.assertEquals(true, usernameTextBox.isDisplayed());
+		Assert.assertEquals(true, passwordTextBox.isDisplayed());
+		Assert.assertEquals(true, loginBtn.isDisplayed());
+		Assert.assertEquals(URL, this.driver.getCurrentUrl());
+		return this;
 	}
 }
