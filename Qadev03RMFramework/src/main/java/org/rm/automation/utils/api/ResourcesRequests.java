@@ -80,7 +80,7 @@ public class ResourcesRequests {
 	/**
 	 * Create a resource
 	 */
-	public static void postResource()
+	public static void postResource(String name, String custom, String icon, String description)
 	{
 		try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
 			HttpPost request = new HttpPost(resourceEp);
@@ -98,11 +98,11 @@ public class ResourcesRequests {
 			 * Request's body
 			 */
 			JSONObject body = new JSONObject();
-		  	body.put("name", "gift");
-		  	body.put("customName", "gift");
-		  	body.put("fontIcon", "fa fa-gift");
+		  	body.put("name", name);
+		  	body.put("customName", custom);
+		  	body.put("fontIcon", icon);
 		  	body.put("from", "");
-		  	body.put("description", "");
+		  	body.put("description", description);
 		  	
 			StringEntity entity = new StringEntity(body.toString());
 		    request.setEntity(entity);

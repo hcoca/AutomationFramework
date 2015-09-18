@@ -12,32 +12,5 @@ import org.rm.automation.utils.api.ResourcesRequests;
 import org.testng.annotations.*;
 
 public class DeleteResource extends TestBaseSetup{
-	Properties settings = ReadPropertyValues
-			.getPropertyFile("./Config/settings.properties");
-	private String username = settings.getProperty("username");
-	private String password = settings.getProperty("password");
-	private LoginPage loginPage;	
-	@BeforeMethod
-	public void Preconditions() throws UnsupportedOperationException, IOException
-	{
-		ResourcesRequests
-		.postResource();
-	}
 	
-	@Test
-	public void testDeleteResource()
-	{
-		System.out.println("Enter Delete Resource Test Case");
-		String name = "gift";
-		String displayName = "gift";
-		
-		loginPage = new LoginPage(driver)
-		  		.SignIn(username, password)
-		  		.SelectResourcesOption()
-		  		.SelectResource()
-				.RemoveResource()
-				.Remove()
-				.VerifyResourceWasDeleted(name, displayName)
-				.SignOut();
-	}
 }

@@ -1,5 +1,9 @@
 package org.rm.automation.admin.pageobjects.conferenceRooms;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -43,10 +47,87 @@ public class ConferenceRoomsPage extends HomePage{
 	@FindBy(xpath = "//*[@id='roomsGrid']/div[1]/div[1]/div")
 	public WebElement conferenceRoomInfoLabel;
 	
+	// //div[@class='ngCanvas'] <-------- The xpath where the rooms are located
+	@FindBy(xpath = "//div[@class='ngCanvas']")
+	public WebElement theRoomsContainer;
+	
+	@FindBy(xpath = "//div[@class='row ng-scope']")
+	public WebElement resourceContainer; 
+	
+	/*
+	 * It might be deprecated.
+	 */
+	public ArrayList<String> listOfRoomNames = null;
+	
+	/*
+	 * ------------------------------------------------------------------------------571---------------------------------------
+	 */
+
+	/*
+	 * ------------------------------------------------------------------------------571---------------------------------------
+	 */
 	public ConferenceRoomsPage (WebDriver driver){
 		super(driver);
 		PageFactory.initElements(super.driver, this);
+		
+		listOfRoomNames = fillListOfRoomsNames();
 	}
+	
+	private ArrayList<String> fillListOfRoomsNames() {
+		List<WebElement> aux = theRoomsContainer.findElements(By.xpath("div"));
+		ArrayList<String> res = new ArrayList<>(); 
+		
+		if(aux.size() != 0){
+			for(WebElement div : aux){
+				res.add(div.getText().trim());
+			}
+		}
+		
+		return res;
+	}
+	
+	public List<WebElement> getResources(){
+		(new WebDriverWait(driver, 20))
+		.until(ExpectedConditions.visibilityOf(resourceContainer));
+		List<WebElement> list = resourceContainer.findElements(By.xpath("//span[@ng-model='resource.isSelected']"));
+		
+		return list;
+	}
+	
+	public ConferenceRoomsPage clickOnResource(String resourceName){
+		ConferenceRoomsPage res = null; 
+		
+		List<WebElement> list = getResources();
+		for(WebElement webElement : list){
+			if(webElement.getText().equals(resourceName)){
+				webElement.click();
+				res = this;
+				break;
+			}
+		}
+		
+		return res;
+	}
+	
+	public boolean isAssociatedToResource(String resourcename, String roomName){
+		boolean res = false;
+		
+		WebElement room = this.getConferenceRoom(roomName);
+		(new WebDriverWait(driver, 20))
+		.until(ExpectedConditions.visibilityOf(room.findElement(By.xpath(".//div[@class='animate-if ng-scope']"))));
+		WebElement resourceAnimatedName = room.findElement(By.xpath(".//div[@class='animate-if ng-scope']"));
+//		(new WebDriverWait(driver, 20))
+//		.until(ExpectedConditions.visibilityOf(resourceAnimatedName));
+		if(resourceAnimatedName.getAttribute("ng-if").toString().contains(resourcename)){
+			res = true;
+		}
+		
+		return res;
+	}
+	
+//	public boolean isValidRoom(String roomName){
+//		return listOfRoomNames.contains(roomName) ? true : false;
+//	}
 	
 	public ConferenceRoomsPage clickEnabledColumnBtn(){
 		(new WebDriverWait(driver, 20))
@@ -82,6 +163,51 @@ public class ConferenceRoomsPage extends HomePage{
 		builder.doubleClick(conferenceRoom).perform();
 		
 		return new RoomInfoPage(driver);
+	}
+
+	public RoomInfoPage doubleClickConferenceRoom(String roomName){
+		RoomInfoPage res = null; 
+		
+		List<WebElement> list = theRoomsContainer.findElements(By.xpath("//span[@class='ng-binding']"));// The span that contains the conference rooms.
+		for(WebElement web : list){
+			if(web.getText().equals(roomName)){
+				Actions builder = new Actions(driver);
+				builder.doubleClick(web).perform();
+				res = new RoomInfoPage(driver);
+				break;
+			}
+		}
+		
+		return res;
+	}
+	
+	public WebElement getConferenceRoom(String roomName){
+		WebElement res = null; 
+		
+		(new WebDriverWait(driver, 20))
+		.until(ExpectedConditions.visibilityOf(theRoomsContainer));
+		List<WebElement> list = theRoomsContainer.findElements(By.xpath(".//div[@ng-style='rowStyle(row)']"));// ng-style="rowStyle(row)"
+		for(WebElement webElement : list){
+			if(webElement.findElement(By.xpath(".//span[@ng-show='row.entity.enabled']")).getText().equals(roomName)){
+				res = webElement;
+				break;
+			}
+		}
+		
+		return res;
+	}
+
+	public boolean isValidRoom(String roomName){
+		boolean res = false; 
+		
+		List<WebElement> list = theRoomsContainer.findElements(By.xpath("//span[@class='ng-binding']"));// The span that contains the conference room.
+		for(WebElement web : list){
+			if(web.getText().equals(roomName)){
+				res = true;
+			}
+		}
+		
+		return res;
 	}
 	
 	public String getTotalItemsLabelValue(){
