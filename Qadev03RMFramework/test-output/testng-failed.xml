@@ -1,29 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+<suite name="Failed suite [Suite for Acceptance test cases]">
   <test name="Acceptance Test cases(failed)">
     <classes>
-      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName">
+      <class name="org.rm.automation.admin.tests.locations.removeLocationAssociated">
         <methods>
-          <include name="setup"/>
+          <include name="testRemoveLocation"/>
+          <include name="Preconditions"/>
         </methods>
-      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName -->
-      <class name="org.rm.automation.admin.tests.locations.createAssociatedLocation">
-        <methods>
-          <include name="testCreateAssociatedLocation"/>
-          <include name="Postconditions"/>
-        </methods>
-      </class> <!-- org.rm.automation.admin.tests.locations.createAssociatedLocation -->
-      <class name="org.rm.automation.admin.tests.locations.createBasicLocation">
-        <methods>
-          <include name="Postconditions"/>
-        </methods>
-      </class> <!-- org.rm.automation.admin.tests.locations.createBasicLocation -->
-      <class name="org.rm.automation.admin.tests.resources.CreateResource">
-        <methods>
-          <include name="Postconditions"/>
-        </methods>
-      </class> <!-- org.rm.automation.admin.tests.resources.CreateResource -->
+      </class> <!-- org.rm.automation.admin.tests.locations.removeLocationAssociated -->
     </classes>
   </test> <!-- Acceptance Test cases(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+</suite> <!-- Failed suite [Suite for Acceptance test cases] -->

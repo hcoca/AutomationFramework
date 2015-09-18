@@ -1150,3 +1150,372 @@
 2015-09-14 16:36:20,366 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: c:\Users\Administrator\new workspace\Qadev03RMFramework\reports\Suite for Acceptance test cases
 2015-09-14 16:36:20,367 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was closed
 2015-09-14 16:36:20,367 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: c:\Users\Administrator\new workspace\Qadev03RMFramework\reports\Suite for Acceptance test cases
+2015-09-18 14:38:15,390 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 14:38:15,427 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 14:38:15,477 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 14:38:15,477 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 14:38:15,567 - org.rm.automation.utils.LogManager -INFO - Executing before test method of removeLocation, creating location
+2015-09-18 14:38:16,215 - org.rm.automation.utils.LogManager -INFO - Executing removeLocation Test Case
+2015-09-18 14:38:17,808 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 14:38:18,001 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 14:38:19,557 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 14:38:19,819 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 14:38:20,601 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 14:38:21,259 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 14:38:22,152 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to remove
+2015-09-18 14:38:22,506 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to remove a location
+2015-09-18 14:38:23,404 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to confirm remove location
+2015-09-18 14:38:24,303 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 14:38:24,916 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 14:38:28,144 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was closed
+2015-09-18 14:38:28,145 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Suite for Acceptance test cases
+2015-09-18 14:39:49,425 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 14:39:49,433 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 14:39:49,476 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 14:39:49,477 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 14:39:49,565 - org.rm.automation.utils.LogManager -INFO - Executing before test method of removeLocation, creating location
+2015-09-18 14:39:49,934 - org.rm.automation.utils.LogManager -INFO - Executing removeLocation Test Case
+2015-09-18 14:39:52,181 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 14:39:52,321 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 14:39:52,816 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 14:39:53,019 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 14:39:53,820 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 14:39:54,210 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 14:39:54,879 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to remove
+2015-09-18 14:39:55,137 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to remove a location
+2015-09-18 14:39:56,049 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to confirm remove location
+2015-09-18 14:39:57,016 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 14:39:57,599 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 14:39:59,942 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was closed
+2015-09-18 14:39:59,943 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Suite for Acceptance test cases
+2015-09-18 14:42:59,270 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 14:42:59,275 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 14:42:59,321 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 14:42:59,322 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 14:42:59,393 - org.rm.automation.utils.LogManager -INFO - Executing before test method of removeLocation, creating location
+2015-09-18 14:42:59,752 - org.rm.automation.utils.LogManager -INFO - Executing removeLocation Test Case
+2015-09-18 14:43:01,615 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 14:43:01,766 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 14:43:02,340 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 14:43:02,660 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 14:43:03,943 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 14:43:04,228 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 14:43:05,225 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to remove
+2015-09-18 14:43:05,518 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to remove a location
+2015-09-18 14:43:07,059 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to confirm remove location
+2015-09-18 14:43:08,465 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 14:43:09,058 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 14:43:12,157 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was closed
+2015-09-18 14:43:12,157 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Suite for Acceptance test cases
+2015-09-18 14:49:03,380 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 14:49:03,384 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 14:49:03,474 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 14:49:03,475 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 14:49:03,686 - org.rm.automation.utils.LogManager -INFO - Executing before test method of removeLocation, creating location
+2015-09-18 14:49:03,694 - org.rm.automation.utils.LogManager -INFO - Executing removeLocation Test Case
+2015-09-18 14:49:05,760 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 14:49:05,971 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 14:49:06,917 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 14:49:07,139 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 14:49:08,010 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 14:49:08,491 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 14:49:09,502 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to remove
+2015-09-18 14:49:09,879 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to remove a location
+2015-09-18 14:49:10,846 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to confirm remove location
+2015-09-18 14:49:11,459 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 14:49:12,078 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 14:49:15,710 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was closed
+2015-09-18 14:49:15,711 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Suite for Acceptance test cases
+2015-09-18 15:10:43,321 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 15:10:43,325 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 15:10:43,376 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 15:10:43,376 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 15:10:43,465 - org.rm.automation.utils.LogManager -INFO - Executing before test method of removeLocation, creating location
+2015-09-18 15:10:43,814 - org.rm.automation.utils.LogManager -INFO - Executing removeLocation Test Case
+2015-09-18 15:10:48,626 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 15:10:49,264 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 15:10:50,881 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 15:10:51,789 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 15:10:53,618 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 15:10:54,351 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 15:10:55,033 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to remove
+2015-09-18 15:10:55,786 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to remove a location
+2015-09-18 15:10:56,576 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to confirm remove location
+2015-09-18 15:10:57,533 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 15:10:58,034 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 15:11:09,750 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was closed
+2015-09-18 15:11:09,751 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Suite for Acceptance test cases
+2015-09-18 15:13:17,048 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 15:13:17,062 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 15:13:17,155 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 15:13:17,156 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 15:13:17,374 - org.rm.automation.utils.LogManager -INFO - Executing before test method of removeLocation, creating location
+2015-09-18 15:13:18,530 - org.rm.automation.utils.LogManager -INFO - Executing removeLocation Test Case
+2015-09-18 15:13:20,537 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 15:13:20,704 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 15:13:21,215 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 15:13:21,570 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 15:13:22,794 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 15:13:23,013 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 15:13:23,677 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to remove
+2015-09-18 15:13:24,007 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to remove a location
+2015-09-18 15:13:24,769 - org.rm.automation.utils.LogManager -INFO - RemoveLocationsPage: Click on Remove button to confirm remove location
+2015-09-18 15:13:25,472 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 15:13:26,067 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 15:13:28,803 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was closed
+2015-09-18 15:13:28,803 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Suite for Acceptance test cases
+2015-09-18 15:19:29,492 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 15:19:29,496 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 15:19:30,095 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 15:19:30,095 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 15:19:30,167 - org.rm.automation.utils.LogManager -INFO - Executing before test method of removeLocation, creating location
+2015-09-18 15:19:30,448 - org.rm.automation.utils.LogManager -INFO - Executing removeLocation Test Case
+2015-09-18 15:19:35,184 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 15:19:35,527 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 15:19:35,967 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 15:19:36,196 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 15:19:37,454 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 15:19:38,280 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 15:19:39,022 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to remove
+2015-09-18 15:19:39,280 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to remove a location
+2015-09-18 15:19:40,246 - org.rm.automation.utils.LogManager -INFO - RemoveLocationsPage: Click on Remove button to confirm remove location
+2015-09-18 15:19:40,933 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 15:19:41,659 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 15:19:42,105 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 15:19:54,840 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was closed
+2015-09-18 15:19:54,840 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Suite for Acceptance test cases
+2015-09-18 15:45:06,788 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 15:45:06,792 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 15:45:06,902 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 15:45:06,903 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 15:45:06,995 - org.rm.automation.utils.LogManager -INFO - Executing before test method of removeLocation, creating location
+2015-09-18 15:45:07,364 - org.rm.automation.utils.LogManager -INFO - Executing removeLocation Test Case
+2015-09-18 15:45:10,742 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 15:45:11,577 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 15:45:14,183 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 15:45:14,808 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 15:45:17,273 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 15:45:19,000 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 15:45:20,836 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to remove
+2015-09-18 15:45:22,615 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to remove a location
+2015-09-18 15:45:25,012 - org.rm.automation.utils.LogManager -INFO - RemoveLocationsPage: Click on Remove button to confirm remove location
+2015-09-18 15:45:41,687 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was closed
+2015-09-18 15:45:41,689 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Suite for Acceptance test cases
+2015-09-18 15:47:17,330 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 15:47:17,336 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 15:47:17,691 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 15:47:17,692 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 15:47:17,805 - org.rm.automation.utils.LogManager -INFO - Executing before test method of removeLocation, creating location
+2015-09-18 15:47:18,092 - org.rm.automation.utils.LogManager -INFO - Executing removeLocation Test Case
+2015-09-18 15:47:21,262 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 15:47:21,407 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 15:47:23,824 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 15:47:24,195 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 15:47:25,911 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 15:47:26,753 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 15:47:28,153 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to remove
+2015-09-18 15:47:28,760 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to remove a location
+2015-09-18 15:47:30,150 - org.rm.automation.utils.LogManager -INFO - RemoveLocationsPage: Click on Remove button to confirm remove location
+2015-09-18 15:47:51,530 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was closed
+2015-09-18 15:47:51,531 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Suite for Acceptance test cases
+2015-09-18 15:50:05,575 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 15:50:05,580 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 15:50:05,654 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 15:50:05,654 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 15:50:05,732 - org.rm.automation.utils.LogManager -INFO - Executing before test method of removeLocation, creating location
+2015-09-18 15:50:05,982 - org.rm.automation.utils.LogManager -INFO - Executing removeLocation Test Case
+2015-09-18 15:50:10,248 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 15:50:10,372 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 15:50:12,502 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 15:50:13,141 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 15:50:14,640 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 15:50:15,177 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 15:50:16,532 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to remove
+2015-09-18 15:50:16,838 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to remove a location
+2015-09-18 15:50:19,242 - org.rm.automation.utils.LogManager -INFO - RemoveLocationsPage: Click on Remove button to confirm remove location
+2015-09-18 15:50:20,850 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 15:50:22,200 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 15:50:23,263 - org.rm.automation.utils.LogManager -INFO - HomePage: Logging out of the application
+2015-09-18 15:50:52,965 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was closed
+2015-09-18 15:50:52,965 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Suite for Acceptance test cases
+2015-09-18 15:55:53,190 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 15:55:53,194 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 15:55:53,290 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 15:55:53,290 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 15:55:53,365 - org.rm.automation.utils.LogManager -INFO - Executing before test method of removeLocationAssociated, creating location with a room associated
+2015-09-18 15:55:53,797 - org.rm.automation.utils.LogManager -INFO - Executing removeLocationAssociated Test Case
+2015-09-18 15:55:59,226 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 15:56:00,275 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 15:56:02,214 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 15:56:02,447 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 15:56:04,019 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 15:56:04,788 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 15:56:06,100 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to remove
+2015-09-18 15:56:07,388 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to remove a location
+2015-09-18 15:56:08,084 - org.rm.automation.utils.LogManager -INFO - RemoveLocationsPage: Verifying conference room associated
+2015-09-18 15:56:22,578 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was closed
+2015-09-18 15:56:22,580 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Suite for Acceptance test cases
+2015-09-18 16:01:18,095 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 16:01:18,114 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 16:01:19,095 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 16:01:19,095 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 16:01:19,179 - org.rm.automation.utils.LogManager -INFO - Executing before test method of removeLocationAssociated, creating location with a room associated
+2015-09-18 16:01:19,623 - org.rm.automation.utils.LogManager -INFO - Executing removeLocationAssociated Test Case
+2015-09-18 16:01:26,712 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 16:01:27,411 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 16:01:29,387 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 16:01:29,658 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 16:01:31,169 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:01:31,833 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 16:01:32,539 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to remove
+2015-09-18 16:01:34,181 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to remove a location
+2015-09-18 16:01:35,309 - org.rm.automation.utils.LogManager -INFO - RemoveLocationsPage: Verifying conference room associated
+2015-09-18 16:01:36,859 - org.rm.automation.utils.LogManager -INFO - RemoveLocationsPage: Click on Remove button to confirm remove location
+2015-09-18 16:01:38,233 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Checking confirm message
+2015-09-18 16:01:38,866 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 16:01:40,748 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:01:42,528 - org.rm.automation.utils.LogManager -INFO - HomePage: Logging out of the application
+2015-09-18 16:02:06,326 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was closed
+2015-09-18 16:02:06,327 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Suite for Acceptance test cases
+2015-09-18 16:05:10,380 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 16:05:10,392 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 16:05:11,624 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was opened
+2015-09-18 16:05:11,625 - org.rm.automation.utils.LogManager -INFO - Suite name: Suite for Acceptance test cases starting
+2015-09-18 16:05:11,823 - org.rm.automation.utils.LogManager -INFO - Executing before test method of associateRoomWithLocation, creating location
+2015-09-18 16:05:11,900 - org.rm.automation.utils.LogManager -INFO - Executing associateRoomWithLocation Test Case
+2015-09-18 16:05:17,955 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 16:05:18,473 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 16:05:20,505 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 16:05:20,818 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 16:05:22,251 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:05:22,500 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 16:05:23,785 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to edit
+2015-09-18 16:05:24,878 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Selecting Location Associations option
+2015-09-18 16:05:25,606 - org.rm.automation.utils.LogManager -INFO - FormAssociateRoomPage: Searching a conference room
+2015-09-18 16:05:26,209 - org.rm.automation.utils.LogManager -INFO - FormAssociateRoomPage: Associating the conference room with the location
+2015-09-18 16:05:26,617 - org.rm.automation.utils.LogManager -INFO - FormAssociateRoomPage: Selecting Location Info option
+2015-09-18 16:05:27,437 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Click on Save button to save the changes
+2015-09-18 16:05:28,760 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 16:05:29,626 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:05:31,184 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Locations Associated number of location created
+2015-09-18 16:05:31,714 - org.rm.automation.utils.LogManager -INFO - HomePage: Logging out of the application
+2015-09-18 16:05:40,053 - org.rm.automation.utils.LogManager -INFO - Executing after test method of associateRoomWithLocation, removing location created
+2015-09-18 16:05:40,058 - org.rm.automation.utils.LogManager -INFO - Executing createBasicLocation Test Case
+2015-09-18 16:05:47,647 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 16:05:48,254 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 16:05:51,024 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 16:05:51,277 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 16:05:52,330 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:05:53,134 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Add button to add a new location
+2015-09-18 16:05:54,312 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Entering the name of the location
+2015-09-18 16:05:54,695 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Entering the Display Name of the location
+2015-09-18 16:05:55,110 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Click on Save button to save the changes
+2015-09-18 16:05:56,264 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 16:05:58,299 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:05:58,981 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct data of location created
+2015-09-18 16:05:58,981 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Name of location created
+2015-09-18 16:05:59,474 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 16:05:59,571 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Locations Associated number of location created
+2015-09-18 16:05:59,712 - org.rm.automation.utils.LogManager -INFO - HomePage: Logging out of the application
+2015-09-18 16:06:07,848 - org.rm.automation.utils.LogManager -INFO - Executing after test method of createBasicLocation, removing location created
+2015-09-18 16:06:07,868 - org.rm.automation.utils.LogManager -INFO - Executing createAssociatedLocation Test Case
+2015-09-18 16:06:16,813 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 16:06:17,234 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 16:06:18,218 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 16:06:19,271 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 16:06:22,201 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:06:23,914 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Add button to add a new location
+2015-09-18 16:06:24,651 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Selecting Location Associations option
+2015-09-18 16:06:25,314 - org.rm.automation.utils.LogManager -INFO - FormAssociateRoomPage: Searching a conference room
+2015-09-18 16:06:25,700 - org.rm.automation.utils.LogManager -INFO - FormAssociateRoomPage: Associating the conference room with the location
+2015-09-18 16:06:26,794 - org.rm.automation.utils.LogManager -INFO - FormAssociateRoomPage: Selecting Location Info option
+2015-09-18 16:06:27,207 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Entering the name of the location
+2015-09-18 16:06:27,586 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Entering the Display Name of the location
+2015-09-18 16:06:28,421 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Click on Save button to save the changes
+2015-09-18 16:06:30,233 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 16:06:31,082 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:06:32,633 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct data of location created
+2015-09-18 16:06:32,634 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Name of location created
+2015-09-18 16:06:33,244 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 16:06:33,957 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Locations Associated number of location created
+2015-09-18 16:06:35,256 - org.rm.automation.utils.LogManager -INFO - HomePage: Logging out of the application
+2015-09-18 16:06:46,431 - org.rm.automation.utils.LogManager -INFO - Executing after test method of createAssociatedLocation, removing location created
+2015-09-18 16:06:46,485 - org.rm.automation.utils.LogManager -INFO - Executing before test method of createChildLocation, creating parent location
+2015-09-18 16:06:46,486 - org.rm.automation.utils.LogManager -INFO - Executing createBasicLocation Test Case
+2015-09-18 16:06:55,877 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 16:06:56,347 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 16:06:57,014 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 16:06:57,395 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 16:06:58,546 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:06:59,754 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Add button to add a new location
+2015-09-18 16:07:00,565 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Displaying dropDownList locations 
+2015-09-18 16:07:01,982 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Displaying locations inside organization
+2015-09-18 16:07:04,129 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Entering the name of the location
+2015-09-18 16:07:04,559 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Entering the Display Name of the location
+2015-09-18 16:07:05,580 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Click on Save button to save the changes
+2015-09-18 16:07:06,697 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 16:07:08,088 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:07:08,607 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct data of location created
+2015-09-18 16:07:08,608 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Name of location created
+2015-09-18 16:07:09,045 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 16:07:09,899 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Locations Associated number of location created
+2015-09-18 16:07:10,063 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 16:07:10,693 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to edit
+2015-09-18 16:07:11,441 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Checking location parent
+2015-09-18 16:07:11,848 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Click on cancel button
+2015-09-18 16:07:12,737 - org.rm.automation.utils.LogManager -INFO - HomePage: Logging out of the application
+2015-09-18 16:07:19,105 - org.rm.automation.utils.LogManager -INFO - Executing after test method of createChildLocation, removing locations created
+2015-09-18 16:07:19,162 - org.rm.automation.utils.LogManager -INFO - Executing before test method of editLocation, creating location
+2015-09-18 16:07:19,164 - org.rm.automation.utils.LogManager -INFO - Executing editLocation Test Case
+2015-09-18 16:07:27,928 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 16:07:28,445 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 16:07:28,980 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 16:07:29,406 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 16:07:30,984 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:07:32,147 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 16:07:32,860 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to edit
+2015-09-18 16:07:34,638 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Entering the name of the location
+2015-09-18 16:07:35,769 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Entering the Display Name of the location
+2015-09-18 16:07:37,062 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Entering the description of the location
+2015-09-18 16:07:38,811 - org.rm.automation.utils.LogManager -INFO - FormLocationPage: Click on Save button to save the changes
+2015-09-18 16:07:40,796 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 16:07:42,121 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:07:42,962 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct data of location created
+2015-09-18 16:07:42,962 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Name of location created
+2015-09-18 16:07:43,487 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 16:07:43,770 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Locations Associated number of location created
+2015-09-18 16:07:45,002 - org.rm.automation.utils.LogManager -INFO - HomePage: Logging out of the application
+2015-09-18 16:07:52,704 - org.rm.automation.utils.LogManager -INFO - Executing after test method of editLocation, removing location created
+2015-09-18 16:07:52,777 - org.rm.automation.utils.LogManager -INFO - Executing before test method of removeLocation, creating location
+2015-09-18 16:07:52,779 - org.rm.automation.utils.LogManager -INFO - Executing removeLocation Test Case
+2015-09-18 16:07:59,817 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 16:08:00,328 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 16:08:01,059 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 16:08:01,608 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 16:08:02,861 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:08:03,505 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 16:08:04,678 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to remove
+2015-09-18 16:08:05,375 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to remove a location
+2015-09-18 16:08:07,002 - org.rm.automation.utils.LogManager -INFO - RemoveLocationsPage: Click on Remove button to confirm remove location
+2015-09-18 16:08:08,628 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Checking confirm message
+2015-09-18 16:08:09,219 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 16:08:11,751 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:08:12,893 - org.rm.automation.utils.LogManager -INFO - HomePage: Logging out of the application
+2015-09-18 16:08:24,213 - org.rm.automation.utils.LogManager -INFO - Executing before test method of removeLocationAssociated, creating location with a room associated
+2015-09-18 16:08:24,429 - org.rm.automation.utils.LogManager -INFO - Executing removeLocationAssociated Test Case
+2015-09-18 16:08:31,064 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the credentials
+2015-09-18 16:08:32,471 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the username to sign in
+2015-09-18 16:08:33,729 - org.rm.automation.utils.LogManager -INFO - LoginPage: Entering the password to sign in
+2015-09-18 16:08:34,250 - org.rm.automation.utils.LogManager -INFO - LoginPage: Logging in the application
+2015-09-18 16:08:35,318 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:08:36,392 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Verifying the correct Display Name of location created
+2015-09-18 16:08:37,346 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Selecting a location to remove
+2015-09-18 16:08:38,688 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Click on Remove button to remove a location
+2015-09-18 16:08:39,912 - org.rm.automation.utils.LogManager -INFO - RemoveLocationsPage: Verifying conference room associated
+2015-09-18 16:08:41,194 - org.rm.automation.utils.LogManager -INFO - RemoveLocationsPage: Click on Remove button to confirm remove location
+2015-09-18 16:08:41,997 - org.rm.automation.utils.LogManager -INFO - LocationsPage: Checking confirm message
+2015-09-18 16:08:42,572 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Issues option
+2015-09-18 16:08:44,964 - org.rm.automation.utils.LogManager -INFO - NavigationBarPage: Selecting Locations option
+2015-09-18 16:08:46,240 - org.rm.automation.utils.LogManager -INFO - HomePage: Logging out of the application
+2015-09-18 16:09:02,049 - org.rm.automation.utils.LogManager -INFO - Browser: "FIREFOX" was closed
+2015-09-18 16:09:02,050 - org.rm.automation.utils.LogManager -INFO - Test Suite for Acceptance test cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Suite for Acceptance test cases
