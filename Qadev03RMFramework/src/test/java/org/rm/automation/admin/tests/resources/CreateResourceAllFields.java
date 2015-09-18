@@ -1,59 +1,62 @@
 package org.rm.automation.admin.tests.resources;
 
-import java.io.IOException;
 import java.util.Properties;
 
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.locations.IssuesPage;
 import org.rm.automation.admin.pageobjects.resources.AddResourcesPage;
-import org.rm.automation.admin.pageobjects.resources.DeleteResourcesPage;
 import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.api.ResourcesRequests;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
 
-public class DeleteResource extends TestBaseSetup{
+public class CreateResourceAllFields extends TestBaseSetup{
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
 	private String username = settings.getProperty("username");
 	private String password = settings.getProperty("password");
 	
-	String name = StringGenerator.getString();
-	String customName = StringGenerator.getString();
-	String description = StringGenerator.getString();
-	String icon = "fa-gift";
+	private String name = StringGenerator.getString();
+	private String displayName = StringGenerator.getString();
+	private String description = StringGenerator.getString();
+	private String iconName = "fa-gear";
 	
-	private LoginPage loginPage;	
+	private LoginPage loginPage;
 	private HomePage homePage;
 	private ResourcesPage resourcesPage;
-	private DeleteResourcesPage deleteResourcesPage;
+	private AddResourcesPage addResourcesPage;
 	private IssuesPage issuesPage;
 	
-	@BeforeMethod
-	public void Preconditions() throws UnsupportedOperationException, IOException
-	{
-		LogManager.info("UpdateName: Executing Precondition, creating a resource");
-		ResourcesRequests.postResource(name, customName, icon, description);
-	}
-	
 	@Test
-	public void testDeleteResource()
+	public void testCreateResourceAllFields()
 	{
-		LogManager.info("DeleteResource: Executing Test Case");
-		
+		LogManager.info("CreateResourceAllFields: Executing Test Case");
 		loginPage = new LoginPage(driver);
   		homePage = loginPage.SignIn(username, password);
-  		resourcesPage = homePage.SelectResourcesOption();
-  		deleteResourcesPage = resourcesPage.SelectResource()
-				.RemoveResource();
-		resourcesPage = deleteResourcesPage.Remove();
+  		resourcesPage =homePage.SelectResourcesOption();
+		addResourcesPage = resourcesPage.AddResource()
+				.setName(name)
+				.setDisplayName(displayName)
+				.setIcon(iconName)
+				.setDescription(description);
+		resourcesPage = addResourcesPage.Save();
 		issuesPage = resourcesPage.SelectIssuesOption();
 		resourcesPage = issuesPage.SelectResourcesOption()
-				.VerifyResourceWasDeleted();
+				.VerifyResourceWasCreated(name, displayName, iconName, description);
 		resourcesPage.SignOut();
+	}
+	
+	@AfterMethod
+	public void Postconditions()
+	{
+		String id = "";
+		id = ResourcesRequests.getResourceId(name);
+		ResourcesRequests.deleteResource(id);
+		LogManager.info("CreateResourceAllFields: Executing Postcondition, removing resource created");
 	}
 }
