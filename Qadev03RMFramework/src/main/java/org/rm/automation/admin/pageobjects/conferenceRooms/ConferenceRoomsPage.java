@@ -51,12 +51,11 @@ public class ConferenceRoomsPage extends HomePage{
 	@FindBy(xpath = "//div[@class='ngCanvas']")
 	public WebElement theRoomsContainer;
 	
-<<<<<<< HEAD
-=======
+
 	@FindBy(xpath = "//div[@class='row ng-scope']")
 	public WebElement resourceContainer; 
 	
->>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd
+
 	/*
 	 * It might be deprecated.
 	 */
@@ -89,8 +88,8 @@ public class ConferenceRoomsPage extends HomePage{
 		return res;
 	}
 	
-<<<<<<< HEAD
-=======
+/*<<<<<<< HEAD
+=======*/
 	public List<WebElement> getResources(){
 		(new WebDriverWait(driver, 20))
 		.until(ExpectedConditions.visibilityOf(resourceContainer));
@@ -130,7 +129,7 @@ public class ConferenceRoomsPage extends HomePage{
 		return res;
 	}
 	
->>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd
+//>>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd
 //	public boolean isValidRoom(String roomName){
 //		return listOfRoomNames.contains(roomName) ? true : false;
 //	}
@@ -174,11 +173,11 @@ public class ConferenceRoomsPage extends HomePage{
 	public RoomInfoPage doubleClickConferenceRoom(String roomName){
 		RoomInfoPage res = null; 
 		
-<<<<<<< HEAD
+//<<<<<<< HEAD
 		List<WebElement> list = theRoomsContainer.findElements(By.xpath("//span[@class='ng-binding']"));// The span that contains the conference room.
-=======
+/*=======
 		List<WebElement> list = theRoomsContainer.findElements(By.xpath("//span[@class='ng-binding']"));// The span that contains the conference rooms.
->>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd
+>>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd*/
 		for(WebElement web : list){
 			if(web.getText().equals(roomName)){
 				Actions builder = new Actions(driver);
@@ -190,8 +189,8 @@ public class ConferenceRoomsPage extends HomePage{
 		
 		return res;
 	}
-<<<<<<< HEAD
-=======
+/*<<<<<<< HEAD
+=======*/
 	
 	public WebElement getConferenceRoom(String roomName){
 		WebElement res = null; 
@@ -208,7 +207,7 @@ public class ConferenceRoomsPage extends HomePage{
 		
 		return res;
 	}
->>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd
+//>>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd
 
 	public boolean isValidRoom(String roomName){
 		boolean res = false; 

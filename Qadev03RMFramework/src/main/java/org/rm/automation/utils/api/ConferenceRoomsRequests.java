@@ -204,8 +204,8 @@ public class ConferenceRoomsRequests {
 		
 		return res;
 	}
-<<<<<<< HEAD
-=======
+/*<<<<<<< HEAD
+=======*/
 	
 	public static ArrayList<String> getResourceIdAssociatedToRoom(String roomId) throws UnsupportedOperationException, IOException{
 		ArrayList<String> res = new ArrayList<String>();
@@ -220,5 +220,4 @@ public class ConferenceRoomsRequests {
 		
 		return res;
 	}
->>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd
 }

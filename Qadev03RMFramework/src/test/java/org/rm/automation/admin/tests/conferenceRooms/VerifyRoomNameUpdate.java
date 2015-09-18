@@ -66,8 +66,4 @@ public class VerifyRoomNameUpdate extends TestBaseSetup{
 	public void tearDown() throws UnsupportedOperationException, IOException{
 		ConferenceRoomsRequests.putRoom(roomId, roomName);
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd

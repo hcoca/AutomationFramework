@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
-<<<<<<< HEAD
+/*<<<<<<< HEAD
 import org.rm.automation.admin.pageobjects.conferenceRooms.RoomInfoPage;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 
@@ -87,7 +87,7 @@ public class ThisTestCaseIsToVerifyThatXY {
 			System.out.println(s);
 		}
 		
-	}
+	}*/
 	
 //	public static void main(String[] ar){
 //		LoginPage login;
@@ -182,7 +182,7 @@ public class ThisTestCaseIsToVerifyThatXY {
 //	}
 	
 //	public static void main(String[] ar){
->>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd
+//>>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd
 //		try {
 //			JSONObject jo = ConferenceRoomsRequests.getRooms().get(0);
 //			System.out.println(jo);
@@ -396,4 +396,4 @@ public class ThisTestCaseIsToVerifyThatXY {
 //			e.printStackTrace();
 //		}	
 //	}
-}
+//}
