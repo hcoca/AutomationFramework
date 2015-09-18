@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite for Acceptance test cases" duration-ms="222404" started-at="2015-09-18T20:05:11Z" finished-at="2015-09-18T20:08:54Z">
+    <groups>
+    </groups>
+    <test name="Acceptance Test cases" duration-ms="222404" started-at="2015-09-18T20:05:11Z" finished-at="2015-09-18T20:08:54Z">
+      <class name="org.rm.automation.admin.tests.locations.removeLocation">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.locations.removeLocation@4900269d]" name="Preconditions" is-config="true" duration-ms="62" started-at="2015-09-18T16:07:52Z" finished-at="2015-09-18T16:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testRemoveLocation()[pri:0, instance:org.rm.automation.admin.tests.locations.removeLocation@4900269d]" name="testRemoveLocation" duration-ms="31433" started-at="2015-09-18T16:07:52Z" finished-at="2015-09-18T16:08:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveLocation -->
+      </class> <!-- org.rm.automation.admin.tests.locations.removeLocation -->
+      <class name="org.rm.automation.admin.tests.locations.removeLocationAssociated">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.locations.removeLocationAssociated@66b8476a]" name="Preconditions" is-config="true" duration-ms="216" started-at="2015-09-18T16:08:24Z" finished-at="2015-09-18T16:08:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testRemoveLocation()[pri:0, instance:org.rm.automation.admin.tests.locations.removeLocationAssociated@66b8476a]" name="testRemoveLocation" duration-ms="29590" started-at="2015-09-18T16:08:24Z" finished-at="2015-09-18T16:08:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveLocation -->
+      </class> <!-- org.rm.automation.admin.tests.locations.removeLocationAssociated -->
+      <class name="org.rm.automation.admin.tests.locations.editLocation">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.locations.editLocation@7c1dea5]" name="Preconditions" is-config="true" duration-ms="56" started-at="2015-09-18T16:07:19Z" finished-at="2015-09-18T16:07:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testEditLocation()[pri:0, instance:org.rm.automation.admin.tests.locations.editLocation@7c1dea5]" name="testEditLocation" duration-ms="33446" started-at="2015-09-18T16:07:19Z" finished-at="2015-09-18T16:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEditLocation -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.locations.editLocation@7c1dea5]" name="Postconditions" is-config="true" duration-ms="94" started-at="2015-09-18T16:07:52Z" finished-at="2015-09-18T16:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.locations.editLocation -->
+      <class name="org.rm.automation.admin.tests.locations.createChildLocation">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.locations.createChildLocation@6ea4d593]" name="Preconditions" is-config="true" duration-ms="52" started-at="2015-09-18T16:06:46Z" finished-at="2015-09-18T16:06:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testCreateChildLocation()[pri:0, instance:org.rm.automation.admin.tests.locations.createChildLocation@6ea4d593]" name="testCreateChildLocation" duration-ms="32402" started-at="2015-09-18T16:06:46Z" finished-at="2015-09-18T16:07:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateChildLocation -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.locations.createChildLocation@6ea4d593]" name="Postconditions" is-config="true" duration-ms="217" started-at="2015-09-18T16:07:18Z" finished-at="2015-09-18T16:07:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.locations.createChildLocation -->
+      <class name="org.rm.automation.admin.tests.locations.createBasicLocation">
+        <test-method status="PASS" signature="testCreateBasicLocation()[pri:0, instance:org.rm.automation.admin.tests.locations.createBasicLocation@2ea37a18]" name="testCreateBasicLocation" duration-ms="27715" started-at="2015-09-18T16:05:40Z" finished-at="2015-09-18T16:06:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateBasicLocation -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.locations.createBasicLocation@2ea37a18]" name="Postconditions" is-config="true" duration-ms="75" started-at="2015-09-18T16:06:07Z" finished-at="2015-09-18T16:06:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.locations.createBasicLocation -->
+      <class name="org.rm.automation.admin.tests.locations.associateRoomWithLocation">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.locations.associateRoomWithLocation@7c935c95]" name="Preconditions" is-config="true" duration-ms="175" started-at="2015-09-18T16:05:11Z" finished-at="2015-09-18T16:05:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testAssociateRoomWithLocation()[pri:0, instance:org.rm.automation.admin.tests.locations.associateRoomWithLocation@7c935c95]" name="testAssociateRoomWithLocation" duration-ms="28105" started-at="2015-09-18T16:05:11Z" finished-at="2015-09-18T16:05:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAssociateRoomWithLocation -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.locations.associateRoomWithLocation@7c935c95]" name="Postconditions" is-config="true" duration-ms="117" started-at="2015-09-18T16:05:39Z" finished-at="2015-09-18T16:05:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.locations.associateRoomWithLocation -->
+      <class name="org.rm.automation.admin.tests.locations.createAssociatedLocation">
+        <test-method status="PASS" signature="testCreateAssociatedLocation()[pri:0, instance:org.rm.automation.admin.tests.locations.createAssociatedLocation@689fda41]" name="testCreateAssociatedLocation" duration-ms="38390" started-at="2015-09-18T16:06:07Z" finished-at="2015-09-18T16:06:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAssociatedLocation -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.locations.createAssociatedLocation@689fda41]" name="Postconditions" is-config="true" duration-ms="182" started-at="2015-09-18T16:06:46Z" finished-at="2015-09-18T16:06:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.locations.createAssociatedLocation -->
+    </test> <!-- Acceptance Test cases -->
+  </suite> <!-- Suite for Acceptance test cases -->
+</testng-results>

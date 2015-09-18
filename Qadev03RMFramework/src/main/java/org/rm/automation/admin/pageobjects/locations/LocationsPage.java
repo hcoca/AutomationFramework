@@ -17,12 +17,13 @@ public class LocationsPage extends HomePage{
 	private By cellName;
 	private By cellDisplayName;
 	private By cellConfRoom;
+	private By confirmMessage;
 	@FindBy(xpath="//button[@ui-sref='admin.locations.modal.add']")
 	  WebElement addBtn;
 	@FindBy(xpath="//button[@ui-sref='admin.locations.remove']")
 	  WebElement removeBtn;
-	@FindBy(xpath ="//span[@class='ngLabel ng-binding' and contains(.,'Total Items:')]")
-	  WebElement locationsCounter;
+	/*@FindBy(xpath ="//span[@class='ngLabel ng-binding' and contains(.,'Total Items:')]")
+	  WebElement locationsCounter;*/
 	public LocationsPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -111,12 +112,12 @@ public class LocationsPage extends HomePage{
 			}
 		}
 	}
-	public HomePage verifyLocationWasDeleted(String expectedTotal) {
-		Waiters.WaitByXPath("//span[@class='ngLabel ng-binding' and contains(.,'Total Items:')]", driver);
-		
-		String actualTotal = locationsCounter.getText();
-		
-		Assert.assertEquals(actualTotal, expectedTotal);
+	public HomePage verifyLocationWasDeleted(String name) {
+		LogManager.info("LocationsPage: Checking confirm message");
+		Waiters.WaitByXPath("//div[@class='ng-binding ng-scope' and contains(.,'Location "+name+" sucessfully removed')]", driver);
+		confirmMessage = By.xpath("//div[@class='ng-binding ng-scope' and contains(.,'Location "+name+" sucessfully removed')]");
+		WebElement element =driver.findElement(confirmMessage);
+		Assert.assertTrue(element.isDisplayed());
 		return new HomePage(driver);
 	}
 	

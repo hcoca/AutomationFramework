@@ -42,12 +42,6 @@ public class SearchResource extends TestBaseSetup{
 				.SelectResourcesOption()
 				.SetSearch(name)
 				.VerifySearch(name)
-//				.UpdateResource()
-//				.setName(name)
-//				.Save()
-//				.SelectIssuesOption()
-//				.SelectResourcesOption()
-//				.VerifyResourceElementWasUpdated(name, 1)
 				.SignOut();
 	}
 	
