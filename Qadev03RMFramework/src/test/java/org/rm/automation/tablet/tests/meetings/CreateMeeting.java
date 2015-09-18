@@ -2,6 +2,7 @@ package org.rm.automation.tablet.tests.meetings;
 
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.utils.LogManager;
+import org.rm.automation.utils.api.MeetingsRequests;
 import org.rm.automation.base.TestBaseSetup;
 import org.testng.annotations.*;
 
@@ -34,5 +35,17 @@ public class CreateMeeting extends TestBaseSetup {
 		.confirmUser(password)
 		.saveMeeting()
 		.goHomePage();		
+	}
+	
+	@AfterMethod 
+	public void deleteMeeting(){
+		String id = "";
+		try{
+			id = MeetingsRequests.getMeetingId("Quillacollo");
+			MeetingsRequests.deleteMeeting(id);
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 }

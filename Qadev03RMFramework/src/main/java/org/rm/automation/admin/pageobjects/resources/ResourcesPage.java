@@ -33,8 +33,7 @@ public class ResourcesPage extends HomePage{
 	@FindBy(xpath=addPath) WebElement addButton;
 	@FindBy(id=removePath) WebElement removeButton;
 	@FindBy(xpath=searchPath) WebElement searchTextbox;
-//	@FindBy(css=checkboxPath) WebElement checkbox;
-	
+
 	public ResourcesPage(WebDriver driver) {
 		super(driver);
 		action = new Actions(driver);
@@ -116,18 +115,10 @@ public class ResourcesPage extends HomePage{
 	 */
 	public List<WebElement> GetListResources()
 	{
-		element = driver.findElement(By.id("resourcesGrid"));		
+		element = driver.findElement(By.id("resourcesGrid"));
+		List<WebElement> list = element.findElements(By.xpath("//div[@ng-style='rowStyle(row)']"));
 		
-		List<WebElement> listEven = element.findElements(By.cssSelector("div.ng-scope.ngRow.even"));
-		List<WebElement> listOdd = element.findElements(By.cssSelector("div.ng-scope.ngRow.odd"));
-		
-		if (listEven.size() > listOdd.size()) {
-			return listEven;
-		}
-		else if(listEven.size() == listOdd.size()){
-			return listOdd;
-		}
-		return null;
+		return list;
 	}
 	
 	/**
@@ -159,7 +150,6 @@ public class ResourcesPage extends HomePage{
 		Assert.assertEquals(expName, name);
 		Assert.assertEquals(expDisplayName, displayName);
 		Assert.assertTrue(iconName.contains(expIcon));
-		System.out.println("*****Verification done******");
 		return this;
 	}
 	
@@ -176,8 +166,7 @@ public class ResourcesPage extends HomePage{
 		action.moveToElement(element.findElement(By.cssSelector("div.ng-scope > span.ng-binding"))).doubleClick().build().perform();
 		AddResourcesPage page = new AddResourcesPage(driver);
 		page.VerifyDescriptionResource(description);
-		
-		System.out.println("-----Verification done-----");
+
 		return this;
 	}
 	
@@ -187,12 +176,11 @@ public class ResourcesPage extends HomePage{
 	 * @param expDisplayName
 	 * @return
 	 */
-	public ResourcesPage VerifyResourceWasDeleted()
+	public ResourcesPage VerifyResourceWasDeleted(String expected)
 	{
 		LogManager.info("ResourcesPage: Verifying the resource was deleted");
-
-		Assert.assertFalse(isElementPresent(By.cssSelector("div.ng-scope.ngRow.even")));
-		Assert.assertFalse(isElementPresent(By.cssSelector("div.ng-scope.ngRow.odd")));
+		
+		Assert.assertTrue(isElementPresent(By.cssSelector(nameColumnPath), expected));
 		
 		return this;
 	}
@@ -236,7 +224,7 @@ public class ResourcesPage extends HomePage{
 					.findElement(By.cssSelector(iconColumnPath))
 					.findElement(By.xpath("div[2]/div/span"));
 			actual = column.getAttribute("class");
-			Assert.assertEquals(expected, actual);
+			Assert.assertTrue(actual.contains(expected));
 
 			break;
 		}
@@ -264,17 +252,25 @@ public class ResourcesPage extends HomePage{
 		return this;
 	}
 	
-	private boolean isElementPresent(By by) {
-	    try {
+	private boolean isElementPresent(By by, String expected) {
+	   
 	    	WebElement element;
 			
 			List<WebElement> list = GetListResources();
-			
-			element = list.get(list.size()-1);
-	    	element.findElement(by);
-	      return true;
-	    } catch (NoSuchElementException e) {
-	      return false;
-	    }
+			if (list.isEmpty())
+				return true;
+			else 
+			{
+				element = list.get(list.size()-1);
+		    	WebElement nameElement = element.findElement(by);
+		    	String actual = nameElement.getText().toString().replaceAll("\\s","");
+				System.out.println("actual: " + actual);
+				System.out.println("expected: " + expected);
+				if(actual.equals(expected))
+					return false;
+				else
+					return true;
+			}
 	}
 }
+

@@ -17,6 +17,59 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
+/*<<<<<<< HEAD
+import org.rm.automation.admin.pageobjects.conferenceRooms.RoomInfoPage;
+import org.rm.automation.utils.api.ConferenceRoomsRequests;
+
+public class ThisTestCaseIsToVerifyThatXY {
+	
+	public static void main(String[] ar){
+		ArrayList<JSONObject> eg;
+		try {
+			eg = ConferenceRoomsRequests.getRooms();
+			for(JSONObject json : eg){
+				if(json.get("customDisplayName").toString().equals("room67")){
+					System.out.println(json);
+				}
+			}
+		} catch (UnsupportedOperationException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		LoginPage login;
+		HomePage homePage;
+		ConferenceRoomsPage conferenceRoom;
+		RoomInfoPage roomInfo;
+		
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get("http://localhost:4040/admin");
+		login = new LoginPage(driver);
+		homePage = login.SignIn("571Network\\Administrator", "Pilot571david77");
+		conferenceRoom = homePage.SelectRoomsOption();
+		
+		roomInfo = conferenceRoom.doubleClickConferenceRoom("room67");
+		roomInfo.setCapacity("1098571");
+		
+		conferenceRoom = roomInfo.clickSaveBtn();
+		
+		try {
+			ArrayList<JSONObject> list = ConferenceRoomsRequests.getRooms();
+			for(JSONObject json : list){
+				if(json.get("customDisplayName").toString().equals("room67")){
+					System.out.println(json);
+				}
+			}
+			
+		} catch (UnsupportedOperationException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+//	public static void main(String[] ar){
+=======
 import org.rm.automation.admin.pageobjects.conferenceRooms.ResourceAssociationPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.RoomInfoPage;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
@@ -34,7 +87,7 @@ public class ThisTestCaseIsToVerifyThatXY {
 			System.out.println(s);
 		}
 		
-	}
+	}*/
 	
 //	public static void main(String[] ar){
 //		LoginPage login;
@@ -129,6 +182,7 @@ public class ThisTestCaseIsToVerifyThatXY {
 //	}
 	
 //	public static void main(String[] ar){
+//>>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd
 //		try {
 //			JSONObject jo = ConferenceRoomsRequests.getRooms().get(0);
 //			System.out.println(jo);
@@ -342,4 +396,4 @@ public class ThisTestCaseIsToVerifyThatXY {
 //			e.printStackTrace();
 //		}	
 //	}
-}
+//}

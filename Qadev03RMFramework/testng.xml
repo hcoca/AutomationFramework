@@ -4,12 +4,23 @@
 
   <test name="Acceptance Test cases">
     <classes>
-      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomColumnBtn"/>
+      <class name="org.rm.automation.admin.tests.impersonation.EnableImpersonation"/>
+      <class name="org.rm.automation.admin.tests.impersonation.DisableImpersonation"/>
+      <!--<class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate"/>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate"/>
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName"/>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate"/>
       <class name="org.rm.automation.admin.tests.locations.createBasicLocation"/>
       <class name="org.rm.automation.admin.tests.locations.createAssociatedLocation"/>
       <class name="org.rm.automation.admin.tests.resources.CreateResource"/>
-      <class name="org.rm.automation.tablet.tests.meetings.CreateMeeting"/>
+      <class name="org.rm.automation.admin.tests.resources.CreateResourceAllFields"/>
+      <class name="org.rm.automation.admin.tests.resources.UpdateName"/>
+      <class name="org.rm.automation.admin.tests.resources.UpdateDisplayName"/>
+      <class name="org.rm.automation.admin.tests.resources.UpdateIcon"/>
+      <class name="org.rm.automation.admin.tests.resources.UpdateDescription"/>
+      <class name="org.rm.automation.admin.tests.resources.SearchResource"/>
+      <class name="org.rm.automation.admin.tests.resources.DeleteResource"/>
+      <class name="org.rm.automation.tablet.tests.meetings.CreateMeeting"/>  -->
     </classes>
   </test> <!-- Test -->
   

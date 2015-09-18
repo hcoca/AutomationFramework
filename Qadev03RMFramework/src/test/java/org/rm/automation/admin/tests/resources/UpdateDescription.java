@@ -19,11 +19,11 @@ public class UpdateDescription extends TestBaseSetup{
 	private String username = settings.getProperty("username");
 	private String password = settings.getProperty("password");
 	
-	private String descriptionNew = "New description";
+	private String descriptionNew = StringGenerator.getString();
 	String name = StringGenerator.getString();
 	String customName = StringGenerator.getString();
 	String description = StringGenerator.getString();
-	String icon = "fa-gift";
+	String icon = "fa fa-gift";
 	
 	private LoginPage loginPage;
 	
@@ -43,9 +43,9 @@ public class UpdateDescription extends TestBaseSetup{
 		  		.SignIn(username, password)
 				.SelectResourcesOption()
 				.UpdateResource()
-				.setDescription(description)
+				.setDescription(descriptionNew)
 				.Save()
-				.VerifyResourceElementWasUpdated(description, 3)
+				.VerifyResourceElementWasUpdated(descriptionNew, 3)
 				.SignOut();
 	}
 	
@@ -53,7 +53,7 @@ public class UpdateDescription extends TestBaseSetup{
 	public void Postconditions()
 	{
 		String id = "";
-		id = ResourcesRequests.getResourceId("gift");
+		id = ResourcesRequests.getResourceId(name);
 		ResourcesRequests.deleteResource(id);
 		LogManager.info("UpdateDescription: Executing Postcondition, removing resource created");
 	}

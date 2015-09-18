@@ -22,7 +22,7 @@ public class SearchResource extends TestBaseSetup{
 	String name = StringGenerator.getString();
 	String customName = StringGenerator.getString();
 	String description = StringGenerator.getString();
-	String icon = "fa-gift";
+	String icon = "fa fa-gift";
 	
 	private LoginPage loginPage;
 	
@@ -42,12 +42,6 @@ public class SearchResource extends TestBaseSetup{
 				.SelectResourcesOption()
 				.SetSearch(name)
 				.VerifySearch(name)
-//				.UpdateResource()
-//				.setName(name)
-//				.Save()
-//				.SelectIssuesOption()
-//				.SelectResourcesOption()
-//				.VerifyResourceElementWasUpdated(name, 1)
 				.SignOut();
 	}
 	

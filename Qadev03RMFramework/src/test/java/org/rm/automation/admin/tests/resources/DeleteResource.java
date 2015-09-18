@@ -25,7 +25,7 @@ public class DeleteResource extends TestBaseSetup{
 	String name = StringGenerator.getString();
 	String customName = StringGenerator.getString();
 	String description = StringGenerator.getString();
-	String icon = "fa-gift";
+	String icon = "fa fa-gift";
 	
 	private LoginPage loginPage;	
 	private HomePage homePage;
@@ -53,7 +53,7 @@ public class DeleteResource extends TestBaseSetup{
 		resourcesPage = deleteResourcesPage.Remove();
 		issuesPage = resourcesPage.SelectIssuesOption();
 		resourcesPage = issuesPage.SelectResourcesOption()
-				.VerifyResourceWasDeleted();
+				.VerifyResourceWasDeleted(name);
 		resourcesPage.SignOut();
 	}
 }
