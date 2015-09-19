@@ -5,6 +5,8 @@ import junit.framework.Assert;
 
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.emailServers.AddEmailServersPage;
@@ -37,7 +39,7 @@ public class AddServer extends TestBaseSetup {
     AddEmailServersPage addser;
     EmailServersPage emailserver;
   @Test(priority = 1)
-  public void TestAddServer() {
+  public void TestAddServer() throws InterruptedException {
 	  
 	  try {
 		  LogManager.info("AddServer Test: Execute before test");
@@ -55,8 +57,8 @@ public class AddServer extends TestBaseSetup {
 	  addser.setUsrName(userES);
 	  addser.setPassWord(pwES);
 	  emailserver = addser.saveserverbtn();
-	  String textexpect = emailserver.gettextExchange();
-	  Assert.assertTrue(textexpect.contains(hostname));
+	  Thread.sleep (10000);
+	  Assert.assertTrue(ServicesRequests.getServiceId()!=null);
   }
   @BeforeClass
   public void beforeTest() {

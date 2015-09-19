@@ -1,6 +1,9 @@
 package org.rm.automation.admin.tests.emailServices;
 
 import org.testng.annotations.Test;
+
+import junit.framework.Assert;
+
 import java.io.IOException;
 import java.util.Properties;
 import org.rm.automation.admin.pageobjects.HomePage;
@@ -11,6 +14,7 @@ import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ServicesRequests;
+import org.testng.annotations.AfterTest;
 
 
 public class RemoveServer extends TestBaseSetup {
@@ -28,31 +32,19 @@ public class RemoveServer extends TestBaseSetup {
     EmailServersPage emailserver;
     RemoveServerpage removeserv;
   @Test(priority = 1)
-  public void TestRemoveServer() {
-	try {
-		LogManager.info("RemoveServer Test: before test RemoveServer");
-		ServicesRequests.AddServices();
+  public void TestRemoveServer() throws InterruptedException, UnsupportedOperationException, IOException {
 
-	}
-	catch (UnsupportedOperationException | IOException e) {
-		e.printStackTrace();
-		LogManager.warn("RemoveServer: before test fail");
-	}
+	ServicesRequests.AddServices();
+
 	LogManager.info("RemoveServer Test: begin remove testcase");
 	objLogin = new LoginPage(driver);
 	objHomePage = objLogin.SignIn(username, password);
 	emailserver = objHomePage.SelectEmailServersOption();
 	removeserv=emailserver.clickbtnremove();
 	emailserver = removeserv.yesdelete();
-	  //Assert.assertFalse(emailserver.thereisExchange());
-	try {
-		LogManager.info("RemoveServer Test: after test add service");
-		ServicesRequests.AddServices();
-	} 
-	catch (UnsupportedOperationException | IOException e) {
-		e.printStackTrace();
-		LogManager.warn("RemoveServer: after test fail");
-	}
+	Thread.sleep (10000);
+	Assert.assertTrue(ServicesRequests.getServiceId() == null);
+
   }
 /*  @BeforeTest
   public void beforeTest() {
@@ -66,7 +58,7 @@ public class RemoveServer extends TestBaseSetup {
 		LogManager.warn("RemoveServer: before test fail");
 	}
   }
-  
+  */
   @AfterTest
   public void AfterTest(){
 	  try {
@@ -77,6 +69,6 @@ public class RemoveServer extends TestBaseSetup {
 			e.printStackTrace();
 			LogManager.warn("RemoveServer: after test fail");
 		}
-  }*/
+  }
 
 }
