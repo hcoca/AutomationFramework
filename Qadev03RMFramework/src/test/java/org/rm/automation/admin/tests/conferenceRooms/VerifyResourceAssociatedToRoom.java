@@ -32,18 +32,18 @@ public class VerifyResourceAssociatedToRoom extends TestBaseSetup{
 	private RoomInfoPage roomInfo;
 	private ResourceAssociationPage resourceAssociation;
 	
+	private String commonName = StringGenerator.getString();
+	private String resourceName = commonName;
+	private String resourceCustomName = commonName;
+	private String resourceDescription = StringGenerator.getString();
+	private String resourceIcon = "fa fa-gift";
+	
 	private String roomId;
 	private String roomName;
-	private String resourceAssociatedToRoom;
 	private String resourceId;
 	
 	private boolean actualJSONResult;
 	private boolean actualResult;
-	
-	String name = StringGenerator.getString();
-	String customName = StringGenerator.getString();
-	String description = StringGenerator.getString();
-	String icon = "fa-gift";
 
 	@BeforeTest
 	public void setUp() throws UnsupportedOperationException, IOException{
@@ -51,8 +51,8 @@ public class VerifyResourceAssociatedToRoom extends TestBaseSetup{
 		roomId = room.get("_id").toString();
 		roomName = room.get("displayName").toString();
 		
-		ResourcesRequests.postResource(name, customName, icon, description);
-		resourceId = ResourcesRequests.getResourceId("gift");
+		ResourcesRequests.postResource(resourceName, resourceCustomName, resourceIcon, resourceDescription);
+		resourceId = ResourcesRequests.getResourceId(resourceName);
 	}
 	
 	@Test
@@ -62,14 +62,14 @@ public class VerifyResourceAssociatedToRoom extends TestBaseSetup{
 		conferenceRoom = homePage.SelectRoomsOption();
 		roomInfo = conferenceRoom.doubleClickConferenceRoom(roomName);
 		resourceAssociation = roomInfo.clickResourceAssociationBtn();
-		resourceAssociation = resourceAssociation.associateResource("gift");
+		resourceAssociation = resourceAssociation.associateResource(resourceName);
 		conferenceRoom = resourceAssociation.clickSaveButton();
-		conferenceRoom = conferenceRoom.clickOnResource("gift");
+		conferenceRoom = conferenceRoom.clickOnResource(resourceName);
 		
 		actualJSONResult = ConferenceRoomsRequests.getResourceIdAssociatedToRoom(roomId).contains(resourceId);
 		AssertJUnit.assertTrue(actualJSONResult);
 		
-		actualResult = conferenceRoom.isAssociatedToResource("gift", roomName);
+		actualResult = conferenceRoom.isAssociatedToResource(resourceName, roomName);
 		AssertJUnit.assertTrue(actualResult);
 	}
 	

@@ -6,7 +6,10 @@
     <classes>      
       <class name="org.rm.automation.admin.tests.login.DisplayLogon"/>
       <class name="org.rm.automation.admin.tests.login.DisplayHomeConsole"/>
-      <class name="org.rm.automation.admin.tests.login.DisplayMainMenu"/>      
+      <class name="org.rm.automation.admin.tests.login.DisplayMainMenu"/>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom"/>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled"/>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled"/>
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate"/>
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate"/>
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName"/>
@@ -22,7 +25,7 @@
       <class name="org.rm.automation.admin.tests.resources.UpdateIcon"/>
       <class name="org.rm.automation.admin.tests.resources.UpdateDescription"/>
       <class name="org.rm.automation.admin.tests.resources.SearchResource"/>
-      <class name="org.rm.automation.admin.tests.resources.DeleteResource"/>
+      <class name="org.rm.automation.admin.tests.resources.DeleteResource"/> 
       <!-- <class name="org.rm.automation.tablet.tests.meetings.CreateMeeting"/> -->
     </classes>
   </test> <!-- Test -->  

@@ -51,11 +51,9 @@ public class ConferenceRoomsPage extends HomePage{
 	@FindBy(xpath = "//div[@class='ngCanvas']")
 	public WebElement theRoomsContainer;
 	
-
 	@FindBy(xpath = "//div[@class='row ng-scope']")
 	public WebElement resourceContainer; 
 	
-
 	/*
 	 * It might be deprecated.
 	 */
@@ -88,8 +86,6 @@ public class ConferenceRoomsPage extends HomePage{
 		return res;
 	}
 	
-/*<<<<<<< HEAD
-=======*/
 	public List<WebElement> getResources(){
 		(new WebDriverWait(driver, 20))
 		.until(ExpectedConditions.visibilityOf(resourceContainer));
@@ -117,19 +113,27 @@ public class ConferenceRoomsPage extends HomePage{
 		boolean res = false;
 		
 		WebElement room = this.getConferenceRoom(roomName);
-		(new WebDriverWait(driver, 20))
-		.until(ExpectedConditions.visibilityOf(room.findElement(By.xpath(".//div[@class='animate-if ng-scope']"))));
-		WebElement resourceAnimatedName = room.findElement(By.xpath(".//div[@class='animate-if ng-scope']"));
-//		(new WebDriverWait(driver, 20))
-//		.until(ExpectedConditions.visibilityOf(resourceAnimatedName));
-		if(resourceAnimatedName.getAttribute("ng-if").toString().contains(resourcename)){
-			res = true;
+		
+//		WebElement resourceAnimatedName = (new WebDriverWait(driver, 20))
+//		.until(ExpectedConditions.visibilityOf(room.findElement(By.xpath(".//div[@class='animate-if ng-scope']"))));
+//		System.out.println("What it contains: " + resourceAnimatedName.getAttribute("ng-if").toString());
+		
+		List<WebElement> list = room.findElements(By.xpath(".//div[@class='animate-if ng-scope']"));
+		for(WebElement we : list){
+//			System.out.println("What it contains: " + we.getAttribute("ng-if").toString());
+			if(we.getAttribute("ng-if").toString().contains(resourcename)){
+				res = true;
+				break;
+			}
 		}
+		
+//		if(resourceAnimatedName.getAttribute("ng-if").toString().contains(resourcename)){
+//			res = true;
+//		}
 		
 		return res;
 	}
 	
-//>>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd
 //	public boolean isValidRoom(String roomName){
 //		return listOfRoomNames.contains(roomName) ? true : false;
 //	}
@@ -173,11 +177,9 @@ public class ConferenceRoomsPage extends HomePage{
 	public RoomInfoPage doubleClickConferenceRoom(String roomName){
 		RoomInfoPage res = null; 
 		
-//<<<<<<< HEAD
-		List<WebElement> list = theRoomsContainer.findElements(By.xpath("//span[@class='ng-binding']"));// The span that contains the conference room.
-/*=======
-		List<WebElement> list = theRoomsContainer.findElements(By.xpath("//span[@class='ng-binding']"));// The span that contains the conference rooms.
->>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd*/
+		theRoomsContainer = new WebDriverWait(driver, 20)
+			.until(ExpectedConditions.visibilityOf(theRoomsContainer)); // //span[@class='ng-binding']
+		List<WebElement> list = theRoomsContainer.findElements(By.xpath(".//span[@class='ng-binding']"));// The span that contains the conference rooms.
 		for(WebElement web : list){
 			if(web.getText().equals(roomName)){
 				Actions builder = new Actions(driver);
@@ -189,25 +191,24 @@ public class ConferenceRoomsPage extends HomePage{
 		
 		return res;
 	}
-/*<<<<<<< HEAD
-=======*/
 	
 	public WebElement getConferenceRoom(String roomName){
 		WebElement res = null; 
 		
-		(new WebDriverWait(driver, 20))
-		.until(ExpectedConditions.visibilityOf(theRoomsContainer));
-		List<WebElement> list = theRoomsContainer.findElements(By.xpath(".//div[@ng-style='rowStyle(row)']"));// ng-style="rowStyle(row)"
-		for(WebElement webElement : list){
-			if(webElement.findElement(By.xpath(".//span[@ng-show='row.entity.enabled']")).getText().equals(roomName)){
-				res = webElement;
-				break;
+		theRoomsContainer = new WebDriverWait(driver, 20)
+			.until(ExpectedConditions.visibilityOf(theRoomsContainer));
+		List<WebElement> list = theRoomsContainer.findElements(By.xpath(".//div[@ng-style='rowStyle(row)']"));// The span that contains the conference rooms.
+		for(WebElement web : list){
+			WebElement roomLabel = web.findElement(By.xpath(".//span[@class='ng-binding']"));
+			roomLabel = new WebDriverWait(driver, 20)
+					.until(ExpectedConditions.visibilityOf(roomLabel));
+			if(roomLabel.getText().equals(roomName)){
+				res = web;
 			}
 		}
 		
 		return res;
 	}
-//>>>>>>> 59ea1bb0c4cbdae835f66ae83d59094577ada9dd
 
 	public boolean isValidRoom(String roomName){
 		boolean res = false; 

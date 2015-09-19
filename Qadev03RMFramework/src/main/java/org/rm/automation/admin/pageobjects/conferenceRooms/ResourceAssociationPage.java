@@ -17,7 +17,8 @@ public class ResourceAssociationPage extends ConferenceRoomCommonPage{
 	@FindBy(xpath = "//div[@class='col-xs-12 col-sm-5 col-lg-5']")
 	public WebElement availableResourcesContainer;
 	
-	@FindBy(xpath = "//button[@ng-click='save()']")
+//	@FindBy(xpath = "//button[@ng-click='save()']")
+	@FindBy(xpath = "//div[4]/div/div/div[3]/div[2]/button")
 	public WebElement saveButton;
 	
 	public ResourceAssociationPage(WebDriver driver){
@@ -55,8 +56,8 @@ public class ResourceAssociationPage extends ConferenceRoomCommonPage{
 	}
 
 	public ConferenceRoomsPage clickSaveButton(){
-		(new WebDriverWait(driver, 20))
-		.until(ExpectedConditions.visibilityOf(saveButton));
+		saveButton = (new WebDriverWait(driver, 20))
+				  .until(ExpectedConditions.visibilityOf(saveButton));
 		saveButton.click();
 		
 		return new ConferenceRoomsPage(driver);
