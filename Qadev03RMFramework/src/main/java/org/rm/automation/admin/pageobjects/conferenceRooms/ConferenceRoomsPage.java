@@ -54,6 +54,26 @@ public class ConferenceRoomsPage extends HomePage{
 	@FindBy(xpath = "//div[@class='row ng-scope']")
 	public WebElement resourceContainer; 
 	
+	//
+	//
+	// temporarily out of order
+	//
+	@FindBy(xpath = "//span[@popover-title='Temporarily Out of Order']")
+	WebElement OutOOrdericonOrder; 
+	
+	@FindBy(xpath = "//span[@popover-title='Closed for maintenance']")
+	WebElement OutOOrdericonmaintenance; 
+	
+	@FindBy(xpath = "//span[@popover-title='Closed for reparations']")
+	WebElement OutOOrdericonreparations; 
+	
+	@FindBy(xpath = "//span[@popover-title='Reserved for a special event']")
+	WebElement OutOOrdericonevent; 
+	
+
+	
+	//popover-title="Temporarily Out of Order"
+	
 	/*
 	 * It might be deprecated.
 	 */
@@ -163,7 +183,7 @@ public class ConferenceRoomsPage extends HomePage{
 	}
 	
 	/*
-	 * It should receive the conference room name.
+	 * It should receive the conference room name. -----lufer: message if this not has any function should be delete
 	 */
 	public RoomInfoPage doubleClickConferenceRoom(){
 		(new WebDriverWait(driver, 20))
@@ -192,7 +212,7 @@ public class ConferenceRoomsPage extends HomePage{
 		return res;
 	}
 	
-	public WebElement getConferenceRoom(String roomName){
+	private WebElement getConferenceRoom(String roomName){
 		WebElement res = null; 
 		
 		theRoomsContainer = new WebDriverWait(driver, 20)
@@ -235,5 +255,45 @@ public class ConferenceRoomsPage extends HomePage{
 			.until(ExpectedConditions.visibilityOf(conferenceRoomInfoLabel));
 		
 		return conferenceRoomInfoLabel.getText();
+	}
+	
+	/*
+	 * pass the out of order title
+	 * 
+	 * 
+	 * 
+	 * falta metodooooooooooooooooooooooo
+	 * */
+	public boolean IsvisibleOOOIcon(String ooftext)
+	{
+		/*Temporarily Out of Order
+
+		Closed for maintenance
+
+		Closed for reparations
+
+		Reserved for a special event*/ 
+		
+		/*theRoomsContainer = new WebDriverWait(driver, 20)
+			.until(ExpectedConditions.visibilityOf(theRoomsContainer)); // //span[@class='ng-binding']
+		List<WebElement> list = theRoomsContainer.findElements(By.xpath(".//span[@class='ng-binding']"));// The span that contains the conference rooms.
+*/		
+		if("Temporarily Out of Order".contains(ooftext)){
+			OutOOrdericonOrder.isDisplayed();
+			return true;
+		}
+		if("Closed for maintenance".contains(ooftext)){
+			OutOOrdericonmaintenance.isDisplayed();
+			return true;
+		}
+		if("Closed for reparations".contains(ooftext)){
+			OutOOrdericonreparations.isDisplayed();
+			return true;
+		}
+		if("Reserved for a special event".contains(ooftext)){
+			OutOOrdericonevent.isDisplayed();
+			return true;
+		}	
+		return false;
 	}
 }

@@ -17,6 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
+import org.rm.automation.admin.pageobjects.conferenceRooms.OutOfOrderPlanningPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ResourceAssociationPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.RoomInfoPage;
 import org.rm.automation.utils.StringGenerator;
@@ -25,7 +26,72 @@ import org.rm.automation.utils.api.ResourcesRequests;
 
 public class ThisTestCaseIsToVerifyThatXY {
 	
-	public static void main(String[] ar){
+	public static void testMainLUFER(String[] ar){
+		/*ArrayList<JSONObject> eg;
+		try {
+			eg = ConferenceRoomsRequests.getRooms();
+			for(JSONObject json : eg){
+				if(json.get("customDisplayName").toString().equals("room67")){
+					System.out.println(json);
+				}
+			}
+		} catch (UnsupportedOperationException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}*/
+		
+		LoginPage login;
+		HomePage homePage;
+		ConferenceRoomsPage conferenceRoom;
+		RoomInfoPage roomInfo;
+		
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get("http://172.20.208.142:4040/admin");
+		login = new LoginPage(driver);
+		homePage = login.SignIn("roompro\\room", "Control123!");
+		conferenceRoom = homePage.SelectRoomsOption();
+		
+		roomInfo = conferenceRoom.doubleClickConferenceRoom("b21");
+		OutOfOrderPlanningPage ooop = roomInfo.clickOutOfOrderPlanningBtn();
+		
+
+		ooop.clickcalendarfrom();
+		ooop.clickbuttonToDayfrom();
+		
+		ooop.clickcalendatTo();
+		ooop.clickbuttonToDayTo();
+		
+		ooop.enableDisableBtn();
+		
+		ooop.setUPhorafrom(5);
+		ooop.setUpminutesFrom(15);
+		ooop.setUPhoraTo(5);
+		ooop.setUpminutesTo(5);
+		
+		ooop.setdownhoursFrom(6);
+		ooop.setDownMinuteFrom(5);
+		ooop.setdownhoursTo(5);
+		ooop.setDownMinuteTo(0);
+		
+		// value accepted is 
+		/*
+		 * Temporarily Out of Order (Order , Temporarily)
+		 * Closed for maintenance (maintenance)
+		 * Closed for reparations {reparations}
+		 * Reserved for a special event (Reserved , special)
+		 * if the name in invalid this select by default first option
+		*/
+		ooop.selectTitle("hola mundooooooooooooo");
+		
+		ooop.savebuttonOOOP();
+		
+	}
+	
+	
+	
+	
+	/*public static void main(String[] ar){
 		LoginPage login;
 		HomePage homePage;
 		ConferenceRoomsPage conferenceRoom;
@@ -87,7 +153,7 @@ public class ThisTestCaseIsToVerifyThatXY {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
-}
+}*/
 	
 //	public static void main(String[] ar) throws UnsupportedOperationException, IOException{
 //		String roomId = ConferenceRoomsRequests.getRooms().get(0).get("_id").toString();
