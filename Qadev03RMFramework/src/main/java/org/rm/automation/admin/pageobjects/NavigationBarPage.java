@@ -11,6 +11,7 @@ import org.rm.automation.admin.pageobjects.emailServers.EmailServersPage;
 import org.rm.automation.admin.pageobjects.impersonation.ImpersonationPage;
 import org.rm.automation.admin.pageobjects.locations.LocationsPage;
 import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
+import org.rm.automation.tablet.pageobjects.TabletPage;
 import org.rm.automation.admin.pageobjects.locations.IssuesPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
@@ -31,6 +32,8 @@ public class NavigationBarPage {
 	  WebElement roomsLink;
 	@FindBy(linkText="Impersonation")
 	  WebElement impersonationLink;
+	@FindBy(linkText="Tablets")
+	  WebElement tabletLink;
 	
 	public NavigationBarPage(WebDriver driver) {
 		this.driver=driver;
@@ -98,6 +101,15 @@ public class NavigationBarPage {
 			impersonationLink.click();
 		}		
 		return new ImpersonationPage(driver);
+	}
+	public TabletPage SelectTabletsOptions() {
+		Waiters.WaitByVisibilityOfWebElement(tabletLink, driver);
+		if(tabletLink.isDisplayed()||tabletLink.isEnabled())
+		{
+			LogManager.info("NavigationBarPage: Selecting Impersonation option");
+			tabletLink.click();
+		}		
+		return new TabletPage(driver);
 	}
 	
 	public HomePage mainMenuIsDisplayed(){
