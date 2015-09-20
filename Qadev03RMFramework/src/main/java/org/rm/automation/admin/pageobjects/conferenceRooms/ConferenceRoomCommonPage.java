@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rm.automation.admin.locators.conferenceRooms.ConferenceRoomCommonLocators;
+import org.rm.automation.utils.Waiters;
 
 public class ConferenceRoomCommonPage {
 	
@@ -27,24 +28,27 @@ public class ConferenceRoomCommonPage {
 	}
 	
 	public RoomInfoPage clickRoomInfoBtn(){
-		(new WebDriverWait(driver, 20))
-			.until(ExpectedConditions.visibilityOf(roomInfoBtn));
+		Waiters.WaitByVisibilityOfWebElement(roomInfoBtn, driver);
+//		(new WebDriverWait(driver, 20))
+//			.until(ExpectedConditions.visibilityOf(roomInfoBtn));
 		roomInfoBtn.click();
 		
 		return new RoomInfoPage(driver);
 	}
 	
 	public ResourceAssociationPage clickResourceAssociationBtn(){
-		(new WebDriverWait(driver, 20))
-			.until(ExpectedConditions.visibilityOf(resourceAssociationBtn));
+		Waiters.WaitByVisibilityOfWebElement(resourceAssociationBtn, driver);
+//		(new WebDriverWait(driver, 20))
+//			.until(ExpectedConditions.visibilityOf(resourceAssociationBtn));
 		resourceAssociationBtn.click();
 		
 		return new ResourceAssociationPage(driver);
 	}
 
 	public OutOfOrderPlanningPage clickOutOfOrderPlanningBtn(){
-		(new WebDriverWait(driver, 20))
-			.until(ExpectedConditions.visibilityOf(outOfOrderPlanningBtn));
+		Waiters.WaitByVisibilityOfWebElement(outOfOrderPlanningBtn, driver);
+//		(new WebDriverWait(driver, 20))
+//			.until(ExpectedConditions.visibilityOf(outOfOrderPlanningBtn));
 		outOfOrderPlanningBtn.click();
 		
 		return new OutOfOrderPlanningPage(driver);
