@@ -1,6 +1,5 @@
 package org.rm.automation.admin.pageobjects.conferenceRooms;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -11,47 +10,34 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.rm.automation.admin.locators.conferenceRooms.ConferenceRoomsLocators;
 import org.rm.automation.admin.pageobjects.HomePage;
+import org.rm.automation.utils.Waiters;
 
 public class ConferenceRoomsPage extends HomePage{
 	
-	@FindBy(xpath = "//div[text()='Enabled']")
+	@FindBy(xpath = ConferenceRoomsLocators.EnabledColumnBtnLocator)
 	public WebElement enabledColumnBtn;
 	
-	@FindBy(xpath = "//div[contains(text(),'Order')]")
+	@FindBy(xpath = ConferenceRoomsLocators.OutOfOrderColumnBtnLocator)
 	public WebElement outOfOrderColumnBtn;
 	
-	@FindBy(xpath = "//div[text()='Room']")
+	@FindBy(xpath = ConferenceRoomsLocators.RoomColumnBtnLocator)
 	public WebElement roomColumnBtn;
 	
-	/*
-	 * The conference rooms container.   <------ Needs to be reviewed. 
-	 */
-	@FindBy(css = "div[class='ngViewport ng-scope']")
-	public WebElement roomContainer;
-	
-	/*
-	 * This WebElement should be reviewed.
-	 */
-	//@FindBy(xpath = "//*[@id='roomsGrid']/div[2]/div/div/div[3]")
-	//@FindBy(xpath = "//*[@id='roomsGrid']/div[2]/div/div")
-	////*[@id="roomsGrid"]/div[2]/div/div/div[3]
-	//                 //*[@id="roomsGrid"]/div[2]/div/div/div[3]/div[2]/div/span[2]   <------ It works as well. 
-	//               //div[@id='roomsGrid']/div[2]/div/div/div[3]/div[2]/div   <------ The one that works.
-	@FindBy(xpath = "//*[@id='roomsGrid']/div[2]/div/div/div[3]/div[2]/div/span[2]")
+	@FindBy(xpath = ConferenceRoomsLocators.ConferenceRoomLocator)
 	public WebElement conferenceRoom;
 	
-	@FindBy(xpath = "//*[@id='roomsGrid']/div[3]/div/div[1]/div[1]/span[1]")
+	@FindBy(xpath = ConferenceRoomsLocators.TotalItemsLabelLocator)
 	public WebElement totalItemsLabel;
 	
-	@FindBy(xpath = "//*[@id='roomsGrid']/div[1]/div[1]/div")
+	@FindBy(xpath = ConferenceRoomsLocators.ConferenceRoomInfoLabelLocator)
 	public WebElement conferenceRoomInfoLabel;
 	
-	// //div[@class='ngCanvas'] <-------- The xpath where the rooms are located
-	@FindBy(xpath = "//div[@class='ngCanvas']")
-	public WebElement theRoomsContainer;
+	@FindBy(xpath = ConferenceRoomsLocators.RoomsContainerLocator)
+	public WebElement roomsContainer;
 	
-	@FindBy(xpath = "//div[@class='row ng-scope']")
+	@FindBy(xpath = ConferenceRoomsLocators.ResourceContainerLocator)
 	public WebElement resourceContainer; 
 	
 	//
@@ -75,11 +61,6 @@ public class ConferenceRoomsPage extends HomePage{
 	//popover-title="Temporarily Out of Order"
 	
 	/*
-	 * It might be deprecated.
-	 */
-	public ArrayList<String> listOfRoomNames = null;
-	
-	/*
 	 * ------------------------------------------------------------------------------571---------------------------------------
 	 */
 
@@ -89,26 +70,12 @@ public class ConferenceRoomsPage extends HomePage{
 	public ConferenceRoomsPage (WebDriver driver){
 		super(driver);
 		PageFactory.initElements(super.driver, this);
-		
-		listOfRoomNames = fillListOfRoomsNames();
-	}
-	
-	private ArrayList<String> fillListOfRoomsNames() {
-		List<WebElement> aux = theRoomsContainer.findElements(By.xpath("div"));
-		ArrayList<String> res = new ArrayList<>(); 
-		
-		if(aux.size() != 0){
-			for(WebElement div : aux){
-				res.add(div.getText().trim());
-			}
-		}
-		
-		return res;
 	}
 	
 	public List<WebElement> getResources(){
-		(new WebDriverWait(driver, 20))
-		.until(ExpectedConditions.visibilityOf(resourceContainer));
+		Waiters.WaitByVisibilityOfWebElement(resourceContainer, driver);
+//		(new WebDriverWait(driver, 20))
+//		.until(ExpectedConditions.visibilityOf(resourceContainer));
 		List<WebElement> list = resourceContainer.findElements(By.xpath("//span[@ng-model='resource.isSelected']"));
 		
 		return list;
@@ -119,6 +86,7 @@ public class ConferenceRoomsPage extends HomePage{
 		
 		List<WebElement> list = getResources();
 		for(WebElement webElement : list){
+			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
 			if(webElement.getText().equals(resourceName)){
 				webElement.click();
 				res = this;
@@ -133,50 +101,41 @@ public class ConferenceRoomsPage extends HomePage{
 		boolean res = false;
 		
 		WebElement room = this.getConferenceRoom(roomName);
-		
-//		WebElement resourceAnimatedName = (new WebDriverWait(driver, 20))
-//		.until(ExpectedConditions.visibilityOf(room.findElement(By.xpath(".//div[@class='animate-if ng-scope']"))));
-//		System.out.println("What it contains: " + resourceAnimatedName.getAttribute("ng-if").toString());
-		
+
 		List<WebElement> list = room.findElements(By.xpath(".//div[@class='animate-if ng-scope']"));
-		for(WebElement we : list){
-//			System.out.println("What it contains: " + we.getAttribute("ng-if").toString());
-			if(we.getAttribute("ng-if").toString().contains(resourcename)){
+		for(WebElement webElement : list){
+			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
+			if(webElement.getAttribute("ng-if").toString().contains(resourcename)){
 				res = true;
 				break;
 			}
 		}
 		
-//		if(resourceAnimatedName.getAttribute("ng-if").toString().contains(resourcename)){
-//			res = true;
-//		}
-		
 		return res;
 	}
 	
-//	public boolean isValidRoom(String roomName){
-//		return listOfRoomNames.contains(roomName) ? true : false;
-//	}
-	
 	public ConferenceRoomsPage clickEnabledColumnBtn(){
-		(new WebDriverWait(driver, 20))
-			.until(ExpectedConditions.visibilityOf(enabledColumnBtn));
+		Waiters.WaitByVisibilityOfWebElement(enabledColumnBtn, driver);
+//		(new WebDriverWait(driver, 20))
+//			.until(ExpectedConditions.visibilityOf(enabledColumnBtn));
 		enabledColumnBtn.click();
 		
 		return new ConferenceRoomsPage(driver);
 	}
 	
 	public ConferenceRoomsPage clickOutOfOrderColumnBtn(){
-		(new WebDriverWait(driver, 20))
-			.until(ExpectedConditions.visibilityOf(outOfOrderColumnBtn));
+		Waiters.WaitByVisibilityOfWebElement(outOfOrderColumnBtn, driver);
+//		(new WebDriverWait(driver, 20))
+//			.until(ExpectedConditions.visibilityOf(outOfOrderColumnBtn));
 		outOfOrderColumnBtn.click();
 		
 		return new ConferenceRoomsPage(driver);
 	}
 
 	public ConferenceRoomsPage clickRoomColumnBtn(){
-		(new WebDriverWait(driver, 20))
-			.until(ExpectedConditions.visibilityOf(roomColumnBtn));
+		Waiters.WaitByVisibilityOfWebElement(roomColumnBtn, driver);
+//		(new WebDriverWait(driver, 20))
+//			.until(ExpectedConditions.visibilityOf(roomColumnBtn));
 		roomColumnBtn.click();
 		
 		return new ConferenceRoomsPage(driver);
@@ -186,8 +145,9 @@ public class ConferenceRoomsPage extends HomePage{
 	 * It should receive the conference room name. -----lufer: message if this not has any function should be delete
 	 */
 	public RoomInfoPage doubleClickConferenceRoom(){
-		(new WebDriverWait(driver, 20))
-			.until(ExpectedConditions.visibilityOf(conferenceRoom));
+		Waiters.WaitByVisibilityOfWebElement(conferenceRoom, driver);
+//		(new WebDriverWait(driver, 20))
+//			.until(ExpectedConditions.visibilityOf(conferenceRoom));
 		Actions builder = new Actions(driver);
 		builder.doubleClick(conferenceRoom).perform();
 		
@@ -197,13 +157,15 @@ public class ConferenceRoomsPage extends HomePage{
 	public RoomInfoPage doubleClickConferenceRoom(String roomName){
 		RoomInfoPage res = null; 
 		
-		theRoomsContainer = new WebDriverWait(driver, 20)
-			.until(ExpectedConditions.visibilityOf(theRoomsContainer)); // //span[@class='ng-binding']
-		List<WebElement> list = theRoomsContainer.findElements(By.xpath(".//span[@class='ng-binding']"));// The span that contains the conference rooms.
-		for(WebElement web : list){
-			if(web.getText().equals(roomName)){
+		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
+//		roomsContainer = new WebDriverWait(driver, 20)
+//			.until(ExpectedConditions.visibilityOf(roomsContainer)); // //span[@class='ng-binding']
+		List<WebElement> list = roomsContainer.findElements(By.xpath(".//span[@class='ng-binding']"));// The span that contains the conference rooms.
+		for(WebElement webElement : list){
+			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
+			if(webElement.getText().equals(roomName)){
 				Actions builder = new Actions(driver);
-				builder.doubleClick(web).perform();
+				builder.doubleClick(webElement).perform();
 				res = new RoomInfoPage(driver);
 				break;
 			}
@@ -215,15 +177,18 @@ public class ConferenceRoomsPage extends HomePage{
 	private WebElement getConferenceRoom(String roomName){
 		WebElement res = null; 
 		
-		theRoomsContainer = new WebDriverWait(driver, 20)
-			.until(ExpectedConditions.visibilityOf(theRoomsContainer));
-		List<WebElement> list = theRoomsContainer.findElements(By.xpath(".//div[@ng-style='rowStyle(row)']"));// The span that contains the conference rooms.
-		for(WebElement web : list){
-			WebElement roomLabel = web.findElement(By.xpath(".//span[@class='ng-binding']"));
-			roomLabel = new WebDriverWait(driver, 20)
-					.until(ExpectedConditions.visibilityOf(roomLabel));
+		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
+//		roomsContainer = new WebDriverWait(driver, 20)
+//			.until(ExpectedConditions.visibilityOf(roomsContainer));
+		List<WebElement> list = roomsContainer.findElements(By.xpath(".//div[@ng-style='rowStyle(row)']"));// The span that contains the conference rooms.
+		for(WebElement webElement : list){
+			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
+			WebElement roomLabel = webElement.findElement(By.xpath(".//span[@class='ng-binding']"));
+			Waiters.WaitByVisibilityOfWebElement(roomLabel, driver);
+//			roomLabel = new WebDriverWait(driver, 20)
+//					.until(ExpectedConditions.visibilityOf(roomLabel));
 			if(roomLabel.getText().equals(roomName)){
-				res = web;
+				res = webElement;
 			}
 		}
 		
@@ -233,9 +198,11 @@ public class ConferenceRoomsPage extends HomePage{
 	public boolean isValidRoom(String roomName){
 		boolean res = false; 
 		
-		List<WebElement> list = theRoomsContainer.findElements(By.xpath("//span[@class='ng-binding']"));// The span that contains the conference room.
-		for(WebElement web : list){
-			if(web.getText().equals(roomName)){
+		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
+		List<WebElement> list = roomsContainer.findElements(By.xpath("//span[@class='ng-binding']"));// The span that contains the conference room.
+		for(WebElement webElement : list){
+			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
+			if(webElement.getText().equals(roomName)){
 				res = true;
 			}
 		}
@@ -244,15 +211,17 @@ public class ConferenceRoomsPage extends HomePage{
 	}
 	
 	public String getTotalItemsLabelValue(){
-		(new WebDriverWait(driver, 20))
-			.until(ExpectedConditions.visibilityOf(totalItemsLabel));
+		Waiters.WaitByVisibilityOfWebElement(totalItemsLabel, driver);
+//		(new WebDriverWait(driver, 20))
+//			.until(ExpectedConditions.visibilityOf(totalItemsLabel));
 		
 		return totalItemsLabel.getText();
 	}
 	
 	public String getConferenceRoomInfoLabel(){
-		(new WebDriverWait(driver, 20))
-			.until(ExpectedConditions.visibilityOf(conferenceRoomInfoLabel));
+		Waiters.WaitByVisibilityOfWebElement(conferenceRoomInfoLabel, driver);
+//		(new WebDriverWait(driver, 20))
+//			.until(ExpectedConditions.visibilityOf(conferenceRoomInfoLabel));
 		
 		return conferenceRoomInfoLabel.getText();
 	}

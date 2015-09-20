@@ -8,17 +8,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.rm.automation.admin.locators.conferenceRooms.ResourceAssociationLocators;
+import org.rm.automation.utils.Waiters;
 
 public class ResourceAssociationPage extends ConferenceRoomCommonPage{
 	
-	@FindBy(xpath = "/html/body/div[4]/div/div/div[2]/div/div/div[2]/div[1]/legend")
+	@FindBy(xpath = ResourceAssociationLocators.AvailableLabelLocator)
 	public WebElement availableLabel;
 	
-	@FindBy(xpath = "//div[@class='col-xs-12 col-sm-5 col-lg-5']")
+	@FindBy(xpath = ResourceAssociationLocators.AvailableResourcesContainerLocator)
 	public WebElement availableResourcesContainer;
 	
-//	@FindBy(xpath = "//button[@ng-click='save()']")
-	@FindBy(xpath = "//div[4]/div/div/div[3]/div[2]/button")
+	@FindBy(xpath = ResourceAssociationLocators.SaveButtonLocator)
 	public WebElement saveButton;
 	
 	public ResourceAssociationPage(WebDriver driver){
@@ -26,15 +27,17 @@ public class ResourceAssociationPage extends ConferenceRoomCommonPage{
 	}
 	
 	public String getAvailablelabel(){
-		(new WebDriverWait(driver, 20))
-			.until(ExpectedConditions.visibilityOf(availableLabel));
+		Waiters.WaitByVisibilityOfWebElement(availableLabel, driver);
+//		(new WebDriverWait(driver, 20))
+//			.until(ExpectedConditions.visibilityOf(availableLabel));
 		
 		return availableLabel.getText();
 	}
 	
 	public List<WebElement> getAvailableResources(){
-		(new WebDriverWait(driver, 20))
-		.until(ExpectedConditions.visibilityOf(availableResourcesContainer));
+		Waiters.WaitByVisibilityOfWebElement(availableResourcesContainer, driver);
+//		(new WebDriverWait(driver, 20))
+//		.until(ExpectedConditions.visibilityOf(availableResourcesContainer));
 		List<WebElement> list = availableResourcesContainer.findElements(By.xpath("//div[@ng-repeat='availableResource in availableResources']"));
 		
 		return list;
@@ -45,8 +48,13 @@ public class ResourceAssociationPage extends ConferenceRoomCommonPage{
 		
 		List<WebElement> list = this.getAvailableResources();
 		for(WebElement webElement : list){
-			if(webElement.findElement(By.xpath(".//span[@class='ng-binding']")).getText().equals(resourceAssociatedName)){
-				webElement.findElement(By.xpath(".//button[@class='btn-clear']")).click();
+			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
+			WebElement resourceAvailablelabel = webElement.findElement(By.xpath(".//span[@class='ng-binding']"));
+			Waiters.WaitByVisibilityOfWebElement(resourceAvailablelabel, driver);
+			if(resourceAvailablelabel.getText().equals(resourceAssociatedName)){
+				WebElement resourceAvailableButton = webElement.findElement(By.xpath(".//button[@class='btn-clear']"));
+				Waiters.WaitByVisibilityOfWebElement(resourceAvailableButton, driver);
+				resourceAvailableButton.click();
 				res = this;
 				break;
 			}
@@ -56,8 +64,9 @@ public class ResourceAssociationPage extends ConferenceRoomCommonPage{
 	}
 
 	public ConferenceRoomsPage clickSaveButton(){
-		saveButton = (new WebDriverWait(driver, 20))
-				  .until(ExpectedConditions.visibilityOf(saveButton));
+		Waiters.WaitByVisibilityOfWebElement(saveButton, driver);
+//		saveButton = (new WebDriverWait(driver, 20))
+//				  .until(ExpectedConditions.visibilityOf(saveButton));
 		saveButton.click();
 		
 		return new ConferenceRoomsPage(driver);

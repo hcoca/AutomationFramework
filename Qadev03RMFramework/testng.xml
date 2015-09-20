@@ -16,6 +16,11 @@
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate"/>
       <class name="org.rm.automation.admin.tests.impersonation.EnableImpersonation"/>
       <class name="org.rm.automation.admin.tests.impersonation.DisableImpersonation"/>
+      <class name="org.rm.automation.admin.tests.locations.associateRoomWithLocation"/>
+      <class name="org.rm.automation.admin.tests.locations.createChildLocation"/>
+      <class name="org.rm.automation.admin.tests.locations.editLocation"/>
+      <class name="org.rm.automation.admin.tests.locations.removeLocation"/>
+      <class name="org.rm.automation.admin.tests.locations.removeLocationAssociated"/>
       <class name="org.rm.automation.admin.tests.locations.createBasicLocation"/>
       <class name="org.rm.automation.admin.tests.locations.createAssociatedLocation"/>
       <class name="org.rm.automation.admin.tests.resources.CreateResource"/>
@@ -26,8 +31,8 @@
       <class name="org.rm.automation.admin.tests.resources.UpdateDescription"/>
       <class name="org.rm.automation.admin.tests.resources.SearchResource"/>
       <class name="org.rm.automation.admin.tests.resources.DeleteResource"/>
-      <class name="org.rm.automation.admin.tests.emailServices.RemoveServer"/>
-      <class name="org.rm.automation.admin.tests.emailServices.AddServer"/>
+      <!-- <class name="org.rm.automation.admin.tests.emailServices.RemoveServer"/>
+      <class name="org.rm.automation.admin.tests.emailServices.AddServer"/> -->
       <!-- <class name="org.rm.automation.tablet.tests.meetings.CreateMeeting"/> -->
     </classes>
   </test> <!-- Test -->  
