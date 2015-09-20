@@ -14,6 +14,8 @@
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate"/>
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName"/>
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate"/>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifylogoStateVisible"/>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyEmailroomIsCorrectly"/>
       <class name="org.rm.automation.admin.tests.impersonation.EnableImpersonation"/>
       <class name="org.rm.automation.admin.tests.impersonation.DisableImpersonation"/>
       <class name="org.rm.automation.admin.tests.locations.associateRoomWithLocation"/>
@@ -32,8 +34,10 @@
       <class name="org.rm.automation.admin.tests.resources.SearchResource"/>
       <class name="org.rm.automation.admin.tests.resources.DeleteResource"/>
       <!-- <class name="org.rm.automation.admin.tests.emailServices.RemoveServer"/>
+      
       <class name="org.rm.automation.admin.tests.emailServices.AddServer"/> -->
       <!-- <class name="org.rm.automation.tablet.tests.meetings.CreateMeeting"/> -->
+
     </classes>
   </test> <!-- Test -->  
   </suite> <!-- Suite -->

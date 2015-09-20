@@ -22,9 +22,25 @@ public class ConferenceRoomCommonPage {
 	@FindBy(xpath = ConferenceRoomCommonLocators.OutOfOrderPlanningBtnLocator)
 	public WebElement outOfOrderPlanningBtn;
 	
+	// all pages have this properties
+	@FindBy(xpath = "//h5[@class='ng-binding']")
+	private WebElement emailroom;
+	
+	@FindBy (xpath  = "//h2[@class='ng-binding']")
+	private WebElement nameroom;
+	
+	//----
+	
 	public ConferenceRoomCommonPage(WebDriver driver){
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+	}
+	
+	public String getemailroom() {
+		return emailroom.getText();
+	}
+	public String getNameRoom() {
+		return nameroom.getText();
 	}
 	
 	public RoomInfoPage clickRoomInfoBtn(){

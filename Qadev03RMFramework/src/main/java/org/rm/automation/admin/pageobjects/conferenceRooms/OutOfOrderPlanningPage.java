@@ -17,10 +17,6 @@ public class OutOfOrderPlanningPage extends ConferenceRoomCommonPage {
 	@FindBy(xpath = OutOfOrderPlanningLocators.ActionsLabelLocator)
 	private WebElement actionsLabel;
 	
-	@FindBy(xpath = "//h5[@class='ng-binding']")
-	private WebElement emailroom;
-	@FindBy (xpath  = "//h2[@class='ng-binding']")
-	private WebElement nameroom;
 	
 	@FindBy(xpath = "//label[@class='btn btn-block btn-default']")
 	private WebElement buttonOOOPEnableDis;
@@ -90,12 +86,7 @@ public class OutOfOrderPlanningPage extends ConferenceRoomCommonPage {
 		
 		return actionsLabel.getText();
 	}
-	public String getemailroom() {
-		return emailroom.getText();
-	}
-	public String getNameRoom() {
-		return nameroom.getText();
-	}
+
 	public void enableDisableBtn() {
 		buttonOOOPEnableDis.click();
 	}
@@ -167,6 +158,7 @@ public class OutOfOrderPlanningPage extends ConferenceRoomCommonPage {
 	}
 	public ConferenceRoomsPage savebuttonOOOP() {
 		buttonSave.click();
+
 		return new ConferenceRoomsPage(driver);
 	}
 	
@@ -198,13 +190,11 @@ public class OutOfOrderPlanningPage extends ConferenceRoomCommonPage {
 	
 		clickcalendatTo();
 		clickbuttonToDayTo();
-		
-		enableDisableBtn();
 
 		setdownhoursFrom(1);		
-		// value accepted is 
 
 		selectTitle(tipe);
-		return savebuttonOOOP();
+		savebuttonOOOP();
+		return new ConferenceRoomsPage(driver);
 	}
 }
