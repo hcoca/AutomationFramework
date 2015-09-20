@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite for Acceptance test cases" duration-ms="18809" started-at="2015-09-20T20:37:02Z" finished-at="2015-09-20T20:37:21Z">
+    <groups>
+    </groups>
+    <test name="Acceptance Test cases" duration-ms="18809" started-at="2015-09-20T20:37:02Z" finished-at="2015-09-20T20:37:21Z">
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyEmailroomIsCorrectly">
+        <test-method status="PASS" signature="setup()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyEmailroomIsCorrectly@4cc0edeb]" name="setup" is-config="true" duration-ms="1130" started-at="2015-09-20T16:37:02Z" finished-at="2015-09-20T16:37:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testEmail()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyEmailroomIsCorrectly@4cc0edeb]" name="testEmail" duration-ms="17666" started-at="2015-09-20T16:37:03Z" finished-at="2015-09-20T16:37:21Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testEmail -->
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyEmailroomIsCorrectly -->
+    </test> <!-- Acceptance Test cases -->
+  </suite> <!-- Suite for Acceptance test cases -->
+</testng-results>
