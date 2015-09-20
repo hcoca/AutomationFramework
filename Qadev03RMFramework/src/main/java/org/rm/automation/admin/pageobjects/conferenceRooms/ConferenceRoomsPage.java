@@ -1,10 +1,12 @@
 package org.rm.automation.admin.pageobjects.conferenceRooms;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,6 +14,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rm.automation.admin.locators.conferenceRooms.ConferenceRoomsLocators;
 import org.rm.automation.admin.pageobjects.HomePage;
+import org.rm.automation.admin.pageobjects.LoginPage;
+import org.rm.automation.admin.pageobjects.locations.IssuesPage;
 import org.rm.automation.utils.Waiters;
 
 public class ConferenceRoomsPage extends HomePage{
@@ -141,19 +145,6 @@ public class ConferenceRoomsPage extends HomePage{
 		
 		return new ConferenceRoomsPage(driver);
 	}
-	
-	/*
-	 * It should receive the conference room name. -----lufer: message if this not has any function should be delete
-	 */
-	public RoomInfoPage doubleClickConferenceRoom(){
-		Waiters.WaitByVisibilityOfWebElement(conferenceRoom, driver);
-//		(new WebDriverWait(driver, 20))
-//			.until(ExpectedConditions.visibilityOf(conferenceRoom));
-		Actions builder = new Actions(driver);
-		builder.doubleClick(conferenceRoom).perform();
-		
-		return new RoomInfoPage(driver);
-	}
 
 	public RoomInfoPage doubleClickConferenceRoom(String roomName){
 		RoomInfoPage res = null; 
@@ -181,7 +172,7 @@ public class ConferenceRoomsPage extends HomePage{
 		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
 //		roomsContainer = new WebDriverWait(driver, 20)
 //			.until(ExpectedConditions.visibilityOf(roomsContainer));
-		List<WebElement> list = roomsContainer.findElements(By.xpath(".//div[@ng-style='rowStyle(row)']"));// The span that contains the conference rooms.
+		List<WebElement> list = roomsContainer.findElements(By.xpath(".//div[@ng-style='rowStyle(row)']"));
 		for(WebElement webElement : list){
 			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
 			WebElement roomLabel = webElement.findElement(By.xpath(".//span[@class='ng-binding']"));
@@ -200,12 +191,54 @@ public class ConferenceRoomsPage extends HomePage{
 		boolean res = false; 
 		
 		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
-		List<WebElement> list = roomsContainer.findElements(By.xpath("//span[@class='ng-binding']"));// The span that contains the conference room.
+		List<WebElement> list = roomsContainer.findElements(By.xpath("//span[@class='ng-binding']"));
 		for(WebElement webElement : list){
 			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
 			if(webElement.getText().equals(roomName)){
 				res = true;
+				break;
 			}
+		}
+		
+		return res;
+	}
+	
+	public boolean isEnabledRoom(String roomName){
+		boolean res = false;
+		
+		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
+		List<WebElement> list = roomsContainer.findElements(By.xpath("//span[@ng-show='row.entity.enabled']"));
+		for(WebElement webElement : list){
+			if(webElement.getText().equals(roomName)){
+				res = true;
+				break;
+			}
+		}
+		
+		return res;
+	}
+	
+	public boolean isCodeUpdated(String updatedCode, String roomName){
+		boolean res = false;
+		
+		IssuesPage issuesPage = this.SelectIssuesOption();
+		ConferenceRoomsPage conferenceRoom = issuesPage.SelectRoomsOption();
+		RoomInfoPage roomInfo = conferenceRoom.doubleClickConferenceRoom(roomName);
+		if(roomInfo.getCode().equals(updatedCode)){
+			res = true;
+		}
+		
+		return res;
+	}
+	
+	public boolean isCapacityUpdated(String updatedCapacity, String roomName){
+		boolean res = false;
+		
+		IssuesPage issuesPage = this.SelectIssuesOption();
+		ConferenceRoomsPage conferenceRoom = issuesPage.SelectRoomsOption();
+		RoomInfoPage roomInfo = conferenceRoom.doubleClickConferenceRoom(roomName);
+		if(roomInfo.getCapacity().equals(updatedCapacity)){
+			res = true;
 		}
 		
 		return res;

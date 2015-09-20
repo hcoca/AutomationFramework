@@ -39,8 +39,10 @@ public class VerifyRoomStateEnabled extends TestBaseSetup{
 	private String roomEnabled;
 	private String roomName;
 	
-	private String expectedResult = "true";
-	private String actualResult;
+//	private String expectedResult = "true";
+//	private String actualResult;
+	private boolean actualJSONResult;
+	private boolean actualResult;
 	
  	@BeforeTest
  	public void setup() throws UnsupportedOperationException, IOException{
@@ -62,9 +64,14 @@ public class VerifyRoomStateEnabled extends TestBaseSetup{
 		roomInfo = roomInfo.clickPowerOffBtn();
 		conferenceRoom = roomInfo.clickSaveBtn();
 		
-		actualResult = ConferenceRoomsRequests.getRoom(roomId).get("enabled").toString();
+//		actualResult = ConferenceRoomsRequests.getRoom(roomId).get("enabled").toString();
+//		
+//		AssertJUnit.assertEquals(expectedResult, actualResult);
+		actualJSONResult = (boolean)ConferenceRoomsRequests.getRoom(roomId).get("enabled");
+		AssertJUnit.assertTrue(actualJSONResult);
 		
-		AssertJUnit.assertEquals(expectedResult, actualResult);
+		actualResult = conferenceRoom.isEnabledRoom(roomName);
+		AssertJUnit.assertTrue(actualResult);
 	}
 	
 	@AfterTest

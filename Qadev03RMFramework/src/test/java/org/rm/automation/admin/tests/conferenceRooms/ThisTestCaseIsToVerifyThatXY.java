@@ -26,134 +26,113 @@ import org.rm.automation.utils.api.ResourcesRequests;
 
 public class ThisTestCaseIsToVerifyThatXY {
 	
-	public static void testMainLUFER(String[] ar){
-		/*ArrayList<JSONObject> eg;
-		try {
-			eg = ConferenceRoomsRequests.getRooms();
-			for(JSONObject json : eg){
-				if(json.get("customDisplayName").toString().equals("room67")){
-					System.out.println(json);
-				}
-			}
-		} catch (UnsupportedOperationException | IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}*/
-		
-		LoginPage login;
-		HomePage homePage;
-		ConferenceRoomsPage conferenceRoom;
-		RoomInfoPage roomInfo;
-		
-		WebDriver driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://172.20.208.142:4040/admin");
-		login = new LoginPage(driver);
-		homePage = login.SignIn("roompro\\room", "Control123!");
-		conferenceRoom = homePage.SelectRoomsOption();
-		
-		roomInfo = conferenceRoom.doubleClickConferenceRoom("b21");
-		OutOfOrderPlanningPage ooop = roomInfo.clickOutOfOrderPlanningBtn();
-		
-
-		ooop.clickcalendarfrom();
-		ooop.clickbuttonToDayfrom();
-		
-		ooop.clickcalendatTo();
-		ooop.clickbuttonToDayTo();
-		
-		ooop.enableDisableBtn();
-		
-		ooop.setUPhorafrom(5);
-		ooop.setUpminutesFrom(15);
-		ooop.setUPhoraTo(5);
-		ooop.setUpminutesTo(5);
-		
-		ooop.setdownhoursFrom(6);
-		ooop.setDownMinuteFrom(5);
-		ooop.setdownhoursTo(5);
-		ooop.setDownMinuteTo(0);
-		
-		// value accepted is 
-		/*
-		 * Temporarily Out of Order (Order , Temporarily)
-		 * Closed for maintenance (maintenance)
-		 * Closed for reparations {reparations}
-		 * Reserved for a special event (Reserved , special)
-		 * if the name in invalid this select by default first option
-		*/
-		ooop.selectTitle("hola mundooooooooooooo");
-		
-		ooop.savebuttonOOOP();
-		
-	}
+//	public static void testMainLUFER(String[] ar){
+//		/*ArrayList<JSONObject> eg;
+//		try {
+//			eg = ConferenceRoomsRequests.getRooms();
+//			for(JSONObject json : eg){
+//				if(json.get("customDisplayName").toString().equals("room67")){
+//					System.out.println(json);
+//				}
+//			}
+//		} catch (UnsupportedOperationException | IOException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}*/
+//		
+//		LoginPage login;
+//		HomePage homePage;
+//		ConferenceRoomsPage conferenceRoom;
+//		RoomInfoPage roomInfo;
+//		
+//		WebDriver driver = new FirefoxDriver();
+//		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//		driver.get("http://172.20.208.142:4040/admin");
+//		login = new LoginPage(driver);
+//		homePage = login.SignIn("roompro\\room", "Control123!");
+//		conferenceRoom = homePage.SelectRoomsOption();
+//		
+//		roomInfo = conferenceRoom.doubleClickConferenceRoom("b21");
+//		OutOfOrderPlanningPage ooop = roomInfo.clickOutOfOrderPlanningBtn();
+//		
+//
+//		ooop.clickcalendarfrom();
+//		ooop.clickbuttonToDayfrom();
+//		
+//		ooop.clickcalendatTo();
+//		ooop.clickbuttonToDayTo();
+//		
+//		ooop.enableDisableBtn();
+//		
+//		ooop.setUPhorafrom(5);
+//		ooop.setUpminutesFrom(15);
+//		ooop.setUPhoraTo(5);
+//		ooop.setUpminutesTo(5);
+//		
+//		ooop.setdownhoursFrom(6);
+//		ooop.setDownMinuteFrom(5);
+//		ooop.setdownhoursTo(5);
+//		ooop.setDownMinuteTo(0);
+//		
+//		// value accepted is 
+//		/*
+//		 * Temporarily Out of Order (Order , Temporarily)
+//		 * Closed for maintenance (maintenance)
+//		 * Closed for reparations {reparations}
+//		 * Reserved for a special event (Reserved , special)
+//		 * if the name in invalid this select by default first option
+//		*/
+//		ooop.selectTitle("hola mundooooooooooooo");
+//		
+//		ooop.savebuttonOOOP();
+//		
+//	}
 	
 	
-	
-	
-	/*public static void main(String[] ar){
+	public static void main(String[] ar){
 		LoginPage login;
 		HomePage homePage;
 		ConferenceRoomsPage conferenceRoom;
 		RoomInfoPage roomInfo;
 		ResourceAssociationPage resourceAssociationPage;
 		
-		String common = StringGenerator.getString();
-		String resourceName = common;
-		String resourceCustomName = common;
-		String resourceDescription = StringGenerator.getString();
-		String resourceIcon = "fa fa-gift";
-		
-//		{"__v":0,"name":"fibs60in2v0l8316e7dnj1d6s8","description":"4tgnbr5fe0flme17bl1d4lv7ua","customName":"109jgnn350o3u1csgic7r7odrp","from":"","_id":"55fd3451b35d06d0223c356d","fontIcon":"fa fa-gift"}
-		ResourcesRequests.postResource(resourceName, resourceCustomName, resourceIcon, resourceDescription);
-//		ArrayList<JSONObject> list = ResourcesRequests.getResources();
-//		for(JSONObject json : list){
-//			System.out.println(json);
-//		}
-//		System.out.println("id: " + ResourcesRequests.getResourceId("fibs60in2v0l8316e7dnj1d6s8"));
-		
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://localhost:4040/admin");
 		login = new LoginPage(driver);
 		homePage = login.SignIn("571Network\\Administrator", "Pilot571david77");
-		conferenceRoom = homePage.SelectRoomsOption();
+		conferenceRoom = homePage.SelectRoomsOption();//
 		roomInfo = conferenceRoom.doubleClickConferenceRoom("room571");
-		resourceAssociationPage = roomInfo.clickResourceAssociationBtn();
-		resourceAssociationPage = resourceAssociationPage.associateResource(resourceName);
-		conferenceRoom = resourceAssociationPage.clickSaveButton();
-		conferenceRoom = conferenceRoom.clickOnResource(resourceName);
-		System.out.println("RES: " + conferenceRoom.isAssociatedToResource(resourceName, "room571"));
-//		conferenceRoom = resourceAssociationPage.clickSaveButton();
-		
-//		WebElement the571 = conferenceRoom.getConferenceRoom("room571");
-//		System.out.println("EG: " + the571.getText() + " " + the571.getTagName() + " " + the571.getAttribute("ng-style") + " " + the571.getAttribute("ng-style"));
-//		WebElement the67 = conferenceRoom.getConferenceRoom("room67");
-//		System.out.println("EG: " + the67.getText() + " " + the67.getTagName() + " " + the67.getAttribute("ng-style") + " " + the67.getAttribute("ng-style"));
+		roomInfo = roomInfo.setCode("007");
+		conferenceRoom = roomInfo.clickSaveBtn();
+		boolean res = conferenceRoom.isCodeUpdated("007", "room571");
+		System.out.println("The result is: " + res);
+}
+	
+//	public static void main(String[] ar){
+//		LoginPage login;
+//		HomePage homePage;
+//		ConferenceRoomsPage conferenceRoom;
+//		RoomInfoPage roomInfo;
+//		ResourceAssociationPage resourceAssociationPage;
 //		
-//		boolean res0 = conferenceRoom.isAssociatedToResource("Telescreen", "room571");
-//		System.out.println("The res: " + res0);
-//		boolean res1 = conferenceRoom.isAssociatedToResource("Heart", "room571");
-//		System.out.println("The res: " + res1);
-//		boolean res2 = conferenceRoom.isAssociatedToResource("Telescreen", "room67");
-//		System.out.println("The res: " + res2);
-//		boolean res3 = conferenceRoom.isAssociatedToResource("Heart", "room67");
-//		System.out.println("The res: " + res3);
-//		resourceAssociationPage = roomInfo.clickResourceAssociationBtn();
-//		
-//		resourceAssociationPage.associateResource("Film");
-//		resourceAssociationPage.clickSaveButton();
-//		conferenceRoom.clickOnResource("Film");
-//		
-//		boolean res = conferenceRoom.isAssociatedToResource("Film", "room571");
-//		System.out.println("IS ASSOCIATED: " + res);
-//		try {
-//			System.out.println(ConferenceRoomsRequests.getRooms().get(0));
-//		} catch (UnsupportedOperationException | IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-}*/
+//		WebDriver driver = new FirefoxDriver();
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		driver.get("http://localhost:4040/admin");
+//		login = new LoginPage(driver);
+//		homePage = login.SignIn("571Network\\Administrator", "Pilot571david77");
+//		conferenceRoom = homePage.SelectRoomsOption();// ng-hide="row.entity.enabled"
+//		System.out.println("room571 is: " + conferenceRoom.isEnabledRoom("room571"));
+//		System.out.println("room67 is: " + conferenceRoom.isEnabledRoom("room67"));
+////		List<WebElement> list = conferenceRoom.roomsContainer.findElements(By.xpath("//span[@ng-show='row.entity.enabled']"));
+////		for(WebElement we : list){
+////			if(we.getText().equals("room67")){
+////				System.out.println(we.getText() + " is " + true);
+////			}else{
+////				System.out.println(we.getText() + " is " + false);
+////			}
+////		}
+//}
 	
 //	public static void main(String[] ar) throws UnsupportedOperationException, IOException{
 //		String roomId = ConferenceRoomsRequests.getRooms().get(0).get("_id").toString();
