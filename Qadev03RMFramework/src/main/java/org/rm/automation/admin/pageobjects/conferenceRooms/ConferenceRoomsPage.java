@@ -141,19 +141,6 @@ public class ConferenceRoomsPage extends HomePage{
 		
 		return new ConferenceRoomsPage(driver);
 	}
-	
-	/*
-	 * It should receive the conference room name. -----lufer: message if this not has any function should be delete
-	 */
-	public RoomInfoPage doubleClickConferenceRoom(){
-		Waiters.WaitByVisibilityOfWebElement(conferenceRoom, driver);
-//		(new WebDriverWait(driver, 20))
-//			.until(ExpectedConditions.visibilityOf(conferenceRoom));
-		Actions builder = new Actions(driver);
-		builder.doubleClick(conferenceRoom).perform();
-		
-		return new RoomInfoPage(driver);
-	}
 
 	public RoomInfoPage doubleClickConferenceRoom(String roomName){
 		RoomInfoPage res = null; 
@@ -181,7 +168,7 @@ public class ConferenceRoomsPage extends HomePage{
 		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
 //		roomsContainer = new WebDriverWait(driver, 20)
 //			.until(ExpectedConditions.visibilityOf(roomsContainer));
-		List<WebElement> list = roomsContainer.findElements(By.xpath(".//div[@ng-style='rowStyle(row)']"));// The span that contains the conference rooms.
+		List<WebElement> list = roomsContainer.findElements(By.xpath(".//div[@ng-style='rowStyle(row)']"));
 		for(WebElement webElement : list){
 			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
 			WebElement roomLabel = webElement.findElement(By.xpath(".//span[@class='ng-binding']"));
@@ -200,11 +187,27 @@ public class ConferenceRoomsPage extends HomePage{
 		boolean res = false; 
 		
 		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
-		List<WebElement> list = roomsContainer.findElements(By.xpath("//span[@class='ng-binding']"));// The span that contains the conference room.
+		List<WebElement> list = roomsContainer.findElements(By.xpath("//span[@class='ng-binding']"));
 		for(WebElement webElement : list){
 			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
 			if(webElement.getText().equals(roomName)){
 				res = true;
+				break;
+			}
+		}
+		
+		return res;
+	}
+	
+	public boolean isEnabledRoom(String roomName){
+		boolean res = false;
+		
+		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
+		List<WebElement> list = roomsContainer.findElements(By.xpath("//span[@ng-show='row.entity.enabled']"));
+		for(WebElement webElement : list){
+			if(webElement.getText().equals(roomName)){
+				res = true;
+				break;
 			}
 		}
 		
