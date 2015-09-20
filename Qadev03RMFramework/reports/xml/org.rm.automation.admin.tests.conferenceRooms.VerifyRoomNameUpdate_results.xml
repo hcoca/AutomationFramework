@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Acceptance Test cases"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="12.562">
+  <properties />
+  
+  
+            <testcase name="verifyRoomNameUpdate" time="12.562" classname="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate" />
+      
+</testsuite>

@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases">
+              <span class="suite-name border-failed">Suite for Acceptance test cases</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite_for_Acceptance_test_cases">
+                    <span>C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite_for_Acceptance_test_cases">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Suite_for_Acceptance_test_cases">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Suite_for_Acceptance_test_cases">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite_for_Acceptance_test_cases">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite_for_Acceptance_test_cases">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite_for_Acceptance_test_cases">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">24 methods, 2 failed,   22 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite_for_Acceptance_test_cases" class="hide-methods failed suite-Suite_for_Acceptance_test_cases"> (hide)</a> <!-- hide-methods failed suite-Suite_for_Acceptance_test_cases -->
+                      <a href="#" panel-name="suite-Suite_for_Acceptance_test_cases" class="show-methods failed suite-Suite_for_Acceptance_test_cases"> (show)</a> <!-- show-methods failed suite-Suite_for_Acceptance_test_cases -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite_for_Acceptance_test_cases">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.emailServices.RemoveServer" hash-for-method="TestRemoveServer">TestRemoveServer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.locations.createAssociatedLocation" hash-for-method="testCreateAssociatedLocation">testCreateAssociatedLocation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite_for_Acceptance_test_cases -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite_for_Acceptance_test_cases" class="hide-methods passed suite-Suite_for_Acceptance_test_cases"> (hide)</a> <!-- hide-methods passed suite-Suite_for_Acceptance_test_cases -->
+                      <a href="#" panel-name="suite-Suite_for_Acceptance_test_cases" class="show-methods passed suite-Suite_for_Acceptance_test_cases"> (show)</a> <!-- show-methods passed suite-Suite_for_Acceptance_test_cases -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite_for_Acceptance_test_cases">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.emailServices.AddServer" hash-for-method="TestAddServer">TestAddServer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.impersonation.DisableImpersonation" hash-for-method="disableImpersonation">disableImpersonation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.impersonation.EnableImpersonation" hash-for-method="enableImpersonation">enableImpersonation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.login.DisplayHomeConsole" hash-for-method="homeconsoleDisplay">homeconsoleDisplay</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.login.DisplayLogon" hash-for-method="logonIsDisplayed">logonIsDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.login.DisplayMainMenu" hash-for-method="mainMenuDisplay">mainMenuDisplay</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.locations.createBasicLocation" hash-for-method="testCreateBasicLocation">testCreateBasicLocation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.resources.CreateResource" hash-for-method="testCreateResource">testCreateResource</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.resources.CreateResourceAllFields" hash-for-method="testCreateResourceAllFields">testCreateResourceAllFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.resources.DeleteResource" hash-for-method="testDeleteResource">testDeleteResource</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.resources.SearchResource" hash-for-method="testSearchResource">testSearchResource</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.resources.UpdateDescription" hash-for-method="testUpdateDescription">testUpdateDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.resources.UpdateDisplayName" hash-for-method="testUpdateDisplayName">testUpdateDisplayName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.resources.UpdateIcon" hash-for-method="testUpdateIcon">testUpdateIcon</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.resources.UpdateName" hash-for-method="testUpdateName">testUpdateName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom" hash-for-method="verifyResourceAssociatedToRoom">verifyResourceAssociatedToRoom</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate" hash-for-method="verifyRoomCapacityUpdate">verifyRoomCapacityUpdate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate" hash-for-method="verifyRoomCodeUpdate">verifyRoomCodeUpdate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName" hash-for-method="verifyRoomName">verifyRoomName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate" hash-for-method="verifyRoomNameUpdate">verifyRoomNameUpdate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled" hash-for-method="verifyRoomStateDisabled">verifyRoomStateDisabled</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Acceptance_test_cases" title="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled" hash-for-method="verifyRoomStateEnabled">verifyRoomStateEnabled</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite_for_Acceptance_test_cases -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite_for_Acceptance_test_cases" class="panel Suite_for_Acceptance_test_cases">
+          <div class="suite-Suite_for_Acceptance_test_cases-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.locations.createAssociatedLocation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateAssociatedLocation">
+                  </a> <!-- testCreateAssociatedLocation -->
+                  <span class="method-name">testCreateAssociatedLocation</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for presence of element located by: By.xpath: //input[@ng-model=&apos;searchDisplayName&apos;]
+Build info: version: &apos;2.47.1&apos;, revision: &apos;unknown&apos;, time: &apos;2015-07-30 11:02:44&apos;
+System info: host: &apos;LUFER-PC&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_51&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=40.0.3, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 85e0ae63-c586-46a2-b3e3-ab21be807c52
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at org.rm.automation.utils.Waiters.WaitByXPath(Waiters.java:20)
+	at org.rm.automation.admin.pageobjects.locations.FormAssociateRoomPage.searchConferenceRoom(FormAssociateRoomPage.java:24)
+	at org.rm.automation.admin.pageobjects.locations.FormAssociateRoomPage.associateConferenceRoom(FormAssociateRoomPage.java:48)
+	at org.rm.automation.admin.tests.locations.createAssociatedLocation.testCreateAssociatedLocation(createAssociatedLocation.java:46)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@ng-model=&apos;searchDisplayName&apos;]&quot;}
+Command duration or timeout: 10.11 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.47.1&apos;, revision: &apos;unknown&apos;, time: &apos;2015-07-30 11:02:44&apos;
+System info: host: &apos;LUFER-PC&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_51&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=40.0.3, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 85e0ae63-c586-46a2-b3e3-ab21be807c52
+*** Element info: {Using=xpath, value=//input[@ng-model=&apos;searchDisplayName&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:358)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:861)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 31 more
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@ng-model=&apos;searchDisplayName&apos;]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.47.1&apos;, revision: &apos;unknown&apos;, time: &apos;2015-07-30 11:02:44&apos;
+System info: host: &apos;LUFER-PC&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_51&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/LUFER/AppData/Local/Temp/anonymous7634747317455025527webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10667)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/LUFER/AppData/Local/Temp/anonymous7634747317455025527webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-failed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.emailServices.RemoveServer</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestRemoveServer">
+                  </a> <!-- TestRemoveServer -->
+                  <span class="method-name">TestRemoveServer</span>
+                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at org.rm.automation.utils.api.ServicesRequests.getServiceId(ServicesRequests.java:106)
+	at org.rm.automation.admin.tests.emailServices.RemoveServer.TestRemoveServer(RemoveServer.java:46)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-failed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.CreateResourceAllFields</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateResourceAllFields">
+                  </a> <!-- testCreateResourceAllFields -->
+                  <span class="method-name">testCreateResourceAllFields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRoomStateDisabled">
+                  </a> <!-- verifyRoomStateDisabled -->
+                  <span class="method-name">verifyRoomStateDisabled</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.DeleteResource</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteResource">
+                  </a> <!-- testDeleteResource -->
+                  <span class="method-name">testDeleteResource</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.UpdateDisplayName</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdateDisplayName">
+                  </a> <!-- testUpdateDisplayName -->
+                  <span class="method-name">testUpdateDisplayName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.UpdateIcon</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdateIcon">
+                  </a> <!-- testUpdateIcon -->
+                  <span class="method-name">testUpdateIcon</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.locations.createBasicLocation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateBasicLocation">
+                  </a> <!-- testCreateBasicLocation -->
+                  <span class="method-name">testCreateBasicLocation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.impersonation.DisableImpersonation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="disableImpersonation">
+                  </a> <!-- disableImpersonation -->
+                  <span class="method-name">disableImpersonation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.login.DisplayMainMenu</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="mainMenuDisplay">
+                  </a> <!-- mainMenuDisplay -->
+                  <span class="method-name">mainMenuDisplay</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRoomCapacityUpdate">
+                  </a> <!-- verifyRoomCapacityUpdate -->
+                  <span class="method-name">verifyRoomCapacityUpdate</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyResourceAssociatedToRoom">
+                  </a> <!-- verifyResourceAssociatedToRoom -->
+                  <span class="method-name">verifyResourceAssociatedToRoom</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.SearchResource</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchResource">
+                  </a> <!-- testSearchResource -->
+                  <span class="method-name">testSearchResource</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.login.DisplayHomeConsole</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="homeconsoleDisplay">
+                  </a> <!-- homeconsoleDisplay -->
+                  <span class="method-name">homeconsoleDisplay</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRoomName">
+                  </a> <!-- verifyRoomName -->
+                  <span class="method-name">verifyRoomName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRoomNameUpdate">
+                  </a> <!-- verifyRoomNameUpdate -->
+                  <span class="method-name">verifyRoomNameUpdate</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.emailServices.AddServer</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestAddServer">
+                  </a> <!-- TestAddServer -->
+                  <span class="method-name">TestAddServer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.UpdateName</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdateName">
+                  </a> <!-- testUpdateName -->
+                  <span class="method-name">testUpdateName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.CreateResource</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateResource">
+                  </a> <!-- testCreateResource -->
+                  <span class="method-name">testCreateResource</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRoomCodeUpdate">
+                  </a> <!-- verifyRoomCodeUpdate -->
+                  <span class="method-name">verifyRoomCodeUpdate</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRoomStateEnabled">
+                  </a> <!-- verifyRoomStateEnabled -->
+                  <span class="method-name">verifyRoomStateEnabled</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.UpdateDescription</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdateDescription">
+                  </a> <!-- testUpdateDescription -->
+                  <span class="method-name">testUpdateDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.login.DisplayLogon</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="logonIsDisplayed">
+                  </a> <!-- logonIsDisplayed -->
+                  <span class="method-name">logonIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+          <div class="suite-Suite_for_Acceptance_test_cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.impersonation.EnableImpersonation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="enableImpersonation">
+                  </a> <!-- enableImpersonation -->
+                  <span class="method-name">enableImpersonation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Acceptance_test_cases-class-passed -->
+        </div> <!-- panel Suite_for_Acceptance_test_cases -->
+        <div panel-name="test-xml-Suite_for_Acceptance_test_cases" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;Suite for Acceptance test cases&quot;&gt;
+  &lt;test name=&quot;Acceptance Test cases&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.login.DisplayLogon&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.login.DisplayHomeConsole&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.login.DisplayMainMenu&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.impersonation.EnableImpersonation&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.impersonation.DisableImpersonation&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.locations.createBasicLocation&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.locations.createAssociatedLocation&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.CreateResource&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.CreateResourceAllFields&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.UpdateName&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.UpdateDisplayName&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.UpdateIcon&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.UpdateDescription&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.SearchResource&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.DeleteResource&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.emailServices.RemoveServer&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.emailServices.AddServer&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Acceptance Test cases --&gt;
+&lt;/suite&gt; &lt;!-- Suite for Acceptance test cases --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite_for_Acceptance_test_cases" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite for Acceptance test cases</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Acceptance Test cases (24 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite_for_Acceptance_test_cases" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite for Acceptance test cases</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite_for_Acceptance_test_cases" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite for Acceptance test cases</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite_for_Acceptance_test_cases');
+function tableData_Suite_for_Acceptance_test_cases() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(24);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testCreateAssociatedLocation')
+data.setCell(0, 2, 'org.rm.automation.admin.tests.locations.createAssociatedLocation')
+data.setCell(0, 3, 14116);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyRoomNameUpdate')
+data.setCell(1, 2, 'org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate')
+data.setCell(1, 3, 12562);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TestAddServer')
+data.setCell(2, 2, 'org.rm.automation.admin.tests.emailServices.AddServer')
+data.setCell(2, 3, 12554);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TestRemoveServer')
+data.setCell(3, 2, 'org.rm.automation.admin.tests.emailServices.RemoveServer')
+data.setCell(3, 3, 12079);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testCreateResourceAllFields')
+data.setCell(4, 2, 'org.rm.automation.admin.tests.resources.CreateResourceAllFields')
+data.setCell(4, 3, 7626);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyRoomCodeUpdate')
+data.setCell(5, 2, 'org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate')
+data.setCell(5, 3, 6952);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testCreateResource')
+data.setCell(6, 2, 'org.rm.automation.admin.tests.resources.CreateResource')
+data.setCell(6, 3, 6835);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyResourceAssociatedToRoom')
+data.setCell(7, 2, 'org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom')
+data.setCell(7, 3, 6017);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testCreateBasicLocation')
+data.setCell(8, 2, 'org.rm.automation.admin.tests.locations.createBasicLocation')
+data.setCell(8, 3, 5276);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifyRoomStateDisabled')
+data.setCell(9, 2, 'org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled')
+data.setCell(9, 3, 5186);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testDeleteResource')
+data.setCell(10, 2, 'org.rm.automation.admin.tests.resources.DeleteResource')
+data.setCell(10, 3, 4964);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testUpdateDisplayName')
+data.setCell(11, 2, 'org.rm.automation.admin.tests.resources.UpdateDisplayName')
+data.setCell(11, 3, 4924);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testUpdateDescription')
+data.setCell(12, 2, 'org.rm.automation.admin.tests.resources.UpdateDescription')
+data.setCell(12, 3, 4683);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verifyRoomStateEnabled')
+data.setCell(13, 2, 'org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled')
+data.setCell(13, 3, 4651);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testUpdateName')
+data.setCell(14, 2, 'org.rm.automation.admin.tests.resources.UpdateName')
+data.setCell(14, 3, 4507);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verifyRoomCapacityUpdate')
+data.setCell(15, 2, 'org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate')
+data.setCell(15, 3, 4244);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testUpdateIcon')
+data.setCell(16, 2, 'org.rm.automation.admin.tests.resources.UpdateIcon')
+data.setCell(16, 3, 4207);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'logonIsDisplayed')
+data.setCell(17, 2, 'org.rm.automation.admin.tests.login.DisplayLogon')
+data.setCell(17, 3, 3399);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testSearchResource')
+data.setCell(18, 2, 'org.rm.automation.admin.tests.resources.SearchResource')
+data.setCell(18, 3, 3397);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'mainMenuDisplay')
+data.setCell(19, 2, 'org.rm.automation.admin.tests.login.DisplayMainMenu')
+data.setCell(19, 3, 3153);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'verifyRoomName')
+data.setCell(20, 2, 'org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName')
+data.setCell(20, 3, 3052);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'enableImpersonation')
+data.setCell(21, 2, 'org.rm.automation.admin.tests.impersonation.EnableImpersonation')
+data.setCell(21, 3, 2905);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'disableImpersonation')
+data.setCell(22, 2, 'org.rm.automation.admin.tests.impersonation.DisableImpersonation')
+data.setCell(22, 3, 2851);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'homeconsoleDisplay')
+data.setCell(23, 2, 'org.rm.automation.admin.tests.login.DisplayHomeConsole')
+data.setCell(23, 3, 2823);
+window.suiteTableData['Suite_for_Acceptance_test_cases']= { tableData: data, tableDiv: 'times-div-Suite_for_Acceptance_test_cases'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <div id="times-div-Suite_for_Acceptance_test_cases">
+              </div> <!-- times-div-Suite_for_Acceptance_test_cases -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite_for_Acceptance_test_cases" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite for Acceptance test cases</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyRoomStateEnabled</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyRoomNameUpdate</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testCreateResourceAllFields</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">mainMenuDisplay</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testSearchResource</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testUpdateDisplayName</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TestAddServer</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testUpdateDescription</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">logonIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyRoomStateDisabled</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyResourceAssociatedToRoom</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testDeleteResource</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyRoomCapacityUpdate</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">homeconsoleDisplay</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testUpdateName</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">enableImpersonation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testCreateResource</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testUpdateIcon</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyRoomCodeUpdate</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyRoomName</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">disableImpersonation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testCreateBasicLocation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testCreateAssociatedLocation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+                <span class="reporter-method-output"><b>Screenshot: </b><br/><a href="..\screenshots\Acceptance_Test_cases-19_Sep_2015__04_01_20PM.png"><img src="..\screenshots\Acceptance_Test_cases-19_Sep_2015__04_01_20PM.png" alt=""height='400' width='600'/><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TestRemoveServer</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Acceptance Test cases</b><br/></span>
+                <span class="reporter-method-output"><b>Screenshot: </b><br/><a href="..\screenshots\Acceptance_Test_cases-19_Sep_2015__04_02_15PM.png"><img src="..\screenshots\Acceptance_Test_cases-19_Sep_2015__04_02_15PM.png" alt=""height='400' width='600'/><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite_for_Acceptance_test_cases" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite_for_Acceptance_test_cases" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">400 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">420 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">440 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">490 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">530 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">550 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.login.DisplayLogon</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">logonIsDisplayed</span>
+                <span class="method-start">650 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.login.DisplayHomeConsole</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">homeconsoleDisplay</span>
+                <span class="method-start">4052 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.login.DisplayMainMenu</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">mainMenuDisplay</span>
+                <span class="method-start">6876 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyResourceAssociatedToRoom</span>
+                <span class="method-start">10030 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyRoomStateEnabled</span>
+                <span class="method-start">16048 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyRoomStateDisabled</span>
+                <span class="method-start">20700 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyRoomCapacityUpdate</span>
+                <span class="method-start">25887 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyRoomCodeUpdate</span>
+                <span class="method-start">30132 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyRoomName</span>
+                <span class="method-start">37086 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyRoomNameUpdate</span>
+                <span class="method-start">40140 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.impersonation.EnableImpersonation</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setImpersonationOff</span>
+                <span class="method-start">52705 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">enableImpersonation</span>
+                <span class="method-start">53038 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.impersonation.DisableImpersonation</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setImpersonationOn</span>
+                <span class="method-start">55945 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">disableImpersonation</span>
+                <span class="method-start">56242 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.locations.createBasicLocation</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testCreateBasicLocation</span>
+                <span class="method-start">59094 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">64371 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.locations.createAssociatedLocation</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testCreateAssociatedLocation</span>
+                <span class="method-start">64537 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">78858 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.CreateResource</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testCreateResource</span>
+                <span class="method-start">78956 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">85792 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.CreateResourceAllFields</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testCreateResourceAllFields</span>
+                <span class="method-start">85883 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">93510 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.UpdateName</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Preconditions</span>
+                <span class="method-start">93591 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testUpdateName</span>
+                <span class="method-start">93643 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">98150 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.UpdateDisplayName</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Preconditions</span>
+                <span class="method-start">98264 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testUpdateDisplayName</span>
+                <span class="method-start">98338 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">103263 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.UpdateIcon</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Preconditions</span>
+                <span class="method-start">103364 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testUpdateIcon</span>
+                <span class="method-start">103432 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">107640 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.UpdateDescription</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Preconditions</span>
+                <span class="method-start">107797 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testUpdateDescription</span>
+                <span class="method-start">107864 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">112548 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.SearchResource</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Preconditions</span>
+                <span class="method-start">112955 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchResource</span>
+                <span class="method-start">113053 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">116452 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.DeleteResource</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Preconditions</span>
+                <span class="method-start">116575 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testDeleteResource</span>
+                <span class="method-start">116635 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.emailServices.RemoveServer</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TestRemoveServer</span>
+                <span class="method-start">121600 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.emailServices.AddServer</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">133849 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">TestAddServer</span>
+                <span class="method-start">133850 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.emailServices.RemoveServer</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">AfterTest</span>
+                <span class="method-start">146405 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">146504 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">146567 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">146625 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">146713 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">146796 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">146847 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

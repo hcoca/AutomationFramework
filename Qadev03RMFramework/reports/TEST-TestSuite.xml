@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="143.336" tests="24" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="c:\Program Files\Java\jdk1.8.0_51\jre\bin"/>
+    <property name="java.vm.version" value="25.51-b03"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="c:/gitrepository/QADEV03RoomManager/Qadev03RMFramework"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="c:\gitrepository\QADEV03RoomManager\Qadev03RMFramework"/>
+    <property name="java.runtime.version" value="1.8.0_51-b16"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="c:\Program Files\Java\jdk1.8.0_51\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\LUFER\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="c:/Program Files/apache-maven-3.3.3/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="c:\Program Files\Java\jdk1.8.0_51\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Users\LUFER\bin;.;C:\Program Files (x86)\Git\local\bin;C:\Program Files (x86)\Git\mingw\bin;C:\Program Files (x86)\Git\bin;c:\ProgramData\Oracle\Java\javapath;c:\Windows\system32;c:\Windows;c:\Windows\System32\Wbem;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\Broadcom\Broadcom 802.11\Driver;c:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files\Microsoft SQL Server\110\DTS\Binn\;c:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;c:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;c:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;c:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;c:\Program Files\Microsoft SQL Server\120\Tools\Binn\;c:\Program Files\Java\jdk1.8.0_51\bin;c:\Program Files\apache-maven-3.3.3\bin;c:\Program Files (x86)\GitExtensions\;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\LUFER"/>
+    <property name="user.timezone" value="America/La_Paz"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="LUFER"/>
+    <property name="java.class.path" value="c:/Program Files/apache-maven-3.3.3/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="c:\Program Files\Java\jdk1.8.0_51\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_51"/>
+    <property name="java.ext.dirs" value="c:\Program Files\Java\jdk1.8.0_51\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="c:\Program Files\Java\jdk1.8.0_51\jre\lib\resources.jar;c:\Program Files\Java\jdk1.8.0_51\jre\lib\rt.jar;c:\Program Files\Java\jdk1.8.0_51\jre\lib\sunrsasign.jar;c:\Program Files\Java\jdk1.8.0_51\jre\lib\jsse.jar;c:\Program Files\Java\jdk1.8.0_51\jre\lib\jce.jar;c:\Program Files\Java\jdk1.8.0_51\jre\lib\charsets.jar;c:\Program Files\Java\jdk1.8.0_51\jre\lib\jfr.jar;c:\Program Files\Java\jdk1.8.0_51\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp850"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="c:\Program Files\apache-maven-3.3.3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp850"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="logonIsDisplayed" classname="org.rm.automation.admin.tests.login.DisplayLogon" time="3.401"/>
+  <testcase name="homeconsoleDisplay" classname="org.rm.automation.admin.tests.login.DisplayHomeConsole" time="2.83"/>
+  <testcase name="mainMenuDisplay" classname="org.rm.automation.admin.tests.login.DisplayMainMenu" time="3.149"/>
+  <testcase name="verifyResourceAssociatedToRoom" classname="org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom" time="6.029"/>
+  <testcase name="verifyRoomStateEnabled" classname="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled" time="4.636"/>
+  <testcase name="verifyRoomStateDisabled" classname="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled" time="5.187"/>
+  <testcase name="verifyRoomCapacityUpdate" classname="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate" time="4.246"/>
+  <testcase name="verifyRoomCodeUpdate" classname="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate" time="6.949"/>
+  <testcase name="verifyRoomName" classname="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName" time="3.048"/>
+  <testcase name="verifyRoomNameUpdate" classname="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate" time="12.558"/>
+  <testcase name="enableImpersonation" classname="org.rm.automation.admin.tests.impersonation.EnableImpersonation" time="2.906"/>
+  <testcase name="disableImpersonation" classname="org.rm.automation.admin.tests.impersonation.DisableImpersonation" time="2.848"/>
+  <testcase name="testCreateBasicLocation" classname="org.rm.automation.admin.tests.locations.createBasicLocation" time="5.276"/>
+  <testcase name="testCreateAssociatedLocation" classname="org.rm.automation.admin.tests.locations.createAssociatedLocation" time="14.322">
+    <failure message="Timed out after 10 seconds waiting for presence of element located by: By.xpath: //input[@ng-model=&apos;searchDisplayName&apos;]&#10;Build info: version: &apos;2.47.1&apos;, revision: &apos;unknown&apos;, time: &apos;2015-07-30 11:02:44&apos;&#10;System info: host: &apos;LUFER-PC&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_51&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=40.0.3, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 85e0ae63-c586-46a2-b3e3-ab21be807c52" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for presence of element located by: By.xpath: //input[@ng-model='searchDisplayName']
+Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
+System info: host: 'LUFER-PC', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_51'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=40.0.3, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 85e0ae63-c586-46a2-b3e3-ab21be807c52
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:358)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:861)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at org.rm.automation.utils.Waiters.WaitByXPath(Waiters.java:20)
+	at org.rm.automation.admin.pageobjects.locations.FormAssociateRoomPage.searchConferenceRoom(FormAssociateRoomPage.java:24)
+	at org.rm.automation.admin.pageobjects.locations.FormAssociateRoomPage.associateConferenceRoom(FormAssociateRoomPage.java:48)
+	at org.rm.automation.admin.tests.locations.createAssociatedLocation.testCreateAssociatedLocation(createAssociatedLocation.java:46)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//input[@ng-model='searchDisplayName']"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
+System info: host: 'LUFER-PC', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_51'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/LUFER/AppData/Local/Temp/anonymous7634747317455025527webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10667)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/LUFER/AppData/Local/Temp/anonymous7634747317455025527webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+]]></failure>
+    <system-out><![CDATA[After Test - Create Basic Location
+ INFO [main] (LogManager.java:10)- Executing after test method of createBasicLocation, removing location created
+ INFO [main] (LogManager.java:10)- Test : "Acceptance Test cases" STARTED
+Create Location with a room associated
+ INFO [main] (LogManager.java:10)- Executing createAssociatedLocation Test Case
+ INFO [main] (LogManager.java:10)- LoginPage: Entering the credentials
+ INFO [main] (LogManager.java:10)- LoginPage: Entering the username to sign in
+ INFO [main] (LogManager.java:10)- LoginPage: Entering the password to sign in
+ INFO [main] (LogManager.java:10)- LoginPage: Logging in the application
+ INFO [main] (LogManager.java:10)- NavigationBarPage: Selecting Locations option
+ INFO [main] (LogManager.java:10)- LocationsPage: Click on Add button to add a new location
+ INFO [main] (LogManager.java:10)- Test : "Acceptance Test cases" FAILED
+*** Screen shot stored in null ***
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateResource" classname="org.rm.automation.admin.tests.resources.CreateResource" time="6.836"/>
+  <testcase name="testCreateResourceAllFields" classname="org.rm.automation.admin.tests.resources.CreateResourceAllFields" time="7.626"/>
+  <testcase name="testUpdateName" classname="org.rm.automation.admin.tests.resources.UpdateName" time="4.507"/>
+  <testcase name="testUpdateDisplayName" classname="org.rm.automation.admin.tests.resources.UpdateDisplayName" time="4.925"/>
+  <testcase name="testUpdateIcon" classname="org.rm.automation.admin.tests.resources.UpdateIcon" time="4.207"/>
+  <testcase name="testUpdateDescription" classname="org.rm.automation.admin.tests.resources.UpdateDescription" time="4.683"/>
+  <testcase name="testSearchResource" classname="org.rm.automation.admin.tests.resources.SearchResource" time="3.396"/>
+  <testcase name="testDeleteResource" classname="org.rm.automation.admin.tests.resources.DeleteResource" time="4.964"/>
+  <testcase name="TestRemoveServer" classname="org.rm.automation.admin.tests.emailServices.RemoveServer" time="12.265">
+    <failure message="Index: 0, Size: 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at org.rm.automation.utils.api.ServicesRequests.getServiceId(ServicesRequests.java:106)
+	at org.rm.automation.admin.tests.emailServices.RemoveServer.TestRemoveServer(RemoveServer.java:46)
+</failure>
+    <system-out><![CDATA[ INFO [main] (LogManager.java:10)- Test : "Acceptance Test cases" STARTED
+ INFO [main] (LogManager.java:10)- SERVICEREQUESTS:return service ID 
+ WARN [main] (LogManager.java:13)- SERVICEREQUESTS: the service no is added because there is a service added
+ INFO [main] (LogManager.java:10)- RemoveServer Test: begin remove testcase
+ INFO [main] (LogManager.java:10)- LoginPage: Entering the credentials
+ INFO [main] (LogManager.java:10)- LoginPage: Entering the username to sign in
+ INFO [main] (LogManager.java:10)- LoginPage: Entering the password to sign in
+ INFO [main] (LogManager.java:10)- LoginPage: Logging in the application
+ INFO [main] (LogManager.java:10)- NavigationBarPage: Selecting Email Servers option
+ INFO [main] (LogManager.java:10)- EmailServerPage: click button remove Emailserver
+ INFO [main] (LogManager.java:10)- RemoveServerPage: press yes button Confirm delete EmailServer
+ INFO [main] (LogManager.java:10)- Test : "Acceptance Test cases" FAILED
+*** Screen shot stored in ..\screenshots\Acceptance_Test_cases-19_Sep_2015__04_01_20PM.png ***
+]]></system-out>
+  </testcase>
+  <testcase name="TestAddServer" classname="org.rm.automation.admin.tests.emailServices.AddServer" time="12.542"/>
+</testsuite>

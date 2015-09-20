@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite for Acceptance test cases]">
+  <test name="Acceptance Test cases(failed)">
+    <classes>
+      <class name="org.rm.automation.admin.tests.resources.CreateResourceAllFields">
+        <methods>
+          <include name="Postconditions"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.resources.CreateResourceAllFields -->
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled -->
+      <class name="org.rm.automation.admin.tests.resources.DeleteResource">
+        <methods>
+          <include name="Preconditions"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.resources.DeleteResource -->
+      <class name="org.rm.automation.admin.tests.resources.UpdateDisplayName">
+        <methods>
+          <include name="Postconditions"/>
+          <include name="Preconditions"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.resources.UpdateDisplayName -->
+      <class name="org.rm.automation.admin.tests.resources.UpdateIcon">
+        <methods>
+          <include name="Preconditions"/>
+          <include name="Postconditions"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.resources.UpdateIcon -->
+      <class name="org.rm.automation.admin.tests.locations.createBasicLocation">
+        <methods>
+          <include name="Postconditions"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.locations.createBasicLocation -->
+      <class name="org.rm.automation.admin.tests.impersonation.DisableImpersonation">
+        <methods>
+          <include name="setImpersonationOn"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.impersonation.DisableImpersonation -->
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate -->
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom -->
+      <class name="org.rm.automation.admin.tests.locations.createAssociatedLocation">
+        <methods>
+          <include name="Postconditions"/>
+          <include name="testCreateAssociatedLocation"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.locations.createAssociatedLocation -->
+      <class name="org.rm.automation.admin.tests.resources.SearchResource">
+        <methods>
+          <include name="Preconditions"/>
+          <include name="Postconditions"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.resources.SearchResource -->
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName -->
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate -->
+      <class name="org.rm.automation.admin.tests.emailServices.AddServer">
+        <methods>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.emailServices.AddServer -->
+      <class name="org.rm.automation.admin.tests.resources.UpdateName">
+        <methods>
+          <include name="Preconditions"/>
+          <include name="Postconditions"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.resources.UpdateName -->
+      <class name="org.rm.automation.admin.tests.resources.CreateResource">
+        <methods>
+          <include name="Postconditions"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.resources.CreateResource -->
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate -->
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled -->
+      <class name="org.rm.automation.admin.tests.emailServices.RemoveServer">
+        <methods>
+          <include name="AfterTest"/>
+          <include name="TestRemoveServer"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.emailServices.RemoveServer -->
+      <class name="org.rm.automation.admin.tests.resources.UpdateDescription">
+        <methods>
+          <include name="Preconditions"/>
+          <include name="Postconditions"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.resources.UpdateDescription -->
+      <class name="org.rm.automation.admin.tests.impersonation.EnableImpersonation">
+        <methods>
+          <include name="setImpersonationOff"/>
+        </methods>
+      </class> <!-- org.rm.automation.admin.tests.impersonation.EnableImpersonation -->
+    </classes>
+  </test> <!-- Acceptance Test cases(failed) -->
+</suite> <!-- Failed suite [Suite for Acceptance test cases] -->

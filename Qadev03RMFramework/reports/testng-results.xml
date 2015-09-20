@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" total="24" passed="22">
+  <reporter-output>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Screenshot: </b><br/><a href="..\screenshots\Acceptance_Test_cases-19_Sep_2015__04_01_20PM.png"><img src="..\screenshots\Acceptance_Test_cases-19_Sep_2015__04_01_20PM.png" alt=""height='400' width='600'/><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Screenshot: </b><br/><a href="..\screenshots\Acceptance_Test_cases-19_Sep_2015__04_02_15PM.png"><img src="..\screenshots\Acceptance_Test_cases-19_Sep_2015__04_02_15PM.png" alt=""height='400' width='600'/><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite for Acceptance test cases" duration-ms="146913" started-at="2015-09-19T20:00:01Z" finished-at="2015-09-19T20:02:28Z">
+    <groups>
+    </groups>
+    <test name="Acceptance Test cases" duration-ms="146913" started-at="2015-09-19T20:00:01Z" finished-at="2015-09-19T20:02:28Z">
+      <class name="org.rm.automation.admin.tests.resources.UpdateDescription">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateDescription@204f30ec]" name="Preconditions" is-config="true" duration-ms="67" started-at="2015-09-19T16:01:49Z" finished-at="2015-09-19T16:01:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testUpdateDescription()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateDescription@204f30ec]" name="testUpdateDescription" duration-ms="4683" started-at="2015-09-19T16:01:49Z" finished-at="2015-09-19T16:01:53Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testUpdateDescription -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateDescription@204f30ec]" name="Postconditions" is-config="true" duration-ms="406" started-at="2015-09-19T16:01:53Z" finished-at="2015-09-19T16:01:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.UpdateDescription -->
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName">
+        <test-method status="PASS" signature="verifyRoomName()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName@42e26948]" name="verifyRoomName" duration-ms="3052" started-at="2015-09-19T16:00:38Z" finished-at="2015-09-19T16:00:41Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyRoomName -->
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName -->
+      <class name="org.rm.automation.admin.tests.resources.UpdateName">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateName@53b32d7]" name="Preconditions" is-config="true" duration-ms="52" started-at="2015-09-19T16:01:34Z" finished-at="2015-09-19T16:01:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testUpdateName()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateName@53b32d7]" name="testUpdateName" duration-ms="4507" started-at="2015-09-19T16:01:34Z" finished-at="2015-09-19T16:01:39Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testUpdateName -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateName@53b32d7]" name="Postconditions" is-config="true" duration-ms="114" started-at="2015-09-19T16:01:39Z" finished-at="2015-09-19T16:01:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.UpdateName -->
+      <class name="org.rm.automation.admin.tests.resources.UpdateDisplayName">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateDisplayName@685cb137]" name="Preconditions" is-config="true" duration-ms="74" started-at="2015-09-19T16:01:39Z" finished-at="2015-09-19T16:01:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testUpdateDisplayName()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateDisplayName@685cb137]" name="testUpdateDisplayName" duration-ms="4924" started-at="2015-09-19T16:01:39Z" finished-at="2015-09-19T16:01:44Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testUpdateDisplayName -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateDisplayName@685cb137]" name="Postconditions" is-config="true" duration-ms="100" started-at="2015-09-19T16:01:44Z" finished-at="2015-09-19T16:01:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.UpdateDisplayName -->
+      <class name="org.rm.automation.admin.tests.login.DisplayHomeConsole">
+        <test-method status="PASS" signature="homeconsoleDisplay()[pri:0, instance:org.rm.automation.admin.tests.login.DisplayHomeConsole@7d9d1a19]" name="homeconsoleDisplay" duration-ms="2823" started-at="2015-09-19T16:00:05Z" finished-at="2015-09-19T16:00:08Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- homeconsoleDisplay -->
+      </class> <!-- org.rm.automation.admin.tests.login.DisplayHomeConsole -->
+      <class name="org.rm.automation.admin.tests.impersonation.EnableImpersonation">
+        <test-method status="PASS" signature="setImpersonationOff()[pri:0, instance:org.rm.automation.admin.tests.impersonation.EnableImpersonation@146ba0ac]" name="setImpersonationOff" is-config="true" duration-ms="332" started-at="2015-09-19T16:00:53Z" finished-at="2015-09-19T16:00:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setImpersonationOff -->
+        <test-method status="PASS" signature="enableImpersonation()[pri:0, instance:org.rm.automation.admin.tests.impersonation.EnableImpersonation@146ba0ac]" name="enableImpersonation" duration-ms="2905" started-at="2015-09-19T16:00:54Z" finished-at="2015-09-19T16:00:57Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- enableImpersonation -->
+      </class> <!-- org.rm.automation.admin.tests.impersonation.EnableImpersonation -->
+      <class name="org.rm.automation.admin.tests.locations.createAssociatedLocation">
+        <test-method status="FAIL" signature="testCreateAssociatedLocation()[pri:0, instance:org.rm.automation.admin.tests.locations.createAssociatedLocation@39c0f4a]" name="testCreateAssociatedLocation" duration-ms="14116" started-at="2015-09-19T16:01:05Z" finished-at="2015-09-19T16:01:19Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Timed out after 10 seconds waiting for presence of element located by: By.xpath: //input[@ng-model='searchDisplayName']
+Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
+System info: host: 'LUFER-PC', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_51'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=40.0.3, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 85e0ae63-c586-46a2-b3e3-ab21be807c52]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for presence of element located by: By.xpath: //input[@ng-model='searchDisplayName']
+Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
+System info: host: 'LUFER-PC', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_51'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=40.0.3, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 85e0ae63-c586-46a2-b3e3-ab21be807c52
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at org.rm.automation.utils.Waiters.WaitByXPath(Waiters.java:20)
+	at org.rm.automation.admin.pageobjects.locations.FormAssociateRoomPage.searchConferenceRoom(FormAssociateRoomPage.java:24)
+	at org.rm.automation.admin.pageobjects.locations.FormAssociateRoomPage.associateConferenceRoom(FormAssociateRoomPage.java:48)
+	at org.rm.automation.admin.tests.locations.createAssociatedLocation.testCreateAssociatedLocation(createAssociatedLocation.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//input[@ng-model='searchDisplayName']"}
+Command duration or timeout: 10.11 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
+System info: host: 'LUFER-PC', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_51'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=40.0.3, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 85e0ae63-c586-46a2-b3e3-ab21be807c52
+*** Element info: {Using=xpath, value=//input[@ng-model='searchDisplayName']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:358)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:861)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 31 more
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//input[@ng-model='searchDisplayName']"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
+System info: host: 'LUFER-PC', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_51'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/LUFER/AppData/Local/Temp/anonymous7634747317455025527webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10667)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/LUFER/AppData/Local/Temp/anonymous7634747317455025527webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+            <line>
+              <![CDATA[<b>Screenshot: </b><br/><a href="..\screenshots\Acceptance_Test_cases-19_Sep_2015__04_01_20PM.png"><img src="..\screenshots\Acceptance_Test_cases-19_Sep_2015__04_01_20PM.png" alt=""height='400' width='600'/><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testCreateAssociatedLocation -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.locations.createAssociatedLocation@39c0f4a]" name="Postconditions" is-config="true" duration-ms="97" started-at="2015-09-19T16:01:20Z" finished-at="2015-09-19T16:01:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.locations.createAssociatedLocation -->
+      <class name="org.rm.automation.admin.tests.login.DisplayMainMenu">
+        <test-method status="PASS" signature="mainMenuDisplay()[pri:0, instance:org.rm.automation.admin.tests.login.DisplayMainMenu@6093dd95]" name="mainMenuDisplay" duration-ms="3153" started-at="2015-09-19T16:00:08Z" finished-at="2015-09-19T16:00:11Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- mainMenuDisplay -->
+      </class> <!-- org.rm.automation.admin.tests.login.DisplayMainMenu -->
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled">
+        <test-method status="PASS" signature="verifyRoomStateDisabled()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled@604ed9f0]" name="verifyRoomStateDisabled" duration-ms="5186" started-at="2015-09-19T16:00:21Z" finished-at="2015-09-19T16:00:27Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyRoomStateDisabled -->
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled -->
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate">
+        <test-method status="PASS" signature="verifyRoomNameUpdate()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate@57baeedf]" name="verifyRoomNameUpdate" duration-ms="12562" started-at="2015-09-19T16:00:41Z" finished-at="2015-09-19T16:00:53Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyRoomNameUpdate -->
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate -->
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled">
+        <test-method status="PASS" signature="verifyRoomStateEnabled()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled@4667ae56]" name="verifyRoomStateEnabled" duration-ms="4651" started-at="2015-09-19T16:00:17Z" finished-at="2015-09-19T16:00:21Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyRoomStateEnabled -->
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled -->
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom@4883b407]" name="setUp" is-config="true" duration-ms="400" started-at="2015-09-19T16:00:01Z" finished-at="2015-09-19T16:00:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate@5622fdf]" name="setup" is-config="true" duration-ms="20" started-at="2015-09-19T16:00:01Z" finished-at="2015-09-19T16:00:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate@1a968a59]" name="setup" is-config="true" duration-ms="20" started-at="2015-09-19T16:00:01Z" finished-at="2015-09-19T16:00:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName@42e26948]" name="setup" is-config="true" duration-ms="50" started-at="2015-09-19T16:00:01Z" finished-at="2015-09-19T16:00:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate@57baeedf]" name="setup" is-config="true" duration-ms="40" started-at="2015-09-19T16:00:01Z" finished-at="2015-09-19T16:00:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled@604ed9f0]" name="setup" is-config="true" duration-ms="20" started-at="2015-09-19T16:00:01Z" finished-at="2015-09-19T16:00:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled@4667ae56]" name="setup" is-config="true" duration-ms="90" started-at="2015-09-19T16:00:01Z" finished-at="2015-09-19T16:00:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyResourceAssociatedToRoom()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom@4883b407]" name="verifyResourceAssociatedToRoom" duration-ms="6017" started-at="2015-09-19T16:00:11Z" finished-at="2015-09-19T16:00:17Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyResourceAssociatedToRoom -->
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom -->
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate">
+        <test-method status="PASS" signature="verifyRoomCodeUpdate()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate@1a968a59]" name="verifyRoomCodeUpdate" duration-ms="6952" started-at="2015-09-19T16:00:31Z" finished-at="2015-09-19T16:00:38Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyRoomCodeUpdate -->
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate -->
+      <class name="org.rm.automation.admin.tests.locations.createBasicLocation">
+        <test-method status="PASS" signature="testCreateBasicLocation()[pri:0, instance:org.rm.automation.admin.tests.locations.createBasicLocation@7cd62f43]" name="testCreateBasicLocation" duration-ms="5276" started-at="2015-09-19T16:01:00Z" finished-at="2015-09-19T16:01:05Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testCreateBasicLocation -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.locations.createBasicLocation@7cd62f43]" name="Postconditions" is-config="true" duration-ms="166" started-at="2015-09-19T16:01:05Z" finished-at="2015-09-19T16:01:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.locations.createBasicLocation -->
+      <class name="org.rm.automation.admin.tests.emailServices.AddServer">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:org.rm.automation.admin.tests.emailServices.AddServer@5442a311]" name="beforeTest" is-config="true" duration-ms="1" started-at="2015-09-19T16:02:15Z" finished-at="2015-09-19T16:02:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="TestAddServer()[pri:0, instance:org.rm.automation.admin.tests.emailServices.AddServer@5442a311]" name="TestAddServer" duration-ms="12554" started-at="2015-09-19T16:02:15Z" finished-at="2015-09-19T16:02:27Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestAddServer -->
+      </class> <!-- org.rm.automation.admin.tests.emailServices.AddServer -->
+      <class name="org.rm.automation.admin.tests.resources.CreateResource">
+        <test-method status="PASS" signature="testCreateResource()[pri:0, instance:org.rm.automation.admin.tests.resources.CreateResource@548e7350]" name="testCreateResource" duration-ms="6835" started-at="2015-09-19T16:01:20Z" finished-at="2015-09-19T16:01:27Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testCreateResource -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.CreateResource@548e7350]" name="Postconditions" is-config="true" duration-ms="91" started-at="2015-09-19T16:01:27Z" finished-at="2015-09-19T16:01:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.CreateResource -->
+      <class name="org.rm.automation.admin.tests.resources.SearchResource">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.SearchResource@1794d431]" name="Preconditions" is-config="true" duration-ms="98" started-at="2015-09-19T16:01:54Z" finished-at="2015-09-19T16:01:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testSearchResource()[pri:0, instance:org.rm.automation.admin.tests.resources.SearchResource@1794d431]" name="testSearchResource" duration-ms="3397" started-at="2015-09-19T16:01:54Z" finished-at="2015-09-19T16:01:57Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSearchResource -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.SearchResource@1794d431]" name="Postconditions" is-config="true" duration-ms="123" started-at="2015-09-19T16:01:57Z" finished-at="2015-09-19T16:01:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.SearchResource -->
+      <class name="org.rm.automation.admin.tests.resources.UpdateIcon">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateIcon@6a41eaa2]" name="Preconditions" is-config="true" duration-ms="68" started-at="2015-09-19T16:01:44Z" finished-at="2015-09-19T16:01:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testUpdateIcon()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateIcon@6a41eaa2]" name="testUpdateIcon" duration-ms="4207" started-at="2015-09-19T16:01:44Z" finished-at="2015-09-19T16:01:48Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testUpdateIcon -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateIcon@6a41eaa2]" name="Postconditions" is-config="true" duration-ms="156" started-at="2015-09-19T16:01:48Z" finished-at="2015-09-19T16:01:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.UpdateIcon -->
+      <class name="org.rm.automation.admin.tests.login.DisplayLogon">
+        <test-method status="PASS" signature="logonIsDisplayed()[pri:0, instance:org.rm.automation.admin.tests.login.DisplayLogon@77cd7a0]" name="logonIsDisplayed" duration-ms="3399" started-at="2015-09-19T16:00:01Z" finished-at="2015-09-19T16:00:05Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logonIsDisplayed -->
+      </class> <!-- org.rm.automation.admin.tests.login.DisplayLogon -->
+      <class name="org.rm.automation.admin.tests.impersonation.DisableImpersonation">
+        <test-method status="PASS" signature="setImpersonationOn()[pri:0, instance:org.rm.automation.admin.tests.impersonation.DisableImpersonation@6d4b1c02]" name="setImpersonationOn" is-config="true" duration-ms="297" started-at="2015-09-19T16:00:57Z" finished-at="2015-09-19T16:00:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setImpersonationOn -->
+        <test-method status="PASS" signature="disableImpersonation()[pri:0, instance:org.rm.automation.admin.tests.impersonation.DisableImpersonation@6d4b1c02]" name="disableImpersonation" duration-ms="2851" started-at="2015-09-19T16:00:57Z" finished-at="2015-09-19T16:01:00Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- disableImpersonation -->
+      </class> <!-- org.rm.automation.admin.tests.impersonation.DisableImpersonation -->
+      <class name="org.rm.automation.admin.tests.resources.CreateResourceAllFields">
+        <test-method status="PASS" signature="testCreateResourceAllFields()[pri:0, instance:org.rm.automation.admin.tests.resources.CreateResourceAllFields@ae45eb6]" name="testCreateResourceAllFields" duration-ms="7626" started-at="2015-09-19T16:01:27Z" finished-at="2015-09-19T16:01:34Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testCreateResourceAllFields -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.CreateResourceAllFields@ae45eb6]" name="Postconditions" is-config="true" duration-ms="81" started-at="2015-09-19T16:01:34Z" finished-at="2015-09-19T16:01:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.CreateResourceAllFields -->
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate">
+        <test-method status="PASS" signature="verifyRoomCapacityUpdate()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate@5622fdf]" name="verifyRoomCapacityUpdate" duration-ms="4244" started-at="2015-09-19T16:00:27Z" finished-at="2015-09-19T16:00:31Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyRoomCapacityUpdate -->
+      </class> <!-- org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate -->
+      <class name="org.rm.automation.admin.tests.emailServices.RemoveServer">
+        <test-method status="FAIL" signature="TestRemoveServer()[pri:0, instance:org.rm.automation.admin.tests.emailServices.RemoveServer@e25b2fe]" name="TestRemoveServer" duration-ms="12079" started-at="2015-09-19T16:02:02Z" finished-at="2015-09-19T16:02:14Z">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index: 0, Size: 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at org.rm.automation.utils.api.ServicesRequests.getServiceId(ServicesRequests.java:106)
+	at org.rm.automation.admin.tests.emailServices.RemoveServer.TestRemoveServer(RemoveServer.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+            <line>
+              <![CDATA[<b>Screenshot: </b><br/><a href="..\screenshots\Acceptance_Test_cases-19_Sep_2015__04_02_15PM.png"><img src="..\screenshots\Acceptance_Test_cases-19_Sep_2015__04_02_15PM.png" alt=""height='400' width='600'/><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestRemoveServer -->
+        <test-method status="PASS" signature="AfterTest()[pri:0, instance:org.rm.automation.admin.tests.emailServices.RemoveServer@e25b2fe]" name="AfterTest" is-config="true" duration-ms="99" started-at="2015-09-19T16:02:27Z" finished-at="2015-09-19T16:02:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom@4883b407]" name="tearDown" is-config="true" duration-ms="63" started-at="2015-09-19T16:02:27Z" finished-at="2015-09-19T16:02:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate@5622fdf]" name="tearDown" is-config="true" duration-ms="58" started-at="2015-09-19T16:02:27Z" finished-at="2015-09-19T16:02:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate@1a968a59]" name="tearDown" is-config="true" duration-ms="88" started-at="2015-09-19T16:02:27Z" finished-at="2015-09-19T16:02:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate@57baeedf]" name="tearDown" is-config="true" duration-ms="83" started-at="2015-09-19T16:02:27Z" finished-at="2015-09-19T16:02:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled@604ed9f0]" name="tearDown" is-config="true" duration-ms="51" started-at="2015-09-19T16:02:28Z" finished-at="2015-09-19T16:02:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled@4667ae56]" name="tearDown" is-config="true" duration-ms="56" started-at="2015-09-19T16:02:28Z" finished-at="2015-09-19T16:02:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.rm.automation.admin.tests.emailServices.RemoveServer -->
+      <class name="org.rm.automation.admin.tests.resources.DeleteResource">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.DeleteResource@6a4f787b]" name="Preconditions" is-config="true" duration-ms="60" started-at="2015-09-19T16:01:57Z" finished-at="2015-09-19T16:01:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testDeleteResource()[pri:0, instance:org.rm.automation.admin.tests.resources.DeleteResource@6a4f787b]" name="testDeleteResource" duration-ms="4964" started-at="2015-09-19T16:01:57Z" finished-at="2015-09-19T16:02:02Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Acceptance Test cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testDeleteResource -->
+      </class> <!-- org.rm.automation.admin.tests.resources.DeleteResource -->
+    </test> <!-- Acceptance Test cases -->
+  </suite> <!-- Suite for Acceptance test cases -->
+</testng-results>
