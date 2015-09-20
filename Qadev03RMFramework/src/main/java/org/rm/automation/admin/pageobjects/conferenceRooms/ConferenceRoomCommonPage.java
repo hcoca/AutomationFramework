@@ -6,18 +6,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.rm.automation.admin.locators.conferenceRooms.ConferenceRoomCommonLocators;
 
 public class ConferenceRoomCommonPage {
 	
 	WebDriver driver;
 	
-	@FindBy(xpath = "//*[@id='breadcrumb']/a[1]")
+	@FindBy(xpath = ConferenceRoomCommonLocators.RoomInfoBtnLocator)
 	public WebElement roomInfoBtn;
 	
-	@FindBy(xpath = "//*[@id='breadcrumb']/a[2]")
+	@FindBy(xpath = ConferenceRoomCommonLocators.ResourceAssociationBtnLocator)
 	public WebElement resourceAssociationBtn;
 	
-	@FindBy(xpath = "//*[@id='breadcrumb']/a[3]")
+	@FindBy(xpath = ConferenceRoomCommonLocators.OutOfOrderPlanningBtnLocator)
 	public WebElement outOfOrderPlanningBtn;
 	
 	public ConferenceRoomCommonPage(WebDriver driver){

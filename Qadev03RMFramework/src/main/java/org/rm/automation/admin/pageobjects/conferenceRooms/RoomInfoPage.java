@@ -1,32 +1,30 @@
 package org.rm.automation.admin.pageobjects.conferenceRooms;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.rm.automation.admin.locators.conferenceRooms.RoomInfoLocators;
 
 public class RoomInfoPage extends ConferenceRoomCommonPage{
 	
-	@FindBy(xpath = "/html/body/div[4]/div/div/div[2]/div/div/div[2]/div/form/div[2]/input")
+	@FindBy(xpath = RoomInfoLocators.DisplayNameLocator)
 	public WebElement displayName;
 	
-	///html/body/div[4]/div/div/div[2]/div/div/div[1]/div[2]/button[1]/span
-	@FindBy(xpath = "//div[4]/div/div/div[2]/div/div/div[1]/div[2]/button[1]/span")
+	@FindBy(xpath = RoomInfoLocators.PowerOnBtnLocator)
 	public WebElement powerOnBtn;
 	
-	@FindBy(xpath = "//div[4]/div/div/div[2]/div/div/div[1]/div[2]/button[2]")
+	@FindBy(xpath = RoomInfoLocators.PowerOffBtnLocator)
 	public WebElement powerOffBtn;
 	
-	@FindBy(xpath = "//div[3]/div[2]/button")
+	@FindBy(xpath = RoomInfoLocators.SaveBtnLocator)
 	public WebElement saveBtn;
 	
-	@FindBy(xpath = "//input[@ng-model='selectedRoom.code']")
+	@FindBy(xpath = RoomInfoLocators.CodeInputLocator)
 	public WebElement codeInput;
 	
-	@FindBy(xpath = "//input[@ng-model='selectedRoom.capacity']")
+	@FindBy(xpath = RoomInfoLocators.CapacityInputLocator)
 	public WebElement capacityInput;
 	
 	public RoomInfoPage(WebDriver driver){

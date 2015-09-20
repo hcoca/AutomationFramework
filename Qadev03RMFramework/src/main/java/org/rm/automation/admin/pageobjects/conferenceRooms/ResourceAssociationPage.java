@@ -8,17 +8,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.rm.automation.admin.locators.conferenceRooms.ResourceAssociationLocators;
 
 public class ResourceAssociationPage extends ConferenceRoomCommonPage{
 	
-	@FindBy(xpath = "/html/body/div[4]/div/div/div[2]/div/div/div[2]/div[1]/legend")
+	@FindBy(xpath = ResourceAssociationLocators.AvailableLabelLocator)
 	public WebElement availableLabel;
 	
-	@FindBy(xpath = "//div[@class='col-xs-12 col-sm-5 col-lg-5']")
+	@FindBy(xpath = ResourceAssociationLocators.AvailableResourcesContainerLocator)
 	public WebElement availableResourcesContainer;
 	
-//	@FindBy(xpath = "//button[@ng-click='save()']")
-	@FindBy(xpath = "//div[4]/div/div/div[3]/div[2]/button")
+	@FindBy(xpath = ResourceAssociationLocators.SaveButtonLocator)
 	public WebElement saveButton;
 	
 	public ResourceAssociationPage(WebDriver driver){

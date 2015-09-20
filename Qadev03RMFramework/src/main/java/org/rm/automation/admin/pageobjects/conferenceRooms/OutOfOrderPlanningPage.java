@@ -5,10 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.rm.automation.admin.locators.conferenceRooms.OutOfOrderPlanningLocators;
 
 public class OutOfOrderPlanningPage extends ConferenceRoomCommonPage {
 	
-	@FindBy(xpath = "/html/body/div[4]/div/div/div[2]/div/div/div/div[2]/div[1]/div[3]/form/div[3]/div/label")
+	@FindBy(xpath = OutOfOrderPlanningLocators.ActionsLabelLocator)
 	public WebElement actionsLabel;
 	
 	public OutOfOrderPlanningPage(WebDriver driver){
