@@ -1519,3 +1519,1397 @@
 2015-09-18 16:08:46,240 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
 2015-09-18 16:09:02,049 [main] INFO org.rm.automation.utils.LogManager - Browser: "FIREFOX" was closed
 2015-09-18 16:09:02,050 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Suite for Acceptance test cases
+2015-09-19 15:18:44,564 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-19 15:18:44,691 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-19 15:18:44,715 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-19 15:18:44,715 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-19 15:18:44,738 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-19 15:18:44,738 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-19 15:18:46,818 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:18:53,686 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:18:53,757 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:18:54,491 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:18:54,521 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:18:55,431 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:18:55,671 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:18:57,160 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:18:58,322 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:18:58,323 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:18:58,966 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:18:58,999 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:18:59,149 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:18:59,299 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:19:01,021 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:19:01,823 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:19:01,825 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:19:02,437 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:19:02,461 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:19:02,770 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:19:02,965 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:19:03,456 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:19:11,144 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:19:11,145 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:19:11,898 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:19:12,022 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:19:12,168 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:19:12,322 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:19:12,867 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:19:16,394 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:19:16,395 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:19:17,137 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:19:17,177 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:19:17,363 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:19:17,541 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:19:18,068 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:19:20,895 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:19:20,896 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:19:21,722 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:19:21,753 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:19:22,064 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:19:22,328 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:19:22,792 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:19:25,675 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:19:25,677 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:19:26,308 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:19:26,332 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:19:26,475 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:19:26,628 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:19:27,058 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:19:30,311 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:19:30,312 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:19:30,962 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:19:31,004 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:19:31,174 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:19:31,324 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:19:31,853 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:19:33,353 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:19:33,354 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:19:33,971 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:19:33,991 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:19:34,149 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:19:34,302 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:19:34,766 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:19:38,235 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:19:38,381 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:19:38,388 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Setting the impersonation off
+2015-09-19 15:19:38,486 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:19:38,561 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Saving the impersonation configuration
+2015-09-19 15:19:38,689 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:19:38,690 [main] INFO org.rm.automation.utils.LogManager - EnableImpersonation: Executing Test Case
+2015-09-19 15:19:39,493 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:19:39,765 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:19:39,969 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:19:40,130 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:19:40,703 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Impersonation option
+2015-09-19 15:19:40,903 [main] INFO org.rm.automation.utils.LogManager - ImpersonationPage: Clicking the checkbox to enable impersonation 
+2015-09-19 15:19:41,816 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:19:42,862 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:19:42,992 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:19:43,001 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Setting the impersonation on
+2015-09-19 15:19:43,085 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:19:43,176 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Saving the impersonation configuration
+2015-09-19 15:19:43,183 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:19:43,185 [main] INFO org.rm.automation.utils.LogManager - disableImpersonation: Executing Test Case
+2015-09-19 15:19:44,231 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:19:44,266 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:19:44,671 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:19:45,090 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:19:45,603 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Impersonation option
+2015-09-19 15:19:45,768 [main] INFO org.rm.automation.utils.LogManager - ImpersonationPage: Clicking the checkbox to enable impersonation 
+2015-09-19 15:19:46,343 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:19:47,154 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:19:47,155 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:19:47,156 [main] INFO org.rm.automation.utils.LogManager - Executing createBasicLocation Test Case
+2015-09-19 15:19:48,062 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:19:48,099 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:19:48,349 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:19:48,552 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:19:49,126 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 15:19:50,096 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Click on Add button to add a new location
+2015-09-19 15:19:50,777 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the name of the location
+2015-09-19 15:19:51,023 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the Display Name of the location
+2015-09-19 15:19:51,190 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Click on Save button to save the changes
+2015-09-19 15:19:52,092 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:19:52,459 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 15:19:52,825 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct data of location created
+2015-09-19 15:19:52,825 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Name of location created
+2015-09-19 15:19:52,872 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Display Name of location created
+2015-09-19 15:19:52,911 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Locations Associated number of location created
+2015-09-19 15:19:52,976 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:19:54,039 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:19:54,286 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createBasicLocation, removing location created
+2015-09-19 15:19:54,286 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:19:54,343 [main] INFO org.rm.automation.utils.LogManager - Executing createAssociatedLocation Test Case
+2015-09-19 15:19:55,260 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:19:55,286 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:19:55,517 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:19:55,735 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:19:56,397 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 15:19:56,915 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Click on Add button to add a new location
+2015-09-19 15:20:07,369 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:20:07,918 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createAssociatedLocation, removing location created
+2015-09-19 15:20:07,919 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:20:07,920 [main] INFO org.rm.automation.utils.LogManager - CreateResource: Executing Test Case
+2015-09-19 15:20:08,630 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:20:08,668 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:20:08,831 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:20:09,016 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:20:09,549 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:20:10,433 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Add button to create a new resource
+2015-09-19 15:20:11,305 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-19 15:20:11,633 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 15:20:12,211 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:20:12,875 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:20:13,296 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:20:13,799 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct data of the resource was created
+2015-09-19 15:20:14,056 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:20:14,914 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:20:15,028 [main] INFO org.rm.automation.utils.LogManager - CreateResource: Executing Postcondition, removing resource created
+2015-09-19 15:20:15,030 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:20:15,031 [main] INFO org.rm.automation.utils.LogManager - CreateResourceAllFields: Executing Test Case
+2015-09-19 15:20:15,733 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:20:15,759 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:20:15,912 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:20:16,094 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:20:16,657 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:20:17,451 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Add button to create a new resource
+2015-09-19 15:20:17,900 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-19 15:20:18,193 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 15:20:18,953 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Description of a resource
+2015-09-19 15:20:19,036 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:20:19,627 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:20:19,936 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:20:20,331 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct data of the resource was created
+2015-09-19 15:20:21,338 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Verifying the description of the resource
+2015-09-19 15:20:21,425 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:20:22,374 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:20:22,487 [main] INFO org.rm.automation.utils.LogManager - CreateResourceAllFields: Executing Postcondition, removing resource created
+2015-09-19 15:20:22,488 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 15:20:22,545 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:20:22,546 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Test Case
+2015-09-19 15:20:23,193 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:20:23,221 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:20:23,409 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:20:23,609 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:20:24,198 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:20:25,507 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 15:20:26,156 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-19 15:20:26,515 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:20:26,551 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct Name of the resource was updated
+2015-09-19 15:20:26,789 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:20:28,206 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:20:28,316 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Postcondition, removing resource created
+2015-09-19 15:20:28,317 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Precondition, creating a resource
+2015-09-19 15:20:28,414 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:20:28,415 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Test Case
+2015-09-19 15:20:29,380 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:20:29,695 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:20:30,216 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:20:30,748 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:20:32,081 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:20:33,704 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 15:20:35,278 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 15:20:35,394 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:20:35,681 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct DisplayName of the resource was updated
+2015-09-19 15:20:35,917 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:20:40,339 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:20:40,453 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Postcondition, removing resource created
+2015-09-19 15:20:40,454 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Precondition, creating a resource
+2015-09-19 15:20:40,527 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:20:40,528 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Test Case
+2015-09-19 15:20:41,967 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:20:41,997 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:20:42,159 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:20:42,352 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:20:42,983 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:20:44,195 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 15:20:44,943 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:20:45,018 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct Icon of the resource was updated
+2015-09-19 15:20:45,105 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:20:46,017 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:20:46,147 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Postcondition, removing resource created
+2015-09-19 15:20:46,148 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Precondition, creating a resource
+2015-09-19 15:20:46,287 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:20:46,287 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Test Case
+2015-09-19 15:20:47,037 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:20:47,072 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:20:47,234 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:20:47,406 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:20:47,886 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:20:48,809 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 15:20:49,365 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Description of a resource
+2015-09-19 15:20:49,457 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:20:49,574 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct Description of the resource was updated
+2015-09-19 15:20:50,053 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Verifying the description of the resource
+2015-09-19 15:20:50,132 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:20:51,092 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:20:51,189 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Postcondition, removing resource created
+2015-09-19 15:20:51,190 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 15:20:51,277 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:20:51,278 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Test Case
+2015-09-19 15:20:52,206 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:20:52,238 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:20:52,528 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:20:52,681 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:20:53,207 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:20:54,003 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the search
+2015-09-19 15:20:54,119 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:20:55,032 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:20:55,144 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Postcondition, removing resource created
+2015-09-19 15:20:55,145 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 15:20:55,203 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:20:55,203 [main] INFO org.rm.automation.utils.LogManager - DeleteResource: Executing Test Case
+2015-09-19 15:20:55,956 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:20:55,977 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:20:56,174 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:20:56,358 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:20:56,925 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:20:57,700 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Select a resource from the resource's table
+2015-09-19 15:20:58,007 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Remove button to remove a resource
+2015-09-19 15:20:58,158 [main] INFO org.rm.automation.utils.LogManager - DeleteResourcesPage: Click the Remove button
+2015-09-19 15:20:58,703 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:20:58,993 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:20:59,365 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the resource was deleted
+2015-09-19 15:20:59,527 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:21:00,605 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:21:04,938 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-19 15:21:04,939 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\reports\Suite for Acceptance test cases
+2015-09-19 15:21:04,940 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-19 15:21:04,940 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\reports\Suite for Acceptance test cases
+2015-09-19 15:30:00,751 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-19 15:30:00,751 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-19 15:30:00,841 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-19 15:30:00,851 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-19 15:30:00,891 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-19 15:30:00,891 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-19 15:30:01,479 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:30:36,773 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:30:36,776 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:30:43,676 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:30:43,729 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:31:04,096 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:31:05,006 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:31:17,662 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:31:26,422 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:31:27,966 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:31:28,005 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:31:28,226 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:31:28,376 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:31:32,020 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:31:34,837 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:31:34,838 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:31:35,521 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:31:35,548 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:31:35,741 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:31:35,889 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:31:36,400 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:31:51,241 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:31:51,385 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:31:52,020 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:31:52,049 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:31:52,206 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:31:52,361 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:31:52,921 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:32:13,520 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:32:13,667 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:32:14,310 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:32:14,342 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:32:14,496 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:32:14,658 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:32:15,152 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:32:37,227 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:32:37,399 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:32:38,166 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:32:38,249 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:32:38,480 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:32:38,659 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:32:39,288 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:32:41,824 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:32:41,825 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:32:43,679 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:32:43,704 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:32:43,845 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:32:43,980 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:32:46,019 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:32:50,308 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:32:50,309 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:32:52,427 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:32:52,453 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:32:52,641 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:32:54,152 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:32:56,602 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:32:59,518 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:32:59,519 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:33:04,685 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:33:04,713 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:33:05,068 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:33:05,228 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:33:05,726 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:33:08,730 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:33:11,926 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:33:11,936 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Setting the impersonation off
+2015-09-19 15:33:14,449 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:33:14,517 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Saving the impersonation configuration
+2015-09-19 15:33:14,526 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:33:14,527 [main] INFO org.rm.automation.utils.LogManager - EnableImpersonation: Executing Test Case
+2015-09-19 15:33:16,078 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:33:16,106 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:33:16,268 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:33:16,436 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:33:21,214 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Impersonation option
+2015-09-19 15:33:21,703 [main] INFO org.rm.automation.utils.LogManager - ImpersonationPage: Clicking the checkbox to enable impersonation 
+2015-09-19 15:33:32,424 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:33:33,053 [main] ERROR org.rm.automation.utils.LogManager - ResourceRequests: Error parsing the json response
+2015-09-19 15:33:33,204 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:33:33,210 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Setting the impersonation on
+2015-09-19 15:33:33,272 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:33:33,334 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Saving the impersonation configuration
+2015-09-19 15:33:33,345 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:33:33,346 [main] INFO org.rm.automation.utils.LogManager - disableImpersonation: Executing Test Case
+2015-09-19 15:33:33,968 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:33:33,991 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:33:34,139 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:33:34,295 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:33:35,947 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Impersonation option
+2015-09-19 15:33:36,083 [main] INFO org.rm.automation.utils.LogManager - ImpersonationPage: Clicking the checkbox to enable impersonation 
+2015-09-19 15:33:46,396 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:33:46,575 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:33:46,576 [main] INFO org.rm.automation.utils.LogManager - Executing createBasicLocation Test Case
+2015-09-19 15:33:47,220 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:33:47,248 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:33:47,396 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:33:47,570 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:33:50,969 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 15:33:52,924 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Click on Add button to add a new location
+2015-09-19 15:33:53,393 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the name of the location
+2015-09-19 15:33:53,640 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the Display Name of the location
+2015-09-19 15:33:53,860 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Click on Save button to save the changes
+2015-09-19 15:33:54,164 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:33:54,767 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 15:33:54,887 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct data of location created
+2015-09-19 15:33:54,887 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Name of location created
+2015-09-19 15:33:54,938 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Display Name of location created
+2015-09-19 15:33:54,989 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Locations Associated number of location created
+2015-09-19 15:33:55,074 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:33:55,860 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:33:55,954 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createBasicLocation, removing location created
+2015-09-19 15:33:55,954 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:33:55,970 [main] INFO org.rm.automation.utils.LogManager - Executing createAssociatedLocation Test Case
+2015-09-19 15:33:56,560 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:33:56,581 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:33:56,735 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:33:56,986 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:33:57,594 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 15:33:58,037 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Click on Add button to add a new location
+2015-09-19 15:34:08,317 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:34:11,741 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createAssociatedLocation, removing location created
+2015-09-19 15:34:11,742 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:34:11,742 [main] INFO org.rm.automation.utils.LogManager - CreateResource: Executing Test Case
+2015-09-19 15:34:12,381 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:34:12,421 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:34:12,566 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:34:12,728 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:34:13,173 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:34:14,049 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Add button to create a new resource
+2015-09-19 15:34:14,808 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-19 15:34:15,114 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 15:34:15,518 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:34:16,041 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:34:16,326 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:34:16,720 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct data of the resource was created
+2015-09-19 15:34:17,029 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:34:17,941 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:34:18,028 [main] INFO org.rm.automation.utils.LogManager - CreateResource: Executing Postcondition, removing resource created
+2015-09-19 15:34:18,030 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:34:18,031 [main] INFO org.rm.automation.utils.LogManager - CreateResourceAllFields: Executing Test Case
+2015-09-19 15:34:18,653 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:34:18,684 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:34:18,838 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:34:18,999 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:34:21,167 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:34:21,790 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Add button to create a new resource
+2015-09-19 15:34:22,152 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-19 15:34:22,369 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 15:34:24,707 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Description of a resource
+2015-09-19 15:34:24,815 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:34:24,983 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:34:25,315 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:34:25,476 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct data of the resource was created
+2015-09-19 15:34:35,505 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:34:35,996 [main] INFO org.rm.automation.utils.LogManager - CreateResourceAllFields: Executing Postcondition, removing resource created
+2015-09-19 15:34:35,999 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 15:34:36,090 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:34:36,091 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Test Case
+2015-09-19 15:34:36,772 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:34:36,808 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:34:36,960 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:34:37,139 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:34:37,843 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:34:48,466 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:34:48,670 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Postcondition, removing resource created
+2015-09-19 15:34:48,671 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Precondition, creating a resource
+2015-09-19 15:34:48,758 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:34:48,759 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Test Case
+2015-09-19 15:34:49,392 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:34:49,420 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:34:49,590 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:34:49,749 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:34:50,184 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:34:51,020 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 15:34:51,757 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 15:34:51,843 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:34:51,955 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct DisplayName of the resource was updated
+2015-09-19 15:34:52,069 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:34:52,972 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:34:53,061 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Postcondition, removing resource created
+2015-09-19 15:34:53,063 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Precondition, creating a resource
+2015-09-19 15:34:53,150 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:34:53,151 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Test Case
+2015-09-19 15:34:53,796 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:34:53,820 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:34:53,973 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:34:54,144 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:34:54,558 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:34:55,447 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 15:34:56,161 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:34:56,239 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct Icon of the resource was updated
+2015-09-19 15:34:56,347 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:34:57,313 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:34:57,409 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Postcondition, removing resource created
+2015-09-19 15:34:57,411 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Precondition, creating a resource
+2015-09-19 15:34:57,466 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:34:57,466 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Test Case
+2015-09-19 15:34:58,064 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:34:58,093 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:34:58,238 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:34:58,384 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:34:58,778 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:35:09,223 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:35:09,482 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Postcondition, removing resource created
+2015-09-19 15:35:09,483 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 15:35:09,535 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:35:09,535 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Test Case
+2015-09-19 15:35:10,148 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:35:10,182 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:35:10,320 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:35:10,485 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:35:10,930 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:35:11,717 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the search
+2015-09-19 15:35:11,809 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:35:12,578 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:35:13,048 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Postcondition, removing resource created
+2015-09-19 15:35:13,050 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 15:35:13,293 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:35:13,294 [main] INFO org.rm.automation.utils.LogManager - DeleteResource: Executing Test Case
+2015-09-19 15:35:13,918 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:35:13,939 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:35:14,077 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:35:14,216 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:35:14,649 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:35:15,184 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Select a resource from the resource's table
+2015-09-19 15:35:15,476 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Remove button to remove a resource
+2015-09-19 15:35:15,627 [main] INFO org.rm.automation.utils.LogManager - DeleteResourcesPage: Click the Remove button
+2015-09-19 15:35:16,087 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:35:16,373 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:35:16,712 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the resource was deleted
+2015-09-19 15:35:16,793 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:35:17,562 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:35:17,563 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:35:17,564 [main] INFO org.rm.automation.utils.LogManager - AddServer Test: Execute before test
+2015-09-19 15:35:17,617 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:35:17,684 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:35:17,684 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS: delete the service by API
+2015-09-19 15:35:17,759 [main] INFO org.rm.automation.utils.LogManager - AddServer Test: begin Add server test cases
+2015-09-19 15:35:18,339 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:35:18,361 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:35:18,503 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:35:18,654 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:35:19,036 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Email Servers option
+2015-09-19 15:35:19,299 [main] INFO org.rm.automation.utils.LogManager - EmailServerPage: click button add Emailserver
+2015-09-19 15:35:19,382 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: input EmailServer hostname
+2015-09-19 15:35:19,658 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: input EmailServer User
+2015-09-19 15:35:19,755 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: input EmailServer user password 
+2015-09-19 15:35:19,891 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: click save button
+2015-09-19 15:35:20,152 [main] INFO org.rm.automation.utils.LogManager - EmailServerPage: return EmailServerExchage
+2015-09-19 15:35:20,536 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:35:20,782 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:35:20,782 [main] INFO org.rm.automation.utils.LogManager - RemoveServer Test: before test RemoveServer
+2015-09-19 15:35:20,862 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:35:21,298 [main] INFO org.rm.automation.utils.LogManager - RemoveServer Test: after test add service
+2015-09-19 15:35:22,838 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-19 15:35:22,848 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\reports\Suite for Acceptance test cases
+2015-09-19 15:35:23,151 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-19 15:35:23,152 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\reports\Suite for Acceptance test cases
+2015-09-19 15:37:10,353 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-19 15:37:10,363 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-19 15:37:10,393 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-19 15:37:10,393 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-19 15:37:10,413 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-19 15:37:10,413 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-19 15:37:31,594 [main] ERROR org.rm.automation.utils.LogManager - ResourceRequests: Error parsing the json response
+2015-09-19 15:37:31,864 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:37:34,729 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:37:34,732 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:37:35,576 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:37:35,627 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:37:35,930 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:37:36,103 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:37:36,759 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:37:37,710 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:37:37,712 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:37:38,342 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:37:38,378 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:37:38,588 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:37:38,773 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:37:40,200 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:37:40,919 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:37:40,920 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:37:41,569 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:37:41,601 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:37:41,745 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:37:41,888 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:37:42,508 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:37:55,531 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:37:55,731 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:37:56,546 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:37:56,575 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:37:56,770 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:37:56,934 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:37:57,383 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:37:59,770 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:37:59,771 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:38:00,389 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:38:00,415 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:38:00,543 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:38:00,672 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:38:01,165 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:38:03,538 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:38:03,539 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:38:04,164 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:38:04,202 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:38:04,349 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:38:04,504 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:38:04,916 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:38:07,230 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:38:07,232 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:38:07,853 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:38:07,877 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:38:08,013 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:38:08,155 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:38:08,593 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:38:10,997 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:38:10,998 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:38:12,192 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:38:12,216 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:38:12,367 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:38:12,517 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:38:12,943 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:38:14,040 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:38:14,042 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:38:14,671 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:38:14,698 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:38:14,838 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:38:14,980 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:38:15,385 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:38:17,925 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:38:18,068 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:38:18,075 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Setting the impersonation off
+2015-09-19 15:38:18,162 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:38:18,252 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Saving the impersonation configuration
+2015-09-19 15:38:18,259 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:38:18,260 [main] INFO org.rm.automation.utils.LogManager - EnableImpersonation: Executing Test Case
+2015-09-19 15:38:19,072 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:38:19,142 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:38:19,307 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:38:19,468 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:38:19,938 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Impersonation option
+2015-09-19 15:38:20,055 [main] INFO org.rm.automation.utils.LogManager - ImpersonationPage: Clicking the checkbox to enable impersonation 
+2015-09-19 15:38:20,729 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:38:21,614 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:38:21,743 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:38:21,749 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Setting the impersonation on
+2015-09-19 15:38:21,806 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:38:21,874 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Saving the impersonation configuration
+2015-09-19 15:38:21,882 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:38:21,883 [main] INFO org.rm.automation.utils.LogManager - disableImpersonation: Executing Test Case
+2015-09-19 15:38:22,620 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:38:22,644 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:38:23,352 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:38:23,534 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:38:23,951 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Impersonation option
+2015-09-19 15:38:24,121 [main] INFO org.rm.automation.utils.LogManager - ImpersonationPage: Clicking the checkbox to enable impersonation 
+2015-09-19 15:38:24,667 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:38:25,544 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:38:25,545 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:38:25,546 [main] INFO org.rm.automation.utils.LogManager - Executing createBasicLocation Test Case
+2015-09-19 15:38:26,377 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:38:26,422 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:38:26,655 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:38:26,914 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:38:27,600 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 15:38:28,297 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Click on Add button to add a new location
+2015-09-19 15:38:28,756 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the name of the location
+2015-09-19 15:38:28,979 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the Display Name of the location
+2015-09-19 15:38:29,164 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Click on Save button to save the changes
+2015-09-19 15:38:29,476 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:38:30,055 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 15:38:30,192 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct data of location created
+2015-09-19 15:38:30,192 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Name of location created
+2015-09-19 15:38:30,247 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Display Name of location created
+2015-09-19 15:38:30,312 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Locations Associated number of location created
+2015-09-19 15:38:30,395 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:38:31,809 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:38:31,891 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createBasicLocation, removing location created
+2015-09-19 15:38:31,894 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:38:31,928 [main] INFO org.rm.automation.utils.LogManager - Executing createAssociatedLocation Test Case
+2015-09-19 15:38:32,546 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:38:32,571 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:38:32,775 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:38:32,900 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:38:33,329 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 15:38:33,869 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Click on Add button to add a new location
+2015-09-19 15:38:34,542 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Selecting Location Associations option
+2015-09-19 15:38:34,888 [main] INFO org.rm.automation.utils.LogManager - FormAssociateRoomPage: Searching a conference room
+2015-09-19 15:38:35,135 [main] INFO org.rm.automation.utils.LogManager - FormAssociateRoomPage: Associating the conference room with the location
+2015-09-19 15:38:35,428 [main] INFO org.rm.automation.utils.LogManager - FormAssociateRoomPage: Selecting Location Info option
+2015-09-19 15:38:35,756 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the name of the location
+2015-09-19 15:38:36,106 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the Display Name of the location
+2015-09-19 15:38:36,267 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Click on Save button to save the changes
+2015-09-19 15:38:36,608 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:38:37,211 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 15:38:37,340 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct data of location created
+2015-09-19 15:38:37,341 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Name of location created
+2015-09-19 15:38:37,391 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Display Name of location created
+2015-09-19 15:38:37,449 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Locations Associated number of location created
+2015-09-19 15:38:37,542 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:38:38,414 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:38:38,526 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createAssociatedLocation, removing location created
+2015-09-19 15:38:38,528 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:38:38,528 [main] INFO org.rm.automation.utils.LogManager - CreateResource: Executing Test Case
+2015-09-19 15:38:39,292 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:38:39,312 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:38:40,576 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:38:40,705 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:38:41,128 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:38:42,095 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Add button to create a new resource
+2015-09-19 15:38:42,942 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-19 15:38:43,368 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 15:38:44,151 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:38:44,817 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:38:45,129 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:38:45,496 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct data of the resource was created
+2015-09-19 15:38:45,673 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:38:46,444 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:38:46,526 [main] INFO org.rm.automation.utils.LogManager - CreateResource: Executing Postcondition, removing resource created
+2015-09-19 15:38:46,527 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:38:46,528 [main] INFO org.rm.automation.utils.LogManager - CreateResourceAllFields: Executing Test Case
+2015-09-19 15:38:47,222 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:38:47,244 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:38:47,412 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:38:47,584 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:38:48,033 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:38:48,781 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Add button to create a new resource
+2015-09-19 15:38:49,203 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-19 15:38:50,025 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 15:38:50,620 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Description of a resource
+2015-09-19 15:38:50,693 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:38:51,188 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:38:51,474 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:38:51,817 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct data of the resource was created
+2015-09-19 15:38:53,007 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Verifying the description of the resource
+2015-09-19 15:38:53,142 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:38:54,033 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:38:54,117 [main] INFO org.rm.automation.utils.LogManager - CreateResourceAllFields: Executing Postcondition, removing resource created
+2015-09-19 15:38:54,119 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 15:38:54,204 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:38:54,205 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Test Case
+2015-09-19 15:38:55,078 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:38:55,111 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:38:55,282 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:38:55,444 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:38:55,910 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:38:56,779 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 15:38:57,333 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-19 15:38:57,425 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:38:57,512 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct Name of the resource was updated
+2015-09-19 15:38:58,988 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:38:59,793 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:38:59,878 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Postcondition, removing resource created
+2015-09-19 15:38:59,879 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Precondition, creating a resource
+2015-09-19 15:38:59,937 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:38:59,938 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Test Case
+2015-09-19 15:39:00,560 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:39:00,586 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:39:00,741 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:39:00,917 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:39:01,584 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:39:02,418 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 15:39:03,373 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 15:39:03,495 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:39:04,132 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct DisplayName of the resource was updated
+2015-09-19 15:39:04,225 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:39:05,017 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:39:05,091 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Postcondition, removing resource created
+2015-09-19 15:39:05,092 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Precondition, creating a resource
+2015-09-19 15:39:05,210 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:39:05,211 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Test Case
+2015-09-19 15:39:05,829 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:39:05,860 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:39:05,995 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:39:06,196 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:39:06,827 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:39:07,662 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 15:39:08,419 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:39:09,170 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct Icon of the resource was updated
+2015-09-19 15:39:09,228 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:39:10,117 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:39:10,249 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Postcondition, removing resource created
+2015-09-19 15:39:10,251 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Precondition, creating a resource
+2015-09-19 15:39:10,301 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:39:10,302 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Test Case
+2015-09-19 15:39:10,921 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:39:10,943 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:39:11,081 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:39:11,398 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:39:11,966 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:39:13,153 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 15:39:13,594 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Description of a resource
+2015-09-19 15:39:13,693 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:39:13,719 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct Description of the resource was updated
+2015-09-19 15:39:14,151 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Verifying the description of the resource
+2015-09-19 15:39:14,214 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:39:15,090 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:39:15,170 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Postcondition, removing resource created
+2015-09-19 15:39:15,171 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 15:39:15,227 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:39:15,228 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Test Case
+2015-09-19 15:39:15,872 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:39:15,894 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:39:16,076 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:39:16,236 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:39:16,695 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:39:17,441 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the search
+2015-09-19 15:39:17,539 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:39:18,457 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:39:18,539 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Postcondition, removing resource created
+2015-09-19 15:39:18,540 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 15:39:18,607 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:39:18,607 [main] INFO org.rm.automation.utils.LogManager - DeleteResource: Executing Test Case
+2015-09-19 15:39:19,208 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:39:19,231 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:39:19,375 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:39:19,547 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:39:20,066 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:39:20,650 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Select a resource from the resource's table
+2015-09-19 15:39:21,050 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Remove button to remove a resource
+2015-09-19 15:39:21,394 [main] INFO org.rm.automation.utils.LogManager - DeleteResourcesPage: Click the Remove button
+2015-09-19 15:39:21,886 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:39:22,177 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:39:22,463 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the resource was deleted
+2015-09-19 15:39:32,536 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:39:33,340 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:39:33,340 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:39:33,341 [main] INFO org.rm.automation.utils.LogManager - RemoveServer Test: before test RemoveServer
+2015-09-19 15:39:33,409 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:39:33,409 [main] WARN org.rm.automation.utils.LogManager - SERVICEREQUESTS: the service no is added because there is a service added
+2015-09-19 15:39:33,409 [main] INFO org.rm.automation.utils.LogManager - RemoveServer Test: begin remove testcase
+2015-09-19 15:39:33,997 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:39:34,022 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:39:34,174 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:39:34,316 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:39:34,934 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Email Servers option
+2015-09-19 15:39:35,238 [main] INFO org.rm.automation.utils.LogManager - EmailServerPage: click button remove Emailserver
+2015-09-19 15:39:35,349 [main] INFO org.rm.automation.utils.LogManager - RemoveServerPage: press yes button Confirm delete EmailServer
+2015-09-19 15:39:35,967 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:39:36,196 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:39:36,197 [main] INFO org.rm.automation.utils.LogManager - AddServer Test: Execute before test
+2015-09-19 15:39:36,254 [main] WARN org.rm.automation.utils.LogManager - AddServer Test: before test failet
+2015-09-19 15:39:36,255 [main] INFO org.rm.automation.utils.LogManager - AddServer Test: begin Add server test cases
+2015-09-19 15:39:36,868 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:39:36,894 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:39:37,046 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:39:37,217 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:39:37,642 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Email Servers option
+2015-09-19 15:39:37,883 [main] INFO org.rm.automation.utils.LogManager - EmailServerPage: click button add Emailserver
+2015-09-19 15:39:38,068 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: input EmailServer hostname
+2015-09-19 15:39:38,199 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: input EmailServer User
+2015-09-19 15:39:38,301 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: input EmailServer user password 
+2015-09-19 15:39:38,438 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: click save button
+2015-09-19 15:39:38,684 [main] INFO org.rm.automation.utils.LogManager - EmailServerPage: return EmailServerExchage
+2015-09-19 15:39:38,789 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:39:39,010 [main] INFO org.rm.automation.utils.LogManager - RemoveServer Test: after test add service
+2015-09-19 15:39:40,442 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-19 15:39:40,442 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\reports\Suite for Acceptance test cases
+2015-09-19 15:39:40,696 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-19 15:39:40,696 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\reports\Suite for Acceptance test cases
+2015-09-19 15:48:01,374 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-19 15:48:01,454 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-19 15:48:01,484 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-19 15:48:01,484 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-19 15:48:01,504 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-19 15:48:01,504 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-19 15:48:22,628 [main] ERROR org.rm.automation.utils.LogManager - ResourceRequests: Error parsing the json response
+2015-09-19 15:48:22,918 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:48:26,132 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:48:26,142 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:48:26,757 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:48:26,787 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:48:27,063 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:48:27,204 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:48:27,834 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:48:28,660 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:48:28,663 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:48:29,280 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:48:29,319 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:48:29,460 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:48:29,621 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:48:31,064 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:48:31,836 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:48:31,837 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:48:32,554 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:48:32,585 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:48:32,844 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:48:33,068 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:48:33,608 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:48:46,045 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:48:46,277 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:48:47,093 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:48:47,279 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:48:47,449 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:48:47,604 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:48:48,065 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:48:50,442 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:48:50,443 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:48:51,061 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:48:51,089 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:48:51,231 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:48:51,399 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:48:51,818 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:48:54,017 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:48:54,019 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:48:54,640 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:48:54,777 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:48:54,915 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:48:55,118 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:48:55,540 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:48:58,055 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:48:58,058 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:48:59,024 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:48:59,054 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:48:59,186 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:48:59,321 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:48:59,763 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:49:02,831 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:49:02,832 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:49:03,503 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:49:03,533 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:49:03,674 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:49:03,848 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:49:04,287 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:49:05,625 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:49:05,626 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:49:06,658 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:49:06,682 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:49:06,821 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:49:06,975 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:49:07,408 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 15:49:10,639 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:49:10,772 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:49:10,778 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Setting the impersonation off
+2015-09-19 15:49:10,830 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:49:10,929 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Saving the impersonation configuration
+2015-09-19 15:49:10,938 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:49:10,939 [main] INFO org.rm.automation.utils.LogManager - EnableImpersonation: Executing Test Case
+2015-09-19 15:49:11,615 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:49:11,652 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:49:11,836 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:49:12,007 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:49:12,497 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Impersonation option
+2015-09-19 15:49:12,666 [main] INFO org.rm.automation.utils.LogManager - ImpersonationPage: Clicking the checkbox to enable impersonation 
+2015-09-19 15:49:13,352 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:49:14,251 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:49:14,406 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:49:14,412 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Setting the impersonation on
+2015-09-19 15:49:14,497 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:49:14,556 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Saving the impersonation configuration
+2015-09-19 15:49:14,563 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:49:14,565 [main] INFO org.rm.automation.utils.LogManager - disableImpersonation: Executing Test Case
+2015-09-19 15:49:15,172 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:49:15,209 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:49:15,347 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:49:15,519 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:49:16,016 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Impersonation option
+2015-09-19 15:49:16,265 [main] INFO org.rm.automation.utils.LogManager - ImpersonationPage: Clicking the checkbox to enable impersonation 
+2015-09-19 15:49:17,241 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:49:18,059 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:49:18,060 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:49:18,060 [main] INFO org.rm.automation.utils.LogManager - Executing createBasicLocation Test Case
+2015-09-19 15:49:18,679 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:49:18,709 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:49:18,859 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:49:19,037 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:49:19,540 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 15:49:20,511 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Click on Add button to add a new location
+2015-09-19 15:49:20,967 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the name of the location
+2015-09-19 15:49:21,187 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the Display Name of the location
+2015-09-19 15:49:21,371 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Click on Save button to save the changes
+2015-09-19 15:49:21,637 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:49:22,224 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 15:49:22,363 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct data of location created
+2015-09-19 15:49:22,363 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Name of location created
+2015-09-19 15:49:22,408 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Display Name of location created
+2015-09-19 15:49:22,476 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Locations Associated number of location created
+2015-09-19 15:49:22,553 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:49:23,335 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:49:23,452 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createBasicLocation, removing location created
+2015-09-19 15:49:23,454 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:49:23,526 [main] INFO org.rm.automation.utils.LogManager - Executing createAssociatedLocation Test Case
+2015-09-19 15:49:24,256 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:49:24,294 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:49:24,577 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:49:24,830 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:49:25,303 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 15:49:25,789 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Click on Add button to add a new location
+2015-09-19 15:49:36,204 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:49:36,537 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createAssociatedLocation, removing location created
+2015-09-19 15:49:36,538 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:49:36,539 [main] INFO org.rm.automation.utils.LogManager - CreateResource: Executing Test Case
+2015-09-19 15:49:37,218 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:49:37,257 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:49:37,440 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:49:37,627 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:49:38,141 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:49:39,225 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Add button to create a new resource
+2015-09-19 15:49:39,826 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-19 15:49:40,054 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 15:49:40,573 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:49:41,125 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:49:41,403 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:49:41,749 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct data of the resource was created
+2015-09-19 15:49:41,919 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:49:42,782 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:49:42,871 [main] INFO org.rm.automation.utils.LogManager - CreateResource: Executing Postcondition, removing resource created
+2015-09-19 15:49:42,873 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:49:42,874 [main] INFO org.rm.automation.utils.LogManager - CreateResourceAllFields: Executing Test Case
+2015-09-19 15:49:43,474 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:49:43,498 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:49:43,628 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:49:43,756 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:49:44,186 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:49:44,895 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Add button to create a new resource
+2015-09-19 15:49:45,171 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-19 15:49:45,416 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 15:49:46,223 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Description of a resource
+2015-09-19 15:49:46,464 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:49:46,978 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:49:47,281 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:49:47,630 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct data of the resource was created
+2015-09-19 15:49:48,318 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Verifying the description of the resource
+2015-09-19 15:49:48,395 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:49:49,219 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:49:49,311 [main] INFO org.rm.automation.utils.LogManager - CreateResourceAllFields: Executing Postcondition, removing resource created
+2015-09-19 15:49:49,312 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 15:49:49,393 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:49:49,394 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Test Case
+2015-09-19 15:49:50,006 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:49:50,029 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:49:50,184 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:49:50,336 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:49:50,744 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:50:01,229 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:50:01,551 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Postcondition, removing resource created
+2015-09-19 15:50:01,552 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Precondition, creating a resource
+2015-09-19 15:50:01,621 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:50:01,621 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Test Case
+2015-09-19 15:50:02,251 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:50:02,279 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:50:02,428 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:50:02,656 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:50:03,185 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:50:03,998 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 15:50:04,559 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 15:50:04,637 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:50:04,689 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct DisplayName of the resource was updated
+2015-09-19 15:50:04,851 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:50:05,619 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:50:05,695 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Postcondition, removing resource created
+2015-09-19 15:50:05,696 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Precondition, creating a resource
+2015-09-19 15:50:05,766 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:50:05,766 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Test Case
+2015-09-19 15:50:06,346 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:50:06,367 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:50:06,595 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:50:06,918 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:50:07,660 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:50:08,506 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 15:50:09,029 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:50:09,057 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct Icon of the resource was updated
+2015-09-19 15:50:09,139 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:50:10,042 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:50:10,211 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Postcondition, removing resource created
+2015-09-19 15:50:10,213 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Precondition, creating a resource
+2015-09-19 15:50:10,312 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:50:10,313 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Test Case
+2015-09-19 15:50:11,026 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:50:11,047 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:50:11,234 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:50:11,416 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:50:11,832 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:50:12,602 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 15:50:13,111 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Description of a resource
+2015-09-19 15:50:13,243 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 15:50:13,339 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct Description of the resource was updated
+2015-09-19 15:50:14,221 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Verifying the description of the resource
+2015-09-19 15:50:14,288 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:50:15,170 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:50:15,242 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Postcondition, removing resource created
+2015-09-19 15:50:15,243 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 15:50:15,303 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:50:15,304 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Test Case
+2015-09-19 15:50:16,081 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:50:16,112 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:50:16,331 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:50:16,510 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:50:16,997 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:50:17,784 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the search
+2015-09-19 15:50:17,881 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:50:18,808 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:50:19,055 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Postcondition, removing resource created
+2015-09-19 15:50:19,056 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 15:50:19,249 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:50:19,250 [main] INFO org.rm.automation.utils.LogManager - DeleteResource: Executing Test Case
+2015-09-19 15:50:19,868 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:50:19,905 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:50:20,054 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:50:20,194 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:50:20,640 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:50:21,202 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Select a resource from the resource's table
+2015-09-19 15:50:21,633 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Remove button to remove a resource
+2015-09-19 15:50:22,023 [main] INFO org.rm.automation.utils.LogManager - DeleteResourcesPage: Click the Remove button
+2015-09-19 15:50:22,603 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 15:50:22,886 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 15:50:23,190 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the resource was deleted
+2015-09-19 15:50:23,277 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 15:50:24,092 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:50:24,093 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:50:24,093 [main] INFO org.rm.automation.utils.LogManager - RemoveServer Test: before test RemoveServer
+2015-09-19 15:50:24,150 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:50:24,150 [main] WARN org.rm.automation.utils.LogManager - SERVICEREQUESTS: the service no is added because there is a service added
+2015-09-19 15:50:24,151 [main] INFO org.rm.automation.utils.LogManager - RemoveServer Test: begin remove testcase
+2015-09-19 15:50:24,784 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:50:24,817 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:50:24,957 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:50:25,118 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:50:25,693 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Email Servers option
+2015-09-19 15:50:25,983 [main] INFO org.rm.automation.utils.LogManager - EmailServerPage: click button remove Emailserver
+2015-09-19 15:50:26,065 [main] INFO org.rm.automation.utils.LogManager - RemoveServerPage: press yes button Confirm delete EmailServer
+2015-09-19 15:50:36,498 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 15:50:36,680 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 15:50:36,681 [main] INFO org.rm.automation.utils.LogManager - AddServer Test: Execute before test
+2015-09-19 15:50:36,762 [main] WARN org.rm.automation.utils.LogManager - AddServer Test: before test failet
+2015-09-19 15:50:36,762 [main] INFO org.rm.automation.utils.LogManager - AddServer Test: begin Add server test cases
+2015-09-19 15:50:37,577 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 15:50:37,603 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 15:50:37,849 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 15:50:37,981 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 15:50:38,408 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Email Servers option
+2015-09-19 15:50:38,637 [main] INFO org.rm.automation.utils.LogManager - EmailServerPage: click button add Emailserver
+2015-09-19 15:50:38,825 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: input EmailServer hostname
+2015-09-19 15:50:38,965 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: input EmailServer User
+2015-09-19 15:50:39,061 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: input EmailServer user password 
+2015-09-19 15:50:39,181 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: click save button
+2015-09-19 15:50:49,443 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:50:49,443 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 15:50:49,444 [main] INFO org.rm.automation.utils.LogManager - RemoveServer Test: after test add service
+2015-09-19 15:50:49,505 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 15:50:49,505 [main] WARN org.rm.automation.utils.LogManager - SERVICEREQUESTS: the service no is added because there is a service added
+2015-09-19 15:50:51,676 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-19 15:50:51,676 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\reports\Suite for Acceptance test cases
+2015-09-19 15:50:52,086 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-19 15:50:52,086 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\reports\Suite for Acceptance test cases
+2015-09-19 16:00:01,210 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-19 16:00:01,220 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-19 16:00:01,250 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-19 16:00:01,250 [main] INFO org.rm.automation.utils.LogManager - Suite name: Suite for Acceptance test cases starting
+2015-09-19 16:00:01,910 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:00:05,309 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:00:05,312 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:00:05,977 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:00:06,008 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:00:06,470 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:00:06,727 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:00:07,379 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 16:00:08,135 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:00:08,136 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:00:08,774 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:00:08,822 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:00:08,973 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:00:09,188 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:00:10,571 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 16:00:11,289 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:00:11,290 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:00:11,995 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:00:12,021 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:00:12,186 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:00:12,327 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:00:12,761 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 16:00:17,307 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:00:17,308 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:00:17,950 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:00:17,987 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:00:18,206 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:00:18,563 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:00:19,174 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 16:00:21,959 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:00:21,960 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:00:22,727 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:00:22,750 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:00:22,951 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:00:23,090 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:00:23,799 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 16:00:27,146 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:00:27,147 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:00:27,791 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:00:27,824 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:00:27,967 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:00:28,128 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:00:28,600 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 16:00:31,391 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:00:31,392 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:00:32,161 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:00:32,190 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:00:32,343 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:00:32,598 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:00:35,045 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 16:00:38,345 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:00:38,346 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:00:39,095 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:00:39,117 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:00:39,255 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:00:39,405 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:00:39,863 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 16:00:41,399 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:00:41,400 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:00:47,537 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:00:47,566 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:00:47,822 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:00:50,247 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:00:51,147 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Conference Rooms option
+2015-09-19 16:00:53,962 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:00:54,103 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 16:00:54,108 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Setting the impersonation off
+2015-09-19 16:00:54,202 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 16:00:54,283 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Saving the impersonation configuration
+2015-09-19 16:00:54,298 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:00:54,299 [main] INFO org.rm.automation.utils.LogManager - EnableImpersonation: Executing Test Case
+2015-09-19 16:00:54,913 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:00:54,940 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:00:55,125 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:00:55,293 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:00:55,752 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Impersonation option
+2015-09-19 16:00:55,926 [main] INFO org.rm.automation.utils.LogManager - ImpersonationPage: Clicking the checkbox to enable impersonation 
+2015-09-19 16:00:56,475 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 16:00:57,203 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:00:57,304 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 16:00:57,309 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Setting the impersonation on
+2015-09-19 16:00:57,380 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 16:00:57,495 [main] INFO org.rm.automation.utils.LogManager - ImpersonationRequests: Saving the impersonation configuration
+2015-09-19 16:00:57,502 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:00:57,503 [main] INFO org.rm.automation.utils.LogManager - disableImpersonation: Executing Test Case
+2015-09-19 16:00:58,095 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:00:58,115 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:00:58,284 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:00:58,438 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:00:58,874 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Impersonation option
+2015-09-19 16:00:59,030 [main] INFO org.rm.automation.utils.LogManager - ImpersonationPage: Clicking the checkbox to enable impersonation 
+2015-09-19 16:00:59,566 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 16:01:00,353 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:01:00,354 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:01:00,355 [main] INFO org.rm.automation.utils.LogManager - Executing createBasicLocation Test Case
+2015-09-19 16:01:00,973 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:01:01,000 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:01:01,142 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:01:01,287 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:01:01,719 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 16:01:02,368 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Click on Add button to add a new location
+2015-09-19 16:01:02,781 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the name of the location
+2015-09-19 16:01:02,996 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Entering the Display Name of the location
+2015-09-19 16:01:03,161 [main] INFO org.rm.automation.utils.LogManager - FormLocationPage: Click on Save button to save the changes
+2015-09-19 16:01:03,442 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 16:01:04,001 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 16:01:04,169 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct data of location created
+2015-09-19 16:01:04,170 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Name of location created
+2015-09-19 16:01:04,512 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Display Name of location created
+2015-09-19 16:01:04,558 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Verifying the correct Locations Associated number of location created
+2015-09-19 16:01:04,677 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 16:01:05,630 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:01:05,796 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createBasicLocation, removing location created
+2015-09-19 16:01:05,797 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:01:05,817 [main] INFO org.rm.automation.utils.LogManager - Executing createAssociatedLocation Test Case
+2015-09-19 16:01:06,415 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:01:06,440 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:01:06,602 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:01:06,775 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:01:07,277 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-19 16:01:09,552 [main] INFO org.rm.automation.utils.LogManager - LocationsPage: Click on Add button to add a new location
+2015-09-19 16:01:19,923 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 16:01:20,215 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createAssociatedLocation, removing location created
+2015-09-19 16:01:20,216 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:01:20,216 [main] INFO org.rm.automation.utils.LogManager - CreateResource: Executing Test Case
+2015-09-19 16:01:20,904 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:01:20,940 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:01:21,127 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:01:21,327 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:01:21,783 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 16:01:22,604 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Add button to create a new resource
+2015-09-19 16:01:23,338 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-19 16:01:23,608 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 16:01:24,042 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 16:01:24,582 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 16:01:25,282 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 16:01:25,769 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct data of the resource was created
+2015-09-19 16:01:26,029 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 16:01:27,051 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:01:27,142 [main] INFO org.rm.automation.utils.LogManager - CreateResource: Executing Postcondition, removing resource created
+2015-09-19 16:01:27,143 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:01:27,144 [main] INFO org.rm.automation.utils.LogManager - CreateResourceAllFields: Executing Test Case
+2015-09-19 16:01:27,752 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:01:27,780 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:01:27,938 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:01:28,102 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:01:28,587 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 16:01:29,407 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Add button to create a new resource
+2015-09-19 16:01:30,083 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-19 16:01:30,477 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 16:01:31,303 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Description of a resource
+2015-09-19 16:01:31,464 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 16:01:31,996 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 16:01:32,284 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 16:01:32,628 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct data of the resource was created
+2015-09-19 16:01:33,281 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Verifying the description of the resource
+2015-09-19 16:01:33,345 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 16:01:34,770 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:01:34,850 [main] INFO org.rm.automation.utils.LogManager - CreateResourceAllFields: Executing Postcondition, removing resource created
+2015-09-19 16:01:34,852 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 16:01:34,903 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:01:34,904 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Test Case
+2015-09-19 16:01:35,510 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:01:35,538 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:01:35,698 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:01:35,859 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:01:36,381 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 16:01:37,253 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 16:01:37,861 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Name of a resource
+2015-09-19 16:01:38,047 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 16:01:38,199 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct Name of the resource was updated
+2015-09-19 16:01:38,288 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 16:01:39,410 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:01:39,522 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Postcondition, removing resource created
+2015-09-19 16:01:39,524 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Precondition, creating a resource
+2015-09-19 16:01:39,598 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:01:39,598 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Test Case
+2015-09-19 16:01:40,212 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:01:40,234 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:01:40,384 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:01:40,603 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:01:41,187 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 16:01:42,594 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 16:01:43,288 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the DisplayName of a resource
+2015-09-19 16:01:43,384 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 16:01:43,524 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct DisplayName of the resource was updated
+2015-09-19 16:01:43,680 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 16:01:44,522 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:01:44,623 [main] INFO org.rm.automation.utils.LogManager - UpdateDisplayName: Executing Postcondition, removing resource created
+2015-09-19 16:01:44,624 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Precondition, creating a resource
+2015-09-19 16:01:44,692 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:01:44,693 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Test Case
+2015-09-19 16:01:45,291 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:01:45,313 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:01:45,510 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:01:45,672 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:01:46,186 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 16:01:47,099 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 16:01:47,947 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 16:01:48,016 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct Icon of the resource was updated
+2015-09-19 16:01:48,081 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 16:01:48,899 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:01:49,055 [main] INFO org.rm.automation.utils.LogManager - UpdateIcon: Executing Postcondition, removing resource created
+2015-09-19 16:01:49,057 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Precondition, creating a resource
+2015-09-19 16:01:49,124 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:01:49,125 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Test Case
+2015-09-19 16:01:49,776 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:01:49,834 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:01:50,164 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:01:50,412 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:01:50,839 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 16:01:51,640 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Double click on a resource of the table
+2015-09-19 16:01:52,130 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Set the Description of a resource
+2015-09-19 16:01:52,276 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Click on the Save button
+2015-09-19 16:01:52,331 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the correct Description of the resource was updated
+2015-09-19 16:01:52,734 [main] INFO org.rm.automation.utils.LogManager - AddResourcesPage: Verifying the description of the resource
+2015-09-19 16:01:52,829 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 16:01:53,807 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:01:54,214 [main] INFO org.rm.automation.utils.LogManager - UpdateDescription: Executing Postcondition, removing resource created
+2015-09-19 16:01:54,215 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 16:01:54,313 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:01:54,314 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Test Case
+2015-09-19 16:01:55,115 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:01:55,144 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:01:55,279 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:01:55,454 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:01:55,900 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 16:01:56,680 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the search
+2015-09-19 16:01:56,780 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 16:01:57,710 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:01:57,834 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Postcondition, removing resource created
+2015-09-19 16:01:57,836 [main] INFO org.rm.automation.utils.LogManager - UpdateName: Executing Precondition, creating a resource
+2015-09-19 16:01:57,895 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:01:57,896 [main] INFO org.rm.automation.utils.LogManager - DeleteResource: Executing Test Case
+2015-09-19 16:01:58,651 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:01:58,677 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:01:58,937 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:01:59,090 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:01:59,556 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 16:02:00,182 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Select a resource from the resource's table
+2015-09-19 16:02:00,503 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Click on Remove button to remove a resource
+2015-09-19 16:02:00,595 [main] INFO org.rm.automation.utils.LogManager - DeleteResourcesPage: Click the Remove button
+2015-09-19 16:02:01,167 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-19 16:02:01,457 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Resources option
+2015-09-19 16:02:01,846 [main] INFO org.rm.automation.utils.LogManager - ResourcesPage: Verifying the resource was deleted
+2015-09-19 16:02:01,944 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-19 16:02:02,859 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:02:02,860 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:02:02,917 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 16:02:02,918 [main] WARN org.rm.automation.utils.LogManager - SERVICEREQUESTS: the service no is added because there is a service added
+2015-09-19 16:02:02,918 [main] INFO org.rm.automation.utils.LogManager - RemoveServer Test: begin remove testcase
+2015-09-19 16:02:03,500 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:02:03,524 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:02:03,663 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:02:03,822 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:02:04,203 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Email Servers option
+2015-09-19 16:02:04,452 [main] INFO org.rm.automation.utils.LogManager - EmailServerPage: click button remove Emailserver
+2015-09-19 16:02:04,534 [main] INFO org.rm.automation.utils.LogManager - RemoveServerPage: press yes button Confirm delete EmailServer
+2015-09-19 16:02:14,939 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" FAILED
+2015-09-19 16:02:15,110 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" STARTED
+2015-09-19 16:02:15,110 [main] INFO org.rm.automation.utils.LogManager - AddServer Test: Execute before test
+2015-09-19 16:02:15,215 [main] WARN org.rm.automation.utils.LogManager - AddServer Test: before test failet
+2015-09-19 16:02:15,215 [main] INFO org.rm.automation.utils.LogManager - AddServer Test: begin Add server test cases
+2015-09-19 16:02:15,776 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-19 16:02:15,903 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-19 16:02:16,075 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-19 16:02:16,234 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-19 16:02:16,627 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Email Servers option
+2015-09-19 16:02:16,830 [main] INFO org.rm.automation.utils.LogManager - EmailServerPage: click button add Emailserver
+2015-09-19 16:02:17,016 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: input EmailServer hostname
+2015-09-19 16:02:17,139 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: input EmailServer User
+2015-09-19 16:02:17,220 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: input EmailServer user password 
+2015-09-19 16:02:17,363 [main] INFO org.rm.automation.utils.LogManager - AddEmailServerPage: click save button
+2015-09-19 16:02:27,664 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 16:02:27,664 [main] INFO org.rm.automation.utils.LogManager - Test : "Acceptance Test cases" PASSED
+2015-09-19 16:02:27,665 [main] INFO org.rm.automation.utils.LogManager - RemoveServer Test: after test add service
+2015-09-19 16:02:27,764 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-19 16:02:27,764 [main] WARN org.rm.automation.utils.LogManager - SERVICEREQUESTS: the service no is added because there is a service added
+2015-09-19 16:02:29,064 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-19 16:02:29,064 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\reports\Suite for Acceptance test cases
+2015-09-19 16:02:29,308 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-19 16:02:29,308 [main] INFO org.rm.automation.utils.LogManager - Test Suite for Acceptance test cases report location: c:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\reports\Suite for Acceptance test cases
