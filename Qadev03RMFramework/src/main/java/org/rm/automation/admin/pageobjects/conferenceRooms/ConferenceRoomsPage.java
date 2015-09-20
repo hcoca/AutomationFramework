@@ -1,10 +1,12 @@
 package org.rm.automation.admin.pageobjects.conferenceRooms;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,6 +14,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rm.automation.admin.locators.conferenceRooms.ConferenceRoomsLocators;
 import org.rm.automation.admin.pageobjects.HomePage;
+import org.rm.automation.admin.pageobjects.LoginPage;
+import org.rm.automation.admin.pageobjects.locations.IssuesPage;
 import org.rm.automation.utils.Waiters;
 
 public class ConferenceRoomsPage extends HomePage{
@@ -209,6 +213,32 @@ public class ConferenceRoomsPage extends HomePage{
 				res = true;
 				break;
 			}
+		}
+		
+		return res;
+	}
+	
+	public boolean isCodeUpdated(String updatedCode, String roomName){
+		boolean res = false;
+		
+		IssuesPage issuesPage = this.SelectIssuesOption();
+		ConferenceRoomsPage conferenceRoom = issuesPage.SelectRoomsOption();
+		RoomInfoPage roomInfo = conferenceRoom.doubleClickConferenceRoom(roomName);
+		if(roomInfo.getCode().equals(updatedCode)){
+			res = true;
+		}
+		
+		return res;
+	}
+	
+	public boolean isCapacityUpdated(String updatedCapacity, String roomName){
+		boolean res = false;
+		
+		IssuesPage issuesPage = this.SelectIssuesOption();
+		ConferenceRoomsPage conferenceRoom = issuesPage.SelectRoomsOption();
+		RoomInfoPage roomInfo = conferenceRoom.doubleClickConferenceRoom(roomName);
+		if(roomInfo.getCapacity().equals(updatedCapacity)){
+			res = true;
 		}
 		
 		return res;

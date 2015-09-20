@@ -43,6 +43,11 @@ public class RoomInfoPage extends ConferenceRoomCommonPage{
 		return this;
 	}
 	
+	public String getCode(){
+		Waiters.WaitByVisibilityOfWebElement(codeInput, driver);
+		return codeInput.getAttribute("value");
+	}
+	
 	public RoomInfoPage setDisplayName(String newDisplayName){
 		Waiters.WaitByVisibilityOfWebElement(displayName, driver);
 //		(new WebDriverWait(super.driver, 20))
@@ -90,5 +95,10 @@ public class RoomInfoPage extends ConferenceRoomCommonPage{
 		capacityInput.sendKeys(updatedCapacity);
 		
 		return this;
+	}
+	
+	public String getCapacity(){
+		Waiters.WaitByVisibilityOfWebElement(capacityInput, driver);
+		return capacityInput.getAttribute("value");
 	}
 }

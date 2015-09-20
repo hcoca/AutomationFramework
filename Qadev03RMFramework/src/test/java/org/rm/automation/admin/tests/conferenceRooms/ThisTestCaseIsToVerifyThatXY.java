@@ -89,8 +89,6 @@ public class ThisTestCaseIsToVerifyThatXY {
 //	}
 	
 	
-	
-	
 	public static void main(String[] ar){
 		LoginPage login;
 		HomePage homePage;
@@ -103,18 +101,38 @@ public class ThisTestCaseIsToVerifyThatXY {
 		driver.get("http://localhost:4040/admin");
 		login = new LoginPage(driver);
 		homePage = login.SignIn("571Network\\Administrator", "Pilot571david77");
-		conferenceRoom = homePage.SelectRoomsOption();// ng-hide="row.entity.enabled"
-		System.out.println("room571 is: " + conferenceRoom.isEnabledRoom("room571"));
-		System.out.println("room67 is: " + conferenceRoom.isEnabledRoom("room67"));
-//		List<WebElement> list = conferenceRoom.roomsContainer.findElements(By.xpath("//span[@ng-show='row.entity.enabled']"));
-//		for(WebElement we : list){
-//			if(we.getText().equals("room67")){
-//				System.out.println(we.getText() + " is " + true);
-//			}else{
-//				System.out.println(we.getText() + " is " + false);
-//			}
-//		}
+		conferenceRoom = homePage.SelectRoomsOption();//
+		roomInfo = conferenceRoom.doubleClickConferenceRoom("room571");
+		roomInfo = roomInfo.setCode("007");
+		conferenceRoom = roomInfo.clickSaveBtn();
+		boolean res = conferenceRoom.isCodeUpdated("007", "room571");
+		System.out.println("The result is: " + res);
 }
+	
+//	public static void main(String[] ar){
+//		LoginPage login;
+//		HomePage homePage;
+//		ConferenceRoomsPage conferenceRoom;
+//		RoomInfoPage roomInfo;
+//		ResourceAssociationPage resourceAssociationPage;
+//		
+//		WebDriver driver = new FirefoxDriver();
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		driver.get("http://localhost:4040/admin");
+//		login = new LoginPage(driver);
+//		homePage = login.SignIn("571Network\\Administrator", "Pilot571david77");
+//		conferenceRoom = homePage.SelectRoomsOption();// ng-hide="row.entity.enabled"
+//		System.out.println("room571 is: " + conferenceRoom.isEnabledRoom("room571"));
+//		System.out.println("room67 is: " + conferenceRoom.isEnabledRoom("room67"));
+////		List<WebElement> list = conferenceRoom.roomsContainer.findElements(By.xpath("//span[@ng-show='row.entity.enabled']"));
+////		for(WebElement we : list){
+////			if(we.getText().equals("room67")){
+////				System.out.println(we.getText() + " is " + true);
+////			}else{
+////				System.out.println(we.getText() + " is " + false);
+////			}
+////		}
+//}
 	
 //	public static void main(String[] ar) throws UnsupportedOperationException, IOException{
 //		String roomId = ConferenceRoomsRequests.getRooms().get(0).get("_id").toString();

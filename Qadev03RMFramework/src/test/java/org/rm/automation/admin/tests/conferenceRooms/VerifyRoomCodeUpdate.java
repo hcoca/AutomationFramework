@@ -41,7 +41,8 @@ public class VerifyRoomCodeUpdate extends TestBaseSetup{
 	private String updatedCode = "UPDATED_571_CODE";
 	
 	private String expectedResult;
-	private String actualResult;
+	private String actualJSONResult;
+	private boolean actualResult;
 	
  	@BeforeTest
  	public void setup() throws UnsupportedOperationException, IOException{
@@ -61,9 +62,11 @@ public class VerifyRoomCodeUpdate extends TestBaseSetup{
 		conferenceRoom = roomInfo.clickSaveBtn();
 		
 		expectedResult = updatedCode;
-		actualResult = ConferenceRoomsRequests.getRoom(roomId).get("code").toString();
+		actualJSONResult = ConferenceRoomsRequests.getRoom(roomId).get("code").toString();
+		AssertJUnit.assertEquals(expectedResult, actualJSONResult);
 		
-		AssertJUnit.assertEquals(expectedResult, actualResult);
+		actualResult = conferenceRoom.isCodeUpdated(updatedCode, roomName);
+		AssertJUnit.assertTrue(actualResult);
 	}
 	
 	@AfterTest
