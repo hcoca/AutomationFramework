@@ -39,6 +39,7 @@ public class ConferenceRoomsPage extends HomePage{
 	
 	@FindBy(xpath = ConferenceRoomsLocators.ResourceContainerLocator)
 	public WebElement resourceContainer; 
+
 	
 	//
 	//
@@ -229,9 +230,7 @@ public class ConferenceRoomsPage extends HomePage{
 	/*
 	 * pass the out of order title
 	 * 
-	 * 
-	 * 
-	 * falta metodooooooooooooooooooooooo
+	 *  metodo Out of order
 	 * */
 	public boolean IsvisibleOOOIcon(String ooftext)
 	{

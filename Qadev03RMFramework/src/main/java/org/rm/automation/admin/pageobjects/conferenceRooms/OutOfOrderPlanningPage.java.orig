@@ -14,6 +14,7 @@ import org.rm.automation.utils.Waiters;
 
 public class OutOfOrderPlanningPage extends ConferenceRoomCommonPage {
 	
+<<<<<<< HEAD
 	@FindBy(xpath = "/html/body/div[4]/div/div/div[2]/div/div/div/div[2]/div[1]/div[3]/form/div[3]/div/label")
 	private WebElement actionsLabel;
 	
@@ -51,6 +52,10 @@ public class OutOfOrderPlanningPage extends ConferenceRoomCommonPage {
 	
 	@FindBy(xpath = "//a[@ng-click='decrementHours()']")
 	private WebElement hoursdecrementfrom;
+=======
+	@FindBy(xpath = OutOfOrderPlanningLocators.ActionsLabelLocator)
+	public WebElement actionsLabel;
+>>>>>>> bbf92c2ffb07686c30947999c45702f47e6cad5c
 	
 	@FindBy(xpath = "(//a[@ng-click='decrementHours()'])[2]")
 	private WebElement hoursdecrementTo;
@@ -83,8 +88,9 @@ public class OutOfOrderPlanningPage extends ConferenceRoomCommonPage {
 	}
 	
 	public String getActionsLabel(){
-		(new WebDriverWait(driver, 20))
-			.until(ExpectedConditions.visibilityOf(actionsLabel));
+		Waiters.WaitByVisibilityOfWebElement(actionsLabel, driver);
+//		(new WebDriverWait(driver, 20))
+//			.until(ExpectedConditions.visibilityOf(actionsLabel));
 		
 		return actionsLabel.getText();
 	}

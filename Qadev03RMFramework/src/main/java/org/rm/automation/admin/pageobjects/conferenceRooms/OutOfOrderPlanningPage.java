@@ -76,6 +76,7 @@ public class OutOfOrderPlanningPage extends ConferenceRoomCommonPage {
 	@FindBy(xpath = "//input[@type='text'])[9]")
 	private WebElement textTitle;
 	
+
 	
 	// class
 	public OutOfOrderPlanningPage(WebDriver driver){
