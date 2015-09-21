@@ -39,7 +39,7 @@ public class VerifylogoStateVisible extends TestBaseSetup{
  	@BeforeTest
  	public void setup() throws UnsupportedOperationException, IOException{
 		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomName = allRooms.get(2).get("displayName").toString();
+		roomName = allRooms.get(0).get("displayName").toString();
  	}
 	
  	

@@ -21,7 +21,8 @@ public class FormAssociateRoomPage {
 		PageFactory.initElements(driver, this);
 	}
 	public void searchConferenceRoom(String roomName) {
-		Waiters.WaitByXPath("//input[@ng-model='searchDisplayName']", driver);
+		Waiters.WaitByVisibilityOfWebElement(searchTextBox, driver);
+//		Waiters.WaitByXPath("//input[@ng-model='searchDisplayName']", driver);
 		if(searchTextBox.isDisplayed())
 		{
 			LogManager.info("FormAssociateRoomPage: Searching a conference room");

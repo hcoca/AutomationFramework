@@ -14,8 +14,11 @@ public class FormLocationPage {
 	private By locationDiv;
 	@FindBy(xpath="//a[contains(.,'Location Info')]")
 	  WebElement infoLink;
-	@FindBy(xpath="//a[contains(.,'Location Associations')]")
+//	@FindBy(xpath="//a[contains(.,'Location Associations')]")
+//	  WebElement associatedLink;
+	@FindBy(linkText = "Location Associations")
 	  WebElement associatedLink;
+	
 	@FindBy(id="location-add-name")
 	  WebElement nameTextBox;
 	@FindBy(id="location-add-display-name")
@@ -138,7 +141,8 @@ public class FormLocationPage {
 		return new HomePage(driver);
 	}
 	public FormAssociateRoomPage gotoLocationsAssociations(){
-		Waiters.WaitByXPath("//a[contains(.,'Location Associations')]", driver);
+		Waiters.WaitByVisibilityOfWebElement(associatedLink, driver);
+//		Waiters.WaitByXPath("//a[contains(.,'Location Associations')]", driver);
 		if(associatedLink.isDisplayed())
 		{
 			LogManager.info("FormLocationPage: Selecting Location Associations option");
