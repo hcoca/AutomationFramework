@@ -5,16 +5,20 @@ import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.json.simple.JSONObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.base.TestBaseSetup;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
+import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -26,42 +30,36 @@ public class VerifyTotalConferenceRooms extends TestBaseSetup{
 			.getPropertyFile("./Config/settings.properties");
 	String userName = settings.getProperty("username");
 	String password = settings.getProperty("password");
+
+	private LoginPage loginPage;
+	private HomePage homePage;
+	private ConferenceRoomsPage conferenceRoom;
 	
-//	WebDriver driver;
-	LoginPage objLogin;
-	HomePage objHomePage;
-	ConferenceRoomsPage objConferenceRooms;
+	private int numberOfRooms;
+	private int actualJSONResult;
+	private int expectedResult;
+	private int actualResult;
 	
-//	@BeforeTest
-//	public void setup(){
-//		driver = new FirefoxDriver();
-//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//		driver.get("http://localhost:4040//admin");
-////		driver.manage().window().maximize();
-//	}
-	
-//	@BeforeClass
-//	public void setUp() {
-//		driver=getDriver();
-////		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//	}
+	@BeforeTest
+ 	public void setup(){
+ 		List<JSONObject> roomsList = ConferenceRoomsRequests.getRooms();
+ 		LogManager.info("VerifyTotalConferenceRooms: Executing Precondition, getting all rooms");
+ 		numberOfRooms = roomsList.size();
+ 	}
 	
 	@Test(priority = 2)
 	public void verifyTotalConferenceRooms(){
-		objLogin = new LoginPage(driver);
-		objLogin.SignIn(userName, password);
-		objHomePage = new HomePage(driver);
-		objHomePage.SelectRoomsOption();
-		objConferenceRooms = new ConferenceRoomsPage(driver);
+		LogManager.info("VerifyTotalConferenceRooms: Executing Test Case");
 		
-		String actualResult = objConferenceRooms.getTotalItemsLabelValue();
-		String expectedResult = "Total Items: 3";
+		loginPage = new LoginPage(driver);
+		homePage = loginPage.SignIn(userName, password);
+		conferenceRoom = homePage.SelectRoomsOption();
 		
-		AssertJUnit.assertEquals(actualResult, expectedResult);
+		expectedResult = conferenceRoom.getNumberOfRoomsFromLabel();
+		actualJSONResult = numberOfRooms;
+		actualResult = conferenceRoom.getNumberOfRoomsFromContainer();
+		
+		AssertJUnit.assertEquals(expectedResult, actualJSONResult);
+		AssertJUnit.assertEquals(expectedResult, actualResult);
 	}
-	
-//	@AfterTest
-//    public void afterTest() {
-//        driver.quit();          
-//    }
 }

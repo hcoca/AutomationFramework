@@ -10,6 +10,7 @@ import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.RoomInfoPage;
 import org.rm.automation.base.TestBaseSetup;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.AssertJUnit;
@@ -45,20 +46,23 @@ public class VerifyRoomCapacityUpdate extends TestBaseSetup{
 	private boolean actualResult;
 	
  	@BeforeTest
- 	public void setup() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomId = allRooms.get(0).get("_id").toString();
+ 	public void setup(){
+		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
+		LogManager.info("VerifyRoomCapacityUpdate: Executing Precondition, getting a room");
+		roomId = room.get("_id").toString();
 		// This if-else should be re factorized.
-		if(allRooms.get(0).get("capacity") != null){
-			roomCapacity = allRooms.get(0).get("capacity").toString();
+		if(room.get("capacity") != null){
+			roomCapacity = room.get("capacity").toString();
 		}else{
 			roomCapacity = null;
 		}
-		roomName = allRooms.get(0).get("displayName").toString();
+		roomName = room.get("displayName").toString();
  	}
 	
 	@Test(priority = 2)
-	public void verifyRoomCapacityUpdate() throws UnsupportedOperationException, IOException{
+	public void verifyRoomCapacityUpdate(){
+		LogManager.info("VerifyRoomCapacityUpdate: Executing Test Case");
+		
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.SignIn(userName, password);
 		conferenceRoom = homePage.SelectRoomsOption();
@@ -75,7 +79,8 @@ public class VerifyRoomCapacityUpdate extends TestBaseSetup{
 	}
 	
 	@AfterTest
-	public void tearDown() throws UnsupportedOperationException, IOException{
+	public void tearDown(){
 		ConferenceRoomsRequests.setValue(roomId, "capacity", roomCapacity);
+		LogManager.info("VerifyRoomCapacityUpdate: Executing Postcondition, updating capacity to its original value");
 	}
 }

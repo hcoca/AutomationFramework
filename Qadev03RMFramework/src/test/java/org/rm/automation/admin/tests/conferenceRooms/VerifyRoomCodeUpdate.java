@@ -10,6 +10,7 @@ import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.RoomInfoPage;
 import org.rm.automation.base.TestBaseSetup;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.AssertJUnit;
@@ -45,15 +46,18 @@ public class VerifyRoomCodeUpdate extends TestBaseSetup{
 	private boolean actualResult;
 	
  	@BeforeTest
- 	public void setup() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomId = allRooms.get(0).get("_id").toString();
-		roomCode = allRooms.get(0).get("code").toString();
-		roomName = allRooms.get(0).get("displayName").toString();
+ 	public void setup(){
+ 		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
+ 		LogManager.info("VerifyRoomCodeUpdate: Executing Precondition, getting a room");
+		roomId = room.get("_id").toString();
+		roomCode = room.get("code").toString();
+		roomName = room.get("displayName").toString();
  	}
 	
 	@Test(priority = 2)
-	public void verifyRoomCodeUpdate() throws UnsupportedOperationException, IOException{
+	public void verifyRoomCodeUpdate(){
+		LogManager.info("VerifyRoomCodeUpdate: Executing Test Case");
+		
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.SignIn(userName, password);
 		conferenceRoom = homePage.SelectRoomsOption();
@@ -70,7 +74,8 @@ public class VerifyRoomCodeUpdate extends TestBaseSetup{
 	}
 	
 	@AfterTest
-	public void tearDown() throws UnsupportedOperationException, IOException{
+	public void tearDown(){
 		ConferenceRoomsRequests.setValue(roomId, "code", roomCode);
+		LogManager.info("VerifyRoomCodeUpdate: Executing Postcondition, updating code to its original value");
 	}
 }

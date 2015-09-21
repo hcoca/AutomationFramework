@@ -15,7 +15,8 @@
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName"/>		
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate"/>		
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifylogoStateVisible"/>		
-      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyEmailroomIsCorrectly"/>		
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyEmailroomIsCorrectly"/>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms"/>		
       <class name="org.rm.automation.admin.tests.impersonation.EnableImpersonation"/>		
       <class name="org.rm.automation.admin.tests.impersonation.DisableImpersonation"/>		
       <class name="org.rm.automation.admin.tests.locations.associateRoomWithLocation"/>		

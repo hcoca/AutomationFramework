@@ -26,6 +26,22 @@ import org.rm.automation.utils.api.ResourcesRequests;
 
 public class ThisTestCaseIsToVerifyThatXY {
 	
+	public static void main(String[] ar){
+		LoginPage login;
+		HomePage homePage;
+		ConferenceRoomsPage conferenceRoom;
+		RoomInfoPage roomInfo;
+		ResourceAssociationPage resourceAssociationPage;
+		
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get("http://localhost:4040/admin");
+		login = new LoginPage(driver);
+		homePage = login.SignIn("571Network\\Administrator", "Pilot571david77");
+		conferenceRoom = homePage.SelectRoomsOption();//
+		System.out.println("The number of rooms is: " + conferenceRoom.getNumberOfRoomsFromLabel());
+}
+	
 //	public static void testMainLUFER(String[] ar){
 //		/*ArrayList<JSONObject> eg;
 //		try {
@@ -89,25 +105,25 @@ public class ThisTestCaseIsToVerifyThatXY {
 //	}
 	
 	
-	public static void main(String[] ar){
-		LoginPage login;
-		HomePage homePage;
-		ConferenceRoomsPage conferenceRoom;
-		RoomInfoPage roomInfo;
-		ResourceAssociationPage resourceAssociationPage;
-		
-		WebDriver driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("http://localhost:4040/admin");
-		login = new LoginPage(driver);
-		homePage = login.SignIn("571Network\\Administrator", "Pilot571david77");
-		conferenceRoom = homePage.SelectRoomsOption();//
-		roomInfo = conferenceRoom.doubleClickConferenceRoom("room571");
-		roomInfo = roomInfo.setCode("007");
-		conferenceRoom = roomInfo.clickSaveBtn();
-		boolean res = conferenceRoom.isCodeUpdated("007", "room571");
-		System.out.println("The result is: " + res);
-}
+//	public static void main(String[] ar){
+//		LoginPage login;
+//		HomePage homePage;
+//		ConferenceRoomsPage conferenceRoom;
+//		RoomInfoPage roomInfo;
+//		ResourceAssociationPage resourceAssociationPage;
+//		
+//		WebDriver driver = new FirefoxDriver();
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		driver.get("http://localhost:4040/admin");
+//		login = new LoginPage(driver);
+//		homePage = login.SignIn("571Network\\Administrator", "Pilot571david77");
+//		conferenceRoom = homePage.SelectRoomsOption();//
+//		roomInfo = conferenceRoom.doubleClickConferenceRoom("room571");
+//		roomInfo = roomInfo.setCode("007");
+//		conferenceRoom = roomInfo.clickSaveBtn();
+//		boolean res = conferenceRoom.isCodeUpdated("007", "room571");
+//		System.out.println("The result is: " + res);
+//}
 	
 //	public static void main(String[] ar){
 //		LoginPage login;

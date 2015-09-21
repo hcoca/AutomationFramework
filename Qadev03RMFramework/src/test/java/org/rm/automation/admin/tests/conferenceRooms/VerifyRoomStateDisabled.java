@@ -10,6 +10,7 @@ import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.RoomInfoPage;
 import org.rm.automation.base.TestBaseSetup;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.AssertJUnit;
@@ -38,25 +39,26 @@ public class VerifyRoomStateDisabled extends TestBaseSetup{
 	private String roomId;
 	private String roomEnabled;
 	private String roomName;
-	
-//	private String expectedResult = "false";
-//	private String actualResult;
+
 	private boolean actualJSONResult;
 	private boolean actualResult;
 	
  	@BeforeTest
- 	public void setup() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomId = allRooms.get(0).get("_id").toString();
-		roomEnabled = allRooms.get(0).get("enabled").toString();
-		roomName = allRooms.get(0).get("displayName").toString();
+ 	public void setup(){
+ 		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
+ 		LogManager.info("VerifyRoomStateDisabled: Executing Precondition, getting a room");
+		roomId = room.get("_id").toString();
+		roomEnabled = room.get("enabled").toString();
+		roomName = room.get("displayName").toString();
 		if(roomEnabled.equals("false")){
 			ConferenceRoomsRequests.setValue(roomId, "enabled", "true");
 		}
  	}
 	
 	@Test(priority = 2)
-	public void verifyRoomStateDisabled() throws UnsupportedOperationException, IOException{
+	public void verifyRoomStateDisabled(){
+		LogManager.info("VerifyRoomStateDisabled: Executing Test Case");
+		
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.SignIn(userName, password);
 		conferenceRoom = homePage.SelectRoomsOption();
@@ -72,7 +74,8 @@ public class VerifyRoomStateDisabled extends TestBaseSetup{
 	}
 	
 	@AfterTest
-	public void tearDown() throws UnsupportedOperationException, IOException{
+	public void tearDown(){
 		ConferenceRoomsRequests.setValue(roomId, "enabled", roomEnabled);
+		LogManager.info("VerifyRoomStateDisabled: Executing Postcondition, updating room state to its original value");
 	}
 }

@@ -10,6 +10,7 @@ import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.RoomInfoPage;
 import org.rm.automation.base.TestBaseSetup;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.AssertJUnit;
@@ -38,35 +39,33 @@ public class VerifyRoomStateEnabled extends TestBaseSetup{
 	private String roomId;
 	private String roomEnabled;
 	private String roomName;
-	
-//	private String expectedResult = "true";
-//	private String actualResult;
+
 	private boolean actualJSONResult;
 	private boolean actualResult;
 	
  	@BeforeTest
- 	public void setup() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomId = allRooms.get(0).get("_id").toString();
-		roomEnabled = allRooms.get(0).get("enabled").toString();
-		roomName = allRooms.get(0).get("displayName").toString();
+ 	public void setup(){
+ 		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
+ 		LogManager.info("VerifyRoomStateEnabled: Executing Precondition, getting a room");
+		roomId = room.get("_id").toString();
+		roomEnabled = room.get("enabled").toString();
+		roomName = room.get("displayName").toString();
 		if(roomEnabled.equals("true")){
 			ConferenceRoomsRequests.setValue(roomId, "enabled", "false");
 		}
  	}
 	
 	@Test(priority = 2)
-	public void verifyRoomStateEnabled() throws UnsupportedOperationException, IOException{
+	public void verifyRoomStateEnabled(){
+		LogManager.info("VerifyRoomStateEnabled: Executing Test Case");
+		
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.SignIn(userName, password);
 		conferenceRoom = homePage.SelectRoomsOption();
 		roomInfo = conferenceRoom.doubleClickConferenceRoom(roomName);
 		roomInfo = roomInfo.clickPowerOffBtn();
 		conferenceRoom = roomInfo.clickSaveBtn();
-		
-//		actualResult = ConferenceRoomsRequests.getRoom(roomId).get("enabled").toString();
-//		
-//		AssertJUnit.assertEquals(expectedResult, actualResult);
+
 		actualJSONResult = (boolean)ConferenceRoomsRequests.getRoom(roomId).get("enabled");
 		AssertJUnit.assertTrue(actualJSONResult);
 		
@@ -75,7 +74,8 @@ public class VerifyRoomStateEnabled extends TestBaseSetup{
 	}
 	
 	@AfterTest
-	public void tearDown() throws UnsupportedOperationException, IOException{
+	public void tearDown(){
 		ConferenceRoomsRequests.setValue(roomId, "enabled", roomEnabled);
+		LogManager.info("VerifyRoomStateEnabled: Executing Postcondition, updating room state to its original value");
 	}
 }

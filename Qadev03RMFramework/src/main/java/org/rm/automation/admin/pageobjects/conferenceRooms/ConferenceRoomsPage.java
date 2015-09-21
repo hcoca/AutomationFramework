@@ -16,6 +16,7 @@ import org.rm.automation.admin.locators.conferenceRooms.ConferenceRoomsLocators;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.locations.IssuesPage;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
 
 public class ConferenceRoomsPage extends HomePage{
@@ -77,10 +78,33 @@ public class ConferenceRoomsPage extends HomePage{
 		PageFactory.initElements(super.driver, this);
 	}
 	
+	public int getNumberOfRoomsFromContainer(){
+		int res = 0;
+		
+		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
+		List<WebElement> list = roomsContainer.findElements(By.xpath(".//div[@ng-style='rowStyle(row)']"));
+		if(list.size() > 0 ){
+			res = list.size();
+		}
+		
+		return res;
+	}
+	
+	public int getNumberOfRoomsFromLabel(){
+		int res = 0;
+		
+		Waiters.WaitByVisibilityOfWebElement(totalItemsLabel, driver);
+		try {
+			res = Integer.parseInt(totalItemsLabel.getText().substring(13));
+		} catch (Exception e) {
+			LogManager.info("ConferenceRoomPage: Error parsing to integer");
+		}
+		
+		return res;
+	}
+	
 	public List<WebElement> getResources(){
 		Waiters.WaitByVisibilityOfWebElement(resourceContainer, driver);
-//		(new WebDriverWait(driver, 20))
-//		.until(ExpectedConditions.visibilityOf(resourceContainer));
 		List<WebElement> list = resourceContainer.findElements(By.xpath("//span[@ng-model='resource.isSelected']"));
 		
 		return list;
@@ -121,8 +145,6 @@ public class ConferenceRoomsPage extends HomePage{
 	
 	public ConferenceRoomsPage clickEnabledColumnBtn(){
 		Waiters.WaitByVisibilityOfWebElement(enabledColumnBtn, driver);
-//		(new WebDriverWait(driver, 20))
-//			.until(ExpectedConditions.visibilityOf(enabledColumnBtn));
 		enabledColumnBtn.click();
 		
 		return new ConferenceRoomsPage(driver);
@@ -130,8 +152,6 @@ public class ConferenceRoomsPage extends HomePage{
 	
 	public ConferenceRoomsPage clickOutOfOrderColumnBtn(){
 		Waiters.WaitByVisibilityOfWebElement(outOfOrderColumnBtn, driver);
-//		(new WebDriverWait(driver, 20))
-//			.until(ExpectedConditions.visibilityOf(outOfOrderColumnBtn));
 		outOfOrderColumnBtn.click();
 		
 		return new ConferenceRoomsPage(driver);
@@ -139,8 +159,6 @@ public class ConferenceRoomsPage extends HomePage{
 
 	public ConferenceRoomsPage clickRoomColumnBtn(){
 		Waiters.WaitByVisibilityOfWebElement(roomColumnBtn, driver);
-//		(new WebDriverWait(driver, 20))
-//			.until(ExpectedConditions.visibilityOf(roomColumnBtn));
 		roomColumnBtn.click();
 		
 		return new ConferenceRoomsPage(driver);
@@ -150,8 +168,6 @@ public class ConferenceRoomsPage extends HomePage{
 		RoomInfoPage res = null; 
 		
 		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
-//		roomsContainer = new WebDriverWait(driver, 20)
-//			.until(ExpectedConditions.visibilityOf(roomsContainer)); // //span[@class='ng-binding']
 		List<WebElement> list = roomsContainer.findElements(By.xpath(".//span[@class='ng-binding']"));// The span that contains the conference rooms.
 		for(WebElement webElement : list){
 			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
@@ -170,15 +186,11 @@ public class ConferenceRoomsPage extends HomePage{
 		WebElement res = null; 
 		
 		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
-//		roomsContainer = new WebDriverWait(driver, 20)
-//			.until(ExpectedConditions.visibilityOf(roomsContainer));
 		List<WebElement> list = roomsContainer.findElements(By.xpath(".//div[@ng-style='rowStyle(row)']"));
 		for(WebElement webElement : list){
 			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
 			WebElement roomLabel = webElement.findElement(By.xpath(".//span[@class='ng-binding']"));
 			Waiters.WaitByVisibilityOfWebElement(roomLabel, driver);
-//			roomLabel = new WebDriverWait(driver, 20)
-//					.until(ExpectedConditions.visibilityOf(roomLabel));
 			if(roomLabel.getText().equals(roomName)){
 				res = webElement;
 			}
@@ -246,16 +258,12 @@ public class ConferenceRoomsPage extends HomePage{
 	
 	public String getTotalItemsLabelValue(){
 		Waiters.WaitByVisibilityOfWebElement(totalItemsLabel, driver);
-//		(new WebDriverWait(driver, 20))
-//			.until(ExpectedConditions.visibilityOf(totalItemsLabel));
 		
 		return totalItemsLabel.getText();
 	}
 	
 	public String getConferenceRoomInfoLabel(){
 		Waiters.WaitByVisibilityOfWebElement(conferenceRoomInfoLabel, driver);
-//		(new WebDriverWait(driver, 20))
-//			.until(ExpectedConditions.visibilityOf(conferenceRoomInfoLabel));
 		
 		return conferenceRoomInfoLabel.getText();
 	}

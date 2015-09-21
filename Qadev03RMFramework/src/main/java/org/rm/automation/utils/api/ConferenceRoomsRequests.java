@@ -14,6 +14,7 @@ import org.apache.http.util.EntityUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 
 public class ConferenceRoomsRequests {
@@ -39,7 +40,7 @@ public class ConferenceRoomsRequests {
 	 * @throws UnsupportedOperationException
 	 * @throws IOException
 	 */
-	public static ArrayList<JSONObject> getRooms() throws UnsupportedOperationException, IOException
+	public static ArrayList<JSONObject> getRooms()
 	{
 		ArrayList<JSONObject> listResponse = new ArrayList<JSONObject>();
 		
@@ -71,9 +72,11 @@ public class ConferenceRoomsRequests {
 
             } 
             catch (Exception e) {
+            	LogManager.error("ConferenceRoomsRequests: Error parsing the json response");
             }
         } 
 		catch (IOException ex) {
+			LogManager.error("ConferenceRoomsRequests: Error stablishing the HTTP protocol");
         }
 		return listResponse;
 	}
@@ -83,7 +86,7 @@ public class ConferenceRoomsRequests {
 	 * @throws UnsupportedOperationException
 	 * @throws IOException
 	 */
-	public static void putRoom(String roomId, String updatedCustomDisplayName) throws UnsupportedOperationException, IOException
+	public static void putRoom(String roomId, String updatedCustomDisplayName)
 	{
 		String url = roomByIdEp.replace("[id]", roomId);
 		
@@ -111,6 +114,7 @@ public class ConferenceRoomsRequests {
             HttpResponse result = httpClient.execute(request);
         } 
 		catch (IOException ex) {
+			LogManager.error("ConferenceRoomsRequests: Error stablishing the HTTP protocol");
         }
 	}
 	
@@ -119,7 +123,7 @@ public class ConferenceRoomsRequests {
 	 * @throws UnsupportedOperationException
 	 * @throws IOException
 	 */
-	public static void setValue(String roomId, String parameter, String value) throws UnsupportedOperationException, IOException
+	public static void setValue(String roomId, String parameter, String value)
 	{
 		String url = roomByIdEp.replace("[id]", roomId);
 		
@@ -160,6 +164,7 @@ public class ConferenceRoomsRequests {
             HttpResponse result = httpClient.execute(request);
         } 
 		catch (IOException ex) {
+			LogManager.error("ConferenceRoomsRequests: Error stablishing the HTTP protocol");
         }
 	}
 	
@@ -171,16 +176,13 @@ public class ConferenceRoomsRequests {
 	public static String getRoomId(String name)
 	{
 		String id = "";
-		ArrayList<JSONObject> list;
-		try {
-			list = getRooms();
-			for (JSONObject object : list) {
-				if(object.get("customDisplayName").toString().equals(name))
-					id = object.get("_id").toString();
-			}
-		} catch (UnsupportedOperationException | IOException e) {
-			e.printStackTrace();
+		
+		ArrayList<JSONObject> list = getRooms();
+		for (JSONObject object : list) {
+			if(object.get("customDisplayName").toString().equals(name))
+				id = object.get("_id").toString();
 		}
+
 		return id;
 	}
 	
@@ -192,7 +194,7 @@ public class ConferenceRoomsRequests {
 	 * @throws UnsupportedOperationException
 	 * @throws IOException
 	 */
-	public static JSONObject getRoom(String roomId) throws UnsupportedOperationException, IOException{
+	public static JSONObject getRoom(String roomId){
 		JSONObject res = null;
 		
 		ArrayList<JSONObject> list = ConferenceRoomsRequests.getRooms();
@@ -205,7 +207,7 @@ public class ConferenceRoomsRequests {
 		return res;
 	}
 	
-	public static ArrayList<String> getResourceIdAssociatedToRoom(String roomId) throws UnsupportedOperationException, IOException{
+	public static ArrayList<String> getResourceIdAssociatedToRoom(String roomId){
 		ArrayList<String> res = new ArrayList<String>();
 		
 		JSONObject room = ConferenceRoomsRequests.getRoom(roomId);

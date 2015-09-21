@@ -11,6 +11,7 @@ import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ResourceAssociationPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.RoomInfoPage;
 import org.rm.automation.base.TestBaseSetup;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
@@ -46,17 +47,21 @@ public class VerifyResourceAssociatedToRoom extends TestBaseSetup{
 	private boolean actualResult;
 
 	@BeforeTest
-	public void setUp() throws UnsupportedOperationException, IOException{
+	public void setUp(){
 		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
+		LogManager.info("VerifyResourceAssociatedToRoom: Executing Precondition, getting a room");
 		roomId = room.get("_id").toString();
 		roomName = room.get("displayName").toString();
 		
 		ResourcesRequests.postResource(resourceName, resourceCustomName, resourceIcon, resourceDescription);
+		LogManager.info("VerifyResourceAssociatedToRoom: Executing Precondition, creating a resource");
 		resourceId = ResourcesRequests.getResourceId(resourceName);
 	}
 	
 	@Test
-	public void verifyResourceAssociatedToRoom() throws UnsupportedOperationException, IOException{
+	public void verifyResourceAssociatedToRoom(){
+		LogManager.info("VerifyResourceAssociatedToRoom: Executing Test Case");
+		
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.SignIn(userName, password);
 		conferenceRoom = homePage.SelectRoomsOption();
@@ -76,5 +81,6 @@ public class VerifyResourceAssociatedToRoom extends TestBaseSetup{
 	@AfterTest
 	public void tearDown(){
 		ResourcesRequests.deleteResource(resourceId);
+		LogManager.info("VerifyResourceAssociatedToRoom: Executing Postcondition, removing resource");
 	}
 }

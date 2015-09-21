@@ -21,10 +21,12 @@ public class ReportManager {
 	public static void appendImageHyperLink(String filePath){
 		enableHtmlReportEdition();
 		
+//		String failedTestImageLinkTag = "<b>Screenshot: </b><br/>"
+//			+ "<a href=\"[filePath]\">"
+//			+ "<img src=\"[filePath]\" alt=\"\" height='400' width='600'/><br/>";
 		String failedTestImageLinkTag = "<b>Screenshot: </b><br/>"
-			+ "<a href=\"[filePath]"
-	        + "\"><img src=\"[filePath]"
-	        + "\" alt=\"\"" + "height='400' width='600'/><br/>";
+				+ "<a href='[filePath]'>"
+				+ "<img src='[filePath]' alt='' height='400' width='600'/><br/>";
 		failedTestImageLinkTag = failedTestImageLinkTag.replace("[filePath]", filePath);
 		
 		Reporter.log(failedTestImageLinkTag); 
@@ -39,10 +41,17 @@ public class ReportManager {
 	public static void appendTestCaseErrorMessage(String testName, String message){
 		enableHtmlReportEdition();
 		
-		String errorMessageTag = "<a href=\"javascript:toggleElement('[testCaseName]', 'block')\" title=\"Click to expand/collapse\"><b>Test Case Title: [testCaseName]</b></a><br />";
-		errorMessageTag = errorMessageTag + "<div class=\"stackTrace\" id=\"[testCaseName]\" style=\"display: none;\">[message]</div><br />";
+//		String errorMessageTag = "<a href=\"javascript:toggleElement('[testCaseName]', 'block')\" title=\"Click to expand/collapse\"><b>Test Case Title: [testCaseName]</b></a><br />";
+//		errorMessageTag = errorMessageTag + "<div class=\"stackTrace\" id=\"[testCaseName]\" style=\"display: none;\">[message]</div><br />";
+		String errorMessageTag = "<a href=\"javascript:toggleElement('[testName]', 'block')\" title='Click to expand/collapse'>"
+				                 + "<b>Test Case Title: [testName]</b>"
+				               + "</a><br />"
+		                       + "<div class='stackTrace' id='[testName]' style='display:none;'>[message]</div><br />";
 		errorMessageTag = errorMessageTag
-			.replace("[testCaseName]", testName)
+			.replace("[testName]", testName)
+			.replace("[message]", message);
+		
+		errorMessageTag = errorMessageTag
 			.replace("[message]", message);
 		
 		Reporter.log(errorMessageTag); 
@@ -56,11 +65,11 @@ public class ReportManager {
 	public static void appendTestCaseName(String testName){
 		enableHtmlReportEdition();	
 		
-		String errorMessageTag = "<b>Test Case Title: [testCaseName]</b><br/>";
-		errorMessageTag = errorMessageTag
-			.replace("[testCaseName]", testName);
+		String messageTag = "<b>Test Case Title: [testName]</b><br/>";
+		messageTag = messageTag
+			.replace("[testName]", testName);
 		
-		Reporter.log(errorMessageTag); 
+		Reporter.log(messageTag); 
 	}
 	
 	/**
