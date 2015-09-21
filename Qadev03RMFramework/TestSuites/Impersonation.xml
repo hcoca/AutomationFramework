@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>		
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">		
+<suite name="BVT Impersonation Test Cases">		
+	
+ <test name="Impersonation Acceptance Test cases">		
+    <classes>     		
+    
+      <class name="org.rm.automation.admin.tests.impersonation.EnableImpersonation"/>		
+      <class name="org.rm.automation.admin.tests.impersonation.DisableImpersonation"/>		
+		
+    </classes>		
+  </test> <!-- Test -->  		
+</suite> <!-- Suite --> 		

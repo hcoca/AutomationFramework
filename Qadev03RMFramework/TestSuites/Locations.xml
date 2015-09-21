@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>		
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">		
+<suite name="BVT Locations Test Cases">		
+	
+ <test name="Locations Acceptance Test cases">		
+    <classes>     		
+    
+      <class name="org.rm.automation.admin.tests.locations.associateRoomWithLocation"/>		
+      <class name="org.rm.automation.admin.tests.locations.createChildLocation"/>		
+      <class name="org.rm.automation.admin.tests.locations.editLocation"/>		
+      <class name="org.rm.automation.admin.tests.locations.removeLocation"/>		
+      <class name="org.rm.automation.admin.tests.locations.removeLocationAssociated"/>		
+      <class name="org.rm.automation.admin.tests.locations.createBasicLocation"/>		
+      <class name="org.rm.automation.admin.tests.locations.createAssociatedLocation"/>		
+		
+    </classes>		
+  </test> <!-- Test -->  		
+</suite> <!-- Suite --> 		

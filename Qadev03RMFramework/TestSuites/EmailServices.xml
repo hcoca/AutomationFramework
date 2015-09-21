@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>		
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">		
+<suite name="BVT Email Services Test Cases">		
+	
+ <test name="Email Services Acceptance Test cases">		
+    <classes>     		
+    
+      <!-- <class name="org.rm.automation.admin.tests.emailServices.RemoveServer"/>		
+      <class name="org.rm.automation.admin.tests.emailServices.AddServer"/> -->		
+		
+    </classes>		
+  </test> <!-- Test -->  		
+</suite> <!-- Suite --> 		

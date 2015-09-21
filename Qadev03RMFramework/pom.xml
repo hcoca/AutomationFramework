@@ -8,6 +8,10 @@
   <name>Qadev03RMFramework</name>
   <url>http://maven.apache.org</url>
   
+  <properties>
+	<suite></suite>
+  </properties>
+  
 	<build>
   		<plugins>
         	<plugin>
@@ -15,6 +19,7 @@
 	    		<artifactId>maven-surefire-plugin</artifactId>
 			    <version>2.18.1</version>
 			    <configuration>
+			    
 			        <properties>
 			            <property>
 			               <name>listener</name>
@@ -28,7 +33,7 @@
 			        </properties>
 	        		<reportsDirectory>${basedir}/Reports</reportsDirectory>
 	        		<suiteXmlFiles>
-	            		<suiteXmlFile>testng.xml</suiteXmlFile>
+	            		<suiteXmlFile>./TestSuites/${suite}.xml</suiteXmlFile>
 	        	    </suiteXmlFiles>
 			    </configuration>
 			</plugin>
