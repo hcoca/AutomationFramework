@@ -3,7 +3,9 @@
 <suite name="Suite for Acceptance test cases">		
 	
  <test name="Acceptance Test cases">		
-    <classes>      		
+    <classes>   
+    
+      <class name="org.rm.automation.admin.tests.tablets.ChangeColorTablet"/>   		
       <class name="org.rm.automation.admin.tests.login.DisplayLogon"/>		
       <class name="org.rm.automation.admin.tests.login.DisplayHomeConsole"/>		
       <class name="org.rm.automation.admin.tests.login.DisplayMainMenu"/>		
@@ -32,7 +34,8 @@
       <class name="org.rm.automation.admin.tests.resources.UpdateIcon"/>		
       <class name="org.rm.automation.admin.tests.resources.UpdateDescription"/>		
       <class name="org.rm.automation.admin.tests.resources.SearchResource"/>		
-      <class name="org.rm.automation.admin.tests.resources.DeleteResource"/>		
+      <class name="org.rm.automation.admin.tests.resources.DeleteResource"/>	
+      	
       <!-- <class name="org.rm.automation.admin.tests.emailServices.RemoveServer"/>		
       		
       <class name="org.rm.automation.admin.tests.emailServices.AddServer"/> -->		

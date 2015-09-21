@@ -6,12 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.admin.pageobjects.HomePage;
 
-public class TabletsPage extends HomePage {
+public class TabletsAdminPage extends HomePage {
 	@FindBy(xpath = "//button[@ui-sref='admin.tablet.modal.appearance']")
 	WebElement button;
 	
 	
-	public TabletsPage(WebDriver driver) {
+	public TabletsAdminPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(super.driver, this);
 	}

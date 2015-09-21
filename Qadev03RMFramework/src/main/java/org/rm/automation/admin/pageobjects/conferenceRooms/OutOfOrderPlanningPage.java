@@ -194,6 +194,8 @@ public class OutOfOrderPlanningPage extends ConferenceRoomCommonPage {
 		setdownhoursFrom(1);		
 
 		selectTitle(tipe);
+		
+		//enableDisableBtn();
 		savebuttonOOOP();
 		return new ConferenceRoomsPage(driver);
 	}
