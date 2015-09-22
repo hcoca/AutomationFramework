@@ -37,9 +37,11 @@ public class ConferenceRoomCommonPage {
 	}
 	
 	public String getemailroom() {
+		Waiters.WaitByVisibilityOfWebElement(emailroom, driver);
 		return emailroom.getText();
 	}
 	public String getNameRoom() {
+		Waiters.WaitByVisibilityOfWebElement(nameroom, driver);
 		return nameroom.getText();
 	}
 	

@@ -16,6 +16,7 @@ import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
+import org.seleniumhq.jetty7.util.log.Log;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -56,14 +57,26 @@ public class VerifyEmailroomIsCorrectly extends TestBaseSetup{
 
 		roomInfo = conferenceRoom.doubleClickConferenceRoom(roomName);
 		String roominfoEmail = roomInfo.getemailroom();
-		Assert.assertEquals(emailroom, roominfoEmail);
+		try{
+			Assert.assertEquals(emailroom, roominfoEmail);
+		}catch(Throwable t) {
+			LogManager.error("::error Assert::VerifyEmail"+t.toString());
+		}
 		
 		resourseasso = roomInfo.clickResourceAssociationBtn();
 		String resourceAEmail = resourseasso.getemailroom();
-		Assert.assertEquals(emailroom, resourceAEmail);
+		try{
+			Assert.assertEquals(emailroom, resourceAEmail);
+		}catch(Throwable t) {
+			LogManager.error("::error Assert::VerifyEmail"+t.toString());
+		}
 		
 		ooopp = resourseasso.clickOutOfOrderPlanningBtn();
 		String actual = ooopp.getemailroom();
-		Assert.assertEquals(emailroom, actual);
+		try{
+			Assert.assertEquals(emailroom, actual);
+		}catch(Throwable t) {
+			LogManager.error("::error Assert::VerifyEmail"+t.toString());
+		}
  	}
 }
