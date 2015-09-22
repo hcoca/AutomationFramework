@@ -1,5 +1,6 @@
 package org.rm.automation.tablet.pageobjects;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -16,7 +17,13 @@ import org.rm.automation.utils.Waiters;
 public class LoginPage {
 	
 	private WebDriver driver;
+
+	private static List<String> roomNames = new ArrayList<String>();
+	private final String roomListPath = "//div[@class='list-group ng-scope']";
+	private final String roomNamePath = "//strong";
 	
+	@FindBy(xpath=roomListPath) WebElement roomList;
+		
 	@FindBy(id ="service-url-input")
 	private WebElement urlTextBox;
 
@@ -37,13 +44,6 @@ public class LoginPage {
 	
 	@FindBy(css ="button.btn.btn-primary")
 	private WebElement accessTablet;
-	
-	
-	private List<WebElement> listRooms;
-	private final String roomListPath = "//div[@class='list-group ng-scope']";
-	private final String roomNamePath = "//strong";
-	
-	@FindBy(xpath=roomListPath) WebElement roomList;
 	
 	
 	Properties settings = ReadPropertyValues
@@ -111,6 +111,7 @@ public class LoginPage {
 
 	public void selectRoom(String room){
 		picker();
+		setRoomList();
 		List<WebElement> roomlis = roomlist.findElements(By.xpath("//strong"));
 		Waiters.WaitByVisibilityOfWebElement(roomlist, driver);
 		for (WebElement roomEl : roomlis) {
@@ -121,22 +122,26 @@ public class LoginPage {
 		}
 		LogManager.warn("LoginPageTablet: room non found");
 	}
-	
-		
+
 	/**
 	 * Method to save in a list the rooms that display in the login page
 	 */
 	private void setRoomList() {
-		listRooms = roomList.findElements(By.xpath(roomNamePath));
+		LogManager.info("LoginPage : Setting the rooms of login");
+		List<WebElement> listRooms = roomList.findElements(By.xpath(roomNamePath));
+		for (WebElement room : listRooms) {
+			roomNames.add(room.getText());
+		}
 	}
 	
 	/**
 	 * Method to get the rooms displayed in the login page
 	 * @return
 	 */
-	public List<WebElement> getRoomList()
+	public static List<String> getRoomList()
 	{
-		return listRooms;
+		LogManager.info("LoginPage : Getting the rooms of login");
+
+		return roomNames;
 	}
-	 		 
 }
