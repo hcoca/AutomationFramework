@@ -122,7 +122,6 @@ public class LoginPage {
 		}
 		LogManager.warn("LoginPageTablet: room non found");
 	}
-}
 
 	/**
 	 * Method to save in a list the rooms that display in the login page
