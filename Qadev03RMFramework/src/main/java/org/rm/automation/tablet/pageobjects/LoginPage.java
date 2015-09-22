@@ -5,9 +5,11 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.rm.automation.tablet.pageobjects.HomePage;
+import org.openqa.selenium.support.PageFactory;
+import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
+import org.rm.automation.utils.Waiters;
 
 public class LoginPage {
 	
@@ -27,9 +29,10 @@ public class LoginPage {
 	public LoginPage(WebDriver driver){
 		this.driver = driver;
 		driver.get(settings.getProperty("url_tablet"));
+		PageFactory.initElements(driver, this);
 	}
 	
-	public void setUrl(String url)
+	public LoginPage setUrl(String url)
 	{
 		LogManager.info("LoginPage : Typing the URL from the RM server");
 		WebElement URL = driver.findElement(urlTextBox);
@@ -37,18 +40,22 @@ public class LoginPage {
 			URL.clear();
 			URL.sendKeys(url);	
 		}
+		
+		return this;
 	}
 		
-	public void setUserName(String userName) {
+	public LoginPage setUserName(String userName) {
 		LogManager.info("LoginPage : Typing RM admininstrator's username");
 		WebElement usernameTxtBox = driver.findElement(usernameTextBox);
 		if(usernameTxtBox.isDisplayed()){
 			usernameTxtBox.clear();
 			usernameTxtBox.sendKeys(userName);
 		}
+		
+		return this;
 	}
 	
-	public void setPassword(String password)
+	public LoginPage setPassword(String password)
 	{
 		LogManager.info("LoginPage : Typing RM administrator's password");
 		WebElement passwordTxtBox = driver.findElement(passwordTextBox);
@@ -56,6 +63,8 @@ public class LoginPage {
 			passwordTxtBox.clear();
 			passwordTxtBox.sendKeys(password);
 		}
+		
+		return this;
 	}
 	
 	public void login()
@@ -66,7 +75,7 @@ public class LoginPage {
 			signButton.click();
 	}
 	
-	public void setRoom(){
+	public LoginPage setRoom(){
 		LogManager.info("LoginPage : Selecting the conference room to manage");
 
 		WebElement roomPicker = driver.findElement(roomSelector);		
@@ -75,7 +84,9 @@ public class LoginPage {
 		
 		WebElement roomOpt = driver.findElement(roomOption);		
 		if(roomOpt.isDisplayed())			
-			roomOpt.click();	
+			roomOpt.click();
+		
+		return this;
 	}
 	
 	public HomePage access(String url, String admin, String pass)
@@ -89,6 +100,14 @@ public class LoginPage {
 		WebElement accessTab = driver.findElement(accessTablet);		
 		if(accessTab.isDisplayed())			
 			accessTab.click();	
+		return new HomePage(driver);
+	}
+	
+	public HomePage getTabletHomePage(){
+		WebElement accessTab = driver.findElement(accessTablet);
+		Waiters.WaitByVisibilityOfWebElement(accessTab, driver);
+		accessTab.click();
+		
 		return new HomePage(driver);
 	}
 }

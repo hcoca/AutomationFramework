@@ -3,16 +3,17 @@ package org.rm.automation.tablet.pageobjects.search;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.rm.automation.tablet.pageobjects.HomePage;
+import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.utils.Waiters;
 
-public class SearchPage extends HomePage{
+public class SearchPage{
 	
+	WebDriver driver;
 	WebElement element;
 	
 	public SearchPage(WebDriver driver){
-		super(driver);
+		this.driver = driver;
 	}
 
 	public SearchPage selectResource(){

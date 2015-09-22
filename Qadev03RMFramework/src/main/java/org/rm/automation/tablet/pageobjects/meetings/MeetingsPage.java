@@ -5,18 +5,18 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.rm.automation.tablet.pageobjects.HomePage;
+import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
 import org.testng.Assert;
 
-public class MeetingsPage extends HomePage {
+public class MeetingsPage{
 	
+	WebDriver driver;
 	WebElement element;
 	
 	public MeetingsPage(WebDriver driver){
-		super(driver);
-		PageFactory.initElements(driver, this);
+		this.driver = driver;
 	}	
 	
 	public MeetingsPage setOrganizer(String name){	
