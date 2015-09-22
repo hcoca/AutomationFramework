@@ -1,10 +1,12 @@
 package org.rm.automation.tablet.pageobjects;
 
+import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.utils.LogManager;
@@ -21,6 +23,12 @@ public class LoginPage {
 	private By roomSelector = By.xpath("//div[@type='button']"); //setRoom()
 	private By roomOption = By.xpath("//section[@id='rm-account-status']/div[3]/div[2]/div/rm-select-item/div/div[2]/div/a");	//setRoom()
 	private By accessTablet = By.cssSelector("button.btn.btn-primary"); //access()
+	
+	private List<WebElement> listRooms;
+	private final String roomListPath = "//div[@class='list-group ng-scope']";
+	private final String roomNamePath = "//strong";
+	
+	@FindBy(xpath=roomListPath) WebElement roomList;
 	
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
@@ -67,12 +75,14 @@ public class LoginPage {
 		return this;
 	}
 	
-	public void login()
+	public LoginPage login()
 	{
 		LogManager.info("LoginPage : Clicking on sign in button to authenticate the account and enable the room selection");
 		WebElement signButton = driver.findElement(signInButton);
 		if(signButton.isDisplayed())			
 			signButton.click();
+		
+		return this;
 	}
 	
 	public LoginPage setRoom(){
@@ -82,13 +92,15 @@ public class LoginPage {
 		if(roomPicker.isDisplayed())			
 			roomPicker.click();			
 		
+		setRoomList();
+		
 		WebElement roomOpt = driver.findElement(roomOption);		
 		if(roomOpt.isDisplayed())			
 			roomOpt.click();
 		
 		return this;
 	}
-	
+
 	public HomePage access(String url, String admin, String pass)
 	{	
 		LogManager.info("LoginPage : Accessing to the selected conference room");
@@ -109,5 +121,21 @@ public class LoginPage {
 		accessTab.click();
 		
 		return new HomePage(driver);
+	}
+	
+	/**
+	 * Method to save in a list the rooms that display in the login page
+	 */
+	private void setRoomList() {
+		listRooms = roomList.findElements(By.xpath(roomNamePath));
+	}
+	
+	/**
+	 * Method to get the rooms displayed in the login page
+	 * @return
+	 */
+	public List<WebElement> getRoomList()
+	{
+		return listRooms;
 	}
 }
