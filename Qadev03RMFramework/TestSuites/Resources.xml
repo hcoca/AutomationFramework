@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>		
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">		
+<suite name="BVT Resources Test Cases">		
+	
+ <test name="Resources Acceptance Test Cases">		
+    <classes>     		
+		
+      <class name="org.rm.automation.admin.tests.resources.CreateResource"/>		
+      <class name="org.rm.automation.admin.tests.resources.CreateResourceAllFields"/>		
+      <class name="org.rm.automation.admin.tests.resources.UpdateName"/>		
+      <class name="org.rm.automation.admin.tests.resources.UpdateDisplayName"/>		
+      <class name="org.rm.automation.admin.tests.resources.UpdateIcon"/>		
+      <class name="org.rm.automation.admin.tests.resources.UpdateDescription"/>		
+      <class name="org.rm.automation.admin.tests.resources.SearchResource"/>		
+      <class name="org.rm.automation.admin.tests.resources.DeleteResource"/>
+		
+    </classes>		
+  </test> <!-- Test -->  		
+</suite> <!-- Suite --> 		

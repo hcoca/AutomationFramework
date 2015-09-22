@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>		
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">		
+<suite name="BVT Login Test Cases">		
+	
+ <test name="Login Acceptance Test Cases">		
+    <classes>     		
+    
+      <class name="org.rm.automation.admin.tests.login.DisplayLogon"/>		
+      <class name="org.rm.automation.admin.tests.login.DisplayHomeConsole"/>		
+      <class name="org.rm.automation.admin.tests.login.DisplayMainMenu"/>	
+      	
+    </classes>		
+  </test> <!-- Test -->  		
+</suite> <!-- Suite --> 		

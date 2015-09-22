@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>		
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">		
+<suite name="BVT Conference Rooms Test Cases">		
+	
+ <test name="Conference Rooms Acceptance Test Cases">		
+    <classes>     		
+    
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom"/>		
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled"/>		
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled"/>		
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCapacityUpdate"/>		
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomCodeUpdate"/>		
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomName"/>		
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomNameUpdate"/>		
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifylogoStateVisible"/>		
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyEmailroomIsCorrectly"/>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyTotalConferenceRooms"/>		
+		
+    </classes>		
+  </test> <!-- Test -->  		
+</suite> <!-- Suite --> 		
