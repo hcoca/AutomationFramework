@@ -38,6 +38,7 @@ public class LoginPage {
 	@FindBy(css ="button.btn.btn-primary")
 	private WebElement accessTablet;
 	
+	
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
 	
@@ -68,19 +69,22 @@ public class LoginPage {
 		passwordTextBox.sendKeys(password);
 	}
 	
-	public void login()
+	public LoginPage login()
 	{
 		Waiters.WaitByVisibilityOfWebElement(signInButton, driver);
 		LogManager.info("LoginPage : Clicking on sign in button to authenticate the account and enable the room selection");
 		signInButton.click();
+		return this;
 	}
+
 
 	public void picker() {
 		Waiters.WaitByVisibilityOfWebElement(roomSelector, driver);
 		roomSelector.click();
 	}
-	
-	public HomePage access(String url, String admin, String pass,String roomName)
+
+
+	public HomePage access(String url, String admin, String pass ,String roomName)
 	{	
 		LogManager.info("LoginPage : Accessing to the selected conference room");
 		setUrl(url);
@@ -97,13 +101,13 @@ public class LoginPage {
 		return new HomePage(driver);
 	}
 	
+
 	public void selectRoom(String room){
 		picker();
 		List<WebElement> roomlis = roomlist.findElements(By.xpath("//strong"));
 		Waiters.WaitByVisibilityOfWebElement(roomlist, driver);
 		for (WebElement roomEl : roomlis) {
 			if(roomEl.getText().contains(room)){
-				System.out.println("entramossss"+roomEl.getText());
 				roomEl.click();
 				LogManager.info("LoginPageTablet: select room");
 			}
