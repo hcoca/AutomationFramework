@@ -6,7 +6,8 @@
     <classes>     		
       <class name="org.rm.automation.admin.tests.login.DisplayLogon"/>		
       <class name="org.rm.automation.admin.tests.login.DisplayHomeConsole"/>		
-      <class name="org.rm.automation.admin.tests.login.DisplayMainMenu"/>		
+      <class name="org.rm.automation.admin.tests.login.DisplayMainMenu"/>
+      <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyEmailroomIsCorrectly"/>		
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyResourceAssociatedToRoom"/>		
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateEnabled"/>		
       <class name="org.rm.automation.admin.tests.conferenceRooms.VerifyRoomStateDisabled"/>		
@@ -34,11 +35,9 @@
       <class name="org.rm.automation.admin.tests.resources.UpdateDescription"/>		
       <class name="org.rm.automation.admin.tests.resources.SearchResource"/>		
       <class name="org.rm.automation.admin.tests.resources.DeleteResource"/>
-      <class name="org.rm.automation.admin.tests.tablets.ChangeColorTablet"/> 	
-      	
-      <!-- <class name="org.rm.automation.admin.tests.emailServices.RemoveServer"/>		
-      		
-      <class name="org.rm.automation.admin.tests.emailServices.AddServer"/> -->		
+      <class name="org.rm.automation.admin.tests.tablets.ChangeColorTablet"/> 	  	
+      <class name="org.rm.automation.admin.tests.emailServices.RemoveServer"/>		
+      <class name="org.rm.automation.admin.tests.emailServices.AddServer"/>	
       <!-- <class name="org.rm.automation.tablet.tests.meetings.CreateMeeting"/> -->		
 		
     </classes>		
