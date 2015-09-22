@@ -3,7 +3,7 @@ package org.rm.automation.tablet.pageobjects.search;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.rm.automation.tablet.pageobjects.homepage.HomePage;
+import org.rm.automation.tablet.pageobjects.homepage.MenuTabletPage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.utils.Waiters;
 

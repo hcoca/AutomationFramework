@@ -3,8 +3,8 @@ package org.rm.automation.tablet.tests.homepage;
 import java.util.Properties;
 
 import org.rm.automation.base.TestBaseSetup;
+import org.rm.automation.tablet.pageobjects.HomePage;
 import org.rm.automation.tablet.pageobjects.LoginPage;
-import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.testng.annotations.Test;
