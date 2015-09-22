@@ -39,6 +39,13 @@ public class LoginPage {
 	private WebElement accessTablet;
 	
 	
+	private List<WebElement> listRooms;
+	private final String roomListPath = "//div[@class='list-group ng-scope']";
+	private final String roomNamePath = "//strong";
+	
+	@FindBy(xpath=roomListPath) WebElement roomList;
+	
+	
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
 	
@@ -114,4 +121,22 @@ public class LoginPage {
 		}
 		LogManager.warn("LoginPageTablet: room non found");
 	}
+	
+		
+	/**
+	 * Method to save in a list the rooms that display in the login page
+	 */
+	private void setRoomList() {
+		listRooms = roomList.findElements(By.xpath(roomNamePath));
+	}
+	
+	/**
+	 * Method to get the rooms displayed in the login page
+	 * @return
+	 */
+	public List<WebElement> getRoomList()
+	{
+		return listRooms;
+	}
+	 		 
 }
