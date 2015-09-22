@@ -6,16 +6,15 @@ import java.security.SecureRandom;
 public final class StringGenerator {
 	
 	private static SecureRandom random = new SecureRandom();
+	static final String line = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdejfgijklmnopqrstuvwxyz";
 	
 	public static String getString() {
-	    return new BigInteger(130, random).toString(32);
+		int len = 8;
+	    StringBuilder res = new StringBuilder(len);
+	    for( int i = 0; i < len; i++ ) 
+	       res.append( line.charAt( random.nextInt(line.length()) ) );
+	    return res.toString();
 	}
-
-//	public static void main(String[] args) {
-//		
-//		System.out.println(StringGenerator.nextSessionId());
-//	}
-			  
 }
 
 
