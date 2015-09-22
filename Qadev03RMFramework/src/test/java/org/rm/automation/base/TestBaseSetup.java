@@ -50,9 +50,14 @@ public class TestBaseSetup implements ISuiteListener,IReporter{
 	
 	/* 
 	 * The method generates a report for all the ISuites after their execution.
+	 * 
+	 * Update: the driver.quit() method has been moved here so that in this way it will be triggered
+	 * just after the overridden method generateReport is called (generateReport always will be triggered 
+	 * after a list of suites)
 	 */
 	@Override
-    public void generateReport(List<XmlSuite> arg0, List<ISuite> arg1, String arg2) {           
+    public void generateReport(List<XmlSuite> arg0, List<ISuite> arg1, String arg2) {
+		driver.quit();
     	LogManager.info("Browser: " + browser + " was closed");
     	for(ISuite suite : arg1){
     		LogManager.info("Test " + suite.getName() + " report location: " + suite.getOutputDirectory());
@@ -64,6 +69,6 @@ public class TestBaseSetup implements ISuiteListener,IReporter{
 	 */
 	@Override
 	public void onFinish(ISuite suite) { 
-		driver.quit(); 
+//		driver.quit(); 
 	}
 }
