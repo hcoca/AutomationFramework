@@ -97,6 +97,12 @@ public class LoginPage {
 		setUrl(url);
 		setUserName(admin);
 		setPassword(pass);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		login();
 		selectRoom(roomName);				
 		return getTabletHomePage();

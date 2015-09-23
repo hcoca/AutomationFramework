@@ -181,11 +181,13 @@ public class MeetingsRequests {
         }
 	}
 	
-	public static void postMeeting(String roomName) throws UnsupportedOperationException, ParseException, IOException
+	public static void postMeeting(String roomName, String meetingTitle, String startTime, String endTime) throws UnsupportedOperationException, ParseException, IOException
 	{
 		// room.manager is the organizer and M@nager is the password
-		String str = "Administrator:Control123!";
-		byte[] bytesEncoded = Base64.encodeBase64(str .getBytes());
+		String userES = settings.getProperty("userES");
+		String str = userES + ":" + settings.getProperty("passwordES");
+		//String str = "Administrator:Control123!";
+		byte[] bytesEncoded = Base64.encodeBase64(str.getBytes());
 		token = new String(bytesEncoded );
 		
 		String service = ServicesRequests.getServiceId();
@@ -212,11 +214,11 @@ public class MeetingsRequests {
 			 * Request's body
 			 */
 			JSONObject body = new JSONObject();
-			body.put("organizer", "room.manager");
-		  	body.put("title", "Whatever");
-		  	body.put("start", "2015-09-22T23:00:00.000Z");
-		  	body.put("end", "2015-09-22T23:30:00.000Z");
-		  	body.put("location", "Conference Room1");
+			body.put("organizer", userES);
+		  	body.put("title", meetingTitle);
+		  	body.put("start", startTime);
+		  	body.put("end", endTime);
+		  	body.put("location", roomName);
 		  	body.put("roomEmail", conFerenceRoomEmail);
 		  	body.put("resources", new JSONArray());
 		  	body.put("attendees", new JSONArray());

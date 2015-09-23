@@ -17,8 +17,8 @@ import org.testng.annotations.Test;
 
 public class VerifyNameRoomSelected extends TestBaseSetup {
 	// import class needed
-	LoginPage login = new LoginPage(driver);
-	HomePage homepage;
+	private LoginPage login;
+	private HomePage homepage;
 	// tablet properties
 	private String serviceURL;
 	// room properties 
@@ -39,10 +39,11 @@ public class VerifyNameRoomSelected extends TestBaseSetup {
  	public void setup() throws UnsupportedOperationException, IOException{
 		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
 		roomName = allRooms.get(0).get("displayName").toString();
-		serviceURL = "http://"+server+":"+port;
+		serviceURL = "http://" + server + ":" + port + "/";
  	}
  	@Test
  	public void verifyNameRoom(){
+ 		login = new LoginPage(driver);
  		homepage = login.access(serviceURL, userName, userPw, roomName);
  		String actual = homepage.getRoomNamelabel();
  		try {

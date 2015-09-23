@@ -23,7 +23,7 @@ public class test extends TestBaseSetup{
 	public void test() throws InterruptedException{
 		
 		LoginPage loginPage = new LoginPage(driver);
-		homePage = loginPage.access("http://172.20.208.142:4040/", "roompro\\room", "Control123!", "b21");
+		homePage = loginPage.access("http://localhost:4040/", "571Network\\Administrator", "Pilot571david77", "room571");
 		meetingsPage = homePage.selectSchedulePage();
 				
 		Thread.sleep(10000);

@@ -54,4 +54,9 @@ public class HomePage {
 	public String getRoomNamelabel() {
 		return labelRoomName.getText();
 	}
+	
+	
+	public WebDriver getDriver(){
+		return driver;
+	}
 }
