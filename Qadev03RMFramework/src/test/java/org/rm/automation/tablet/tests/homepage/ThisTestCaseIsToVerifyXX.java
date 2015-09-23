@@ -23,6 +23,10 @@ import org.rm.automation.utils.api.MeetingsRequests;
 
 public class ThisTestCaseIsToVerifyXX {
 	
+	public static void main(String[] ar){
+		
+	}
+	
 //	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{
 //		Properties settings = ReadPropertyValues
 //				.getPropertyFile("./Config/settings.properties");
@@ -49,22 +53,22 @@ public class ThisTestCaseIsToVerifyXX {
 //		MeetingsRequests.postMeeting("room571", "571FTW", RoomManagerTime.substractMinutes(1), RoomManagerTime.addMinutes(10));
 //	}
 	
-	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{// 560287dfc5c01db814c16198
+//	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{// 560287dfc5c01db814c16198
 //		MeetingsRequests.postMeeting("room571", "green", RoomManagerTime.substractMinutes(1), RoomManagerTime.addMinutes(3));
 //		String meetingId = MeetingsRequests.getMeetingId("green", "room571");
 //		MeetingsRequests.deleteMeeting(meetingId, "room571");
 //		System.out.println(meetingId);
-		List<JSONObject> list = MeetingsRequests.getRoomMeetings("room571");
-		for(JSONObject json : list){
-			System.out.println(json);
-		}
+//		List<JSONObject> list = MeetingsRequests.getRoomMeetings("room571");
+//		for(JSONObject json : list){
+//			System.out.println(json);
+//		}
 //		String start = RoomManagerTime.substractMinutes(1);
 //		String end = RoomManagerTime.addMinutes(3);
 //		String actual = RoomManagerTime.getRoomManagerTime();
 //		System.out.println(start);
 //		System.out.println(end);
 //		System.out.println(actual);
-	}
+//	}
 	
 //	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{
 //		Date date = new Date();

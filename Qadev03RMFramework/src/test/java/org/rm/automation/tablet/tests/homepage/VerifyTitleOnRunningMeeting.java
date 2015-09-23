@@ -15,10 +15,16 @@ import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.rm.automation.utils.api.MeetingsRequests;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+/**
+ * @author Pedro David Fuentes Antezana
+ * 
+ * This test case is to verify that after a meeting has been created, the meeting title is the same as
+ * the title displayed in the "now panel" of the tablet home page.  
+ */
 public class VerifyTitleOnRunningMeeting extends TestBaseSetup {
 	// Page objects for this test
 	private LoginPage login;
@@ -42,8 +48,8 @@ public class VerifyTitleOnRunningMeeting extends TestBaseSetup {
 	
 	// Meeting properties
 	private String meetingTitle = "meetingTitle";
-	private String startTime = RoomManagerTime.substractMinutes(1);
-	private String endTime = RoomManagerTime.addMinutes(3);
+	private String startTime = RoomManagerTime.substractMinutesToCurrentTime(1);
+	private String endTime = RoomManagerTime.addMinutesToCurrentTime(3);
 	private String meetingId;
 	
 	// Results
@@ -83,7 +89,7 @@ public class VerifyTitleOnRunningMeeting extends TestBaseSetup {
 		}
  	}
  	
- 	@AfterTest
+ 	@AfterClass
  	public void tearDown(){
  		try {
 			MeetingsRequests.deleteMeeting(meetingId, roomName);
