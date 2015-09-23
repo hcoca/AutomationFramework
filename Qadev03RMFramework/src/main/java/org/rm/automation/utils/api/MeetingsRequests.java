@@ -220,7 +220,7 @@ public class MeetingsRequests {
 		  	body.put("end", endTime);
 		  	body.put("location", roomName);
 		  	body.put("roomEmail", conFerenceRoomEmail);
-		  	body.put("resources", new JSONArray());
+		  	body.put("resources", new JSONArray().add(conFerenceRoomEmail));
 		  	body.put("attendees", new JSONArray());
 		  	
 			StringEntity entity = new StringEntity(body.toString());
@@ -247,6 +247,37 @@ public class MeetingsRequests {
 				.replace("[meetingId]", meetingId);
 		
 		String str = "room.manager:M@nager";
+		byte[]   bytesEncoded = Base64.encodeBase64(str .getBytes());
+		token = new String(bytesEncoded );
+		
+		try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
+			HttpDelete request = new HttpDelete(url);
+
+			request.setHeader("Content-type", "application/json");
+            request.setHeader("Accept", "application/json");
+			request.setHeader("Authorization", "Basic "+ token);
+
+			HttpResponse result = httpClient.execute(request);
+
+            String json = EntityUtils.toString(result.getEntity(), "UTF-8");
+        } 
+		catch (IOException ex) {
+        }
+	}
+	
+	public static void deleteMeeting(String meetingId, String roomName) throws UnsupportedOperationException, IOException, ParseException
+	{
+		String service = ServicesRequests.getServiceId();
+		String room = ConferenceRoomsRequests.getRoomId(roomName);
+		String url = meetingByIdEp
+				.replace("[serviceId]", service)
+				.replace("[roomId]", room)
+				.replace("[meetingId]", meetingId);
+		
+		String userES = settings.getProperty("userES");
+		String str = userES + ":" + settings.getProperty("passwordES");
+		
+//		String str = "room.manager:M@nager";
 		byte[]   bytesEncoded = Base64.encodeBase64(str .getBytes());
 		token = new String(bytesEncoded );
 		

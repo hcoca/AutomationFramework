@@ -23,39 +23,40 @@ import org.rm.automation.utils.api.MeetingsRequests;
 
 public class ThisTestCaseIsToVerifyXX {
 	
-	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{
-		Properties settings = ReadPropertyValues
-				.getPropertyFile("./Config/settings.properties");
-		String userName = settings.getProperty("username");
-		String userPw = settings.getProperty("passwordES");
-		String server = settings.getProperty("server");
-		String port = settings.getProperty("port");
-		String serviceURL = "http://" + server + ":" + port;
-		
-		WebDriver driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		LoginPage login;
-		HomePage homePage;
-		NowPanel nowPanel;
-		
-		login = new LoginPage(driver);
- 		homePage = login.access(serviceURL, userName, userPw, "room571");
- 		nowPanel = new NowPanel(homePage.getDriver());
- 		nowPanel.waitForMainPanel();
- 		System.out.println("The Title is: " + nowPanel.getTitleLabelText());
-	}
+//	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{
+//		Properties settings = ReadPropertyValues
+//				.getPropertyFile("./Config/settings.properties");
+//		String userName = settings.getProperty("username");
+//		String userPw = settings.getProperty("passwordES");
+//		String server = settings.getProperty("server");
+//		String port = settings.getProperty("port");
+//		String serviceURL = "http://" + server + ":" + port;
+//		
+//		WebDriver driver = new FirefoxDriver();
+//		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//		LoginPage login;
+//		HomePage homePage;
+//		NowPanel nowPanel;
+//		
+//		login = new LoginPage(driver);
+// 		homePage = login.access(serviceURL, userName, userPw, "room571");
+// 		nowPanel = new NowPanel(homePage.getDriver());
+// 		nowPanel.waitForMainPanel();
+// 		System.out.println("The Title is: " + nowPanel.getTitleLabelText());
+//	}
 	
 //	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{
 //		MeetingsRequests.postMeeting("room571", "571FTW", RoomManagerTime.substractMinutes(1), RoomManagerTime.addMinutes(10));
 //	}
 	
-//	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{
-//		List<JSONObject> list = MeetingsRequests.getRoomMeetings("room571");
-//		for(JSONObject json : list){
-//			System.out.println(json);
-//		}
-//		MeetingsRequests.deleteMeeting("56026e88c5c01db814c1618a");
-//	}
+	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{// 560287dfc5c01db814c16198
+//		MeetingsRequests.postMeeting("room571", "Come on", RoomManagerTime.substractMinutes(1), RoomManagerTime.addMinutes(3));
+		MeetingsRequests.deleteMeeting("560287dfc5c01db814c16198", "room571");
+		List<JSONObject> list = MeetingsRequests.getRoomMeetings("room571");
+		for(JSONObject json : list){
+			System.out.println(json);
+		}
+	}
 	
 //	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{
 //		Date date = new Date();
