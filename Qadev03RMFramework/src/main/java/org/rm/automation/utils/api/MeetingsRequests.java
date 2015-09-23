@@ -88,6 +88,50 @@ public class MeetingsRequests {
 		return listResponse;
 	}
 	
+	public static ArrayList<JSONObject> getRoomMeetings(String roomName) throws UnsupportedOperationException, IOException, ParseException
+	{
+		String service = ServicesRequests.getServiceId();
+		String room = ConferenceRoomsRequests.getRoomId(roomName);
+		String url = meetingEp
+				.replace("[serviceId]", service)
+				.replace("[roomId]", room);
+		ArrayList<JSONObject> listResponse = new ArrayList<JSONObject>();
+		
+		try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
+			HttpGet request = new HttpGet(url);
+			
+            request.setHeader("Content-type", "application/json");
+            HttpResponse result = httpClient.execute(request);
+
+            String json = EntityUtils.toString(result.getEntity(), "UTF-8");
+            
+            try {
+                JSONParser parser = new JSONParser();
+                Object resultObject = parser.parse(json);
+
+                if (resultObject instanceof JSONArray) {
+                    JSONArray array=(JSONArray)resultObject;
+                    
+                    for (Object object : array) {
+                        JSONObject obj =(JSONObject)object;
+                        listResponse.add(obj);
+                    }
+
+                }else if (resultObject instanceof JSONObject) {
+                    JSONObject obj =(JSONObject)resultObject;                    
+                    listResponse.add(obj);
+                }
+                return listResponse;
+
+            } 
+            catch (Exception e) {
+            }
+        } 
+		catch (IOException ex) {
+        }
+		return listResponse;
+	}
+	
 	public static void postMeeting() throws UnsupportedOperationException, ParseException, IOException
 	{
 		String str = "room.manager:M@nager";
@@ -120,6 +164,60 @@ public class MeetingsRequests {
 		  	body.put("end", "2015-09-10T23:30:00.000Z");
 		  	body.put("location", "Conference Room1");
 		  	body.put("roomEmail", "conferenceroom1@rmdom2008.lab");
+		  	body.put("resources", new JSONArray());
+		  	body.put("attendees", new JSONArray());
+		  	
+			StringEntity entity = new StringEntity(body.toString());
+		    request.setEntity(entity);
+
+            HttpResponse result = httpClient.execute(request);
+            String json = EntityUtils.toString(result.getEntity(), "UTF-8");
+            System.out.println(result.getStatusLine().getStatusCode());
+            System.out.println(result.getStatusLine().getReasonPhrase());
+            System.out.println(json);
+
+        } 
+		catch (IOException ex) {
+        }
+	}
+	
+	public static void postMeeting(String roomName) throws UnsupportedOperationException, ParseException, IOException
+	{
+		// room.manager is the organizer and M@nager is the password
+		String str = "Administrator:Control123!";
+		byte[] bytesEncoded = Base64.encodeBase64(str .getBytes());
+		token = new String(bytesEncoded );
+		
+		String service = ServicesRequests.getServiceId();
+		String roomId = ConferenceRoomsRequests.getRoomId(roomName);
+		
+		JSONObject conferenceRoom = ConferenceRoomsRequests.getRoom(roomId);
+		String conFerenceRoomEmail = conferenceRoom.get("emailAddress").toString();
+		
+		String url = meetingEp
+				.replace("[serviceId]", service)
+				.replace("[roomId]", roomId);
+		
+		try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
+			HttpPost request = new HttpPost(url);
+			
+			/**
+			 * Setting the headers
+			 */
+			request.setHeader("Content-type", "application/json");
+			request.setHeader("Accept", "application/json");
+			request.setHeader("Authorization", "Basic "+ token);
+			
+			/**
+			 * Request's body
+			 */
+			JSONObject body = new JSONObject();
+			body.put("organizer", "room.manager");
+		  	body.put("title", "Whatever");
+		  	body.put("start", "2015-09-22T23:00:00.000Z");
+		  	body.put("end", "2015-09-22T23:30:00.000Z");
+		  	body.put("location", "Conference Room1");
+		  	body.put("roomEmail", conFerenceRoomEmail);
 		  	body.put("resources", new JSONArray());
 		  	body.put("attendees", new JSONArray());
 		  	

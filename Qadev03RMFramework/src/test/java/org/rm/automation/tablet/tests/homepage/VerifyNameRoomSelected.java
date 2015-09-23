@@ -6,8 +6,8 @@ import java.util.Properties;
 import org.json.simple.JSONObject;
 
 import org.rm.automation.base.TestBaseSetup;
-import org.rm.automation.tablet.pageobjects.HomePage;
 import org.rm.automation.tablet.pageobjects.LoginPage;
+import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
