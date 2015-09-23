@@ -37,7 +37,7 @@ public class RoomManagerTime {
 	
 	private static void formatTime(){
 		date = new Date();
-		formatedTime = new SimpleDateFormat ("yyyy-MM-dd'T'hh:mm:ss'.000Z'");
+		formatedTime = new SimpleDateFormat ("yyyy-MM-dd'T'HH:mm:ss'.000Z'");
 		formatedTime.setTimeZone(TimeZone.getTimeZone("GMT"));
 	}
 }

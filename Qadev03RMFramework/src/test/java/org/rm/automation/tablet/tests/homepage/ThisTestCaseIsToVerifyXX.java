@@ -50,12 +50,20 @@ public class ThisTestCaseIsToVerifyXX {
 //	}
 	
 	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{// 560287dfc5c01db814c16198
-//		MeetingsRequests.postMeeting("room571", "Come on", RoomManagerTime.substractMinutes(1), RoomManagerTime.addMinutes(3));
-		MeetingsRequests.deleteMeeting("560287dfc5c01db814c16198", "room571");
-		List<JSONObject> list = MeetingsRequests.getRoomMeetings("room571");
+//		MeetingsRequests.postMeeting("b21", "green", RoomManagerTime.substractMinutes(1), RoomManagerTime.addMinutes(3));
+//		MeetingsRequests.deleteMeeting("5602b92a980daccc0ed7ec13", "b21");
+//		String meetingId = MeetingsRequests.getMeetingId("Damn");
+//		System.out.println(meetingId);
+		List<JSONObject> list = MeetingsRequests.getRoomMeetings("b21");
 		for(JSONObject json : list){
 			System.out.println(json);
 		}
+		String start = RoomManagerTime.substractMinutes(1);
+		String end = RoomManagerTime.addMinutes(3);
+		String actual = RoomManagerTime.getRoomManagerTime();
+		System.out.println(start);
+		System.out.println(end);
+		System.out.println(actual);
 	}
 	
 //	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{
@@ -69,7 +77,7 @@ public class ThisTestCaseIsToVerifyXX {
 //			System.out.println("end: " + json.get("end"));
 //		} // 2015-09-23T07:27:42.000Z
 //		SimpleDateFormat x = new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
-//		SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd'T'hh:mm:ss'.000Z'");
+//		SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd'T'HH:mm:ss'.000Z'");
 //		ft.setTimeZone(TimeZone.getTimeZone("GMT"));
 //		System.out.println("My formated time: " + ft.format(date));
 //		

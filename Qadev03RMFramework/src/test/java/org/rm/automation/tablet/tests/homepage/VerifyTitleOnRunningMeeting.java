@@ -34,6 +34,7 @@ public class VerifyTitleOnRunningMeeting extends TestBaseSetup {
 	private String meetingTitle = "meetingTitle";
 	private String startTime = RoomManagerTime.substractMinutes(1);
 	private String endTime = RoomManagerTime.addMinutes(3);
+	private String meetingId;
 	
 	// login properties
 	private Properties settings = ReadPropertyValues
@@ -55,6 +56,7 @@ public class VerifyTitleOnRunningMeeting extends TestBaseSetup {
 		
 		try {
 			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
+//			meetingId = MeetingsRequests.getMeetingId(name)
 		} catch (ParseException e) {
 			LogManager.error(" COMMING SOON! ");
 		}

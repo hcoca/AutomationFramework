@@ -220,7 +220,7 @@ public class MeetingsRequests {
 		  	body.put("end", endTime);
 		  	body.put("location", roomName);
 		  	body.put("roomEmail", conFerenceRoomEmail);
-		  	body.put("resources", new JSONArray().add(conFerenceRoomEmail));
+		  	body.put("resources", new JSONArray());
 		  	body.put("attendees", new JSONArray());
 		  	
 			StringEntity entity = new StringEntity(body.toString());
