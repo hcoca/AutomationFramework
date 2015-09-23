@@ -311,4 +311,20 @@ public class MeetingsRequests {
 		}
 		return id;
 	}
+	
+	public static String getMeetingId(String meetingTitle, String roomName) throws ParseException
+	{
+		String id = "";
+		ArrayList<JSONObject> list;
+		try {
+			list = getRoomMeetings(roomName);
+			for (JSONObject object : list) {
+				if(object.get("title").toString().equals(meetingTitle))
+					id = object.get("_id").toString();
+			}
+		} catch (UnsupportedOperationException | IOException e) {
+			e.printStackTrace();
+		}
+		return id;
+	}
 }

@@ -19,20 +19,19 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class VerifyTitleOnRunningMeeting extends TestBaseSetup {
+public class VerifyOrganizerOnRunningMeeting extends TestBaseSetup {
 	// Page objects for this test
 	private LoginPage login;
 	private HomePage homePage;
 	private NowPanel nowPanel;
 	
-	
 	// Custom user environment settings
-	private Properties settings = ReadPropertyValues
-			.getPropertyFile("./Config/settings.properties");
-	private String userName = settings.getProperty("username");
-	private String userPw = settings.getProperty("passwordES");
-	private String server = settings.getProperty("server");
-	private String port = settings.getProperty("port");
+		private Properties settings = ReadPropertyValues
+				.getPropertyFile("./Config/settings.properties");
+		private String userName = settings.getProperty("username");
+		private String userPw = settings.getProperty("passwordES");
+		private String server = settings.getProperty("server");
+		private String port = settings.getProperty("port");
 	
 	// Tablet properties
 	private String serviceURL;
@@ -45,9 +44,10 @@ public class VerifyTitleOnRunningMeeting extends TestBaseSetup {
 	private String startTime = RoomManagerTime.substractMinutes(1);
 	private String endTime = RoomManagerTime.addMinutes(3);
 	private String meetingId;
+	private String meetingOrganizer = settings.getProperty("userES");
 	
 	// Results
-	private String expectedResult = meetingTitle;
+	private String expectedResult = meetingOrganizer;
 	private String actualResult;
 	
  	@BeforeClass
@@ -59,27 +59,27 @@ public class VerifyTitleOnRunningMeeting extends TestBaseSetup {
 		try {
 			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
 			meetingId = MeetingsRequests.getMeetingId(meetingTitle, roomName);
-			LogManager.info("VerifyTitleOnRunningMeeting: Executing Precondition, creating a meeting");
+			LogManager.info("VerifyOrganizerOnRunningMeeting: Executing Precondition, creating a meeting");
 		} catch (ParseException e) {
-			LogManager.error("VerifyTitleOnRunningMeeting: ParseException - " + e.toString());
+			LogManager.error("VerifyOrganizerOnRunningMeeting: ParseException - " + e.toString());
 			e.printStackTrace();
 		}
  	}
  	
  	@Test
- 	public void verifyTitleOnRunningMeeting(){
- 		LogManager.info("VerifyTitleOnRunningMeeting: Executing Test Case");
+ 	public void verifyOrganizerOnRunningMeeting(){
+ 		LogManager.info("VerifyOrganizerOnRunningMeeting: Executing Test Case");
  		
  		login = new LoginPage(driver);
  		homePage = login.access(serviceURL, userName, userPw, roomName);
  		nowPanel = new NowPanel(homePage.getDriver());
  		nowPanel.waitForMainPanel(); // Check if it can goes in the constructor
- 		actualResult = nowPanel.getTitleLabelText();
+ 		actualResult = nowPanel.getOrganizerLabelText();
  		
  		try {
  			Assert.assertEquals(actualResult, expectedResult);
 		} catch (Throwable t) {
-			LogManager.error("VerifyTitleOnRunningMeeting: The assertion has failed - " + t.toString());
+			LogManager.error("VerifyOrganizerOnRunningMeeting: The assertion has failed - " + t.toString());
 		}
  	}
  	
@@ -87,15 +87,15 @@ public class VerifyTitleOnRunningMeeting extends TestBaseSetup {
  	public void tearDown(){
  		try {
 			MeetingsRequests.deleteMeeting(meetingId, roomName);
-			LogManager.info("VerifyTitleOnRunningMeeting: Executing Postcondition, removing meeting");
+			LogManager.info("VerifyOrganizerOnRunningMeeting: Executing Postcondition, removing meeting");
 		} catch (UnsupportedOperationException e) {
-			LogManager.error("VerifyTitleOnRunningMeeting: UnsupportedOperationException - " + e.toString());
+			LogManager.error("VerifyOrganizerOnRunningMeeting: UnsupportedOperationException - " + e.toString());
 			e.printStackTrace();
 		} catch (IOException e) {
-			LogManager.error("VerifyTitleOnRunningMeeting: IOException - " + e.toString());
+			LogManager.error("VerifyOrganizerOnRunningMeeting: IOException - " + e.toString());
 			e.printStackTrace();
 		} catch (ParseException e) {
-			LogManager.error("VerifyTitleOnRunningMeeting: ParseException - " + e.toString());
+			LogManager.error("VerifyOrganizerOnRunningMeeting: ParseException - " + e.toString());
 			e.printStackTrace();
 		}
  	}

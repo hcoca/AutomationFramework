@@ -7,11 +7,14 @@ import org.rm.automation.utils.Waiters;
 
 public class NowPanel extends HomePage{
 
+	@FindBy(xpath = "//div[@class='tile-now meeting']")
+	private WebElement mainPanel;
+	
 	@FindBy(xpath = "//div[@ng-bind='current._title']")
 	private WebElement titleLabel;
 	
-	@FindBy(xpath = "//div[@class='tile-now meeting']")
-	private WebElement mainPanel;
+	@FindBy(xpath = "//div[@ng-bind='current._organizer']")
+	private WebElement organizerLabel;
 	
 	public NowPanel(WebDriver driver) {
 		super(driver);
@@ -25,5 +28,11 @@ public class NowPanel extends HomePage{
 	
 	public void waitForMainPanel(){
 		Waiters.WaitByVisibilityOfWebElement(mainPanel, driver);
+	}
+
+	public String getOrganizerLabelText() {
+		Waiters.WaitByVisibilityOfWebElement(organizerLabel, driver);
+		
+		return organizerLabel.getText();
 	}
 }
