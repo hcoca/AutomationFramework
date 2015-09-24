@@ -3,6 +3,7 @@ package org.rm.automation.tablet.tests.search;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
+import java.util.Random;
 
 import org.json.simple.JSONObject;
 import org.rm.automation.base.TestBaseSetup;
@@ -12,10 +13,12 @@ import org.rm.automation.tablet.pageobjects.search.SearchPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
+import org.rm.automation.utils.api.ResourcesRequests;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class VerifyAdvancedSearch extends TestBaseSetup {
+public class SearchByCapacity extends TestBaseSetup {
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
 	private String username = settings.getProperty("username");
@@ -23,6 +26,10 @@ public class VerifyAdvancedSearch extends TestBaseSetup {
 	private String url = "http://" + settings.getProperty("server")+":"+
 							settings.getProperty("port");
 	private String roomName;
+	private String roomId;
+	private int position;
+	private String capacity;
+	private Random random = new Random();
 	
 	private LoginPage loginPage;
 	private HomePage homePage;
@@ -31,20 +38,38 @@ public class VerifyAdvancedSearch extends TestBaseSetup {
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
 	{
-		LogManager.info("VerifyAdvancedSearch: Executing Precondition, getting all the rooms");
+		LogManager.info("SearchByCapacity: Executing Precondition, "
+				+ "setting the capacity");
 		ArrayList<JSONObject> list = ConferenceRoomsRequests.getRooms();
-		roomName = list.get(0).get("customDisplayName").toString();
+		
+		System.out.println("size: "+ list.size());
+		position = random.nextInt(list.size());
+		System.out.println("pos: "+ position);
+		capacity = String.valueOf(random.nextInt(50));
+		
+		roomName = list.get(position).get("customDisplayName").toString();
+		roomId = list.get(position).get("_id").toString();
+		ConferenceRoomsRequests.setValue(roomId, "capacity", capacity);
 	}
 	
 	@Test
-	public void testVerifyAdvancedSearch()
+	public void testSearchByCapacity()
 	{
-		LogManager.info("VerifyAdvancedSearch: Executing Test Case");
+		LogManager.info("SearchByCapacity: Executing Test Case");
 
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.access(url, username, password, roomName);
 		searchPage = homePage.selectSearchPage()
 		.enableAdvancedSearch()
-		.verifyAdvancedSearchIsEnabled();
+		.setCapacity(capacity)
+		.verifySearchByCapacity(roomName);
+	}
+	
+	@AfterMethod
+	public void Postconditions()
+	{
+		LogManager.info("SearchByCapacity: Executing Postcondition, "
+				+ "removing the capacity set");
+		ConferenceRoomsRequests.setValue(roomId, "capacity", null);
 	}
 }

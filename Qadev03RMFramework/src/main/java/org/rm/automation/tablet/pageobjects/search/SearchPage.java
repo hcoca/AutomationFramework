@@ -23,7 +23,7 @@ public class SearchPage {
 	private final String advancedButtonPath = "advanced-search";//id
 	private final String advancedLabelPath = "//span[@ng-show='advancedSearchOn']";
 	private final String roomNameTextboxPath = "txtRoomName";//id
-	private String capacityTextboxPath = "txtMinimumCapacity";//id
+	private final String capacityTextboxPath = "txtMinimumCapacity";//id
 	private String clearButtonPath = "//button[@class='btn-default btn btn-clear']";
 	
 	private List<WebElement> roomListSearch;
@@ -31,6 +31,7 @@ public class SearchPage {
 	
 	@FindBy(id = advancedButtonPath) WebElement advancedButton;
 	@FindBy(id = roomNameTextboxPath) WebElement roomNameTextbox;
+	@FindBy(id = capacityTextboxPath) WebElement capacityTextbox;
 	@FindBy(xpath = advancedLabelPath) WebElement advancedLabel;
 	
 	public SearchPage(WebDriver driver){
@@ -56,18 +57,33 @@ public class SearchPage {
 	}
 	
 	/**
-	 * Method to set the RoomName
+	 * Method to set the Room Name
 	 * @param roomName
 	 * @return
 	 */
-	public SearchPage setRoomName(String roomName){
+	public SearchPage setRoomName(String roomName)
+	{
 		Waiters.WaitById(roomNameTextboxPath,driver);
 		roomNameTextbox.clear();
 		roomNameTextbox.sendKeys(roomName);
 		return this;
 	}
 	
-	public MeetingsPage selectRoom(String roomName){
+	/**
+	 * Method to set the capacity
+	 * @param capacity
+	 * @return
+	 */
+	public SearchPage setCapacity(String capacity)
+	{
+		Waiters.WaitById(capacityTextboxPath, driver);
+		capacityTextbox.clear();
+		capacityTextbox.sendKeys(capacity);
+		return this;
+	}
+	
+	public MeetingsPage selectRoom(String roomName)
+	{
 		Waiters.WaitByXPath("//button[contains(.,'"+roomName+"')]",driver);
 		element = driver.findElement(By.xpath("//button[contains(.,'"+roomName+"')]"));
 		element.click();		
@@ -119,10 +135,23 @@ public class SearchPage {
 		return this;
 	}
 	
+	/**
+	 * Method to verify that the advanced search is enabled
+	 * @return
+	 */
 	public SearchPage verifyAdvancedSearchIsEnabled()
 	{
 		String label = advancedLabel.getText();
 		Assert.assertEquals("Advanced", label);
+		return this;
+	}
+	
+	public SearchPage verifySearchByCapacity(String roomNameExpected)
+	{
+		getRoomList();
+		String roomNameActual = roomListSearch.get(0).getText();
+		
+		Assert.assertEquals(roomNameActual, roomNameExpected);
 		return this;
 	}
 }

@@ -31,7 +31,7 @@ public class VerifyRoomsDisplayed extends TestBaseSetup {
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
 	{
-		LogManager.info("SearchByRoomName: Executing Precondition, getting all the rooms");
+		LogManager.info("VerifyRoomsDisplayed: Executing Precondition, getting all the rooms");
 		ArrayList<JSONObject> list = ConferenceRoomsRequests.getRooms();
 		roomName = list.get(0).get("customDisplayName").toString();
 	}
