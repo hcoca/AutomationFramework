@@ -18,6 +18,11 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+
+/**
+ * @author luiscachi
+ * VerifyTheOrganizerisDisplay
+ */
 public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
 	
 
@@ -31,8 +36,6 @@ public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
 	private String startTime = RoomManagerTime.addMinutesToCurrentTime(15);
 	private String endTime = RoomManagerTime.addMinutesToCurrentTime(16);
 	private String meetingId;
-	
-	
 	
 
 	@BeforeTest

@@ -12,6 +12,10 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+/**
+ * @author luiscachi
+ * VerifyNameRoomSelected
+ */
 public class VerifyNameRoomSelected extends TestBaseSetup {
 	// import class needed
 	private LoginPage login;

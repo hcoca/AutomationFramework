@@ -87,7 +87,9 @@ public class ThisTestCaseIsToVerifyXX {
 //		}
 		
 		
-		
+		System.out.println(RoomManagerTime.addminutesCurrentTime(15));
+		System.out.println(RoomManagerTime.addMinutesToCurrentTime(15));
+		System.out.println(RoomManagerTime.addMinutesToCurrentTime(16));
 		System.out.println(RoomManagerTime.getAvailableTimeTillEndOfDay());
 		
 //		Properties settings = ReadPropertyValues

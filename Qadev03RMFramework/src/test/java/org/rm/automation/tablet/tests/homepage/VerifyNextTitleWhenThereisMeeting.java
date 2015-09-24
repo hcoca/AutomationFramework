@@ -18,15 +18,19 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+/**
+ * @author luiscachi
+ *VerifyNextTitleWhenThereisMeeting
+ */
 public class VerifyNextTitleWhenThereisMeeting extends TestBaseSetup {
 
 	private LoginPage login;
 	private HomePage homepage;
 	private NextHomePage nextHomePage;
 	private String roomName;
-	
-	
+
 	private String meetingTitle = "meetingTitle";
+	private String cuurenrplus = RoomManagerTime.addminutesCurrentTime(15);
 	private String startTime = RoomManagerTime.addMinutesToCurrentTime(15);
 	private String endTime = RoomManagerTime.addMinutesToCurrentTime(16);
 	private String meetingId;

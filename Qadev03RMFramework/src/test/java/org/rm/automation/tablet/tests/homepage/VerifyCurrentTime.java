@@ -12,34 +12,38 @@ import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import junit.framework.Assert;
 
+
+/**
+ * @author luiscachi
+ * verify the current Time
+ */
 public class VerifyCurrentTime extends TestBaseSetup {
-	
+
 	private LoginPage login;
 	private HomePage homepage;
 
 	private String roomName;
 
- 	@BeforeClass
- 	public void setup() throws UnsupportedOperationException, IOException{
+	@BeforeClass
+	public void setup() throws UnsupportedOperationException, IOException {
 		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
 		roomName = allRooms.get(0).get("displayName").toString();
- 	}
+	}
 
 	@Test
-	public void test(){
+	public void test() {
 		String espectCurrent = RoomManagerTime.currenTime();
-		
- 		login = new LoginPage(driver);
- 		homepage = login.access(roomName);
- 		String actualTime = homepage.currentTime();
- 		try {
- 			Assert.assertEquals(espectCurrent, actualTime);
+
+		login = new LoginPage(driver);
+		homepage = login.access(roomName);
+		String actualTime = homepage.currentTime();
+		try {
+			Assert.assertEquals(espectCurrent, actualTime);
 		} catch (Throwable t) {
-			LogManager.error("verifyAvailableTime -the assertion is failed " + t.toString() );
+			LogManager.error("verifyAvailableTime -the assertion is failed " + t.toString());
 		}
- 		
+
 	}
 }
