@@ -17,15 +17,26 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.homepage.NowPanel;
+import org.rm.automation.utils.MeetingManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.api.MeetingsRequests;
 
 public class ThisTestCaseIsToVerifyXX {
-	
-	public static void main(String[] ar){
-		
+
+	public static void main(String[] ar) throws UnsupportedOperationException, ParseException, IOException{
+//		MeetingManager.createRunninMeeting("room571", "red", 1, 10);
+//		System.out.println(MeetingManager.getRemainingTimeFormated());
+		MeetingsRequests.deleteMeeting("56034d372f88acbc1c33db28", "room571");
 	}
+	
+//	public static void main(String[] ar){
+//		MeetingManager.setMeetingEndTime(184 * 60000);
+//		MeetingManager.setMeetingCreationTime(0);
+//		
+//		System.out.println(MeetingManager.getRemainingTimeInMinutes());
+//		System.out.println(MeetingManager.getRemainingTimeFormated());
+//	}
 	
 //	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{
 //		Properties settings = ReadPropertyValues
@@ -54,20 +65,17 @@ public class ThisTestCaseIsToVerifyXX {
 //	}
 	
 //	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{// 560287dfc5c01db814c16198
-//		MeetingsRequests.postMeeting("room571", "green", RoomManagerTime.substractMinutes(1), RoomManagerTime.addMinutes(3));
+//		MeetingsRequests.postMeeting("room571", "green", RoomManagerTime.substractMinutesToCurrentTime(1), RoomManagerTime.addMinutesToCurrentTime(10));
 //		String meetingId = MeetingsRequests.getMeetingId("green", "room571");
 //		MeetingsRequests.deleteMeeting(meetingId, "room571");
-//		System.out.println(meetingId);
+//		JSONObject meeting = MeetingsRequests.getMeeting(meetingId, "room571");
+//		System.out.println("Start: " + meeting.get("start"));
+//		System.out.println("End: " + meeting.get("end"));
+//		System.out.println("Modified at: " + meeting.get("modifiedDateAtService"));
 //		List<JSONObject> list = MeetingsRequests.getRoomMeetings("room571");
 //		for(JSONObject json : list){
 //			System.out.println(json);
 //		}
-//		String start = RoomManagerTime.substractMinutes(1);
-//		String end = RoomManagerTime.addMinutes(3);
-//		String actual = RoomManagerTime.getRoomManagerTime();
-//		System.out.println(start);
-//		System.out.println(end);
-//		System.out.println(actual);
 //	}
 	
 //	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{

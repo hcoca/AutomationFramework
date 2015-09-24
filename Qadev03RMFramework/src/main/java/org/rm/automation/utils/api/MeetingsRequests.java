@@ -2,6 +2,7 @@ package org.rm.automation.utils.api;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 //import java.util.Base64;
 import java.util.Properties;
 
@@ -326,5 +327,29 @@ public class MeetingsRequests {
 			e.printStackTrace();
 		}
 		return id;
+	}
+	
+	/**
+	 * @param meetingId
+	 * @param roomName
+	 * @return a JSONObject with the meeting information associated to a meeting Id. 
+	 * @throws ParseException
+	 */
+	public static JSONObject getMeeting(String meetingId, String roomName) throws ParseException
+	{
+		JSONObject res = null;
+		
+		try {
+			List<JSONObject> list = getRoomMeetings(roomName);
+			for (JSONObject json : list) {
+				if(json.get("_id").toString().equals(meetingId)){
+					res = json;
+				}
+			}
+		}catch (UnsupportedOperationException | IOException e) {
+			e.printStackTrace();
+		}
+		
+		return res;
 	}
 }
