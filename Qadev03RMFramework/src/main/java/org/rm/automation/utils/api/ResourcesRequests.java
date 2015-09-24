@@ -155,4 +155,21 @@ public class ResourcesRequests {
 			}
 		return id;
 	}
+	
+	/**
+	 * Get a resource providing the id
+	 * @param id
+	 * @return
+	 */
+	public static JSONObject getResource(String id)
+	{
+		ArrayList<JSONObject> list;
+		
+			list = getResources();
+			for (JSONObject object : list) {
+				if(object.get("_id").toString().equals(id))
+					return object;
+			}
+		return null;
+	}
 }
