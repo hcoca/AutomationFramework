@@ -59,4 +59,10 @@ public class RoomManagerTime {
 		formatedTime = new SimpleDateFormat ("yyyy-MM-dd'T'HH:mm:ss'.000Z'");
 		formatedTime.setTimeZone(TimeZone.getTimeZone("GMT"));
 	}
+
+	public static String currenTime(){
+		Date currentTime = new Date();
+		SimpleDateFormat formateador = new SimpleDateFormat("HH:mm:ss");
+		return formateador.format(currentTime).substring(0, 5);
+	}
 }

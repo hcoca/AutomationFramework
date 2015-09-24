@@ -15,6 +15,7 @@ public class NowPanel extends HomePage{
 	
 	@FindBy(xpath = "//div[@ng-bind='current._organizer']")
 	private WebElement organizerLabel;
+
 	
 	public NowPanel(WebDriver driver) {
 		super(driver);
@@ -35,4 +36,5 @@ public class NowPanel extends HomePage{
 		
 		return organizerLabel.getText();
 	}
+
 }

@@ -9,6 +9,7 @@ import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.tablet.pageobjects.search.SearchPage;
 import org.rm.automation.utils.LogManager;
+import org.rm.automation.utils.Waiters;
 
 //import framework.conferenceRooms.ConferenceRoomsPage;
 
@@ -20,6 +21,10 @@ public class HomePage {
 	
 	@FindBy(xpath = "//span[@class='room-label ng-binding']")
 	private WebElement labelRoomName;
+	
+	
+	@FindBy(xpath = "//span[@ng-bind='currentTime']")
+	private WebElement cuerrentTime;
 	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -52,11 +57,19 @@ public class HomePage {
 	}
 	
 	public String getRoomNamelabel() {
+		Waiters.WaitByVisibilityOfWebElement(labelRoomName, driver);
 		return labelRoomName.getText();
 	}
 	
 	
 	public WebDriver getDriver(){
 		return driver;
+	}
+	/*
+	 * return the current Time
+	 * */
+	public String currentTime() {
+		Waiters.WaitByVisibilityOfWebElement(cuerrentTime, driver);
+		return cuerrentTime.getText();
 	}
 }

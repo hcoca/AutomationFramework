@@ -45,6 +45,11 @@ public class LoginPage {
 	@FindBy(css ="button.btn.btn-primary")
 	private WebElement accessTablet;
 	
+	private String userName;
+	private String userPw;
+	private String server;
+	private String port;
+	private String urlserver;
 	
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
@@ -54,6 +59,12 @@ public class LoginPage {
 		this.driver = driver;
 		driver.get(settings.getProperty("url_tablet"));
 		PageFactory.initElements(driver, this);
+		
+		userName = settings.getProperty("username");
+	 	userPw = settings.getProperty("passwordES");
+	 	server = settings.getProperty("server");
+		port = settings.getProperty("port");	
+		urlserver  = "http://" + server + ":" + port + "/";
 	}
 	
 	public void setUrl(String url)
@@ -108,6 +119,11 @@ public class LoginPage {
 		return getTabletHomePage();
 	}
 	
+	public HomePage access(String roomName)
+	{
+		return access(urlserver, userName, userPw, roomName);
+	}
+	
 	public HomePage getTabletHomePage(){
 		Waiters.WaitByVisibilityOfWebElement(accessTablet, driver);
 		accessTablet.click();
@@ -124,9 +140,9 @@ public class LoginPage {
 			if(roomEl.getText().contains(room)){
 				roomEl.click();
 				LogManager.info("LoginPageTablet: select room");
+				break;
 			}
 		}
-		LogManager.warn("LoginPageTablet: room non found");
 	}
 
 	/**
@@ -147,7 +163,6 @@ public class LoginPage {
 	public static List<String> getRoomList()
 	{
 		LogManager.info("LoginPage : Getting the rooms of login");
-
 		return roomNames;
 	}
 }
