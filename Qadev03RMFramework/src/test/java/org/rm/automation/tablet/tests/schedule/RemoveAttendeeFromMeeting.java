@@ -23,8 +23,8 @@ public class RemoveAttendeeFromMeeting extends TestBaseSetup{
 	private String server = settings.getProperty("server");
 	private String port = settings.getProperty("port");
 	private String url = "http://"+server+":"+port;
-	private String startTime = RoomManagerTime.substractMinutes(1);;
-	private String endTime = RoomManagerTime.addMinutes(3);
+	private String startTime = RoomManagerTime.substractMinutesToCurrentTime(1);
+	private String endTime = RoomManagerTime.addMinutesToCurrentTime(3);
 	private String title = "La vaca que sonrie";
 	private String roomName;
 	private String[] attendees = {"user001@roompro.lab","user002@roompro.lab","user003@roompro.lab"};
