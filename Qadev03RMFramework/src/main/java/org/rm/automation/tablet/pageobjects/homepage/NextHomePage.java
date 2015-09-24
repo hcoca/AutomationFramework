@@ -12,6 +12,9 @@ public class NextHomePage extends HomePage {
 	@FindBy(xpath = "//div[@ng-bind='next._title']")
 	WebElement tittlenext;
 	
+	@FindBy(xpath = "//div[@ng-bind='next._organizer']")
+	WebElement organizerNext;
+	
 	@FindBy(xpath = "//span[@ng-bind='next._start | date:"+"H:mm"+"']")
 	WebElement timenextStar;
 	
@@ -28,6 +31,11 @@ public class NextHomePage extends HomePage {
 		return tittlenext.getText();
 	}
 	
+	public String getOrganizer() {
+		Waiters.WaitByVisibilityOfWebElement(organizerNext, driver);
+		return organizerNext.getText();
+	}
+	
 	public String getTimeNextStar(){
 		Waiters.WaitByVisibilityOfWebElement(timenextStar, driver);
 		return timenextStar.getText();
@@ -37,5 +45,6 @@ public class NextHomePage extends HomePage {
 		Waiters.WaitByVisibilityOfWebElement(timeNextEnd, driver);
 		return timeNextEnd.getText();
 	}
+
 	
 }

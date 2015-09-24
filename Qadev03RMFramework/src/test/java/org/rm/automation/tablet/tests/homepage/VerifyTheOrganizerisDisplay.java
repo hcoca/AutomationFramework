@@ -13,13 +13,16 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class VerifyNextTitleWhenThereIsnotMeting extends TestBaseSetup {
+public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
 	
+
 	private LoginPage login;
 	private HomePage homepage;
 	private NextHomePage nextHomePage;
 	String roomName;
-	String expectedtitle = "End of day";
+	
+	// this should be content the room the organizer 
+	String expectedtitle ;
 	@BeforeTest
 	public void beforeclass(){
 		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
@@ -31,13 +34,11 @@ public class VerifyNextTitleWhenThereIsnotMeting extends TestBaseSetup {
 		login = new LoginPage(driver);
  		homepage = login.access(roomName);
  		nextHomePage = new NextHomePage(homepage.getDriver());
- 		String actual = nextHomePage.getTitleNext();
+ 		String actual = nextHomePage.getOrganizer();
  		try {
 			Assert.assertEquals(actual, expectedtitle);
 		} catch (Throwable t) {
 			LogManager.error("verifyNextTitleWhenThereIsnotMeting assert is fail: "+t.toString());
 		}
- 		
 	}
-
 }
