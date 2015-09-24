@@ -136,12 +136,13 @@ public class ResourcesRequests {
         } 
 		catch (IOException ex) {
 			LogManager.error("ResourceRequests: Error stablishing the HTTP protocol");
-        }
+       }
 	}
+	
 	/**
 	 * Get a resource's id providing the name of the resource
 	 * @param name
-	 * @return
+	 * @return id
 	 */
 	public static String getResourceId(String name)
 	{
