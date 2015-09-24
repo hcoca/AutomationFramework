@@ -1,14 +1,41 @@
 package org.rm.automation.tablet.pageobjects.homepage;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.rm.automation.utils.Waiters;
 
-public class NextHomePage {
+public class NextHomePage extends HomePage {
+	
+	
+	@FindBy(xpath = "//div[@ng-bind='next._title']")
+	WebElement tittlenext;
+	
 	@FindBy(xpath = "//span[@ng-bind='next._start | date:"+"H:mm"+"']")
-	WebElement timeNextMeeting;
+	WebElement timenextStar;
 	
+	@FindBy(xpath = "//span[ng-bind='next._end | date:"+"H:mm"+"']")
+	WebElement timeNextEnd;
 	
-	public NextHomePage(){
-		
+	public NextHomePage(WebDriver driver){
+		super(driver);
+		PageFactory.initElements(driver, this);
 	}
+	
+	public String getTitleNext(){
+		Waiters.WaitByVisibilityOfWebElement(tittlenext, driver);
+		return tittlenext.getText();
+	}
+	
+	public String getTimeNextStar(){
+		Waiters.WaitByVisibilityOfWebElement(timenextStar, driver);
+		return timenextStar.getText();
+	}
+	
+	public String getTimeNextEnd(){
+		Waiters.WaitByVisibilityOfWebElement(timeNextEnd, driver);
+		return timeNextEnd.getText();
+	}
+	
 }
