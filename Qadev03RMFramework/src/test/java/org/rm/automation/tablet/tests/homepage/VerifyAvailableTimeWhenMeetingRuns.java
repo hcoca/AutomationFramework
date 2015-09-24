@@ -7,8 +7,8 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.tablet.pageobjects.LoginPage;
+import org.rm.automation.tablet.pageobjects.homepage.AvailablePanel;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
-import org.rm.automation.tablet.pageobjects.homepage.NowPanel;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.MeetingManager;
 import org.rm.automation.utils.ReadPropertyValues;
@@ -22,14 +22,16 @@ import org.testng.annotations.Test;
 /**
  * @author Pedro David Fuentes Antezana
  * 
- * This test case is to verify that after a meeting has been created, the meeting remaining time 
- * is the same as the meeting remaining time displayed in the "now panel" of the tablet home page.  
+ * This test case is to verify that after a meeting has been created, the "starting available time" 
+ * displayed is correct.
+ * 
+ * Description: The "starting available time" should be the end time of an already running meeting.  
  */
-public class VerifyTimeRemainingOnRunningMeeting extends TestBaseSetup {
+public class VerifyAvailableTimeWhenMeetingRuns extends TestBaseSetup {
 	// Page objects for this test
 	private LoginPage login;
 	private HomePage homePage;
-	private NowPanel nowPanel;
+	private AvailablePanel availablePanel;
 	
 	// Custom user environment settings
 		private Properties settings = ReadPropertyValues
@@ -50,7 +52,7 @@ public class VerifyTimeRemainingOnRunningMeeting extends TestBaseSetup {
 	private int behindMinute = 1; // 1 minute before current time
 	private int aheadMinute = 3; // 3 minutes ahead current time
 	private String meetingId;
-	private String meetingRemainingTime;
+	private String meetingEndTime;
 	
 	// Results
 	private String expectedResult;
@@ -65,25 +67,25 @@ public class VerifyTimeRemainingOnRunningMeeting extends TestBaseSetup {
 		try {
 			MeetingManager.createRunninMeeting(roomName, meetingTitle, behindMinute, aheadMinute);
 			meetingId = MeetingsRequests.getMeetingId(meetingTitle, roomName);
-			meetingRemainingTime = MeetingManager.getRemainingTimeFormated();
-			LogManager.info("VerifyTimeRemainingOnRunningMeeting: Executing Precondition, creating a meeting");
+			meetingEndTime = MeetingManager.getMeetingEndTimeFormated();
+			LogManager.info("VerifyAvailableTimeWhenMeetingRuns: Executing Precondition, creating a meeting");
 		} catch (ParseException e) {
-			LogManager.error("VerifyTimeRemainingOnRunningMeeting: ParseException - " + e.toString());
+			LogManager.error("VerifyAvailableTimeWhenMeetingRuns: ParseException - " + e.toString());
 			e.printStackTrace();
 		}
  	}
  	
  	@Test
- 	public void verifyTimeRemainingOnRunningMeeting(){
- 		LogManager.info("VerifyTimeRemainingOnRunningMeeting: Executing Test Case");
+ 	public void verifyAvailableTimeWhenMeetingRuns(){
+ 		LogManager.info("VerifyAvailableTimeWhenMeetingRuns: Executing Test Case");
  		
  		login = new LoginPage(driver);
  		homePage = login.access(serviceURL, userName, userPw, roomName);
- 		nowPanel = new NowPanel(homePage.getDriver());
- 		nowPanel.waitForMainPanel(); // Check if it can goes in the constructor
+ 		availablePanel = new AvailablePanel(homePage.getDriver());
+ 		availablePanel.waitForMainBusyPanel(); // Check if it can goes in the constructor
  		
- 		expectedResult = meetingRemainingTime;
- 		actualResult = nowPanel.getOrganizerLabelText();
+ 		expectedResult = meetingEndTime;
+ 		actualResult = availablePanel.getStartAvailableTimeLabelText();
  		
  		try {
  			Assert.assertEquals(actualResult, expectedResult);
@@ -96,15 +98,15 @@ public class VerifyTimeRemainingOnRunningMeeting extends TestBaseSetup {
  	public void tearDown(){
  		try {
 			MeetingsRequests.deleteMeeting(meetingId, roomName);
-			LogManager.info("VerifyTimeRemainingOnRunningMeeting: Executing Postcondition, removing meeting");
+			LogManager.info("VerifyAvailableTimeWhenMeetingRuns: Executing Postcondition, removing meeting");
 		} catch (UnsupportedOperationException e) {
-			LogManager.error("VerifyTimeRemainingOnRunningMeeting: UnsupportedOperationException - " + e.toString());
+			LogManager.error("VerifyAvailableTimeWhenMeetingRuns: UnsupportedOperationException - " + e.toString());
 			e.printStackTrace();
 		} catch (IOException e) {
-			LogManager.error("VerifyTimeRemainingOnRunningMeeting: IOException - " + e.toString());
+			LogManager.error("VerifyAvailableTimeWhenMeetingRuns: IOException - " + e.toString());
 			e.printStackTrace();
 		} catch (ParseException e) {
-			LogManager.error("VerifyTimeRemainingOnRunningMeeting: ParseException - " + e.toString());
+			LogManager.error("VerifyAvailableTimeWhenMeetingRuns: ParseException - " + e.toString());
 			e.printStackTrace();
 		}
  	}

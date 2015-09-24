@@ -1,6 +1,7 @@
 package org.rm.automation.utils;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.json.simple.parser.ParseException;
@@ -10,6 +11,7 @@ public class MeetingManager {
 	
 	// The value of a minute in milliseconds
 	private static final long ONE_MINUTE_IN_MILLIS = 60000;
+	private static final String END_OF_THE_DAY = "0:00";
 	
 	private static long meetingStartTime = 0;
 	private static long meetingCreationTime = 0;
@@ -40,6 +42,11 @@ public class MeetingManager {
 			e.printStackTrace();
 		}
 	}
+	
+	public static String getMeetingEndTimeFormated(){
+		Date date = new Date(meetingEndTime);
+		return RoomManagerTime.getHomePageTimeFormat(date);
+	} 
 	
 	public static String getRemainingTimeFormated(){
 		int timeDifference = (int) getRemainingTimeInMinutes();
@@ -89,5 +96,9 @@ public class MeetingManager {
 
 	public static void setMeetingEndTime(long meetingEndTime) {
 		MeetingManager.meetingEndTime = meetingEndTime;
+	}
+	
+	public static String getEndOfTheDay(){
+		return END_OF_THE_DAY;
 	}
 }

@@ -1,6 +1,7 @@
 package org.rm.automation.tablet.tests.homepage;
 
 import java.io.IOException;
+import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -10,11 +11,13 @@ import java.util.Properties;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.collections.keyvalue.TiedMapEntry;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.rm.automation.tablet.pageobjects.LoginPage;
+import org.rm.automation.tablet.pageobjects.homepage.AvailablePanel;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.homepage.NowPanel;
 import org.rm.automation.utils.MeetingManager;
@@ -24,11 +27,17 @@ import org.rm.automation.utils.api.MeetingsRequests;
 
 public class ThisTestCaseIsToVerifyXX {
 
-	public static void main(String[] ar) throws UnsupportedOperationException, ParseException, IOException{
-//		MeetingManager.createRunninMeeting("room571", "red", 1, 10);
-//		System.out.println(MeetingManager.getRemainingTimeFormated());
-		MeetingsRequests.deleteMeeting("56034d372f88acbc1c33db28", "room571");
-	}
+//	public static void main(String[] ar){
+//		Date date = new Date();
+//		long x1 = date.getTime();
+//		Date endDate = new Date(x1 + ((60 * 60000) * 6));
+//		System.out.println(RoomManagerTime.getHomePageTimeFormat(date));
+//		System.out.println(RoomManagerTime.getHomePageTimeFormat(endDate));
+//	}
+	
+//	public static void main(String[] ar) throws UnsupportedOperationException, ParseException, IOException{
+//		
+//	}
 	
 //	public static void main(String[] ar){
 //		MeetingManager.setMeetingEndTime(184 * 60000);
@@ -64,10 +73,10 @@ public class ThisTestCaseIsToVerifyXX {
 //		MeetingsRequests.postMeeting("room571", "571FTW", RoomManagerTime.substractMinutes(1), RoomManagerTime.addMinutes(10));
 //	}
 	
-//	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{// 560287dfc5c01db814c16198
+	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{// 560287dfc5c01db814c16198
 //		MeetingsRequests.postMeeting("room571", "green", RoomManagerTime.substractMinutesToCurrentTime(1), RoomManagerTime.addMinutesToCurrentTime(10));
 //		String meetingId = MeetingsRequests.getMeetingId("green", "room571");
-//		MeetingsRequests.deleteMeeting(meetingId, "room571");
+//		MeetingsRequests.deleteMeeting("5603bcf623959aa022ea873b", "room571");
 //		JSONObject meeting = MeetingsRequests.getMeeting(meetingId, "room571");
 //		System.out.println("Start: " + meeting.get("start"));
 //		System.out.println("End: " + meeting.get("end"));
@@ -76,7 +85,32 @@ public class ThisTestCaseIsToVerifyXX {
 //		for(JSONObject json : list){
 //			System.out.println(json);
 //		}
-//	}
+		
+		
+		
+		System.out.println(RoomManagerTime.getAvailableTimeTillEndOfDay());
+		
+//		Properties settings = ReadPropertyValues
+//				.getPropertyFile("./Config/settings.properties");
+//		String userName = settings.getProperty("username");
+//		String userPw = settings.getProperty("passwordES");
+//		String server = settings.getProperty("server");
+//		String port = settings.getProperty("port");
+//		String serviceURL = "http://" + server + ":" + port;
+//		
+//		WebDriver driver = new FirefoxDriver();
+//		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//		LoginPage login;
+//		HomePage homePage;
+//		AvailablePanel availablePanel;
+//		
+//		login = new LoginPage(driver);
+//		homePage = login.access(serviceURL, userName, userPw, "room571");
+//		availablePanel = new AvailablePanel(homePage.getDriver());
+//		availablePanel.waitForMainPanel();
+//		System.out.println("The Title is: " + availablePanel.getStartAvailableTimeLabelText());
+//		System.out.println("The Title is: " + availablePanel.getEndAvailableTimeLabelText());
+	}
 	
 //	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{
 //		Date date = new Date();
