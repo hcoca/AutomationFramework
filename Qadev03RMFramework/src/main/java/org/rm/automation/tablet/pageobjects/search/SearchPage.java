@@ -24,6 +24,7 @@ public class SearchPage {
 	private final String advancedLabelPath = "//span[@ng-show='advancedSearchOn']";
 	private final String roomNameTextboxPath = "txtRoomName";//id
 	private final String capacityTextboxPath = "txtMinimumCapacity";//id
+	private final String locationComboBoxPath = "listLocation";//id
 	private String clearButtonPath = "//button[@class='btn-default btn btn-clear']";
 	
 	private List<WebElement> roomListSearch;
@@ -32,6 +33,7 @@ public class SearchPage {
 	@FindBy(id = advancedButtonPath) WebElement advancedButton;
 	@FindBy(id = roomNameTextboxPath) WebElement roomNameTextbox;
 	@FindBy(id = capacityTextboxPath) WebElement capacityTextbox;
+	@FindBy(id = locationComboBoxPath) WebElement locationComboBox;
 	@FindBy(xpath = advancedLabelPath) WebElement advancedLabel;
 	
 	public SearchPage(WebDriver driver){
@@ -79,6 +81,19 @@ public class SearchPage {
 		Waiters.WaitById(capacityTextboxPath, driver);
 		capacityTextbox.clear();
 		capacityTextbox.sendKeys(capacity);
+		return this;
+	}
+	
+	/**
+	 * Method to set a location
+	 * @param location
+	 * @return
+	 */
+	public SearchPage setLocation(String location)
+	{
+		WebElement loc;
+		loc = locationComboBox.findElement(By.xpath("//option[@label='"+ location +"']"));
+		loc.click();
 		return this;
 	}
 	
@@ -146,7 +161,21 @@ public class SearchPage {
 		return this;
 	}
 	
+	/**
+	 * Method to verify the search by Capacity
+	 * @param roomNameExpected
+	 * @return
+	 */
 	public SearchPage verifySearchByCapacity(String roomNameExpected)
+	{
+		getRoomList();
+		String roomNameActual = roomListSearch.get(0).getText();
+		
+		Assert.assertEquals(roomNameActual, roomNameExpected);
+		return this;
+	}
+	
+	public SearchPage verifySearchByLocation(String roomNameExpected)
 	{
 		getRoomList();
 		String roomNameActual = roomListSearch.get(0).getText();
