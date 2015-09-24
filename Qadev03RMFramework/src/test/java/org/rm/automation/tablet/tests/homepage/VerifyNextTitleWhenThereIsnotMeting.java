@@ -43,7 +43,7 @@ public class VerifyNextTitleWhenThereIsnotMeting extends TestBaseSetup {
  		try {
 			Assert.assertEquals(actual, expectedtitle);
 		} catch (Throwable t) {
-			LogManager.error("verifyNextTitleWhenThereIsnotMeting assert is fail: "+t.toString());
+			LogManager.error("VerifyNextTitleWhenThereIsnotMeting assert is fail: "+t.toString());
 		}
  		
 	}

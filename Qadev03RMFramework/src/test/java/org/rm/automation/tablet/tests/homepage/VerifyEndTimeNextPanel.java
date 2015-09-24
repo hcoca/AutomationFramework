@@ -1,5 +1,6 @@
 package org.rm.automation.tablet.tests.homepage;
 
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -20,9 +21,9 @@ import org.testng.annotations.Test;
 
 /**
  * @author luiscachi
- *VerifyNextTitleWhenThereisMeeting
+ *VerifytheStarTimeNextPanel
  */
-public class VerifyNextTitleWhenThereisMeeting extends TestBaseSetup {
+public class VerifyEndTimeNextPanel extends TestBaseSetup {
 
 	private LoginPage login;
 	private HomePage homepage;
@@ -30,8 +31,9 @@ public class VerifyNextTitleWhenThereisMeeting extends TestBaseSetup {
 	private String roomName;
 
 	private String meetingTitle = "meetingTitle";
+	private String endTimeSpect = RoomManagerTime.addminutesCurrentTime(17);
 	private String startTime = RoomManagerTime.addMinutesToCurrentTime(15);
-	private String endTime = RoomManagerTime.addMinutesToCurrentTime(16);
+	private String endTime = RoomManagerTime.addMinutesToCurrentTime(17);
 	private String meetingId;
 	
 
@@ -43,9 +45,9 @@ public class VerifyNextTitleWhenThereisMeeting extends TestBaseSetup {
 		try {
 			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
 			meetingId = MeetingsRequests.getMeetingId(meetingTitle, roomName);
-			LogManager.info("VerifyNextTitleWhenThereisMeeting: Executing Precondition, creating a meeting");
+			LogManager.info("VerifyEndTimeNextPanel: Executing Precondition, creating a meeting");
 		} catch (ParseException e) {
-			LogManager.error("VerifyNextTitleWhenThereisMeeting: ParseException - " + e.toString());
+			LogManager.error("VerifyEndTimeNextPanel: ParseException - " + e.toString());
 			e.printStackTrace();
 		}
 	}
@@ -55,11 +57,11 @@ public class VerifyNextTitleWhenThereisMeeting extends TestBaseSetup {
 		login = new LoginPage(driver);
  		homepage = login.access(roomName);
  		nextHomePage = new NextHomePage(homepage.getDriver());
- 		String actual = nextHomePage.getTitleNext();
+ 		String actual = nextHomePage.getTimeNextEnd();
  		try {
-			Assert.assertEquals(actual, meetingTitle);
+			Assert.assertEquals(actual, endTimeSpect);
 		} catch (Throwable t) {
-			LogManager.error("VerifyNextTitleWhenThereisMeeting assert is fail: "+t.toString());
+			LogManager.error("VerifyEndTimeNextPanel assert is fail: "+t.toString());
 		}
 	}
 	
@@ -67,15 +69,15 @@ public class VerifyNextTitleWhenThereisMeeting extends TestBaseSetup {
  	public void tearDown(){
  		try {
 			MeetingsRequests.deleteMeeting(meetingId, roomName);
-			LogManager.info("VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting");
+			LogManager.info("VerifyEndTimeNextPanel: Executing Postcondition, removing meeting");
 		} catch (UnsupportedOperationException e) {
-			LogManager.error("VerifyNextTitleWhenThereisMeeting: UnsupportedOperationException - " + e.toString());
+			LogManager.error("VerifyEndTimeNextPanel: UnsupportedOperationException - " + e.toString());
 			e.printStackTrace();
 		} catch (IOException e) {
-			LogManager.error("VerifyNextTitleWhenThereisMeeting: IOException - " + e.toString());
+			LogManager.error("VerifyEndTimeNextPanel: IOException - " + e.toString());
 			e.printStackTrace();
 		} catch (ParseException e) {
-			LogManager.error("VerifyNextTitleWhenThereisMeeting: ParseException - " + e.toString());
+			LogManager.error("VerifyEndTimeNextPanel: ParseException - " + e.toString());
 			e.printStackTrace();
 		}
  	}

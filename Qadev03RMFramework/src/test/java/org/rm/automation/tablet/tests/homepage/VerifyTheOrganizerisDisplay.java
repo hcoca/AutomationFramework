@@ -25,7 +25,6 @@ import org.testng.annotations.Test;
  */
 public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
 	
-
 	private LoginPage login;
 	private HomePage homepage;
 	private NextHomePage nextHomePage;
@@ -37,7 +36,6 @@ public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
 	private String endTime = RoomManagerTime.addMinutesToCurrentTime(16);
 	private String meetingId;
 	
-
 	@BeforeTest
 	public void beforeclass() throws UnsupportedOperationException, IOException{
 		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
@@ -46,9 +44,9 @@ public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
 		try {
 			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
 			meetingId = MeetingsRequests.getMeetingId(meetingTitle, roomName);
-			LogManager.info("VerifyTitleOnRunningMeeting: Executing Precondition, creating a meeting");
+			LogManager.info("VerifyTheOrganizerisDisplay: Executing Precondition, creating a meeting");
 		} catch (ParseException e) {
-			LogManager.error("VerifyTitleOnRunningMeeting: ParseException - " + e.toString());
+			LogManager.error("VerifyTheOrganizerisDisplay: ParseException - " + e.toString());
 			e.printStackTrace();
 		}
 	}
@@ -63,7 +61,7 @@ public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
  		try {
 			Assert.assertEquals(actual, organizer);
 		} catch (Throwable t) {
-			LogManager.error("verifyNextTitleWhenThereIsnotMeting assert is fail: "+t.toString());
+			LogManager.error("VerifyTheOrganizerisDisplay assert is fail: "+t.toString());
 		}
 	}
 	

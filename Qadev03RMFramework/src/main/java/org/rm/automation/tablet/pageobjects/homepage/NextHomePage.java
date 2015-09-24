@@ -15,12 +15,16 @@ public class NextHomePage extends HomePage {
 	@FindBy(xpath = "//div[@ng-bind='next._organizer']")
 	WebElement organizerNext;
 	
-	@FindBy(xpath = "//span[@ng-bind='next._start | date:"+"H:mm"+"']")
+	@FindBy(xpath = "//div[4]/div/div/span")
 	WebElement timenextStar;
+	////div[4]/div/div/span
+	//span[@ng-bind='next._start | date:"+"H:mm"+"']
 	
-	@FindBy(xpath = "//span[ng-bind='next._end | date:"+"H:mm"+"']")
+	
+	@FindBy(xpath = "//span[3]")
 	WebElement timeNextEnd;
-	
+	//span[3]
+	//span[ng-bind='next._end | date:"+"H:mm"+"']
 	public NextHomePage(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);

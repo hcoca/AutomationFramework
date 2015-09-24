@@ -106,9 +106,13 @@ public class RoomManagerTime {
 		Date currentTime = new Date();
 		return getHomePageTimeFormat(currentTime);
 	}
-	
+	/*
+	 * return the current time of the computer plus minutes added
+	 * */
 	public static String addminutesCurrentTime(int minutes){
-		long time = date.getTime();
+		long time ;
+		Date nd = new Date();
+		time = nd.getTime();
 		Date afterAddingMins = new Date(time + (minutes * ONE_MINUTE_IN_MILLIS));
 		return getHomePageTimeFormat(afterAddingMins);
 	}

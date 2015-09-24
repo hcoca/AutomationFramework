@@ -42,7 +42,7 @@ public class VerifyCurrentTime extends TestBaseSetup {
 		try {
 			Assert.assertEquals(espectCurrent, actualTime);
 		} catch (Throwable t) {
-			LogManager.error("verifyAvailableTime -the assertion is failed " + t.toString());
+			LogManager.error("VerifyCurrentTime -the assertion is failed " + t.toString());
 		}
 
 	}
