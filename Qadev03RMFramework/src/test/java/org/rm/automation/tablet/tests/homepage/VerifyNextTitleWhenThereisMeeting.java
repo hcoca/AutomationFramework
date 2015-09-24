@@ -13,7 +13,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class VerfyNextTitleWhenThereisMeeting extends TestBaseSetup {
+public class VerifyNextTitleWhenThereisMeeting extends TestBaseSetup {
 
 	private LoginPage login;
 	private HomePage homepage;
