@@ -25,7 +25,7 @@ public class SearchPage {
 	private final String roomNameTextboxPath = "txtRoomName";//id
 	private final String capacityTextboxPath = "txtMinimumCapacity";//id
 	private final String locationComboBoxPath = "listLocation";//id
-	private String clearButtonPath = "//button[@class='btn-default btn btn-clear']";
+	private final String clearButtonPath = "//button[@class='btn-default btn btn-clear']";
 	
 	private List<WebElement> roomListSearch;
 	private List<String> roomListLogin;
@@ -35,6 +35,7 @@ public class SearchPage {
 	@FindBy(id = capacityTextboxPath) WebElement capacityTextbox;
 	@FindBy(id = locationComboBoxPath) WebElement locationComboBox;
 	@FindBy(xpath = advancedLabelPath) WebElement advancedLabel;
+	@FindBy(xpath = clearButtonPath) WebElement clearButton;
 	
 	public SearchPage(WebDriver driver){
 		this.driver = driver;
@@ -94,6 +95,17 @@ public class SearchPage {
 		WebElement loc;
 		loc = locationComboBox.findElement(By.xpath("//option[@label='"+ location +"']"));
 		loc.click();
+		return this;
+	}
+	
+	/**
+	 * Method to click in the "Clear" button
+	 * @return
+	 */
+	public SearchPage clickClearButton()
+	{
+		Waiters.WaitByXPath(clearButtonPath, driver);
+		clearButton.click();
 		return this;
 	}
 	
@@ -175,12 +187,37 @@ public class SearchPage {
 		return this;
 	}
 	
+	/**
+	 * Method to verify the search by location
+	 * @param roomNameExpected
+	 * @return
+	 */
 	public SearchPage verifySearchByLocation(String roomNameExpected)
 	{
 		getRoomList();
 		String roomNameActual = roomListSearch.get(0).getText();
 		
 		Assert.assertEquals(roomNameActual, roomNameExpected);
+		return this;
+	}
+	
+	/**
+	 * Method to verify all the fields are clear
+	 * @return
+	 */
+	public SearchPage verifyFieldsAreEmpty()
+	{
+		String roomName = roomNameTextbox.getText();
+		
+		WebElement loc;
+		loc = locationComboBox.findElement(By.xpath("//option[@selected='selected']"));
+		String location = loc.getText();
+		
+		String capacity = capacityTextbox.getText();
+		
+		Assert.assertEquals(roomName, "");
+		Assert.assertEquals(location, "");
+		Assert.assertEquals(capacity, "");
 		return this;
 	}
 }
