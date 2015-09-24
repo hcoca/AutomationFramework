@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
 import org.testng.Assert;
 
@@ -26,7 +27,8 @@ public class SearchPage {
 	private final String capacityTextboxPath = "txtMinimumCapacity";//id
 	private final String locationComboBoxPath = "listLocation";//id
 	private final String clearButtonPath = "//button[@class='btn-default btn btn-clear']";
-	
+	private final String meetingTitlePath = "//div[@class='item-title']";
+	private final String scheduleTablePath = "//div[@class='vis-foreground']";
 	private List<WebElement> roomListSearch;
 	private List<String> roomListLogin;
 	
@@ -36,6 +38,7 @@ public class SearchPage {
 	@FindBy(id = locationComboBoxPath) WebElement locationComboBox;
 	@FindBy(xpath = advancedLabelPath) WebElement advancedLabel;
 	@FindBy(xpath = clearButtonPath) WebElement clearButton;
+	@FindBy(xpath = scheduleTablePath) WebElement scheduleTable;
 	
 	public SearchPage(WebDriver driver){
 		this.driver = driver;
@@ -54,6 +57,8 @@ public class SearchPage {
 	 * @return
 	 */
 	public SearchPage enableAdvancedSearch(){
+		LogManager.info("SearchPage: Enabling advanced search");
+
 		Waiters.WaitById(advancedButtonPath, driver);
 		advancedButton.click();
 		return this;
@@ -66,6 +71,8 @@ public class SearchPage {
 	 */
 	public SearchPage setRoomName(String roomName)
 	{
+		LogManager.info("SearchPage: Setting a room name");
+
 		Waiters.WaitById(roomNameTextboxPath,driver);
 		roomNameTextbox.clear();
 		roomNameTextbox.sendKeys(roomName);
@@ -79,6 +86,8 @@ public class SearchPage {
 	 */
 	public SearchPage setCapacity(String capacity)
 	{
+		LogManager.info("SearchPage: Setting a capacity");
+
 		Waiters.WaitById(capacityTextboxPath, driver);
 		capacityTextbox.clear();
 		capacityTextbox.sendKeys(capacity);
@@ -92,6 +101,8 @@ public class SearchPage {
 	 */
 	public SearchPage setLocation(String location)
 	{
+		LogManager.info("SearchPage: Selecting a location");
+
 		WebElement loc;
 		loc = locationComboBox.findElement(By.xpath("//option[@label='"+ location +"']"));
 		loc.click();
@@ -104,6 +115,8 @@ public class SearchPage {
 	 */
 	public SearchPage clickClearButton()
 	{
+		LogManager.info("SearchPage: Clicking the clear button");
+
 		Waiters.WaitByXPath(clearButtonPath, driver);
 		clearButton.click();
 		return this;
@@ -132,6 +145,8 @@ public class SearchPage {
 	 */
 	public SearchPage verifyRoomsDisplayed()
 	{
+		LogManager.info("SearchPage: Verifying the rooms displayed in the login page");
+
 		getRoomList();
 		roomListLogin = LoginPage.getRoomList();
 		String roomLogin, roomSearch;
@@ -155,6 +170,8 @@ public class SearchPage {
 	 */
 	public SearchPage verifySearchByRoomName(String roomNameExpected)
 	{
+		LogManager.info("SearchPage: Verifying the search of a room by room name");
+
 		getRoomList();
 		String roomNameActual = roomListSearch.get(0).getText();
 		
@@ -168,6 +185,8 @@ public class SearchPage {
 	 */
 	public SearchPage verifyAdvancedSearchIsEnabled()
 	{
+		LogManager.info("SearchPage: Verifying the advanced search is enabled");
+
 		String label = advancedLabel.getText();
 		Assert.assertEquals("Advanced", label);
 		return this;
@@ -180,6 +199,8 @@ public class SearchPage {
 	 */
 	public SearchPage verifySearchByCapacity(String roomNameExpected)
 	{
+		LogManager.info("SearchPage: Verifying the search of a room by capacity");
+		
 		getRoomList();
 		String roomNameActual = roomListSearch.get(0).getText();
 		
@@ -194,6 +215,8 @@ public class SearchPage {
 	 */
 	public SearchPage verifySearchByLocation(String roomNameExpected)
 	{
+		LogManager.info("SearchPage: Verifying the search of a room by location");
+		
 		getRoomList();
 		String roomNameActual = roomListSearch.get(0).getText();
 		
@@ -207,6 +230,8 @@ public class SearchPage {
 	 */
 	public SearchPage verifyFieldsAreEmpty()
 	{
+		LogManager.info("SearchPage: Verifying all the fields are empty");
+		
 		String roomName = roomNameTextbox.getText();
 		
 		WebElement loc;
@@ -218,6 +243,22 @@ public class SearchPage {
 		Assert.assertEquals(roomName, "");
 		Assert.assertEquals(location, "");
 		Assert.assertEquals(capacity, "");
+		return this;
+	}
+	
+	/**
+	 * Method to verify a meeting exists
+	 * @return
+	 */
+	public SearchPage verifyMeetingExists(String meetingTitleExpected)
+	{
+		LogManager.info("SearchPage: Verifying the meeting exists");
+		
+		WebElement meetingTitle = scheduleTable.findElement(By.xpath(meetingTitlePath));
+		String meetingTitleActual = meetingTitle.getText();
+		
+		Assert.assertEquals(meetingTitleActual, meetingTitleExpected);
+		
 		return this;
 	}
 }
