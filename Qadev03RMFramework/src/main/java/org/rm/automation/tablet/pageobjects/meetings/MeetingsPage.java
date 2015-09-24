@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
@@ -16,7 +17,7 @@ public class MeetingsPage{
 	
 	public MeetingsPage(WebDriver driver){
 		this.driver = driver;
-	}	
+	}
 	
 	public MeetingsPage setOrganizer(String name){	
 		LogManager.info("MeetingsPage : Typing the organizer's account username");
@@ -135,5 +136,15 @@ public class MeetingsPage{
 		element = driver.findElement(By.xpath("//html/body/div[2]/div/div/div[1]/div[2]/div[2]"));
 		Assert.assertEquals(roomName, element.getText());	
 		return this;
+	}
+	
+	/**
+	 * @return the text associated to the Schedule page.
+	 */
+	public String getScheduleLabelText(){
+		Waiters.WaitByXPath("//span[text() = 'Schedule']",driver);
+		element = driver.findElement(By.xpath("//span[text() = 'Schedule']"));
+
+		return element.getText();
 	}
 }
