@@ -1,39 +1,43 @@
 package org.rm.automation.tablet.tests.homepage;
 
-import java.io.IOException;
 import java.util.ArrayList;
+
 import org.json.simple.JSONObject;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
+import org.rm.automation.tablet.pageobjects.homepage.NextHomePage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class VerifyNameRoomSelected extends TestBaseSetup {
-	// import class needed
+public class VerifyNextTitleWhenThereIsnotMeting extends TestBaseSetup {
+	
 	private LoginPage login;
 	private HomePage homepage;
-	// room properties 
-	private String roomName;
-
- 	@BeforeClass
- 	public void setup() throws UnsupportedOperationException, IOException{
+	private NextHomePage nextHomePage;
+	String roomName;
+	String expectedtitle = "End of day";
+	@BeforeTest
+	public void beforeclass(){
 		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
 		roomName = allRooms.get(0).get("displayName").toString();
- 	}
- 	@Test
- 	public void verifyNameRoom(){
- 		login = new LoginPage(driver);
+	}
+	
+	@Test
+	public void test(){
+		login = new LoginPage(driver);
  		homepage = login.access(roomName);
- 		String actual = homepage.getRoomNamelabel();
+ 		nextHomePage = new NextHomePage(homepage.getDriver());
+ 		String actual = nextHomePage.getTitleNext();
  		try {
- 			Assert.assertEquals(actual, roomName);
+			Assert.assertEquals(actual, expectedtitle);
 		} catch (Throwable t) {
-			LogManager.error("verify the name room -the assertion is failed " + t.toString() );
+			LogManager.error("verifyNextTitleWhenThereIsnotMeting assert is fail: "+t.toString());
 		}
  		
- 	}
+	}
+
 }

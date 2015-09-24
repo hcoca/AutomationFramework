@@ -15,12 +15,12 @@ import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class VerifyRoomsDisplayed extends TestBaseSetup {
+public class VerifyAdvancedSearch extends TestBaseSetup {
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
 	private String username = settings.getProperty("username");
 	private String password = settings.getProperty("password");
-	private String url = "http://" + settings.getProperty("server") + ":" +
+	private String url = "http://" + settings.getProperty("server")+":"+
 							settings.getProperty("port");
 	private String roomName;
 	
@@ -35,15 +35,14 @@ public class VerifyRoomsDisplayed extends TestBaseSetup {
 		ArrayList<JSONObject> list = ConferenceRoomsRequests.getRooms();
 		roomName = list.get(0).get("customDisplayName").toString();
 	}
-
+	
 	@Test
-	public void testVerifyRoomsDisplayed()
+	public void testVerifyAdvancedSearch()
 	{
-		LogManager.info("VerifyRoomsDisplayed: Executing Test Case");
-
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.access(url, username, password, roomName);
 		searchPage = homePage.selectSearchPage()
-				.verifyRoomsDisplayed();
+		.enableAdvancedSearch()
+		.verifyAdvancedSearchIsEnabled();
 	}
 }

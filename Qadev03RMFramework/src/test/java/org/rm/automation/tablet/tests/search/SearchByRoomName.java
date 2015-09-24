@@ -3,6 +3,7 @@ package org.rm.automation.tablet.tests.search;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
+import java.util.Random;
 
 import org.json.simple.JSONObject;
 import org.rm.automation.base.TestBaseSetup;
@@ -15,14 +16,17 @@ import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class VerifyRoomsDisplayed extends TestBaseSetup {
+public class SearchByRoomName extends TestBaseSetup {
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
 	private String username = settings.getProperty("username");
 	private String password = settings.getProperty("password");
-	private String url = "http://" + settings.getProperty("server") + ":" +
+	private String url = "http://" + settings.getProperty("server")+":"+
 							settings.getProperty("port");
+	
 	private String roomName;
+	private Random random = new Random();
+	private int position;
 	
 	private LoginPage loginPage;
 	private HomePage homePage;
@@ -31,19 +35,22 @@ public class VerifyRoomsDisplayed extends TestBaseSetup {
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
 	{
-		LogManager.info("SearchByRoomName: Executing Precondition, getting all the rooms");
+		LogManager.info("SearchByRoomName: Executing Precondition, getting all rooms");
 		ArrayList<JSONObject> list = ConferenceRoomsRequests.getRooms();
-		roomName = list.get(0).get("customDisplayName").toString();
+		position = random.nextInt(list.size());
+		roomName = list.get(position).get("customDisplayName").toString();
 	}
-
+	
 	@Test
-	public void testVerifyRoomsDisplayed()
+	public void testSearchMeetingByRoom()
 	{
-		LogManager.info("VerifyRoomsDisplayed: Executing Test Case");
+		LogManager.info("SearchByRoomName: Executing Test Case");
 
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.access(url, username, password, roomName);
 		searchPage = homePage.selectSearchPage()
-				.verifyRoomsDisplayed();
+		.enableAdvancedSearch()
+		.setRoomName(roomName)
+		.verifySearchByRoomName(roomName);
 	}
 }
