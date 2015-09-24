@@ -165,4 +165,8 @@ public class LoginPage {
 		LogManager.info("LoginPage : Getting the rooms of login");
 		return roomNames;
 	}
+	
+	public String getUserLoginName() {
+		return userName;
+	}
 }
