@@ -21,7 +21,7 @@ public class SearchPage {
 	private final String roomPath = "//button[@class='room-box ng-scope']";
 	private String resourcesIconPath = "//div[@class='resource-search pull-left resources-height ng-scope']";
 	private final String advancedButtonPath = "advanced-search";//id
-	private String advancedLabelPath = "//span[@ng-show='advancedSearchOn']";
+	private final String advancedLabelPath = "//span[@ng-show='advancedSearchOn']";
 	private final String roomNameTextboxPath = "txtRoomName";//id
 	private String capacityTextboxPath = "txtMinimumCapacity";//id
 	private String clearButtonPath = "//button[@class='btn-default btn btn-clear']";
@@ -31,6 +31,7 @@ public class SearchPage {
 	
 	@FindBy(id = advancedButtonPath) WebElement advancedButton;
 	@FindBy(id = roomNameTextboxPath) WebElement roomNameTextbox;
+	@FindBy(xpath = advancedLabelPath) WebElement advancedLabel;
 	
 	public SearchPage(WebDriver driver){
 		this.driver = driver;
@@ -73,11 +74,19 @@ public class SearchPage {
 		return new MeetingsPage(driver);		
 	}		
 	
+	/**
+	 * Method to get the list of rooms in the search page
+	 */
 	public void getRoomList()
 	{
 		roomListSearch = driver.findElements(By.xpath(roomPath));
 	}
 	
+	/**
+	 * Method to verify the rooms displayed in the login page
+	 * and the search page
+	 * @return
+	 */
 	public SearchPage verifyRoomsDisplayed()
 	{
 		getRoomList();
@@ -96,12 +105,24 @@ public class SearchPage {
 		return this;
 	}
 	
+	/**
+	 * Method to verify the search by room name
+	 * @param roomNameExpected
+	 * @return
+	 */
 	public SearchPage verifySearchByRoomName(String roomNameExpected)
 	{
 		getRoomList();
 		String roomNameActual = roomListSearch.get(0).getText();
 		
 		Assert.assertEquals(roomNameActual, roomNameExpected);
+		return this;
+	}
+	
+	public SearchPage verifyAdvancedSearchIsEnabled()
+	{
+		String label = advancedLabel.getText();
+		Assert.assertEquals("Advanced", label);
 		return this;
 	}
 }
