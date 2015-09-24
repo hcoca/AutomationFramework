@@ -1,8 +1,9 @@
-package org.rm.automation.base;
+package org.rm.automation.tablet.tests.homepage;
 
 import java.util.ArrayList;
 
 import org.json.simple.JSONObject;
+import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.homepage.NextHomePage;
