@@ -21,14 +21,12 @@ public class RoomManagerTime {
 		formatTime();
 		
 		long time = date.getTime();
-		Date afterAddingMins = new Date(time + (minutes * ONE_MINUTE_IN_MILLIS));
-		
+		Date afterAddingMins = new Date(time + (minutes * ONE_MINUTE_IN_MILLIS));		
 		return formatedTime.format(afterAddingMins);
 	}
 	
 	public static String substractMinutes(int minutes){
-		formatTime();
-		
+		formatTime();		
 		long time = date.getTime();
 		Date afterAddingMins = new Date(time - (minutes * ONE_MINUTE_IN_MILLIS));
 		
@@ -37,7 +35,7 @@ public class RoomManagerTime {
 	
 	private static void formatTime(){
 		date = new Date();
-		formatedTime = new SimpleDateFormat ("yyyy-MM-dd'T'hh:mm:ss'.000Z'");
+		formatedTime = new SimpleDateFormat ("yyyy-MM-dd'T'HH:mm:ss'.000Z'");
 		formatedTime.setTimeZone(TimeZone.getTimeZone("GMT"));
 	}
 }

@@ -12,7 +12,7 @@ public class CreateMeeting extends TestBaseSetup {
 		driver=myWebDriver.myDriver;
 	}	*/	
 	
-	@Test
+//	@Test
 //	public void createMeeting(){
 //		LogManager.info("Executing: Create a new meeting test case");
 //		String url = "http://172.20.208.105:4040";
@@ -37,7 +37,7 @@ public class CreateMeeting extends TestBaseSetup {
 //		.goHomePage();		
 //	}
 	
-	@AfterMethod 
+	/*@AfterMethod 
 	public void deleteMeeting(){
 		String id = "";
 		try{
@@ -47,5 +47,5 @@ public class CreateMeeting extends TestBaseSetup {
 		catch(Exception e){
 			e.printStackTrace();
 		}
-	}
+	}*/
 }

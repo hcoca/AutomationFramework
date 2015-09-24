@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">		
+<suite name="BVT Tablet Test Cases">		
+	
+ <test name="Schedule Acceptance Test cases">		
+    <classes>
+    	<class name="org.rm.automation.tablet.tests.schedule.AddAttendeeToMeeting"/>
+    	<class name="org.rm.automation.tablet.tests.schedule.RemoveAttendeeFromMeeting"/>
+    	<class name="org.rm.automation.tablet.tests.schedule.RemoveMeeting"/>    	    	   
+    </classes>		
+  </test> <!-- Test -->  		
+</suite> <!-- Suite --> 	

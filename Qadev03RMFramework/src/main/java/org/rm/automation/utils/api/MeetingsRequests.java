@@ -2,9 +2,7 @@ package org.rm.automation.utils.api;
 
 import java.io.IOException;
 import java.util.ArrayList;
-//import java.util.Base64;
 import java.util.Properties;
-
 import org.apache.commons.codec.binary.Base64;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpDelete;
@@ -18,6 +16,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 
 public class MeetingsRequests {
@@ -34,9 +33,14 @@ public class MeetingsRequests {
 	static String meetingEp = meetings.getProperty("meetings")
 			.replace("[server]", settings.getProperty("server"))
 			.replace("[port]", settings.getProperty("port"));
+	
 	static String meetingByIdEp = meetings.getProperty("meetingById")
 			.replace("[server]", settings.getProperty("server"))
 			.replace("[port]", settings.getProperty("port"));
+	
+	static String username = settings.getProperty("userES");
+	static String password = settings.getProperty("passwordES");
+	
 	
 	/**
 	 * Get all the resources
@@ -134,9 +138,9 @@ public class MeetingsRequests {
 	
 	public static void postMeeting() throws UnsupportedOperationException, ParseException, IOException
 	{
-		String str = "room.manager:M@nager";
+		String str = username+":"+password;
 		byte[]   bytesEncoded = Base64.encodeBase64(str .getBytes());
-		token = new String(bytesEncoded );
+		token = new String(bytesEncoded);
 		
 		String service = ServicesRequests.getServiceId();
 		String room = ConferenceRoomsRequests.getRoomId("Conference Room 1");
@@ -181,11 +185,14 @@ public class MeetingsRequests {
         }
 	}
 	
-	public static void postMeeting(String roomName, String meetingTitle, String startTime, String endTime) throws UnsupportedOperationException, ParseException, IOException
-	{
+	public static void postMeeting(String roomName, String meetingTitle, String startTime, String endTime, String[] attendees) throws UnsupportedOperationException, ParseException, IOException
+	{		
+		LogManager.info("MeetingRequests : Creating the meeting: "+meetingTitle+" in the room: "+roomName+" from: "+startTime+" to: "+endTime);
+		
 		// room.manager is the organizer and M@nager is the password
-		String userES = settings.getProperty("userES");
-		String str = userES + ":" + settings.getProperty("passwordES");
+		String str = username+":"+password;		
+		ArrayList attend = new ArrayList();
+		
 		//String str = "Administrator:Control123!";
 		byte[] bytesEncoded = Base64.encodeBase64(str.getBytes());
 		token = new String(bytesEncoded );
@@ -194,7 +201,7 @@ public class MeetingsRequests {
 		String roomId = ConferenceRoomsRequests.getRoomId(roomName);
 		
 		JSONObject conferenceRoom = ConferenceRoomsRequests.getRoom(roomId);
-		String conFerenceRoomEmail = conferenceRoom.get("emailAddress").toString();
+		String conferenceRoomEmail = conferenceRoom.get("emailAddress").toString();
 		
 		String url = meetingEp
 				.replace("[serviceId]", service)
@@ -214,13 +221,78 @@ public class MeetingsRequests {
 			 * Request's body
 			 */
 			JSONObject body = new JSONObject();
-			body.put("organizer", userES);
+			body.put("organizer", username);
 		  	body.put("title", meetingTitle);
 		  	body.put("start", startTime);
 		  	body.put("end", endTime);
 		  	body.put("location", roomName);
-		  	body.put("roomEmail", conFerenceRoomEmail);
-		  	body.put("resources", new JSONArray().add(conFerenceRoomEmail));
+		  	body.put("roomEmail", conferenceRoomEmail);		  	
+		  	body.put("resources", new JSONArray().add(conferenceRoomEmail));
+		  	
+		  	if(attendees.length>=1){		  		
+		  		for(int i=0;i<attendees.length;i++){
+			  		attend.add(attendees[i]);		
+			  	}		  		
+		  	}
+		  	
+		  	body.put("attendees", attend);
+		  	
+			StringEntity entity = new StringEntity(body.toString());
+		    request.setEntity(entity);
+
+            HttpResponse result = httpClient.execute(request);
+            String json = EntityUtils.toString(result.getEntity(), "UTF-8");
+            System.out.println(result.getStatusLine().getStatusCode());
+            System.out.println(result.getStatusLine().getReasonPhrase());
+            System.out.println(json);
+
+        } 
+		catch (IOException ex) {
+        }
+	}
+	
+	public static void postMeeting(String roomName, String meetingTitle, String startTime, String endTime) throws UnsupportedOperationException, ParseException, IOException
+	{		
+		LogManager.info("MeetingRequests : Creating the meeting: "+meetingTitle+" in the room: "+roomName+" from: "+startTime+" to: "+endTime);
+		
+		// room.manager is the organizer and M@nager is the password
+		String str = username+":"+password;			
+		
+		//String str = "Administrator:Control123!";
+		byte[] bytesEncoded = Base64.encodeBase64(str.getBytes());
+		token = new String(bytesEncoded );
+		
+		String service = ServicesRequests.getServiceId();
+		String roomId = ConferenceRoomsRequests.getRoomId(roomName);
+		
+		JSONObject conferenceRoom = ConferenceRoomsRequests.getRoom(roomId);
+		String conferenceRoomEmail = conferenceRoom.get("emailAddress").toString();
+		
+		String url = meetingEp
+				.replace("[serviceId]", service)
+				.replace("[roomId]", roomId);
+		
+		try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
+			HttpPost request = new HttpPost(url);
+			
+			/**
+			 * Setting the headers
+			 */
+			request.setHeader("Content-type", "application/json");
+			request.setHeader("Accept", "application/json");
+			request.setHeader("Authorization", "Basic "+ token);
+			
+			/**
+			 * Request's body
+			 */
+			JSONObject body = new JSONObject();
+			body.put("organizer", username);
+		  	body.put("title", meetingTitle);
+		  	body.put("start", startTime);
+		  	body.put("end", endTime);
+		  	body.put("location", roomName);
+		  	body.put("roomEmail", conferenceRoomEmail);		  	
+		  	body.put("resources", new JSONArray().add(conferenceRoomEmail));
 		  	body.put("attendees", new JSONArray());
 		  	
 			StringEntity entity = new StringEntity(body.toString());
@@ -260,6 +332,10 @@ public class MeetingsRequests {
 			HttpResponse result = httpClient.execute(request);
 
             String json = EntityUtils.toString(result.getEntity(), "UTF-8");
+            
+            System.out.println(result.getStatusLine().getStatusCode());
+            System.out.println(result.getStatusLine().getReasonPhrase());
+            System.out.println(json);
         } 
 		catch (IOException ex) {
         }
@@ -267,17 +343,17 @@ public class MeetingsRequests {
 	
 	public static void deleteMeeting(String meetingId, String roomName) throws UnsupportedOperationException, IOException, ParseException
 	{
+		LogManager.info("MeetingRequests : Deleting the meeting: "+meetingId+" in the room: "+roomName);
+		
 		String service = ServicesRequests.getServiceId();
 		String room = ConferenceRoomsRequests.getRoomId(roomName);
 		String url = meetingByIdEp
 				.replace("[serviceId]", service)
 				.replace("[roomId]", room)
-				.replace("[meetingId]", meetingId);
+				.replace("[meetingId]", meetingId);		
 		
-		String userES = settings.getProperty("userES");
-		String str = userES + ":" + settings.getProperty("passwordES");
+		String str = username + ":" +password;
 		
-//		String str = "room.manager:M@nager";
 		byte[]   bytesEncoded = Base64.encodeBase64(str .getBytes());
 		token = new String(bytesEncoded );
 		
@@ -291,17 +367,21 @@ public class MeetingsRequests {
 			HttpResponse result = httpClient.execute(request);
 
             String json = EntityUtils.toString(result.getEntity(), "UTF-8");
+            
+            System.out.println(result.getStatusLine().getStatusCode());
+            System.out.println(result.getStatusLine().getReasonPhrase());
+            System.out.println(json);
         } 
 		catch (IOException ex) {
         }
 	}
 	
-	public static String getMeetingId(String name) throws ParseException
+	public static String getMeetingId(String name, String roomName) throws ParseException
 	{
 		String id = "";
 		ArrayList<JSONObject> list;
 		try {
-			list = getRoomMeetings();
+			list = getRoomMeetings(roomName);
 			for (JSONObject object : list) {
 				if(object.get("title").toString().equals(name))
 					id = object.get("_id").toString();
@@ -309,6 +389,7 @@ public class MeetingsRequests {
 		} catch (UnsupportedOperationException | IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println(id);
 		return id;
 	}
 }
