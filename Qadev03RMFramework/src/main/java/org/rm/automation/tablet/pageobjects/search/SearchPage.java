@@ -6,26 +6,35 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.utils.Waiters;
 import org.testng.Assert;
 
-public class SearchPage{
-	
+public class SearchPage {
+
 	WebDriver driver;
 	WebElement element;
-	
+
 	private final String roomPath = "//button[@class='room-box ng-scope']";
+	private String resourcesIconPath = "//div[@class='resource-search pull-left resources-height ng-scope']";
+	private final String advancedButtonPath = "advanced-search";//id
+	private String advancedLabelPath = "//span[@ng-show='advancedSearchOn']";
+	private final String roomNameTextboxPath = "txtRoomName";//id
+	private String capacityTextboxPath = "txtMinimumCapacity";//id
+	private String clearButtonPath = "//button[@class='btn-default btn btn-clear']";
 	
 	private List<WebElement> roomListSearch;
 	private List<String> roomListLogin;
 	
+	@FindBy(id = advancedButtonPath) WebElement advancedButton;
+	@FindBy(id = roomNameTextboxPath) WebElement roomNameTextbox;
 	
-	//room-box ng-scope
 	public SearchPage(WebDriver driver){
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 
 	public SearchPage selectResource(){
@@ -35,16 +44,25 @@ public class SearchPage{
 		return this;
 	}
 	
+	/**
+	 * Method to select the advanced search button
+	 * @return
+	 */
 	public SearchPage enableAdvancedSearch(){
-		Waiters.WaitByCss("i.fa.fa-search-plus",driver);
-		driver.findElement(By.cssSelector("i.fa.fa-search-plus")).click();
+		Waiters.WaitById(advancedButtonPath, driver);
+		advancedButton.click();
 		return this;
 	}
 	
-	public SearchPage typeRoomName(String roomName){
-		Waiters.WaitById("txtRoomName",driver);
-		element = driver.findElement(By.id("txtRoomName"));
-		element.sendKeys(roomName);
+	/**
+	 * Method to set the RoomName
+	 * @param roomName
+	 * @return
+	 */
+	public SearchPage setRoomName(String roomName){
+		Waiters.WaitById(roomNameTextboxPath,driver);
+		roomNameTextbox.clear();
+		roomNameTextbox.sendKeys(roomName);
 		return this;
 	}
 	
@@ -75,6 +93,15 @@ public class SearchPage{
 			
 			Assert.assertEquals(roomLogin, roomSearch);
 		}
+		return this;
+	}
+	
+	public SearchPage verifySearchByRoomName(String roomNameExpected)
+	{
+		getRoomList();
+		String roomNameActual = roomListSearch.get(0).getText();
+		
+		Assert.assertEquals(roomNameActual, roomNameExpected);
 		return this;
 	}
 }
