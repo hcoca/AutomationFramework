@@ -12,23 +12,24 @@ import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.search.SearchPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
+import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class SearchByCapacity extends TestBaseSetup {
+public class VerifyAllFieldsAreClear extends TestBaseSetup{
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
 	private String username = settings.getProperty("username");
 	private String password = settings.getProperty("password");
 	private String url = "http://" + settings.getProperty("server")+":"+
 							settings.getProperty("port");
+	private String roomNameRandom = StringGenerator.getString();
 	private String roomName;
-	private String roomId;
-	private int position;
-	private String capacity;
+	private String locationName = "<All>";
 	private Random random = new Random();
+	private String capacity =String.valueOf(random.nextInt(50));
+	private int position;
 	
 	private LoginPage loginPage;
 	private HomePage homePage;
@@ -37,36 +38,27 @@ public class SearchByCapacity extends TestBaseSetup {
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
 	{
-		LogManager.info("SearchByCapacity: Executing Precondition, "
-				+ "setting the capacity");
+		LogManager.info("VerifyClearButton: Executing Precondition, "
+				+ "getting all rooms");
 		ArrayList<JSONObject> list = ConferenceRoomsRequests.getRooms();
-		
 		position = random.nextInt(list.size());
-		capacity = String.valueOf(random.nextInt(50));
 		
 		roomName = list.get(position).get("customDisplayName").toString();
-		roomId = list.get(position).get("_id").toString();
-		ConferenceRoomsRequests.setValue(roomId, "capacity", capacity);
 	}
 	
 	@Test
-	public void testSearchByCapacity()
+	public void testVerifyAllFieldsAreClear()
 	{
-		LogManager.info("SearchByCapacity: Executing Test Case");
+		LogManager.info("VerifyClearButton: Executing Test Case");
 
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.access(url, username, password, roomName);
 		searchPage = homePage.selectSearchPage()
 		.enableAdvancedSearch()
+		.setRoomName(roomNameRandom)
+		.setLocation(locationName)
 		.setCapacity(capacity)
-		.verifySearchByCapacity(roomName);
-	}
-	
-	@AfterMethod
-	public void Postconditions()
-	{
-		LogManager.info("SearchByCapacity: Executing Postcondition, "
-				+ "removing the capacity set");
-		ConferenceRoomsRequests.setValue(roomId, "capacity", null);
+		.clickClearButton()
+		.verifyFieldsAreEmpty();
 	}
 }
