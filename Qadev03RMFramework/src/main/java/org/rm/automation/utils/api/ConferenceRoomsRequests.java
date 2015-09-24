@@ -6,6 +6,7 @@ import java.util.Properties;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -31,6 +32,9 @@ public class ConferenceRoomsRequests {
 			.replace("[server]", settings.getProperty("server"))
 			.replace("[port]", settings.getProperty("port"));
 	static String roomByIdEp = rooms.getProperty("roomById")
+			.replace("[server]", settings.getProperty("server"))
+			.replace("[port]", settings.getProperty("port"));
+	static String resourcesByRoomEp = rooms.getProperty("resourcesByRoom")
 			.replace("[server]", settings.getProperty("server"))
 			.replace("[port]", settings.getProperty("port"));
 			
@@ -219,5 +223,58 @@ public class ConferenceRoomsRequests {
 		}
 		
 		return res;
+	}
+	
+	/**
+	 * Method to associate a resource to a room
+	 * @param roomId
+	 * @param resourceId
+	 * @param quantity
+	 */
+	public static void setResourceInRoom(String roomId, String resourceId, String quantity)
+	{
+		String url = resourcesByRoomEp.replace("[id]", roomId);
+		
+		try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
+			HttpPost request = new HttpPost(url);
+			
+			token = LoginRequests.getToken();
+			
+			JSONObject resource = ResourcesRequests.getResource(resourceId);
+			String resourceName = resource.get("name").toString();
+			String resourceCustomName = resource.get("customName").toString();
+			String resourceIcon = resource.get("fontIcon").toString();
+			
+			/**
+			 * Setting the headers
+			 */
+			request.addHeader("Content-type", "application/json");
+			request.setHeader("Accept", "application/json");
+			request.setHeader("Authorization", "jwt "+ token);
+			
+			/**
+			 * Request's body
+			 */
+			JSONObject body = new JSONObject();
+			JSONObject association = new JSONObject();
+			JSONArray array = new JSONArray();
+			
+			association.put("resourceId", resourceId);
+			association.put("name", resourceName);
+			association.put("customName", resourceCustomName);
+			association.put("fontIcon", resourceIcon);
+			association.put("quantity", quantity);
+			array.add(association);
+			
+			body.put("associations", array);
+			
+			StringEntity entity = new StringEntity(body.toString());
+		    request.setEntity(entity);
+
+            HttpResponse result = httpClient.execute(request);
+        } 
+		catch (IOException ex) {
+			LogManager.error("ConferenceRoomsRequests: Error stablishing the HTTP protocol");
+        }
 	}
 }

@@ -6,22 +6,19 @@ import java.util.Properties;
 import java.util.Random;
 
 import org.json.simple.JSONObject;
-import org.json.simple.parser.ParseException;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.search.SearchPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
-import org.rm.automation.utils.RoomManagerTime;
-import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
-import org.rm.automation.utils.api.MeetingsRequests;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class VerifyMeetingIsDisplayed extends TestBaseSetup{
+public class SearchByResource extends TestBaseSetup{
+
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
 	private String username = settings.getProperty("username");
@@ -29,9 +26,7 @@ public class VerifyMeetingIsDisplayed extends TestBaseSetup{
 	private String url = "http://" + settings.getProperty("server")+":"+
 							settings.getProperty("port");
 	private String roomName;
-	private String meetingName = StringGenerator.getString();
-	private String startTime = RoomManagerTime.substractMinutesToCurrentTime(1);
-	private String endTime = RoomManagerTime.addMinutesToCurrentTime(3);
+	private String roomId;
 	private int position;
 	private Random random = new Random();
 	
@@ -40,36 +35,36 @@ public class VerifyMeetingIsDisplayed extends TestBaseSetup{
 	private SearchPage searchPage;
 	
 	@BeforeMethod
-	public void Preconditions() throws UnsupportedOperationException, IOException, ParseException
+	public void Preconditions() throws UnsupportedOperationException, IOException
 	{
-		LogManager.info("VerifyMeetingIsDisplayed: Executing Precondition, "
-				+ "creating a meeting");
+		LogManager.info("SearchByResource: Executing Precondition, "
+				+ "assigning a resource to a conference room");
 		
 		ArrayList<JSONObject> list = ConferenceRoomsRequests.getRooms();
 		position = random.nextInt(list.size());
 		
 		roomName = list.get(position).get("customDisplayName").toString();
-		
-		MeetingsRequests.postMeeting(roomName, meetingName, startTime, endTime);
+		roomId = list.get(position).get("_id").toString();
 	}
 	
 	@Test
-	public void testVerifyMeetingIsDisplayed()
+	public void testSearchByResource()
 	{
-		LogManager.info("VerifyMeetingIsDisplayed: Executing Test Case");
+		LogManager.info("SearchByResource: Executing Test Case");
 
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.access(url, username, password, roomName);
 		searchPage = homePage.selectSearchPage()
-				.verifyMeetingExists(meetingName);
+		.enableAdvancedSearch();
+//		.setCapacity(capacity)
+//		.verifySearchByCapacity(roomName);
 	}
 	
 	@AfterMethod
-	public void Postconditions() throws ParseException, UnsupportedOperationException, IOException
+	public void Postconditions()
 	{
-		LogManager.info("VerifyMeetingIsDisplayed: Executing Postcondition, "
-				+ "removing meeting");
-		String id = MeetingsRequests.getMeetingId(meetingName, roomName);
-		MeetingsRequests.deleteMeeting(id, roomName);
+		LogManager.info("SearchByResource: Executing Postcondition, "
+				+ "removing the capacity set");
+		ConferenceRoomsRequests.setValue(roomId, "capacity", null);
 	}
 }
