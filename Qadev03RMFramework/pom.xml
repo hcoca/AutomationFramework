@@ -10,9 +10,21 @@
   
   <properties>
 	<suite></suite>
+	<browser></browser>
   </properties>
   
 	<build>
+		<resources>
+		<!-- include main.properties -->
+		<resource>
+		  <directory>./Config/</directory>
+		  <includes>
+		       <include>settings.properties</include>
+		     </includes>
+		  <filtering>true</filtering>
+		</resource>
+		</resources>
+	
   		<plugins>
         	<plugin>
 	    		<groupId>org.apache.maven.plugins</groupId>

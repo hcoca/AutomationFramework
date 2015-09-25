@@ -25,7 +25,10 @@ public class TestBaseSetup implements ISuiteListener,IReporter{
 	protected static WebDriver driver = null;
 	private Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
+	private Properties settingsPom = ReadPropertyValues
+			.getPropertyFile("./target/classes/settings.properties");
 	private String browser = settings.getProperty("browser");
+	private String browserCmd = settingsPom.getProperty("browserCmd");
 	
 	/* 
 	 * Each time an ISuite is triggered a driver is created so that all test cases are managed
@@ -34,11 +37,23 @@ public class TestBaseSetup implements ISuiteListener,IReporter{
 	@Override
 	public void onStart(ISuite arg0) {
 		try {
-			driver = BrowserManager.getDriver(browser);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			driver.manage().window().maximize();
-			LogManager.info("Browser: " + browser + " was opened");
-			LogManager.info("Suite name: " + arg0.getName() + " starting");
+			if(browserCmd.isEmpty())
+			{
+				driver = BrowserManager.getDriver(browser);
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				driver.manage().window().maximize();
+				LogManager.info("Browser: " + browser + " was opened");
+				LogManager.info("Suite name: " + arg0.getName() + " starting");
+			}
+			else
+			{
+				driver = BrowserManager.getDriver(browserCmd);
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				driver.manage().window().maximize();
+				LogManager.info("Browser: " + browser + " was opened");
+				LogManager.info("Suite name: " + arg0.getName() + " starting");
+			}
+
 		} 
 		catch (Exception e) {
 			System.out.println("Error....." + e.getStackTrace());
