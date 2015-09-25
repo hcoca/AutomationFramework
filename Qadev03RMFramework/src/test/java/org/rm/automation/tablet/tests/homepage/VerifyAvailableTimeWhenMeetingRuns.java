@@ -8,6 +8,7 @@ import org.json.simple.parser.ParseException;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.AvailablePanel;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
+import org.rm.automation.tablet.preconditions.homepage.PostContidionHomePageTC;
 import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.MeetingManager;
@@ -49,9 +50,9 @@ public class VerifyAvailableTimeWhenMeetingRuns extends TestBaseSetup {
 	private String actualResult;
 	
  	@BeforeClass
- 	public void setup() throws UnsupportedOperationException, IOException{
-		roomName = PreConditionHomePageTC.GetRoomName();
-		meetingId = PreConditionHomePageTC.CreateCurrentMeeting();
+ 	public void setup(){
+		roomName = PreConditionHomePageTC.getRoomName();
+		meetingId = PreConditionHomePageTC.createCurrentMeeting(meetingTitle, behindMinute, aheadMinute);
 		meetingEndTime = MeetingManager.getMeetingEndTimeFormated();
  	}
  	
@@ -73,18 +74,6 @@ public class VerifyAvailableTimeWhenMeetingRuns extends TestBaseSetup {
  	
  	@AfterClass
  	public void tearDown(){
- 		try {
-			MeetingsRequests.deleteMeeting(meetingId, roomName);
-			LogManager.info("VerifyAvailableTimeWhenMeetingRuns: Executing Postcondition, removing meeting");
-		} catch (UnsupportedOperationException e) {
-			LogManager.error("VerifyAvailableTimeWhenMeetingRuns: UnsupportedOperationException - " + e.toString());
-			e.printStackTrace();
-		} catch (IOException e) {
-			LogManager.error("VerifyAvailableTimeWhenMeetingRuns: IOException - " + e.toString());
-			e.printStackTrace();
-		} catch (ParseException e) {
-			LogManager.error("VerifyAvailableTimeWhenMeetingRuns: ParseException - " + e.toString());
-			e.printStackTrace();
-		}
+ 		PostContidionHomePageTC.deleteMeeting(meetingId, roomName);
  	}
 }

@@ -12,7 +12,6 @@ import org.rm.automation.tablet.pageobjects.TabletPage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
-import org.testng.Assert;
 
 public class SearchPage extends TabletPage{
 
@@ -47,7 +46,7 @@ public class SearchPage extends TabletPage{
 	private final String resourcesListPath = "//div[@class='resource-search pull-left resources-height ng-scope']";
 	private final String resourceButtonPath = ".//div[@class='text-center resource-button pull-left']";
 	private final String notFoundMessagePath = "//div[@class='well']";
-	
+	private final String roomTitle = "//span[contains(.,'Search')]";
 	private List<WebElement> roomListSearch;
 	private List<String> roomListLogin;
 	
@@ -60,7 +59,7 @@ public class SearchPage extends TabletPage{
 	@FindBy(xpath = scheduleTablePath) WebElement scheduleTable;
 	@FindBy(xpath = resourcesListPath) List<WebElement> resourcesList;
 	@FindBy(xpath = notFoundMessagePath) WebElement notFoundMessage;
-	@FindBy(xpath="//span[contains(.,'Search')]") WebElement spanSearchPageTitle;
+	@FindBy(xpath=roomTitle) WebElement spanSearchPageTitle;
 	
 	public SearchPage(WebDriver driver){
 		super(driver);
@@ -270,10 +269,11 @@ public class SearchPage extends TabletPage{
 		return roomListLogin;
 	}
 	
-	public SearchPage checkIfIconRedirectsToSearchPage(){
+	public boolean checkIfIconRedirectsToSearchPage(){
 		LogManager.info("SearchPage : Verifying than the search icon redirects to the Search page");
-		Waiters.WaitByXPath("//span[contains(.,'Search')]", driver);
-		Assert.assertEquals("Search",spanSearchPageTitle.getText());
-		return this;
+		boolean result = false;
+		Waiters.WaitByXPath(roomTitle, driver);
+		result = spanSearchPageTitle.getText().equals("Search")?true:false;
+		return result;
 	}
 }

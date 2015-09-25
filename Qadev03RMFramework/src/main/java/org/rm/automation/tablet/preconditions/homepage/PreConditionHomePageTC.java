@@ -46,6 +46,20 @@ public class PreConditionHomePageTC {
 		return null;
 	}
 	
+	public static String createCurrentMeeting(String meetingTitle, int behindMinute, int aheadMinute) {
+		try {
+			String startTime = RoomManagerTime.substractMinutesToCurrentTime(behindMinute);
+			String endTime = RoomManagerTime.addMinutesToCurrentTime(aheadMinute);
+			
+			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
+			
+			return MeetingsRequests.getMeetingId(meetingTitle, roomName);
+		}catch(Exception e){
+			
+		}
+		return null;
+	}
+	
 	/**
 	 * @return the meetingID
 	 * create a meeting after the current time
