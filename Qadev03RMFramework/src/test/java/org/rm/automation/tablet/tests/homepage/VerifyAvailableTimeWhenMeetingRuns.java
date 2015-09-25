@@ -78,7 +78,7 @@ public class VerifyAvailableTimeWhenMeetingRuns extends TestBaseSetup {
  	@Test
  	public void verifyAvailableTimeWhenMeetingRuns(){
  		LogManager.info("VerifyAvailableTimeWhenMeetingRuns: Executing Test Case");
- 		
+ 		String errorMessage = " The time expected is different that we exepected.";
  		login = new LoginPage(driver);
  		homePage = login.access(serviceURL, userName, userPw, roomName);
  		availablePanel = new AvailablePanel(homePage.getDriver());
@@ -87,11 +87,9 @@ public class VerifyAvailableTimeWhenMeetingRuns extends TestBaseSetup {
  		expectedResult = meetingEndTime;
  		actualResult = availablePanel.getStartAvailableTimeLabelText();
  		
- 		try {
- 			Assert.assertEquals(actualResult, expectedResult);
-		} catch (Throwable t) {
-			LogManager.error("VerifyTimeRemainingOnRunningMeeting: The assertion has failed - " + t.toString());
-		}
+
+		Assert.assertEquals(actualResult, expectedResult, errorMessage);
+
  	}
  	
  	@AfterClass

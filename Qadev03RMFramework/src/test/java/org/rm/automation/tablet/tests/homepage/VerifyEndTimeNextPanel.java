@@ -58,11 +58,9 @@ public class VerifyEndTimeNextPanel extends TestBaseSetup {
  		homepage = login.access(roomName);
  		nextHomePage = new NextHomePanel(homepage.getDriver());
  		String actual = nextHomePage.getTimeNextEnd();
- 		try {
-			Assert.assertEquals(actual, endTimeSpect);
-		} catch (Throwable t) {
-			LogManager.error("VerifyEndTimeNextPanel assert is fail: "+t.toString());
-		}
+
+		Assert.assertEquals(actual, endTimeSpect);
+
 	}
 	
  	@AfterClass

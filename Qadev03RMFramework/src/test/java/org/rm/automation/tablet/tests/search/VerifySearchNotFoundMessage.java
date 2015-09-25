@@ -14,13 +14,11 @@ import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
-import org.rm.automation.utils.api.LocationsRequests;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class SearchByLocation extends TestBaseSetup {
+public class VerifySearchNotFoundMessage extends TestBaseSetup {
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
 	private String username = settings.getProperty("username");
@@ -28,60 +26,45 @@ public class SearchByLocation extends TestBaseSetup {
 	private String url = "http://" + settings.getProperty("server")+":"+
 							settings.getProperty("port");
 	private String roomName;
-	private String roomId;
-	private String locationName = StringGenerator.getString();
-	private String locationId;
-	private Random random = new Random();
+	private String roomNameRandom = StringGenerator.getString();
 	private int position;
+	private Random random = new Random();
 	
 	private LoginPage loginPage;
 	private HomePage homePage;
 	private SearchPage searchPage;
 	
+
 	private String messageFormat = "Expected <%s> but found <%s>";
 	private String messageError;
-	private String roomNameExpected;
-	private String roomNameActual;
+	private String messageExpected = "No rooms match the search";
+	private String messageActual;
 	
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
 	{
-		LogManager.info("SearchByLocation: Executing Precondition, "
-				+ "creating location and assigning it to a room");
-		
-		LocationsRequests.postLocation(locationName, locationName);
-		locationId = LocationsRequests.getLocationId(locationName);
+		LogManager.info("VerifySearchNotFound: Executing Precondition, "
+				+ "assigning a resource to a conference room");
 		
 		ArrayList<JSONObject> list = ConferenceRoomsRequests.getRooms();
 		position = random.nextInt(list.size());
 		
 		roomName = list.get(position).get("customDisplayName").toString();
-		roomId = list.get(position).get("_id").toString();
-		ConferenceRoomsRequests.setValue(roomId, "locationId", locationId);
-		roomNameExpected = roomName;
 	}
 	
 	@Test
-	public void testSearchByCapacity()
+	public void testVerifySearchNotFoundMessage()
 	{
-		LogManager.info("SearchByLocation: Executing Test Case");
+		LogManager.info("VerifySearchNotFound: Executing Test Case");
 
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.access(url, username, password, roomName);
 		searchPage = homePage.selectSearchPage()
-		.enableAdvancedSearch()
-		.setLocation(locationName);
+				.enableAdvancedSearch()
+				.setRoomName(roomNameRandom);
 		
-		roomNameActual = searchPage.getSearchRoomName();
-		messageError = String.format(messageFormat, roomNameExpected, roomNameActual);
-		Assert.assertEquals(roomNameActual, roomNameExpected, messageError);
-	}
-	
-	@AfterMethod
-	public void Postconditions() throws UnsupportedOperationException, IOException
-	{
-		LogManager.info("SearchByLocation: Executing Postcondition, "
-				+ "removing the location assigned");
-		LocationsRequests.deleteLocation(locationId);
+		messageActual = searchPage.getMessageNotFound();
+		messageError = String.format(messageFormat, messageExpected, messageActual);
+		Assert.assertEquals(messageActual, messageExpected, messageError);
 	}
 }

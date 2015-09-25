@@ -67,10 +67,8 @@ public class VerifySchedulePanelAccessToMeetings extends TestBaseSetup {
  		expectedResult = "Schedule";
  		actualResult = meetingsPage.getScheduleLabelText();
  		
- 		try {
- 			Assert.assertEquals(actualResult, expectedResult);
-		} catch (Throwable t) {
-			LogManager.error("VerifySchedulePanelAccessToMeetings: The assertion has failed - " + t.toString());
-		}
+
+		Assert.assertEquals(actualResult, expectedResult);
+
  	}
 }

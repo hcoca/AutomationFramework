@@ -40,11 +40,9 @@ public class VerifyNextTitleWhenThereIsnotMeting extends TestBaseSetup {
  		homepage = login.access(roomName);
  		nextHomePage = new NextHomePanel(homepage.getDriver());
  		String actual = nextHomePage.getTitleNext();
- 		try {
-			Assert.assertEquals(actual, expectedtitle);
-		} catch (Throwable t) {
-			LogManager.error("VerifyNextTitleWhenThereIsnotMeting assert is fail: "+t.toString());
-		}
+
+		Assert.assertEquals(actual, expectedtitle);
+
  		
 	}
 

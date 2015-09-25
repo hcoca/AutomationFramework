@@ -58,11 +58,9 @@ public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
  		homepage = login.access(roomName);
  		nextHomePage = new NextHomePanel(homepage.getDriver());
  		String actual = nextHomePage.getOrganizer();
- 		try {
-			Assert.assertEquals(actual, organizer);
-		} catch (Throwable t) {
-			LogManager.error("VerifyTheOrganizerisDisplay assert is fail: "+t.toString());
-		}
+
+		Assert.assertEquals(actual, organizer);
+
 	}
 	
  	@AfterClass
