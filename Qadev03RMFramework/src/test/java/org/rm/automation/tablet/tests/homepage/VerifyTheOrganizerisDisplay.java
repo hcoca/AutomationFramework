@@ -33,15 +33,15 @@ public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
 	private String roomName;
 	private String organizer;
 
-	private String meetingTitle = "meetingTitle";
+	/*private String meetingTitle = "meetingTitle";
 	private String startTime = RoomManagerTime.addMinutesToCurrentTime(15);
-	private String endTime = RoomManagerTime.addMinutesToCurrentTime(16);
+	private String endTime = RoomManagerTime.addMinutesToCurrentTime(16);*/
 	private String meetingId;
 	
 	@BeforeTest
 	public void beforeclass() throws UnsupportedOperationException, IOException{
 		roomName = PreConditionHomePageTC.getRoomName();
-		meetingId = PreConditionHomePageTC.createCurrentMeeting(meetingTitle, startTime, endTime);
+		meetingId = PreConditionHomePageTC.createAfterMeeting();
 	}
 	
 	@Test
