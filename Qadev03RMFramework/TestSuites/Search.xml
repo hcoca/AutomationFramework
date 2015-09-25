@@ -5,16 +5,15 @@
  <test name="Search Acceptance Test Cases">		
     <classes>     
     		
- 	  <class name="org.rm.automation.tablet.tests.search.VerifyAdvancedSearch"/> 	
-      <class name="org.rm.automation.tablet.tests.search.SearchByRoomName"/> 	
       <class name="org.rm.automation.tablet.tests.search.VerifyRoomsDisplayed"/>
-      <class name="org.rm.automation.tablet.tests.search.SearchByCapacity"/> 	
+      <class name="org.rm.automation.tablet.tests.search.VerifyAdvancedSearch"/>
+      <class name="org.rm.automation.tablet.tests.search.VerifyAllFieldsAreClear"/>
+      <class name="org.rm.automation.tablet.tests.search.VerifyMeetingIsDisplayed"/>
+      <class name="org.rm.automation.tablet.tests.search.VerifyLocationIsClear"/>      <class name="org.rm.automation.tablet.tests.search.VerifySearchNotFoundMessage"/>
+      <class name="org.rm.automation.tablet.tests.search.SearchByRoomName"/>
+	  <class name="org.rm.automation.tablet.tests.search.SearchByCapacity"/> 	
       <class name="org.rm.automation.tablet.tests.search.SearchByLocation"/> 
-      <class name="org.rm.automation.tablet.tests.search.VerifyAllFieldsAreClear"/> 	
-      <class name="org.rm.automation.tablet.tests.search.VerifyMeetingIsDisplayed"/> 
-      <class name="org.rm.automation.tablet.tests.search.SearchByResource"/> 		
-      <class name="org.rm.automation.tablet.tests.search.VerifySearchNotFoundMessage"/>
-      <class name="org.rm.automation.tablet.tests.search.VerifyLocationIsClear"/> 
+      <class name="org.rm.automation.tablet.tests.search.SearchByResource"/> 
 		
     </classes>		
   </test> <!-- Test -->  		
