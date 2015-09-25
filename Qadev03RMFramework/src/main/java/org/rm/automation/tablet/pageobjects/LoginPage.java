@@ -19,6 +19,7 @@ public class LoginPage {
 	private WebDriver driver;
 
 	private static List<String> roomNames = new ArrayList<String>();
+	List<WebElement> listRooms = new ArrayList<WebElement>();
 	private final String roomListPath = "//div[@class='list-group ng-scope']";
 	private final String roomNamePath = "//strong";
 	
@@ -150,9 +151,15 @@ public class LoginPage {
 	 */
 	private void setRoomList() {
 		LogManager.info("LoginPage : Setting the rooms of login");
-		List<WebElement> listRooms = roomList.findElements(By.xpath(roomNamePath));
-		for (WebElement room : listRooms) {
-			roomNames.add(room.getText());
+		if(listRooms.isEmpty())
+		{
+			listRooms = roomList.findElements(By.xpath(roomNamePath));
+			if(roomNames.isEmpty())
+			{
+				for (WebElement room : listRooms) {
+					roomNames.add(room.getText());
+				}
+			}
 		}
 	}
 	

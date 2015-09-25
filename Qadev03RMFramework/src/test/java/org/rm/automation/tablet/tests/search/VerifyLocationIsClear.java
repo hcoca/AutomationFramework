@@ -58,7 +58,7 @@ public class VerifyLocationIsClear extends TestBaseSetup {
 	}
 	
 	@Test
-	public void testVerifySearchNotFoundMessage()
+	public void testVerifyLocationIsClear()
 	{
 		LogManager.info("VerifyLocationIsClear: Executing Test Case");
 
@@ -67,6 +67,8 @@ public class VerifyLocationIsClear extends TestBaseSetup {
 		searchPage = homePage.selectSearchPage()
 				.enableAdvancedSearch()
 				.setLocation(locationName)
+				.clickClearButton()
+				.setLocation("<All>")
 				.clickClearButton();
 		
 		locationActual = searchPage.getLocation();

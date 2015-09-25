@@ -12,27 +12,12 @@ import org.rm.automation.tablet.pageobjects.TabletPage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
+import org.testng.Assert;
 
 public class SearchPage extends TabletPage{
 
 	WebDriver driver;
 	WebElement element;
-	
-	/*@FindBy(id = "advanced-search") 
-	WebElement advancedButton;
-	@FindBy(id = "txtRoomName") 
-	WebElement roomNameTextbox;
-	@FindBy(id = "txtMinimumCapacity") 
-	WebElement capacityTextboxPath;
-	@FindBy(xpath = "//span[@ng-show='advancedSearchOn']") 
-	WebElement advancedLabel;
-	@FindBy(xpath="//button[@class='room-box ng-scope']")
-	WebElement roomPath;
-	@FindBy(xpath="//div[@class='resource-search pull-left resources-height ng-scope']")
-	WebElement resourcesIconPath;
-	@FindBy(xpath="//button[@class='btn-default btn btn-clear']")
-	WebElement clearButtonPath;
-	*/
 
 	private final String roomPath = "//button[@class='room-box ng-scope']";
 	private final String advancedButtonPath = "advanced-search";//id
@@ -91,8 +76,8 @@ public class SearchPage extends TabletPage{
 	 * @return
 	 */
 	public SearchPage enableAdvancedSearch(){
-		Waiters.WaitById("advanced-search", driver);
 		LogManager.info("SearchPage: Enabling advanced search");
+
 		Waiters.WaitById(advancedButtonPath, driver);
 		advancedButton.click();
 		return this;
@@ -103,7 +88,6 @@ public class SearchPage extends TabletPage{
 	 * @param roomName
 	 * @return
 	 */
-
 	public SearchPage setRoomName(String roomName)
 	{
 		LogManager.info("SearchPage: Setting a room name");
@@ -147,6 +131,7 @@ public class SearchPage extends TabletPage{
 	public SearchPage setLocation(String location)
 	{
 		LogManager.info("SearchPage: Selecting a location");
+
 		WebElement loc;
 		loc = locationComboBox.findElement(By.xpath("//option[@label='"+ location +"']"));
 		loc.click();
