@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>		
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">		
+<suite name="Suite for Acceptance test cases">		
+	
+	<suite-files>
+		<suite-file path="./Meeting.xml" />
+		<suite-file path="./Schedule.xml" />
+		<suite-file path="./Search.xml" />
+
+	</suite-files>
+		
+</suite> <!-- Suite --> 		

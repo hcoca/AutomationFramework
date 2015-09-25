@@ -20,7 +20,6 @@ public class SearchPage {
 	WebElement element;
 
 	private final String roomPath = "//button[@class='room-box ng-scope']";
-	private String resourcesIconPath = "//div[@class='resource-search pull-left resources-height ng-scope']";
 	private final String advancedButtonPath = "advanced-search";//id
 	private final String advancedLabelPath = "//span[@ng-show='advancedSearchOn']";
 	private final String roomNameTextboxPath = "txtRoomName";//id
@@ -31,6 +30,7 @@ public class SearchPage {
 	private final String scheduleTablePath = "//div[@class='vis-foreground']";
 	private final String resourcesListPath = "//div[@class='resource-search pull-left resources-height ng-scope']";
 	private final String resourceButtonPath = ".//div[@class='text-center resource-button pull-left']";
+	private final String notFoundMessagePath = "//div[@class='well']";
 	private List<WebElement> roomListSearch;
 	private List<String> roomListLogin;
 	
@@ -42,14 +42,16 @@ public class SearchPage {
 	@FindBy(xpath = clearButtonPath) WebElement clearButton;
 	@FindBy(xpath = scheduleTablePath) WebElement scheduleTable;
 	@FindBy(xpath = resourcesListPath) List<WebElement> resourcesList;
+	@FindBy(xpath = notFoundMessagePath) WebElement notFoundMessage;
 	
 	public SearchPage(WebDriver driver){
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
+	//***PAGE ACTIONS SECTION***//
 	/**
-	 * Method to select a resource
+	 * Select a resource
 	 * @param resourceName
 	 * @return
 	 */
@@ -67,7 +69,7 @@ public class SearchPage {
 	}
 	
 	/**
-	 * Method to select the advanced search button
+	 * Click the advanced search button
 	 * @return
 	 */
 	public SearchPage enableAdvancedSearch(){
@@ -79,7 +81,7 @@ public class SearchPage {
 	}
 	
 	/**
-	 * Method to set the Room Name
+	 * Set the Room Name
 	 * @param roomName
 	 * @return
 	 */
@@ -94,7 +96,7 @@ public class SearchPage {
 	}
 	
 	/**
-	 * Method to set the capacity
+	 * Set the capacity
 	 * @param capacity
 	 * @return
 	 */
@@ -109,7 +111,7 @@ public class SearchPage {
 	}
 	
 	/**
-	 * Method to set a location
+	 * Set a location
 	 * @param location
 	 * @return
 	 */
@@ -124,7 +126,7 @@ public class SearchPage {
 	}
 	
 	/**
-	 * Method to click in the "Clear" button
+	 * Click in the "Clear" button
 	 * @return
 	 */
 	public SearchPage clickClearButton()
@@ -136,16 +138,18 @@ public class SearchPage {
 		return this;
 	}
 	
-	public MeetingsPage selectRoom(String roomName)
+	//***GET SECTION***//
+	/**
+	 * Get the message when a room is not found
+	 * @return
+	 */
+	public String getMessageNotFound()
 	{
-		Waiters.WaitByXPath("//button[contains(.,'"+roomName+"')]",driver);
-		element = driver.findElement(By.xpath("//button[contains(.,'"+roomName+"')]"));
-		element.click();		
-		return new MeetingsPage(driver);		
-	}		
+		return notFoundMessage.getText();
+	}
 	
 	/**
-	 * Method to get the list of rooms in the search page
+	 * Get the list of rooms in the search page
 	 */
 	public void getRoomList()
 	{
@@ -153,126 +157,87 @@ public class SearchPage {
 	}
 	
 	/**
-	 * Method to verify the rooms displayed in the login page
-	 * and the search page
+	 * Method to get the room name after a search
 	 * @return
 	 */
-	public SearchPage verifyRoomsDisplayed()
+	public String getSearchRoomName()
 	{
-		LogManager.info("SearchPage: Verifying the rooms displayed in the login page");
-
-		getRoomList();
-		roomListLogin = LoginPage.getRoomList();
-		String roomLogin, roomSearch;
-		
-		Assert.assertEquals(roomListLogin.size(), roomListSearch.size());
-		
-		for(int i = 0; i < roomListSearch.size(); i++)
-		{
-			roomLogin = roomListLogin.get(i);
-			roomSearch = roomListSearch.get(i).getText();
-			
-			Assert.assertEquals(roomLogin, roomSearch);
-		}
-		return this;
-	}
-	
-	/**
-	 * Method to verify the search by room name
-	 * @param roomNameExpected
-	 * @return
-	 */
-	public SearchPage verifySearchByRoomName(String roomNameExpected)
-	{
-		LogManager.info("SearchPage: Verifying the search of a room by room name");
-
 		getRoomList();
 		String roomNameActual = roomListSearch.get(0).getText();
 		
-		Assert.assertEquals(roomNameActual, roomNameExpected);
-		return this;
+		return roomNameActual;
 	}
 	
 	/**
-	 * Method to verify that the advanced search is enabled
+	 * Method to get the label of Advanced Search
 	 * @return
 	 */
-	public SearchPage verifyAdvancedSearchIsEnabled()
+	public String getLabelAdvancedSearh()
 	{
-		LogManager.info("SearchPage: Verifying the advanced search is enabled");
-
 		String label = advancedLabel.getText();
-		Assert.assertEquals("Advanced", label);
-		return this;
+		return label;
 	}
 	
 	/**
-	 * Method to verify the search by Capacity
-	 * @param roomNameExpected
+	 * Get the value of the room name text field
 	 * @return
 	 */
-	public SearchPage verifySearchByCapacity(String roomNameExpected)
+	public String getRoomName()
 	{
-		LogManager.info("SearchPage: Verifying the search of a room by capacity");
-		
-		getRoomList();
-		String roomNameActual = roomListSearch.get(0).getText();
-		
-		Assert.assertEquals(roomNameActual, roomNameExpected);
-		return this;
-	}
-	
-	/**
-	 * Method to verify the search by location
-	 * @param roomNameExpected
-	 * @return
-	 */
-	public SearchPage verifySearchByLocation(String roomNameExpected)
-	{
-		LogManager.info("SearchPage: Verifying the search of a room by location");
-		
-		getRoomList();
-		String roomNameActual = roomListSearch.get(0).getText();
-		
-		Assert.assertEquals(roomNameActual, roomNameExpected);
-		return this;
-	}
-	
-	/**
-	 * Method to verify all the fields are clear
-	 * @return
-	 */
-	public SearchPage verifyFieldsAreEmpty()
-	{
-		LogManager.info("SearchPage: Verifying all the fields are empty");
-		
 		String roomName = roomNameTextbox.getText();
-		
+		return roomName;
+	}
+	
+	/**
+	 * Get the value of the location combo box
+	 * @return
+	 */
+	public String getLocation()
+	{
 		WebElement loc;
 		loc = locationComboBox.findElement(By.xpath("//option[@selected='selected']"));
 		String location = loc.getText();
-		
-		String capacity = capacityTextbox.getText();
-		
-		Assert.assertEquals(roomName, "");
-		Assert.assertEquals(location, "");
-		Assert.assertEquals(capacity, "");
-		return this;
+		return location;
 	}
 	
 	/**
-	 * Method to verify a meeting exists
+	 * Get the value of the capacity text field
 	 * @return
 	 */
-	public SearchPage verifyMeetingExists(String meetingTitleExpected)
+	public String getCapacity()
 	{
-		LogManager.info("SearchPage: Verifying the meeting exists");
-		
+		String capacity = capacityTextbox.getText();
+		return capacity;
+	}
+	
+	/**
+	 * Get the name of a meeting
+	 * @return
+	 */
+	public String getMeetingTitle()
+	{
 		WebElement meetingTitle = scheduleTable.findElement(By.xpath(meetingTitlePath));
 		String meetingTitleActual = meetingTitle.getText();
-		
-		Assert.assertEquals(meetingTitleActual, meetingTitleExpected);
-		
-		return this;
+		return meetingTitleActual;
+	}
+	
+	/**
+	 * Get the list of rooms in the search page
+	 * @return
+	 */
+	public List<WebElement> getRoomListSearch()
+	{
+		getRoomList();
+		return roomListSearch;
+	}
+	
+	/**
+	 * Get the list of rooms in the login page
+	 * @return
+	 */
+	public List<String> getRoomListLogin()
+	{
+		roomListLogin = LoginPage.getRoomList();
+		return roomListLogin;
 	}
 }

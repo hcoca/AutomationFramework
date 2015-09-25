@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import org.json.simple.JSONObject;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
-import org.rm.automation.tablet.pageobjects.homepage.NextHomePage;
+import org.rm.automation.tablet.pageobjects.homepage.NextHomePanel;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.TestBaseSetup;
@@ -23,7 +23,7 @@ public class VerifyNextTitleWhenThereIsnotMeting extends TestBaseSetup {
 	
 	private LoginPage login;
 	private HomePage homepage;
-	private NextHomePage nextHomePage;
+	private NextHomePanel nextHomePage;
 	String roomName;
 	String expectedtitle = "End of day";
 	
@@ -38,7 +38,7 @@ public class VerifyNextTitleWhenThereIsnotMeting extends TestBaseSetup {
 	public void test(){		
 		login = new LoginPage(driver);
  		homepage = login.access(roomName);
- 		nextHomePage = new NextHomePage(homepage.getDriver());
+ 		nextHomePage = new NextHomePanel(homepage.getDriver());
  		String actual = nextHomePage.getTitleNext();
 
 		Assert.assertEquals(actual, expectedtitle);

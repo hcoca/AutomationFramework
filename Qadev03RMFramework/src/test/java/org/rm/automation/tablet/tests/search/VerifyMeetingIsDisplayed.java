@@ -17,6 +17,7 @@ import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.rm.automation.utils.api.MeetingsRequests;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -39,6 +40,11 @@ public class VerifyMeetingIsDisplayed extends TestBaseSetup{
 	private HomePage homePage;
 	private SearchPage searchPage;
 	
+	private String messageFormat = "Expected <%s> but found <%s>";
+	private String messageError;
+	private String meetingExpected;
+	private String meetingActual;
+	
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException, ParseException
 	{
@@ -51,6 +57,7 @@ public class VerifyMeetingIsDisplayed extends TestBaseSetup{
 		roomName = list.get(position).get("customDisplayName").toString();
 		
 		MeetingsRequests.postMeeting(roomName, meetingName, startTime, endTime);
+		meetingExpected = meetingName;
 	}
 	
 	@Test
@@ -60,8 +67,11 @@ public class VerifyMeetingIsDisplayed extends TestBaseSetup{
 
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.access(url, username, password, roomName);
-		searchPage = homePage.selectSearchPage()
-				.verifyMeetingExists(meetingName);
+		searchPage = homePage.selectSearchPage();
+		
+		meetingActual = searchPage.getMeetingTitle();
+		messageError = String.format(messageFormat, meetingExpected, meetingActual);
+		Assert.assertEquals(meetingActual, meetingExpected, messageError);
 	}
 	
 	@AfterMethod
