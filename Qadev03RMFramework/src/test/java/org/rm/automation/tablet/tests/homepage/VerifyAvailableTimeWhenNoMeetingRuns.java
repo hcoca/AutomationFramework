@@ -65,10 +65,8 @@ public class VerifyAvailableTimeWhenNoMeetingRuns extends TestBaseSetup {
  		expectedResult = RoomManagerTime.getAvailableTimeTillEndOfDay();
  		actualResult = availablePanel.getAvailableTimeLeftText();
  		
- 		try {
- 			Assert.assertEquals(actualResult, expectedResult);
-		} catch (Throwable t) {
-			LogManager.error("VerifyAvailableTimeWhenNoMeetingRuns: The assertion has failed - " + t.toString());
-		}
+
+		Assert.assertEquals(actualResult, expectedResult);
+
  	}
 }

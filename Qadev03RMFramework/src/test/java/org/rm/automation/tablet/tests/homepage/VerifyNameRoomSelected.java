@@ -33,11 +33,9 @@ public class VerifyNameRoomSelected extends TestBaseSetup {
  		login = new LoginPage(driver);
  		homepage = login.access(roomName);
  		String actual = homepage.getRoomNamelabel();
- 		try {
- 			Assert.assertEquals(actual, roomName);
-		} catch (Throwable t) {
-			LogManager.error("verify the name room -the assertion is failed " + t.toString() );
-		}
+
+		Assert.assertEquals(actual, roomName);
+
  		
  	}
 }

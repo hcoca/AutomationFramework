@@ -39,11 +39,9 @@ public class VerifyCurrentTime extends TestBaseSetup {
 		login = new LoginPage(driver);
 		homepage = login.access(roomName);
 		String actualTime = homepage.currentTime();
-		try {
-			Assert.assertEquals(espectCurrent, actualTime);
-		} catch (Throwable t) {
-			LogManager.error("VerifyCurrentTime -the assertion is failed " + t.toString());
-		}
+
+		Assert.assertEquals(espectCurrent, actualTime);
+
 
 	}
 }

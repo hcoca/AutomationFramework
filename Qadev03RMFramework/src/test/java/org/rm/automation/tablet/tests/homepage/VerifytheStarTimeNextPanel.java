@@ -59,11 +59,9 @@ public class VerifytheStarTimeNextPanel extends TestBaseSetup {
  		String actual = nextHomePage.getTimeNextStar();
  		System.out.println("actual===?"+actual);
  		System.out.println(starTimeSpect);
- 		try {
-			Assert.assertEquals(actual, starTimeSpect);
-		} catch (Throwable t) {
-			LogManager.error("VerifytheStarTimeNextPanel assert is fail: "+t.toString());
-		}
+
+		Assert.assertEquals(actual, starTimeSpect);
+
 	}
 	
  	@AfterClass

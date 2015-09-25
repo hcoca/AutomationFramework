@@ -82,11 +82,9 @@ public class VerifyOrganizerOnRunningMeeting extends TestBaseSetup {
  		nowPanel.waitForMainPanel(); // Check if it can goes in the constructor
  		actualResult = nowPanel.getOrganizerLabelText();
  		
- 		try {
- 			Assert.assertEquals(actualResult, expectedResult);
-		} catch (Throwable t) {
-			LogManager.error("VerifyOrganizerOnRunningMeeting: The assertion has failed - " + t.toString());
-		}
+
+		Assert.assertEquals(actualResult, expectedResult);
+
  	}
  	
  	@AfterClass

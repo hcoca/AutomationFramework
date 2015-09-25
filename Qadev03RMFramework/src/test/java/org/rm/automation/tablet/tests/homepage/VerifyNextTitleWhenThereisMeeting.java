@@ -56,11 +56,9 @@ public class VerifyNextTitleWhenThereisMeeting extends TestBaseSetup {
  		homepage = login.access(roomName);
  		nextHomePage = new NextHomePage(homepage.getDriver());
  		String actual = nextHomePage.getTitleNext();
- 		try {
-			Assert.assertEquals(actual, meetingTitle);
-		} catch (Throwable t) {
-			LogManager.error("VerifyNextTitleWhenThereisMeeting assert is fail: "+t.toString());
-		}
+
+		Assert.assertEquals(actual, meetingTitle);
+
 	}
 	
  	@AfterClass

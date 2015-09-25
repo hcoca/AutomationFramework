@@ -83,13 +83,11 @@ public class VerifyTimeRemainingOnRunningMeeting extends TestBaseSetup {
  		nowPanel.waitForMainPanel(); // Check if it can goes in the constructor
  		
  		expectedResult = meetingRemainingTime;
- 		actualResult = nowPanel.getOrganizerLabelText();
+ 		actualResult = nowPanel.getTimeRemainingLabel();
  		
- 		try {
- 			Assert.assertEquals(actualResult, expectedResult);
-		} catch (Throwable t) {
-			LogManager.error("VerifyTimeRemainingOnRunningMeeting: The assertion has failed - " + t.toString());
-		}
+
+		Assert.assertEquals(actualResult, expectedResult);
+
  	}
  	
  	@AfterClass
