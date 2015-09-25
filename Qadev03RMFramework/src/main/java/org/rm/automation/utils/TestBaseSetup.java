@@ -1,13 +1,10 @@
-package org.rm.automation.base;
+package org.rm.automation.utils;
 
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import org.rm.automation.utils.BrowserManager;
-import org.rm.automation.utils.LogManager;
-import org.rm.automation.utils.ReadPropertyValues;
 import org.testng.IReporter;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
@@ -22,7 +19,7 @@ import org.testng.xml.XmlSuite;
  * This class also uses the @Listener notation calling to itself, so that it can be used in the POM listeners list 
  * of the maven-surefire-plugin each time that it runs.
  */
-@Listeners({org.rm.automation.base.TestBaseSetup.class})
+@Listeners({org.rm.automation.utils.TestBaseSetup.class})
 public class TestBaseSetup implements ISuiteListener,IReporter{
 	
 	protected static WebDriver driver = null;

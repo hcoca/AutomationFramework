@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>		
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">		
+<suite name="BVT Locations Test Cases">		
+	
+ <test name="Meetings Acceptance Test cases">		
+    <classes>     		
+    
+      <class name="org.rm.automation.tablet.tests.meetings.CreateMeetingWithoutAnOrganizer"/>	
+      <class name="org.rm.automation.tablet.tests.meetings.CreateMeetingWithoutASubject"/>
+      <class name="org.rm.automation.tablet.tests.meetings.VerifyCurrentDateInFrom"/>
+      <class name="org.rm.automation.tablet.tests.meetings.VerifyCurrentDateInTo"/>
+      <class name="org.rm.automation.tablet.tests.meetings.VerifyEndTimeCanBeUpdated"/>
+      <class name="org.rm.automation.tablet.tests.meetings.VerifyFromLoweThanTo"/>
+      <class name="org.rm.automation.tablet.tests.meetings.VerifyStartTimeCanBeUpdated"/>
+      <class name="org.rm.automation.tablet.tests.meetings.VerifySubjectCanBeUpdated"/>
+      	
+      		
+    </classes>		
+  </test> <!-- Test -->  		
+</suite> <!-- Suite --> 

@@ -19,10 +19,7 @@ public class SearchPage extends TabletPage{
 	WebDriver driver;
 	WebElement element;
 	
-	private List<WebElement> roomListSearch;
-	private List<String> roomListLogin;
-	
-	@FindBy(id = "advanced-search") 
+	/*@FindBy(id = "advanced-search") 
 	WebElement advancedButton;
 	@FindBy(id = "txtRoomName") 
 	WebElement roomNameTextbox;
@@ -36,8 +33,34 @@ public class SearchPage extends TabletPage{
 	WebElement resourcesIconPath;
 	@FindBy(xpath="//button[@class='btn-default btn btn-clear']")
 	WebElement clearButtonPath;
-	@FindBy(xpath="//span[contains(.,'Search')]")
-	WebElement spanSearchPageTitle;
+	*/
+
+	private final String roomPath = "//button[@class='room-box ng-scope']";
+	private final String advancedButtonPath = "advanced-search";//id
+	private final String advancedLabelPath = "//span[@ng-show='advancedSearchOn']";
+	private final String roomNameTextboxPath = "txtRoomName";//id
+	private final String capacityTextboxPath = "txtMinimumCapacity";//id
+	private final String locationComboBoxPath = "listLocation";//id
+	private final String clearButtonPath = "//button[@class='btn-default btn btn-clear']";
+	private final String meetingTitlePath = "//div[@class='item-title']";
+	private final String scheduleTablePath = "//div[@class='vis-foreground']";
+	private final String resourcesListPath = "//div[@class='resource-search pull-left resources-height ng-scope']";
+	private final String resourceButtonPath = ".//div[@class='text-center resource-button pull-left']";
+	private final String notFoundMessagePath = "//div[@class='well']";
+	
+	private List<WebElement> roomListSearch;
+	private List<String> roomListLogin;
+	
+	@FindBy(id = advancedButtonPath) WebElement advancedButton;
+	@FindBy(id = roomNameTextboxPath) WebElement roomNameTextbox;
+	@FindBy(id = capacityTextboxPath) WebElement capacityTextbox;
+	@FindBy(id = locationComboBoxPath) WebElement locationComboBox;
+	@FindBy(xpath = advancedLabelPath) WebElement advancedLabel;
+	@FindBy(xpath = clearButtonPath) WebElement clearButton;
+	@FindBy(xpath = scheduleTablePath) WebElement scheduleTable;
+	@FindBy(xpath = resourcesListPath) List<WebElement> resourcesList;
+	@FindBy(xpath = notFoundMessagePath) WebElement notFoundMessage;
+	@FindBy(xpath="//span[contains(.,'Search')]") WebElement spanSearchPageTitle;
 	
 	public SearchPage(WebDriver driver){
 		super(driver);
@@ -45,30 +68,48 @@ public class SearchPage extends TabletPage{
 		PageFactory.initElements(driver, this);
 	}
 
-	public SearchPage selectResource(){
-		Waiters.WaitByXPath("//div[2]/div/div/div/i",driver);
-		element = driver.findElement(By.xpath("//div[2]/div/div/div/i"));
-		element.click();
+	//***PAGE ACTIONS SECTION***//
+	/**
+	 * Select a resource
+	 * @param resourceName
+	 * @return
+	 */
+	public SearchPage selectResource(String resourceName){
+		LogManager.info("SearchPage: Selecting a resource");
+
+		Waiters.WaitByXPath(resourcesListPath, driver);
+
+		for (WebElement resource : resourcesList) {
+			if(resource .getText().equals(resourceName)){
+				resource .findElement(By.xpath(resourceButtonPath)).click();
+			}
+		}
 		return this;
 	}
 	
 	/**
-	 * Method to select the advanced search button
+	 * Click the advanced search button
 	 * @return
 	 */
 	public SearchPage enableAdvancedSearch(){
 		Waiters.WaitById("advanced-search", driver);
+		LogManager.info("SearchPage: Enabling advanced search");
+		Waiters.WaitById(advancedButtonPath, driver);
 		advancedButton.click();
 		return this;
 	}
 	
 	/**
-	 * Method to set the RoomName
+	 * Set the Room Name
 	 * @param roomName
 	 * @return
 	 */
-	public SearchPage setRoomName(String roomName){
-		Waiters.WaitById("txtRoomName",driver);
+
+	public SearchPage setRoomName(String roomName)
+	{
+		LogManager.info("SearchPage: Setting a room name");
+
+		Waiters.WaitById(roomNameTextboxPath,driver);
 		roomNameTextbox.clear();
 		roomNameTextbox.sendKeys(roomName);
 		return this;
@@ -84,60 +125,149 @@ public class SearchPage extends TabletPage{
 		element.click();		
 		return new MeetingsPage(driver);		
 	}		
-	
 	/**
-	 * Method to get the list of rooms in the search page
-	 */
-	public void getRoomList()
-	{
-		roomListSearch = driver.findElements(By.xpath("//button[@class='room-box ng-scope']"));
-	}
-	
-	/**
-	 * Method to verify the rooms displayed in the login page
-	 * and the search page
+	 * Set the capacity
+	 * @param capacity
 	 * @return
 	 */
-	public SearchPage verifyRoomsDisplayed()
+	public SearchPage setCapacity(String capacity)
 	{
-		getRoomList();
-		roomListLogin = LoginPage.getRoomList();
-		String roomLogin, roomSearch;
-		
-		Assert.assertEquals(roomListLogin.size(), roomListSearch.size());
-		
-		for(int i = 0; i < roomListSearch.size(); i++)
-		{
-			roomLogin = roomListLogin.get(i);
-			roomSearch = roomListSearch.get(i).getText();
-			
-			Assert.assertEquals(roomLogin, roomSearch);
-		}
+		LogManager.info("SearchPage: Setting a capacity");
+
+		Waiters.WaitById(capacityTextboxPath, driver);
+		capacityTextbox.clear();
+		capacityTextbox.sendKeys(capacity);
 		return this;
 	}
 	
 	/**
-	 * Method to verify the search by room name
-	 * @param roomNameExpected
+	 * Set a location
+	 * @param location
 	 * @return
 	 */
-	public SearchPage verifySearchByRoomName(String roomNameExpected)
+	public SearchPage setLocation(String location)
+	{
+		LogManager.info("SearchPage: Selecting a location");
+		WebElement loc;
+		loc = locationComboBox.findElement(By.xpath("//option[@label='"+ location +"']"));
+		loc.click();
+		return this;
+	}
+	
+	/**
+	 * Click in the "Clear" button
+	 * @return
+	 */
+	public SearchPage clickClearButton()
+	{
+		LogManager.info("SearchPage: Clicking the clear button");
+
+		Waiters.WaitByXPath(clearButtonPath, driver);
+		clearButton.click();
+		return this;
+	}
+	
+	//***GET SECTION***//
+	/**
+	 * Get the message when a room is not found
+	 * @return
+	 */
+	public String getMessageNotFound()
+	{
+		return notFoundMessage.getText();
+	}
+	
+	/**
+	 * Get the list of rooms in the search page
+	 */
+	public void getRoomList()
+	{
+		roomListSearch = driver.findElements(By.xpath(roomPath));
+	}
+	
+	/**
+	 * Method to get the room name after a search
+	 * @return
+	 */
+	public String getSearchRoomName()
 	{
 		getRoomList();
 		String roomNameActual = roomListSearch.get(0).getText();
 		
-		Assert.assertEquals(roomNameActual, roomNameExpected);
-		return this;
+		return roomNameActual;
 	}
 	
 	/**
+	 * Method to get the label of Advanced Search
 	 * @return
 	 */
-	public SearchPage verifyAdvancedSearchIsEnabled()
+	public String getLabelAdvancedSearh()
 	{
 		String label = advancedLabel.getText();
-		Assert.assertEquals("Advanced", label);
-		return this;
+		return label;
+	}
+	
+	/**
+	 * Get the value of the room name text field
+	 * @return
+	 */
+	public String getRoomName()
+	{
+		String roomName = roomNameTextbox.getText();
+		return roomName;
+	}
+	
+	/**
+	 * Get the value of the location combo box
+	 * @return
+	 */
+	public String getLocation()
+	{
+		WebElement loc;
+		loc = locationComboBox.findElement(By.xpath("//option[@selected='selected']"));
+		String location = loc.getText();
+		return location;
+	}
+	
+	/**
+	 * Get the value of the capacity text field
+	 * @return
+	 */
+	public String getCapacity()
+	{
+		String capacity = capacityTextbox.getText();
+		return capacity;
+	}
+	
+	/**
+	 * Get the name of a meeting
+	 * @return
+	 */
+	public String getMeetingTitle()
+	{
+		WebElement meetingTitle = scheduleTable.findElement(By.xpath(meetingTitlePath));
+		String meetingTitleActual = meetingTitle.getText();
+		return meetingTitleActual;
+	}
+	
+	/**
+	 * Get the list of rooms in the search page
+	 * @return
+	 */
+	public List<WebElement> getRoomListSearch()
+	{
+		getRoomList();
+		return roomListSearch;
+	}
+	
+	/**
+	 * Get the list of rooms in the login page
+	 * @return
+	 */
+	public List<String> getRoomListLogin()
+	{
+		roomListLogin = LoginPage.getRoomList();
+		return roomListLogin;
 	}
 	
 	public SearchPage checkIfIconRedirectsToSearchPage(){

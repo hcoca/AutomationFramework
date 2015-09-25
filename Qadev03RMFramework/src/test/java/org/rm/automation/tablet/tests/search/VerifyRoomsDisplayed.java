@@ -2,16 +2,19 @@ package org.rm.automation.tablet.tests.search;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import org.json.simple.JSONObject;
-import org.rm.automation.base.TestBaseSetup;
+import org.openqa.selenium.WebElement;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.search.SearchPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
+import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -28,10 +31,15 @@ public class VerifyRoomsDisplayed extends TestBaseSetup {
 	private HomePage homePage;
 	private SearchPage searchPage;
 	
+	private String messageFormat = "Expected <%s> but found <%s>";
+	private String messageError;
+	private List<String> roomListExpected;//login
+	private List<WebElement> roomListActual;//search
+	
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
 	{
-		LogManager.info("SearchByRoomName: Executing Precondition, getting all the rooms");
+		LogManager.info("VerifyRoomsDisplayed: Executing Precondition, getting all the rooms");
 		ArrayList<JSONObject> list = ConferenceRoomsRequests.getRooms();
 		roomName = list.get(0).get("customDisplayName").toString();
 	}
@@ -43,7 +51,23 @@ public class VerifyRoomsDisplayed extends TestBaseSetup {
 
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.access(url, username, password, roomName);
-		searchPage = homePage.selectSearchPage()
-				.verifyRoomsDisplayed();
+		searchPage = homePage.selectSearchPage();
+//				.verifyRoomsDisplayed();
+		
+		roomListExpected = searchPage.getRoomListLogin();
+		roomListActual = searchPage.getRoomListSearch();
+		
+		messageError = String.format(messageFormat, roomListExpected.size(), roomListActual.size());
+		Assert.assertEquals(roomListActual.size(), roomListExpected.size(), messageError);
+		
+		String roomNameExpected, roomNameActual;
+		for(int i = 0; i < roomListActual.size(); i++)
+		{
+			roomNameExpected = roomListExpected.get(i);
+			roomNameActual = roomListActual.get(i).getText();
+			messageError = String.format(messageFormat, roomNameExpected, roomNameActual);
+			
+			Assert.assertEquals(roomNameActual, roomNameExpected, messageError);
+		}
 	}
 }

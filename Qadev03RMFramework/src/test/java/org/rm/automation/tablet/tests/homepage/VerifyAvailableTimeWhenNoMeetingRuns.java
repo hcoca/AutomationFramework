@@ -4,13 +4,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
 import org.json.simple.JSONObject;
-import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.AvailablePanel;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.RoomManagerTime;
+import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -65,10 +65,8 @@ public class VerifyAvailableTimeWhenNoMeetingRuns extends TestBaseSetup {
  		expectedResult = RoomManagerTime.getAvailableTimeTillEndOfDay();
  		actualResult = availablePanel.getAvailableTimeLeftText();
  		
- 		try {
- 			Assert.assertEquals(actualResult, expectedResult);
-		} catch (Throwable t) {
-			LogManager.error("VerifyAvailableTimeWhenNoMeetingRuns: The assertion has failed - " + t.toString());
-		}
+
+		Assert.assertEquals(actualResult, expectedResult);
+
  	}
 }

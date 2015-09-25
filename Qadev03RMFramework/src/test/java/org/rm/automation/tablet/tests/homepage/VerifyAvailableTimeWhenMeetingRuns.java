@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import java.util.Properties;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
-import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.AvailablePanel;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.MeetingManager;
 import org.rm.automation.utils.ReadPropertyValues;
+import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.rm.automation.utils.api.MeetingsRequests;
 import org.testng.Assert;
@@ -78,7 +78,7 @@ public class VerifyAvailableTimeWhenMeetingRuns extends TestBaseSetup {
  	@Test
  	public void verifyAvailableTimeWhenMeetingRuns(){
  		LogManager.info("VerifyAvailableTimeWhenMeetingRuns: Executing Test Case");
- 		
+ 		String errorMessage = " The time expected is different that we exepected.";
  		login = new LoginPage(driver);
  		homePage = login.access(serviceURL, userName, userPw, roomName);
  		availablePanel = new AvailablePanel(homePage.getDriver());
@@ -87,11 +87,9 @@ public class VerifyAvailableTimeWhenMeetingRuns extends TestBaseSetup {
  		expectedResult = meetingEndTime;
  		actualResult = availablePanel.getStartAvailableTimeLabelText();
  		
- 		try {
- 			Assert.assertEquals(actualResult, expectedResult);
-		} catch (Throwable t) {
-			LogManager.error("VerifyTimeRemainingOnRunningMeeting: The assertion has failed - " + t.toString());
-		}
+
+		Assert.assertEquals(actualResult, expectedResult, errorMessage);
+
  	}
  	
  	@AfterClass

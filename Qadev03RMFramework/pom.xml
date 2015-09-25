@@ -27,7 +27,7 @@
 			                   org.uncommons.reportng.HTMLReporter, 
 		               	       org.uncommons.reportng.JUnitXMLReporter,
 		               	       org.rm.automation.utils.ReportListener,
-		               	       org.rm.automation.base.TestBaseSetup,
+		               	       org.rm.automation.utils.TestBaseSetup,
 		               	   </value>
 			            </property>
 			        </properties>
@@ -104,12 +104,19 @@
 	        </exclusions>
     	</dependency>
     	           
-        <dependency>              
+        <!-- <dependency>              
             <groupId>junit</groupId>                               
             <artifactId>junit</artifactId>                             
             <version>3.8.1</version>                               
             <scope>test</scope>                                
-        </dependency>
+        </dependency> -->
+        
+        <dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>3.8.1</version>
+		    <scope>compile</scope>
+		</dependency>
                      
         <dependency>              
             <groupId>org.seleniumhq.selenium</groupId>                              
@@ -123,12 +130,19 @@
 		     <version>2.47.1</version>      
 		 </dependency>
                 
-        <dependency>              
+        <!-- <dependency>              
             <groupId>org.testng</groupId>                               
             <artifactId>testng</artifactId>                             
             <version>6.9.4</version>                              
             <scope>test</scope>                                     
-        </dependency>
+        </dependency> -->
+        
+        <dependency>
+	        <groupId>org.testng</groupId>
+	        <artifactId>testng</artifactId>
+	        <version>6.9.4</version>
+	        <scope>compile</scope>
+	    </dependency>
  	</dependencies>
   
 </project>

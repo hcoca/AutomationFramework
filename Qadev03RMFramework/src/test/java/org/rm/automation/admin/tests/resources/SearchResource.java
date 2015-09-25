@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.rm.automation.admin.pageobjects.LoginPage;
-import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.StringGenerator;
+import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ResourcesRequests;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

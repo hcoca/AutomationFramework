@@ -76,7 +76,7 @@ public class ThisTestCaseIsToVerifyXX {
 	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{// 560287dfc5c01db814c16198
 //		MeetingsRequests.postMeeting("room571", "green", RoomManagerTime.substractMinutesToCurrentTime(1), RoomManagerTime.addMinutesToCurrentTime(10));
 //		String meetingId = MeetingsRequests.getMeetingId("green", "room571");
-//		MeetingsRequests.deleteMeeting("5603bcf623959aa022ea873b", "room571");
+		MeetingsRequests.deleteMeeting("56047155ebfc2f1022439a68", "room571");
 //		JSONObject meeting = MeetingsRequests.getMeeting(meetingId, "room571");
 //		System.out.println("Start: " + meeting.get("start"));
 //		System.out.println("End: " + meeting.get("end"));
@@ -86,9 +86,11 @@ public class ThisTestCaseIsToVerifyXX {
 //			System.out.println(json);
 //		}
 		
-		
-		
-		System.out.println(RoomManagerTime.getAvailableTimeTillEndOfDay());
+//		
+//		System.out.println("mio"+RoomManagerTime.addminutesCurrentTime(10));
+//		System.out.println("espero"+RoomManagerTime.addMinutesToCurrentTime(10));
+//		System.out.println("end"+RoomManagerTime.addMinutesToCurrentTime(11));
+//		System.out.println(RoomManagerTime.getAvailableTimeTillEndOfDay());
 		
 //		Properties settings = ReadPropertyValues
 //				.getPropertyFile("./Config/settings.properties");

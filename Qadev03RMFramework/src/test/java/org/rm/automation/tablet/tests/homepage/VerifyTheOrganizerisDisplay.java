@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
-import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
-import org.rm.automation.tablet.pageobjects.homepage.NextHomePage;
+import org.rm.automation.tablet.pageobjects.homepage.NextHomePanel;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.RoomManagerTime;
+import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.rm.automation.utils.api.MeetingsRequests;
 import org.testng.Assert;
@@ -18,12 +18,16 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+
+/**
+ * @author luiscachi
+ * VerifyTheOrganizerisDisplay
+ */
 public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
 	
-
 	private LoginPage login;
 	private HomePage homepage;
-	private NextHomePage nextHomePage;
+	private NextHomePanel nextHomePage;
 	private String roomName;
 	private String organizer;
 
@@ -32,9 +36,6 @@ public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
 	private String endTime = RoomManagerTime.addMinutesToCurrentTime(16);
 	private String meetingId;
 	
-	
-	
-
 	@BeforeTest
 	public void beforeclass() throws UnsupportedOperationException, IOException{
 		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
@@ -43,9 +44,9 @@ public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
 		try {
 			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
 			meetingId = MeetingsRequests.getMeetingId(meetingTitle, roomName);
-			LogManager.info("VerifyTitleOnRunningMeeting: Executing Precondition, creating a meeting");
+			LogManager.info("VerifyTheOrganizerisDisplay: Executing Precondition, creating a meeting");
 		} catch (ParseException e) {
-			LogManager.error("VerifyTitleOnRunningMeeting: ParseException - " + e.toString());
+			LogManager.error("VerifyTheOrganizerisDisplay: ParseException - " + e.toString());
 			e.printStackTrace();
 		}
 	}
@@ -55,13 +56,11 @@ public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
 		login = new LoginPage(driver);
 		organizer = login.getUserLoginName();
  		homepage = login.access(roomName);
- 		nextHomePage = new NextHomePage(homepage.getDriver());
+ 		nextHomePage = new NextHomePanel(homepage.getDriver());
  		String actual = nextHomePage.getOrganizer();
- 		try {
-			Assert.assertEquals(actual, organizer);
-		} catch (Throwable t) {
-			LogManager.error("verifyNextTitleWhenThereIsnotMeting assert is fail: "+t.toString());
-		}
+
+		Assert.assertEquals(actual, organizer);
+
 	}
 	
  	@AfterClass

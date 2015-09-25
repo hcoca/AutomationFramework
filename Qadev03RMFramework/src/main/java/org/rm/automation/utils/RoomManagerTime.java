@@ -1,8 +1,14 @@
 package org.rm.automation.utils;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
+
+import com.gargoylesoftware.htmlunit.javascript.host.intl.DateTimeFormat;
+
+
 
 public class RoomManagerTime {
 	
@@ -99,7 +105,25 @@ public class RoomManagerTime {
 
 	public static String currenTime(){
 		Date currentTime = new Date();
-		SimpleDateFormat formateador = new SimpleDateFormat("HH:mm:ss");
-		return formateador.format(currentTime).substring(0, 5);
+		return getHomePageTimeFormat(currentTime);
 	}
+	/*
+	 * return the current time of the computer plus minutes added
+	 * */
+	public static String addminutesCurrentTime(int minutes){
+		long time ;
+		Date nd = new Date();
+		time = nd.getTime();
+		Date afterAddingMins = new Date(time + (minutes * ONE_MINUTE_IN_MILLIS));
+		return getHomePageTimeFormat(afterAddingMins);
+	}
+	public static String addMinutesToDate(int minutes) {  
+		Date myDate = new Date();
+		Calendar calendarDate = Calendar.getInstance();  
+	    calendarDate.setTime(myDate);  
+	    calendarDate.add(Calendar.MINUTE, minutes); 
+	    String time = new SimpleDateFormat("HH:mm").format(calendarDate.getTime());
+	    return time;  
+	}
+
 }

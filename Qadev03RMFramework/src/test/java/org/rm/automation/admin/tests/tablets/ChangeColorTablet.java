@@ -7,9 +7,9 @@ import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.tablets.AppearanceTabletPage;
 import org.rm.automation.admin.pageobjects.tablets.TabletsAdminPage;
-import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
+import org.rm.automation.utils.TestBaseSetup;
 import org.testng.annotations.Test;
 
 import bsh.Console;

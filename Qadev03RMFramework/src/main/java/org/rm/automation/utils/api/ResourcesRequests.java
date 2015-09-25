@@ -136,12 +136,13 @@ public class ResourcesRequests {
         } 
 		catch (IOException ex) {
 			LogManager.error("ResourceRequests: Error stablishing the HTTP protocol");
-        }
+       }
 	}
+	
 	/**
 	 * Get a resource's id providing the name of the resource
 	 * @param name
-	 * @return
+	 * @return id
 	 */
 	public static String getResourceId(String name)
 	{
@@ -154,5 +155,22 @@ public class ResourcesRequests {
 					id = object.get("_id").toString();
 			}
 		return id;
+	}
+	
+	/**
+	 * Get a resource providing the id
+	 * @param id
+	 * @return
+	 */
+	public static JSONObject getResource(String id)
+	{
+		ArrayList<JSONObject> list;
+		
+			list = getResources();
+			for (JSONObject object : list) {
+				if(object.get("_id").toString().equals(id))
+					return object;
+			}
+		return null;
 	}
 }

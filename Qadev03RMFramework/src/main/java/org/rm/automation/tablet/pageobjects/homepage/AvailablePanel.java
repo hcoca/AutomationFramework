@@ -3,6 +3,7 @@ package org.rm.automation.tablet.pageobjects.homepage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.utils.Waiters;
 
 public class AvailablePanel extends HomePage{
@@ -24,6 +25,13 @@ public class AvailablePanel extends HomePage{
 	
 	public AvailablePanel(WebDriver driver) {
 		super(driver);
+	}
+	
+	public MeetingsPage clickOnMainFreePanel(){
+		Waiters.WaitByVisibilityOfWebElement(mainFreePanel, driver);
+		mainFreePanel.click();
+		
+		return new MeetingsPage(driver);
 	}
 	
 	public void waitForMainBusyPanel(){
