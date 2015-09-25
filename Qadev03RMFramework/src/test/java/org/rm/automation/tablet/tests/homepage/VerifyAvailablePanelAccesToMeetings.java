@@ -23,19 +23,12 @@ import org.testng.annotations.Test;
  * Schedule page  
  */
 public class VerifyAvailablePanelAccesToMeetings extends TestBaseSetup {
+	
 	// Page objects for this test
 	private LoginPage login;
 	private HomePage homePage;
 	private AvailablePanel availablePanel;
 	private MeetingsPage meetingsPage;
-	
-	// Custom user environment settings
-		private Properties settings = ReadPropertyValues
-				.getPropertyFile("./Config/settings.properties");
-		private String userName = settings.getProperty("username");
-		private String userPw = settings.getProperty("passwordES");
-		private String server = settings.getProperty("server");
-		private String port = settings.getProperty("port");
 	
 	// Tablet properties
 	private String serviceURL;
@@ -49,26 +42,21 @@ public class VerifyAvailablePanelAccesToMeetings extends TestBaseSetup {
 	
  	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomName = allRooms.get(0).get("displayName").toString();
-		serviceURL = "http://" + server + ":" + port + "/";
+		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
+		roomName = room.get("displayName").toString();
 		LogManager.info("VerifyAvailablePanelAccesToMeetings: Executing Precondition, getting a default room");
  	}
  	
  	@Test
- 	public void verifyAvailablePanelAccesToMeetings(){
- 		LogManager.info("VerifyAvailablePanelAccesToMeetings: Executing Test Case");
- 		
+ 	public void verifyAvailablePanelAccesToMeetings(){ 		
  		login = new LoginPage(driver);
- 		homePage = login.access(serviceURL, userName, userPw, roomName);
+ 		homePage = login.access(roomName);
  		availablePanel = new AvailablePanel(homePage.getDriver());
  		meetingsPage = availablePanel.clickOnMainFreePanel();
  		
  		expectedResult = "Schedule";
  		actualResult = meetingsPage.getScheduleLabelText();
- 		
 
 		Assert.assertEquals(actualResult, expectedResult);
-
  	}
 }
