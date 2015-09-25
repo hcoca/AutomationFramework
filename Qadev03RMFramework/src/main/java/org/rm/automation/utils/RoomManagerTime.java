@@ -2,6 +2,7 @@ package org.rm.automation.utils;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
@@ -115,6 +116,14 @@ public class RoomManagerTime {
 		time = nd.getTime();
 		Date afterAddingMins = new Date(time + (minutes * ONE_MINUTE_IN_MILLIS));
 		return getHomePageTimeFormat(afterAddingMins);
+	}
+	public static String addMinutesToDate(int minutes) {  
+		Date myDate = new Date();
+		Calendar calendarDate = Calendar.getInstance();  
+	    calendarDate.setTime(myDate);  
+	    calendarDate.add(Calendar.MINUTE, minutes); 
+	    String time = new SimpleDateFormat("HH:mm").format(calendarDate.getTime());
+	    return time;  
 	}
 
 }
