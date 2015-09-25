@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.utils.Waiters;
 
-public class NextHomePage extends HomePage {
+public class NextHomePanel extends HomePage {
 	
 	
 	@FindBy(xpath = "//div[@ng-bind='next._title']")
@@ -25,7 +25,7 @@ public class NextHomePage extends HomePage {
 	WebElement timeNextEnd;
 	//span[3]
 	//span[ng-bind='next._end | date:"+"H:mm"+"']
-	public NextHomePage(WebDriver driver){
+	public NextHomePanel(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}

@@ -52,18 +52,16 @@ public class VerifytheStarTimeNextPanel extends TestBaseSetup {
 	}
 	
 	@Test
-	public void test(){
+	public void VerifytheStarTimeNextPanel(){
 		login = new LoginPage(driver);
  		homepage = login.access(roomName);
  		nextHomePage = new NextHomePage(homepage.getDriver());
  		String actual = nextHomePage.getTimeNextStar();
  		System.out.println("actual===?"+actual);
  		System.out.println(starTimeSpect);
- 		try {
+
 			Assert.assertEquals(actual, starTimeSpect);
-		} catch (Throwable t) {
-			LogManager.error("VerifytheStarTimeNextPanel assert is fail: "+t.toString());
-		}
+
 	}
 	
  	@AfterClass
