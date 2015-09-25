@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 import org.json.simple.JSONObject;
-import org.rm.automation.base.TestBaseSetup;
+import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
