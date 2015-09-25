@@ -26,8 +26,7 @@ public class AddAttendeeToMeeting extends TestBaseSetup{
 	private String endTime = RoomManagerTime.addMinutesToCurrentTime(3);
 	private String title = "La vaca que sonrie";
 	private String roomName;
-	private String[] attendees = {};
-	
+		
 	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
 		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
@@ -37,7 +36,7 @@ public class AddAttendeeToMeeting extends TestBaseSetup{
 	@BeforeMethod
 	public void CreateMeeting(){
 		try{
-			MeetingsRequests.postMeeting(roomName,title,startTime,endTime,attendees);
+			MeetingsRequests.postMeeting(roomName,title,startTime,endTime);
 		}
 		catch(Exception e){
 			System.out.println(e.getStackTrace());
@@ -70,6 +69,7 @@ public class AddAttendeeToMeeting extends TestBaseSetup{
 		.setAtendees(attendee)
 		.confirmMeeting()		
 		.confirmUser(password)
-		.saveMeeting();
+		.saveMeeting()		
+		.attendeeAdded();
 	}
 } 

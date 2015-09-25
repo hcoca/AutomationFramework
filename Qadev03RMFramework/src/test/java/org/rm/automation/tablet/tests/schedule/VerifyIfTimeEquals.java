@@ -3,6 +3,7 @@ package org.rm.automation.tablet.tests.schedule;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
+
 import org.json.simple.JSONObject;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.tablet.pageobjects.LoginPage;
@@ -10,10 +11,10 @@ import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
-import org.rm.automation.utils.api.MeetingsRequests;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-public class RemoveMeeting extends TestBaseSetup{
+public class VerifyIfTimeEquals extends TestBaseSetup{
 
 	private Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
@@ -21,54 +22,21 @@ public class RemoveMeeting extends TestBaseSetup{
 	private String password = settings.getProperty("password");
 	private String server = settings.getProperty("server");
 	private String port = settings.getProperty("port");
-	private String url = "http://"+server+":"+port;
-	private String startTime = RoomManagerTime.substractMinutesToCurrentTime(1);
-	private String endTime = RoomManagerTime.addMinutesToCurrentTime(3);
-	private String title = "La vaca que sonrie";
+	private String url = "http://"+server+":"+port;	
 	private String roomName;
 	
 	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
 		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
 		roomName = allRooms.get(0).get("displayName").toString();
- 	}	
-	
-	@BeforeMethod
-	public void createMeeting(){
-		try{
-			MeetingsRequests.postMeeting(roomName,title,startTime,endTime);
-		}
-		catch(Exception e){
-			System.out.println(e.getStackTrace());
-		}
-	}
+ 	}
 	
 	@Test
-	public void removeMeeting(){
-		LogManager.info("RemoveMeeting: Executing test case removeMeeting");
-		
+	public void verifyIfTheCurrentTimeEquals(){
+		LogManager.info("RemoveMeeting: Executing test case verifyIfTheCurrentTimeEquals");		
 		new LoginPage(driver)
 		.access(url, username, password, roomName)
 		.selectSchedulePage()
-		
-		//Meetings page functions
-		.selectMeeting()
-		
-		//A little workaround because there's an API bug
-		.setBody("I don't know why I should do this")
-		.updateMeeting()
-		.confirmUser(password)
-		.saveMeeting()
-		.goHomePage()
-		//A little workaround because there's an API bug
-		
-		.selectSchedulePage()
-		.selectMeeting()
-		.deleteMeeting()
-		.confirmUser(password)
-		.saveDeleteMeeting()		
-		.meetingAdvices("Meeting successfully removed");
+		.checkTime();
 	}
-	
-	
 }

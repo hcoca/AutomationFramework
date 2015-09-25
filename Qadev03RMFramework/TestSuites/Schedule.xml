@@ -4,9 +4,11 @@
 	
  <test name="Schedule Acceptance Test cases">		
     <classes>
-    	<class name="org.rm.automation.tablet.tests.schedule.AddAttendeeToMeeting"/>
-    	<class name="org.rm.automation.tablet.tests.schedule.RemoveAttendeeFromMeeting"/>
-    	<class name="org.rm.automation.tablet.tests.schedule.RemoveMeeting"/>    	    	   
+    	<!--<class name="org.rm.automation.tablet.tests.schedule.AddAttendeeToMeeting"/>
+    	<class name="org.rm.automation.tablet.tests.schedule.RemoveAttendeeFromMeeting"/>    	
+    	<class name="org.rm.automation.tablet.tests.schedule.VerifyRoomNameIsTheSame"/>
+    	<class name="org.rm.automation.tablet.tests.schedule.VerifyIfTimeEquals"/> -->   
+    	<class name="org.rm.automation.tablet.tests.schedule.RemoveMeeting"/>	
     </classes>		
   </test> <!-- Test -->  		
-</suite> <!-- Suite --> 	
+</suite> <!-- Suite --> 	 

@@ -8,32 +8,39 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.tablet.pageobjects.LoginPage;
-
+import org.rm.automation.tablet.pageobjects.TabletPage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
 import org.testng.Assert;
 
-public class SearchPage {
+public class SearchPage extends TabletPage{
 
 	WebDriver driver;
 	WebElement element;
-
-	private final String roomPath = "//button[@class='room-box ng-scope']";
-	private String resourcesIconPath = "//div[@class='resource-search pull-left resources-height ng-scope']";
-	private final String advancedButtonPath = "advanced-search";//id
-	private final String advancedLabelPath = "//span[@ng-show='advancedSearchOn']";
-	private final String roomNameTextboxPath = "txtRoomName";//id
-	private String capacityTextboxPath = "txtMinimumCapacity";//id
-	private String clearButtonPath = "//button[@class='btn-default btn btn-clear']";
 	
 	private List<WebElement> roomListSearch;
 	private List<String> roomListLogin;
 	
-	@FindBy(id = advancedButtonPath) WebElement advancedButton;
-	@FindBy(id = roomNameTextboxPath) WebElement roomNameTextbox;
-	@FindBy(xpath = advancedLabelPath) WebElement advancedLabel;
+	@FindBy(id = "advanced-search") 
+	WebElement advancedButton;
+	@FindBy(id = "txtRoomName") 
+	WebElement roomNameTextbox;
+	@FindBy(id = "txtMinimumCapacity") 
+	WebElement capacityTextboxPath;
+	@FindBy(xpath = "//span[@ng-show='advancedSearchOn']") 
+	WebElement advancedLabel;
+	@FindBy(xpath="//button[@class='room-box ng-scope']")
+	WebElement roomPath;
+	@FindBy(xpath="//div[@class='resource-search pull-left resources-height ng-scope']")
+	WebElement resourcesIconPath;
+	@FindBy(xpath="//button[@class='btn-default btn btn-clear']")
+	WebElement clearButtonPath;
+	@FindBy(xpath="//span[contains(.,'Search')]")
+	WebElement spanSearchPageTitle;
 	
 	public SearchPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -50,7 +57,7 @@ public class SearchPage {
 	 * @return
 	 */
 	public SearchPage enableAdvancedSearch(){
-		Waiters.WaitById(advancedButtonPath, driver);
+		Waiters.WaitById("advanced-search", driver);
 		advancedButton.click();
 		return this;
 	}
@@ -61,12 +68,16 @@ public class SearchPage {
 	 * @return
 	 */
 	public SearchPage setRoomName(String roomName){
-		Waiters.WaitById(roomNameTextboxPath,driver);
+		Waiters.WaitById("txtRoomName",driver);
 		roomNameTextbox.clear();
 		roomNameTextbox.sendKeys(roomName);
 		return this;
 	}
 	
+	/**
+	 * @param roomName
+	 * @return
+	 */
 	public MeetingsPage selectRoom(String roomName){
 		Waiters.WaitByXPath("//button[contains(.,'"+roomName+"')]",driver);
 		element = driver.findElement(By.xpath("//button[contains(.,'"+roomName+"')]"));
@@ -79,7 +90,7 @@ public class SearchPage {
 	 */
 	public void getRoomList()
 	{
-		roomListSearch = driver.findElements(By.xpath(roomPath));
+		roomListSearch = driver.findElements(By.xpath("//button[@class='room-box ng-scope']"));
 	}
 	
 	/**
@@ -119,10 +130,20 @@ public class SearchPage {
 		return this;
 	}
 	
+	/**
+	 * @return
+	 */
 	public SearchPage verifyAdvancedSearchIsEnabled()
 	{
 		String label = advancedLabel.getText();
 		Assert.assertEquals("Advanced", label);
+		return this;
+	}
+	
+	public SearchPage checkIfIconRedirectsToSearchPage(){
+		LogManager.info("SearchPage : Verifying than the search icon redirects to the Search page");
+		Waiters.WaitByXPath("//span[contains(.,'Search')]", driver);
+		Assert.assertEquals("Search",spanSearchPageTitle.getText());
 		return this;
 	}
 }

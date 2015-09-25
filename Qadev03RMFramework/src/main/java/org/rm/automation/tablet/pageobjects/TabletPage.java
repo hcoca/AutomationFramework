@@ -1,47 +1,93 @@
 package org.rm.automation.tablet.pageobjects;
 
-import org.openqa.selenium.By;
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.tablet.pageobjects.search.SearchPage;
 import org.rm.automation.utils.LogManager;
+import org.rm.automation.utils.Waiters;
 
 //import framework.conferenceRooms.ConferenceRoomsPage;
 
 public class TabletPage {	
+	
 	protected WebDriver driver;
-	private By scheduleButton = By.cssSelector("rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-schedule");	
-	private By searchButton = By.cssSelector("rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-search");
-	private By homeButton = By.id("go-home");
+	@FindBy(css="rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-schedule")
+	WebElement scheduleButton;
+	@FindBy(css="rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-search")
+	WebElement searchButton;
+	@FindBy(id="go-home")
+	WebElement homeCommonButton;
+	@FindBy(id="go-search")
+	WebElement searchCommonButton;
+	@FindBy(id="go-schedule")
+	WebElement scheduleCommonButton;
 	
 	public TabletPage(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(driver,this);
 	}
 
 	public MeetingsPage selectSchedulePage()
 	{
 		LogManager.info("HomePage <=> TabletPage : Clicking on Schedule button");
-		WebElement scheduleBtn = driver.findElement(scheduleButton);
-		if(scheduleBtn.isDisplayed())
-			scheduleBtn.click();
+		Waiters.WaitByCss("rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-schedule", driver);
+		if(scheduleButton.isDisplayed())
+			scheduleButton.click();
 		return new MeetingsPage(driver);
 	}
 	
 	public SearchPage selectSearchPage(){
 		LogManager.info("HomePage <=> TabletPage : Clicking on Search button");
-		WebElement searchBtn = driver.findElement(searchButton);
-		if(searchBtn.isDisplayed())
-			searchBtn.click();
+		Waiters.WaitByCss("rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-search", driver);
+		if(searchButton.isDisplayed())
+			searchButton.click();
 		return new SearchPage(driver);
 	}
 	
-	public HomePage goHomePage(){
-		LogManager.info("HomePage <=> TabletPage : Clicking on Home icon");
-		WebElement homeBtn = driver.findElement(homeButton);
-		if(homeBtn.isDisplayed())
-			homeBtn.click();
+	public HomePage goHomePage(){	
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		LogManager.info("HomePage <=> TabletPage : Clicking on Home icon");		
+		Waiters.WaitById("go-home", driver);
+		if(homeCommonButton.isDisplayed())
+			homeCommonButton.click();
 		return new HomePage(driver);
 	}
+	
+	public SearchPage goSearchPage(){	
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		LogManager.info("HomePage <=> TabletPage : Clicking on Search icon");		
+		Waiters.WaitById("go-search", driver);
+		if(searchCommonButton.isDisplayed())
+			searchCommonButton.click();
+		return new SearchPage(driver);
+	}
+	
+	public MeetingsPage goSchedulePage(){	
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		LogManager.info("HomePage <=> TabletPage : Clicking on Schedule icon");		
+		Waiters.WaitById("go-schedule", driver);
+		if(scheduleCommonButton.isDisplayed())
+			scheduleCommonButton.click();
+		return new MeetingsPage(driver);
+	}
+	
+	
 }

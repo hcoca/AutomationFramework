@@ -27,7 +27,7 @@ public class RemoveAttendeeFromMeeting extends TestBaseSetup{
 	private String endTime = RoomManagerTime.addMinutesToCurrentTime(3);
 	private String title = "La vaca que sonrie";
 	private String roomName;
-	private String[] attendees = {"user001@roompro.lab","user002@roompro.lab","user003@roompro.lab"};
+	private String[] attendees = {"user001@atxrm.com"};
 	
 	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
@@ -64,6 +64,11 @@ public class RemoveAttendeeFromMeeting extends TestBaseSetup{
 		.selectSchedulePage()
 		
 		//Meetings page functions
-		.selectMeeting();
+		.selectMeeting()
+		.removeAttendee()
+		.confirmMeeting()
+		.confirmUser(password)
+		.saveMeeting()
+		.attendeeRemoved();
 	}
 }
