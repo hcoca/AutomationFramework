@@ -33,8 +33,8 @@ public class VerifyNextTitleWhenThereisMeeting extends TestBaseSetup {
 
 	@BeforeTest
 	public void beforeclass(){
-		roomName = PreConditionHomePageTC.GetRoomName();
-		meetingId = PreConditionHomePageTC.CreateAfterMeeting();	
+		roomName = PreConditionHomePageTC.getRoomName();
+		meetingId = PreConditionHomePageTC.createAfterMeeting();	
 	}
 	
 	@Test
