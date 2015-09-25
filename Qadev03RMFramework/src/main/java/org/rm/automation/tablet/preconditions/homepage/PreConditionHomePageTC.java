@@ -48,13 +48,9 @@ public class PreConditionHomePageTC {
 		return null;
 	}
 	
-	public static String createCurrentMeeting(String meetingTitle, int behindMinute, int aheadMinute) {
+	public static String createCurrentMeeting(String meetingTitle, String behindMinute, String aheadMinute) {
 		try {
-			String startTime = RoomManagerTime.substractMinutesToCurrentTime(behindMinute);
-			String endTime = RoomManagerTime.addMinutesToCurrentTime(aheadMinute);
-			
-			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
-			
+			MeetingsRequests.postMeeting(roomName, meetingTitle, behindMinute, aheadMinute);
 			return MeetingsRequests.getMeetingId(meetingTitle, roomName);
 		}catch(Exception e){
 			

@@ -8,6 +8,8 @@ import org.json.simple.parser.ParseException;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.homepage.NowPanel;
+import org.rm.automation.tablet.preconditions.homepage.PostContidionHomePageTC;
+import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.RoomManagerTime;
@@ -32,15 +34,8 @@ public class VerifyOrganizerOnRunningMeeting extends TestBaseSetup {
 	private NowPanel nowPanel;
 	
 	// Custom user environment settings
-		private Properties settings = ReadPropertyValues
-				.getPropertyFile("./Config/settings.properties");
-		private String userName = settings.getProperty("username");
-		private String userPw = settings.getProperty("passwordES");
-		private String server = settings.getProperty("server");
-		private String port = settings.getProperty("port");
-	
-	// Tablet properties
-	private String serviceURL;
+	private Properties settings = ReadPropertyValues
+			.getPropertyFile("./Config/settings.properties");
 	
 	// Room properties
 	private String roomName;
@@ -57,19 +52,9 @@ public class VerifyOrganizerOnRunningMeeting extends TestBaseSetup {
 	private String actualResult;
 	
  	@BeforeClass
- 	public void setup() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomName = allRooms.get(0).get("displayName").toString();
-		serviceURL = "http://" + server + ":" + port + "/";
-		
-		try {
-			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
-			meetingId = MeetingsRequests.getMeetingId(meetingTitle, roomName);
-			LogManager.info("VerifyOrganizerOnRunningMeeting: Executing Precondition, creating a meeting");
-		} catch (ParseException e) {
-			LogManager.error("VerifyOrganizerOnRunningMeeting: ParseException - " + e.toString());
-			e.printStackTrace();
-		}
+ 	public void setup(){
+ 		roomName = PreConditionHomePageTC.getRoomName();
+ 		meetingId = PreConditionHomePageTC.createCurrentMeeting(meetingTitle, startTime, endTime);
  	}
  	
  	@Test
@@ -77,30 +62,18 @@ public class VerifyOrganizerOnRunningMeeting extends TestBaseSetup {
  		LogManager.info("VerifyOrganizerOnRunningMeeting: Executing Test Case");
  		
  		login = new LoginPage(driver);
- 		homePage = login.access(serviceURL, userName, userPw, roomName);
+ 		homePage = login.access(roomName);
  		nowPanel = new NowPanel(homePage.getDriver());
- 		nowPanel.waitForMainPanel(); // Check if it can goes in the constructor
+ 		nowPanel.waitForMainPanel();
+ 		
  		actualResult = nowPanel.getOrganizerLabelText();
  		
-
 		Assert.assertEquals(actualResult, expectedResult);
 
  	}
  	
  	@AfterClass
  	public void tearDown(){
- 		try {
-			MeetingsRequests.deleteMeeting(meetingId, roomName);
-			LogManager.info("VerifyOrganizerOnRunningMeeting: Executing Postcondition, removing meeting");
-		} catch (UnsupportedOperationException e) {
-			LogManager.error("VerifyOrganizerOnRunningMeeting: UnsupportedOperationException - " + e.toString());
-			e.printStackTrace();
-		} catch (IOException e) {
-			LogManager.error("VerifyOrganizerOnRunningMeeting: IOException - " + e.toString());
-			e.printStackTrace();
-		} catch (ParseException e) {
-			LogManager.error("VerifyOrganizerOnRunningMeeting: ParseException - " + e.toString());
-			e.printStackTrace();
-		}
+ 		PostContidionHomePageTC.deleteMeeting(meetingId, roomName);
  	}
 }

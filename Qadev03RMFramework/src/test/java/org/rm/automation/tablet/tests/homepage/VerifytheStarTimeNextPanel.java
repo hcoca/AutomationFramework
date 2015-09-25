@@ -8,6 +8,8 @@ import org.json.simple.parser.ParseException;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.homepage.NextHomePanel;
+import org.rm.automation.tablet.preconditions.homepage.PostContidionHomePageTC;
+import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.TestBaseSetup;
@@ -38,27 +40,16 @@ public class VerifytheStarTimeNextPanel extends TestBaseSetup {
 
 	@BeforeTest
 	public void beforeclass() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomName = allRooms.get(0).get("displayName").toString();
-		
-		try {
-			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
-			meetingId = MeetingsRequests.getMeetingId(meetingTitle, roomName);
-			LogManager.info("VerifytheStarTimeNextPanel: Executing Precondition, creating a meeting");
-		} catch (ParseException e) {
-			LogManager.error("VerifytheStarTimeNextPanel: ParseException - " + e.toString());
-			e.printStackTrace();
-		}
+		roomName = PreConditionHomePageTC.getRoomName();
+		meetingId = PreConditionHomePageTC.createCurrentMeeting(meetingTitle, startTime, endTime);
 	}
 	
 	@Test
-	public void VerifytheStarTimeNextPanel(){
+	public void verifytheStarTimeNextPanel(){
 		login = new LoginPage(driver);
  		homepage = login.access(roomName);
  		nextHomePage = new NextHomePanel(homepage.getDriver());
  		String actual = nextHomePage.getTimeNextStar();
- 		System.out.println("actual===?"+actual);
- 		System.out.println(starTimeSpect);
 
 		Assert.assertEquals(actual, starTimeSpect);
 
@@ -66,18 +57,6 @@ public class VerifytheStarTimeNextPanel extends TestBaseSetup {
 	
  	@AfterClass
  	public void tearDown(){
- 		try {
-			MeetingsRequests.deleteMeeting(meetingId, roomName);
-			LogManager.info("VerifytheStarTimeNextPanel: Executing Postcondition, removing meeting");
-		} catch (UnsupportedOperationException e) {
-			LogManager.error("VerifytheStarTimeNextPanel: UnsupportedOperationException - " + e.toString());
-			e.printStackTrace();
-		} catch (IOException e) {
-			LogManager.error("VerifytheStarTimeNextPanel: IOException - " + e.toString());
-			e.printStackTrace();
-		} catch (ParseException e) {
-			LogManager.error("VerifytheStarTimeNextPanel: ParseException - " + e.toString());
-			e.printStackTrace();
-		}
+ 		PostContidionHomePageTC.deleteMeeting(meetingId, roomName);
  	}
 }

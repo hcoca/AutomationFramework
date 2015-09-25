@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 
 /**
  * @author luiscachi
- *VerifytheStarTimeNextPanel
+ * VerifytheStarTimeNextPanel
  */
 public class VerifyEndTimeNextPanel extends TestBaseSetup {
 

@@ -8,6 +8,8 @@ import org.json.simple.parser.ParseException;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.homepage.NextHomePanel;
+import org.rm.automation.tablet.preconditions.homepage.PostContidionHomePageTC;
+import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.TestBaseSetup;
@@ -38,17 +40,8 @@ public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
 	
 	@BeforeTest
 	public void beforeclass() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomName = allRooms.get(0).get("displayName").toString();
-		
-		try {
-			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
-			meetingId = MeetingsRequests.getMeetingId(meetingTitle, roomName);
-			LogManager.info("VerifyTheOrganizerisDisplay: Executing Precondition, creating a meeting");
-		} catch (ParseException e) {
-			LogManager.error("VerifyTheOrganizerisDisplay: ParseException - " + e.toString());
-			e.printStackTrace();
-		}
+		roomName = PreConditionHomePageTC.getRoomName();
+		meetingId = PreConditionHomePageTC.createCurrentMeeting(meetingTitle, startTime, endTime);
 	}
 	
 	@Test
@@ -57,26 +50,14 @@ public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
 		organizer = login.getUserLoginName();
  		homepage = login.access(roomName);
  		nextHomePage = new NextHomePanel(homepage.getDriver());
+ 		
  		String actual = nextHomePage.getOrganizer();
 
 		Assert.assertEquals(actual, organizer);
-
 	}
 	
  	@AfterClass
  	public void tearDown(){
- 		try {
-			MeetingsRequests.deleteMeeting(meetingId, roomName);
-			LogManager.info("VerifyOrganizerOnRunningMeeting: Executing Postcondition, removing meeting");
-		} catch (UnsupportedOperationException e) {
-			LogManager.error("VerifyOrganizerOnRunningMeeting: UnsupportedOperationException - " + e.toString());
-			e.printStackTrace();
-		} catch (IOException e) {
-			LogManager.error("VerifyOrganizerOnRunningMeeting: IOException - " + e.toString());
-			e.printStackTrace();
-		} catch (ParseException e) {
-			LogManager.error("VerifyOrganizerOnRunningMeeting: ParseException - " + e.toString());
-			e.printStackTrace();
-		}
+ 		PostContidionHomePageTC.deleteMeeting(meetingId, roomName);
  	}
 }
