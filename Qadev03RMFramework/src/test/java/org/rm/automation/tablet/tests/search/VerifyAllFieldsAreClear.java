@@ -14,6 +14,7 @@ import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -34,6 +35,17 @@ public class VerifyAllFieldsAreClear extends TestBaseSetup{
 	private LoginPage loginPage;
 	private HomePage homePage;
 	private SearchPage searchPage;
+	
+	private String messageFormat = "Expected <%s> but found <%s>";
+	private String messageErrorRoom;
+	private String messageErrorLocation;
+	private String messageErrorCapacity;
+	private String roomNameExpected = "";
+	private String roomNameActual;
+	private String locationExpected = "";
+	private String locationActual;
+	private String capacityExpected = "";
+	private String capacityActual;
 	
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
@@ -58,7 +70,16 @@ public class VerifyAllFieldsAreClear extends TestBaseSetup{
 		.setRoomName(roomNameRandom)
 		.setLocation(locationName)
 		.setCapacity(capacity)
-		.clickClearButton()
-		.verifyFieldsAreEmpty();
+		.clickClearButton();
+		
+		roomNameActual = searchPage.getRoomName();
+		locationActual = searchPage.getLocation();
+		capacityActual = searchPage.getCapacity();
+		messageErrorRoom = String.format(messageFormat, roomNameExpected, roomNameActual);
+		messageErrorLocation = String.format(messageFormat, locationExpected, locationActual);
+		messageErrorCapacity = String.format(messageFormat, capacityExpected, capacityActual);
+		Assert.assertEquals(roomNameActual, roomNameExpected, messageErrorRoom);
+		Assert.assertEquals(locationActual, locationExpected, messageErrorLocation);
+		Assert.assertEquals(capacityActual, capacityExpected, messageErrorCapacity);
 	}
 }

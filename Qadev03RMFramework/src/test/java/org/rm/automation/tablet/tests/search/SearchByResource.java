@@ -15,6 +15,7 @@ import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.rm.automation.utils.api.ResourcesRequests;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -40,6 +41,11 @@ public class SearchByResource extends TestBaseSetup {
 	private HomePage homePage;
 	private SearchPage searchPage;
 	
+	private String messageFormat = "Expected <%s> but found <%s>";
+	private String messageError;
+	private String roomNameExpected;
+	private String roomNameActual;
+	
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
 	{
@@ -57,8 +63,7 @@ public class SearchByResource extends TestBaseSetup {
 		quantity = String.valueOf(random.nextInt(20));
 		
 		ConferenceRoomsRequests.setResourceInRoom(roomId, resourceId, quantity);
-		
-		list = ConferenceRoomsRequests.getRooms();
+		roomNameExpected = roomName;
 	}
 	
 	@Test
@@ -69,8 +74,11 @@ public class SearchByResource extends TestBaseSetup {
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.access(url, username, password, roomName);
 		searchPage = homePage.selectSearchPage()
-		.selectResource(resourceName)
-		.verifySearchByRoomName(roomName);
+		.selectResource(resourceName);
+		
+		roomNameActual = searchPage.getSearchRoomName();
+		messageError = String.format(messageFormat, roomNameExpected, roomNameActual);
+		Assert.assertEquals(roomNameActual, roomNameExpected, messageError);
 	}
 	
 	@AfterMethod

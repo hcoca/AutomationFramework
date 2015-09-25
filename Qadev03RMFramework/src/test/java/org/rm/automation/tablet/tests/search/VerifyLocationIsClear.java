@@ -70,7 +70,6 @@ public class VerifyLocationIsClear extends TestBaseSetup {
 				.clickClearButton();
 		
 		locationActual = searchPage.getLocation();
-		
 		messageError = String.format(messageFormat, locationExpected, locationActual);
 		Assert.assertEquals(locationActual, locationExpected, messageError);
 	}
