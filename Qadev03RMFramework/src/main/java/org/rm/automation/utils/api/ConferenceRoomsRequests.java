@@ -34,6 +34,7 @@ public class ConferenceRoomsRequests {
 	static String roomByIdEp = rooms.getProperty("roomById")
 			.replace("[server]", settings.getProperty("server"))
 			.replace("[port]", settings.getProperty("port"));
+	
 	static String resourcesByRoomEp = rooms.getProperty("resourcesByRoom")
 			.replace("[server]", settings.getProperty("server"))
 			.replace("[port]", settings.getProperty("port"));

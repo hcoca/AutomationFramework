@@ -35,8 +35,8 @@ public class ReportListener extends TestListenerAdapter{
 		  String testName = testResult.getTestContext().getName();
 		  
 		  String errorMessage = testResult.getThrowable().getMessage();
-		  LogManager.info("Test : \"" + testName + "\" FAILED" );
-	  
+		  LogManager.error("Test Case Name: \"" + testName + "\" FAILED" );
+	      LogManager.error("Error Massage:" + errorMessage);
 		  /*
 		   * TestListener is the class that is going to take screenshots. 
 		   */
