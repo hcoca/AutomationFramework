@@ -8,6 +8,7 @@ import org.json.simple.parser.ParseException;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.AvailablePanel;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
+import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.MeetingManager;
 import org.rm.automation.utils.ReadPropertyValues;
@@ -33,17 +34,6 @@ public class VerifyAvailableTimeWhenMeetingRuns extends TestBaseSetup {
 	private HomePage homePage;
 	private AvailablePanel availablePanel;
 	
-	// Custom user environment settings
-		private Properties settings = ReadPropertyValues
-				.getPropertyFile("./Config/settings.properties");
-		private String userName = settings.getProperty("username");
-		private String userPw = settings.getProperty("passwordES");
-		private String server = settings.getProperty("server");
-		private String port = settings.getProperty("port");
-	
-	// Tablet properties
-	private String serviceURL;
-	
 	// Room properties
 	private String roomName;
 	
@@ -60,29 +50,18 @@ public class VerifyAvailableTimeWhenMeetingRuns extends TestBaseSetup {
 	
  	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomName = allRooms.get(0).get("displayName").toString();
-		serviceURL = "http://" + server + ":" + port + "/";
-		
-		try {
-			MeetingManager.createRunninMeeting(roomName, meetingTitle, behindMinute, aheadMinute);
-			meetingId = MeetingsRequests.getMeetingId(meetingTitle, roomName);
-			meetingEndTime = MeetingManager.getMeetingEndTimeFormated();
-			LogManager.info("VerifyAvailableTimeWhenMeetingRuns: Executing Precondition, creating a meeting");
-		} catch (ParseException e) {
-			LogManager.error("VerifyAvailableTimeWhenMeetingRuns: ParseException - " + e.toString());
-			e.printStackTrace();
-		}
+		roomName = PreConditionHomePageTC.GetRoomName();
+		meetingId = PreConditionHomePageTC.CreateCurrentMeeting();
+		meetingEndTime = MeetingManager.getMeetingEndTimeFormated();
  	}
  	
  	@Test
  	public void verifyAvailableTimeWhenMeetingRuns(){
- 		LogManager.info("VerifyAvailableTimeWhenMeetingRuns: Executing Test Case");
  		String errorMessage = " The time expected is different that we exepected.";
  		login = new LoginPage(driver);
- 		homePage = login.access(serviceURL, userName, userPw, roomName);
+ 		homePage = login.access(roomName);
  		availablePanel = new AvailablePanel(homePage.getDriver());
- 		availablePanel.waitForMainBusyPanel(); // Check if it can goes in the constructor
+ 		availablePanel.waitForMainBusyPanel();
  		
  		expectedResult = meetingEndTime;
  		actualResult = availablePanel.getStartAvailableTimeLabelText();

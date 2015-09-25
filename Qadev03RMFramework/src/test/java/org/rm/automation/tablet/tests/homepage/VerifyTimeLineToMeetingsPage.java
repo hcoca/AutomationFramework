@@ -2,36 +2,30 @@ package org.rm.automation.tablet.tests.homepage;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Properties;
 import org.json.simple.JSONObject;
 import org.rm.automation.tablet.pageobjects.LoginPage;
-import org.rm.automation.tablet.pageobjects.homepage.AvailablePanel;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
+import org.rm.automation.tablet.pageobjects.homepage.TimeLinePanel;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
-import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.LogManager;
-import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.google.common.base.Preconditions;
-
 /**
- * @author Pedro David Fuentes Antezana
+ * @author LuisCachi
  * 
- * This test case is to verify that after clicking on the Available panel, it redirects to the
+ * This test case is to verify that after clicking on the Schedule panel, it redirects to the
  * Schedule page  
  */
-public class VerifyAvailablePanelAccesToMeetings extends TestBaseSetup {
-	
+public class VerifyTimeLineToMeetingsPage extends TestBaseSetup {
 	// Page objects for this test
 	private LoginPage login;
 	private HomePage homePage;
-	private AvailablePanel availablePanel;
 	private MeetingsPage meetingsPage;
+	
 	
 	// Room properties
 	private String roomName;
@@ -42,22 +36,25 @@ public class VerifyAvailablePanelAccesToMeetings extends TestBaseSetup {
 	
  	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
- 		roomName = PreConditionHomePageTC.GetRoomName();
-//		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
-//		roomName = room.get("displayName").toString();
-//		LogManager.info("VerifyAvailablePanelAccesToMeetings: Executing Precondition, getting a default room");
+		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
+		roomName = allRooms.get(0).get("displayName").toString();
+		LogManager.info("VerifyTimeLineToMeetingsPage: Executing Precondition, getting a default room");
  	}
  	
  	@Test
- 	public void verifyAvailablePanelAccesToMeetings(){ 		
+ 	public void VerifyTimeLinegoToMeetingsPage(){
+ 		LogManager.info("VerifySchedulePanelAccessToMeetings: Executing Test Case");
+ 		
  		login = new LoginPage(driver);
  		homePage = login.access(roomName);
- 		availablePanel = new AvailablePanel(homePage.getDriver());
- 		meetingsPage = availablePanel.clickOnMainFreePanel();
+ 		TimeLinePanel timeLp = new TimeLinePanel(homePage.getDriver());
+ 		meetingsPage = timeLp.clickOnMainPanel();
  		
  		expectedResult = "Schedule";
  		actualResult = meetingsPage.getScheduleLabelText();
+ 		
 
 		Assert.assertEquals(actualResult, expectedResult);
+
  	}
 }
