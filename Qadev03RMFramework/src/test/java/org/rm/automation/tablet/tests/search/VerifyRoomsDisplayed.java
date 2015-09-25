@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 import org.json.simple.JSONObject;
-import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.search.SearchPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
+import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

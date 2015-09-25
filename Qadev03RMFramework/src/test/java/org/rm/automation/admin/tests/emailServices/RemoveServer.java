@@ -10,9 +10,9 @@ import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.emailServers.EmailServersPage;
 import org.rm.automation.admin.pageobjects.emailServers.RemoveServerpage;
-import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
+import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ServicesRequests;
 import org.testng.annotations.AfterTest;
 

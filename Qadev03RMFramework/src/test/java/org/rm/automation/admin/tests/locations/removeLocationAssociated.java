@@ -5,8 +5,8 @@ import org.rm.automation.utils.LogManager;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.utils.ReadPropertyValues;
+import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.rm.automation.utils.api.LocationsRequests;
 import org.rm.automation.admin.pageobjects.HomePage;

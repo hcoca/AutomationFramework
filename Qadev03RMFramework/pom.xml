@@ -27,7 +27,7 @@
 			                   org.uncommons.reportng.HTMLReporter, 
 		               	       org.uncommons.reportng.JUnitXMLReporter,
 		               	       org.rm.automation.utils.ReportListener,
-		               	       org.rm.automation.base.TestBaseSetup,
+		               	       org.rm.automation.utils.TestBaseSetup,
 		               	   </value>
 			            </property>
 			        </properties>

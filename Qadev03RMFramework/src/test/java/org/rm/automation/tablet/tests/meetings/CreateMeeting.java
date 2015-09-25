@@ -2,8 +2,8 @@ package org.rm.automation.tablet.tests.meetings;
 
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.utils.LogManager;
+import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.MeetingsRequests;
-import org.rm.automation.base.TestBaseSetup;
 import org.testng.annotations.*;
 
 public class CreateMeeting extends TestBaseSetup {

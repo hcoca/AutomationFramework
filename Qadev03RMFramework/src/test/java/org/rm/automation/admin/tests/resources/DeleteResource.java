@@ -9,10 +9,10 @@ import org.rm.automation.admin.pageobjects.locations.IssuesPage;
 import org.rm.automation.admin.pageobjects.resources.AddResourcesPage;
 import org.rm.automation.admin.pageobjects.resources.DeleteResourcesPage;
 import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
-import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.StringGenerator;
+import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ResourcesRequests;
 import org.testng.annotations.*;
 
