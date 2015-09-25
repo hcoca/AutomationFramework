@@ -20,7 +20,6 @@ public class SearchPage {
 	WebElement element;
 
 	private final String roomPath = "//button[@class='room-box ng-scope']";
-	private String resourcesIconPath = "//div[@class='resource-search pull-left resources-height ng-scope']";
 	private final String advancedButtonPath = "advanced-search";//id
 	private final String advancedLabelPath = "//span[@ng-show='advancedSearchOn']";
 	private final String roomNameTextboxPath = "txtRoomName";//id
@@ -31,6 +30,7 @@ public class SearchPage {
 	private final String scheduleTablePath = "//div[@class='vis-foreground']";
 	private final String resourcesListPath = "//div[@class='resource-search pull-left resources-height ng-scope']";
 	private final String resourceButtonPath = ".//div[@class='text-center resource-button pull-left']";
+	private final String notFoundMessagePath = "//div[@class='well']";
 	private List<WebElement> roomListSearch;
 	private List<String> roomListLogin;
 	
@@ -42,14 +42,16 @@ public class SearchPage {
 	@FindBy(xpath = clearButtonPath) WebElement clearButton;
 	@FindBy(xpath = scheduleTablePath) WebElement scheduleTable;
 	@FindBy(xpath = resourcesListPath) List<WebElement> resourcesList;
+	@FindBy(xpath = notFoundMessagePath) WebElement notFoundMessage;
 	
 	public SearchPage(WebDriver driver){
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
+	//***PAGE OBJECTS SECTION***//
 	/**
-	 * Method to select a resource
+	 * Select a resource
 	 * @param resourceName
 	 * @return
 	 */
@@ -67,7 +69,7 @@ public class SearchPage {
 	}
 	
 	/**
-	 * Method to select the advanced search button
+	 * Click the advanced search button
 	 * @return
 	 */
 	public SearchPage enableAdvancedSearch(){
@@ -79,7 +81,7 @@ public class SearchPage {
 	}
 	
 	/**
-	 * Method to set the Room Name
+	 * Set the Room Name
 	 * @param roomName
 	 * @return
 	 */
@@ -94,7 +96,7 @@ public class SearchPage {
 	}
 	
 	/**
-	 * Method to set the capacity
+	 * Set the capacity
 	 * @param capacity
 	 * @return
 	 */
@@ -109,7 +111,7 @@ public class SearchPage {
 	}
 	
 	/**
-	 * Method to set a location
+	 * Set a location
 	 * @param location
 	 * @return
 	 */
@@ -124,7 +126,7 @@ public class SearchPage {
 	}
 	
 	/**
-	 * Method to click in the "Clear" button
+	 * Click in the "Clear" button
 	 * @return
 	 */
 	public SearchPage clickClearButton()
@@ -144,8 +146,15 @@ public class SearchPage {
 		return new MeetingsPage(driver);		
 	}		
 	
+	public String getMessageNotFound()
+	{
+		return notFoundMessage.getText();
+	}
+	
+	//***GET SECTION***//
+	
 	/**
-	 * Method to get the list of rooms in the search page
+	 * Get the list of rooms in the search page
 	 */
 	public void getRoomList()
 	{

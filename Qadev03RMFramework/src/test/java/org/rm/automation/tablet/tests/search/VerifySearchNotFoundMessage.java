@@ -15,11 +15,12 @@ import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.rm.automation.utils.api.ResourcesRequests;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class SearchByResource extends TestBaseSetup {
+public class VerifySearchNotFoundMessage extends TestBaseSetup {
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
 	private String username = settings.getProperty("username");
@@ -27,6 +28,7 @@ public class SearchByResource extends TestBaseSetup {
 	private String url = "http://" + settings.getProperty("server")+":"+
 							settings.getProperty("port");
 	private String roomName;
+	private String roomNameRandom = StringGenerator.getString();
 	private String roomId;
 	private String resourceName = StringGenerator.getString();
 	private String description = StringGenerator.getString();
@@ -40,44 +42,36 @@ public class SearchByResource extends TestBaseSetup {
 	private HomePage homePage;
 	private SearchPage searchPage;
 	
+	private String messageExpected = "No rooms match the search";
+	private String messageActual;
+	private String messageFormat = "Expected <%s> but found <%s>";
+	private String messageError;
+	
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
 	{
-		LogManager.info("SearchByResource: Executing Precondition, "
+		LogManager.info("VerifySearchNotFound: Executing Precondition, "
 				+ "assigning a resource to a conference room");
 		
 		ArrayList<JSONObject> list = ConferenceRoomsRequests.getRooms();
 		position = random.nextInt(list.size());
 		
 		roomName = list.get(position).get("customDisplayName").toString();
-		roomId = list.get(position).get("_id").toString();
-		
-		ResourcesRequests.postResource(resourceName, resourceName, icon, description);
-		resourceId = ResourcesRequests.getResourceId(resourceName);
-		quantity = String.valueOf(random.nextInt(20));
-		
-		ConferenceRoomsRequests.setResourceInRoom(roomId, resourceId, quantity);
-		
-		list = ConferenceRoomsRequests.getRooms();
 	}
 	
 	@Test
-	public void testSearchByResource()
+	public void testVerifySearchNotFoundMessage()
 	{
-		LogManager.info("SearchByResource: Executing Test Case");
+		LogManager.info("VerifySearchNotFound: Executing Test Case");
 
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.access(url, username, password, roomName);
 		searchPage = homePage.selectSearchPage()
-		.selectResource(resourceName)
-		.verifySearchByRoomName(roomName);
-	}
-	
-	@AfterMethod
-	public void Postconditions()
-	{
-		LogManager.info("SearchByResource: Executing Postcondition, "
-				+ "removing the resource created");
-		ResourcesRequests.deleteResource(resourceId);
+				.enableAdvancedSearch()
+				.setRoomName(roomNameRandom);
+		
+		messageActual = searchPage.getMessageNotFound();
+		messageError = String.format(messageFormat, messageExpected, messageActual);
+		Assert.assertEquals(messageActual, messageExpected, messageError);
 	}
 }
