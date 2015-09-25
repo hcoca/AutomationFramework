@@ -8,16 +8,32 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.tablet.pageobjects.LoginPage;
-
+import org.rm.automation.tablet.pageobjects.TabletPage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
 import org.testng.Assert;
 
-public class SearchPage {
+public class SearchPage extends TabletPage{
 
 	WebDriver driver;
 	WebElement element;
+	
+	/*@FindBy(id = "advanced-search") 
+	WebElement advancedButton;
+	@FindBy(id = "txtRoomName") 
+	WebElement roomNameTextbox;
+	@FindBy(id = "txtMinimumCapacity") 
+	WebElement capacityTextboxPath;
+	@FindBy(xpath = "//span[@ng-show='advancedSearchOn']") 
+	WebElement advancedLabel;
+	@FindBy(xpath="//button[@class='room-box ng-scope']")
+	WebElement roomPath;
+	@FindBy(xpath="//div[@class='resource-search pull-left resources-height ng-scope']")
+	WebElement resourcesIconPath;
+	@FindBy(xpath="//button[@class='btn-default btn btn-clear']")
+	WebElement clearButtonPath;
+	*/
 
 	private final String roomPath = "//button[@class='room-box ng-scope']";
 	private final String advancedButtonPath = "advanced-search";//id
@@ -31,6 +47,7 @@ public class SearchPage {
 	private final String resourcesListPath = "//div[@class='resource-search pull-left resources-height ng-scope']";
 	private final String resourceButtonPath = ".//div[@class='text-center resource-button pull-left']";
 	private final String notFoundMessagePath = "//div[@class='well']";
+	
 	private List<WebElement> roomListSearch;
 	private List<String> roomListLogin;
 	
@@ -43,8 +60,10 @@ public class SearchPage {
 	@FindBy(xpath = scheduleTablePath) WebElement scheduleTable;
 	@FindBy(xpath = resourcesListPath) List<WebElement> resourcesList;
 	@FindBy(xpath = notFoundMessagePath) WebElement notFoundMessage;
+	@FindBy(xpath="//span[contains(.,'Search')]") WebElement spanSearchPageTitle;
 	
 	public SearchPage(WebDriver driver){
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -73,8 +92,8 @@ public class SearchPage {
 	 * @return
 	 */
 	public SearchPage enableAdvancedSearch(){
+		Waiters.WaitById("advanced-search", driver);
 		LogManager.info("SearchPage: Enabling advanced search");
-
 		Waiters.WaitById(advancedButtonPath, driver);
 		advancedButton.click();
 		return this;
@@ -85,6 +104,7 @@ public class SearchPage {
 	 * @param roomName
 	 * @return
 	 */
+
 	public SearchPage setRoomName(String roomName)
 	{
 		LogManager.info("SearchPage: Setting a room name");
@@ -95,6 +115,16 @@ public class SearchPage {
 		return this;
 	}
 	
+	/**
+	 * @param roomName
+	 * @return
+	 */
+	public MeetingsPage selectRoom(String roomName){
+		Waiters.WaitByXPath("//button[contains(.,'"+roomName+"')]",driver);
+		element = driver.findElement(By.xpath("//button[contains(.,'"+roomName+"')]"));
+		element.click();		
+		return new MeetingsPage(driver);		
+	}		
 	/**
 	 * Set the capacity
 	 * @param capacity
@@ -118,7 +148,6 @@ public class SearchPage {
 	public SearchPage setLocation(String location)
 	{
 		LogManager.info("SearchPage: Selecting a location");
-
 		WebElement loc;
 		loc = locationComboBox.findElement(By.xpath("//option[@label='"+ location +"']"));
 		loc.click();
@@ -239,5 +268,12 @@ public class SearchPage {
 	{
 		roomListLogin = LoginPage.getRoomList();
 		return roomListLogin;
+	}
+	
+	public SearchPage checkIfIconRedirectsToSearchPage(){
+		LogManager.info("SearchPage : Verifying than the search icon redirects to the Search page");
+		Waiters.WaitByXPath("//span[contains(.,'Search')]", driver);
+		Assert.assertEquals("Search",spanSearchPageTitle.getText());
+		return this;
 	}
 }
