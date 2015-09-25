@@ -189,13 +189,11 @@ public class MeetingsRequests {
 	{		
 		LogManager.info("MeetingRequests : Creating the meeting: "+meetingTitle+" in the room: "+roomName+" from: "+startTime+" to: "+endTime);
 		
-		// room.manager is the organizer and M@nager is the password
 		String str = username+":"+password;		
-		ArrayList attend = new ArrayList();
+		ArrayList attend = new ArrayList();		
 		
-		//String str = "Administrator:Control123!";
 		byte[] bytesEncoded = Base64.encodeBase64(str.getBytes());
-		token = new String(bytesEncoded );
+		token = new String(bytesEncoded);
 		
 		String service = ServicesRequests.getServiceId();
 		String roomId = ConferenceRoomsRequests.getRoomId(roomName);
@@ -258,9 +256,8 @@ public class MeetingsRequests {
 		// room.manager is the organizer and M@nager is the password
 		String str = username+":"+password;			
 		
-		//String str = "Administrator:Control123!";
 		byte[] bytesEncoded = Base64.encodeBase64(str.getBytes());
-		token = new String(bytesEncoded );
+		token = new String(bytesEncoded);
 		
 		String service = ServicesRequests.getServiceId();
 		String roomId = ConferenceRoomsRequests.getRoomId(roomName);
@@ -293,7 +290,7 @@ public class MeetingsRequests {
 		  	body.put("location", roomName);
 		  	body.put("roomEmail", conferenceRoomEmail);		  	
 		  	body.put("resources", new JSONArray().add(conferenceRoomEmail));
-		  	body.put("attendees", new JSONArray());
+		  	body.put("attendees", new ArrayList());
 		  	
 			StringEntity entity = new StringEntity(body.toString());
 		    request.setEntity(entity);

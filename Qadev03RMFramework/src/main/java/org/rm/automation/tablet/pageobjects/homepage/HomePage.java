@@ -1,5 +1,7 @@
 package org.rm.automation.tablet.pageobjects.homepage;
 
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,11 +11,18 @@ import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.tablet.pageobjects.search.SearchPage;
 import org.rm.automation.utils.LogManager;
+import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.Waiters;
-
-//import framework.conferenceRooms.ConferenceRoomsPage;
+import org.testng.Assert;
 
 public class HomePage {	
+	
+	private Properties settings = ReadPropertyValues
+			.getPropertyFile("./Config/settings.properties");
+	private String server = settings.getProperty("server");
+	private String port = settings.getProperty("port");
+	private String url = "http://"+server+":"+port;
+	
 	protected WebDriver driver;
 	private By scheduleButton = By.cssSelector("rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-schedule");	
 	private By searchButton = By.cssSelector("rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-search");
@@ -71,5 +80,11 @@ public class HomePage {
 	public String currentTime() {
 		Waiters.WaitByVisibilityOfWebElement(cuerrentTime, driver);
 		return cuerrentTime.getText();
+	}
+	
+	public HomePage checkIfIconRedirectsToHomePage(){
+		LogManager.info("MeetingsPage : Verifying than the home icon redirects to the Home page");				
+		Assert.assertEquals(url+"/tablet/#/home",driver.getCurrentUrl());
+		return this;
 	}
 }
