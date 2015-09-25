@@ -41,7 +41,7 @@ public class VerifyAvailablePanelAccesToMeetings extends TestBaseSetup {
 	private String actualResult;
 	
  	@BeforeClass
- 	public void setup() throws UnsupportedOperationException, IOException{
+ 	public void setup(){
  		roomName = PreConditionHomePageTC.getRoomName();
  	}
  	

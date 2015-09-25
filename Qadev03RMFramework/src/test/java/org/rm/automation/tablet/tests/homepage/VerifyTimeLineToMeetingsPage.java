@@ -7,6 +7,7 @@ import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.homepage.TimeLinePanel;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
+import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
@@ -36,14 +37,11 @@ public class VerifyTimeLineToMeetingsPage extends TestBaseSetup {
 	
  	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomName = allRooms.get(0).get("displayName").toString();
-		LogManager.info("VerifyTimeLineToMeetingsPage: Executing Precondition, getting a default room");
+ 		roomName = PreConditionHomePageTC.getRoomName();
  	}
  	
  	@Test
  	public void VerifyTimeLinegoToMeetingsPage(){
- 		LogManager.info("VerifySchedulePanelAccessToMeetings: Executing Test Case");
  		
  		login = new LoginPage(driver);
  		homePage = login.access(roomName);

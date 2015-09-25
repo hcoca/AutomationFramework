@@ -9,6 +9,8 @@ import org.json.simple.parser.ParseException;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.homepage.NextHomePanel;
+import org.rm.automation.tablet.preconditions.homepage.PostContidionHomePageTC;
+import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.TestBaseSetup;
@@ -21,7 +23,7 @@ import org.testng.annotations.Test;
 
 /**
  * @author luiscachi
- *VerifytheStarTimeNextPanel
+ * VerifytheStarTimeNextPanel
  */
 public class VerifyEndTimeNextPanel extends TestBaseSetup {
 
@@ -39,8 +41,7 @@ public class VerifyEndTimeNextPanel extends TestBaseSetup {
 
 	@BeforeTest
 	public void beforeclass() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomName = allRooms.get(0).get("displayName").toString();
+		roomName = PreConditionHomePageTC.getRoomName();
 		
 		try {
 			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
@@ -65,18 +66,6 @@ public class VerifyEndTimeNextPanel extends TestBaseSetup {
 	
  	@AfterClass
  	public void tearDown(){
- 		try {
-			MeetingsRequests.deleteMeeting(meetingId, roomName);
-			LogManager.info("VerifyEndTimeNextPanel: Executing Postcondition, removing meeting");
-		} catch (UnsupportedOperationException e) {
-			LogManager.error("VerifyEndTimeNextPanel: UnsupportedOperationException - " + e.toString());
-			e.printStackTrace();
-		} catch (IOException e) {
-			LogManager.error("VerifyEndTimeNextPanel: IOException - " + e.toString());
-			e.printStackTrace();
-		} catch (ParseException e) {
-			LogManager.error("VerifyEndTimeNextPanel: ParseException - " + e.toString());
-			e.printStackTrace();
-		}
+ 		PostContidionHomePageTC.deleteMeeting(meetingId, roomName);
  	}
 }

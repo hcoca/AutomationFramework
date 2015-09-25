@@ -13,6 +13,7 @@ import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.MeetingManager;
 import org.rm.automation.utils.ReadPropertyValues;
+import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.rm.automation.utils.api.MeetingsRequests;
@@ -40,8 +41,8 @@ public class VerifyAvailableTimeWhenMeetingRuns extends TestBaseSetup {
 	
 	// Meeting properties
 	private String meetingTitle = "meetingTitle";
-	private int behindMinute = 1; // 1 minute before current time
-	private int aheadMinute = 3; // 3 minutes ahead current time
+	private String startTime = RoomManagerTime.substractMinutesToCurrentTime(1);
+	private String endTime = RoomManagerTime.addMinutesToCurrentTime(3);
 	private String meetingId;
 	private String meetingEndTime;
 	
@@ -49,16 +50,18 @@ public class VerifyAvailableTimeWhenMeetingRuns extends TestBaseSetup {
 	private String expectedResult;
 	private String actualResult;
 	
+	// Error message.
+	private String errorMessage = " The time expected is different that we exepected.";
+	
  	@BeforeClass
  	public void setup(){
 		roomName = PreConditionHomePageTC.getRoomName();
-		meetingId = PreConditionHomePageTC.createCurrentMeeting(meetingTitle, behindMinute, aheadMinute);
+		meetingId = PreConditionHomePageTC.createCurrentMeeting(meetingTitle, startTime, endTime);
 		meetingEndTime = MeetingManager.getMeetingEndTimeFormated();
  	}
  	
  	@Test
  	public void verifyAvailableTimeWhenMeetingRuns(){
- 		String errorMessage = " The time expected is different that we exepected.";
  		login = new LoginPage(driver);
  		homePage = login.access(roomName);
  		availablePanel = new AvailablePanel(homePage.getDriver());
@@ -66,10 +69,8 @@ public class VerifyAvailableTimeWhenMeetingRuns extends TestBaseSetup {
  		
  		expectedResult = meetingEndTime;
  		actualResult = availablePanel.getStartAvailableTimeLabelText();
- 		
 
 		Assert.assertEquals(actualResult, expectedResult, errorMessage);
-
  	}
  	
  	@AfterClass
