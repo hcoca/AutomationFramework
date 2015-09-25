@@ -7,7 +7,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
-import org.rm.automation.tablet.pageobjects.homepage.NextHomePage;
+import org.rm.automation.tablet.pageobjects.homepage.NextHomePanel;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.TestBaseSetup;
@@ -26,7 +26,7 @@ public class VerifytheStarTimeNextPanel extends TestBaseSetup {
 
 	private LoginPage login;
 	private HomePage homepage;
-	private NextHomePage nextHomePage;
+	private NextHomePanel nextHomePage;
 	private String roomName;
 
 	private String meetingTitle = "meetingTitle";
@@ -55,7 +55,7 @@ public class VerifytheStarTimeNextPanel extends TestBaseSetup {
 	public void VerifytheStarTimeNextPanel(){
 		login = new LoginPage(driver);
  		homepage = login.access(roomName);
- 		nextHomePage = new NextHomePage(homepage.getDriver());
+ 		nextHomePage = new NextHomePanel(homepage.getDriver());
  		String actual = nextHomePage.getTimeNextStar();
  		System.out.println("actual===?"+actual);
  		System.out.println(starTimeSpect);
