@@ -79,6 +79,10 @@ public class RoomManagerTime {
 		return res;
 	}
 	
+	/**
+	 * @return a time value without "0" in front of an hour when the hour
+	 * is greater than 9.
+	 */
 	public static String getAvailableTimeTillEndOfDay(){
 		String res = "";
 		
@@ -107,6 +111,7 @@ public class RoomManagerTime {
 		Date currentTime = new Date();
 		return getHomePageTimeFormat(currentTime);
 	}
+	
 	/*
 	 * return the current time of the computer plus minutes added
 	 * */
