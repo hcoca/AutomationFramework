@@ -6,12 +6,16 @@ import java.util.Properties;
 import org.json.simple.JSONObject;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.tablet.pageobjects.LoginPage;
+import org.rm.automation.tablet.pageobjects.homepage.HomePage;
+import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.rm.automation.utils.api.MeetingsRequests;
 import org.testng.annotations.*;
+
+import junit.framework.Assert;
 
 public class AddAttendeeToMeeting extends TestBaseSetup{
 
@@ -24,7 +28,7 @@ public class AddAttendeeToMeeting extends TestBaseSetup{
 	private String url = "http://"+server+":"+port;
 	private String startTime = RoomManagerTime.substractMinutesToCurrentTime(1);
 	private String endTime = RoomManagerTime.addMinutesToCurrentTime(3);
-	private String title = "La vaca que sonrie";
+	private String title = "Adding an attendee";
 	private String roomName;
 		
 	@BeforeClass
@@ -57,19 +61,19 @@ public class AddAttendeeToMeeting extends TestBaseSetup{
 	@Test
 	public void addAttendee(){
 		LogManager.info("AddAttendeeToMeeting: Executing test case addAttendee");
+		String attendee = "elmonito@roompro.com";
+		String errorMessage = "The attendee with the email "+attendee+" was not added correctly";
 		
-		String attendee = "elmonito@roompro.com";	
+		LoginPage login = new LoginPage(driver);
+		HomePage home = login.access(url, username, password, roomName);
+		MeetingsPage meetings = home.selectSchedulePage();
 		
-		new LoginPage(driver)
-		.access(url, username, password, roomName)
-		.selectSchedulePage()
+		meetings.selectMeeting();
+		meetings.setAtendees(attendee);
+		meetings.confirmMeeting();		
+		meetings.confirmUser(password);
+		meetings.saveMeeting();		
 		
-		//Meetings page functions
-		.selectMeeting()
-		.setAtendees(attendee)
-		.confirmMeeting()		
-		.confirmUser(password)
-		.saveMeeting()		
-		.attendeeAdded();
+		Assert.assertTrue(errorMessage, meetings.isAttendeeAdded(attendee));
 	}
 } 

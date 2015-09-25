@@ -7,10 +7,14 @@ import java.util.Properties;
 import org.json.simple.JSONObject;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.tablet.pageobjects.LoginPage;
+import org.rm.automation.tablet.pageobjects.homepage.HomePage;
+import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.annotations.*;
+
+import junit.framework.Assert;
 
 public class VerifyRoomNameIsTheSame extends TestBaseSetup{
 
@@ -31,10 +35,12 @@ public class VerifyRoomNameIsTheSame extends TestBaseSetup{
 	
 	@Test
 	public void verifyIfTheNameOfTheRoomIsTheSame(){
-		LogManager.info("VerifyRoomNameIsTheSame: Executing test case verifyIfTheNameOfTheRoomIsTheSame");
-		new LoginPage(driver)
-		.access(url, username, password, roomName)
-		.selectSchedulePage()
-		.isTheRightRoom(roomName);
+		LogManager.info("RemoveMeeting: Executing test case verifyIfTheCurrentTimeEquals");
+		String errorMessage = "The current room is not the room "+roomName;
+		LoginPage login = new LoginPage(driver);
+		HomePage home = login.access(url, username, password, roomName);
+		MeetingsPage meetings = home.selectSchedulePage();
+		
+		Assert.assertTrue(errorMessage,meetings.isTheRightRoom(roomName));;
 	}
 }

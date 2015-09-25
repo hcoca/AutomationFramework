@@ -7,12 +7,15 @@ import java.util.Properties;
 import org.json.simple.JSONObject;
 import org.rm.automation.base.TestBaseSetup;
 import org.rm.automation.tablet.pageobjects.LoginPage;
+import org.rm.automation.tablet.pageobjects.homepage.HomePage;
+import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
-import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import junit.framework.Assert;
 
 public class VerifyIfTimeEquals extends TestBaseSetup{
 
@@ -33,10 +36,11 @@ public class VerifyIfTimeEquals extends TestBaseSetup{
 	
 	@Test
 	public void verifyIfTheCurrentTimeEquals(){
+		String errorMessage = "The current time doesnt match with the RoomManager time";
 		LogManager.info("RemoveMeeting: Executing test case verifyIfTheCurrentTimeEquals");		
-		new LoginPage(driver)
-		.access(url, username, password, roomName)
-		.selectSchedulePage()
-		.checkTime();
+		LoginPage login = new LoginPage(driver);
+		HomePage home = login.access(url, username, password, roomName);
+		MeetingsPage meetings = home.selectSchedulePage();
+		Assert.assertTrue(errorMessage, meetings.checkTime());
 	}
 }

@@ -1,7 +1,5 @@
 package org.rm.automation.tablet.pageobjects;
 
-import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,16 +14,22 @@ import org.rm.automation.utils.Waiters;
 
 public class TabletPage {	
 	
+	protected final String bttnSchedule="rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-schedule";
+	protected final String bttnSearch="rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-search";
+	protected final String icnHome="go-home";
+	protected final String icnSearch="go-search";
+	protected final String icnSchedule="go-schedule";
+	
 	protected WebDriver driver;
-	@FindBy(css="rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-schedule")
+	@FindBy(css=bttnSchedule)
 	WebElement scheduleButton;
-	@FindBy(css="rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-search")
+	@FindBy(css=bttnSearch)
 	WebElement searchButton;
-	@FindBy(id="go-home")
+	@FindBy(id=icnHome)
 	WebElement homeCommonButton;
-	@FindBy(id="go-search")
+	@FindBy(id=icnSearch)
 	WebElement searchCommonButton;
-	@FindBy(id="go-schedule")
+	@FindBy(id=icnSchedule)
 	WebElement scheduleCommonButton;
 	
 	public TabletPage(WebDriver driver) {
@@ -36,7 +40,7 @@ public class TabletPage {
 	public MeetingsPage selectSchedulePage()
 	{
 		LogManager.info("HomePage <=> TabletPage : Clicking on Schedule button");
-		Waiters.WaitByCss("rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-schedule", driver);
+		Waiters.WaitByCss(bttnSchedule, driver);
 		if(scheduleButton.isDisplayed())
 			scheduleButton.click();
 		return new MeetingsPage(driver);
@@ -44,7 +48,7 @@ public class TabletPage {
 	
 	public SearchPage selectSearchPage(){
 		LogManager.info("HomePage <=> TabletPage : Clicking on Search button");
-		Waiters.WaitByCss("rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-search", driver);
+		Waiters.WaitByCss(bttnSearch, driver);
 		if(searchButton.isDisplayed())
 			searchButton.click();
 		return new SearchPage(driver);
@@ -57,7 +61,7 @@ public class TabletPage {
 			e.printStackTrace();
 		}
 		LogManager.info("HomePage <=> TabletPage : Clicking on Home icon");		
-		Waiters.WaitById("go-home", driver);
+		Waiters.WaitById(icnHome, driver);
 		if(homeCommonButton.isDisplayed())
 			homeCommonButton.click();
 		return new HomePage(driver);
@@ -70,7 +74,7 @@ public class TabletPage {
 			e.printStackTrace();
 		}
 		LogManager.info("HomePage <=> TabletPage : Clicking on Search icon");		
-		Waiters.WaitById("go-search", driver);
+		Waiters.WaitById(icnSearch, driver);
 		if(searchCommonButton.isDisplayed())
 			searchCommonButton.click();
 		return new SearchPage(driver);
@@ -83,7 +87,7 @@ public class TabletPage {
 			e.printStackTrace();
 		}
 		LogManager.info("HomePage <=> TabletPage : Clicking on Schedule icon");		
-		Waiters.WaitById("go-schedule", driver);
+		Waiters.WaitById(icnSchedule, driver);
 		if(scheduleCommonButton.isDisplayed())
 			scheduleCommonButton.click();
 		return new MeetingsPage(driver);
