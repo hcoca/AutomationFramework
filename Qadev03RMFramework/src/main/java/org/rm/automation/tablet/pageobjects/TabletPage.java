@@ -87,7 +87,5 @@ public class TabletPage {
 		if(scheduleCommonButton.isDisplayed())
 			scheduleCommonButton.click();
 		return new MeetingsPage(driver);
-	}
-	
-	
+	}	
 }
