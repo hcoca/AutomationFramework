@@ -56,6 +56,17 @@ public class RoomManagerTime {
 	}
 	
 	/**
+	 * @param date
+	 * @return String DAte in format roomManager
+	 */
+	public static String returnFormatRoomM(Date date) {
+		formatTime();
+		long time = date.getTime();
+		Date afterAddingMins = new Date(time);
+		return formatedTime.format(afterAddingMins);
+	}
+	
+	/**
 	 * Private method that sets the GMT time zone and creates a format equal
 	 * to the time format used in the Room Manager application.
 	 */
@@ -121,6 +132,7 @@ public class RoomManagerTime {
 		Date afterAddingMins = new Date(time + (minutes * ONE_MINUTE_IN_MILLIS));
 		return getHomePageTimeFormat(afterAddingMins);
 	}
+	
 	public static String addMinutesToDate(int minutes) {  
 		Date myDate = new Date();
 		Calendar calendarDate = Calendar.getInstance();  

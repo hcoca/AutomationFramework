@@ -2,6 +2,8 @@ package org.rm.automation.tablet.preconditions.homepage;
 
 
 import java.util.ArrayList;
+import java.util.Date;
+
 import org.json.simple.JSONObject;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
@@ -70,6 +72,22 @@ public class PreConditionHomePageTC {
 			return MeetingsRequests.getMeetingId(meetingTitle, roomName);
 		}catch(Exception e){
 			
+		}
+		return null;
+	}
+	
+	
+	/**
+	 * @param meetingTitle
+	 * @param startTime in format RM
+	 * @param endTime in format RM
+	 * @return MeetingId of the setup meeting
+	 */
+	public static String setupMeeting(String meetingTitle , String startTime , String endTime){
+		try {			
+			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
+			return MeetingsRequests.getMeetingId(meetingTitle, roomName);
+		}catch(Exception e){	
 		}
 		return null;
 	}

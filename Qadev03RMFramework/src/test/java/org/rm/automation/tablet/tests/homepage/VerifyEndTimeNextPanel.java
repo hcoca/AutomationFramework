@@ -36,7 +36,7 @@ public class VerifyEndTimeNextPanel extends TestBaseSetup {
 	@BeforeTest
 	public void beforeclass() throws UnsupportedOperationException, IOException{
 		roomName = PreConditionHomePageTC.getRoomName();
-		meetingId = PreConditionHomePageTC.createAfterMeeting();
+		meetingId = PreConditionHomePageTC.setupMeeting(meetingTitle, startTime, endTime);
 			
 	}
 	
