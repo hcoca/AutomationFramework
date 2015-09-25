@@ -8,6 +8,10 @@ import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.rm.automation.utils.api.MeetingsRequests;
 
 
+/**
+ * @author luiscachi
+ *
+ */
 public class PreConditionHomePageTC {
 
 	private static String roomName;
@@ -17,14 +21,21 @@ public class PreConditionHomePageTC {
 	private static String startTimeCurrent = RoomManagerTime.substractMinutesToCurrentTime(2);
 	private static String endTime = RoomManagerTime.addMinutesToCurrentTime(16);
 
-	//this method return the first room name
+	
+	/**
+	 * @return roomName
+	 */
 	public static String getRoomName()
 	{
 		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
 		roomName = allRooms.get(0).get("displayName").toString();
 		return roomName;
 	}
-	// this method create a meeting and return the meetings Id
+	
+	/**
+	 * @return meeting ID
+	 * create a meeting in current time
+	 */
 	public static String createCurrentMeeting(){
 		try {
 			MeetingsRequests.postMeeting(roomName, meetingTitle, startTimeCurrent, endTime);
