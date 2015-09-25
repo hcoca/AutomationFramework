@@ -24,6 +24,7 @@ public class PreConditionHomePageTC {
 		roomName = allRooms.get(0).get("displayName").toString();
 		return roomName;
 	}
+	
 	// this method create a meeting and return the meetings Id
 	public static String CreateCurrentMeeting(){
 		try {
@@ -34,6 +35,7 @@ public class PreConditionHomePageTC {
 		}
 		return null;
 	}
+	
 	public static String CreateAfterMeeting(){
 		try {
 			MeetingsRequests.postMeeting(roomName, meetingTitle, startTimeAfter, endTime);

@@ -8,6 +8,7 @@ import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.AvailablePanel;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
+import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
@@ -15,6 +16,8 @@ import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import com.google.common.base.Preconditions;
 
 /**
  * @author Pedro David Fuentes Antezana
@@ -30,9 +33,6 @@ public class VerifyAvailablePanelAccesToMeetings extends TestBaseSetup {
 	private AvailablePanel availablePanel;
 	private MeetingsPage meetingsPage;
 	
-	// Tablet properties
-	private String serviceURL;
-	
 	// Room properties
 	private String roomName;
 	
@@ -42,9 +42,10 @@ public class VerifyAvailablePanelAccesToMeetings extends TestBaseSetup {
 	
  	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
-		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
-		roomName = room.get("displayName").toString();
-		LogManager.info("VerifyAvailablePanelAccesToMeetings: Executing Precondition, getting a default room");
+ 		roomName = PreConditionHomePageTC.GetRoomName();
+//		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
+//		roomName = room.get("displayName").toString();
+//		LogManager.info("VerifyAvailablePanelAccesToMeetings: Executing Precondition, getting a default room");
  	}
  	
  	@Test
