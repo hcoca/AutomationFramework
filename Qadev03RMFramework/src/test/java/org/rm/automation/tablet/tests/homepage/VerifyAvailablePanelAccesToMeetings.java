@@ -42,7 +42,7 @@ public class VerifyAvailablePanelAccesToMeetings extends TestBaseSetup {
 	
  	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
- 		roomName = PreConditionHomePageTC.GetRoomName();
+ 		roomName = PreConditionHomePageTC.getRoomName();
 //		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
 //		roomName = room.get("displayName").toString();
 //		LogManager.info("VerifyAvailablePanelAccesToMeetings: Executing Precondition, getting a default room");

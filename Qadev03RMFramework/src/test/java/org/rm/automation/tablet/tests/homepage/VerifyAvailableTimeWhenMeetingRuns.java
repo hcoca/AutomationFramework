@@ -50,8 +50,8 @@ public class VerifyAvailableTimeWhenMeetingRuns extends TestBaseSetup {
 	
  	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
-		roomName = PreConditionHomePageTC.GetRoomName();
-		meetingId = PreConditionHomePageTC.CreateCurrentMeeting();
+		roomName = PreConditionHomePageTC.getRoomName();
+		meetingId = PreConditionHomePageTC.createCurrentMeeting();
 		meetingEndTime = MeetingManager.getMeetingEndTimeFormated();
  	}
  	
