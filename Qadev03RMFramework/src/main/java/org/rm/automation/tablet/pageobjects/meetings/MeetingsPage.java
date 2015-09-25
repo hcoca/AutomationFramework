@@ -1,6 +1,7 @@
 package org.rm.automation.tablet.pageobjects.meetings;
 
 import java.util.List;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -10,9 +11,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.tablet.pageobjects.TabletPage;
 import org.rm.automation.utils.LogManager;
+import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.Waiters;
-import org.testng.Assert;
 
 public class MeetingsPage extends TabletPage{
 	
@@ -36,6 +37,12 @@ public class MeetingsPage extends TabletPage{
 	protected final String spnTime="//span[@ng-bind='currentTime']";
 	protected final String spnScheduleTitle="//span[contains(.,'Schedule')]";
 	private WebElement element;
+	
+	private Properties settings = ReadPropertyValues
+			.getPropertyFile("./Config/settings.properties");
+	private String server = settings.getProperty("server");
+	private String port = settings.getProperty("port");
+	private String url = "http://"+server+":"+port;
 	
 	@FindBy	(id=txtboxOrganizer)
 	WebElement tbOrganizer;	
@@ -231,11 +238,12 @@ public class MeetingsPage extends TabletPage{
 		return result;
 	}	
 	
-	public MeetingsPage checkIfIconRedirectsToSchedulePage(){
+	public boolean checkIfIconRedirectsToSchedulePage(){
 		LogManager.info("MeetingsPage : Verifying than the schedule icon redirects to the Schedule page");
+		boolean result = false;
 		Waiters.WaitByXPath(spnScheduleTitle, driver);		
-		Assert.assertEquals("Schedule",spanSchedulePageTitle.getText());
-		return this;
+		result = (spanSchedulePageTitle.getText().equals("Schedule") && driver.getCurrentUrl().equals(url+"/tablet/#/schedule"))?true:false;
+		return result;
 	}
 	
 	/**

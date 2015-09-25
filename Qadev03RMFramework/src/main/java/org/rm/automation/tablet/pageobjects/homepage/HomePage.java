@@ -13,7 +13,6 @@ import org.rm.automation.tablet.pageobjects.search.SearchPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.Waiters;
-import org.testng.Assert;
 
 public class HomePage {	
 	
@@ -82,9 +81,10 @@ public class HomePage {
 		return cuerrentTime.getText();
 	}
 	
-	public HomePage checkIfIconRedirectsToHomePage(){
+	public boolean checkIfIconRedirectsToHomePage(){
 		LogManager.info("MeetingsPage : Verifying than the home icon redirects to the Home page");				
-		Assert.assertEquals(url+"/tablet/#/home",driver.getCurrentUrl());
-		return this;
+		boolean result = false;
+		result = driver.getCurrentUrl().equals(url+"/tablet/#/home")?true:false;
+		return result;
 	}
 }
