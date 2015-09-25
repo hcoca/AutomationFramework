@@ -147,4 +147,69 @@ public class MeetingsPage{
 
 		return element.getText();
 	}
+	
+	
+	
+	public MeetingsPage setStartTime(String begin){
+		LogManager.info("MeetingsPage : Typing the begin time of the meeting");
+		Waiters.WaitByXPath("//input[@type='time']",driver);
+		element = driver.findElement(By.xpath("//input[@type='time']"));
+		element.clear();
+		element.sendKeys(begin);		
+		return this;
+	}
+	public MeetingsPage setEndTime(String end){
+		LogManager.info("MeetingsPage : Typing the send time of the meeting");
+		Waiters.WaitByXPath("(//input[@type='time'])[2]",driver);
+		element = driver.findElement(By.xpath("(//input[@type='time'])[2]"));
+		element.clear();
+		element.sendKeys(end);		
+		return this;
+	}
+	public MeetingsPage selectMeeting(String subjectMeeting){
+		Waiters.WaitByXPath("//span[contains(.,'"+subjectMeeting+"')]",driver);
+		element = driver.findElement(By.xpath("//span[contains(.,'"+subjectMeeting+"')]"));
+		element.click();
+		return this;
+		
+	}
+	public boolean verifyErrorSubjectMessage(){
+		LogManager.info("MeetingsPage : Verifying if an error message is displayed when Subject field is left empty");
+		Waiters.WaitByXPath("//small[@ng-show='formErrors.title' and contains(.,'Subject is required')]",driver);
+		element = driver.findElement(By.xpath("//small[@ng-show='formErrors.title' and contains(.,'Subject is required')]"));
+		return (element.isDisplayed());
+	} 
+	public boolean verifyErrorOrganizerMessage(){
+		LogManager.info("MeetingsPage : Verifying if an error message is displayed when Organizer field is left empty");
+		Waiters.WaitByXPath("//small[@ng-show='formErrors.organizer' and contains(.,'Organizer is required')]",driver);
+		element = driver.findElement(By.xpath("//small[@ng-show='formErrors.organizer' and contains(.,'Organizer is required')]"));
+		return (element.isDisplayed());			
+	}
+	public boolean verifyErrorFromHigherThanToMessage(){
+		LogManager.info("MeetingsPage : Verifying if an error message is displayed when From field value is higher than To field value");
+		Waiters.WaitByXPath("//small[@ng-show='formErrors.intervalInvalid' and contains(.,'Start time must be smaller than end time')]",driver);
+		element = driver.findElement(By.xpath("//small[@ng-show='formErrors.intervalInvalid' and contains(.,'Start time must be smaller than end time')]"));
+		return (element.isDisplayed());			
+	}
+	public String verifyCurrentDateInFromField(){
+		LogManager.info("MeetingsPage : Verifying if 'From' label contains the current date");
+		Waiters.WaitByXPath("//input[@ng-model='editable.from' and @type='date']",driver);
+		element = driver.findElement(By.xpath("//input[@ng-model='editable.from' and @type='date']"));
+		String fromValue = element.getAttribute("value");
+		return fromValue;	
+	}
+	public String verifyCurrentDateInToField(){
+		LogManager.info("MeetingsPage : Verifying if 'To' label contains the current date");
+		Waiters.WaitByXPath("//input[@ng-model='editable.to' and @type='date']",driver);
+		element = driver.findElement(By.xpath("//input[@ng-model='editable.to' and @type='date']"));
+		String toValue = element.getAttribute("value");	
+		return toValue;
+
+	}
+	public boolean verifyMeetingWasUpdated(){
+		LogManager.info("MeetingsPage : Verifying confirm message after update a meeting");
+		Waiters.WaitByXPath("//div[contains(.,'Meeting successfully updated')]",driver);
+		element = driver.findElement(By.xpath("//div[contains(.,'Meeting successfully updated')]"));
+		return (element.isDisplayed());
+	} 
 }

@@ -32,16 +32,18 @@ public class VerifyCurrentTime extends TestBaseSetup {
 		roomName = allRooms.get(0).get("displayName").toString();
 	}
 
+	
+	// TODO - Change  the name of the test method with the test case name.
 	@Test
-	public void test() {
+	public void VerifyCurrentTimeInTabletHomePage() {
+		
+		String errorMessage = "The current time is diferent as we expect. ";
 		String espectCurrent = RoomManagerTime.currenTime();
 
 		login = new LoginPage(driver);
 		homepage = login.access(roomName);
 		String actualTime = homepage.currentTime();
-
-		Assert.assertEquals(espectCurrent, actualTime);
-
-
+		
+	    Assert.assertTrue(errorMessage, actualTime.contains(espectCurrent));
 	}
 }

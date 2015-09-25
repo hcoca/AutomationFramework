@@ -29,6 +29,8 @@ public class SearchPage {
 	private final String clearButtonPath = "//button[@class='btn-default btn btn-clear']";
 	private final String meetingTitlePath = "//div[@class='item-title']";
 	private final String scheduleTablePath = "//div[@class='vis-foreground']";
+	private final String resourcesListPath = "//div[@class='resource-search pull-left resources-height ng-scope']";
+	private final String resourceButtonPath = ".//div[@class='text-center resource-button pull-left']";
 	private List<WebElement> roomListSearch;
 	private List<String> roomListLogin;
 	
@@ -39,16 +41,28 @@ public class SearchPage {
 	@FindBy(xpath = advancedLabelPath) WebElement advancedLabel;
 	@FindBy(xpath = clearButtonPath) WebElement clearButton;
 	@FindBy(xpath = scheduleTablePath) WebElement scheduleTable;
+	@FindBy(xpath = resourcesListPath) List<WebElement> resourcesList;
 	
 	public SearchPage(WebDriver driver){
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
-	public SearchPage selectResource(){
-		Waiters.WaitByXPath("//div[2]/div/div/div/i",driver);
-		element = driver.findElement(By.xpath("//div[2]/div/div/div/i"));
-		element.click();
+	/**
+	 * Method to select a resource
+	 * @param resourceName
+	 * @return
+	 */
+	public SearchPage selectResource(String resourceName){
+		LogManager.info("SearchPage: Selecting a resource");
+
+		Waiters.WaitByXPath(resourcesListPath, driver);
+
+		for (WebElement resource : resourcesList) {
+			if(resource .getText().equals(resourceName)){
+				resource .findElement(By.xpath(resourceButtonPath)).click();
+			}
+		}
 		return this;
 	}
 	

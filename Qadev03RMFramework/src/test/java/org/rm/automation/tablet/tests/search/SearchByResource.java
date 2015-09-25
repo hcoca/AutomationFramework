@@ -13,6 +13,7 @@ import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
+import org.rm.automation.utils.api.ResourcesRequests;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -27,6 +28,11 @@ public class SearchByResource extends TestBaseSetup{
 							settings.getProperty("port");
 	private String roomName;
 	private String roomId;
+	private String resourceName = StringGenerator.getString();
+	private String description = StringGenerator.getString();
+	private String icon = "fa fa-gift";
+	private String resourceId;
+	private String quantity;
 	private int position;
 	private Random random = new Random();
 	
@@ -45,6 +51,18 @@ public class SearchByResource extends TestBaseSetup{
 		
 		roomName = list.get(position).get("customDisplayName").toString();
 		roomId = list.get(position).get("_id").toString();
+		
+		ResourcesRequests.postResource(resourceName, resourceName, icon, description);
+		resourceId = ResourcesRequests.getResourceId(resourceName);
+		quantity = String.valueOf(random.nextInt(20));
+		
+		ConferenceRoomsRequests.setResourceInRoom(roomId, resourceId, quantity);
+		
+		list = ConferenceRoomsRequests.getRooms();
+//		for (JSONObject ob : list) {
+//			System.out.println("name:" + ob.get("customDisplayName").toString());
+//			System.out.println("re: " + ob.get("resources").toString());
+//		}
 	}
 	
 	@Test
@@ -55,7 +73,8 @@ public class SearchByResource extends TestBaseSetup{
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.access(url, username, password, roomName);
 		searchPage = homePage.selectSearchPage()
-		.enableAdvancedSearch();
+		.selectResource(resourceName)
+		.verifySearchByRoomName(roomName);
 //		.setCapacity(capacity)
 //		.verifySearchByCapacity(roomName);
 	}
@@ -64,7 +83,7 @@ public class SearchByResource extends TestBaseSetup{
 	public void Postconditions()
 	{
 		LogManager.info("SearchByResource: Executing Postcondition, "
-				+ "removing the capacity set");
-		ConferenceRoomsRequests.setValue(roomId, "capacity", null);
+				+ "removing the resource created");
+		ResourcesRequests.deleteResource(resourceId);
 	}
 }
