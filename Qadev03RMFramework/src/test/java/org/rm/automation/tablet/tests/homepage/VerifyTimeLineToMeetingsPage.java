@@ -42,7 +42,7 @@ public class VerifyTimeLineToMeetingsPage extends TestBaseSetup {
  	}
  	
  	@Test
- 	public void VerifyTimeLineToMeetingsPage(){
+ 	public void VerifyTimeLinegoToMeetingsPage(){
  		LogManager.info("VerifySchedulePanelAccessToMeetings: Executing Test Case");
  		
  		login = new LoginPage(driver);

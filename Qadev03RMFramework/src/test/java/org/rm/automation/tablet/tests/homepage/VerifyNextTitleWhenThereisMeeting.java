@@ -8,6 +8,7 @@ import org.json.simple.parser.ParseException;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.homepage.NextHomePanel;
+import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.TestBaseSetup;
@@ -30,24 +31,13 @@ public class VerifyNextTitleWhenThereisMeeting extends TestBaseSetup {
 	private String roomName;
 
 	private String meetingTitle = "meetingTitle";
-	private String startTime = RoomManagerTime.addMinutesToCurrentTime(15);
-	private String endTime = RoomManagerTime.addMinutesToCurrentTime(16);
 	private String meetingId;
 	
 
 	@BeforeTest
-	public void beforeclass() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomName = allRooms.get(0).get("displayName").toString();
-		
-		try {
-			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
-			meetingId = MeetingsRequests.getMeetingId(meetingTitle, roomName);
-			LogManager.info("VerifyNextTitleWhenThereisMeeting: Executing Precondition, creating a meeting");
-		} catch (ParseException e) {
-			LogManager.error("VerifyNextTitleWhenThereisMeeting: ParseException - " + e.toString());
-			e.printStackTrace();
-		}
+	public void beforeclass(){
+		roomName = PreConditionHomePageTC.GetRoomName();
+		meetingId = PreConditionHomePageTC.CreateAfterMeeting();	
 	}
 	
 	@Test
