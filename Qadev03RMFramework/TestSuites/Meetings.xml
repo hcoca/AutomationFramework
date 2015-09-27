@@ -4,7 +4,6 @@
 	
  <test name="Meetings Acceptance Test cases">		
     <classes>     		
-    
       <class name="org.rm.automation.tablet.tests.meetings.CreateMeetingWithoutAnOrganizer"/>	
       <class name="org.rm.automation.tablet.tests.meetings.CreateMeetingWithoutASubject"/>
       <class name="org.rm.automation.tablet.tests.meetings.VerifyCurrentDateInFrom"/>
@@ -12,9 +11,7 @@
       <class name="org.rm.automation.tablet.tests.meetings.VerifyEndTimeCanBeUpdated"/>
       <class name="org.rm.automation.tablet.tests.meetings.VerifyFromLoweThanTo"/>
       <class name="org.rm.automation.tablet.tests.meetings.VerifyStartTimeCanBeUpdated"/>
-      <class name="org.rm.automation.tablet.tests.meetings.VerifySubjectCanBeUpdated"/>
-      	
-      		
+      <class name="org.rm.automation.tablet.tests.meetings.VerifySubjectCanBeUpdated"/>	
     </classes>		
   </test> <!-- Test -->  		
 </suite> <!-- Suite --> 

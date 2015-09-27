@@ -1,0 +1,478 @@
+2015-09-24 12:52:08,227 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 12:52:08,269 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 12:52:08,357 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 12:52:08,357 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 12:52:08,736 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Creating the meeting: meetingTitle in the room: d403 from: 2015-09-24T17:06:24.000Z to: 2015-09-24T17:07:26.000Z
+2015-09-24 12:52:09,167 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 12:52:09,989 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 12:52:10,035 - org.rm.automation.utils.LogManager -INFO - VerifyTitleOnRunningMeeting: Executing Precondition, creating a meeting
+2015-09-24 12:52:12,367 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-24 12:52:12,368 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-24 12:52:13,757 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-24 12:52:14,110 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-24 12:52:16,494 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-24 12:52:17,412 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-24 12:52:18,618 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-24 12:52:19,774 - org.rm.automation.utils.LogManager -ERROR - verifyNextTitleWhenThereIsnotMeting assert is fail: java.lang.AssertionError: expected [meetingTitle] but found [End of day]
+2015-09-24 12:52:19,808 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Deleting the meeting: 56042a39980daccc0ed7ec61 in the room: d403
+2015-09-24 12:52:19,983 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 12:52:20,425 - org.rm.automation.utils.LogManager -INFO - VerifyTitleOnRunningMeeting: Executing Postcondition, removing meeting
+2015-09-24 12:52:24,238 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 12:52:24,238 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 15:14:33,063 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:14:33,117 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:14:33,245 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:14:33,245 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:14:35,441 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-24 15:14:35,441 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-24 15:14:36,852 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-24 15:14:37,306 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-24 15:14:39,724 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-24 15:14:40,691 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-24 15:14:41,895 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-24 15:14:46,191 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 15:14:46,191 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 15:15:14,809 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:15:14,814 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:15:14,959 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:15:14,959 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:15:17,088 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-24 15:15:17,088 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-24 15:15:17,717 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-24 15:15:18,081 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-24 15:15:20,528 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-24 15:15:21,468 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-24 15:15:22,615 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-24 15:15:25,556 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 15:15:25,556 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 15:18:33,861 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:18:33,873 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:18:33,954 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:18:33,954 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:18:35,627 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 15:18:35,628 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 15:19:06,701 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:19:06,714 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:19:06,772 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:19:06,773 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:19:07,943 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 15:19:07,944 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 15:20:01,747 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:20:01,752 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:20:01,810 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:20:01,811 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:20:03,320 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 15:20:03,323 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 15:21:27,435 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:21:27,442 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:21:27,591 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:21:27,594 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:21:29,790 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 15:21:29,793 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 15:23:09,253 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:23:09,265 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:23:09,346 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:23:09,346 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:23:10,707 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 15:23:10,709 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 15:23:36,328 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:23:36,336 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:23:36,496 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:23:36,497 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:23:38,277 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 15:23:38,278 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 15:34:42,668 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:34:42,674 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:34:42,739 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:34:42,739 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:34:42,822 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Creating the meeting: meetingTitle in the room: d403 from: 2015-09-24T19:49:30.000Z to: 2015-09-24T19:50:30.000Z
+2015-09-24 15:34:43,055 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 15:34:43,812 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 15:34:43,858 - org.rm.automation.utils.LogManager -INFO - VerifyTitleOnRunningMeeting: Executing Precondition, creating a meeting
+2015-09-24 15:34:45,825 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-24 15:34:45,827 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-24 15:34:47,645 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-24 15:34:47,949 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-24 15:34:50,328 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-24 15:34:51,249 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-24 15:34:52,465 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-24 15:35:24,202 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Deleting the meeting: 56045053980daccc0ed7ec69 in the room: d403
+2015-09-24 15:35:24,312 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 15:35:24,766 - org.rm.automation.utils.LogManager -INFO - VerifyTitleOnRunningMeeting: Executing Postcondition, removing meeting
+2015-09-24 15:35:25,906 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 15:35:25,907 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 15:36:55,348 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:36:55,353 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:36:55,530 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:36:55,530 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:36:55,615 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Creating the meeting: meetingTitle in the room: d403 from: 2015-09-24T19:51:45.000Z to: 2015-09-24T19:52:45.000Z
+2015-09-24 15:36:55,710 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 15:36:56,489 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 15:36:56,522 - org.rm.automation.utils.LogManager -INFO - VerifyTitleOnRunningMeeting: Executing Precondition, creating a meeting
+2015-09-24 15:36:58,700 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-24 15:36:58,703 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-24 15:36:59,278 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-24 15:36:59,657 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-24 15:37:02,039 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-24 15:37:03,175 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-24 15:37:04,452 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-24 15:37:06,247 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Deleting the meeting: 560450d8980daccc0ed7ec6d in the room: d403
+2015-09-24 15:37:06,334 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 15:37:06,775 - org.rm.automation.utils.LogManager -INFO - VerifyTitleOnRunningMeeting: Executing Postcondition, removing meeting
+2015-09-24 15:37:08,314 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 15:37:08,314 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 15:58:17,934 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:58:18,016 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:58:18,071 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 15:58:18,072 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 15:58:18,441 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Creating the meeting: meetingTitle in the room: d403 from: 2015-09-24T20:13:04.000Z to: 2015-09-24T20:14:04.000Z
+2015-09-24 15:58:18,658 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 15:58:19,486 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 15:58:19,545 - org.rm.automation.utils.LogManager -INFO - VerifyTitleOnRunningMeeting: Executing Precondition, creating a meeting
+2015-09-24 15:58:21,907 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-24 15:58:21,909 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-24 15:58:23,391 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-24 15:58:23,926 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-24 15:58:26,388 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-24 15:58:27,342 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-24 15:58:28,559 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-24 15:59:00,324 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Deleting the meeting: 560455db980daccc0ed7ec76 in the room: d403
+2015-09-24 15:59:00,426 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 15:59:00,895 - org.rm.automation.utils.LogManager -INFO - VerifyTitleOnRunningMeeting: Executing Postcondition, removing meeting
+2015-09-24 15:59:04,344 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 15:59:04,345 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 16:05:51,033 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 16:05:51,052 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 16:05:51,108 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 16:05:51,108 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 16:05:51,198 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Creating the meeting: meetingTitle in the room: d403 from: 2015-09-24T20:20:42.000Z to: 2015-09-24T20:21:42.000Z
+2015-09-24 16:05:51,291 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 16:05:52,036 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 16:05:52,099 - org.rm.automation.utils.LogManager -INFO - VerifyTitleOnRunningMeeting: Executing Precondition, creating a meeting
+2015-09-24 16:05:54,075 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-24 16:05:54,078 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-24 16:05:54,709 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-24 16:05:55,134 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-24 16:05:57,563 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-24 16:05:58,521 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-24 16:05:59,726 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-24 16:06:02,309 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Deleting the meeting: 5604579f980daccc0ed7ec79 in the room: d403
+2015-09-24 16:06:02,443 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 16:06:02,903 - org.rm.automation.utils.LogManager -INFO - VerifyTitleOnRunningMeeting: Executing Postcondition, removing meeting
+2015-09-24 16:06:09,132 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 16:06:09,133 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 16:14:25,865 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 16:14:25,953 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 16:14:26,014 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 16:14:26,014 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 16:14:26,272 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Creating the meeting: meetingTitle in the room: d403 from: 2015-09-24T20:29:14.000Z to: 2015-09-24T20:31:14.000Z
+2015-09-24 16:14:26,515 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 16:14:27,352 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 16:14:27,409 - org.rm.automation.utils.LogManager -INFO - VerifyEndTimeNextPanel: Executing Precondition, creating a meeting
+2015-09-24 16:14:29,963 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-24 16:14:29,964 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-24 16:14:31,433 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-24 16:14:32,067 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-24 16:14:34,584 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-24 16:14:35,578 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-24 16:14:36,810 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-24 16:14:39,064 - org.rm.automation.utils.LogManager -ERROR - VerifyEndTimeNextPanel assert is fail: java.lang.AssertionError: expected [16:31] but found [16:29]
+2015-09-24 16:14:39,087 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Deleting the meeting: 560459a3980daccc0ed7ec83 in the room: d403
+2015-09-24 16:14:39,163 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 16:14:39,681 - org.rm.automation.utils.LogManager -INFO - VerifyEndTimeNextPanel: Executing Postcondition, removing meeting
+2015-09-24 16:14:42,059 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 16:14:42,060 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 16:16:18,199 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 16:16:18,206 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 16:16:18,256 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 16:16:18,257 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 16:16:18,329 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Creating the meeting: meetingTitle in the room: d403 from: 2015-09-24T20:31:08.000Z to: 2015-09-24T20:33:08.000Z
+2015-09-24 16:16:18,442 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 16:16:19,253 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 16:16:19,387 - org.rm.automation.utils.LogManager -INFO - VerifyEndTimeNextPanel: Executing Precondition, creating a meeting
+2015-09-24 16:16:21,696 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-24 16:16:21,698 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-24 16:16:22,421 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-24 16:16:22,790 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-24 16:16:25,301 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-24 16:16:26,332 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-24 16:16:27,474 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-24 16:16:29,368 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Deleting the meeting: 56045a13980daccc0ed7ec84 in the room: d403
+2015-09-24 16:16:29,455 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 16:16:29,892 - org.rm.automation.utils.LogManager -INFO - VerifyEndTimeNextPanel: Executing Postcondition, removing meeting
+2015-09-24 16:16:30,907 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 16:16:30,907 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 16:36:13,421 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 16:36:13,430 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 16:36:13,651 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 16:36:13,651 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 16:36:15,826 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 16:36:15,834 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 16:37:51,934 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 16:37:51,941 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 16:37:52,010 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 16:37:52,010 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 16:37:52,929 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 16:37:52,930 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 16:42:53,653 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 16:42:53,660 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 16:42:53,777 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 16:42:53,777 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 16:42:54,767 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 16:42:54,768 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 16:45:10,622 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 16:45:10,638 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 16:45:10,751 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 16:45:10,751 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 16:45:12,632 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 16:45:12,632 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 18:44:29,770 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 18:44:29,778 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 18:44:29,868 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 18:44:29,868 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 18:44:31,815 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 18:44:31,815 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-24 18:46:07,645 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 18:46:07,653 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 18:46:07,699 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-24 18:46:07,700 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-24 18:46:07,879 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Creating the meeting: meetingTitle in the room: d403 from: 2015-09-24T23:00:57.000Z to: 2015-09-24T23:01:57.000Z
+2015-09-24 18:46:08,044 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 18:46:08,881 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 18:46:08,962 - org.rm.automation.utils.LogManager -INFO - VerifyNextTitleWhenThereisMeeting: Executing Precondition, creating a meeting
+2015-09-24 18:46:11,357 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-24 18:46:11,360 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-24 18:46:12,989 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-24 18:46:13,309 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-24 18:46:15,738 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-24 18:46:16,683 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-24 18:46:17,882 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-24 18:46:19,028 - org.rm.automation.utils.LogManager -ERROR - VerifyNextTitleWhenThereisMeeting assert is fail: java.lang.AssertionError: expected [meetingTitle] but found [End of day]
+2015-09-24 18:46:19,033 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Deleting the meeting: 56047d30980daccc0ed7ec86 in the room: d403
+2015-09-24 18:46:19,165 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-24 18:46:19,576 - org.rm.automation.utils.LogManager -INFO - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-24 18:46:21,104 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-24 18:46:21,105 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-25 09:13:50,107 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 09:13:50,183 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 09:13:50,408 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 09:13:50,409 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 09:13:53,678 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-25 09:13:53,678 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-25 09:13:55,758 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-25 09:13:56,200 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-25 09:13:59,043 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-25 09:14:00,032 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-25 09:14:01,233 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-25 09:14:03,197 - org.rm.automation.utils.LogManager -ERROR - VerifyCurrentTime -the assertion is failed junit.framework.ComparisonFailure: expected:<9:13> but was:<09:14>
+2015-09-25 09:14:06,356 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-25 09:14:06,356 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-25 09:18:36,295 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 09:18:36,300 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 09:18:36,347 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 09:18:36,348 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 09:18:38,378 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-25 09:18:38,378 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-25 09:18:39,033 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-25 09:18:39,391 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-25 09:18:41,786 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-25 09:18:42,516 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-25 09:18:43,858 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-25 09:18:46,633 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-25 09:18:46,634 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-25 09:28:32,462 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 09:28:32,467 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 09:28:32,523 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 09:28:32,523 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 09:28:34,733 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-25 09:28:34,733 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-25 09:28:35,398 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-25 09:28:35,810 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-25 09:28:38,182 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-25 09:28:39,061 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-25 09:28:40,258 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-25 09:28:43,143 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-25 09:28:43,144 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-25 09:31:08,067 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 09:31:08,072 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 09:31:08,111 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 09:31:08,111 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 09:31:10,113 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-25 09:31:10,113 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-25 09:31:10,630 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-25 09:31:10,976 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-25 09:31:13,457 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-25 09:31:14,188 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-25 09:31:15,280 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-25 09:31:17,974 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-25 09:31:17,974 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-25 09:35:02,876 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 09:35:02,888 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 09:35:02,937 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 09:35:02,937 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 09:35:05,036 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-25 09:35:05,036 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-25 09:35:05,959 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-25 09:35:06,174 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-25 09:35:08,534 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-25 09:35:09,325 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-25 09:35:10,405 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-25 09:35:12,939 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-25 09:35:12,939 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-25 09:36:29,904 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 09:36:29,918 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 09:36:29,993 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 09:36:29,994 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 09:36:31,952 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-25 09:36:31,953 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-25 09:36:34,776 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-25 09:36:35,119 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-25 09:36:37,553 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-25 09:36:38,501 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-25 09:36:39,694 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-25 09:36:42,270 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-25 09:36:42,271 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-25 09:41:17,387 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 09:41:17,393 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 09:41:17,477 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 09:41:17,477 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 09:41:19,446 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-25 09:41:19,446 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-25 09:41:19,971 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-25 09:41:20,322 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-25 09:41:22,717 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-25 09:41:23,414 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-25 09:41:24,532 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-25 09:41:27,187 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-25 09:41:27,187 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-25 10:22:43,453 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 10:22:43,457 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 10:22:43,501 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 10:22:43,501 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 10:22:43,568 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Creating the meeting: meetingTitle in the room: d403 from: 2015-09-25T14:37:33.000Z to: 2015-09-25T14:38:33.000Z
+2015-09-25 10:22:43,742 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 10:22:44,523 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 10:22:44,577 - org.rm.automation.utils.LogManager -INFO - VerifytheStarTimeNextPanel: Executing Precondition, creating a meeting
+2015-09-25 10:22:46,544 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-25 10:22:46,545 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-25 10:22:47,115 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-25 10:22:47,498 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-25 10:22:49,999 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-25 10:22:51,018 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-25 10:22:51,986 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-25 10:22:54,000 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Deleting the meeting: 560558b4980daccc0ed7ecb2 in the room: d403
+2015-09-25 10:22:54,066 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 10:22:54,448 - org.rm.automation.utils.LogManager -INFO - VerifytheStarTimeNextPanel: Executing Postcondition, removing meeting
+2015-09-25 10:22:55,480 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-25 10:22:55,480 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-25 10:23:16,222 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 10:23:16,229 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 10:23:16,285 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 10:23:16,285 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 10:23:16,365 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Creating the meeting: meetingTitle in the room: d403 from: 2015-09-25T14:38:07.000Z to: 2015-09-25T14:39:07.000Z
+2015-09-25 10:23:16,454 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 10:23:17,222 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 10:23:17,272 - org.rm.automation.utils.LogManager -INFO - VerifytheStarTimeNextPanel: Executing Precondition, creating a meeting
+2015-09-25 10:23:19,289 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-25 10:23:19,291 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-25 10:23:20,039 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-25 10:23:20,433 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-25 10:23:22,851 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-25 10:23:23,837 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-25 10:23:24,886 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-25 10:23:26,927 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Deleting the meeting: 560558d5980daccc0ed7ecb3 in the room: d403
+2015-09-25 10:23:26,999 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 10:23:27,366 - org.rm.automation.utils.LogManager -INFO - VerifytheStarTimeNextPanel: Executing Postcondition, removing meeting
+2015-09-25 10:23:28,189 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-25 10:23:28,189 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-25 12:52:57,603 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 12:52:58,019 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 12:52:58,245 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 12:52:58,247 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 12:53:00,410 - org.rm.automation.utils.LogManager -INFO - VerifyTimeLineToMeetingsPage: Executing Precondition, getting a default room
+2015-09-25 12:53:00,439 - org.rm.automation.utils.LogManager -INFO - VerifySchedulePanelAccessToMeetings: Executing Test Case
+2015-09-25 12:53:06,455 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-25 12:53:06,456 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-25 12:53:09,141 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-25 12:53:09,626 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-25 12:53:12,377 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-25 12:53:14,046 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-25 12:53:15,829 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-25 12:53:33,229 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-25 12:53:33,229 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-25 14:25:55,530 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 14:25:55,724 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 14:25:56,050 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 14:25:56,051 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 14:25:56,952 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Creating the meeting: meetingTitle in the room: d403 from: 2015-09-25T18:40:56.000Z to: 2015-09-25T18:41:56.000Z
+2015-09-25 14:25:57,180 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 14:25:58,031 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 14:26:05,991 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-25 14:26:05,999 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-25 14:26:09,082 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-25 14:26:09,875 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-25 14:26:13,003 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-25 14:26:15,807 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-25 14:26:17,876 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-25 14:26:20,386 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Deleting the meeting: 560591b6980daccc0ed7ecb5 in the room: d403
+2015-09-25 14:26:20,540 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 14:26:20,992 - org.rm.automation.utils.LogManager -INFO - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-25 14:26:31,849 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-25 14:26:31,855 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-25 14:41:02,622 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 14:41:02,806 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 14:41:02,941 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 14:41:02,941 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 14:41:03,826 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Creating the meeting: meetingTitle in the room: d403 from: 2015-09-25T18:56:03.000Z to: 2015-09-25T18:57:03.000Z
+2015-09-25 14:41:04,292 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 14:41:05,045 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 14:41:09,658 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-25 14:41:09,662 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-25 14:41:11,961 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-25 14:41:12,915 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-25 14:41:15,796 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-25 14:41:17,967 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-25 14:41:19,687 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-25 14:41:22,269 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Deleting the meeting: 56059541980daccc0ed7ecbd in the room: d403
+2015-09-25 14:41:22,333 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 14:41:22,801 - org.rm.automation.utils.LogManager -INFO - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-25 14:41:33,456 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-25 14:41:33,456 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-25 16:32:13,181 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 16:32:13,437 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 16:32:13,583 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 16:32:13,583 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 16:32:14,611 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Creating the meeting: meetingTitle in the room: d403 from: 2015-09-25T20:47:13.000Z to: 2015-09-25T20:48:14.000Z
+2015-09-25 16:32:15,137 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 16:32:16,023 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 16:32:20,061 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-25 16:32:20,064 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-25 16:32:21,564 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-25 16:32:22,039 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-25 16:32:24,414 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-25 16:32:25,383 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-25 16:32:27,275 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-25 16:32:29,883 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Deleting the meeting: 5605af50980daccc0ed7eccb in the room: d403
+2015-09-25 16:32:29,987 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 16:32:30,472 - org.rm.automation.utils.LogManager -INFO - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-25 16:32:38,932 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-25 16:32:38,932 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-25 16:41:32,754 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 16:41:32,765 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 16:41:32,868 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was opened
+2015-09-25 16:41:32,868 - org.rm.automation.utils.LogManager -INFO - Suite name: Default suite starting
+2015-09-25 16:41:33,049 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Creating the meeting: meetingTitle in the room: d403 from: 2015-09-25T20:56:16.000Z to: 2015-09-25T20:57:16.000Z
+2015-09-25 16:41:33,156 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 16:41:33,932 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 16:41:36,160 - org.rm.automation.utils.LogManager -INFO - LoginPage : Accessing to the selected conference room
+2015-09-25 16:41:36,161 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing the URL from the RM server
+2015-09-25 16:41:36,826 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM admininstrator's username
+2015-09-25 16:41:37,331 - org.rm.automation.utils.LogManager -INFO - LoginPage : Typing RM administrator's password
+2015-09-25 16:41:39,739 - org.rm.automation.utils.LogManager -INFO - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-25 16:41:40,612 - org.rm.automation.utils.LogManager -INFO - LoginPage : Setting the rooms of login
+2015-09-25 16:41:41,797 - org.rm.automation.utils.LogManager -INFO - LoginPageTablet: select room
+2015-09-25 16:41:43,608 - org.rm.automation.utils.LogManager -INFO - MeetingRequests : Deleting the meeting: 5605b17e980daccc0ed7eccd in the room: d403
+2015-09-25 16:41:43,663 - org.rm.automation.utils.LogManager -INFO - SERVICEREQUESTS:return service ID 
+2015-09-25 16:41:44,063 - org.rm.automation.utils.LogManager -INFO - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-25 16:41:46,817 - org.rm.automation.utils.LogManager -INFO - Browser: FIREFOX was closed
+2015-09-25 16:41:46,854 - org.rm.automation.utils.LogManager -INFO - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
