@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import org.json.simple.JSONObject;
+import org.rm.automation.utils.MeetingManager;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.rm.automation.utils.api.MeetingsRequests;
@@ -48,9 +49,17 @@ public class PreConditionHomePageTC {
 		return null;
 	}
 	
-	public static String createCurrentMeeting(String meetingTitle, String behindMinute, String aheadMinute) {
+	/**
+	 * @param roomName
+	 * @param meetingTitle
+	 * @param behindMinute 
+	 * @param aheadMinute
+	 * @return the ID of a meeting created at the execution time of the method call, the time difference 
+	 * of the meeting created is given by the behindMinute and the aheadMinute parameters. 
+	 */
+	public static String createCurrentMeeting(String roomName, String meetingTitle, int behindMinute, int aheadMinute) {
 		try {
-			MeetingsRequests.postMeeting(roomName, meetingTitle, behindMinute, aheadMinute);
+			MeetingManager.createRunninMeeting(roomName, meetingTitle, behindMinute, aheadMinute);
 			return MeetingsRequests.getMeetingId(meetingTitle, roomName);
 		}catch(Exception e){
 			

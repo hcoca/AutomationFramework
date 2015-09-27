@@ -42,8 +42,8 @@ public class VerifyOrganizerOnRunningMeeting extends TestBaseSetup {
 	
 	// Meeting properties
 	private String meetingTitle = "meetingTitle";
-	private String startTime = RoomManagerTime.substractMinutesToCurrentTime(1);
-	private String endTime = RoomManagerTime.addMinutesToCurrentTime(3);
+	private int behindMinute = 1; // 1 minute before current time
+	private int aheadMinute = 3; // 3 minutes ahead current time
 	private String meetingId;
 	private String meetingOrganizer = settings.getProperty("userES");
 	
@@ -54,7 +54,7 @@ public class VerifyOrganizerOnRunningMeeting extends TestBaseSetup {
  	@BeforeClass
  	public void setup(){
  		roomName = PreConditionHomePageTC.getRoomName();
- 		meetingId = PreConditionHomePageTC.createCurrentMeeting(meetingTitle, startTime, endTime);
+ 		meetingId = PreConditionHomePageTC.createCurrentMeeting(roomName, meetingTitle, behindMinute, aheadMinute);
  	}
  	
  	@Test

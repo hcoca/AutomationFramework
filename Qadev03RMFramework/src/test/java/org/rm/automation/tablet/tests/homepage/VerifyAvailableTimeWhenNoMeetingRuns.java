@@ -55,6 +55,5 @@ public class VerifyAvailableTimeWhenNoMeetingRuns extends TestBaseSetup {
  		actualResult = availablePanel.getAvailableTimeLeftText();
 
 		Assert.assertEquals(actualResult, expectedResult);
-
  	}
 }
