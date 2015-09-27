@@ -18,7 +18,8 @@
       <class name="org.rm.automation.tablet.tests.homepage.VerifyOrganizerOnRunningMeeting"/>
       <class name="org.rm.automation.tablet.tests.homepage.VerifySchedulePanelAccessToMeetings"/>
       <class name="org.rm.automation.tablet.tests.homepage.VerifyTimeRemainingOnRunningMeeting"/>	
-      <class name="org.rm.automation.tablet.tests.homepage.VerifyTitleOnRunningMeeting"/>			
+      <class name="org.rm.automation.tablet.tests.homepage.VerifyTitleOnRunningMeeting"/>
+      <class name="org.rm.automation.tablet.tests.homepage.VerifyTimeLineToMeetingsPage"/>			
     </classes>		
   </test> <!-- Test -->  		
 </suite> <!-- Suite --> 	
