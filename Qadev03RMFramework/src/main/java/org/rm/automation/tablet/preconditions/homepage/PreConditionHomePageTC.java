@@ -2,6 +2,7 @@ package org.rm.automation.tablet.preconditions.homepage;
 
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import org.json.simple.JSONObject;
 import org.rm.automation.utils.MeetingManager;
@@ -91,6 +92,36 @@ public class PreConditionHomePageTC {
 			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
 			return MeetingsRequests.getMeetingId(meetingTitle, roomName);
 		}catch(Exception e){	
+		}
+		return null;
+	}
+	
+	private String getStarMeetingafternoon(){
+      Calendar calendar = Calendar.getInstance();
+      calendar.set(Calendar.HOUR, 13);
+      calendar.set(Calendar.MINUTE, 0);
+      return RoomManagerTime.returnFormatRoomM(calendar.getTime());
+	}
+	
+	private String getEndMeetingafternoon(){
+	      Calendar calendar = Calendar.getInstance();
+	      calendar.set(Calendar.HOUR, 14);
+	      calendar.set(Calendar.MINUTE, 0);
+	      return RoomManagerTime.returnFormatRoomM(calendar.getTime());
+	}
+	
+	/**
+	 * @return meeting Id
+	 * 
+	 * this method created a meeting in the afternoon between 13:00 - 14:00
+	 * 
+	 */
+	public String CreateMeetingInAfternoon(){
+		try {
+			MeetingsRequests.postMeeting(roomName, "meetingAfternoon", getStarMeetingafternoon(), getEndMeetingafternoon());
+			return MeetingsRequests.getMeetingId(meetingTitle, roomName);
+		}catch(Exception e){
+			
 		}
 		return null;
 	}
