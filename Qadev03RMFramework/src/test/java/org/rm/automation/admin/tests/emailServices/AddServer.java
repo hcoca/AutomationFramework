@@ -3,9 +3,7 @@ package org.rm.automation.admin.tests.emailServices;
 import org.testng.annotations.Test;
 import junit.framework.Assert;
 
-import java.io.IOException;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
@@ -16,8 +14,6 @@ import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ServicesRequests;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 
 
 public class AddServer extends TestBaseSetup {

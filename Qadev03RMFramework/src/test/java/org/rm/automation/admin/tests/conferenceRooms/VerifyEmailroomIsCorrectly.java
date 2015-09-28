@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
 
-import org.bouncycastle.asn1.cmp.OOBCertHash;
 import org.json.simple.JSONObject;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
@@ -16,7 +15,6 @@ import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
-import org.seleniumhq.jetty7.util.log.Log;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 

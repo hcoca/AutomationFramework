@@ -1,7 +1,6 @@
 package org.rm.automation.admin.tests.conferenceRooms;
 
-import java.io.IOException;
-import java.util.ArrayList;
+
 import java.util.Properties;
 
 import org.json.simple.JSONObject;

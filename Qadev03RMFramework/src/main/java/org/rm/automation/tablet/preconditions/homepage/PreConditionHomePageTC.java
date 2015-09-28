@@ -2,7 +2,6 @@ package org.rm.automation.tablet.preconditions.homepage;
 
 
 import java.util.ArrayList;
-import java.util.Date;
 
 import org.json.simple.JSONObject;
 import org.rm.automation.utils.MeetingManager;

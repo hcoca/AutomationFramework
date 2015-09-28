@@ -6,7 +6,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserManager {
 
-	private static BrowserManager instance = null;
 	private static WebDriver driver = null;
 	
 	private BrowserManager(){}
