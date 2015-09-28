@@ -119,37 +119,9 @@ public class ResourcesPage extends HomePage{
 	}
 	
 	/**
-	 * Verify a resource with the obligatory fields
-	 * @param expName
-	 * @param expDisplayName
+	 * Get a resources's  name
 	 * @return
 	 */
-//	public ResourcesPage VerifyResourceWasCreated(String expName, String expDisplayName, String expIcon)
-//	{
-//		LogManager.info("ResourcesPage: Verifying the correct data of the resource was created");
-//		WebElement nameElement, displayNameElement, iconElement;
-//		
-//		List<WebElement> list = GetListResources();
-//		element = list.get(list.size()-1);
-//		
-//		nameElement = element.findElement(By.cssSelector(ResourcesLocators.nameColumnPath));
-//		String name = nameElement.getText().replaceAll("\\s","");
-//		
-//		displayNameElement = element.findElement(By.cssSelector(ResourcesLocators.displayNameColumnPath));
-//		String displayName = displayNameElement.getText().replaceAll("\\s","");
-//		
-//		iconElement = element
-//				.findElement(By.cssSelector(ResourcesLocators.iconColumnPath))
-//				.findElement(By.xpath(ResourcesLocators.iconPath));
-//		String iconName = iconElement.getAttribute("class");
-//		
-//		
-//		Assert.assertEquals(expName, name);
-//		Assert.assertEquals(expDisplayName, displayName);
-//		Assert.assertTrue(iconName.contains(expIcon));
-//		return this;
-//	}
-	
 	public String getName()
 	{
 		LogManager.info("ResourcesPage: Getting resources's name");
@@ -163,6 +135,10 @@ public class ResourcesPage extends HomePage{
 		return name;
 	}
 	
+	/**
+	 * Get a resource's display name
+	 * @return
+	 */
 	public String getDisplayName()
 	{
 		LogManager.info("ResourcesPage: Getting resource's display name");
@@ -176,6 +152,10 @@ public class ResourcesPage extends HomePage{
 		return displayName;
 	}
 	
+	/**
+	 * Get a resource's icon
+	 * @return
+	 */
 	public String getIcon()
 	{
 		LogManager.info("ResourcesPage: Getting resource's icon");
@@ -191,10 +171,17 @@ public class ResourcesPage extends HomePage{
 		return iconName;
 	}
 	
+	/**
+	 * Get a resource's description
+	 * @return
+	 */
 	public String getDescription()
 	{
 		LogManager.info("ResourcesPage: Getting resource's description");
 
+		List<WebElement> list = GetListResources();
+		element = list.get(list.size()-1);
+		
 		action
 		.moveToElement(element.findElement(By.cssSelector(ResourcesLocators.resourceDoubleClickPath)))
 		.doubleClick().build().perform();
@@ -205,89 +192,13 @@ public class ResourcesPage extends HomePage{
 	}
 	
 	/**
-	 * Verify a resource with all the fields
-	 * @param expName
-	 * @param expDisplayName
+	 * Get whether or not a resource was deleted
+	 * @param expected
 	 * @return
 	 */
-//	public ResourcesPage VerifyResourceWasCreated(String expName, String expDisplayName, String expIcon, String description)
-//	{
-//		VerifyResourceWasCreated(expName, expDisplayName, expIcon);
-//		
-//		action
-//		.moveToElement(element.findElement(By.cssSelector(ResourcesLocators.resourceDoubleClickPath)))
-//		.doubleClick().build().perform();
-//		
-//		AddResourcesPage page = new AddResourcesPage(driver);
-//		page.VerifyDescriptionResource(description);
-//
-//		return this;
-//	}
-	
-	/**
-	 * Verify a resource was deleted
-	 * @param expName
-	 * @param expDisplayName
-	 * @return
-	 */
-	public ResourcesPage VerifyResourceWasDeleted(String expected)
-	{
-		LogManager.info("ResourcesPage: Verifying the resource was deleted");
-		
-		Assert.assertTrue(isElementPresent(By.cssSelector(ResourcesLocators.nameColumnPath), expected));
-		
-		return this;
-	}
-	
 	public boolean isResourceDeleted(String expected)
 	{
 		return isElementPresent(By.cssSelector(ResourcesLocators.nameColumnPath), expected);
-	}
-	
-	/**
-	 * Method to verify a resource's name was updated
-	 * @param name
-	 */
-	public ResourcesPage VerifyResourceElementWasUpdated(String expected, int option)
-	{
-		List<WebElement> list = GetListResources();
-		WebElement lastRow = list.get(list.size()-1);
-		WebElement column;
-		String actual;
-
-		switch(option)
-		{
-		case 1:
-			LogManager.info("ResourcesPage: Verifying the correct Name of the resource was updated");
-			column = lastRow.findElement(By.cssSelector(ResourcesLocators.nameColumnPath));
-			actual = column.getText().replaceAll("\\s","");
-			
-			Assert.assertEquals(expected, actual);
-			break;
-		case 2:
-			LogManager.info("ResourcesPage: Verifying the correct DisplayName of the resource was updated");
-			column = lastRow.findElement(By.cssSelector(ResourcesLocators.displayNameColumnPath));
-			actual = column.getText().replaceAll("\\s","");
-			
-			Assert.assertEquals(expected, actual);
-			break;
-		case 3:
-			LogManager.info("ResourcesPage: Verifying the correct Description of the resource was updated");
-			action.moveToElement(lastRow.findElement(By.cssSelector("div.ng-scope > span.ng-binding"))).doubleClick().build().perform();
-			AddResourcesPage page = new AddResourcesPage(driver);
-//			page.VerifyDescriptionResource(expected);
-			break;
-		case 4:
-			LogManager.info("ResourcesPage: Verifying the correct Icon of the resource was updated");
-			column = lastRow
-					.findElement(By.cssSelector(ResourcesLocators.iconColumnPath))
-					.findElement(By.xpath(ResourcesLocators.iconPath));
-			actual = column.getAttribute("class");
-			Assert.assertTrue(actual.contains(expected));
-
-			break;
-		}
-		return this;
 	}
 	
 	public String getRowName()
@@ -303,12 +214,51 @@ public class ResourcesPage extends HomePage{
 		return actual;
 	}
 	
-	/**
-	 * Method to verify the search of a resource
-	 */
-	public ResourcesPage VerifySearch(String nameExpected)
+	public String getRowDisplayName()
 	{
-		LogManager.info("ResourcesPage: Verifying the search");
+		List<WebElement> list = GetListResources();
+		WebElement lastRow = list.get(list.size()-1);
+		WebElement column;
+		String actual;
+		
+		LogManager.info("ResourcesPage: Verifying the correct DisplayName of the resource was updated");
+		column = lastRow.findElement(By.cssSelector(ResourcesLocators.displayNameColumnPath));
+		actual = column.getText().replaceAll("\\s","");
+		
+		return actual;
+	}
+	
+	public String getRowIcon()
+	{
+		List<WebElement> list = GetListResources();
+		WebElement lastRow = list.get(list.size()-1);
+		WebElement column;
+		String actual;
+		
+		LogManager.info("ResourcesPage: Verifying the correct Icon of the resource was updated");
+		column = lastRow
+				.findElement(By.cssSelector(ResourcesLocators.iconColumnPath))
+				.findElement(By.xpath(ResourcesLocators.iconPath));
+		actual = column.getAttribute("class");
+		return actual;
+	}
+	
+	/**
+	 * Get the list size of the found resources
+	 * @return
+	 */
+	public int getListFoundSize()
+	{
+		LogManager.info("ResourcesPage: Getting list's size of found elements");
+
+		List<WebElement> list = GetListResources();
+		
+		return list.size();
+	}
+	
+	public String getSearchResult()
+	{
+		LogManager.info("ResourcesPage: Getting search result");
 
 		List<WebElement> list = GetListResources();
 		WebElement lastRow = list.get(0);
@@ -318,10 +268,7 @@ public class ResourcesPage extends HomePage{
 		column = lastRow.findElement(By.cssSelector(ResourcesLocators.nameColumnPath));
 		actual = column.getText().replaceAll("\\s","");
 		
-		Assert.assertEquals(1, list.size());
-		Assert.assertEquals(nameExpected, actual);
-		
-		return this;
+		return actual;
 	}
 	
 	private boolean isElementPresent(By by, String expected) {

@@ -11,6 +11,7 @@ import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ResourcesRequests;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -30,6 +31,13 @@ public class SearchResource extends TestBaseSetup{
 	private HomePage homePage;
 	private ResourcesPage resourcesPage;
 	
+	private String messageFormat = "Expected <%s> but found <%s>";
+	private String messageError;
+	private String nameExpected = name;
+	private String nameActual;
+	private int sizeExpected = 1;
+	private int sizeActual;
+	
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
 	{
@@ -44,8 +52,16 @@ public class SearchResource extends TestBaseSetup{
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.SignIn(username, password);
 		resourcesPage = homePage.SelectResourcesOption()
-				.SetSearch(name)
-				.VerifySearch(name);
+				.SetSearch(name);
+		
+		sizeActual = resourcesPage.getListFoundSize();
+		messageError = String.format(messageFormat, sizeExpected, sizeActual);
+		Assert.assertEquals(sizeActual, sizeExpected, messageError);
+		
+		nameActual = resourcesPage.getSearchResult();
+		messageError = String.format(messageFormat, nameExpected, nameActual);
+		Assert.assertEquals(nameActual, nameExpected, messageError);
+		
 		resourcesPage.SignOut();
 	}
 	
