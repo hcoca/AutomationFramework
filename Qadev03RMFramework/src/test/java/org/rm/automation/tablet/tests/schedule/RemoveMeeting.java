@@ -28,7 +28,7 @@ public class RemoveMeeting extends TestBaseSetup{
 	private String url = "http://"+server+":"+port;
 	private String startTime = RoomManagerTime.substractMinutesToCurrentTime(1);
 	private String endTime = RoomManagerTime.addMinutesToCurrentTime(3);
-	private String title = "La vaca que sonrie";
+	private String title = "Remove meeting";
 	private String meetingRemoved = "Meeting successfully removed";
 	private String roomName;
 	
