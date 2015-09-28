@@ -18,7 +18,6 @@ import org.rm.automation.utils.api.MeetingsRequests;
 public class PreConditionHomePageTC {
 
 	private static String roomName = getRoomName();
-	private static String meetingTitle = "meetingTitle";
 	private static String startTimeAfter = RoomManagerTime.addMinutesToCurrentTime(20);
 	private static String startTimeCurrent = RoomManagerTime.substractMinutesToCurrentTime(2);
 	private static String endTime = RoomManagerTime.addMinutesToCurrentTime(25);
@@ -118,11 +117,9 @@ public class PreConditionHomePageTC {
 	 */
 	public static String CreateMeetingInAfternoon(String roomName){
 		try {
-			System.out.println("asjdfhg   "+RoomManagerTime.addMinutesToCurrentTime(600));
-			System.out.println("asjdfhg   "+getStarMeetingafternoon());
-			System.out.println("asjdfhg   "+getEndMeetingafternoon());
-			MeetingsRequests.postMeeting(roomName, "meetingInTheAfternoon", getStarMeetingafternoon(), getEndMeetingafternoon());
-			return MeetingsRequests.getMeetingId(meetingTitle, roomName);
+			String title = "meeting between 13:00 to 14:00";
+			MeetingsRequests.postMeeting(roomName, title, getStarMeetingafternoon(), getEndMeetingafternoon());
+			return MeetingsRequests.getMeetingId(title, roomName);
 		}catch(Exception e){
 			
 		}
