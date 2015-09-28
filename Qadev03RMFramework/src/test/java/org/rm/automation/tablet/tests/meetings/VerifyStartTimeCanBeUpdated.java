@@ -1,16 +1,19 @@
 package org.rm.automation.tablet.tests.meetings;
+import org.json.simple.parser.ParseException;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.*;
+import org.rm.automation.tablet.preconditions.homepage.PostContidionHomePageTC;
+import org.rm.automation.tablet.preconditions.meetings.PreConditionMeetings;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.api.*;
 
-
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 
-import org.json.simple.JSONObject;
+
 import org.rm.automation.utils.TestBaseSetup;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -18,38 +21,31 @@ public class VerifyStartTimeCanBeUpdated extends TestBaseSetup{
 	private LoginPage loginPage;
 	private HomePage homePage;
 	private MeetingsPage meetingsPage;
-	private String serviceURL;
 	private String roomName;
 	private Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
-	private String userName = settings.getProperty("username");
 	private String password  = settings.getProperty("passwordES");
-	private String server = settings.getProperty("server");
-	private String port = settings.getProperty("port");
-	String subject = "New Meeting";
-	private String startTime = RoomManagerTime.substractMinutesToCurrentTime(0);
-	private String endTime = RoomManagerTime.addminutesCurrentTime(20);
-	//private String startTime = "2015-09-24T22:24:33.000Z";
-	//private String endTime = "2015-09-24T22:54:33.000Z";
+	private String subject = "New Meeting";
+	private String endTime = RoomManagerTime.addMinutesToCurrentTime(20);
+	private String meetingId;
+	private String newStartTime;
+	private Date date;
+	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	
-	private String newStartTime = RoomManagerTime.addMinutesToDate(5);
 	@BeforeMethod
- 	public void setup(){
-		try{
-			ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-			roomName = allRooms.get(0).get("displayName").toString();
-			serviceURL = "http://" + server + ":" + port + "/";
-			MeetingsRequests.postMeeting(roomName, subject, startTime, endTime);
-		}
-		catch(Exception e){
-			e.printStackTrace();
-		}		
+ 	public void setup() throws ParseException, java.text.ParseException{
+		roomName = PreConditionMeetings.getRoomName();
+		meetingId = PreConditionMeetings.CreateMeetingInAfternoon(roomName, subject);
+		endTime = MeetingsRequests.getMeeting(subject, roomName).get("start").toString();
+		endTime = endTime.replace("T", " ").replace(".000Z", "");		
+		date = formatter.parse(endTime);
+		newStartTime = RoomManagerTime.addMinutesToDate(date, 15);		
  	}
 	@Test
 	public void testVerifyStartTimeCanBeUpdated(){
 		String message = "Verifying End Time value of a meeting can be updated";
 		loginPage = new LoginPage(driver);
- 		homePage = loginPage.access(serviceURL, userName, password, roomName);
+ 		homePage = loginPage.access(roomName);
  		meetingsPage = homePage.selectSchedulePage();
  		meetingsPage.selectMeeting(subject)
  					.setStartTime(newStartTime)
@@ -61,13 +57,6 @@ public class VerifyStartTimeCanBeUpdated extends TestBaseSetup{
 	}
 	@AfterMethod 
 	public void deleteMeeting(){
-		String id = "";
-		try{
-			id = MeetingsRequests.getMeetingId(subject, roomName);
-			MeetingsRequests.deleteMeeting(id, roomName);
-		}
-		catch(Exception e){
-			e.printStackTrace();
-		}
+		PostContidionHomePageTC.deleteMeeting(meetingId, roomName);
 	}
 }
