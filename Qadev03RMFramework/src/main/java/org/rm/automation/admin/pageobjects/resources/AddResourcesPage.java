@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.admin.locators.resources.AddResourcesLocators;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
-import org.testng.Assert;
 
 public class AddResourcesPage {
 	
@@ -92,12 +91,24 @@ public class AddResourcesPage {
 		return new ResourcesPage(driver);
 	}
 	
-	public void VerifyDescriptionResource(String expDescription)
+//	public void VerifyDescriptionResource(String expDescription)
+//	{
+//		Waiters.WaitByXPath(AddResourcesLocators.descriptionPath, driver);
+//		LogManager.info("AddResourcesPage: Verifying the description of the resource");
+//		String description = descriptionField.getAttribute("value");
+//		
+//		Assert.assertEquals(description, expDescription);
+//	}
+	
+	/**
+	 * Get a resource's description
+	 * @return
+	 */
+	public String getDescription()
 	{
 		Waiters.WaitByXPath(AddResourcesLocators.descriptionPath, driver);
 		LogManager.info("AddResourcesPage: Verifying the description of the resource");
 		String description = descriptionField.getAttribute("value");
-		
-		Assert.assertEquals(description, expDescription);
+		return description;
 	}
 }

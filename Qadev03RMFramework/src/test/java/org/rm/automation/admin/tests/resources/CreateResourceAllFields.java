@@ -12,6 +12,7 @@ import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ResourcesRequests;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
@@ -32,6 +33,17 @@ public class CreateResourceAllFields extends TestBaseSetup{
 	private AddResourcesPage addResourcesPage;
 	private IssuesPage issuesPage;
 	
+	private String messageFormat = "Expected <%s> but found <%s>";
+	private String messageError;
+	private String nameExpected = name;
+	private String nameActual;
+	private String displayNameExpected = displayName;
+	private String displayNameActual;
+	private String iconNameExpected = iconName;
+	private String iconNameActual;
+	private String descriptionExpected = description;
+	private String descriptionActual;
+	
 	@Test
 	public void testCreateResourceAllFields()
 	{
@@ -46,8 +58,24 @@ public class CreateResourceAllFields extends TestBaseSetup{
 				.setDescription(description);
 		resourcesPage = addResourcesPage.Save();
 		issuesPage = resourcesPage.SelectIssuesOption();
-		resourcesPage = issuesPage.SelectResourcesOption()
-				.VerifyResourceWasCreated(name, displayName, iconName, description);
+		resourcesPage = issuesPage.SelectResourcesOption();
+		
+		nameActual = resourcesPage.getName();
+		messageError = String.format(messageFormat, nameExpected, nameActual);
+		Assert.assertEquals(nameActual, nameExpected, messageError);
+		
+		displayNameActual = resourcesPage.getDisplayName();
+		messageError = String.format(messageFormat, displayNameExpected, displayNameActual);
+		Assert.assertEquals(displayNameActual, displayNameExpected, messageError);
+		
+		iconNameActual = resourcesPage.getIcon();
+		messageError = String.format(messageFormat, iconNameExpected, iconNameActual);
+		Assert.assertTrue(iconNameActual.contains(iconNameExpected));
+		
+		descriptionActual = resourcesPage.getDescription();
+		messageError = String.format(messageFormat, descriptionExpected, descriptionActual);
+		Assert.assertTrue(descriptionActual.contains(descriptionExpected));
+		
 		resourcesPage.SignOut();
 	}
 	
