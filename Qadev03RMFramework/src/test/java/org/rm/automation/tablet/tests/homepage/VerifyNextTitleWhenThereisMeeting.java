@@ -41,6 +41,8 @@ public class VerifyNextTitleWhenThereisMeeting extends TestBaseSetup {
 		login = new LoginPage(driver);
  		homepage = login.access(roomName);
  		nextHomePage = new NextHomePanel(homepage.getDriver());
+ 		nextHomePage.waitForMainPanel();
+ 		
  		String actual = nextHomePage.getTitleNext();
 		Assert.assertEquals(actual, meetingTitle);
 	}

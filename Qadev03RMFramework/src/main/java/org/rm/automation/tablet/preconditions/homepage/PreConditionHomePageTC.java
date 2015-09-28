@@ -71,10 +71,12 @@ public class PreConditionHomePageTC {
 	 */
 	public static String createAfterMeeting(String roomName, String meetingT){
 		try {
-			MeetingsRequests.postMeeting(roomName, meetingT, startTimeAfter, endTime);
+			String startTime = RoomManagerTime.addMinutesToCurrentTime(10);
+			String endTime = RoomManagerTime.addMinutesToCurrentTime(12);
+			MeetingsRequests.postMeeting(roomName, meetingT, startTime, endTime);
 			return MeetingsRequests.getMeetingId(meetingT, roomName);
 		}catch(Exception e){
-			
+			e.printStackTrace();
 		}
 		return null;
 	}

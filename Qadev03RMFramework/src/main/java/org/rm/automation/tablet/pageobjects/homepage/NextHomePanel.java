@@ -8,6 +8,8 @@ import org.rm.automation.utils.Waiters;
 
 public class NextHomePanel extends HomePage {
 	
+	@FindBy(xpath = "//div[@class='tile-next meeting']")
+	protected WebElement mainPanel;
 	
 	@FindBy(xpath = "//div[@ng-bind='next._title']")
 	WebElement tittlenext;
@@ -28,6 +30,10 @@ public class NextHomePanel extends HomePage {
 	public NextHomePanel(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
+	}
+	
+	public void waitForMainPanel(){
+		Waiters.WaitByVisibilityOfWebElement(mainPanel, driver);
 	}
 	
 	public String getTitleNext(){

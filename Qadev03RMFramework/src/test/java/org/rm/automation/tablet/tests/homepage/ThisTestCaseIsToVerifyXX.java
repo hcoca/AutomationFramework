@@ -29,6 +29,7 @@ import org.rm.automation.tablet.pageobjects.homepage.NowPanel;
 import org.rm.automation.tablet.pageobjects.homepage.SchedulePanel;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.tablet.pageobjects.meetings.TimeLinePanel;
+import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.MeetingManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.RoomManagerTime;
@@ -38,12 +39,13 @@ import org.rm.automation.utils.api.MeetingsRequests;
 public class ThisTestCaseIsToVerifyXX {
 	
 	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{
-//		MeetingManager.createRunninMeeting("room571", "Meet me", 1, 3);
-		MeetingsRequests.deleteMeeting("56086c314e93cd2c13d0e943", "room571");
-		List<JSONObject> list = MeetingsRequests.getRoomMeetings("room571");
-		for(JSONObject json : list){
-			System.out.println(json);
-		}
+		String meetingId = PreConditionHomePageTC.createAfterMeeting("room571", "EXECUTOR");
+//		System.out.println(meetingId);
+//		MeetingsRequests.deleteMeeting("5609021be7f18918243aa731", "room571");
+//		List<JSONObject> list = MeetingsRequests.getRoomMeetings("room571");
+//		for(JSONObject json : list){
+//			System.out.println(json);
+//		}
 	}
 	
 //	public static void main(String[] ar){
