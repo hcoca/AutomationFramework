@@ -2,7 +2,6 @@ package org.rm.automation.tablet.tests.meetings;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.*;
-import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.*;
 
@@ -28,10 +27,10 @@ public class VerifySubjectCanBeUpdated extends TestBaseSetup {
 	private String port = settings.getProperty("port");
 	String subject = "New Meeting";
 	String newSubject = "Meeting Updated";
-	//private String startTime = RoomManagerTime.substractMinutes(0);
-	//private String endTime = RoomManagerTime.addMinutes(10);
-	private String startTime = "2015-09-24T22:24:33.000Z";
-	private String endTime = "2015-09-24T22:54:33.000Z";
+	private String startTime = RoomManagerTime.substractMinutesToCurrentTime(0);
+	private String endTime = RoomManagerTime.addminutesCurrentTime(20);
+	//private String startTime = "2015-09-24T22:24:33.000Z";
+	//private String endTime = "2015-09-24T22:54:33.000Z";
 	@BeforeMethod
  	public void setup(){
 		try{
@@ -46,7 +45,7 @@ public class VerifySubjectCanBeUpdated extends TestBaseSetup {
  	}
 	@Test
 	public void testVerifySubjectCanBeUpdated(){
-		LogManager.info("Executing: Verify Subject can be updated test case");
+		String message = "Verifying Subject of a meeting can be updated";
 		
 		loginPage = new LoginPage(driver);
  		homePage = loginPage.access(serviceURL, userName, password, roomName);
@@ -56,7 +55,7 @@ public class VerifySubjectCanBeUpdated extends TestBaseSetup {
  					.updateMeeting()
  					.confirmUser(password)
  					.saveMeeting();
- 		Assert.assertTrue(meetingsPage.verifyMeetingWasUpdated());
+ 		Assert.assertTrue(meetingsPage.verifyMeetingWasUpdated(), message);
 
 	}
 	@AfterMethod 
