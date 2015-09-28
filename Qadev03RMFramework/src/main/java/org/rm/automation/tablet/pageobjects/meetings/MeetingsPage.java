@@ -45,43 +45,43 @@ public class MeetingsPage extends TabletPage{
 	private String url = "http://"+server+":"+port;
 	
 	@FindBy	(id=txtboxOrganizer)
-	WebElement tbOrganizer;	
+	protected WebElement tbOrganizer;	
 	@FindBy	(id=txtboxSubject)
-	WebElement tbSubject;	
+	protected WebElement tbSubject;	
 	@FindBy(xpath=txtboxAttendees)
-	WebElement tbAttendees;	
+	protected WebElement tbAttendees;	
 	@FindBy	(id=txtboxBody)
-	WebElement tbBody;	
+	protected WebElement tbBody;	
 	@FindBy	(xpath=txtboxStart)
-	WebElement tbStartTime;	
+	protected WebElement tbStartTime;	
 	@FindBy	(xpath=txtboxEnd)
-	WebElement tbEndTime;	
+	protected WebElement tbEndTime;	
 	@FindBy	(xpath=bttnCreate)
-	WebElement btnCreate;	
+	protected WebElement btnCreate;	
 	@FindBy	(xpath=txtboxPassword)
-	WebElement tbPassword;	
+	protected WebElement tbPassword;	
 	@FindBy	(xpath=bttnSave)
-	WebElement btnConfirmMeeting;	
+	protected WebElement btnConfirmMeeting;	
 	@FindBy	(xpath=bttnSaveDelete)
-	WebElement btnConfirmDeleteMeeting;	
+	protected WebElement btnConfirmDeleteMeeting;	
 	@FindBy	(xpath=dvMeeting)
-	WebElement divMeeting;	
+	protected WebElement divMeeting;	
 	@FindBy	(xpath=bttnUpdate)
-	WebElement btnUpdate;
+	protected WebElement btnUpdate;
 	@FindBy	(xpath=bttnRemove)
-	WebElement btnRemove;	
+	protected WebElement btnRemove;	
 	@FindBy	(xpath=dvAdvice)
-	WebElement divMeetingAdvice;	
+	protected WebElement divMeetingAdvice;	
 	@FindBy	(xpath=dvRoomName)
-	WebElement divRoomName;
+	protected WebElement divRoomName;
 	@FindBy(xpath=icnRemoveAttendee)
-	WebElement iconRemoveAttendee;
+	protected WebElement iconRemoveAttendee;
 	@FindBy(xpath=spnAttendee)
-	WebElement spanAttendee;
+	protected WebElement spanAttendee;
 	@FindBy(xpath=spnTime)
-	WebElement spanTime;
+	protected WebElement spanTime;
 	@FindBy(xpath=spnScheduleTitle)
-	WebElement spanSchedulePageTitle;
+	protected WebElement spanSchedulePageTitle;
 	
 	private WebDriver driver;
 	

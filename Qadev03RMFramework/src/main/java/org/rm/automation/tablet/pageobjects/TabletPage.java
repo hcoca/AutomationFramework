@@ -21,6 +21,7 @@ public class TabletPage {
 	protected final String icnSchedule="go-schedule";
 	
 	protected WebDriver driver;
+
 	@FindBy(css=bttnSchedule)
 	WebElement scheduleButton;
 	@FindBy(css=bttnSearch)
@@ -91,5 +92,9 @@ public class TabletPage {
 		if(scheduleCommonButton.isDisplayed())
 			scheduleCommonButton.click();
 		return new MeetingsPage(driver);
-	}	
+	}
+	
+	public WebDriver getDriver() {
+		return driver;
+	}
 }

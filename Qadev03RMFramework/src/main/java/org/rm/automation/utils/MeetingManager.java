@@ -18,27 +18,63 @@ public class MeetingManager {
 	private static long meetingEndTime = 0;
 	private static Date date;
 	
+	/**
+	 * @param roomName
+	 * @param meetingTitle
+	 * @param behindMinute
+	 * @param aheadMinute
+	 * 
+	 * Creates a meeting that's actually running, set between the behindMinute and aheadMinute values. 
+	 */
 	public static void createRunninMeeting(String roomName, String meetingTitle, int behindMinute, int aheadMinute){
 		date = new Date();
 		long timeInMillisecond = date.getTime();
-		setMeetingCreationTime(timeInMillisecond + ONE_MINUTE_IN_MILLIS);
+		meetingCreationTime = (timeInMillisecond + ONE_MINUTE_IN_MILLIS);
+//		setMeetingCreationTime(timeInMillisecond + ONE_MINUTE_IN_MILLIS);
 		
 		String startTime = RoomManagerTime.substractMinutesToCurrentTime(behindMinute);
-		setMeetingStartTime(timeInMillisecond - (behindMinute * ONE_MINUTE_IN_MILLIS));
+		meetingStartTime = (timeInMillisecond - (behindMinute * ONE_MINUTE_IN_MILLIS));
+//		setMeetingStartTime(timeInMillisecond - (behindMinute * ONE_MINUTE_IN_MILLIS));
 		
 		String endTime = RoomManagerTime.addMinutesToCurrentTime(aheadMinute);
-		setMeetingEndTime(timeInMillisecond + (aheadMinute * ONE_MINUTE_IN_MILLIS));
+		meetingEndTime = (timeInMillisecond + (aheadMinute * ONE_MINUTE_IN_MILLIS));
+//		setMeetingEndTime(timeInMillisecond + (aheadMinute * ONE_MINUTE_IN_MILLIS));
 		
 		try {
 			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
 		} catch (UnsupportedOperationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * @param roomName
+	 * @param meetingTitle
+	 * 
+	 * Creates a meeting in the past, just 1 hour before the actual current time.
+	 */
+	public static void createPastMeeting(String roomName, String meetingTitle){
+		date = new Date();
+		long timeInMillisecond = date.getTime();
+		meetingCreationTime = (timeInMillisecond + ONE_MINUTE_IN_MILLIS);
+		
+		String startTime = RoomManagerTime.substractMinutesToCurrentTime(300);
+		meetingStartTime = (timeInMillisecond - (300 * ONE_MINUTE_IN_MILLIS));
+		
+		String endTime = RoomManagerTime.substractMinutesToCurrentTime(270);
+		meetingEndTime = (timeInMillisecond - (240 * ONE_MINUTE_IN_MILLIS));
+		
+		try {
+			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
+		} catch (UnsupportedOperationException e) {
+			e.printStackTrace();
+		} catch (ParseException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
