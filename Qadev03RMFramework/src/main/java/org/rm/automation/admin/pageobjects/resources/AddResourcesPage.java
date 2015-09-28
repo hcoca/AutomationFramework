@@ -3,37 +3,26 @@ package org.rm.automation.admin.pageobjects.resources;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.rm.automation.admin.locators.resources.AddResourcesLocators;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
-import org.testng.Assert;
 
 public class AddResourcesPage {
 	
 	private WebDriver driver;
-	private Actions action;
 	
-	private final String namePath = "(//input[@type='text'])[3]";
-	private final String displayNamePath = "(//input[@type='text'])[4]";
-	private final String savePath = "button.info";
-	private final String descriptionPath = "//textarea";
-	private final String iconPickerPath = "convert";
-	private final String tableIconsPath = "table-icons";
-	
-	@FindBy(xpath=namePath) WebElement nameField;
-	@FindBy(xpath=displayNamePath) WebElement displayNameField;
-	@FindBy(css=savePath) WebElement saveButton;
-	@FindBy(xpath=descriptionPath) WebElement descriptionField;
-	@FindBy(id=iconPickerPath) WebElement iconPickerButton;
-	@FindBy(css=tableIconsPath) WebElement tableIcons;
+	@FindBy(xpath = AddResourcesLocators.namePath) WebElement nameField;
+	@FindBy(xpath = AddResourcesLocators.displayNamePath) WebElement displayNameField;
+	@FindBy(css = AddResourcesLocators.savePath) WebElement saveButton;
+	@FindBy(xpath = AddResourcesLocators.descriptionPath) WebElement descriptionField;
+	@FindBy(id = AddResourcesLocators.iconPickerPath) WebElement iconPickerButton;
+	@FindBy(css = AddResourcesLocators.tableIconsPath) WebElement tableIcons;
 	
 	public AddResourcesPage(WebDriver driver) {
 		this.driver=driver;
-		action = new Actions(driver);
 		PageFactory.initElements(driver, this);
-		
 	}
 	
 	/**
@@ -43,7 +32,7 @@ public class AddResourcesPage {
 	 */
 	public AddResourcesPage setName(String name)
 	{
-		Waiters.WaitByXPath(namePath, driver);
+		Waiters.WaitByXPath(AddResourcesLocators.namePath, driver);
 		
 		nameField.clear();
 		nameField.sendKeys(name);
@@ -79,11 +68,11 @@ public class AddResourcesPage {
 	
 	public AddResourcesPage setIcon(String icon)
 	{
-		Waiters.WaitById(iconPickerPath, driver);
+		Waiters.WaitById(AddResourcesLocators.iconPickerPath, driver);
 		iconPickerButton.click();
 		WebElement el;
 		
-		el = driver.findElement(By.xpath("//button[@value='"+icon+"']"));
+		el = driver.findElement(By.xpath(AddResourcesLocators.iconPath.replace("icon", icon)));
 		el.click();
 		
 		return this;
@@ -102,12 +91,24 @@ public class AddResourcesPage {
 		return new ResourcesPage(driver);
 	}
 	
-	public void VerifyDescriptionResource(String expDescription)
+//	public void VerifyDescriptionResource(String expDescription)
+//	{
+//		Waiters.WaitByXPath(AddResourcesLocators.descriptionPath, driver);
+//		LogManager.info("AddResourcesPage: Verifying the description of the resource");
+//		String description = descriptionField.getAttribute("value");
+//		
+//		Assert.assertEquals(description, expDescription);
+//	}
+	
+	/**
+	 * Get a resource's description
+	 * @return
+	 */
+	public String getDescription()
 	{
-		Waiters.WaitByXPath(descriptionPath, driver);
+		Waiters.WaitByXPath(AddResourcesLocators.descriptionPath, driver);
 		LogManager.info("AddResourcesPage: Verifying the description of the resource");
 		String description = descriptionField.getAttribute("value");
-		
-		Assert.assertEquals(description, expDescription);
+		return description;
 	}
 }
