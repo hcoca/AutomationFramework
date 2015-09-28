@@ -22,10 +22,14 @@ public class DeleteResource extends TestBaseSetup{
 	private String username = settings.getProperty("username");
 	private String password = settings.getProperty("password");
 	
-	String name = StringGenerator.getString();
-	String customName = StringGenerator.getString();
-	String description = StringGenerator.getString();
-	String icon = "fa fa-gift";
+	private String name = StringGenerator.getString();
+	private String customName = StringGenerator.getString();
+	private String description = StringGenerator.getString();
+	private String icon = "fa fa-gift";
+	private String nameOther = StringGenerator.getString();
+	private String customNameOther = StringGenerator.getString();
+	private String descriptionOther = StringGenerator.getString();
+	private String iconOther = "fa fa-gift";
 	
 	private LoginPage loginPage;	
 	private HomePage homePage;
@@ -42,7 +46,8 @@ public class DeleteResource extends TestBaseSetup{
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
 	{
-		LogManager.info("UpdateName: Executing Precondition, creating a resource");
+		LogManager.info("DeleteResource: Executing Precondition, creating a resource");
+		ResourcesRequests.postResource(nameOther, customNameOther, iconOther, descriptionOther);
 		ResourcesRequests.postResource(name, customName, icon, description);
 	}
 	
@@ -65,5 +70,14 @@ public class DeleteResource extends TestBaseSetup{
 		Assert.assertTrue(actual, messageError);
 
 		resourcesPage.SignOut();
+	}
+	
+	@AfterMethod
+	public void Postconditions()
+	{
+		String id = "";
+		id = ResourcesRequests.getResourceId(nameOther);
+		ResourcesRequests.deleteResource(id);
+		LogManager.info("DeleteResource: Executing Postcondition, removing resource created");
 	}
 }

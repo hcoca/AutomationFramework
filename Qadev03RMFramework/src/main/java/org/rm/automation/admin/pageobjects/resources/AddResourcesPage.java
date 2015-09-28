@@ -78,7 +78,6 @@ public class AddResourcesPage {
 		return this;
 	}
 	
-	
 	/**
 	 * Method to click on the Save button
 	 * @return
@@ -91,15 +90,6 @@ public class AddResourcesPage {
 		return new ResourcesPage(driver);
 	}
 	
-//	public void VerifyDescriptionResource(String expDescription)
-//	{
-//		Waiters.WaitByXPath(AddResourcesLocators.descriptionPath, driver);
-//		LogManager.info("AddResourcesPage: Verifying the description of the resource");
-//		String description = descriptionField.getAttribute("value");
-//		
-//		Assert.assertEquals(description, expDescription);
-//	}
-	
 	/**
 	 * Get a resource's description
 	 * @return
@@ -107,7 +97,7 @@ public class AddResourcesPage {
 	public String getDescription()
 	{
 		Waiters.WaitByXPath(AddResourcesLocators.descriptionPath, driver);
-		LogManager.info("AddResourcesPage: Verifying the description of the resource");
+		LogManager.info("AddResourcesPage: Getting resource's description");
 		String description = descriptionField.getAttribute("value");
 		return description;
 	}

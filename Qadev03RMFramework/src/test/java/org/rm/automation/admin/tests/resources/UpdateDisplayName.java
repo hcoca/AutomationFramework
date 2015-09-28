@@ -3,12 +3,15 @@ package org.rm.automation.admin.tests.resources;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
+import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ResourcesRequests;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class UpdateDisplayName extends TestBaseSetup{
@@ -24,6 +27,13 @@ public class UpdateDisplayName extends TestBaseSetup{
 	private String icon = "fa fa-gift";
 	
 	private LoginPage loginPage;
+	private HomePage homePage;
+	private ResourcesPage resourcesPage;
+	
+	private String messageFormat = "Expected <%s> but found <%s>";
+	private String messageError;
+	private String displayNameExpected = displayNameNew;
+	private String displayNameActual;
 	
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
@@ -36,14 +46,18 @@ public class UpdateDisplayName extends TestBaseSetup{
 	public void testUpdateDisplayName()
 	{
 		LogManager.info("UpdateDisplayName: Executing Test Case");
-		loginPage = new LoginPage(driver)
-		  		.SignIn(username, password)
-				.SelectResourcesOption()
+		loginPage = new LoginPage(driver);
+  		homePage = loginPage.SignIn(username, password);
+		resourcesPage = homePage.SelectResourcesOption()
 				.UpdateResource()
 				.setDisplayName(displayNameNew)
-				.Save()
-				.VerifyResourceElementWasUpdated(displayNameNew, 2)
-				.SignOut();
+				.Save();
+		
+		displayNameActual = resourcesPage.getDisplayName();
+		messageError = String.format(messageFormat, displayNameExpected, displayNameActual);
+		Assert.assertEquals(displayNameActual, displayNameExpected, messageError);
+		
+		resourcesPage.SignOut();
 	}
 	
 	@AfterMethod
