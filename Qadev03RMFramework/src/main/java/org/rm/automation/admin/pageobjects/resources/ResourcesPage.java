@@ -8,7 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.rm.automation.admin.locators.resources.ResourcesLocators;
 import org.rm.automation.admin.pageobjects.HomePage;
+import org.rm.automation.tablet.locators.search.SearchLocators;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
 
@@ -19,19 +21,11 @@ public class ResourcesPage extends HomePage{
 	private Actions action;
 	private WebElement element;
 	
-	private final String addPath = "//div/div/button";
-	private final String removePath = "btnRemove";
-	private final String searchPath = "//input[@type='text']";
-	
 	private String checkboxPath = "input.ngSelectionCheckbox";
-	private String nameColumnPath = "div.ngCell.centeredColumn.col2.colt2";
-	private String displayNameColumnPath = "div.ngCell.centeredColumn.col3.colt3";
-	private String iconColumnPath = "div.ngCell.centeredColumn.col1.colt1";
 	
-	
-	@FindBy(xpath=addPath) WebElement addButton;
-	@FindBy(id=removePath) WebElement removeButton;
-	@FindBy(xpath=searchPath) WebElement searchTextbox;
+	@FindBy(xpath = ResourcesLocators.addPath) WebElement addButton;
+	@FindBy(id = ResourcesLocators.removePath) WebElement removeButton;
+	@FindBy(xpath = ResourcesLocators.searchPath) WebElement searchTextbox;
 
 	public ResourcesPage(WebDriver driver) {
 		super(driver);
@@ -45,7 +39,7 @@ public class ResourcesPage extends HomePage{
 	 */
 	public AddResourcesPage AddResource()
 	{
-		Waiters.WaitByXPath(addPath, driver);
+		Waiters.WaitByXPath(ResourcesLocators.addPath, driver);
 		
 		addButton.click();
 		LogManager.info("ResourcesPage: Click on Add button to create a new resource");
@@ -59,12 +53,14 @@ public class ResourcesPage extends HomePage{
 	 */
 	public ResourcesPage SelectResource()
 	{
-		Waiters.WaitByCss(checkboxPath, driver);
+		Waiters.WaitByCss(ResourcesLocators.checkboxPath, driver);
 		
 		WebElement checkbox;
 		List<WebElement> list = GetListResources();
 		
-		checkbox = list.get(list.size()-1).findElement(By.cssSelector(checkboxPath));
+		checkbox = list
+				.get(list.size()-1)
+				.findElement(By.cssSelector(ResourcesLocators.checkboxPath));
 		LogManager.info("ResourcesPage: Select a resource from the resource's table");
 		checkbox.click();
 		
@@ -103,7 +99,10 @@ public class ResourcesPage extends HomePage{
 		List<WebElement> list = GetListResources();
 		element = list.get(list.size()-1);
 		
-		action.moveToElement(element.findElement(By.cssSelector("div.ng-scope > span.ng-binding"))).doubleClick().build().perform();
+		action
+		.moveToElement(element.findElement(By.cssSelector(ResourcesLocators.resourceDoubleClickPath)))
+		.doubleClick().build().perform();
+		
 		LogManager.info("ResourcesPage: Double click on a resource of the table");
 		return new AddResourcesPage(driver);
 	}
@@ -114,8 +113,8 @@ public class ResourcesPage extends HomePage{
 	 */
 	public List<WebElement> GetListResources()
 	{
-		element = driver.findElement(By.id("resourcesGrid"));
-		List<WebElement> list = element.findElements(By.xpath("//div[@ng-style='rowStyle(row)']"));
+		element = driver.findElement(By.id(ResourcesLocators.resourcesTablePath));
+		List<WebElement> list = element.findElements(By.xpath(ResourcesLocators.rowsPath));
 		
 		return list;
 	}
@@ -134,15 +133,15 @@ public class ResourcesPage extends HomePage{
 		List<WebElement> list = GetListResources();
 		element = list.get(list.size()-1);
 		
-		nameElement = element.findElement(By.cssSelector(nameColumnPath));
+		nameElement = element.findElement(By.cssSelector(ResourcesLocators.nameColumnPath));
 		String name = nameElement.getText().replaceAll("\\s","");
 		
-		displayNameElement = element.findElement(By.cssSelector(displayNameColumnPath));
+		displayNameElement = element.findElement(By.cssSelector(ResourcesLocators.displayNameColumnPath));
 		String displayName = displayNameElement.getText().replaceAll("\\s","");
 		
 		iconElement = element
-				.findElement(By.cssSelector(iconColumnPath))
-				.findElement(By.xpath("div[2]/div/span"));
+				.findElement(By.cssSelector(ResourcesLocators.iconColumnPath))
+				.findElement(By.xpath(ResourcesLocators.iconPath));
 		String iconName = iconElement.getAttribute("class");
 		
 		
@@ -162,7 +161,10 @@ public class ResourcesPage extends HomePage{
 	{
 		VerifyResourceWasCreated(expName, expDisplayName, expIcon);
 		
-		action.moveToElement(element.findElement(By.cssSelector("div.ng-scope > span.ng-binding"))).doubleClick().build().perform();
+		action
+		.moveToElement(element.findElement(By.cssSelector(ResourcesLocators.resourceDoubleClickPath)))
+		.doubleClick().build().perform();
+		
 		AddResourcesPage page = new AddResourcesPage(driver);
 		page.VerifyDescriptionResource(description);
 
@@ -179,7 +181,7 @@ public class ResourcesPage extends HomePage{
 	{
 		LogManager.info("ResourcesPage: Verifying the resource was deleted");
 		
-		Assert.assertTrue(isElementPresent(By.cssSelector(nameColumnPath), expected));
+		Assert.assertTrue(isElementPresent(By.cssSelector(ResourcesLocators.nameColumnPath), expected));
 		
 		return this;
 	}
@@ -199,14 +201,14 @@ public class ResourcesPage extends HomePage{
 		{
 		case 1:
 			LogManager.info("ResourcesPage: Verifying the correct Name of the resource was updated");
-			column = lastRow.findElement(By.cssSelector(nameColumnPath));
+			column = lastRow.findElement(By.cssSelector(ResourcesLocators.nameColumnPath));
 			actual = column.getText().replaceAll("\\s","");
 			
 			Assert.assertEquals(expected, actual);
 			break;
 		case 2:
 			LogManager.info("ResourcesPage: Verifying the correct DisplayName of the resource was updated");
-			column = lastRow.findElement(By.cssSelector(displayNameColumnPath));
+			column = lastRow.findElement(By.cssSelector(ResourcesLocators.displayNameColumnPath));
 			actual = column.getText().replaceAll("\\s","");
 			
 			Assert.assertEquals(expected, actual);
@@ -220,8 +222,8 @@ public class ResourcesPage extends HomePage{
 		case 4:
 			LogManager.info("ResourcesPage: Verifying the correct Icon of the resource was updated");
 			column = lastRow
-					.findElement(By.cssSelector(iconColumnPath))
-					.findElement(By.xpath("div[2]/div/span"));
+					.findElement(By.cssSelector(ResourcesLocators.iconColumnPath))
+					.findElement(By.xpath(ResourcesLocators.iconPath));
 			actual = column.getAttribute("class");
 			Assert.assertTrue(actual.contains(expected));
 
@@ -242,7 +244,7 @@ public class ResourcesPage extends HomePage{
 		WebElement column;
 		String actual;
 		
-		column = lastRow.findElement(By.cssSelector(nameColumnPath));
+		column = lastRow.findElement(By.cssSelector(ResourcesLocators.nameColumnPath));
 		actual = column.getText().replaceAll("\\s","");
 		
 		Assert.assertEquals(1, list.size());

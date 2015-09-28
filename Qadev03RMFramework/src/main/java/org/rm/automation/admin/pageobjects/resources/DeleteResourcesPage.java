@@ -4,15 +4,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.rm.automation.admin.locators.resources.DeleteResourcesLocators;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
 
 public class DeleteResourcesPage {	
-	private WebElement element;
 	private WebDriver driver;
 	
-	private final String removePath = "button.info";
-	@FindBy(css=removePath) WebElement removeButton;
+	@FindBy(css = DeleteResourcesLocators.removePath) WebElement removeButton;
 	
 	public DeleteResourcesPage(WebDriver driver) {
 		this.driver=driver;
@@ -25,7 +24,7 @@ public class DeleteResourcesPage {
 	 */
 	public ResourcesPage Remove()
 	{
-		Waiters.WaitByCss(removePath, driver);
+		Waiters.WaitByCss(DeleteResourcesLocators.removePath, driver);
 		
 		removeButton.click();
 		LogManager.info("DeleteResourcesPage: Click the Remove button");
