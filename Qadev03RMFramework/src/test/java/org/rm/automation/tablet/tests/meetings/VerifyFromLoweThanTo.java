@@ -2,7 +2,6 @@ package org.rm.automation.tablet.tests.meetings;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.*;
-import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.api.*;
@@ -47,7 +46,7 @@ public class VerifyFromLoweThanTo extends TestBaseSetup {
 	public void testVerifyFromLoweThanTo(){
 		String organizer = "Administrator";
 		String subject = "PageObjects Meeting";
-		LogManager.info("Executing: Verify From time is lowe than To time test case");
+		String message = "Verifying an error message is displayed when a meeting is created with From Time higher than To Time value";
 		loginPage = new LoginPage(driver);
  		homePage = loginPage.access(serviceURL, userName, password, roomName);
  		meetingsPage = homePage.selectSchedulePage();
@@ -55,7 +54,7 @@ public class VerifyFromLoweThanTo extends TestBaseSetup {
  					.setSubject(subject)
  					.setDates(startTime, endTime)
 					.confirmMeeting();
- 		Assert.assertTrue(meetingsPage.verifyErrorFromHigherThanToMessage());
+ 		Assert.assertTrue(meetingsPage.verifyErrorFromHigherThanToMessage(), message);
 
 	}
 }
