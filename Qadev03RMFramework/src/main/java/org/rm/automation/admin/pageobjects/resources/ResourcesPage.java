@@ -10,7 +10,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.admin.locators.resources.ResourcesLocators;
 import org.rm.automation.admin.pageobjects.HomePage;
-import org.rm.automation.tablet.locators.search.SearchLocators;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
 
@@ -20,8 +19,6 @@ public class ResourcesPage extends HomePage{
 
 	private Actions action;
 	private WebElement element;
-	
-	private String checkboxPath = "input.ngSelectionCheckbox";
 	
 	@FindBy(xpath = ResourcesLocators.addPath) WebElement addButton;
 	@FindBy(id = ResourcesLocators.removePath) WebElement removeButton;
@@ -33,6 +30,7 @@ public class ResourcesPage extends HomePage{
 		PageFactory.initElements(driver, this);
 	}
 	
+	//***PAGE ACTIONS SECTION***//
 	/**
 	 * Method to select the Add tab
 	 * @return
@@ -107,6 +105,7 @@ public class ResourcesPage extends HomePage{
 		return new AddResourcesPage(driver);
 	}
 	
+	//***GET SECTION***//
 	/**
 	 * Method to get a list of the resources
 	 * @return
@@ -149,6 +148,47 @@ public class ResourcesPage extends HomePage{
 		Assert.assertEquals(expDisplayName, displayName);
 		Assert.assertTrue(iconName.contains(expIcon));
 		return this;
+	}
+	
+	public String getName()
+	{
+		LogManager.info("ResourcesPage: Getting resources's name");
+		WebElement nameElement;
+		
+		List<WebElement> list = GetListResources();
+		element = list.get(list.size()-1);
+		
+		nameElement = element.findElement(By.cssSelector(ResourcesLocators.nameColumnPath));
+		String name = nameElement.getText().replaceAll("\\s","");
+		return name;
+	}
+	
+	public String getDisplayName()
+	{
+		LogManager.info("ResourcesPage: Getting resource's display name");
+		WebElement displayNameElement;
+		
+		List<WebElement> list = GetListResources();
+		element = list.get(list.size()-1);
+		
+		displayNameElement = element.findElement(By.cssSelector(ResourcesLocators.displayNameColumnPath));
+		String displayName = displayNameElement.getText().replaceAll("\\s","");
+		return displayName;
+	}
+	
+	public String getIcon()
+	{
+		LogManager.info("ResourcesPage: Getting resource's icon");
+		WebElement iconElement;
+		
+		List<WebElement> list = GetListResources();
+		element = list.get(list.size()-1);
+		
+		iconElement = element
+				.findElement(By.cssSelector(ResourcesLocators.iconColumnPath))
+				.findElement(By.xpath(ResourcesLocators.iconPath));
+		String iconName = iconElement.getAttribute("class");
+		return iconName;
 	}
 	
 	/**
