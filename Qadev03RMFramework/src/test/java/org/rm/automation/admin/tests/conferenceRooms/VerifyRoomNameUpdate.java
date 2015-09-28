@@ -12,7 +12,9 @@ import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -40,7 +42,7 @@ public class VerifyRoomNameUpdate extends TestBaseSetup{
 	
 	private boolean actualResult;
 	
- 	@BeforeTest
+ 	@BeforeClass
  	public void setup(){
  		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
  		LogManager.info("VerifyRoomNameUpdate: Executing Precondition, getting a room");
@@ -48,7 +50,7 @@ public class VerifyRoomNameUpdate extends TestBaseSetup{
 		roomName = room.get("displayName").toString();
  	}
 	
-	@Test(priority = 2)
+	@Test
 	public void verifyRoomNameUpdate(){
 		LogManager.info("VerifyRoomNameUpdate: Executing Test Case");
 		
@@ -64,7 +66,7 @@ public class VerifyRoomNameUpdate extends TestBaseSetup{
 		AssertJUnit.assertTrue(actualResult);
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void tearDown(){
 		ConferenceRoomsRequests.putRoom(roomId, roomName);
 		LogManager.info("VerifyRoomNameUpdate: Executing Postcondition, updating room name to its original value");

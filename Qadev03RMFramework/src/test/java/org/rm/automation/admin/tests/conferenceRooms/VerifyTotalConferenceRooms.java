@@ -14,6 +14,7 @@ import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
 public class VerifyTotalConferenceRooms extends TestBaseSetup{
@@ -31,14 +32,14 @@ public class VerifyTotalConferenceRooms extends TestBaseSetup{
 	private int expectedResult;
 	private int actualResult;
 	
-	@BeforeTest
+	@BeforeClass
  	public void setup(){
  		List<JSONObject> roomsList = ConferenceRoomsRequests.getRooms();
  		LogManager.info("VerifyTotalConferenceRooms: Executing Precondition, getting all rooms");
  		numberOfRooms = roomsList.size();
  	}
 	
-	@Test(priority = 2)
+	@Test
 	public void verifyTotalConferenceRooms(){
 		LogManager.info("VerifyTotalConferenceRooms: Executing Test Case");
 		

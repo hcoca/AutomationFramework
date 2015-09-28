@@ -34,7 +34,7 @@ public class AddServer extends TestBaseSetup {
     HomePage objHomePage;
     AddEmailServersPage addser;
     EmailServersPage emailserver;
-  @Test(priority = 1)
+  @Test
   public void TestAddServer() throws InterruptedException {
 	  
 	  try {

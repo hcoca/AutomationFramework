@@ -38,7 +38,7 @@ public class VerifyRoomColumnBtn extends TestBaseSetup{
 ////		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //	}
 	
-	@Test(priority = 2)
+	@Test
 	public void verifyRoomColumnBtn(){
 		objLogin = new LoginPage(driver);
 		objLogin.SignIn(userName, password);

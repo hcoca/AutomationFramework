@@ -11,6 +11,7 @@ import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.AssertJUnit;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -35,14 +36,14 @@ public class VerifyRoomName extends TestBaseSetup{
 	
 	private boolean actualResult;
 	
- 	@BeforeTest
+ 	@BeforeClass
  	public void setup(){
  		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
  		LogManager.info("VerifyRoomName: Executing Precondition, getting a room");
 		roomName =  room.get("displayName").toString();
  	}
 	
-	@Test(priority = 2)
+	@Test
 	public void verifyRoomName(){
 		LogManager.info("VerifyRoomName: Executing Test Case");
 		

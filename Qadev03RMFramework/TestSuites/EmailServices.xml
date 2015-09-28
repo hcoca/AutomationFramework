@@ -5,8 +5,8 @@
  <test name="Email Services Acceptance Test cases">		
     <classes>     		
     
-      <!-- <class name="org.rm.automation.admin.tests.emailServices.RemoveServer"/>		
-      <class name="org.rm.automation.admin.tests.emailServices.AddServer"/> -->		
+      <class name="org.rm.automation.admin.tests.emailServices.RemoveServer"/>		
+      <class name="org.rm.automation.admin.tests.emailServices.AddServer"/> 	
 		
     </classes>		
   </test> <!-- Test -->  		

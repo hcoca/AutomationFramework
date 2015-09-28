@@ -15,7 +15,7 @@ import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import junit.framework.Assert;
@@ -40,7 +40,7 @@ public class VerifyEmailroomIsCorrectly extends TestBaseSetup{
 	private String password = settings.getProperty("password");
 	
 	
- 	@BeforeTest
+ 	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
 		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
 		roomName = allRooms.get(0).get("displayName").toString();

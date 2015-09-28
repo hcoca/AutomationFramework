@@ -15,7 +15,9 @@ import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.rm.automation.utils.api.ResourcesRequests;
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -44,7 +46,7 @@ public class VerifyResourceAssociatedToRoom extends TestBaseSetup{
 	private boolean actualJSONResult;
 	private boolean actualResult;
 
-	@BeforeTest
+	@BeforeClass
 	public void setUp(){
 		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
 		LogManager.info("VerifyResourceAssociatedToRoom: Executing Precondition, getting a room");
@@ -76,7 +78,7 @@ public class VerifyResourceAssociatedToRoom extends TestBaseSetup{
 		AssertJUnit.assertTrue(actualResult);
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void tearDown(){
 		ResourcesRequests.deleteResource(resourceId);
 		LogManager.info("VerifyResourceAssociatedToRoom: Executing Postcondition, removing resource");
