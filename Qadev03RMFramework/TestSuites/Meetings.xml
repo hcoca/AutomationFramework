@@ -11,7 +11,12 @@
       <class name="org.rm.automation.tablet.tests.meetings.VerifyEndTimeCanBeUpdated"/>
       <class name="org.rm.automation.tablet.tests.meetings.VerifyFromLoweThanTo"/>
       <class name="org.rm.automation.tablet.tests.meetings.VerifyStartTimeCanBeUpdated"/>
-      <class name="org.rm.automation.tablet.tests.meetings.VerifySubjectCanBeUpdated"/>	
+      <class name="org.rm.automation.tablet.tests.meetings.VerifyEndTimeAfterDragMeetingIconImage"/>
+      <class name="org.rm.automation.tablet.tests.meetings.VerifyEndTimeAfterMoveMeetingIconImage"/>
+      <class name="org.rm.automation.tablet.tests.meetings.VerifyStartTimeAfterDragMeetingIconImage"/>
+      <class name="org.rm.automation.tablet.tests.meetings.VerifyStartTimeAfterMoveMeetingIconImage"/>
+      <class name="org.rm.automation.tablet.tests.meetings.VerifySubjectAfterDragMeetingIconImage"/>
+      <class name="org.rm.automation.tablet.tests.meetings.VerifySubjectAfterMoveMeetingIconImage"/>	
     </classes>		
   </test> <!-- Test -->  		
 </suite> <!-- Suite --> 
