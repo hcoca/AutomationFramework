@@ -32,8 +32,6 @@ public class RoomInfoPage extends ConferenceRoomCommonPage{
 	
 	public RoomInfoPage setCode(String newCode){
 		Waiters.WaitByVisibilityOfWebElement(codeInput, driver);
-//		(new WebDriverWait(super.driver, 20))
-//		.until(ExpectedConditions.visibilityOf(codeInput));
 		codeInput.clear();
 		
 		codeInput.sendKeys(newCode);
@@ -48,8 +46,6 @@ public class RoomInfoPage extends ConferenceRoomCommonPage{
 	
 	public RoomInfoPage setDisplayName(String newDisplayName){
 		Waiters.WaitByVisibilityOfWebElement(displayName, driver);
-//		(new WebDriverWait(super.driver, 20))
-//		.until(ExpectedConditions.visibilityOf(displayName));
 		displayName.clear();
 		
 		displayName.sendKeys(newDisplayName);
@@ -59,8 +55,6 @@ public class RoomInfoPage extends ConferenceRoomCommonPage{
 	
 	public RoomInfoPage clickPowerOnBtn(){
 		Waiters.WaitByVisibilityOfWebElement(powerOnBtn, driver);
-//		(new WebDriverWait(super.driver, 20))
-//		.until(ExpectedConditions.visibilityOf(powerOnBtn));
 		powerOnBtn.click();
 		
 		return this;
@@ -68,8 +62,6 @@ public class RoomInfoPage extends ConferenceRoomCommonPage{
 	
 	public RoomInfoPage clickPowerOffBtn(){
 		Waiters.WaitByVisibilityOfWebElement(powerOffBtn, driver);
-//		(new WebDriverWait(super.driver, 20))
-//		.until(ExpectedConditions.visibilityOf(powerOffBtn));
 		powerOffBtn.click();
 		
 		return this;
@@ -77,8 +69,6 @@ public class RoomInfoPage extends ConferenceRoomCommonPage{
 	
 	public ConferenceRoomsPage clickSaveBtn(){
 		Waiters.WaitByVisibilityOfWebElement(saveBtn, driver);
-//		(new WebDriverWait(super.driver, 20))
-//		.until(ExpectedConditions.visibilityOf(saveBtn));
 		saveBtn.click();
 		
 		return new ConferenceRoomsPage(driver);
@@ -86,8 +76,6 @@ public class RoomInfoPage extends ConferenceRoomCommonPage{
 
 	public RoomInfoPage setCapacity(String updatedCapacity) {
 		Waiters.WaitByVisibilityOfWebElement(capacityInput, driver);
-//		(new WebDriverWait(super.driver, 20))
-//		.until(ExpectedConditions.visibilityOf(capacityInput));
 		capacityInput.clear();
 		
 		capacityInput.sendKeys(updatedCapacity);

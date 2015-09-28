@@ -26,17 +26,13 @@ public class ResourceAssociationPage extends ConferenceRoomCommonPage{
 	
 	public String getAvailablelabel(){
 		Waiters.WaitByVisibilityOfWebElement(availableLabel, driver);
-//		(new WebDriverWait(driver, 20))
-//			.until(ExpectedConditions.visibilityOf(availableLabel));
 		
 		return availableLabel.getText();
 	}
 	
 	public List<WebElement> getAvailableResources(){
 		Waiters.WaitByVisibilityOfWebElement(availableResourcesContainer, driver);
-//		(new WebDriverWait(driver, 20))
-//		.until(ExpectedConditions.visibilityOf(availableResourcesContainer));
-		List<WebElement> list = availableResourcesContainer.findElements(By.xpath("//div[@ng-repeat='availableResource in availableResources']"));
+		List<WebElement> list = availableResourcesContainer.findElements(By.xpath(ResourceAssociationLocators.AvailableResourceLocator));
 		
 		return list;
 	}
@@ -47,10 +43,10 @@ public class ResourceAssociationPage extends ConferenceRoomCommonPage{
 		List<WebElement> list = this.getAvailableResources();
 		for(WebElement webElement : list){
 			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
-			WebElement resourceAvailablelabel = webElement.findElement(By.xpath(".//span[@class='ng-binding']"));
+			WebElement resourceAvailablelabel = webElement.findElement(By.xpath(ResourceAssociationLocators.ResourceAvailableLocator));
 			Waiters.WaitByVisibilityOfWebElement(resourceAvailablelabel, driver);
 			if(resourceAvailablelabel.getText().equals(resourceAssociatedName)){
-				WebElement resourceAvailableButton = webElement.findElement(By.xpath(".//button[@class='btn-clear']"));
+				WebElement resourceAvailableButton = webElement.findElement(By.xpath(ResourceAssociationLocators.ResourceAvailableButtonLocator));
 				Waiters.WaitByVisibilityOfWebElement(resourceAvailableButton, driver);
 				resourceAvailableButton.click();
 				res = this;
@@ -63,8 +59,6 @@ public class ResourceAssociationPage extends ConferenceRoomCommonPage{
 
 	public ConferenceRoomsPage clickSaveButton(){
 		Waiters.WaitByVisibilityOfWebElement(saveButton, driver);
-//		saveButton = (new WebDriverWait(driver, 20))
-//				  .until(ExpectedConditions.visibilityOf(saveButton));
 		saveButton.click();
 		
 		return new ConferenceRoomsPage(driver);

@@ -5,6 +5,7 @@ import java.util.Properties;
 
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
+import org.rm.automation.admin.pageobjects.resources.DeleteResourcesPage;
 import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
@@ -12,51 +13,61 @@ import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ResourcesRequests;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
-public class UpdateName extends TestBaseSetup{
+public class DeleteResourceAnother extends TestBaseSetup{
+	
 	Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
 	private String username = settings.getProperty("username");
 	private String password = settings.getProperty("password");
 	
-	private String nameNew = StringGenerator.getString();
 	private String name = StringGenerator.getString();
 	private String customName = StringGenerator.getString();
 	private String description = StringGenerator.getString();
 	private String icon = "fa fa-gift";
+	private String nameOther = StringGenerator.getString();
+	private String customNameOther = StringGenerator.getString();
+	private String descriptionOther = StringGenerator.getString();
+	private String iconOther = "fa fa-gift";
 	
-	private LoginPage loginPage;
+	private LoginPage loginPage;	
 	private HomePage homePage;
 	private ResourcesPage resourcesPage;
+	private DeleteResourcesPage deleteResourcesPage;
 	
 	private String messageFormat = "Expected <%s> but found <%s>";
 	private String messageError;
-	private String nameExpected = nameNew;
-	private String nameActual;
+	private String nameExpected = name;
+	private boolean actual;
+	private boolean expected = true;
 	
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
 	{
-		LogManager.info("UpdateName: Executing Precondition, creating a resource");
+		LogManager.info("DeleteResourceAnother: Executing Precondition, creating a resource");
+		ResourcesRequests.postResource(nameOther, customNameOther, iconOther, descriptionOther);
 		ResourcesRequests.postResource(name, customName, icon, description);
 	}
 	
 	@Test
-	public void testUpdateName()
+	public void testDeleteResource()
 	{
-		LogManager.info("UpdateName: Executing Test Case");
+		LogManager.info("DeleteResourceAnother: Executing Test Case");
+		
 		loginPage = new LoginPage(driver);
   		homePage = loginPage.SignIn(username, password);
-		resourcesPage = homePage.SelectResourcesOption()
-				.UpdateResource()
-				.setName(nameNew)
-				.Save();
+  		resourcesPage = homePage.SelectResourcesOption();
+  		deleteResourcesPage = resourcesPage.SelectResource()
+				.RemoveResource();
+		resourcesPage = deleteResourcesPage.Remove();
 		
-		nameActual = resourcesPage.getName();
-		messageError = String.format(messageFormat, nameExpected, nameActual);
-		Assert.assertEquals(nameActual, nameExpected, messageError);
-		
+		actual = resourcesPage.isResourceDeleted(nameExpected);
+		messageError = String.format(messageFormat, expected, actual);
+		Assert.assertTrue(actual, messageError);
+
 		resourcesPage.SignOut();
 	}
 	
@@ -64,8 +75,8 @@ public class UpdateName extends TestBaseSetup{
 	public void Postconditions()
 	{
 		String id = "";
-		id = ResourcesRequests.getResourceId(nameNew);
+		id = ResourcesRequests.getResourceId(nameOther);
 		ResourcesRequests.deleteResource(id);
-		LogManager.info("UpdateName: Executing Postcondition, removing resource created");
+		LogManager.info("DeleteResourceAnother: Executing Postcondition, removing resource created");
 	}
 }

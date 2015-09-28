@@ -46,7 +46,7 @@ public class VerifyRoomColumnBtn extends TestBaseSetup{
 		objHomePage.SelectRoomsOption();
 		objConferenceRooms = new ConferenceRoomsPage(driver);
 
-		WebElement roomColumnBtn = objConferenceRooms.roomColumnBtn;
+		WebElement roomColumnBtn = objConferenceRooms.getRoomColumnBtn();
 		AssertJUnit.assertTrue(roomColumnBtn.isDisplayed());
 	}
 	

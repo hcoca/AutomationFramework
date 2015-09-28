@@ -50,7 +50,7 @@ public class SearchByRoomName extends TestBaseSetup {
 	}
 	
 	@Test
-	public void testSearchMeetingByRoom()
+	public void testSearchByRoomName()
 	{
 		LogManager.info("SearchByRoomName: Executing Test Case");
 

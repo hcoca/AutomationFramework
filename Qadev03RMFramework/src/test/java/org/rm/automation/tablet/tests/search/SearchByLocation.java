@@ -62,7 +62,7 @@ public class SearchByLocation extends TestBaseSetup {
 	}
 	
 	@Test
-	public void testSearchByCapacity()
+	public void testSearchByLocation()
 	{
 		LogManager.info("SearchByLocation: Executing Test Case");
 

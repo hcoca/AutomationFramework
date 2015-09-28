@@ -4,29 +4,26 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.rm.automation.tablet.locators.homepage.NextHomePanelLocators;
 import org.rm.automation.utils.Waiters;
 
 public class NextHomePanel extends HomePage {
 	
-	@FindBy(xpath = "//div[@class='tile-next meeting']")
+	@FindBy(xpath = NextHomePanelLocators.MainPanelLocator)
 	protected WebElement mainPanel;
 	
-	@FindBy(xpath = "//div[@ng-bind='next._title']")
+	@FindBy(xpath = NextHomePanelLocators.TitleNextLocator)
 	WebElement tittlenext;
 	
-	@FindBy(xpath = "//div[@ng-bind='next._organizer']")
+	@FindBy(xpath = NextHomePanelLocators.OrganizerNextLocator)
 	WebElement organizerNext;
 	
-	@FindBy(xpath = "//div[4]/div/div/span")
+	@FindBy(xpath = NextHomePanelLocators.TimeNextStartLocator)
 	WebElement timenextStar;
-	////div[4]/div/div/span
-	//span[@ng-bind='next._start | date:"+"H:mm"+"']
 	
-	
-	@FindBy(xpath = "//span[3]")
+	@FindBy(xpath = NextHomePanelLocators.TimeNextEndLocator)
 	WebElement timeNextEnd;
-	//span[3]
-	//span[ng-bind='next._end | date:"+"H:mm"+"']
+
 	public NextHomePanel(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
