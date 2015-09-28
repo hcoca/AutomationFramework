@@ -43,7 +43,7 @@ public class TimeLinePanel extends MeetingsPage{
 				
 				Actions builder = new Actions(driver); 
 				Action dragAndDrop = builder.clickAndHold(dragger)
-						.moveByOffset(/**(dragger.getLocation().x - currentTimeMark.getLocation().x)/4**/ -50, dragger.getLocation().y)
+						.moveByOffset(/**(dragger.getLocation().x - currentTimeMark.getLocation().x)/4**/ -100, dragger.getLocation().y)
 						.release(dragger)
 						.build();
 				dragAndDrop.perform();

@@ -45,7 +45,7 @@ public class VerifyEndTimeAfterMoveMeetingIconImage extends TestBaseSetup {
  	@BeforeClass
  	public void setup(){
 		roomName = PreConditionMeetings.getRoomName();
-		meetingId = PreConditionMeetings.createPastMeeting(roomName, meetingTitle);
+		meetingId = PreConditionMeetings.CreateMeetingInAfternoon(roomName, meetingTitle);
 		userPassword = PreConditionMeetings.getUserPassword();
  	}
  	

@@ -43,24 +43,24 @@ public class PreConditionMeetings {
 	
 	private static String getStarMeetingafternoon(){
 	      Calendar calendar = Calendar.getInstance();
-	      calendar.set(Calendar.HOUR, 13);
-	      calendar.set(Calendar.MINUTE, 0);
+	      calendar.set(Calendar.HOUR_OF_DAY ,13);
+	      calendar.set(Calendar.MINUTE, 00);
 	      return RoomManagerTime.returnFormatRoomM(calendar.getTime());
-	}
+		}
 		
 	private static String getEndMeetingafternoon(){
 	      Calendar calendar = Calendar.getInstance();
-	      calendar.set(Calendar.HOUR, 14);
-	      calendar.set(Calendar.MINUTE, 0);
+	      calendar.set(Calendar.HOUR_OF_DAY, 14);
+	      calendar.set(Calendar.MINUTE, 00);
 	      return RoomManagerTime.returnFormatRoomM(calendar.getTime());
 	}
 		
-		/**
-		 * @return meeting Id
-		 * 
-		 * this method created a meeting in the afternoon between 13:00 - 14:00
-		 * 
-		 */
+	/**
+	 * @return meeting Id
+	 * 
+	 * this method created a meeting in the afternoon between 13:00 - 14:00
+	 * 
+	 */
 	public static String CreateMeetingInAfternoon(String roomName, String meetingTitle){
 		try {
 			MeetingsRequests.postMeeting(roomName, meetingTitle, getStarMeetingafternoon(), getEndMeetingafternoon());
