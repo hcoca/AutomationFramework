@@ -15,9 +15,11 @@ import org.testng.annotations.Test;
 
 /**
  * @author Pedro David Fuentes Antezana
- *   
+ * 
+ * This test case is to verify the Starting time of a meeting that has already been updated by
+ * dragging its icon image in the time line panel of the schedule page.   
  */
-public class VerifySubjectAfterDragMeetingIconImage extends TestBaseSetup {
+public class VerifyStartTimeAfterDragMeetingIconImage extends TestBaseSetup {
 	// Page objects for this test
 	private LoginPage login;
 	private HomePage homePage;
@@ -38,7 +40,7 @@ public class VerifySubjectAfterDragMeetingIconImage extends TestBaseSetup {
 	private String actualResult;
 	
 	// Error message.
-	private String errorMessage = " The Subject is different than we exepected.";
+	private String errorMessage = " The Starting time is different than we exepected.";
 	
  	@BeforeClass
  	public void setup(){
@@ -48,7 +50,7 @@ public class VerifySubjectAfterDragMeetingIconImage extends TestBaseSetup {
  	}
  	
  	@Test
- 	public void verifySubjectAfterDragMeetingIconImage(){
+ 	public void verifyStartTimeAfterDragMeetingIconImage(){
  		login = new LoginPage(driver);
  		homePage = login.access(roomName);
  		schedulePanel = new SchedulePanel(homePage.getDriver());
@@ -56,13 +58,13 @@ public class VerifySubjectAfterDragMeetingIconImage extends TestBaseSetup {
  		timeLinePanel = new TimeLinePanel(meetingsPage.getDriver());
  		timeLinePanel.dragMeetingIconImage(meetingTitle);
  		
- 		expectedResult = timeLinePanel.getSubjectText();
+ 		expectedResult = timeLinePanel.getStartTimeText();
  		
 		timeLinePanel.confirmMeeting();
 		timeLinePanel.confirmUser(userPassword);
 		timeLinePanel.saveMeeting();
  		
-		actualResult = timeLinePanel.getSubjectText();
+		actualResult = timeLinePanel.getStartTimeText();
 
 		Assert.assertEquals(actualResult, expectedResult, errorMessage);
  	}
