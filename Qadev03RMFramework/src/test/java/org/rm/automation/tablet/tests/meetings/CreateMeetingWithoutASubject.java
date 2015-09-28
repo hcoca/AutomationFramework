@@ -3,7 +3,6 @@ package org.rm.automation.tablet.tests.meetings;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.*;
-import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 
@@ -38,16 +37,14 @@ public class CreateMeetingWithoutASubject extends TestBaseSetup {
  	}
 	@Test
 	public void createMeetingWithoutASubject(){
-		LogManager.info("Executing: Create a new meeting without a subject test case");
 		String organizer = "Administrator";
-		String atendees = "elver@atxrm.com";
+		String message = "Verifying an error mesage is displayed when a meeting is created without a subject";
 		
 		loginPage = new LoginPage(driver);
  		homePage = loginPage.access(serviceURL, userName, password, roomName);
  		meetingsPage = homePage.selectSchedulePage();
  		meetingsPage.setOrganizer(organizer)
-					.setAtendees(atendees)
 					.confirmMeeting();
- 		Assert.assertTrue(meetingsPage.verifyErrorSubjectMessage());
+ 		Assert.assertTrue(meetingsPage.verifyErrorSubjectMessage(), message);
 	}
 }

@@ -11,7 +11,7 @@ import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.TestBaseSetup;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
@@ -32,7 +32,7 @@ public class VerifytheStarTimeNextPanel extends TestBaseSetup {
 	private String meetingId;
 	
 
-	@BeforeTest
+	@BeforeClass
 	public void beforeclass() throws UnsupportedOperationException, IOException{
 		roomName = PreConditionHomePageTC.getRoomName();
 	}

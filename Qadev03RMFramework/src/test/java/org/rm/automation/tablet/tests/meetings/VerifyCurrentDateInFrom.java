@@ -3,7 +3,6 @@ package org.rm.automation.tablet.tests.meetings;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.*;
-import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 
@@ -43,12 +42,12 @@ public class VerifyCurrentDateInFrom extends TestBaseSetup {
  	}
 	@Test
 	public void testVerifyCurrentDateInFromField(){
-		LogManager.info("Executing: Verify current date in from field test case");
+		String message = "Verifying value in From field is the current date";
 		
 		loginPage = new LoginPage(driver);
  		homePage = loginPage.access(serviceURL, userName, password, roomName);
  		meetingsPage = homePage.selectSchedulePage();
- 		Assert.assertEquals(meetingsPage.verifyCurrentDateInFromField(), currentDate);
+ 		Assert.assertEquals(meetingsPage.verifyCurrentDateInFromField(), currentDate, message);
 	}
 }
 

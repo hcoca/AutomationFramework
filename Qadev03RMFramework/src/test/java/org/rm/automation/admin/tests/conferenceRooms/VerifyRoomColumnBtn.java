@@ -4,20 +4,14 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
-import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
+
 
 public class VerifyRoomColumnBtn extends TestBaseSetup{
 	private Properties settings = ReadPropertyValues

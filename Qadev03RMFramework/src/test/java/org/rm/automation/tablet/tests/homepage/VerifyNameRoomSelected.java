@@ -1,14 +1,10 @@
 package org.rm.automation.tablet.tests.homepage;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import org.json.simple.JSONObject;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
-import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.TestBaseSetup;
-import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -25,7 +21,7 @@ public class VerifyNameRoomSelected extends TestBaseSetup {
 	private String roomName;
 
  	@BeforeClass
- 	public void setup() throws UnsupportedOperationException, IOException{
+ 	public void VerifyNameRoom() throws UnsupportedOperationException, IOException{
  		roomName = PreConditionHomePageTC.getRoomName();
  	}
  	@Test
@@ -35,7 +31,5 @@ public class VerifyNameRoomSelected extends TestBaseSetup {
  		String actual = homepage.getRoomNamelabel();
 
 		Assert.assertEquals(actual, roomName);
-
- 		
  	}
 }

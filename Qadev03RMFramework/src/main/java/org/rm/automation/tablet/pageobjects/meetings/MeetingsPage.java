@@ -10,10 +10,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.tablet.pageobjects.TabletPage;
-import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.Waiters;
+import org.testng.Assert;
 
 public class MeetingsPage extends TabletPage{
 	
@@ -23,6 +23,8 @@ public class MeetingsPage extends TabletPage{
 	protected final String txtboxBody="txtBody";
 	protected final String txtboxStart="//input[@type='time']";
 	protected final String txtboxEnd="(//input[@type='time'])[2]";
+	protected final String txtboxStartDate="//input[@ng-model='editable.from' and @type='date']";
+	protected final String txtboxEndDate="//input[@ng-model='editable.to' and @type='date']";
 	protected final String txtboxPassword="//input[@type='password']";
 	protected final String bttnCreate="//button[@class='clean item item-btn']";
 	protected final String bttnUpdate="//button[contains(.,'Update')]";
@@ -36,6 +38,11 @@ public class MeetingsPage extends TabletPage{
 	protected final String spnAttendee="//span[@class='rm-tag-elem ng-binding']";
 	protected final String spnTime="//span[@ng-bind='currentTime']";
 	protected final String spnScheduleTitle="//span[contains(.,'Schedule')]";
+	protected final String divErrMsSubject="//small[@ng-show='formErrors.title' and contains(.,'Subject is required')]";
+	protected final String divErrMsOrganizer="//small[@ng-show='formErrors.organizer' and contains(.,'Organizer is required')]";
+	protected final String divErrMsStartTime="//small[@ng-show='formErrors.intervalInvalid' and contains(.,'Start time must be smaller than end time')]";
+	protected final String divConfirmUpdateMs="//div[contains(.,'Meeting successfully updated')]";
+	
 	private WebElement element;
 	
 	private Properties settings = ReadPropertyValues
@@ -55,7 +62,11 @@ public class MeetingsPage extends TabletPage{
 	@FindBy	(xpath=txtboxStart)
 	protected WebElement tbStartTime;	
 	@FindBy	(xpath=txtboxEnd)
-	protected WebElement tbEndTime;	
+	WebElement tbEndTime;
+	@FindBy	(xpath=txtboxStartDate)
+	WebElement tbStartDate;	
+	@FindBy	(xpath=txtboxEndDate)
+	WebElement tbEndDate;
 	@FindBy	(xpath=bttnCreate)
 	protected WebElement btnCreate;	
 	@FindBy	(xpath=txtboxPassword)
@@ -82,6 +93,14 @@ public class MeetingsPage extends TabletPage{
 	protected WebElement spanTime;
 	@FindBy(xpath=spnScheduleTitle)
 	protected WebElement spanSchedulePageTitle;
+	@FindBy(xpath=divErrMsSubject)
+	WebElement divErrMsjSubject;
+	@FindBy(xpath=divErrMsOrganizer)
+	WebElement divErrMsjOrganizer;
+	@FindBy(xpath=divErrMsStartTime)
+	WebElement divErrMsjStartTime;
+	@FindBy(xpath=divConfirmUpdateMs)
+	WebElement divConfirmUpdateMsj;
 	
 	private WebDriver driver;
 	
@@ -92,14 +111,12 @@ public class MeetingsPage extends TabletPage{
 	}	
 	
 	public MeetingsPage setOrganizer(String name){	
-		LogManager.info("MeetingsPage : Typing the organizer's account username");
 		Waiters.WaitById(txtboxOrganizer,driver);		
 		tbOrganizer.sendKeys(name);
 		return this;
 	}
 	
 	public MeetingsPage setSubject(String subject){
-		LogManager.info("MeetingsPage : Typing the meeting subject");
 		Waiters.WaitById(txtboxSubject,driver);		
 		tbSubject.clear();
 		tbSubject.sendKeys(subject);
@@ -107,7 +124,6 @@ public class MeetingsPage extends TabletPage{
 	}
 	
 	public MeetingsPage setAtendees(String name){
-		LogManager.info("MeetingsPage : Typing adding the attendees accounts");
 		Waiters.WaitByXPath(txtboxAttendees,driver);
 		tbAttendees.clear();
 		tbAttendees.sendKeys(name);
@@ -116,7 +132,6 @@ public class MeetingsPage extends TabletPage{
 	}
 	
 	public MeetingsPage setBody(String body){
-		LogManager.info("MeetingsPage : Typing the meetings body (optional field)");
 		Waiters.WaitById(txtboxBody,driver);
 		tbBody.clear();
 		tbBody.sendKeys(body);		
@@ -124,7 +139,6 @@ public class MeetingsPage extends TabletPage{
 	}
 	
 	public MeetingsPage setDates(String begin, String end){
-		LogManager.info("MeetingsPage : Typing the begin and end time of the meeting");
 		Waiters.WaitByXPath(txtboxStart,driver);		
 		tbStartTime.clear();
 		tbStartTime.sendKeys(begin);
@@ -136,14 +150,12 @@ public class MeetingsPage extends TabletPage{
 	}
 	
 	public MeetingsPage confirmMeeting(){
-		LogManager.info("MeetingsPage : Clicking on Create button to confirm the meeting creation");
 		Waiters.WaitByXPath(bttnCreate,driver);
 		btnCreate.click();
 		return this;
 	}
 	
 	public MeetingsPage confirmUser(String password){
-		LogManager.info("MeetingsPage : Typing the organizer's account password");
 		Waiters.WaitByXPath(txtboxPassword,driver);
 		tbPassword.clear();
 		tbPassword.sendKeys(password);
@@ -151,14 +163,12 @@ public class MeetingsPage extends TabletPage{
 	}
 	
 	public MeetingsPage saveMeeting(){
-		LogManager.info("MeetingsPage : Saving the meeting");
 		Waiters.WaitByXPath(bttnSave,driver);
 		btnConfirmMeeting.click();		
 		return this;
 	}
 	
 	public MeetingsPage saveDeleteMeeting(){
-		LogManager.info("MeetingsPage : Deleting the meeting");
 		Waiters.WaitByXPath(bttnSaveDelete,driver);
 		btnConfirmDeleteMeeting.click();
 		
@@ -172,14 +182,12 @@ public class MeetingsPage extends TabletPage{
 	}
 	
 	public MeetingsPage updateMeeting(){
-		LogManager.info("MeetingsPage : Clicking Update button");
 		Waiters.WaitByXPath(bttnUpdate,driver);
 		btnUpdate.click();		
 		return this;
 	}
 	
 	public MeetingsPage deleteMeeting(){
-		LogManager.info("MeetingsPage : Clicking Remove button");
 		Waiters.WaitByXPath(bttnRemove,driver);
 		btnRemove.click();		
 		return this;
@@ -187,7 +195,6 @@ public class MeetingsPage extends TabletPage{
 	
 	public String meetingAdvices(){		
 		String result = "";
-		LogManager.info("MeetingsPage : Verifying if the meeting has perform an action");
 		Waiters.WaitByXPath(dvAdvice,driver);		
 		result = divMeetingAdvice.getText();		
 		return result;
@@ -201,14 +208,12 @@ public class MeetingsPage extends TabletPage{
 			e.printStackTrace();
 		}
 		boolean result = false;
-		LogManager.info("MeetingsPage : Verifying if the current room is the selected by the user");
 		Waiters.WaitByXPath(dvRoomName,driver);		
 		result = divRoomName.getText().equals(roomName)?true:false;	
 		return result;
 	}
 	
 	public MeetingsPage removeAttendee(){
-		LogManager.info("MeetingsPage : Removing an attendee");
 		Waiters.WaitByXPath(icnRemoveAttendee,driver);
 		iconRemoveAttendee.click(); 
 		return this;
@@ -217,14 +222,12 @@ public class MeetingsPage extends TabletPage{
 	public boolean isAttendeeAdded(String attendeeName)
 	{		
 		boolean result = false;
-		LogManager.info("MeetingsPage : Verifying than the attendee has been removed");
 		Waiters.WaitByXPath(spnAttendee,driver);		
 		result = (spanAttendee.isDisplayed() && spanAttendee.getText().equals(attendeeName))? true : false;
 		return result;
 	} 
 	
 	public List<WebElement> attendeeRemoved(){
-		LogManager.info("MeetingsPage : Verifying than the attendee has been removed");		
 		List<WebElement> attendees = driver.findElements(By.xpath(spnAttendee));				
 		return attendees;
 	}
@@ -232,14 +235,12 @@ public class MeetingsPage extends TabletPage{
 	public boolean checkTime(){		
 		boolean result = false;
 		String currentTime = RoomManagerTime.currenTime();
-		LogManager.info("MeetingsPage : Verifying than the current time is the same than RoomManager has");
 		Waiters.WaitByXPath(spnTime, driver);
 		result = spanTime.getText().equals(currentTime)?true:false;
 		return result;
 	}	
 	
 	public boolean checkIfIconRedirectsToSchedulePage(){
-		LogManager.info("MeetingsPage : Verifying than the schedule icon redirects to the Schedule page");
 		boolean result = false;
 		Waiters.WaitByXPath(spnScheduleTitle, driver);		
 		result = (spanSchedulePageTitle.getText().equals("Schedule") && driver.getCurrentUrl().equals(url+"/tablet/#/schedule"))?true:false;
@@ -259,7 +260,6 @@ public class MeetingsPage extends TabletPage{
 	
 	
 	public MeetingsPage setStartTime(String begin){
-		LogManager.info("MeetingsPage : Typing the begin time of the meeting");
 		Waiters.WaitByXPath("//input[@type='time']",driver);
 		element = driver.findElement(By.xpath("//input[@type='time']"));
 		element.clear();
@@ -267,7 +267,6 @@ public class MeetingsPage extends TabletPage{
 		return this;
 	}
 	public MeetingsPage setEndTime(String end){
-		LogManager.info("MeetingsPage : Typing the send time of the meeting");
 		Waiters.WaitByXPath("(//input[@type='time'])[2]",driver);
 		element = driver.findElement(By.xpath("(//input[@type='time'])[2]"));
 		element.clear();
@@ -281,43 +280,34 @@ public class MeetingsPage extends TabletPage{
 		return this;
 		
 	}
-	public boolean verifyErrorSubjectMessage(){
-		LogManager.info("MeetingsPage : Verifying if an error message is displayed when Subject field is left empty");
-		Waiters.WaitByXPath("//small[@ng-show='formErrors.title' and contains(.,'Subject is required')]",driver);
-		element = driver.findElement(By.xpath("//small[@ng-show='formErrors.title' and contains(.,'Subject is required')]"));
-		return (element.isDisplayed());
+		public boolean verifyErrorSubjectMessage(){
+		Waiters.WaitByXPath(divErrMsSubject,driver);
+		return (divErrMsjSubject.isDisplayed());
 	} 
+	
 	public boolean verifyErrorOrganizerMessage(){
-		LogManager.info("MeetingsPage : Verifying if an error message is displayed when Organizer field is left empty");
-		Waiters.WaitByXPath("//small[@ng-show='formErrors.organizer' and contains(.,'Organizer is required')]",driver);
-		element = driver.findElement(By.xpath("//small[@ng-show='formErrors.organizer' and contains(.,'Organizer is required')]"));
-		return (element.isDisplayed());			
+		Waiters.WaitByXPath(divErrMsOrganizer,driver);
+		return (divErrMsjOrganizer.isDisplayed());			
 	}
+	
 	public boolean verifyErrorFromHigherThanToMessage(){
-		LogManager.info("MeetingsPage : Verifying if an error message is displayed when From field value is higher than To field value");
-		Waiters.WaitByXPath("//small[@ng-show='formErrors.intervalInvalid' and contains(.,'Start time must be smaller than end time')]",driver);
-		element = driver.findElement(By.xpath("//small[@ng-show='formErrors.intervalInvalid' and contains(.,'Start time must be smaller than end time')]"));
-		return (element.isDisplayed());			
+		Waiters.WaitByXPath(divErrMsStartTime,driver);
+		return (divErrMsjStartTime.isDisplayed());			
 	}
+	
 	public String verifyCurrentDateInFromField(){
-		LogManager.info("MeetingsPage : Verifying if 'From' label contains the current date");
-		Waiters.WaitByXPath("//input[@ng-model='editable.from' and @type='date']",driver);
-		element = driver.findElement(By.xpath("//input[@ng-model='editable.from' and @type='date']"));
-		String fromValue = element.getAttribute("value");
+		Waiters.WaitByXPath(txtboxStartDate,driver);
+		String fromValue = tbStartDate.getAttribute("value");
 		return fromValue;	
 	}
 	public String verifyCurrentDateInToField(){
-		LogManager.info("MeetingsPage : Verifying if 'To' label contains the current date");
-		Waiters.WaitByXPath("//input[@ng-model='editable.to' and @type='date']",driver);
-		element = driver.findElement(By.xpath("//input[@ng-model='editable.to' and @type='date']"));
-		String toValue = element.getAttribute("value");	
+		Waiters.WaitByXPath(txtboxEndDate,driver);
+		String toValue = tbEndDate.getAttribute("value");	
 		return toValue;
 
 	}
 	public boolean verifyMeetingWasUpdated(){
-		LogManager.info("MeetingsPage : Verifying confirm message after update a meeting");
-		Waiters.WaitByXPath("//div[contains(.,'Meeting successfully updated')]",driver);
-		element = driver.findElement(By.xpath("//div[contains(.,'Meeting successfully updated')]"));
-		return (element.isDisplayed());
+		Waiters.WaitByXPath(divConfirmUpdateMs,driver);
+		return (divConfirmUpdateMsj.isDisplayed());
 	} 
 }

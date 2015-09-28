@@ -6,7 +6,7 @@ import org.rm.automation.tablet.pageobjects.homepage.NextHomePanel;
 import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.TestBaseSetup;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 
@@ -23,13 +23,13 @@ public class VerifyNextTitleWhenThereIsnotMeting extends TestBaseSetup {
 	String expectedtitle = "End of day";
 	
 	
-	@BeforeTest
+	@BeforeClass
 	public void beforeclass(){		
 		roomName = PreConditionHomePageTC.getRoomName();
 	}
 	
 	@Test
-	public void test(){		
+	public void NextTitleWhenThereIsnotMeting(){		
 		login = new LoginPage(driver);
  		homepage = login.access(roomName);
  		nextHomePage = new NextHomePanel(homepage.getDriver());

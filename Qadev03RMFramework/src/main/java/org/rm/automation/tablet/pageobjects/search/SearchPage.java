@@ -12,7 +12,6 @@ import org.rm.automation.tablet.pageobjects.TabletPage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
-import org.testng.Assert;
 
 public class SearchPage extends TabletPage{
 

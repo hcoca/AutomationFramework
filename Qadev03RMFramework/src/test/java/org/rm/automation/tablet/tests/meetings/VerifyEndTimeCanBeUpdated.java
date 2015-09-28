@@ -2,7 +2,6 @@ package org.rm.automation.tablet.tests.meetings;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.*;
-import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.api.*;
@@ -28,10 +27,10 @@ public class VerifyEndTimeCanBeUpdated extends TestBaseSetup{
 	private String server = settings.getProperty("server");
 	private String port = settings.getProperty("port");
 	String subject = "New Meeting";
-	//private String startTime = RoomManagerTime.substractMinutes(0);
-	//private String endTime = RoomManagerTime.addMinutes(20);
-	private String startTime = "2015-09-24T22:24:33.000Z";
-	private String endTime = "2015-09-24T22:54:33.000Z";
+	private String startTime = RoomManagerTime.substractMinutesToCurrentTime(0);
+	private String endTime = RoomManagerTime.addMinutesToCurrentTime(20);
+	//private String startTime = "2015-09-24T22:24:33.000Z";
+	//private String endTime = "2015-09-24T22:54:33.000Z";
 	
 	
 	private String newEndTime = RoomManagerTime.addMinutesToDate(15);
@@ -49,8 +48,8 @@ public class VerifyEndTimeCanBeUpdated extends TestBaseSetup{
  	}
 	@Test
 	public void testVerifyEndTimeCanBeUpdated(){
-		System.out.println("NEW TIME: "+newEndTime);
-		LogManager.info("Executing: Verify End Time can be updated test case");
+		String message = "Verifying End Time value of a meeting can be updated";
+		
 		loginPage = new LoginPage(driver);
  		homePage = loginPage.access(serviceURL, userName, password, roomName);
  		meetingsPage = homePage.selectSchedulePage();
@@ -59,7 +58,7 @@ public class VerifyEndTimeCanBeUpdated extends TestBaseSetup{
  					.updateMeeting()
  					.confirmUser(password)
  					.saveMeeting();
- 		Assert.assertTrue(meetingsPage.verifyMeetingWasUpdated());
+ 		Assert.assertTrue(meetingsPage.verifyMeetingWasUpdated(), message);
 
 	}
 	@AfterMethod 

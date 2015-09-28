@@ -3,7 +3,6 @@ package org.rm.automation.tablet.tests.meetings;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.*;
-import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 
@@ -38,17 +37,14 @@ public class CreateMeetingWithoutAnOrganizer extends TestBaseSetup {
  	}
 	@Test
 	public void createMeetingWithoutAnOrganizer(){
-		LogManager.info("Executing: Create a new meeting without an organizer test case");
 		String subject = "PageObjects Meeting";
-		String atendees = "elver@atxrm.com";
-		
+		String message = "Verifying an error mesage is displayed when a meeting is created without an organizer";
 		loginPage = new LoginPage(driver);
  		homePage = loginPage.access(serviceURL, userName, password, roomName);
  		meetingsPage = homePage.selectSchedulePage();
  		meetingsPage.setSubject(subject)
-					.setAtendees(atendees)
 					.confirmMeeting();
- 		Assert.assertTrue(meetingsPage.verifyErrorOrganizerMessage());
+ 		Assert.assertTrue(meetingsPage.verifyErrorOrganizerMessage(), message);
 	}
 	
 }

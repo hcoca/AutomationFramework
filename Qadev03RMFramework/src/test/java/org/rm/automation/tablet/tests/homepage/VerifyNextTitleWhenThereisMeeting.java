@@ -1,15 +1,15 @@
 package org.rm.automation.tablet.tests.homepage;
 
-
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.homepage.NextHomePanel;
 import org.rm.automation.tablet.preconditions.homepage.PostContidionHomePageTC;
 import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.TestBaseSetup;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
@@ -26,14 +26,18 @@ public class VerifyNextTitleWhenThereisMeeting extends TestBaseSetup {
 	private String meetingId;
 	
 
-	@BeforeTest
+	@BeforeClass
 	public void beforeclass(){
-		roomName = PreConditionHomePageTC.getRoomName();	
+		roomName = PreConditionHomePageTC.getRoomName();
+		meetingId = PreConditionHomePageTC.createAfterMeeting();
+		if(meetingId == null)
+		{
+			LogManager.error("VerifyNextTitleWhenThereisMeeting: "+ "before class fail the meeting is not create");
+		}
 	}
 	
 	@Test
-	public void test(){
-		meetingId = PreConditionHomePageTC.createAfterMeeting();
+	public void NextTitleWhenThereisMeeting(){
 		login = new LoginPage(driver);
  		homepage = login.access(roomName);
  		nextHomePage = new NextHomePanel(homepage.getDriver());

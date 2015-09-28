@@ -1,14 +1,8 @@
 package org.rm.automation.admin.tests.conferenceRooms;
 
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.openqa.selenium.By;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;

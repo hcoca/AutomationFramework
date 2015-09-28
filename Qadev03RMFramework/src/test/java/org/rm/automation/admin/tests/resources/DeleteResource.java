@@ -6,7 +6,6 @@ import java.util.Properties;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.locations.IssuesPage;
-import org.rm.automation.admin.pageobjects.resources.AddResourcesPage;
 import org.rm.automation.admin.pageobjects.resources.DeleteResourcesPage;
 import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
 import org.rm.automation.utils.LogManager;

@@ -1,7 +1,6 @@
 package org.rm.automation.utils;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.json.simple.parser.ParseException;

@@ -3,10 +3,11 @@
 <suite name="Suite for Acceptance test cases">		
 	
 	<suite-files>
-		<suite-file path="./Meeting.xml" />
+		<suite-file path="./Meetings.xml" />
 		<suite-file path="./Schedule.xml" />
 		<suite-file path="./Search.xml" />
-
+		<suite-file path="./CommonPages.xml"/>
+		<suite-file path="./TabletHomePage.xml"/>
 	</suite-files>
-		
+	
 </suite> <!-- Suite --> 		

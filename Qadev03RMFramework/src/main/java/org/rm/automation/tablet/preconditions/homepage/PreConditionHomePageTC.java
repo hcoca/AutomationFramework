@@ -2,7 +2,6 @@ package org.rm.automation.tablet.preconditions.homepage;
 
 
 import java.util.ArrayList;
-import java.util.Date;
 
 import org.json.simple.JSONObject;
 import org.rm.automation.utils.MeetingManager;
@@ -18,11 +17,10 @@ import org.rm.automation.utils.api.MeetingsRequests;
 public class PreConditionHomePageTC {
 
 	private static String roomName;
-
 	private static String meetingTitle = "meetingTitle";
-	private static String startTimeAfter = RoomManagerTime.addMinutesToCurrentTime(15);
+	private static String startTimeAfter = RoomManagerTime.addMinutesToCurrentTime(20);
 	private static String startTimeCurrent = RoomManagerTime.substractMinutesToCurrentTime(2);
-	private static String endTime = RoomManagerTime.addMinutesToCurrentTime(16);
+	private static String endTime = RoomManagerTime.addMinutesToCurrentTime(25);
 
 	
 	/**
