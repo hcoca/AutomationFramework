@@ -62,7 +62,7 @@ public class SearchByLocation extends TestBaseSetup {
 	}
 	
 	@Test
-	public void testSearchByCapacity()
+	public void testSearchByLocation()
 	{
 		LogManager.info("SearchByLocation: Executing Test Case");
 
@@ -75,7 +75,6 @@ public class SearchByLocation extends TestBaseSetup {
 		roomNameActual = searchPage.getSearchRoomName();
 		messageError = String.format(messageFormat, roomNameExpected, roomNameActual);
 		Assert.assertEquals(roomNameActual, roomNameExpected, messageError);
-		Assert.assertTrue(false);
 	}
 	
 	@AfterMethod
