@@ -59,7 +59,7 @@ public class RemoveServer extends TestBaseSetup {
 	}
   }
   */
-  @AfterTest
+  @AfterClass
   public void AfterTest(){
 	  try {
 			LogManager.info("RemoveServer Test: after test add service");
