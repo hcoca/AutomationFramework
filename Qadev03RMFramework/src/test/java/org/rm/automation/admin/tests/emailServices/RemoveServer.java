@@ -33,7 +33,7 @@ public class RemoveServer extends TestBaseSetup {
     EmailServersPage emailserver;
     RemoveServerpage removeserv;
   @Test
-  public void TestRemoveServer() throws InterruptedException, UnsupportedOperationException, IOException {
+  public void TestRemoveServer() throws UnsupportedOperationException, IOException {
 
 	ServicesRequests.AddServices();
 
@@ -43,8 +43,7 @@ public class RemoveServer extends TestBaseSetup {
 	emailserver = objHomePage.SelectEmailServersOption();
 	removeserv=emailserver.clickbtnremove();
 	emailserver = removeserv.yesdelete();
-	Thread.sleep (10000);
-	Assert.assertTrue(ServicesRequests.getServiceId() == null);
+	Assert.assertTrue(emailserver.buttonAddIsVisible());
 
   }
 /*  @BeforeTest
@@ -60,7 +59,7 @@ public class RemoveServer extends TestBaseSetup {
 	}
   }
   */
-  @AfterClass
+  @AfterTest
   public void AfterTest(){
 	  try {
 			LogManager.info("RemoveServer Test: after test add service");

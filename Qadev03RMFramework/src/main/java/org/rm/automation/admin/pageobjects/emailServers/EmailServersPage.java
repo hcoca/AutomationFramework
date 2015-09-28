@@ -66,4 +66,9 @@ public class EmailServersPage {
 	  buttonadd.click();
 	  return new AddEmailServersPage(driver);
   }
+  public boolean buttonAddIsVisible() {
+	  (new WebDriverWait(driver, 20))
+		.until(ExpectedConditions.visibilityOf(buttonadd));
+	  return buttonadd.isDisplayed();
+  }
 }
