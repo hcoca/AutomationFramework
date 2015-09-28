@@ -476,3 +476,426 @@
 2015-09-25 16:41:44,063 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
 2015-09-25 16:41:46,817 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
 2015-09-25 16:41:46,854 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:08:47,743 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:08:47,814 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:08:47,839 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:08:47,840 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:08:48,187 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:28:48.000Z to: 2015-09-28T01:38:48.000Z
+2015-09-27 21:08:48,382 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:08:48,866 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:08:51,162 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:08:51,163 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:08:53,410 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:08:53,848 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:08:56,253 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:08:57,169 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:08:58,040 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:09:00,153 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting:  in the room: game1
+2015-09-27 21:09:00,273 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:09:00,350 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:09:03,228 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:09:03,229 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:10:07,124 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:10:07,132 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:10:07,161 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:10:07,161 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:10:07,246 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:30:07.000Z to: 2015-09-28T01:40:07.000Z
+2015-09-27 21:10:07,339 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:10:07,665 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:10:09,247 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:10:09,247 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:10:10,097 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:10:10,401 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:10:12,589 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:10:13,343 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:10:14,131 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:10:15,076 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting:  in the room: game1
+2015-09-27 21:10:15,300 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:10:15,360 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:10:16,574 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:10:16,575 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:16:53,890 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:16:53,897 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:16:53,925 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:16:53,925 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:16:54,016 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:36:53.000Z to: 2015-09-28T01:46:53.000Z
+2015-09-27 21:16:54,122 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:16:55,097 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:16:56,865 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:16:56,866 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:16:57,602 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:16:57,784 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:17:00,005 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:17:00,927 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:17:01,669 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:17:22,176 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting:  in the room: game1
+2015-09-27 21:17:22,463 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:17:22,569 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:17:23,757 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:17:23,757 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:18:08,426 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:18:08,436 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:18:08,497 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:18:08,497 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:18:08,580 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:38:08.000Z to: 2015-09-28T01:43:08.000Z
+2015-09-27 21:18:09,515 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:18:12,048 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:18:13,850 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:18:13,850 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:18:14,544 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:18:14,739 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:18:17,155 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:18:18,417 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:18:19,152 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:18:57,260 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting:  in the room: game1
+2015-09-27 21:18:57,334 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:18:57,386 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:18:59,613 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:18:59,614 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:19:26,525 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:19:26,530 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:19:26,567 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:19:26,568 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:19:26,654 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:39:26.000Z to: 2015-09-28T01:44:26.000Z
+2015-09-27 21:19:27,563 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:19:29,377 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:19:30,928 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:19:30,929 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:19:31,507 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:19:31,712 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:19:33,901 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:19:58,589 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 560895a0e5f01bcc0a44c1ac in the room: game1
+2015-09-27 21:19:58,650 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:19:59,298 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:20:13,737 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:20:13,743 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:20:13,824 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:20:13,824 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:20:13,909 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:40:13.000Z to: 2015-09-28T01:45:13.000Z
+2015-09-27 21:20:13,994 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:20:14,365 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:20:15,971 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:20:15,972 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:20:16,705 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:20:16,927 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:20:19,304 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:20:20,049 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:20:20,792 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:20:21,793 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 560895cee5f01bcc0a44c1ae in the room: game1
+2015-09-27 21:20:21,863 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:20:22,095 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:20:22,946 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:20:22,947 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:20:43,814 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:20:43,822 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:20:43,848 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:20:43,849 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:20:43,927 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:40:43.000Z to: 2015-09-28T01:45:43.000Z
+2015-09-27 21:20:44,012 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:20:44,327 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:20:45,812 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:20:45,812 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:20:46,524 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:20:46,708 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:20:48,952 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:20:49,634 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:20:50,353 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:20:51,115 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 560895ece5f01bcc0a44c1af in the room: game1
+2015-09-27 21:20:51,188 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:20:51,416 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:20:52,484 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:20:52,484 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:25:48,073 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:25:48,081 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:25:48,136 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:25:48,136 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:25:48,247 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:45:48.000Z to: 2015-09-28T01:50:48.000Z
+2015-09-27 21:25:48,352 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:25:48,946 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:25:50,517 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:25:50,519 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:25:51,229 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:25:51,424 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:25:53,655 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:25:54,342 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:25:55,061 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:25:55,730 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 5608971ce5f01bcc0a44c1b0 in the room: game1
+2015-09-27 21:25:55,864 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:25:56,123 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:25:57,153 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:25:57,154 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:26:33,290 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:26:33,300 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:26:33,328 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:26:33,328 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:26:33,436 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:46:33.000Z to: 2015-09-28T01:51:33.000Z
+2015-09-27 21:26:33,513 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:26:34,282 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:26:35,801 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:26:35,801 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:26:36,383 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:26:36,572 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:26:38,774 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:26:39,468 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:26:40,183 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:26:41,202 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 5608974ae5f01bcc0a44c1b1 in the room: game1
+2015-09-27 21:26:41,259 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:26:41,443 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:26:42,272 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:26:42,272 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:26:59,707 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:26:59,715 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:26:59,763 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:26:59,763 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:26:59,876 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:46:59.000Z to: 2015-09-28T01:51:59.000Z
+2015-09-27 21:26:59,947 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:27:00,502 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:27:02,013 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:27:02,013 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:27:02,702 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:27:02,894 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:27:05,139 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:27:05,861 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:27:06,573 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:27:07,521 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 56089764e5f01bcc0a44c1b3 in the room: game1
+2015-09-27 21:27:07,646 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:27:07,952 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:27:08,810 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:27:08,810 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:27:35,712 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:27:35,720 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:27:35,748 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:27:35,749 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:27:35,797 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: null from: 2015-09-28T01:47:35.000Z to: 2015-09-28T01:52:35.000Z
+2015-09-27 21:27:35,923 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:27:37,451 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:27:37,452 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:27:38,056 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:27:38,260 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:27:40,638 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:27:41,315 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:27:42,022 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:27:42,871 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: null in the room: game1
+2015-09-27 21:27:42,996 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:27:44,043 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:27:44,044 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:28:57,981 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:28:57,987 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:28:58,010 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:28:58,011 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:28:58,107 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:48:58.000Z to: 2015-09-28T01:53:58.000Z
+2015-09-27 21:28:58,184 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:28:58,849 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:29:00,361 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:29:00,361 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:29:01,046 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:29:01,241 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:29:03,522 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:29:04,204 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:29:04,922 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:29:05,946 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 560897dae5f01bcc0a44c1b4 in the room: game1
+2015-09-27 21:29:06,007 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:29:06,234 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:29:07,185 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:29:07,186 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:29:37,417 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:29:37,425 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:29:37,475 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:29:37,475 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:29:37,543 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: null from: 2015-09-28T01:49:37.000Z to: 2015-09-28T01:54:37.000Z
+2015-09-27 21:29:37,697 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:29:39,220 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:29:39,220 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:29:39,903 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:29:40,090 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:29:42,287 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:29:42,980 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:29:43,789 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:29:44,677 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: null in the room: game1
+2015-09-27 21:29:44,752 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:29:45,654 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:29:45,657 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:30:27,752 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:30:27,760 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:30:27,789 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:30:27,789 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:30:27,885 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:50:27.000Z to: 2015-09-28T01:55:27.000Z
+2015-09-27 21:30:28,002 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:30:28,516 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:30:30,330 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:30:30,331 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:30:30,936 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:30:31,137 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:30:33,524 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:30:34,225 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:30:34,934 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:30:35,960 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 56089834e5f01bcc0a44c1b5 in the room: game1
+2015-09-27 21:30:36,026 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:30:36,369 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:30:37,254 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:30:37,254 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:31:57,197 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:31:57,205 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:31:57,234 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:31:57,235 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:31:57,336 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:51:57.000Z to: 2015-09-28T01:56:57.000Z
+2015-09-27 21:31:57,414 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:31:58,037 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:31:59,566 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:31:59,570 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:32:00,286 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:32:00,481 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:32:02,710 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:32:03,386 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:32:04,105 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:32:05,201 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 5608988de5f01bcc0a44c1b6 in the room: game1
+2015-09-27 21:32:05,257 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:32:05,437 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:32:06,421 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:32:06,422 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:32:24,238 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:32:24,245 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:32:24,279 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:32:24,280 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:32:24,372 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:52:24.000Z to: 2015-09-28T01:57:24.000Z
+2015-09-27 21:32:24,449 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:32:25,321 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:32:26,885 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:32:26,886 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:32:27,599 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:32:27,788 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:32:30,053 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:32:30,730 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:32:31,507 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:32:32,538 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 560898a9e5f01bcc0a44c1b7 in the room: game1
+2015-09-27 21:32:32,612 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:32:33,159 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:32:34,065 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:32:34,065 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:36:57,464 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:36:57,471 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:36:57,524 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:36:57,525 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:36:57,621 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:56:57.000Z to: 2015-09-28T02:01:57.000Z
+2015-09-27 21:36:58,168 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:37:09,712 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:37:11,428 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:37:11,428 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:37:12,152 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:37:12,348 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:37:14,578 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:37:35,455 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:37:36,191 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:37:37,010 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 560899c2e5f01bcc0a44c1b8 in the room: game1
+2015-09-27 21:37:39,435 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:37:39,626 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:37:40,867 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:37:40,867 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:37:57,597 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:37:57,604 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:37:57,638 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:37:57,638 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:37:57,795 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:57:57.000Z to: 2015-09-28T02:02:57.000Z
+2015-09-27 21:38:00,288 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:38:01,821 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:38:03,602 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:38:03,602 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:38:04,362 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:38:04,585 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:38:07,644 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:38:35,436 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 560899f8e5f01bcc0a44c1ba in the room: game1
+2015-09-27 21:38:45,694 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:38:50,441 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:39:52,060 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:39:52,070 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:39:52,098 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:39:52,098 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:39:52,194 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T01:59:52.000Z to: 2015-09-28T02:04:52.000Z
+2015-09-27 21:39:54,970 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:39:56,556 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:39:58,383 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:39:58,384 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:39:59,136 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:39:59,321 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:40:01,803 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:40:03,085 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:40:03,818 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:40:05,514 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 56089a6ce5f01bcc0a44c1bc in the room: game1
+2015-09-27 21:40:07,905 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:40:08,446 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:40:09,245 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:40:09,246 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:40:38,521 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:40:38,530 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:40:38,578 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:40:38,578 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:40:38,669 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T02:00:38.000Z to: 2015-09-28T02:05:38.000Z
+2015-09-27 21:40:45,898 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:40:55,727 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:40:57,221 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:40:57,225 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:40:57,920 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:40:58,159 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:41:00,598 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:41:31,431 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 56089a9ee5f01bcc0a44c1bd in the room: game1
+2015-09-27 21:41:49,843 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:41:50,123 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:41:51,153 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:41:51,169 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:42:17,860 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:42:17,865 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:42:17,900 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:42:17,900 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:42:17,994 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T02:02:17.000Z to: 2015-09-28T02:07:17.000Z
+2015-09-27 21:42:18,072 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:42:18,712 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:42:20,320 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:42:20,321 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:42:20,996 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:42:21,196 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:42:23,402 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:42:24,041 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:42:24,787 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:42:25,641 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 56089afae5f01bcc0a44c1bf in the room: game1
+2015-09-27 21:42:25,731 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:42:25,979 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:42:26,765 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:42:26,766 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:42:49,499 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:42:49,505 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:42:49,533 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:42:49,533 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:42:49,631 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T02:02:49.000Z to: 2015-09-28T02:07:49.000Z
+2015-09-27 21:42:49,749 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:42:50,073 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:42:51,702 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:42:51,703 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:42:52,486 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:42:52,713 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:42:55,005 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:42:55,756 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:42:56,467 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:42:57,135 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 56089b19e5f01bcc0a44c1c0 in the room: game1
+2015-09-27 21:42:57,227 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:42:57,422 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:42:58,456 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:42:58,456 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-27 21:50:01,015 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:50:01,023 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:50:01,063 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-27 21:50:01,064 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-27 21:50:01,171 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: meetingTitle in the room: game1 from: 2015-09-28T02:10:01.000Z to: 2015-09-28T02:15:01.000Z
+2015-09-27 21:50:01,606 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:50:02,117 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:50:03,676 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-27 21:50:03,680 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-27 21:50:04,406 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-27 21:50:04,649 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-27 21:50:06,977 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-27 21:50:08,466 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-27 21:50:09,215 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-27 21:50:10,066 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 56089c97e5f01bcc0a44c1c1 in the room: game1
+2015-09-27 21:50:10,180 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-27 21:50:10,411 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-27 21:50:11,248 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-27 21:50:11,248 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: C:\gitrepository\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite

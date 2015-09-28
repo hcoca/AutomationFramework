@@ -21,7 +21,7 @@ public class VerifyNameRoomSelected extends TestBaseSetup {
 	private String roomName;
 
  	@BeforeClass
- 	public void setup() throws UnsupportedOperationException, IOException{
+ 	public void VerifyNameRoom() throws UnsupportedOperationException, IOException{
  		roomName = PreConditionHomePageTC.getRoomName();
  	}
  	@Test
@@ -31,7 +31,5 @@ public class VerifyNameRoomSelected extends TestBaseSetup {
  		String actual = homepage.getRoomNamelabel();
 
 		Assert.assertEquals(actual, roomName);
-
- 		
  	}
 }
