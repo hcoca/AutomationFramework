@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.rm.automation.tablet.locators.search.SearchLocators;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.TabletPage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
@@ -18,32 +19,19 @@ public class SearchPage extends TabletPage{
 	WebDriver driver;
 	WebElement element;
 
-	private final String roomPath = "//button[@class='room-box ng-scope']";
-	private final String advancedButtonPath = "advanced-search";//id
-	private final String advancedLabelPath = "//span[@ng-show='advancedSearchOn']";
-	private final String roomNameTextboxPath = "txtRoomName";//id
-	private final String capacityTextboxPath = "txtMinimumCapacity";//id
-	private final String locationComboBoxPath = "listLocation";//id
-	private final String clearButtonPath = "//button[@class='btn-default btn btn-clear']";
-	private final String meetingTitlePath = "//div[@class='item-title']";
-	private final String scheduleTablePath = "//div[@class='vis-foreground']";
-	private final String resourcesListPath = "//div[@class='resource-search pull-left resources-height ng-scope']";
-	private final String resourceButtonPath = ".//div[@class='text-center resource-button pull-left']";
-	private final String notFoundMessagePath = "//div[@class='well']";
-	private final String roomTitle = "//span[contains(.,'Search')]";
 	private List<WebElement> roomListSearch;
 	private List<String> roomListLogin;
 	
-	@FindBy(id = advancedButtonPath) WebElement advancedButton;
-	@FindBy(id = roomNameTextboxPath) WebElement roomNameTextbox;
-	@FindBy(id = capacityTextboxPath) WebElement capacityTextbox;
-	@FindBy(id = locationComboBoxPath) WebElement locationComboBox;
-	@FindBy(xpath = advancedLabelPath) WebElement advancedLabel;
-	@FindBy(xpath = clearButtonPath) WebElement clearButton;
-	@FindBy(xpath = scheduleTablePath) WebElement scheduleTable;
-	@FindBy(xpath = resourcesListPath) List<WebElement> resourcesList;
-	@FindBy(xpath = notFoundMessagePath) WebElement notFoundMessage;
-	@FindBy(xpath=roomTitle) WebElement spanSearchPageTitle;
+	@FindBy(id = SearchLocators.advancedButtonPath) WebElement advancedButton;
+	@FindBy(id = SearchLocators.roomNameTextboxPath) WebElement roomNameTextbox;
+	@FindBy(id = SearchLocators.capacityTextboxPath) WebElement capacityTextbox;
+	@FindBy(id = SearchLocators.locationComboBoxPath) WebElement locationComboBox;
+	@FindBy(xpath = SearchLocators.advancedLabelPath) WebElement advancedLabel;
+	@FindBy(xpath = SearchLocators.clearButtonPath) WebElement clearButton;
+	@FindBy(xpath = SearchLocators.scheduleTablePath) WebElement scheduleTable;
+	@FindBy(xpath = SearchLocators.resourcesListPath) List<WebElement> resourcesList;
+	@FindBy(xpath = SearchLocators.notFoundMessagePath) WebElement notFoundMessage;
+	@FindBy(xpath = SearchLocators.roomTitle) WebElement spanSearchPageTitle;
 	
 	public SearchPage(WebDriver driver){
 		super(driver);
@@ -60,11 +48,13 @@ public class SearchPage extends TabletPage{
 	public SearchPage selectResource(String resourceName){
 		LogManager.info("SearchPage: Selecting a resource");
 
-		Waiters.WaitByXPath(resourcesListPath, driver);
+		Waiters.WaitByXPath(SearchLocators.resourcesListPath, driver);
 
 		for (WebElement resource : resourcesList) {
-			if(resource .getText().equals(resourceName)){
-				resource .findElement(By.xpath(resourceButtonPath)).click();
+			if(resource.getText().equals(resourceName)){
+				resource
+				.findElement(By.xpath(SearchLocators.resourceButtonPath))
+				.click();
 			}
 		}
 		return this;
@@ -77,7 +67,7 @@ public class SearchPage extends TabletPage{
 	public SearchPage enableAdvancedSearch(){
 		LogManager.info("SearchPage: Enabling advanced search");
 
-		Waiters.WaitById(advancedButtonPath, driver);
+		Waiters.WaitById(SearchLocators.advancedButtonPath, driver);
 		advancedButton.click();
 		return this;
 	}
@@ -91,7 +81,7 @@ public class SearchPage extends TabletPage{
 	{
 		LogManager.info("SearchPage: Setting a room name");
 
-		Waiters.WaitById(roomNameTextboxPath,driver);
+		Waiters.WaitById(SearchLocators.roomNameTextboxPath,driver);
 		roomNameTextbox.clear();
 		roomNameTextbox.sendKeys(roomName);
 		return this;
@@ -116,7 +106,7 @@ public class SearchPage extends TabletPage{
 	{
 		LogManager.info("SearchPage: Setting a capacity");
 
-		Waiters.WaitById(capacityTextboxPath, driver);
+		Waiters.WaitById(SearchLocators.capacityTextboxPath, driver);
 		capacityTextbox.clear();
 		capacityTextbox.sendKeys(capacity);
 		return this;
@@ -132,7 +122,8 @@ public class SearchPage extends TabletPage{
 		LogManager.info("SearchPage: Selecting a location");
 
 		WebElement loc;
-		loc = locationComboBox.findElement(By.xpath("//option[@label='"+ location +"']"));
+		loc = locationComboBox
+				.findElement(By.xpath(SearchLocators.locationOptionPath.replace("location", location)));
 		loc.click();
 		return this;
 	}
@@ -145,7 +136,7 @@ public class SearchPage extends TabletPage{
 	{
 		LogManager.info("SearchPage: Clicking the clear button");
 
-		Waiters.WaitByXPath(clearButtonPath, driver);
+		Waiters.WaitByXPath(SearchLocators.clearButtonPath, driver);
 		clearButton.click();
 		return this;
 	}
@@ -165,7 +156,7 @@ public class SearchPage extends TabletPage{
 	 */
 	public void getRoomList()
 	{
-		roomListSearch = driver.findElements(By.xpath(roomPath));
+		roomListSearch = driver.findElements(By.xpath(SearchLocators.roomPath));
 	}
 	
 	/**
@@ -207,7 +198,7 @@ public class SearchPage extends TabletPage{
 	public String getLocation()
 	{
 		WebElement loc;
-		loc = locationComboBox.findElement(By.xpath("//option[@selected='selected']"));
+		loc = locationComboBox.findElement(By.xpath(SearchLocators.selectedPath));
 		String location = loc.getText();
 		return location;
 	}
@@ -228,7 +219,8 @@ public class SearchPage extends TabletPage{
 	 */
 	public String getMeetingTitle()
 	{
-		WebElement meetingTitle = scheduleTable.findElement(By.xpath(meetingTitlePath));
+		WebElement meetingTitle = scheduleTable
+				.findElement(By.xpath(SearchLocators.meetingTitlePath));
 		String meetingTitleActual = meetingTitle.getText();
 		return meetingTitleActual;
 	}
@@ -256,7 +248,7 @@ public class SearchPage extends TabletPage{
 	public boolean checkIfIconRedirectsToSearchPage(){
 		LogManager.info("SearchPage : Verifying than the search icon redirects to the Search page");
 		boolean result = false;
-		Waiters.WaitByXPath(roomTitle, driver);
+		Waiters.WaitByXPath(SearchLocators.roomTitle, driver);
 		result = spanSearchPageTitle.getText().equals("Search")?true:false;
 		return result;
 	}

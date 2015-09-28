@@ -3,7 +3,9 @@ package org.rm.automation.admin.tests.resources;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
+import org.rm.automation.admin.pageobjects.resources.ResourcesPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.StringGenerator;
@@ -25,6 +27,8 @@ public class SearchResource extends TestBaseSetup{
 	String icon = "fa fa-gift";
 	
 	private LoginPage loginPage;
+	private HomePage homePage;
+	private ResourcesPage resourcesPage;
 	
 	@BeforeMethod
 	public void Preconditions() throws UnsupportedOperationException, IOException
@@ -37,12 +41,12 @@ public class SearchResource extends TestBaseSetup{
 	public void testSearchResource()
 	{
 		LogManager.info("UpdateName: Executing Test Case");
-		loginPage = new LoginPage(driver)
-		  		.SignIn(username, password)
-				.SelectResourcesOption()
+		loginPage = new LoginPage(driver);
+		homePage = loginPage.SignIn(username, password);
+		resourcesPage = homePage.SelectResourcesOption()
 				.SetSearch(name)
-				.VerifySearch(name)
-				.SignOut();
+				.VerifySearch(name);
+		resourcesPage.SignOut();
 	}
 	
 	@AfterMethod

@@ -52,7 +52,6 @@ public class VerifyRoomsDisplayed extends TestBaseSetup {
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.access(url, username, password, roomName);
 		searchPage = homePage.selectSearchPage();
-//				.verifyRoomsDisplayed();
 		
 		roomListExpected = searchPage.getRoomListLogin();
 		roomListActual = searchPage.getRoomListSearch();
