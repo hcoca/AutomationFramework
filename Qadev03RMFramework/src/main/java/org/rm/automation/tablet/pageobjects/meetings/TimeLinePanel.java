@@ -62,7 +62,7 @@ public class TimeLinePanel extends MeetingsPage{
 				
 				Actions builder = new Actions(driver); 
 				Action move = builder.clickAndHold(selectedMeeting)
-						.moveByOffset((selectedMeeting.getLocation().x - currentTimeMark.getLocation().x)/3, selectedMeeting.getLocation().y)
+						.moveByOffset((selectedMeeting.getLocation().x - currentTimeMark.getLocation().x)/8, selectedMeeting.getLocation().y)
 						.release(selectedMeeting)
 						.build();
 				move.perform();

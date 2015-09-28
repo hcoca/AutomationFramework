@@ -61,11 +61,11 @@ public class MeetingManager {
 		long timeInMillisecond = date.getTime();
 		meetingCreationTime = (timeInMillisecond + ONE_MINUTE_IN_MILLIS);
 		
-		String startTime = RoomManagerTime.substractMinutesToCurrentTime(300);
-		meetingStartTime = (timeInMillisecond - (300 * ONE_MINUTE_IN_MILLIS));
+		String startTime = RoomManagerTime.substractMinutesToCurrentTime(600);
+		meetingStartTime = (timeInMillisecond - (600 * ONE_MINUTE_IN_MILLIS));
 		
-		String endTime = RoomManagerTime.substractMinutesToCurrentTime(270);
-		meetingEndTime = (timeInMillisecond - (240 * ONE_MINUTE_IN_MILLIS));
+		String endTime = RoomManagerTime.substractMinutesToCurrentTime(570);
+		meetingEndTime = (timeInMillisecond - (570 * ONE_MINUTE_IN_MILLIS));
 		
 		try {
 			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
