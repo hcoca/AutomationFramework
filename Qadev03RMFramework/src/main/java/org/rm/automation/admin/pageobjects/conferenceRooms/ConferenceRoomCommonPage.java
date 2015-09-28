@@ -20,14 +20,11 @@ public class ConferenceRoomCommonPage {
 	@FindBy(xpath = ConferenceRoomCommonLocators.OutOfOrderPlanningBtnLocator)
 	public WebElement outOfOrderPlanningBtn;
 	
-	// all pages have this properties
-	@FindBy(xpath = "//h5[@class='ng-binding']")
-	private WebElement emailroom;
+	@FindBy(xpath = ConferenceRoomCommonLocators.EmailRoomLocator)
+	private WebElement emailRoom;
 	
-	@FindBy (xpath  = "//h2[@class='ng-binding']")
-	private WebElement nameroom;
-	
-	//----
+	@FindBy (xpath  = ConferenceRoomCommonLocators.NameRoomLocator)
+	private WebElement nameRoom;
 	
 	public ConferenceRoomCommonPage(WebDriver driver){
 		this.driver = driver;
@@ -35,18 +32,16 @@ public class ConferenceRoomCommonPage {
 	}
 	
 	public String getemailroom() {
-		Waiters.WaitByVisibilityOfWebElement(emailroom, driver);
-		return emailroom.getText();
+		Waiters.WaitByVisibilityOfWebElement(emailRoom, driver);
+		return emailRoom.getText();
 	}
 	public String getNameRoom() {
-		Waiters.WaitByVisibilityOfWebElement(nameroom, driver);
-		return nameroom.getText();
+		Waiters.WaitByVisibilityOfWebElement(nameRoom, driver);
+		return nameRoom.getText();
 	}
 	
 	public RoomInfoPage clickRoomInfoBtn(){
 		Waiters.WaitByVisibilityOfWebElement(roomInfoBtn, driver);
-//		(new WebDriverWait(driver, 20))
-//			.until(ExpectedConditions.visibilityOf(roomInfoBtn));
 		roomInfoBtn.click();
 		
 		return new RoomInfoPage(driver);
@@ -54,8 +49,6 @@ public class ConferenceRoomCommonPage {
 	
 	public ResourceAssociationPage clickResourceAssociationBtn(){
 		Waiters.WaitByVisibilityOfWebElement(resourceAssociationBtn, driver);
-//		(new WebDriverWait(driver, 20))
-//			.until(ExpectedConditions.visibilityOf(resourceAssociationBtn));
 		resourceAssociationBtn.click();
 		
 		return new ResourceAssociationPage(driver);
@@ -63,8 +56,6 @@ public class ConferenceRoomCommonPage {
 
 	public OutOfOrderPlanningPage clickOutOfOrderPlanningBtn(){
 		Waiters.WaitByVisibilityOfWebElement(outOfOrderPlanningBtn, driver);
-//		(new WebDriverWait(driver, 20))
-//			.until(ExpectedConditions.visibilityOf(outOfOrderPlanningBtn));
 		outOfOrderPlanningBtn.click();
 		
 		return new OutOfOrderPlanningPage(driver);

@@ -17,57 +17,41 @@ import org.rm.automation.utils.Waiters;
 public class ConferenceRoomsPage extends HomePage{
 	
 	@FindBy(xpath = ConferenceRoomsLocators.EnabledColumnBtnLocator)
-	public WebElement enabledColumnBtn;
+	protected WebElement enabledColumnBtn;
 	
 	@FindBy(xpath = ConferenceRoomsLocators.OutOfOrderColumnBtnLocator)
-	public WebElement outOfOrderColumnBtn;
+	protected WebElement outOfOrderColumnBtn;
 	
 	@FindBy(xpath = ConferenceRoomsLocators.RoomColumnBtnLocator)
-	public WebElement roomColumnBtn;
-	
+	protected WebElement roomColumnBtn;
+
 	@FindBy(xpath = ConferenceRoomsLocators.ConferenceRoomLocator)
-	public WebElement conferenceRoom;
+	protected WebElement conferenceRoom;
 	
 	@FindBy(xpath = ConferenceRoomsLocators.TotalItemsLabelLocator)
-	public WebElement totalItemsLabel;
+	protected WebElement totalItemsLabel;
 	
 	@FindBy(xpath = ConferenceRoomsLocators.ConferenceRoomInfoLabelLocator)
-	public WebElement conferenceRoomInfoLabel;
+	protected WebElement conferenceRoomInfoLabel;
 	
 	@FindBy(xpath = ConferenceRoomsLocators.RoomsContainerLocator)
-	public WebElement roomsContainer;
+	protected WebElement roomsContainer;
 	
 	@FindBy(xpath = ConferenceRoomsLocators.ResourceContainerLocator)
-	public WebElement resourceContainer; 
+	protected WebElement resourceContainer; 
 
+	@FindBy(xpath = ConferenceRoomsLocators.OutOOrdericonOrderLocator)
+	protected WebElement OutOOrdericonOrder; 
 	
-	//
-	//
-	// temporarily out of order
-	//
-	@FindBy(xpath = "//span[@popover-title='Temporarily Out of Order']")
-	WebElement OutOOrdericonOrder; 
+	@FindBy(xpath = ConferenceRoomsLocators.OutOOrdericonmaintenanceLocator)
+	protected WebElement OutOOrdericonmaintenance; 
 	
-	@FindBy(xpath = "//span[@popover-title='Closed for maintenance']")
-	WebElement OutOOrdericonmaintenance; 
+	@FindBy(xpath = ConferenceRoomsLocators.OutOOrdericonreparationsLocator)
+	protected WebElement OutOOrdericonreparations; 
 	
-	@FindBy(xpath = "//span[@popover-title='Closed for reparations']")
-	WebElement OutOOrdericonreparations; 
+	@FindBy(xpath = ConferenceRoomsLocators.OutOOrdericoneventLocator)
+	protected WebElement OutOOrdericonevent; 
 	
-	@FindBy(xpath = "//span[@popover-title='Reserved for a special event']")
-	WebElement OutOOrdericonevent; 
-	
-
-	
-	//popover-title="Temporarily Out of Order"
-	
-	/*
-	 * ------------------------------------------------------------------------------571---------------------------------------
-	 */
-
-	/*
-	 * ------------------------------------------------------------------------------571---------------------------------------
-	 */
 	public ConferenceRoomsPage (WebDriver driver){
 		super(driver);
 		PageFactory.initElements(super.driver, this);
@@ -77,7 +61,7 @@ public class ConferenceRoomsPage extends HomePage{
 		int res = 0;
 		
 		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
-		List<WebElement> list = roomsContainer.findElements(By.xpath(".//div[@ng-style='rowStyle(row)']"));
+		List<WebElement> list = roomsContainer.findElements(By.xpath(ConferenceRoomsLocators.RoomLocator));
 		if(list.size() > 0 ){
 			res = list.size();
 		}
@@ -100,7 +84,7 @@ public class ConferenceRoomsPage extends HomePage{
 	
 	public List<WebElement> getResources(){
 		Waiters.WaitByVisibilityOfWebElement(resourceContainer, driver);
-		List<WebElement> list = resourceContainer.findElements(By.xpath("//span[@ng-model='resource.isSelected']"));
+		List<WebElement> list = resourceContainer.findElements(By.xpath(ConferenceRoomsLocators.ResourceOnUpperPaneLocator));
 		
 		return list;
 	}
@@ -126,10 +110,10 @@ public class ConferenceRoomsPage extends HomePage{
 		
 		WebElement room = this.getConferenceRoom(roomName);
 
-		List<WebElement> list = room.findElements(By.xpath(".//div[@class='animate-if ng-scope']"));
+		List<WebElement> list = room.findElements(By.xpath(ConferenceRoomsLocators.ResourceBoxLocator));
 		for(WebElement webElement : list){
 			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
-			if(webElement.getAttribute("ng-if").toString().contains(resourcename)){
+			if(webElement.getAttribute(ConferenceRoomsLocators.ResourceIconName).toString().contains(resourcename)){
 				res = true;
 				break;
 			}
@@ -163,7 +147,7 @@ public class ConferenceRoomsPage extends HomePage{
 		RoomInfoPage res = null; 
 		
 		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
-		List<WebElement> list = roomsContainer.findElements(By.xpath(".//span[@class='ng-binding']"));// The span that contains the conference rooms.
+		List<WebElement> list = roomsContainer.findElements(By.xpath(ConferenceRoomsLocators.RoomLabelLocator));
 		for(WebElement webElement : list){
 			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
 			if(webElement.getText().equals(roomName)){
@@ -181,10 +165,10 @@ public class ConferenceRoomsPage extends HomePage{
 		WebElement res = null; 
 		
 		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
-		List<WebElement> list = roomsContainer.findElements(By.xpath(".//div[@ng-style='rowStyle(row)']"));
+		List<WebElement> list = roomsContainer.findElements(By.xpath(ConferenceRoomsLocators.RoomLocator));
 		for(WebElement webElement : list){
 			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
-			WebElement roomLabel = webElement.findElement(By.xpath(".//span[@class='ng-binding']"));
+			WebElement roomLabel = webElement.findElement(By.xpath(ConferenceRoomsLocators.RoomLabelLocator));
 			Waiters.WaitByVisibilityOfWebElement(roomLabel, driver);
 			if(roomLabel.getText().equals(roomName)){
 				res = webElement;
@@ -198,7 +182,7 @@ public class ConferenceRoomsPage extends HomePage{
 		boolean res = false; 
 		
 		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
-		List<WebElement> list = roomsContainer.findElements(By.xpath("//span[@class='ng-binding']"));
+		List<WebElement> list = roomsContainer.findElements(By.xpath(ConferenceRoomsLocators.RoomLabelLocator));
 		for(WebElement webElement : list){
 			Waiters.WaitByVisibilityOfWebElement(webElement, driver);
 			if(webElement.getText().equals(roomName)){
@@ -214,7 +198,7 @@ public class ConferenceRoomsPage extends HomePage{
 		boolean res = false;
 		
 		Waiters.WaitByVisibilityOfWebElement(roomsContainer, driver);
-		List<WebElement> list = roomsContainer.findElements(By.xpath("//span[@ng-show='row.entity.enabled']"));
+		List<WebElement> list = roomsContainer.findElements(By.xpath(ConferenceRoomsLocators.EnabledRoomLabelLocator));
 		for(WebElement webElement : list){
 			if(webElement.getText().equals(roomName)){
 				res = true;
@@ -263,25 +247,12 @@ public class ConferenceRoomsPage extends HomePage{
 		return conferenceRoomInfoLabel.getText();
 	}
 	
-	/*
-	 * pass the out of order title
-	 * 
-	 *  metodo Out of order
-	 * */
+	/**
+	 * @param ooftext
+	 * @return if the title is visible.
+	 */
 	public boolean IsvisibleOOOIcon(String ooftext)
-	{
-		/*Temporarily Out of Order
-
-		Closed for maintenance
-
-		Closed for reparations
-
-		Reserved for a special event*/ 
-		
-		/*theRoomsContainer = new WebDriverWait(driver, 20)
-			.until(ExpectedConditions.visibilityOf(theRoomsContainer)); // //span[@class='ng-binding']
-		List<WebElement> list = theRoomsContainer.findElements(By.xpath(".//span[@class='ng-binding']"));// The span that contains the conference rooms.
-*/		
+	{	
 		if("Temporarily Out of Order".contains(ooftext)){
 			OutOOrdericonOrder.isDisplayed();
 			return true;
@@ -299,5 +270,10 @@ public class ConferenceRoomsPage extends HomePage{
 			return true;
 		}	
 		return false;
+	}
+	
+	
+	public WebElement getRoomColumnBtn() {
+		return roomColumnBtn;
 	}
 }
