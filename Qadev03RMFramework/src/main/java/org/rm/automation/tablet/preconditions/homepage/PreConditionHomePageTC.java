@@ -17,7 +17,7 @@ import org.rm.automation.utils.api.MeetingsRequests;
  */
 public class PreConditionHomePageTC {
 
-	private static String roomName;
+	private static String roomName = getRoomName();
 	private static String meetingTitle = "meetingTitle";
 	private static String startTimeAfter = RoomManagerTime.addMinutesToCurrentTime(20);
 	private static String startTimeCurrent = RoomManagerTime.substractMinutesToCurrentTime(2);
@@ -38,10 +38,10 @@ public class PreConditionHomePageTC {
 	 * @return meeting ID
 	 * create a meeting in current time
 	 */
-	public static String createCurrentMeeting(){
+	public static String createCurrentMeeting(String roomName,String titleM){
 		try {
-			MeetingsRequests.postMeeting(roomName, meetingTitle, startTimeCurrent, endTime);
-			return MeetingsRequests.getMeetingId(meetingTitle, roomName);
+			MeetingsRequests.postMeeting(roomName, titleM, startTimeCurrent, endTime);
+			return MeetingsRequests.getMeetingId(titleM, roomName);
 		}catch(Exception e){
 			
 		}
@@ -70,10 +70,10 @@ public class PreConditionHomePageTC {
 	 * @return the meetingID
 	 * create a meeting after the current time
 	 */
-	public static String createAfterMeeting(){
+	public static String createAfterMeeting(String roomName, String meetingT){
 		try {
-			MeetingsRequests.postMeeting(roomName, meetingTitle, startTimeAfter, endTime);
-			return MeetingsRequests.getMeetingId(meetingTitle, roomName);
+			MeetingsRequests.postMeeting(roomName, meetingT, startTimeAfter, endTime);
+			return MeetingsRequests.getMeetingId(meetingT, roomName);
 		}catch(Exception e){
 			
 		}
@@ -87,7 +87,7 @@ public class PreConditionHomePageTC {
 	 * @param endTime in format RM
 	 * @return MeetingId of the setup meeting
 	 */
-	public static String setupMeeting(String meetingTitle , String startTime , String endTime){
+	public static String setupMeeting(String roomName,String meetingTitle , String startTime , String endTime){
 		try {			
 			MeetingsRequests.postMeeting(roomName, meetingTitle, startTime, endTime);
 			return MeetingsRequests.getMeetingId(meetingTitle, roomName);
@@ -96,17 +96,17 @@ public class PreConditionHomePageTC {
 		return null;
 	}
 	
-	private String getStarMeetingafternoon(){
+	private static String getStarMeetingafternoon(){
       Calendar calendar = Calendar.getInstance();
-      calendar.set(Calendar.HOUR, 13);
-      calendar.set(Calendar.MINUTE, 0);
+      calendar.set(Calendar.HOUR_OF_DAY ,13);
+      calendar.set(Calendar.MINUTE, 00);
       return RoomManagerTime.returnFormatRoomM(calendar.getTime());
 	}
 	
-	private String getEndMeetingafternoon(){
+	private static String getEndMeetingafternoon(){
 	      Calendar calendar = Calendar.getInstance();
-	      calendar.set(Calendar.HOUR, 14);
-	      calendar.set(Calendar.MINUTE, 0);
+	      calendar.set(Calendar.HOUR_OF_DAY, 14);
+	      calendar.set(Calendar.MINUTE, 00);
 	      return RoomManagerTime.returnFormatRoomM(calendar.getTime());
 	}
 	
@@ -116,9 +116,12 @@ public class PreConditionHomePageTC {
 	 * this method created a meeting in the afternoon between 13:00 - 14:00
 	 * 
 	 */
-	public String CreateMeetingInAfternoon(){
+	public static String CreateMeetingInAfternoon(String roomName){
 		try {
-			MeetingsRequests.postMeeting(roomName, "meetingAfternoon", getStarMeetingafternoon(), getEndMeetingafternoon());
+			System.out.println("asjdfhg   "+RoomManagerTime.addMinutesToCurrentTime(600));
+			System.out.println("asjdfhg   "+getStarMeetingafternoon());
+			System.out.println("asjdfhg   "+getEndMeetingafternoon());
+			MeetingsRequests.postMeeting(roomName, "meetingInTheAfternoon", getStarMeetingafternoon(), getEndMeetingafternoon());
 			return MeetingsRequests.getMeetingId(meetingTitle, roomName);
 		}catch(Exception e){
 			

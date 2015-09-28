@@ -39,7 +39,7 @@ public class VerifytheStarTimeNextPanel extends TestBaseSetup {
 	
 	@Test
 	public void verifytheStarTimeNextPanel(){
-		meetingId = PreConditionHomePageTC.setupMeeting(meetingTitle, startTime, endTime);
+		meetingId = PreConditionHomePageTC.setupMeeting(roomName,meetingTitle, startTime, endTime);
 		login = new LoginPage(driver);
  		homepage = login.access(roomName);
  		nextHomePage = new NextHomePanel(homepage.getDriver());

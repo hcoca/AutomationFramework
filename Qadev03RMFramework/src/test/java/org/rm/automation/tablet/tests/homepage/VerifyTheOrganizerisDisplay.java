@@ -35,7 +35,7 @@ public class VerifyTheOrganizerisDisplay extends TestBaseSetup  {
 	@BeforeClass
 	public void beforeclass(){
 		roomName = PreConditionHomePageTC.getRoomName();
-		meetingId = PreConditionHomePageTC.createAfterMeeting();
+		meetingId = PreConditionHomePageTC.createAfterMeeting(roomName,"meetingTitle");
 		if(meetingId == null)
 		{
 			LogManager.error("VerifyTheOrganizerisDisplay: "+ "before class fail the meeting is not create");

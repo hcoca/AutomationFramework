@@ -29,7 +29,7 @@ public class VerifyNextTitleWhenThereisMeeting extends TestBaseSetup {
 	@BeforeClass
 	public void beforeclass(){
 		roomName = PreConditionHomePageTC.getRoomName();
-		meetingId = PreConditionHomePageTC.createAfterMeeting();
+		meetingId = PreConditionHomePageTC.createAfterMeeting(roomName , "meeting in the afaternoon");
 		if(meetingId == null)
 		{
 			LogManager.error("VerifyNextTitleWhenThereisMeeting: "+ "before class fail the meeting is not create");
