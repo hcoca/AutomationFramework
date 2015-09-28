@@ -78,7 +78,6 @@ public class AddResourcesPage {
 		return this;
 	}
 	
-	
 	/**
 	 * Method to click on the Save button
 	 * @return

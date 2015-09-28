@@ -53,7 +53,7 @@ public class UpdateDisplayName extends TestBaseSetup{
 				.setDisplayName(displayNameNew)
 				.Save();
 		
-		displayNameActual = resourcesPage.getRowDisplayName();
+		displayNameActual = resourcesPage.getDisplayName();
 		messageError = String.format(messageFormat, displayNameExpected, displayNameActual);
 		Assert.assertEquals(displayNameActual, displayNameExpected, messageError);
 		

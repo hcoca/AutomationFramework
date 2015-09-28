@@ -1,8 +1,7 @@
 package org.rm.automation.admin.pageobjects.resources;
 
-import org.testng.Assert;
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -128,11 +127,19 @@ public class ResourcesPage extends HomePage{
 		WebElement nameElement;
 		
 		List<WebElement> list = GetListResources();
-		element = list.get(list.size()-1);
+		if(list.isEmpty())
+		{
+			throw new NoSuchElementException("No resources were found");
+		}
+		else
+		{
+			element = list.get(list.size()-1);
+			
+			nameElement = element.findElement(By.cssSelector(ResourcesLocators.nameColumnPath));
+			String name = nameElement.getText().replaceAll("\\s","");
+			return name;
+		}
 		
-		nameElement = element.findElement(By.cssSelector(ResourcesLocators.nameColumnPath));
-		String name = nameElement.getText().replaceAll("\\s","");
-		return name;
 	}
 	
 	/**
@@ -201,48 +208,6 @@ public class ResourcesPage extends HomePage{
 		return isElementPresent(By.cssSelector(ResourcesLocators.nameColumnPath), expected);
 	}
 	
-	public String getRowName()
-	{
-		List<WebElement> list = GetListResources();
-		WebElement lastRow = list.get(list.size()-1);
-		WebElement column;
-		String actual;
-		
-		LogManager.info("ResourcesPage: Getting resources name in the row");
-		column = lastRow.findElement(By.cssSelector(ResourcesLocators.nameColumnPath));
-		actual = column.getText().replaceAll("\\s","");
-		return actual;
-	}
-	
-	public String getRowDisplayName()
-	{
-		List<WebElement> list = GetListResources();
-		WebElement lastRow = list.get(list.size()-1);
-		WebElement column;
-		String actual;
-		
-		LogManager.info("ResourcesPage: Verifying the correct DisplayName of the resource was updated");
-		column = lastRow.findElement(By.cssSelector(ResourcesLocators.displayNameColumnPath));
-		actual = column.getText().replaceAll("\\s","");
-		
-		return actual;
-	}
-	
-	public String getRowIcon()
-	{
-		List<WebElement> list = GetListResources();
-		WebElement lastRow = list.get(list.size()-1);
-		WebElement column;
-		String actual;
-		
-		LogManager.info("ResourcesPage: Verifying the correct Icon of the resource was updated");
-		column = lastRow
-				.findElement(By.cssSelector(ResourcesLocators.iconColumnPath))
-				.findElement(By.xpath(ResourcesLocators.iconPath));
-		actual = column.getAttribute("class");
-		return actual;
-	}
-	
 	/**
 	 * Get the list size of the found resources
 	 * @return
@@ -272,7 +237,9 @@ public class ResourcesPage extends HomePage{
 	}
 	
 	private boolean isElementPresent(By by, String expected) {
-	   
+	   try{
+		   element = driver.findElement(By.xpath(ResourcesLocators.rowsPath));
+		   
 	    	WebElement element;
 			
 			List<WebElement> list = GetListResources();
@@ -283,13 +250,15 @@ public class ResourcesPage extends HomePage{
 				element = list.get(list.size()-1);
 		    	WebElement nameElement = element.findElement(by);
 		    	String actual = nameElement.getText().toString().replaceAll("\\s","");
-				System.out.println("actual: " + actual);
-				System.out.println("expected: " + expected);
 				if(actual.equals(expected))
 					return false;
 				else
 					return true;
 			}
+	   }
+	   catch(NoSuchElementException e){
+		   throw e;
+	   }
 	}
 }
 
