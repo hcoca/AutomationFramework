@@ -13,11 +13,11 @@ import org.rm.automation.tablet.pageobjects.TabletPage;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.Waiters;
-import org.testng.Assert;
+import org.rm.automation.tablet.locators.meetings.MeetingsPageLocator;
 
 public class MeetingsPage extends TabletPage{
 	
-	protected final String txtboxOrganizer="txtOrganizer";
+	/*protected final String txtboxOrganizer="txtOrganizer";
 	protected final String txtboxSubject="txtSubject";
 	protected final String txtboxAttendees="(//input[@type='text'])[3]";
 	protected final String txtboxBody="txtBody";
@@ -41,7 +41,7 @@ public class MeetingsPage extends TabletPage{
 	protected final String divErrMsSubject="//small[@ng-show='formErrors.title' and contains(.,'Subject is required')]";
 	protected final String divErrMsOrganizer="//small[@ng-show='formErrors.organizer' and contains(.,'Organizer is required')]";
 	protected final String divErrMsStartTime="//small[@ng-show='formErrors.intervalInvalid' and contains(.,'Start time must be smaller than end time')]";
-	protected final String divConfirmUpdateMs="//div[contains(.,'Meeting successfully updated')]";
+	protected final String divConfirmUpdateMs="//div[contains(.,'Meeting successfully updated')]";*/
 	
 	private WebElement element;
 	
@@ -51,55 +51,55 @@ public class MeetingsPage extends TabletPage{
 	private String port = settings.getProperty("port");
 	private String url = "http://"+server+":"+port;
 	
-	@FindBy	(id=txtboxOrganizer)
+	@FindBy	(id=MeetingsPageLocator.txtboxOrganizer)
 	protected WebElement tbOrganizer;	
-	@FindBy	(id=txtboxSubject)
+	@FindBy	(id=MeetingsPageLocator.txtboxSubject)
 	protected WebElement tbSubject;	
-	@FindBy(xpath=txtboxAttendees)
+	@FindBy(xpath=MeetingsPageLocator.txtboxAttendees)
 	protected WebElement tbAttendees;	
-	@FindBy	(id=txtboxBody)
+	@FindBy	(id=MeetingsPageLocator.txtboxBody)
 	protected WebElement tbBody;	
-	@FindBy	(xpath=txtboxStart)
+	@FindBy	(xpath=MeetingsPageLocator.txtboxStart)
 	protected WebElement tbStartTime;	
-	@FindBy	(xpath=txtboxEnd)
+	@FindBy	(xpath=MeetingsPageLocator.txtboxEnd)
 	WebElement tbEndTime;
-	@FindBy	(xpath=txtboxStartDate)
+	@FindBy	(xpath=MeetingsPageLocator.txtboxStartDate)
 	WebElement tbStartDate;	
-	@FindBy	(xpath=txtboxEndDate)
+	@FindBy	(xpath=MeetingsPageLocator.txtboxEndDate)
 	WebElement tbEndDate;
-	@FindBy	(xpath=bttnCreate)
+	@FindBy	(xpath=MeetingsPageLocator.bttnCreate)
 	protected WebElement btnCreate;	
-	@FindBy	(xpath=txtboxPassword)
+	@FindBy	(xpath=MeetingsPageLocator.txtboxPassword)
 	protected WebElement tbPassword;	
-	@FindBy	(xpath=bttnSave)
+	@FindBy	(xpath=MeetingsPageLocator.bttnSave)
 	protected WebElement btnConfirmMeeting;	
-	@FindBy	(xpath=bttnSaveDelete)
+	@FindBy	(xpath=MeetingsPageLocator.bttnSaveDelete)
 	protected WebElement btnConfirmDeleteMeeting;	
-	@FindBy	(xpath=dvMeeting)
+	@FindBy	(xpath=MeetingsPageLocator.dvMeeting)
 	protected WebElement divMeeting;	
-	@FindBy	(xpath=bttnUpdate)
+	@FindBy	(xpath=MeetingsPageLocator.bttnUpdate)
 	protected WebElement btnUpdate;
-	@FindBy	(xpath=bttnRemove)
+	@FindBy	(xpath=MeetingsPageLocator.bttnRemove)
 	protected WebElement btnRemove;	
-	@FindBy	(xpath=dvAdvice)
+	@FindBy	(xpath=MeetingsPageLocator.dvAdvice)
 	protected WebElement divMeetingAdvice;	
-	@FindBy	(xpath=dvRoomName)
+	@FindBy	(xpath=MeetingsPageLocator.dvRoomName)
 	protected WebElement divRoomName;
-	@FindBy(xpath=icnRemoveAttendee)
+	@FindBy(xpath=MeetingsPageLocator.icnRemoveAttendee)
 	protected WebElement iconRemoveAttendee;
-	@FindBy(xpath=spnAttendee)
+	@FindBy(xpath=MeetingsPageLocator.spnAttendee)
 	protected WebElement spanAttendee;
-	@FindBy(xpath=spnTime)
+	@FindBy(xpath=MeetingsPageLocator.spnTime)
 	protected WebElement spanTime;
-	@FindBy(xpath=spnScheduleTitle)
+	@FindBy(xpath=MeetingsPageLocator.spnScheduleTitle)
 	protected WebElement spanSchedulePageTitle;
-	@FindBy(xpath=divErrMsSubject)
+	@FindBy(xpath=MeetingsPageLocator.divErrMsSubject)
 	WebElement divErrMsjSubject;
-	@FindBy(xpath=divErrMsOrganizer)
+	@FindBy(xpath=MeetingsPageLocator.divErrMsOrganizer)
 	WebElement divErrMsjOrganizer;
-	@FindBy(xpath=divErrMsStartTime)
+	@FindBy(xpath=MeetingsPageLocator.divErrMsStartTime)
 	WebElement divErrMsjStartTime;
-	@FindBy(xpath=divConfirmUpdateMs)
+	@FindBy(xpath=MeetingsPageLocator.divConfirmUpdateMs)
 	WebElement divConfirmUpdateMsj;
 	
 	private WebDriver driver;
@@ -111,20 +111,20 @@ public class MeetingsPage extends TabletPage{
 	}	
 	
 	public MeetingsPage setOrganizer(String name){	
-		Waiters.WaitById(txtboxOrganizer,driver);		
+		Waiters.WaitByVisibilityOfWebElement(tbOrganizer,driver);		
 		tbOrganizer.sendKeys(name);
 		return this;
 	}
 	
 	public MeetingsPage setSubject(String subject){
-		Waiters.WaitById(txtboxSubject,driver);		
+		Waiters.WaitByVisibilityOfWebElement(tbSubject,driver);		
 		tbSubject.clear();
 		tbSubject.sendKeys(subject);
 		return this;
 	}
 	
 	public MeetingsPage setAtendees(String name){
-		Waiters.WaitByXPath(txtboxAttendees,driver);
+		Waiters.WaitByVisibilityOfWebElement(tbAttendees,driver);
 		tbAttendees.clear();
 		tbAttendees.sendKeys(name);
 		tbAttendees.sendKeys(Keys.ENTER);
@@ -132,70 +132,70 @@ public class MeetingsPage extends TabletPage{
 	}
 	
 	public MeetingsPage setBody(String body){
-		Waiters.WaitById(txtboxBody,driver);
+		Waiters.WaitByVisibilityOfWebElement(tbBody,driver);
 		tbBody.clear();
 		tbBody.sendKeys(body);		
 		return this;
 	}
 	
 	public MeetingsPage setDates(String begin, String end){
-		Waiters.WaitByXPath(txtboxStart,driver);		
+		Waiters.WaitByVisibilityOfWebElement(tbStartTime,driver);		
 		tbStartTime.clear();
 		tbStartTime.sendKeys(begin);
 		
-		Waiters.WaitByXPath(txtboxEnd,driver);
+		Waiters.WaitByVisibilityOfWebElement(tbEndTime,driver);
 		tbEndTime.clear();
 		tbEndTime.sendKeys(end);		
 		return this;
 	}
 	
 	public MeetingsPage confirmMeeting(){
-		Waiters.WaitByXPath(bttnCreate,driver);
+		Waiters.WaitByVisibilityOfWebElement(btnCreate,driver);
 		btnCreate.click();
 		return this;
 	}
 	
 	public MeetingsPage confirmUser(String password){
-		Waiters.WaitByXPath(txtboxPassword,driver);
+		Waiters.WaitByVisibilityOfWebElement(tbPassword,driver);
 		tbPassword.clear();
 		tbPassword.sendKeys(password);
 		return this;
 	}
 	
 	public MeetingsPage saveMeeting(){
-		Waiters.WaitByXPath(bttnSave,driver);
+		Waiters.WaitByVisibilityOfWebElement(btnConfirmMeeting,driver);
 		btnConfirmMeeting.click();		
 		return this;
 	}
 	
 	public MeetingsPage saveDeleteMeeting(){
-		Waiters.WaitByXPath(bttnSaveDelete,driver);
+		Waiters.WaitByVisibilityOfWebElement(btnConfirmDeleteMeeting,driver);
 		btnConfirmDeleteMeeting.click();
 		
 		return this;
 	}
 	
 	public MeetingsPage selectMeeting(){
-		Waiters.WaitByXPath(dvMeeting,driver);
+		Waiters.WaitByVisibilityOfWebElement(divMeeting,driver);
 		divMeeting.click();
 		return this;
 	}
 	
 	public MeetingsPage updateMeeting(){
-		Waiters.WaitByXPath(bttnUpdate,driver);
+		Waiters.WaitByVisibilityOfWebElement(btnUpdate,driver);
 		btnUpdate.click();		
 		return this;
 	}
 	
 	public MeetingsPage deleteMeeting(){
-		Waiters.WaitByXPath(bttnRemove,driver);
+		Waiters.WaitByVisibilityOfWebElement(btnRemove,driver);
 		btnRemove.click();		
 		return this;
 	} 
 	
 	public String meetingAdvices(){		
 		String result = "";
-		Waiters.WaitByXPath(dvAdvice,driver);		
+		Waiters.WaitByVisibilityOfWebElement(divMeetingAdvice,driver);		
 		result = divMeetingAdvice.getText();		
 		return result;
 	}
@@ -208,13 +208,13 @@ public class MeetingsPage extends TabletPage{
 			e.printStackTrace();
 		}
 		boolean result = false;
-		Waiters.WaitByXPath(dvRoomName,driver);		
+		Waiters.WaitByVisibilityOfWebElement(divRoomName,driver);		
 		result = divRoomName.getText().equals(roomName)?true:false;	
 		return result;
 	}
 	
 	public MeetingsPage removeAttendee(){
-		Waiters.WaitByXPath(icnRemoveAttendee,driver);
+		Waiters.WaitByVisibilityOfWebElement(iconRemoveAttendee,driver);
 		iconRemoveAttendee.click(); 
 		return this;
 	}	
@@ -222,27 +222,27 @@ public class MeetingsPage extends TabletPage{
 	public boolean isAttendeeAdded(String attendeeName)
 	{		
 		boolean result = false;
-		Waiters.WaitByXPath(spnAttendee,driver);		
+		Waiters.WaitByVisibilityOfWebElement(spanAttendee,driver);		
 		result = (spanAttendee.isDisplayed() && spanAttendee.getText().equals(attendeeName))? true : false;
 		return result;
 	} 
 	
 	public List<WebElement> attendeeRemoved(){
-		List<WebElement> attendees = driver.findElements(By.xpath(spnAttendee));				
+		List<WebElement> attendees = driver.findElements(By.xpath(MeetingsPageLocator.spnTime));				
 		return attendees;
 	}
 	
 	public boolean checkTime(){		
 		boolean result = false;
 		String currentTime = RoomManagerTime.currenTime();
-		Waiters.WaitByXPath(spnTime, driver);
+		Waiters.WaitByVisibilityOfWebElement(spanTime, driver);
 		result = spanTime.getText().equals(currentTime)?true:false;
 		return result;
 	}	
 	
 	public boolean checkIfIconRedirectsToSchedulePage(){
 		boolean result = false;
-		Waiters.WaitByXPath(spnScheduleTitle, driver);		
+		Waiters.WaitByVisibilityOfWebElement(spanSchedulePageTitle, driver);		
 		result = (spanSchedulePageTitle.getText().equals("Schedule") && driver.getCurrentUrl().equals(url+"/tablet/#/schedule"))?true:false;
 		return result;
 	}
@@ -251,63 +251,63 @@ public class MeetingsPage extends TabletPage{
 	 * @return the text associated to the Schedule page.
 	 */
 	public String getScheduleLabelText(){
-		Waiters.WaitByXPath("//span[text() = 'Schedule']",driver);
+		//Waiters.WaitByVisibilityOfWebElement("//span[text() = 'Schedule']",driver);
 		element = driver.findElement(By.xpath("//span[text() = 'Schedule']"));
 
 		return element.getText();
 	}
 	
 	
-	
+	//===> aki fata //
 	public MeetingsPage setStartTime(String begin){
-		Waiters.WaitByXPath("//input[@type='time']",driver);
+		//Waiters.WaitByVisibilityOfWebElement("//input[@type='time']",driver);
 		element = driver.findElement(By.xpath("//input[@type='time']"));
 		element.clear();
 		element.sendKeys(begin);		
 		return this;
 	}
 	public MeetingsPage setEndTime(String end){
-		Waiters.WaitByXPath("(//input[@type='time'])[2]",driver);
+		//Waiters.WaitByVisibilityOfWebElement("(//input[@type='time'])[2]",driver);
 		element = driver.findElement(By.xpath("(//input[@type='time'])[2]"));
 		element.clear();
 		element.sendKeys(end);		
 		return this;
 	}
 	public MeetingsPage selectMeeting(String subjectMeeting){
-		Waiters.WaitByXPath("//span[contains(.,'"+subjectMeeting+"')]",driver);
+		//Waiters.WaitByVisibilityOfWebElement("//span[contains(.,'"+subjectMeeting+"')]",driver);
 		element = driver.findElement(By.xpath("//span[contains(.,'"+subjectMeeting+"')]"));
 		element.click();
 		return this;
 		
 	}
 		public boolean verifyErrorSubjectMessage(){
-		Waiters.WaitByXPath(divErrMsSubject,driver);
+		Waiters.WaitByVisibilityOfWebElement(divErrMsjSubject,driver);
 		return (divErrMsjSubject.isDisplayed());
 	} 
 	
 	public boolean verifyErrorOrganizerMessage(){
-		Waiters.WaitByXPath(divErrMsOrganizer,driver);
+		Waiters.WaitByVisibilityOfWebElement(divErrMsjOrganizer,driver);
 		return (divErrMsjOrganizer.isDisplayed());			
 	}
 	
 	public boolean verifyErrorFromHigherThanToMessage(){
-		Waiters.WaitByXPath(divErrMsStartTime,driver);
+		Waiters.WaitByVisibilityOfWebElement(divErrMsjStartTime,driver);
 		return (divErrMsjStartTime.isDisplayed());			
 	}
 	
 	public String verifyCurrentDateInFromField(){
-		Waiters.WaitByXPath(txtboxStartDate,driver);
+		Waiters.WaitByVisibilityOfWebElement(tbStartDate,driver);
 		String fromValue = tbStartDate.getAttribute("value");
 		return fromValue;	
 	}
 	public String verifyCurrentDateInToField(){
-		Waiters.WaitByXPath(txtboxEndDate,driver);
+		Waiters.WaitByVisibilityOfWebElement(tbEndDate,driver);
 		String toValue = tbEndDate.getAttribute("value");	
 		return toValue;
 
 	}
 	public boolean verifyMeetingWasUpdated(){
-		Waiters.WaitByXPath(divConfirmUpdateMs,driver);
+		Waiters.WaitByVisibilityOfWebElement(divConfirmUpdateMsj,driver);
 		return (divConfirmUpdateMsj.isDisplayed());
 	} 
 }

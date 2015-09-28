@@ -3,20 +3,21 @@ package org.rm.automation.tablet.pageobjects.homepage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.rm.automation.tablet.locators.homepage.NowPanelLocators;
 import org.rm.automation.utils.Waiters;
 
 public class NowPanel extends HomePage{
 
-	@FindBy(xpath = "//div[@class='tile-now meeting']")
+	@FindBy(xpath = NowPanelLocators.mainPanelLocator)
 	private WebElement mainPanel;
 	
-	@FindBy(xpath = "//div[@ng-bind='current._title']")
+	@FindBy(xpath = NowPanelLocators.titleLabelLocator)
 	private WebElement titleLabel;
 	
-	@FindBy(xpath = "//div[@ng-bind='current._organizer']")
+	@FindBy(xpath = NowPanelLocators.organizerLabelLocator)
 	private WebElement organizerLabel;
 
-	@FindBy(xpath = "//div[@ng-bind='current.remaining | timeView']")
+	@FindBy(xpath = NowPanelLocators.timeRemainingLabelLocator)
 	private WebElement timeRemainingLabel;
 	
 	public NowPanel(WebDriver driver) {
