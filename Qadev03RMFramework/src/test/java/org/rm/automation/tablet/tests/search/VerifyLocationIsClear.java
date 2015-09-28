@@ -67,8 +67,6 @@ public class VerifyLocationIsClear extends TestBaseSetup {
 		searchPage = homePage.selectSearchPage()
 				.enableAdvancedSearch()
 				.setLocation(locationName)
-				.clickClearButton()
-				.setLocation("<All>")
 				.clickClearButton();
 		
 		locationActual = searchPage.getLocation();
