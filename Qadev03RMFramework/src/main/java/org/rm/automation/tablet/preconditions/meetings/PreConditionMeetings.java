@@ -70,4 +70,14 @@ public class PreConditionMeetings {
 		}
 		return null;
 	}
+	
+	public static String CreateMeetingInAfternoon(String roomName, String meetingTitle, String[] attendees){
+		try {
+			MeetingsRequests.postMeeting(roomName, meetingTitle, getStarMeetingafternoon(), getEndMeetingafternoon(),attendees);
+			return MeetingsRequests.getMeetingId(meetingTitle, roomName);
+		}catch(Exception e){
+			
+		}
+		return null;
+	}
 }

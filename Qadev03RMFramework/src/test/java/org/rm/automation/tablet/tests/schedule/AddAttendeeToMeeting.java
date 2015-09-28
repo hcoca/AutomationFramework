@@ -1,72 +1,54 @@
 package org.rm.automation.tablet.tests.schedule;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Properties;
-import org.json.simple.JSONObject;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
-import org.rm.automation.utils.LogManager;
+import org.rm.automation.tablet.preconditions.homepage.PostContidionHomePageTC;
+import org.rm.automation.tablet.preconditions.meetings.PreConditionMeetings;
 import org.rm.automation.utils.ReadPropertyValues;
-import org.rm.automation.utils.RoomManagerTime;
 import org.rm.automation.utils.TestBaseSetup;
-import org.rm.automation.utils.api.ConferenceRoomsRequests;
-import org.rm.automation.utils.api.MeetingsRequests;
 import org.testng.annotations.*;
-
 import junit.framework.Assert;
 
+
+
+/**
+ * @author ManuelVasquez
+ *
+ * This Test case is to verify than an attendee can be added to an already
+ * created meeting 
+ */
 public class AddAttendeeToMeeting extends TestBaseSetup{
 
+	//Test Case properties
 	private Properties settings = ReadPropertyValues
 			.getPropertyFile("./Config/settings.properties");
-	private String username = settings.getProperty("username");	
 	private String password = settings.getProperty("password");
-	private String server = settings.getProperty("server");
-	private String port = settings.getProperty("port");
-	private String url = "http://"+server+":"+port;
-	private String startTime = RoomManagerTime.substractMinutesToCurrentTime(1);
-	private String endTime = RoomManagerTime.addMinutesToCurrentTime(3);
-	private String title = "Adding an attendee";
+	private String meetingTitle = "Adding an attendee";
 	private String roomName;
+	private String meetingId;
+	private String attendee = "elmonito@roompro.com";
+	private String errorMessage = "The attendee with the email "+attendee+" was not added correctly";
+	
+	//Page objects
+	private LoginPage login;
+	private HomePage home;
+	private MeetingsPage meetings;
 		
 	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomName = allRooms.get(0).get("displayName").toString();
- 	}	
-	
-	@BeforeMethod
-	public void CreateMeeting(){
-		try{
-			MeetingsRequests.postMeeting(roomName,title,startTime,endTime);
-		}
-		catch(Exception e){
-			System.out.println(e.getStackTrace());
-		}
-	}
-	
-	@AfterMethod
-	public void DeleteMeeting(){
-		try{			
-			String meetingId = MeetingsRequests.getMeetingId(title,roomName);
-			MeetingsRequests.deleteMeeting(meetingId, roomName);
-		}
-		catch(Exception e){
-			System.out.println(e.getStackTrace());
-		}
-	}
+		roomName = PreConditionMeetings.getRoomName();
+		meetingId = PreConditionMeetings.CreateMeetingInAfternoon(roomName, meetingTitle);		
+ 	}
 	
 	@Test
-	public void addAttendee(){
-		LogManager.info("AddAttendeeToMeeting: Executing test case addAttendee");
-		String attendee = "elmonito@roompro.com";
-		String errorMessage = "The attendee with the email "+attendee+" was not added correctly";
+	public void addAttendee(){		
 		
-		LoginPage login = new LoginPage(driver);
-		HomePage home = login.access(url, username, password, roomName);
-		MeetingsPage meetings = home.selectSchedulePage();
+		login = new LoginPage(driver);
+		home = login.access(roomName);
+		meetings = home.selectSchedulePage();
 		
 		meetings.selectMeeting();
 		meetings.setAtendees(attendee);
@@ -75,5 +57,10 @@ public class AddAttendeeToMeeting extends TestBaseSetup{
 		meetings.saveMeeting();		
 		
 		Assert.assertTrue(errorMessage, meetings.isAttendeeAdded(attendee));
+	}
+	
+	@AfterMethod
+	public void DeleteMeeting(){
+		PostContidionHomePageTC.deleteMeeting(meetingId, roomName);		
 	}
 } 
