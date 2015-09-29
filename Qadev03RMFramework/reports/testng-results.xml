@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" total="10" passed="8">
+  <reporter-output>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Screenshot: </b><br/><a href='..\screenshots\Resources_Acceptance_Test_Cases-29_Sep_2015__12_13_41PM.png'><img src='..\screenshots\Resources_Acceptance_Test_Cases-29_Sep_2015__12_13_41PM.png' alt='' height='400' width='600'/><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Screenshot: </b><br/><a href='..\screenshots\Resources_Acceptance_Test_Cases-29_Sep_2015__12_13_59PM.png'><img src='..\screenshots\Resources_Acceptance_Test_Cases-29_Sep_2015__12_13_59PM.png' alt='' height='400' width='600'/><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+    <line>
+      <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+    </line>
+  </reporter-output>
+  <suite name="BVT Resources Test Cases" duration-ms="122470" started-at="2015-09-29T16:13:25Z" finished-at="2015-09-29T16:15:28Z">
+    <groups>
+    </groups>
+    <test name="Resources Acceptance Test Cases" duration-ms="122470" started-at="2015-09-29T16:13:25Z" finished-at="2015-09-29T16:15:28Z">
+      <class name="org.rm.automation.admin.tests.resources.UpdateDescription">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateDescription@68c4039c]" name="Preconditions" is-config="true" duration-ms="73" started-at="2015-09-29T12:14:57Z" finished-at="2015-09-29T12:14:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testUpdateDescription()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateDescription@68c4039c]" name="testUpdateDescription" duration-ms="10546" started-at="2015-09-29T12:14:57Z" finished-at="2015-09-29T12:15:08Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testUpdateDescription -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateDescription@68c4039c]" name="Postconditions" is-config="true" duration-ms="75" started-at="2015-09-29T12:15:08Z" finished-at="2015-09-29T12:15:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.UpdateDescription -->
+      <class name="org.rm.automation.admin.tests.resources.SearchResource">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.SearchResource@5e5792a0]" name="Preconditions" is-config="true" duration-ms="65" started-at="2015-09-29T12:15:08Z" finished-at="2015-09-29T12:15:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testSearchResource()[pri:0, instance:org.rm.automation.admin.tests.resources.SearchResource@5e5792a0]" name="testSearchResource" duration-ms="7234" started-at="2015-09-29T12:15:08Z" finished-at="2015-09-29T12:15:15Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSearchResource -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.SearchResource@5e5792a0]" name="Postconditions" is-config="true" duration-ms="75" started-at="2015-09-29T12:15:15Z" finished-at="2015-09-29T12:15:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.SearchResource -->
+      <class name="org.rm.automation.admin.tests.resources.CreateResource">
+        <test-method status="PASS" signature="testCreateResource()[pri:0, instance:org.rm.automation.admin.tests.resources.CreateResource@47c62251]" name="testCreateResource" duration-ms="10916" started-at="2015-09-29T12:13:59Z" finished-at="2015-09-29T12:14:10Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testCreateResource -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.CreateResource@47c62251]" name="Postconditions" is-config="true" duration-ms="146" started-at="2015-09-29T12:14:10Z" finished-at="2015-09-29T12:14:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.CreateResource -->
+      <class name="org.rm.automation.admin.tests.resources.UpdateIcon">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateIcon@3e6fa38a]" name="Preconditions" is-config="true" duration-ms="62" started-at="2015-09-29T12:14:45Z" finished-at="2015-09-29T12:14:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testUpdateIcon()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateIcon@3e6fa38a]" name="testUpdateIcon" duration-ms="11594" started-at="2015-09-29T12:14:45Z" finished-at="2015-09-29T12:14:57Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testUpdateIcon -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateIcon@3e6fa38a]" name="Postconditions" is-config="true" duration-ms="80" started-at="2015-09-29T12:14:57Z" finished-at="2015-09-29T12:14:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.UpdateIcon -->
+      <class name="org.rm.automation.admin.tests.resources.UpdateName">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateName@6f7fd0e6]" name="Preconditions" is-config="true" duration-ms="58" started-at="2015-09-29T12:14:25Z" finished-at="2015-09-29T12:14:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testUpdateName()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateName@6f7fd0e6]" name="testUpdateName" duration-ms="9725" started-at="2015-09-29T12:14:25Z" finished-at="2015-09-29T12:14:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testUpdateName -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateName@6f7fd0e6]" name="Postconditions" is-config="true" duration-ms="112" started-at="2015-09-29T12:14:35Z" finished-at="2015-09-29T12:14:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.UpdateName -->
+      <class name="org.rm.automation.admin.tests.resources.UpdateDisplayName">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateDisplayName@26653222]" name="Preconditions" is-config="true" duration-ms="71" started-at="2015-09-29T12:14:35Z" finished-at="2015-09-29T12:14:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testUpdateDisplayName()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateDisplayName@26653222]" name="testUpdateDisplayName" duration-ms="10030" started-at="2015-09-29T12:14:35Z" finished-at="2015-09-29T12:14:45Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testUpdateDisplayName -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.UpdateDisplayName@26653222]" name="Postconditions" is-config="true" duration-ms="126" started-at="2015-09-29T12:14:45Z" finished-at="2015-09-29T12:14:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.UpdateDisplayName -->
+      <class name="org.rm.automation.admin.tests.resources.DeleteResourceAnother">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.DeleteResourceAnother@66a3ffec]" name="Preconditions" is-config="true" duration-ms="254" started-at="2015-09-29T12:13:25Z" finished-at="2015-09-29T12:13:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="FAIL" signature="testDeleteResource()[pri:0, instance:org.rm.automation.admin.tests.resources.DeleteResourceAnother@66a3ffec]" name="testDeleteResource" duration-ms="15838" started-at="2015-09-29T12:13:25Z" finished-at="2015-09-29T12:13:41Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"//div[@ng-style='rowStyle(row)']"}
+Command duration or timeout: 10.55 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
+System info: host: 'QAD03PFERCA001', ip: '172.20.200.17', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=40.0.3, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ac102b43-01fd-4241-9f6a-0f64fa1406a0
+*** Element info: {Using=xpath, value=//div[@ng-style='rowStyle(row)']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//div[@ng-style='rowStyle(row)']"}
+Command duration or timeout: 10.55 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
+System info: host: 'QAD03PFERCA001', ip: '172.20.200.17', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=40.0.3, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ac102b43-01fd-4241-9f6a-0f64fa1406a0
+*** Element info: {Using=xpath, value=//div[@ng-style='rowStyle(row)']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:358)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.rm.automation.admin.pageobjects.resources.ResourcesPage.isElementPresent(ResourcesPage.java:243)
+	at org.rm.automation.admin.pageobjects.resources.ResourcesPage.isResourceDeleted(ResourcesPage.java:208)
+	at org.rm.automation.admin.tests.resources.DeleteResourceAnother.testDeleteResource(DeleteResourceAnother.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//div[@ng-style='rowStyle(row)']"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
+System info: host: 'QAD03PFERCA001', ip: '172.20.200.17', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/LUISCA~1/AppData/Local/Temp/4/anonymous3708590208404902821webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10667)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/LUISCA~1/AppData/Local/Temp/4/anonymous3708590208404902821webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+            </line>
+            <line>
+              <![CDATA[<b>Screenshot: </b><br/><a href='..\screenshots\Resources_Acceptance_Test_Cases-29_Sep_2015__12_13_41PM.png'><img src='..\screenshots\Resources_Acceptance_Test_Cases-29_Sep_2015__12_13_41PM.png' alt='' height='400' width='600'/><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testDeleteResource -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.DeleteResourceAnother@66a3ffec]" name="Postconditions" is-config="true" duration-ms="86" started-at="2015-09-29T12:13:41Z" finished-at="2015-09-29T12:13:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.DeleteResourceAnother -->
+      <class name="org.rm.automation.admin.tests.resources.CreateResourceAllFields">
+        <test-method status="PASS" signature="testCreateResourceAllFields()[pri:0, instance:org.rm.automation.admin.tests.resources.CreateResourceAllFields@77caeb3e]" name="testCreateResourceAllFields" duration-ms="14521" started-at="2015-09-29T12:14:11Z" finished-at="2015-09-29T12:14:25Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testCreateResourceAllFields -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.CreateResourceAllFields@77caeb3e]" name="Postconditions" is-config="true" duration-ms="104" started-at="2015-09-29T12:14:25Z" finished-at="2015-09-29T12:14:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.CreateResourceAllFields -->
+      <class name="org.rm.automation.admin.tests.resources.CreateResourceAnother">
+        <test-method status="FAIL" signature="testCreateResource()[pri:0, instance:org.rm.automation.admin.tests.resources.CreateResourceAnother@1d057a39]" name="testCreateResource" duration-ms="17639" started-at="2015-09-29T12:13:42Z" finished-at="2015-09-29T12:13:59Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[No resources were found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
+System info: host: 'QAD03PFERCA001', ip: '172.20.200.17', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: No resources were found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
+System info: host: 'QAD03PFERCA001', ip: '172.20.200.17', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: driver.version: unknown
+	at org.rm.automation.admin.pageobjects.resources.ResourcesPage.getName(ResourcesPage.java:132)
+	at org.rm.automation.admin.tests.resources.CreateResourceAnother.testCreateResource(CreateResourceAnother.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+            </line>
+            <line>
+              <![CDATA[<b>Screenshot: </b><br/><a href='..\screenshots\Resources_Acceptance_Test_Cases-29_Sep_2015__12_13_59PM.png'><img src='..\screenshots\Resources_Acceptance_Test_Cases-29_Sep_2015__12_13_59PM.png' alt='' height='400' width='600'/><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testCreateResource -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.CreateResourceAnother@1d057a39]" name="Postconditions" is-config="true" duration-ms="158" started-at="2015-09-29T12:13:59Z" finished-at="2015-09-29T12:13:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.CreateResourceAnother -->
+      <class name="org.rm.automation.admin.tests.resources.DeleteResource">
+        <test-method status="PASS" signature="Preconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.DeleteResource@3532ec19]" name="Preconditions" is-config="true" duration-ms="130" started-at="2015-09-29T12:15:15Z" finished-at="2015-09-29T12:15:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preconditions -->
+        <test-method status="PASS" signature="testDeleteResource()[pri:0, instance:org.rm.automation.admin.tests.resources.DeleteResource@3532ec19]" name="testDeleteResource" duration-ms="12297" started-at="2015-09-29T12:15:15Z" finished-at="2015-09-29T12:15:28Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Test Case Title: Resources Acceptance Test Cases</b><br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testDeleteResource -->
+        <test-method status="PASS" signature="Postconditions()[pri:0, instance:org.rm.automation.admin.tests.resources.DeleteResource@3532ec19]" name="Postconditions" is-config="true" duration-ms="82" started-at="2015-09-29T12:15:28Z" finished-at="2015-09-29T12:15:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Postconditions -->
+      </class> <!-- org.rm.automation.admin.tests.resources.DeleteResource -->
+    </test> <!-- Resources Acceptance Test Cases -->
+  </suite> <!-- BVT Resources Test Cases -->
+</testng-results>

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-BVT_Resources_Test_Cases">
+              <span class="suite-name border-failed">BVT Resources Test Cases</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-BVT_Resources_Test_Cases">
+                    <span>C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\TestSuites\Resources.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-BVT_Resources_Test_Cases">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-BVT_Resources_Test_Cases">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-BVT_Resources_Test_Cases">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-BVT_Resources_Test_Cases">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-BVT_Resources_Test_Cases">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-BVT_Resources_Test_Cases">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">10 methods, 2 failed,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-BVT_Resources_Test_Cases" class="hide-methods failed suite-BVT_Resources_Test_Cases"> (hide)</a> <!-- hide-methods failed suite-BVT_Resources_Test_Cases -->
+                      <a href="#" panel-name="suite-BVT_Resources_Test_Cases" class="show-methods failed suite-BVT_Resources_Test_Cases"> (show)</a> <!-- show-methods failed suite-BVT_Resources_Test_Cases -->
+                    </span>
+                    <div class="method-list-content failed suite-BVT_Resources_Test_Cases">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BVT_Resources_Test_Cases" title="org.rm.automation.admin.tests.resources.CreateResourceAnother" hash-for-method="testCreateResource">testCreateResource</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BVT_Resources_Test_Cases" title="org.rm.automation.admin.tests.resources.DeleteResourceAnother" hash-for-method="testDeleteResource">testDeleteResource</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-BVT_Resources_Test_Cases -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-BVT_Resources_Test_Cases" class="hide-methods passed suite-BVT_Resources_Test_Cases"> (hide)</a> <!-- hide-methods passed suite-BVT_Resources_Test_Cases -->
+                      <a href="#" panel-name="suite-BVT_Resources_Test_Cases" class="show-methods passed suite-BVT_Resources_Test_Cases"> (show)</a> <!-- show-methods passed suite-BVT_Resources_Test_Cases -->
+                    </span>
+                    <div class="method-list-content passed suite-BVT_Resources_Test_Cases">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BVT_Resources_Test_Cases" title="org.rm.automation.admin.tests.resources.CreateResource" hash-for-method="testCreateResource">testCreateResource</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BVT_Resources_Test_Cases" title="org.rm.automation.admin.tests.resources.CreateResourceAllFields" hash-for-method="testCreateResourceAllFields">testCreateResourceAllFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BVT_Resources_Test_Cases" title="org.rm.automation.admin.tests.resources.DeleteResource" hash-for-method="testDeleteResource">testDeleteResource</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BVT_Resources_Test_Cases" title="org.rm.automation.admin.tests.resources.SearchResource" hash-for-method="testSearchResource">testSearchResource</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BVT_Resources_Test_Cases" title="org.rm.automation.admin.tests.resources.UpdateDescription" hash-for-method="testUpdateDescription">testUpdateDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BVT_Resources_Test_Cases" title="org.rm.automation.admin.tests.resources.UpdateDisplayName" hash-for-method="testUpdateDisplayName">testUpdateDisplayName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BVT_Resources_Test_Cases" title="org.rm.automation.admin.tests.resources.UpdateIcon" hash-for-method="testUpdateIcon">testUpdateIcon</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BVT_Resources_Test_Cases" title="org.rm.automation.admin.tests.resources.UpdateName" hash-for-method="testUpdateName">testUpdateName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-BVT_Resources_Test_Cases -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-BVT_Resources_Test_Cases" class="panel BVT_Resources_Test_Cases">
+          <div class="suite-BVT_Resources_Test_Cases-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.CreateResourceAnother</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateResource">
+                  </a> <!-- testCreateResource -->
+                  <span class="method-name">testCreateResource</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: No resources were found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.47.1&apos;, revision: &apos;unknown&apos;, time: &apos;2015-07-30 11:02:44&apos;
+System info: host: &apos;QAD03PFERCA001&apos;, ip: &apos;172.20.200.17&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_51&apos;
+Driver info: driver.version: unknown
+	at org.rm.automation.admin.pageobjects.resources.ResourcesPage.getName(ResourcesPage.java:132)
+	at org.rm.automation.admin.tests.resources.CreateResourceAnother.testCreateResource(CreateResourceAnother.java:55)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BVT_Resources_Test_Cases-class-failed -->
+          <div class="suite-BVT_Resources_Test_Cases-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.DeleteResourceAnother</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteResource">
+                  </a> <!-- testDeleteResource -->
+                  <span class="method-name">testDeleteResource</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@ng-style=&apos;rowStyle(row)&apos;]&quot;}
+Command duration or timeout: 10.55 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.47.1&apos;, revision: &apos;unknown&apos;, time: &apos;2015-07-30 11:02:44&apos;
+System info: host: &apos;QAD03PFERCA001&apos;, ip: &apos;172.20.200.17&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_51&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=40.0.3, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ac102b43-01fd-4241-9f6a-0f64fa1406a0
+*** Element info: {Using=xpath, value=//div[@ng-style=&apos;rowStyle(row)&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:358)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.rm.automation.admin.pageobjects.resources.ResourcesPage.isElementPresent(ResourcesPage.java:243)
+	at org.rm.automation.admin.pageobjects.resources.ResourcesPage.isResourceDeleted(ResourcesPage.java:208)
+	at org.rm.automation.admin.tests.resources.DeleteResourceAnother.testDeleteResource(DeleteResourceAnother.java:67)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@ng-style=&apos;rowStyle(row)&apos;]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.47.1&apos;, revision: &apos;unknown&apos;, time: &apos;2015-07-30 11:02:44&apos;
+System info: host: &apos;QAD03PFERCA001&apos;, ip: &apos;172.20.200.17&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_51&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/LUISCA~1/AppData/Local/Temp/4/anonymous3708590208404902821webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10667)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/LUISCA~1/AppData/Local/Temp/4/anonymous3708590208404902821webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BVT_Resources_Test_Cases-class-failed -->
+          <div class="suite-BVT_Resources_Test_Cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.SearchResource</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchResource">
+                  </a> <!-- testSearchResource -->
+                  <span class="method-name">testSearchResource</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BVT_Resources_Test_Cases-class-passed -->
+          <div class="suite-BVT_Resources_Test_Cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.UpdateDisplayName</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdateDisplayName">
+                  </a> <!-- testUpdateDisplayName -->
+                  <span class="method-name">testUpdateDisplayName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BVT_Resources_Test_Cases-class-passed -->
+          <div class="suite-BVT_Resources_Test_Cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.DeleteResource</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteResource">
+                  </a> <!-- testDeleteResource -->
+                  <span class="method-name">testDeleteResource</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BVT_Resources_Test_Cases-class-passed -->
+          <div class="suite-BVT_Resources_Test_Cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.UpdateDescription</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdateDescription">
+                  </a> <!-- testUpdateDescription -->
+                  <span class="method-name">testUpdateDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BVT_Resources_Test_Cases-class-passed -->
+          <div class="suite-BVT_Resources_Test_Cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.UpdateName</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdateName">
+                  </a> <!-- testUpdateName -->
+                  <span class="method-name">testUpdateName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BVT_Resources_Test_Cases-class-passed -->
+          <div class="suite-BVT_Resources_Test_Cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.UpdateIcon</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdateIcon">
+                  </a> <!-- testUpdateIcon -->
+                  <span class="method-name">testUpdateIcon</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BVT_Resources_Test_Cases-class-passed -->
+          <div class="suite-BVT_Resources_Test_Cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.CreateResource</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateResource">
+                  </a> <!-- testCreateResource -->
+                  <span class="method-name">testCreateResource</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BVT_Resources_Test_Cases-class-passed -->
+          <div class="suite-BVT_Resources_Test_Cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.rm.automation.admin.tests.resources.CreateResourceAllFields</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateResourceAllFields">
+                  </a> <!-- testCreateResourceAllFields -->
+                  <span class="method-name">testCreateResourceAllFields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BVT_Resources_Test_Cases-class-passed -->
+        </div> <!-- panel BVT_Resources_Test_Cases -->
+        <div panel-name="test-xml-BVT_Resources_Test_Cases" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\SELENIUMROOM\QADEV03RoomManager\Qadev03RMFramework\TestSuites\Resources.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;BVT Resources Test Cases&quot;&gt;
+  &lt;test name=&quot;Resources Acceptance Test Cases&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.DeleteResourceAnother&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.CreateResourceAnother&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.CreateResource&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.CreateResourceAllFields&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.UpdateName&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.UpdateDisplayName&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.UpdateIcon&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.UpdateDescription&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.SearchResource&quot;/&gt;
+      &lt;class name=&quot;org.rm.automation.admin.tests.resources.DeleteResource&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Resources Acceptance Test Cases --&gt;
+&lt;/suite&gt; &lt;!-- BVT Resources Test Cases --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-BVT_Resources_Test_Cases" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for BVT Resources Test Cases</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Resources Acceptance Test Cases (10 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-BVT_Resources_Test_Cases" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for BVT Resources Test Cases</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-BVT_Resources_Test_Cases" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for BVT Resources Test Cases</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_BVT_Resources_Test_Cases');
+function tableData_BVT_Resources_Test_Cases() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(10);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testCreateResource')
+data.setCell(0, 2, 'org.rm.automation.admin.tests.resources.CreateResourceAnother')
+data.setCell(0, 3, 17639);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testDeleteResource')
+data.setCell(1, 2, 'org.rm.automation.admin.tests.resources.DeleteResourceAnother')
+data.setCell(1, 3, 15838);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testCreateResourceAllFields')
+data.setCell(2, 2, 'org.rm.automation.admin.tests.resources.CreateResourceAllFields')
+data.setCell(2, 3, 14521);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testDeleteResource')
+data.setCell(3, 2, 'org.rm.automation.admin.tests.resources.DeleteResource')
+data.setCell(3, 3, 12297);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testUpdateIcon')
+data.setCell(4, 2, 'org.rm.automation.admin.tests.resources.UpdateIcon')
+data.setCell(4, 3, 11594);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testCreateResource')
+data.setCell(5, 2, 'org.rm.automation.admin.tests.resources.CreateResource')
+data.setCell(5, 3, 10916);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testUpdateDescription')
+data.setCell(6, 2, 'org.rm.automation.admin.tests.resources.UpdateDescription')
+data.setCell(6, 3, 10546);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testUpdateDisplayName')
+data.setCell(7, 2, 'org.rm.automation.admin.tests.resources.UpdateDisplayName')
+data.setCell(7, 3, 10030);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testUpdateName')
+data.setCell(8, 2, 'org.rm.automation.admin.tests.resources.UpdateName')
+data.setCell(8, 3, 9725);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testSearchResource')
+data.setCell(9, 2, 'org.rm.automation.admin.tests.resources.SearchResource')
+data.setCell(9, 3, 7234);
+window.suiteTableData['BVT_Resources_Test_Cases']= { tableData: data, tableDiv: 'times-div-BVT_Resources_Test_Cases'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <div id="times-div-BVT_Resources_Test_Cases">
+              </div> <!-- times-div-BVT_Resources_Test_Cases -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-BVT_Resources_Test_Cases" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for BVT Resources Test Cases</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testDeleteResource</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Resources Acceptance Test Cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testCreateResourceAllFields</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Resources Acceptance Test Cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testUpdateDescription</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Resources Acceptance Test Cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testSearchResource</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Resources Acceptance Test Cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testUpdateIcon</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Resources Acceptance Test Cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testUpdateDisplayName</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Resources Acceptance Test Cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testCreateResource</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Resources Acceptance Test Cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testUpdateName</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Resources Acceptance Test Cases</b><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testCreateResource</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Resources Acceptance Test Cases</b><br/></span>
+                <span class="reporter-method-output"><b>Screenshot: </b><br/><a href='..\screenshots\Resources_Acceptance_Test_Cases-29_Sep_2015__12_13_59PM.png'><img src='..\screenshots\Resources_Acceptance_Test_Cases-29_Sep_2015__12_13_59PM.png' alt='' height='400' width='600'/><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testDeleteResource</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><b>Test Case Title: Resources Acceptance Test Cases</b><br/></span>
+                <span class="reporter-method-output"><b>Screenshot: </b><br/><a href='..\screenshots\Resources_Acceptance_Test_Cases-29_Sep_2015__12_13_41PM.png'><img src='..\screenshots\Resources_Acceptance_Test_Cases-29_Sep_2015__12_13_41PM.png' alt='' height='400' width='600'/><br/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-BVT_Resources_Test_Cases" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-BVT_Resources_Test_Cases" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.DeleteResourceAnother</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Preconditions</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testDeleteResource</span>
+                <span class="method-start">255 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">16258 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.CreateResourceAnother</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testCreateResource</span>
+                <span class="method-start">16346 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">34158 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.CreateResource</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testCreateResource</span>
+                <span class="method-start">34317 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">45235 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.CreateResourceAllFields</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testCreateResourceAllFields</span>
+                <span class="method-start">45382 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">59903 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.UpdateName</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Preconditions</span>
+                <span class="method-start">60007 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testUpdateName</span>
+                <span class="method-start">60065 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">69790 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.UpdateDisplayName</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Preconditions</span>
+                <span class="method-start">69902 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testUpdateDisplayName</span>
+                <span class="method-start">69973 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">80003 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.UpdateIcon</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Preconditions</span>
+                <span class="method-start">80129 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testUpdateIcon</span>
+                <span class="method-start">80191 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">91787 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.UpdateDescription</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Preconditions</span>
+                <span class="method-start">91867 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testUpdateDescription</span>
+                <span class="method-start">91940 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">102487 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.SearchResource</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Preconditions</span>
+                <span class="method-start">102563 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchResource</span>
+                <span class="method-start">102628 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">109863 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.rm.automation.admin.tests.resources.DeleteResource</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Preconditions</span>
+                <span class="method-start">109938 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testDeleteResource</span>
+                <span class="method-start">110068 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Postconditions</span>
+                <span class="method-start">122366 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

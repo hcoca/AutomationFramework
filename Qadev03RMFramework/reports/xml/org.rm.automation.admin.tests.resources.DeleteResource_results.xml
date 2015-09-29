@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Resources Acceptance Test Cases"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="12.297">
+  <properties />
+  
+  
+            <testcase name="testDeleteResource" time="12.297" classname="org.rm.automation.admin.tests.resources.DeleteResource" />
+      
+</testsuite>

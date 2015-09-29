@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Resources Acceptance Test Cases"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="14.521">
+  <properties />
+  
+  
+            <testcase name="testCreateResourceAllFields" time="14.521" classname="org.rm.automation.admin.tests.resources.CreateResourceAllFields" />
+      
+</testsuite>

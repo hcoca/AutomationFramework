@@ -1,0 +1,45 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 132.339 sec <<< FAILURE! - in TestSuite
+testDeleteResource(org.rm.automation.admin.tests.resources.DeleteResourceAnother)  Time elapsed: 16.022 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//div[@ng-style='rowStyle(row)']"}
+Command duration or timeout: 10.55 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
+System info: host: 'QAD03PFERCA001', ip: '172.20.200.17', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=40.0.3, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ac102b43-01fd-4241-9f6a-0f64fa1406a0
+*** Element info: {Using=xpath, value=//div[@ng-style='rowStyle(row)']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:358)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.rm.automation.admin.pageobjects.resources.ResourcesPage.isElementPresent(ResourcesPage.java:243)
+	at org.rm.automation.admin.pageobjects.resources.ResourcesPage.isResourceDeleted(ResourcesPage.java:208)
+	at org.rm.automation.admin.tests.resources.DeleteResourceAnother.testDeleteResource(DeleteResourceAnother.java:67)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//div[@ng-style='rowStyle(row)']"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
+System info: host: 'QAD03PFERCA001', ip: '172.20.200.17', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/LUISCA~1/AppData/Local/Temp/4/anonymous3708590208404902821webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10667)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/LUISCA~1/AppData/Local/Temp/4/anonymous3708590208404902821webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+
+testCreateResource(org.rm.automation.admin.tests.resources.CreateResourceAnother)  Time elapsed: 17.802 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: No resources were found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
+System info: host: 'QAD03PFERCA001', ip: '172.20.200.17', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: driver.version: unknown
+	at org.rm.automation.admin.pageobjects.resources.ResourcesPage.getName(ResourcesPage.java:132)
+	at org.rm.automation.admin.tests.resources.CreateResourceAnother.testCreateResource(CreateResourceAnother.java:55)
+
