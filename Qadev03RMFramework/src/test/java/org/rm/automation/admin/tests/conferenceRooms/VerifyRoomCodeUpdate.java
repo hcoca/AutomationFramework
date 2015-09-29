@@ -3,8 +3,7 @@ package org.rm.automation.admin.tests.conferenceRooms;
 
 import java.util.Properties;
 
-import org.rm.automation.admin.conditions.conferenceRooms.PostConditionConferenceRooms;
-import org.rm.automation.admin.conditions.conferenceRooms.PreConditionConferenceRooms;
+import org.json.simple.JSONObject;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
@@ -16,6 +15,7 @@ import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.AssertJUnit;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
@@ -47,10 +47,11 @@ public class VerifyRoomCodeUpdate extends TestBaseSetup{
 	
  	@BeforeClass
  	public void setup(){
+ 		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
  		LogManager.info("VerifyRoomCodeUpdate: Executing Precondition, getting a room");
-		roomId = PreConditionConferenceRooms.getRoomId();
-		roomCode = PreConditionConferenceRooms.getRoomCode();
-		roomName = PreConditionConferenceRooms.getRoomName();
+		roomId = room.get("_id").toString();
+		roomCode = room.get("code").toString();
+		roomName = room.get("displayName").toString();
  	}
 	
 	@Test
@@ -74,7 +75,7 @@ public class VerifyRoomCodeUpdate extends TestBaseSetup{
 	
 	@AfterTest
 	public void tearDown(){
+		ConferenceRoomsRequests.setValue(roomId, "code", roomCode);
 		LogManager.info("VerifyRoomCodeUpdate: Executing Postcondition, updating code to its original value");
-		PostConditionConferenceRooms.setConferenceRoomCode(roomId, "code", roomCode);
 	}
 }

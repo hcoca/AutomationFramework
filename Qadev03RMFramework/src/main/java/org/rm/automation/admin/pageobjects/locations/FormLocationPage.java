@@ -3,8 +3,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.rm.automation.admin.locators.locations.FormLocationPageLocators;
 import org.rm.automation.admin.pageobjects.HomePage;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
 import org.testng.Assert;
 import org.openqa.selenium.support.FindBy;
@@ -12,27 +12,31 @@ import org.openqa.selenium.support.FindBy;
 public class FormLocationPage {
 	private WebDriver driver;
 	private By locationDiv;
-	@FindBy(xpath=FormLocationPageLocators.infoLinkPath)
+	@FindBy(xpath="//a[contains(.,'Location Info')]")
 	  WebElement infoLink;
-	@FindBy(xpath=FormLocationPageLocators.associatedLinkPath)
-	  WebElement associatedLink;	
-	@FindBy(id=FormLocationPageLocators.nameTextBoxId)
+//	@FindBy(xpath="//a[contains(.,'Location Associations')]")
+//	  WebElement associatedLink;
+	@FindBy(linkText = "Location Associations")
+	  WebElement associatedLink;
+	
+	@FindBy(id="location-add-name")
 	  WebElement nameTextBox;
-	@FindBy(id=FormLocationPageLocators.displayNameTextBoxId)
+	@FindBy(id="location-add-display-name")
 	  WebElement displayNameTextBox;
-	@FindBy(xpath=FormLocationPageLocators.locationsListBtnPath)
+	@FindBy(xpath="//button[@ng-click='toggleTree()']")
 	  WebElement locationsListBtn;
-	@FindBy(xpath=FormLocationPageLocators.organizationListBtnPath)
+	@FindBy(xpath="//span[@ng-click='collapse($event)']")
 	  WebElement organizationListBtn;	
-	@FindBy(id=FormLocationPageLocators.descriptionTextBoxId)
+	@FindBy(id="location-add-description")
 	  WebElement descriptionTextBox;
-	@FindBy(id=FormLocationPageLocators.parentLocationTextBoxId)
+	@FindBy(id="location-add-parent-location")
 	  WebElement parentLocationTextBox;
-	@FindBy(xpath=FormLocationPageLocators.saveBtnPath)
+	@FindBy(xpath="//button[@ng-click='save()']")
 	  WebElement saveBtn;
-	@FindBy(xpath=FormLocationPageLocators.cancelBtnPath)
-	  WebElement cancelBtn;	
-	@FindBy(xpath=FormLocationPageLocators.locationsDivPath)
+	@FindBy(xpath="//button[@ng-click='cancel()']")
+	  WebElement cancelBtn;
+	
+	@FindBy(xpath="//div[contains(.,'aaa')]")
 	  WebElement locationsDiv;
 	
 	public FormLocationPage(WebDriver driver) {
@@ -41,39 +45,44 @@ public class FormLocationPage {
 	}
 	
 	public void enterName(String name) {
-		Waiters.WaitByVisibilityOfWebElement(nameTextBox, driver);
+		Waiters.WaitById("location-add-name", driver);
 		if(nameTextBox.isDisplayed())
 		{
+			LogManager.info("FormLocationPage: Entering the name of the location");
 			nameTextBox.clear();
 			nameTextBox.sendKeys(name);
 		}
 	}
 	
 	public void enterDisplayName(String displayName) {
-		Waiters.WaitByVisibilityOfWebElement(displayNameTextBox, driver);
+		Waiters.WaitById("location-add-display-name", driver);
 		if(displayNameTextBox.isDisplayed())
 		{
+			LogManager.info("FormLocationPage: Entering the Display Name of the location");
 			displayNameTextBox.clear();
 			displayNameTextBox.sendKeys(displayName);
 		}
 	}
 	private void enterDescription(String description) {
-		Waiters.WaitByVisibilityOfWebElement(descriptionTextBox, driver);
+		Waiters.WaitById("location-add-description", driver);
 		if(descriptionTextBox.isDisplayed())
 		{
+			LogManager.info("FormLocationPage: Entering the description of the location");
 			descriptionTextBox.clear();
 			descriptionTextBox.sendKeys(description);
 		}		
 	}
 	public FormLocationPage setParentLocation (String name)
 	{
-		Waiters.WaitByVisibilityOfWebElement(locationsListBtn, driver);
+		Waiters.WaitByXPath("//button[@ng-click='toggleTree()']", driver);
 		if(locationsListBtn.isDisplayed())
 		{
+			LogManager.info("FormLocationPage: Displaying dropDownList locations ");
 			locationsListBtn.click();
-			Waiters.WaitByVisibilityOfWebElement(organizationListBtn, driver);
+			Waiters.WaitByXPath("//span[@ng-click='collapse($event)']", driver);
 			if(organizationListBtn.isDisplayed())
 			{
+				LogManager.info("FormLocationPage: Displaying locations inside organization");
 				organizationListBtn.click();
 				Waiters.WaitByXPath("//b[contains(.,'"+name+"')]", driver);
 				locationDiv = By.xpath("//b[contains(.,'"+name+"')]");
@@ -87,22 +96,25 @@ public class FormLocationPage {
 		return this;
 	}
 	public void clickOnSave() {
-		Waiters.WaitByVisibilityOfWebElement(saveBtn, driver);
+		Waiters.WaitByXPath("//button[@ng-click='save()']", driver);
 		if(saveBtn.isDisplayed())
 		{
+			LogManager.info("FormLocationPage: Click on Save button to save the changes");
 			saveBtn.click();
 		}
 	}
 	public void clickOnCancel() {
-		Waiters.WaitByVisibilityOfWebElement(cancelBtn, driver);
+		Waiters.WaitByXPath("//button[@ng-click='cancel()']", driver);
 		if(cancelBtn.isDisplayed())
 		{
+			LogManager.info("FormLocationPage: Click on cancel button");
 			cancelBtn.click();
 		}
 	}
 	public boolean verifyParentLocation(String nameParent)
 	{
-		Waiters.WaitByVisibilityOfWebElement(parentLocationTextBox, driver);
+		LogManager.info("FormLocationPage: Checking location parent");
+		Waiters.WaitById("location-add-parent-location", driver);
 		String actualParent = parentLocationTextBox.getText();
 		return actualParent.equals("organization/"+nameParent);		
 	}
@@ -130,8 +142,10 @@ public class FormLocationPage {
 	}
 	public FormAssociateRoomPage gotoLocationsAssociations(){
 		Waiters.WaitByVisibilityOfWebElement(associatedLink, driver);
+//		Waiters.WaitByXPath("//a[contains(.,'Location Associations')]", driver);
 		if(associatedLink.isDisplayed())
 		{
+			LogManager.info("FormLocationPage: Selecting Location Associations option");
 			associatedLink.click();
 		}
 		return new FormAssociateRoomPage(driver);

@@ -1,4 +1,4 @@
-package org.rm.automation.tablet.conditions.meetings;
+package org.rm.automation.tablet.preconditions.meetings;
 
 import java.util.ArrayList;
 import java.util.Calendar;

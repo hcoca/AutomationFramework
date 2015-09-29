@@ -8,30 +8,27 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.rm.automation.admin.locators.emailServers.EmailServerPageLocator;
 import org.rm.automation.utils.LogManager;
 
 
 
 
 public class EmailServersPage {
-
-	
 	WebDriver driver;
-  @FindBy(xpath=EmailServerPageLocator.buttonaddLocator)
+  @FindBy(xpath="//button[@ng-click='openModal()']")
   WebElement buttonadd;
   
-  @FindBy(xpath=EmailServerPageLocator.buttremoveLocator)
+  @FindBy(xpath="//button[@ng-click='openDeleteDialog()']")
   WebElement buttremove;
   
   
   // pannel of the servervice exchance
-  @FindBy(css=EmailServerPageLocator.panelExchangesLocator)
+  @FindBy(css="h4.ng-binding")
   WebElement panelExchanges;
   // texto para add server
 
 
-  @FindBy(className=EmailServerPageLocator.testexangeaddedLocator)
+  @FindBy(className="ng-binding")
   WebElement testexangeadded;
   
   

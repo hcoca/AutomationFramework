@@ -2,16 +2,20 @@ package org.rm.automation.admin.tests.conferenceRooms;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+
+import java.util.List;
 import java.util.Properties;
 
-import org.rm.automation.admin.conditions.conferenceRooms.PreConditionConferenceRooms;
+import org.json.simple.JSONObject;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
+import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 
 public class VerifyTotalConferenceRooms extends TestBaseSetup{
 	private Properties settings = ReadPropertyValues
@@ -30,12 +34,14 @@ public class VerifyTotalConferenceRooms extends TestBaseSetup{
 	
 	@BeforeClass
  	public void setup(){
+ 		List<JSONObject> roomsList = ConferenceRoomsRequests.getRooms();
  		LogManager.info("VerifyTotalConferenceRooms: Executing Precondition, getting all rooms");
- 		numberOfRooms = PreConditionConferenceRooms.getNumberOfRooms();
+ 		numberOfRooms = roomsList.size();
  	}
 	
 	@Test
 	public void verifyTotalConferenceRooms(){
+		LogManager.info("VerifyTotalConferenceRooms: Executing Test Case");
 		
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.SignIn(userName, password);

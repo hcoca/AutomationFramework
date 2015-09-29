@@ -1,12 +1,11 @@
 package org.rm.automation.tablet.tests.homepage;
 
 import java.io.IOException;
-
-import org.rm.automation.tablet.conditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.homepage.TimeLinePanel;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
+import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.TestBaseSetup;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
