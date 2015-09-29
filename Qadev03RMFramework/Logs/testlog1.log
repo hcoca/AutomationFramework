@@ -1,0 +1,249 @@
+2015-09-28 19:07:52,779 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:07:52,789 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:07:52,869 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:07:52,870 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:07:53,007 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: New Meeting in the room: b21 from: 2015-09-28T17:00:52.000Z to: 2015-09-28T18:00:53.000Z
+2015-09-28 19:07:53,194 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:07:53,834 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:07:57,792 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-28 19:07:57,792 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-28 19:07:59,013 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-28 19:07:59,649 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-28 19:08:02,160 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-28 19:08:02,969 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-28 19:08:04,315 [main] INFO org.rm.automation.utils.LogManager - HomePage <=> TabletPage : Clicking on Schedule button
+2015-09-28 19:08:14,528 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting:  in the room: b21
+2015-09-28 19:08:14,602 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:08:14,649 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-28 19:08:16,083 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-28 19:08:16,083 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-28 19:08:38,887 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:08:38,892 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:08:39,232 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:08:39,232 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:08:39,409 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: New Meeting in the room: b21 from: 2015-09-28T17:00:39.000Z to: 2015-09-28T18:00:39.000Z
+2015-09-28 19:08:39,521 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:08:39,985 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:08:43,008 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-28 19:08:43,008 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-28 19:08:43,827 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-28 19:08:44,654 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-28 19:08:46,948 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-28 19:08:47,879 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-28 19:08:49,127 [main] INFO org.rm.automation.utils.LogManager - HomePage <=> TabletPage : Clicking on Schedule button
+2015-09-28 19:08:59,263 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting:  in the room: b21
+2015-09-28 19:08:59,353 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:08:59,449 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-28 19:09:01,732 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-28 19:09:01,733 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-28 19:10:36,266 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:10:36,271 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:10:36,607 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:10:36,608 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:10:36,755 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: New Meeting in the room: C305 from: 2015-09-28T17:00:36.000Z to: 2015-09-28T18:00:36.000Z
+2015-09-28 19:10:37,032 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:10:37,514 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:10:39,825 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-28 19:10:39,843 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-28 19:10:41,501 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-28 19:10:41,840 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-28 19:10:44,259 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-28 19:10:45,354 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-28 19:10:46,292 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-28 19:10:46,993 [main] INFO org.rm.automation.utils.LogManager - HomePage <=> TabletPage : Clicking on Schedule button
+2015-09-28 19:10:54,008 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 5609c8e9e744c6200539f86e in the room: C305
+2015-09-28 19:10:54,117 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:10:54,450 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-28 19:10:56,146 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-28 19:10:56,147 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-28 19:11:30,514 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:11:30,531 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:11:30,749 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:11:30,750 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:11:33,695 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-28 19:11:33,696 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-28 19:11:35,140 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-28 19:11:35,543 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-28 19:11:37,945 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-28 19:11:38,896 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-28 19:11:40,010 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-28 19:11:40,772 [main] INFO org.rm.automation.utils.LogManager - HomePage <=> TabletPage : Clicking on Schedule button
+2015-09-28 19:11:46,570 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-28 19:11:46,571 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-28 19:12:09,822 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:12:09,827 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:12:10,143 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:12:10,143 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:12:13,826 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-28 19:12:13,826 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-28 19:12:14,889 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-28 19:12:15,142 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-28 19:12:17,557 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-28 19:12:18,528 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-28 19:12:19,413 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-28 19:12:20,072 [main] INFO org.rm.automation.utils.LogManager - HomePage <=> TabletPage : Clicking on Schedule button
+2015-09-28 19:12:25,035 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-28 19:12:25,036 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-28 19:12:51,284 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:12:51,288 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:12:51,668 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:12:51,668 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:12:54,863 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-28 19:12:54,863 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-28 19:12:55,703 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-28 19:12:56,993 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-28 19:12:59,446 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-28 19:13:00,359 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-28 19:13:01,254 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-28 19:13:01,864 [main] INFO org.rm.automation.utils.LogManager - HomePage <=> TabletPage : Clicking on Schedule button
+2015-09-28 19:13:06,259 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-28 19:13:06,259 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-28 19:13:32,105 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:13:32,109 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:13:32,381 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:13:32,381 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:13:34,912 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-28 19:13:34,913 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-28 19:13:36,313 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-28 19:13:36,829 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-28 19:13:39,705 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-28 19:13:40,702 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-28 19:13:41,781 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-28 19:13:42,536 [main] INFO org.rm.automation.utils.LogManager - HomePage <=> TabletPage : Clicking on Schedule button
+2015-09-28 19:13:46,463 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-28 19:13:46,463 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-28 19:14:13,052 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:14:13,056 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:14:13,144 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:14:13,144 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:14:13,297 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: New Meeting in the room: C305 from: 2015-09-28T17:00:13.000Z to: 2015-09-28T18:00:13.000Z
+2015-09-28 19:14:13,476 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:14:13,959 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:14:14,094 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:14:18,605 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-28 19:14:18,605 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-28 19:14:19,705 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-28 19:14:20,206 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-28 19:14:22,569 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-28 19:14:23,544 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-28 19:14:24,670 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-28 19:14:25,150 [main] INFO org.rm.automation.utils.LogManager - HomePage <=> TabletPage : Clicking on Schedule button
+2015-09-28 19:14:31,847 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 5609c9c1e744c6200539f86f in the room: C305
+2015-09-28 19:14:31,923 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:14:32,253 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-28 19:14:34,236 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-28 19:14:34,237 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-28 19:15:09,235 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:15:09,255 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:15:09,367 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:15:09,368 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:15:11,842 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-28 19:15:11,843 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-28 19:15:13,384 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-28 19:15:14,475 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-28 19:15:16,994 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-28 19:15:18,409 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-28 19:15:19,540 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-28 19:15:20,098 [main] INFO org.rm.automation.utils.LogManager - HomePage <=> TabletPage : Clicking on Schedule button
+2015-09-28 19:15:25,955 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-28 19:15:25,955 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-28 19:15:52,346 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:15:52,350 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:15:52,425 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:15:52,425 [main] INFO org.rm.automation.utils.LogManager - Suite name: Default suite starting
+2015-09-28 19:15:52,558 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Creating the meeting: New Meeting in the room: C305 from: 2015-09-28T17:00:52.000Z to: 2015-09-28T18:00:52.000Z
+2015-09-28 19:15:52,689 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:15:53,263 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:15:53,354 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:15:56,386 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Accessing to the selected conference room
+2015-09-28 19:15:56,386 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing the URL from the RM server
+2015-09-28 19:15:56,975 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM admininstrator's username
+2015-09-28 19:15:58,714 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Typing RM administrator's password
+2015-09-28 19:16:01,654 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Clicking on sign in button to authenticate the account and enable the room selection
+2015-09-28 19:16:02,768 [main] INFO org.rm.automation.utils.LogManager - LoginPage : Setting the rooms of login
+2015-09-28 19:16:03,647 [main] INFO org.rm.automation.utils.LogManager - LoginPageTablet: select room
+2015-09-28 19:16:04,244 [main] INFO org.rm.automation.utils.LogManager - HomePage <=> TabletPage : Clicking on Schedule button
+2015-09-28 19:16:10,716 [main] INFO org.rm.automation.utils.LogManager - MeetingRequests : Deleting the meeting: 5609ca25e744c6200539f870 in the room: C305
+2015-09-28 19:16:10,796 [main] INFO org.rm.automation.utils.LogManager - SERVICEREQUESTS:return service ID 
+2015-09-28 19:16:11,077 [main] INFO org.rm.automation.utils.LogManager - VerifyNextTitleWhenThereisMeeting: Executing Postcondition, removing meeting
+2015-09-28 19:16:13,170 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-28 19:16:13,170 [main] INFO org.rm.automation.utils.LogManager - Test Default suite report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\Default suite
+2015-09-28 19:56:22,996 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:56:23,002 [main] INFO org.rm.automation.utils.LogManager - Suite name: BVT Locations Test Cases starting
+2015-09-28 19:56:23,168 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was opened
+2015-09-28 19:56:23,168 [main] INFO org.rm.automation.utils.LogManager - Suite name: BVT Locations Test Cases starting
+2015-09-28 19:56:23,777 [main] INFO org.rm.automation.utils.LogManager - Executing before test method of associateRoomWithLocation, creating location
+2015-09-28 19:56:23,856 [main] INFO org.rm.automation.utils.LogManager - Executing associateRoomWithLocation Test Case
+2015-09-28 19:56:26,917 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-28 19:56:27,657 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-28 19:56:28,490 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-28 19:56:28,700 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-28 19:56:30,400 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-28 19:56:37,503 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-28 19:56:38,078 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-28 19:56:39,515 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-28 19:56:45,246 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of associateRoomWithLocation, removing location created
+2015-09-28 19:56:45,325 [main] INFO org.rm.automation.utils.LogManager - Executing before test method of createChildLocation, creating parent location
+2015-09-28 19:56:45,329 [main] INFO org.rm.automation.utils.LogManager - Executing createBasicLocation Test Case
+2015-09-28 19:56:52,053 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-28 19:56:52,252 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-28 19:56:55,299 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-28 19:56:55,797 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-28 19:56:57,061 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-28 19:57:08,852 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-28 19:57:10,239 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-28 19:57:16,621 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-28 19:57:22,320 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createChildLocation, removing locations created
+2015-09-28 19:57:22,398 [main] INFO org.rm.automation.utils.LogManager - Executing before test method of editLocation, creating location
+2015-09-28 19:57:22,399 [main] INFO org.rm.automation.utils.LogManager - Executing editLocation Test Case
+2015-09-28 19:57:32,211 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-28 19:57:32,786 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-28 19:57:33,958 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-28 19:57:34,859 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-28 19:57:36,975 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-28 19:57:45,192 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-28 19:57:46,871 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-28 19:57:48,625 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-28 19:57:55,157 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of editLocation, removing location created
+2015-09-28 19:57:55,207 [main] INFO org.rm.automation.utils.LogManager - Executing before test method of removeLocation, creating location
+2015-09-28 19:57:55,208 [main] INFO org.rm.automation.utils.LogManager - Executing removeLocation Test Case
+2015-09-28 19:58:03,813 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-28 19:58:04,599 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-28 19:58:05,832 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-28 19:58:06,093 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-28 19:58:07,618 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-28 19:58:12,903 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-28 19:58:13,448 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-28 19:58:15,505 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-28 19:58:27,842 [main] INFO org.rm.automation.utils.LogManager - Executing before test method of removeLocationAssociated, creating location with a room associated
+2015-09-28 19:58:28,192 [main] INFO org.rm.automation.utils.LogManager - Executing removeLocationAssociated Test Case
+2015-09-28 19:58:33,356 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-28 19:58:33,856 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-28 19:58:35,009 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-28 19:58:35,897 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-28 19:58:36,929 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-28 19:58:47,356 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-28 19:58:50,142 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-28 19:58:52,991 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-28 19:59:04,330 [main] INFO org.rm.automation.utils.LogManager - Executing createBasicLocation Test Case
+2015-09-28 19:59:12,937 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-28 19:59:13,803 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-28 19:59:14,621 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-28 19:59:15,561 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-28 19:59:17,003 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-28 19:59:24,305 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-28 19:59:26,682 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-28 19:59:29,622 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-28 19:59:38,975 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createBasicLocation, removing location created
+2015-09-28 19:59:39,002 [main] INFO org.rm.automation.utils.LogManager - Executing createAssociatedLocation Test Case
+2015-09-28 19:59:48,173 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the credentials
+2015-09-28 19:59:49,075 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the username to sign in
+2015-09-28 19:59:50,117 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Entering the password to sign in
+2015-09-28 19:59:50,559 [main] INFO org.rm.automation.utils.LogManager - LoginPage: Logging in the application
+2015-09-28 19:59:51,413 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-28 20:00:01,235 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Issues option
+2015-09-28 20:00:02,442 [main] INFO org.rm.automation.utils.LogManager - NavigationBarPage: Selecting Locations option
+2015-09-28 20:00:05,437 [main] INFO org.rm.automation.utils.LogManager - HomePage: Logging out of the application
+2015-09-28 20:00:15,513 [main] INFO org.rm.automation.utils.LogManager - Executing after test method of createAssociatedLocation, removing location created
+2015-09-28 20:00:30,564 [main] INFO org.rm.automation.utils.LogManager - Browser: FIREFOX was closed
+2015-09-28 20:00:30,565 [main] INFO org.rm.automation.utils.LogManager - Test BVT Locations Test Cases report location: D:\Monitoreo\MonitorHenry\ProjectRoomManager\QADEV03RoomManager\Qadev03RMFramework\test-output\BVT Locations Test Cases
