@@ -238,8 +238,8 @@ public class ResourcesPage extends HomePage{
 	
 	private boolean isElementPresent(By by, String expected) {
 	   try{
-		   WebElement row = driver.findElement(By.xpath(ResourcesLocators.rowsPath));
-			
+		   driver.findElement(By.xpath(ResourcesLocators.rowsPath));
+		   driver.findElement(by);
 	   }
 	   catch(NoSuchElementException e){
 		   return false;
