@@ -13,9 +13,7 @@
       <class name="org.rm.automation.admin.tests.resources.UpdateIcon"/>		
       <class name="org.rm.automation.admin.tests.resources.UpdateDescription"/>		
       <class name="org.rm.automation.admin.tests.resources.SearchResource"/>		
-      <class name="org.rm.automation.admin.tests.resources.DeleteResource"/>	
-	
-		
+      <class name="org.rm.automation.admin.tests.resources.DeleteResource"/>		
     </classes>		
   </test> <!-- Test -->  		
 </suite> <!-- Suite --> 		

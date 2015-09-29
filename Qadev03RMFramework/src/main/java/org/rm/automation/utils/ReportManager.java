@@ -21,9 +21,6 @@ public class ReportManager {
 	public static void appendImageHyperLink(String filePath){
 		enableHtmlReportEdition();
 		
-//		String failedTestImageLinkTag = "<b>Screenshot: </b><br/>"
-//			+ "<a href=\"[filePath]\">"
-//			+ "<img src=\"[filePath]\" alt=\"\" height='400' width='600'/><br/>";
 		String failedTestImageLinkTag = "<b>Screenshot: </b><br/>"
 				+ "<a href='[filePath]'>"
 				+ "<img src='[filePath]' alt='' height='400' width='600'/><br/>";
@@ -41,8 +38,6 @@ public class ReportManager {
 	public static void appendTestCaseErrorMessage(String testName, String message){
 		enableHtmlReportEdition();
 		
-//		String errorMessageTag = "<a href=\"javascript:toggleElement('[testCaseName]', 'block')\" title=\"Click to expand/collapse\"><b>Test Case Title: [testCaseName]</b></a><br />";
-//		errorMessageTag = errorMessageTag + "<div class=\"stackTrace\" id=\"[testCaseName]\" style=\"display: none;\">[message]</div><br />";
 		String errorMessageTag = "<a href=\"javascript:toggleElement('[testName]', 'block')\" title='Click to expand/collapse'>"
 				                 + "<b>Test Case Title: [testName]</b>"
 				               + "</a><br />"

@@ -5,16 +5,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.rm.automation.admin.locators.tablets.AppearanceTabletPageLocators;
 
 public class AppearanceTabletPage {
 	
 	WebDriver driver;
 	Select Selectcolor ;
 
-	@FindBy(id="palette-select")
+	@FindBy(id = AppearanceTabletPageLocators.SelectColorTablet)
 	WebElement selectColorTalet;
 	
-	@FindBy(xpath="//button[@ng-click='save()']")
+	@FindBy(xpath = AppearanceTabletPageLocators.ButtonSaveLocator)
 	WebElement buttonSave;
 	
 	

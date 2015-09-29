@@ -389,4 +389,19 @@ public class MeetingsRequests {
 		System.out.println(id);
 		return id;
 	}
+	public static JSONObject getMeeting(String name, String roomName) throws ParseException
+	{
+		JSONObject res = null;
+		ArrayList<JSONObject> list;
+		try {
+			list = getRoomMeetings(roomName);
+			for (JSONObject object : list) {
+				if(object.get("title").toString().equals(name))
+					res = object;
+			}
+		} catch (UnsupportedOperationException | IOException e) {
+			e.printStackTrace();
+		}
+		return res;
+	}
 }

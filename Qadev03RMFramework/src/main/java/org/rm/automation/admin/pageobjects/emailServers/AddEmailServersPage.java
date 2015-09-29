@@ -6,28 +6,31 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.rm.automation.admin.locators.emailServers.AddEmailServerPageLocator;
 import org.rm.automation.utils.LogManager;
 
 
 public class AddEmailServersPage {
 	
 	WebDriver driver ; 
-	  @FindBy(xpath="//h3")
+
+	
+	  @FindBy(xpath=AddEmailServerPageLocator.textaddserverLocator)
 	  WebElement textaddserver;
 	  // text para agregar
-	  @FindBy(id="add-mailserver-hostname")
+	  @FindBy(id=AddEmailServerPageLocator.serverinputLocator)
 	  WebElement serverinput;
 	  
-	  @FindBy(id="add-mailserver-username")
+	  @FindBy(id=AddEmailServerPageLocator.usrnameLocator)
 	  WebElement usrname;
 	  
-	  @FindBy(id="add-mailserver-password")
+	  @FindBy(id=AddEmailServerPageLocator.pwusrnameLocator)
 	  WebElement pwusrname;
 	  // botones luego de ingresar datos
-	  @FindBy(xpath="//button[@ng-click='sendRequest()']")
+	  @FindBy(xpath=AddEmailServerPageLocator.addserverbtnLocator)
 	  WebElement addserverbtn;
 	  
-	  @FindBy(xpath="//button[@ng-click='cancel()']")
+	  @FindBy(xpath=AddEmailServerPageLocator.cancelserverbtnLocator)
 	  WebElement cancelserverbtn;
 	  
 	  public AddEmailServersPage(WebDriver driver) {

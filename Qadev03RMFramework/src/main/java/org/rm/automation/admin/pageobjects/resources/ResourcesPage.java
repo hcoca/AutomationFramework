@@ -242,7 +242,7 @@ public class ResourcesPage extends HomePage{
 			
 	   }
 	   catch(NoSuchElementException e){
-		   throw e;
+		   return false;
 	   }
 	   
 	   List<WebElement> list = GetListResources();
