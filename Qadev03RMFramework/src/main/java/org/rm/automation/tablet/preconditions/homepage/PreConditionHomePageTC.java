@@ -1,4 +1,4 @@
-package org.rm.automation.tablet.conditions.homepage;
+package org.rm.automation.tablet.preconditions.homepage;
 
 
 import java.util.ArrayList;
@@ -18,6 +18,7 @@ import org.rm.automation.utils.api.MeetingsRequests;
 public class PreConditionHomePageTC {
 
 	private static String roomName = getRoomName();
+	private static String startTimeAfter = RoomManagerTime.addMinutesToCurrentTime(20);
 	private static String startTimeCurrent = RoomManagerTime.substractMinutesToCurrentTime(2);
 	private static String endTime = RoomManagerTime.addMinutesToCurrentTime(25);
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>		
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">		
-<suite name="Suite for Acceptance test cases">		
+<suite name="Suite for Admin Acceptance test cases">		
 	
 	<suite-files>
 		<suite-file path="./Login.xml" />
@@ -8,7 +8,8 @@
 		<suite-file path="./ConferenceRooms.xml" />
 		<suite-file path="./Locations.xml" />
 		<suite-file path="./Resources.xml" />
-		<!-- suite-file path="./EmailServices.xml" /-->
+		<suite-file path="./Tablet.xml" />
+		<suite-file path="./EmailServices.xml"/>
 	</suite-files>
 		
 </suite> <!-- Suite --> 		

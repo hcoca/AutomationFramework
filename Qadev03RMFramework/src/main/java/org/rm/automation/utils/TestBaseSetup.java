@@ -20,7 +20,7 @@ import org.testng.xml.XmlSuite;
  * of the maven-surefire-plugin each time that it runs.
  */
 @Listeners({org.rm.automation.utils.TestBaseSetup.class})
-public class TestBaseSetup implements ISuiteListener, IReporter{
+public class TestBaseSetup implements ISuiteListener,IReporter{
 	
 	protected static WebDriver driver = null;
 	private Properties settings = ReadPropertyValues
@@ -53,6 +53,7 @@ public class TestBaseSetup implements ISuiteListener, IReporter{
 				LogManager.info("Browser: " + browser + " was opened");
 				LogManager.info("Suite name: " + arg0.getName() + " starting");
 			}
+
 		} 
 		catch (Exception e) {
 			System.out.println("Error....." + e.getStackTrace());

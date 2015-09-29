@@ -1,4 +1,4 @@
-package org.rm.automation.tablet.conditions.homepage;
+package org.rm.automation.tablet.preconditions.meetings;
 
 import java.io.IOException;
 
@@ -6,8 +6,7 @@ import org.json.simple.parser.ParseException;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.api.MeetingsRequests;
 
-public class PostContidionHomePageTC {
-	
+public class PostConditionMeetings {
 	
 	/**
 	 * @param meetingId

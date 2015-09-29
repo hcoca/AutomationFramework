@@ -1,10 +1,10 @@
 package org.rm.automation.tablet.tests.schedule;
 
 import org.rm.automation.utils.TestBaseSetup;
-import org.rm.automation.tablet.conditions.meetings.PreConditionMeetings;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
+import org.rm.automation.tablet.preconditions.meetings.PreConditionMeetings;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 

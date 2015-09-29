@@ -4,15 +4,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.rm.automation.admin.locators.locations.RemoveLocationsPageLocators;
+import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.Waiters;
 import org.testng.Assert;
 public class RemoveLocationsPage {
 	private WebDriver driver;
 	private By confRoomColumn;
-	@FindBy(xpath=RemoveLocationsPageLocators.cancelBtnPath)
-	  WebElement cancelBtn;
-	@FindBy(xpath=RemoveLocationsPageLocators.removeBtnPath)
+	/*@FindBy(xpath="//button[@ng-click='cancel()']")
+	  WebElement cancelBtn;*/
+	@FindBy(xpath="//button[@ng-click='removeLocations()']")
 	  WebElement removeBtn;
 	
 	
@@ -21,6 +21,7 @@ public class RemoveLocationsPage {
 		PageFactory.initElements(driver, this);
 	}
 	private boolean verifyConferenceAssociated(String roomName) {
+		LogManager.info("RemoveLocationsPage: Verifying conference room associated");
 		confRoomColumn = By.xpath("//span[@class='ng-binding' and contains(.,'"+roomName+"')]");
 		WebElement element = driver.findElement(confRoomColumn);
 		if(element.isDisplayed())
@@ -32,17 +33,20 @@ public class RemoveLocationsPage {
 	}
 	public LocationsPage confirmRemoveLocation(String roomName) {
 		Assert.assertTrue(verifyConferenceAssociated(roomName));
-		Waiters.WaitByVisibilityOfWebElement(removeBtn, driver);
+		Waiters.WaitByXPath("//button[@ng-click='removeLocations()']", driver);
 		if(removeBtn.isDisplayed()||removeBtn.isEnabled())
 		{
+			LogManager.info("RemoveLocationsPage: Click on Remove button to confirm remove location");
 			removeBtn.click();
 		}
 		return new LocationsPage(driver);
 	}
 	
 	public LocationsPage confirmRemoveLocation() {
-		Waiters.WaitByVisibilityOfWebElement(removeBtn, driver);if(removeBtn.isDisplayed()||removeBtn.isEnabled())
+		Waiters.WaitByXPath("//button[@ng-click='removeLocations()']", driver);
+		if(removeBtn.isDisplayed()||removeBtn.isEnabled())
 		{
+			LogManager.info("RemoveLocationsPage: Click on Remove button to confirm remove location");
 			removeBtn.click();
 		}
 		return new LocationsPage(driver);

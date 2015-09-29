@@ -111,10 +111,9 @@ public class RoomManagerTime {
 		
 		currentHour = 23 - currentHour;
 		currentMinute = 59 - currentMinute;
-		String stringedCurrentHour = currentHour < 10 ? "0" + currentHour : String.valueOf(currentHour);
 		String stringedCurrentMinute = currentMinute < 10 ? "0" + currentMinute : String.valueOf(currentMinute);
 		
-		res = stringedCurrentHour + ":" + stringedCurrentMinute;
+		res = currentHour + ":" + stringedCurrentMinute;
 		
 		return res;
 	}
@@ -135,16 +134,7 @@ public class RoomManagerTime {
 		return getHomePageTimeFormat(afterAddingMins);
 	}
 	
-	public static String addMinutesToDate(Date myDate, int minutes) {  
-		
-		Calendar calendarDate = Calendar.getInstance();  
-	    calendarDate.setTime(myDate);  
-	    calendarDate.add(Calendar.HOUR, -4); 
-	    calendarDate.add(Calendar.MINUTE, minutes); 
-	    String time = new SimpleDateFormat("HH:mm").format(calendarDate.getTime());
-	    return time;  
-	}
-	public static String addMinutesToDate(int minutes) {
+	public static String addMinutesToDate(int minutes) {  
 		Date myDate = new Date();
 		Calendar calendarDate = Calendar.getInstance();  
 	    calendarDate.setTime(myDate);  

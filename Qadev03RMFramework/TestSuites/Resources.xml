@@ -4,7 +4,8 @@
 	
  <test name="Resources Acceptance Test Cases">		
     <classes>     		
-		
+      <class name="org.rm.automation.admin.tests.resources.DeleteResourceAnother"/>	
+      <class name="org.rm.automation.admin.tests.resources.CreateResourceAnother"/>
       <class name="org.rm.automation.admin.tests.resources.CreateResource"/>
 	  <class name="org.rm.automation.admin.tests.resources.CreateResourceAllFields"/>		
       <class name="org.rm.automation.admin.tests.resources.UpdateName"/>		
@@ -13,8 +14,7 @@
       <class name="org.rm.automation.admin.tests.resources.UpdateDescription"/>		
       <class name="org.rm.automation.admin.tests.resources.SearchResource"/>		
       <class name="org.rm.automation.admin.tests.resources.DeleteResource"/>	
-      <class name="org.rm.automation.admin.tests.resources.DeleteResourceAnother"/>	
-      <class name="org.rm.automation.admin.tests.resources.CreateResourceAnother"/>	
+	
 		
     </classes>		
   </test> <!-- Test -->  		

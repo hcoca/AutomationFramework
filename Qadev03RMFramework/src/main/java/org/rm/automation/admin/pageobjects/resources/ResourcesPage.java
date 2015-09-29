@@ -238,27 +238,27 @@ public class ResourcesPage extends HomePage{
 	
 	private boolean isElementPresent(By by, String expected) {
 	   try{
-		   element = driver.findElement(By.xpath(ResourcesLocators.rowsPath));
-		   
-	    	WebElement element;
+		   WebElement row = driver.findElement(By.xpath(ResourcesLocators.rowsPath));
 			
-			List<WebElement> list = GetListResources();
-			if (list.isEmpty())
-				return true;
-			else 
-			{
-				element = list.get(list.size()-1);
-		    	WebElement nameElement = element.findElement(by);
-		    	String actual = nameElement.getText().toString().replaceAll("\\s","");
-				if(actual.equals(expected))
-					return false;
-				else
-					return true;
-			}
 	   }
 	   catch(NoSuchElementException e){
 		   throw e;
 	   }
+	   
+	   List<WebElement> list = GetListResources();
+		if (list.isEmpty())
+		{
+			return true;
+		}
+		else {
+			element = list.get(list.size()-1);
+	    	WebElement nameElement = element.findElement(by);
+	    	String actual = nameElement.getText().toString().replaceAll("\\s","");
+			if(actual.equals(expected))
+				return false;
+			else
+				return true;
+		}
 	}
 }
 

@@ -22,7 +22,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.rm.automation.tablet.conditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.AvailablePanel;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
@@ -30,6 +29,7 @@ import org.rm.automation.tablet.pageobjects.homepage.NowPanel;
 import org.rm.automation.tablet.pageobjects.homepage.SchedulePanel;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.tablet.pageobjects.meetings.TimeLinePanel;
+import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.MeetingManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.RoomManagerTime;
@@ -40,6 +40,8 @@ public class ThisTestCaseIsToVerifyXX {
 	
 	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{
 		String meetingId = PreConditionHomePageTC.createAfterMeeting("room571", "EXECUTOR");
+		System.out.println("hello ");
+		System.out.println("Is this the improve commit case ever?");
 //		System.out.println(meetingId);
 //		MeetingsRequests.deleteMeeting("5609021be7f18918243aa731", "room571");
 //		List<JSONObject> list = MeetingsRequests.getRoomMeetings("room571");

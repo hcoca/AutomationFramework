@@ -9,15 +9,15 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.rm.automation.tablet.locators.meetings.TimeLinePanelLocators;
+import org.rm.automation.tablet.pageobjects.TabletPage;
 import org.rm.automation.utils.Waiters;
 
 public class TimeLinePanel extends MeetingsPage{
 
-	@FindBy(xpath = TimeLinePanelLocators.MeetingContainerLocator)
+	@FindBy(xpath = "//div[@class='vis-group']")
 	private WebElement meetingContainer;
 	
-	@FindBy(xpath = TimeLinePanelLocators.CurrentTimemarkLocator)
+	@FindBy(xpath = "//div[@class='vis-current-time']")
 	private WebElement currentTimeMark;
 	
 	private WebDriver driver; 
@@ -33,17 +33,17 @@ public class TimeLinePanel extends MeetingsPage{
 	}
 	
 	public void dragMeetingIconImage(String meetingTitle){                                            
-		List<WebElement> list = meetingContainer.findElements(By.xpath(TimeLinePanelLocators.MeetingIconImageLocator));
+		List<WebElement> list = meetingContainer.findElements(By.xpath("//div[@class='vis-item vis-range meeting']"));
 		for(WebElement webeElement : list){
-			String meetingTitleLabel = webeElement.findElement(By.xpath(TimeLinePanelLocators.MeetingIconImageLabelLocator)).getText();
+			String meetingTitleLabel = webeElement.findElement(By.xpath(".//span[@class='vis-item-content']")).getText();
 			if(meetingTitleLabel.equals(meetingTitle)){                               
 				webeElement.click();
-				WebElement dragger = driver.findElement(By.xpath(TimeLinePanelLocators.RightDraggerMeetingIconImageLocator));
+				WebElement dragger = driver.findElement(By.xpath("//div[@class='vis-item vis-range meeting vis-selected']/div[@class='vis-drag-right']"));
 				Waiters.WaitByVisibilityOfWebElement(dragger, driver);
 				
 				Actions builder = new Actions(driver); 
 				Action dragAndDrop = builder.clickAndHold(dragger)
-						.moveByOffset(-100, dragger.getLocation().y)
+						.moveByOffset(/**(dragger.getLocation().x - currentTimeMark.getLocation().x)/4**/ -100, dragger.getLocation().y)
 						.release(dragger)
 						.build();
 				dragAndDrop.perform();
@@ -51,13 +51,13 @@ public class TimeLinePanel extends MeetingsPage{
 		}
 	}
 	
-	public void moveMeetingIconImage(String meetingTitle){                                          
-		List<WebElement> list = meetingContainer.findElements(By.xpath(TimeLinePanelLocators.MeetingIconImageLocator));
-		for(WebElement webeElement : list){                              
-			String meetingTitleLabel = webeElement.findElement(By.xpath(TimeLinePanelLocators.MeetingIconImageLabelLocator)).getText();
+	public void moveMeetingIconImage(String meetingTitle){                                           
+		List<WebElement> list = meetingContainer.findElements(By.xpath("//div[@class='vis-item vis-range meeting']"));
+		for(WebElement webeElement : list){
+			String meetingTitleLabel = webeElement.findElement(By.xpath(".//span[@class='vis-item-content']")).getText();
 			if(meetingTitleLabel.equals(meetingTitle)){                               
 				webeElement.click();
-				WebElement selectedMeeting = driver.findElement(By.xpath(TimeLinePanelLocators.SelectedMeetingIconImageLocator));
+				WebElement selectedMeeting = driver.findElement(By.xpath("//div[@class='vis-item vis-range meeting vis-selected']"));
 				Waiters.WaitByVisibilityOfWebElement(selectedMeeting, driver);
 				
 				Actions builder = new Actions(driver); 

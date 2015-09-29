@@ -1,13 +1,14 @@
 #machine configurations
-server = 172.20.208.142
+server = 172.20.208.113
 port = 4040
 
 #credentials
-username = roompro\\room
-password = Control123!
+username = qadev03\\userRM01
+password = Control123
 authentication = ldap
 
 #sredendial services
+<<<<<<< HEAD
 userES = room
 passwordES = Control123!
 hostnameDomain = roompro.lab
@@ -15,7 +16,17 @@ hostnameDomain = roompro.lab
 
 #urls
 url_adminConsole = http://172.20.208.142:4040/admin
-url_tablet = http://172.20.208.142:4040/tablet/#/register
+url_tablet = http://172.20.208.142:4040/tablet
+=======
+userES = Administrator
+passwordES = Control123
+hostnameDomain = qadev03.rm
+
+
+#urls
+url_adminConsole = http://172.20.208.113:4040/admin
+url_tablet = http://172.20.208.113:4040/tablet/#/register
+>>>>>>> aa63586ed6cb9026f782b6e17d03c8805b2a2f68
 
 #browsers
 browser = "FIREFOX"
