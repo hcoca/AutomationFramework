@@ -10,6 +10,7 @@ import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.OutOfOrderPlanningPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.RoomInfoPage;
+import org.rm.automation.tablet.conditions.conferenceRooms.PreConditionConferenceRooms;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
@@ -39,8 +40,7 @@ public class VerifylogoStateVisible extends TestBaseSetup{
 	
  	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomName = allRooms.get(0).get("displayName").toString();
+		roomName = PreConditionConferenceRooms.getRoomName();
  	}
 	
  	

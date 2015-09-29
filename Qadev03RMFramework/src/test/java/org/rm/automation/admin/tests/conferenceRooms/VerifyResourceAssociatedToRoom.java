@@ -2,23 +2,21 @@ package org.rm.automation.admin.tests.conferenceRooms;
 
 import java.util.Properties;
 
-import org.json.simple.JSONObject;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ResourceAssociationPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.RoomInfoPage;
+import org.rm.automation.tablet.conditions.conferenceRooms.PostConditionConferenceRooms;
+import org.rm.automation.tablet.conditions.conferenceRooms.PreConditionConferenceRooms;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.StringGenerator;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
-import org.rm.automation.utils.api.ResourcesRequests;
 import org.testng.AssertJUnit;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class VerifyResourceAssociatedToRoom extends TestBaseSetup{
@@ -48,19 +46,16 @@ public class VerifyResourceAssociatedToRoom extends TestBaseSetup{
 
 	@BeforeClass
 	public void setUp(){
-		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
 		LogManager.info("VerifyResourceAssociatedToRoom: Executing Precondition, getting a room");
-		roomId = room.get("_id").toString();
-		roomName = room.get("displayName").toString();
-		
-		ResourcesRequests.postResource(resourceName, resourceCustomName, resourceIcon, resourceDescription);
+		roomId = PreConditionConferenceRooms.getRoomId();
+		roomName = PreConditionConferenceRooms.getRoomName();
+
 		LogManager.info("VerifyResourceAssociatedToRoom: Executing Precondition, creating a resource");
-		resourceId = ResourcesRequests.getResourceId(resourceName);
+		resourceId = PreConditionConferenceRooms.postResource(resourceName, resourceCustomName, resourceIcon, resourceDescription);
 	}
 	
 	@Test
 	public void verifyResourceAssociatedToRoom(){
-		LogManager.info("VerifyResourceAssociatedToRoom: Executing Test Case");
 		
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.SignIn(userName, password);
@@ -80,7 +75,7 @@ public class VerifyResourceAssociatedToRoom extends TestBaseSetup{
 	
 	@AfterClass
 	public void tearDown(){
-		ResourcesRequests.deleteResource(resourceId);
 		LogManager.info("VerifyResourceAssociatedToRoom: Executing Postcondition, removing resource");
+		PostConditionConferenceRooms.deleteResource(resourceId);
 	}
 }

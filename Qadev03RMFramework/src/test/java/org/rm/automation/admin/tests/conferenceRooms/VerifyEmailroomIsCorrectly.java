@@ -11,6 +11,7 @@ import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.OutOfOrderPlanningPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ResourceAssociationPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.RoomInfoPage;
+import org.rm.automation.tablet.conditions.conferenceRooms.PreConditionConferenceRooms;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
@@ -42,9 +43,8 @@ public class VerifyEmailroomIsCorrectly extends TestBaseSetup{
 	
  	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomName = allRooms.get(0).get("displayName").toString();
-		emailroom = allRooms.get(0).get("emailAddress").toString();
+		roomName = PreConditionConferenceRooms.getRoomName();
+		emailroom = PreConditionConferenceRooms.getEmailAddress();
  	}
  	
  	@Test
