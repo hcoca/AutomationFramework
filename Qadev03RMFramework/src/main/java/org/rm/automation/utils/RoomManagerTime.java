@@ -111,9 +111,10 @@ public class RoomManagerTime {
 		
 		currentHour = 23 - currentHour;
 		currentMinute = 59 - currentMinute;
+		String stringedCurrentHour = currentHour < 10 ? "0" + currentHour : String.valueOf(currentHour);
 		String stringedCurrentMinute = currentMinute < 10 ? "0" + currentMinute : String.valueOf(currentMinute);
 		
-		res = currentHour + ":" + stringedCurrentMinute;
+		res = stringedCurrentHour + ":" + stringedCurrentMinute;
 		
 		return res;
 	}

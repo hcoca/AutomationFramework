@@ -1,9 +1,9 @@
 package org.rm.automation.tablet.tests.meetings;
+import org.rm.automation.tablet.conditions.homepage.PostContidionHomePageTC;
+import org.rm.automation.tablet.conditions.meetings.PreConditionMeetings;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.meetings.*;
-import org.rm.automation.tablet.preconditions.homepage.PostContidionHomePageTC;
-import org.rm.automation.tablet.preconditions.meetings.PreConditionMeetings;
 import org.rm.automation.utils.ReadPropertyValues;
 
 import java.util.Properties;
