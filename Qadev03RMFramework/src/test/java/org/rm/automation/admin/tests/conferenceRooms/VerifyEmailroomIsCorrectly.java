@@ -1,10 +1,8 @@
 package org.rm.automation.admin.tests.conferenceRooms;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Properties;
 
-import org.json.simple.JSONObject;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
@@ -15,7 +13,6 @@ import org.rm.automation.tablet.conditions.conferenceRooms.PreConditionConferenc
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
-import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 

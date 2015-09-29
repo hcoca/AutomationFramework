@@ -17,32 +17,6 @@ import org.rm.automation.tablet.locators.meetings.MeetingsPageLocator;
 
 public class MeetingsPage extends TabletPage{
 	
-	/*protected final String txtboxOrganizer="txtOrganizer";
-	protected final String txtboxSubject="txtSubject";
-	protected final String txtboxAttendees="(//input[@type='text'])[3]";
-	protected final String txtboxBody="txtBody";
-	protected final String txtboxStart="//input[@type='time']";
-	protected final String txtboxEnd="(//input[@type='time'])[2]";
-	protected final String txtboxStartDate="//input[@ng-model='editable.from' and @type='date']";
-	protected final String txtboxEndDate="//input[@ng-model='editable.to' and @type='date']";
-	protected final String txtboxPassword="//input[@type='password']";
-	protected final String bttnCreate="//button[@class='clean item item-btn']";
-	protected final String bttnUpdate="//button[contains(.,'Update')]";
-	protected final String bttnRemove="//button[contains(.,'Remove')]";	
-	protected final String bttnSave="//html/body/div[2]/div/div/div[2]/rm-modal/div[2]/div/div/div/ng-transclude/div/div/div[4]/div/button[2]";
-	protected final String bttnSaveDelete="//html/body/div[2]/div/div/div[2]/rm-modal/div[2]/div/div/div/ng-transclude/div/div/div[4]/div/button[2]";
-	protected final String dvMeeting="//div[@id='timelinePanel']/rm-vis/div/div[4]/div/div/div[2]/div/div";
-	protected final String dvAdvice="//div[@class='ng-binding ng-scope']";
-	protected final String dvRoomName="//html/body/div[2]/div/div/div[1]/div[2]/div[2]";
-	protected final String icnRemoveAttendee="//i[contains(@ng-click,'remove($index)')]";
-	protected final String spnAttendee="//span[@class='rm-tag-elem ng-binding']";
-	protected final String spnTime="//span[@ng-bind='currentTime']";
-	protected final String spnScheduleTitle="//span[contains(.,'Schedule')]";
-	protected final String divErrMsSubject="//small[@ng-show='formErrors.title' and contains(.,'Subject is required')]";
-	protected final String divErrMsOrganizer="//small[@ng-show='formErrors.organizer' and contains(.,'Organizer is required')]";
-	protected final String divErrMsStartTime="//small[@ng-show='formErrors.intervalInvalid' and contains(.,'Start time must be smaller than end time')]";
-	protected final String divConfirmUpdateMs="//div[contains(.,'Meeting successfully updated')]";*/
-	
 	private WebElement element;
 	
 	private Properties settings = ReadPropertyValues
