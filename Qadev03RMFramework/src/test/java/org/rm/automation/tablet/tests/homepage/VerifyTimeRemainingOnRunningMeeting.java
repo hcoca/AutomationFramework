@@ -1,11 +1,11 @@
 package org.rm.automation.tablet.tests.homepage;
 
 
+import org.rm.automation.tablet.conditions.homepage.PostContidionHomePageTC;
+import org.rm.automation.tablet.conditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.homepage.NowPanel;
-import org.rm.automation.tablet.preconditions.homepage.PostContidionHomePageTC;
-import org.rm.automation.tablet.preconditions.homepage.PreConditionHomePageTC;
 import org.rm.automation.utils.MeetingManager;
 import org.rm.automation.utils.TestBaseSetup;
 import org.testng.Assert;

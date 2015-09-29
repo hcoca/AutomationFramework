@@ -2,12 +2,12 @@ package org.rm.automation.tablet.pageobjects.homepage;
 
 import java.util.Properties;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.rm.automation.tablet.pageobjects.homepage.HomePage;
+import org.rm.automation.tablet.locators.homepage.HomePageLocators;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.tablet.pageobjects.search.SearchPage;
 import org.rm.automation.utils.LogManager;
@@ -23,16 +23,22 @@ public class HomePage {
 	private String url = "http://"+server+":"+port;
 	
 	protected WebDriver driver;
-	private By scheduleButton = By.cssSelector("rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-schedule");	
-	private By searchButton = By.cssSelector("rm-panel-option.tile-column-option.tile-column-option-landscape > div.tile-button-search");
-	private By homeButton = By.id("go-home");
 	
-	@FindBy(xpath = "//span[@class='room-label ng-binding']")
-	private WebElement labelRoomName;
+	@FindBy(css = HomePageLocators.scheduleButton )
+	protected WebElement scheduleButton;
+	
+	@FindBy(css = HomePageLocators.searchButton )
+	protected WebElement searchButton;
+	
+	@FindBy(id = HomePageLocators.homeButton)
+	protected WebElement homeButton;
+	
+	@FindBy(xpath = HomePageLocators.labelRoomName )
+	protected WebElement labelRoomName;
 	
 	
-	@FindBy(xpath = "//span[@ng-bind='currentTime']")
-	private WebElement cuerrentTime;
+	@FindBy(xpath = HomePageLocators.cuerrentTime )
+	protected WebElement cuerrentTime;
 	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -42,25 +48,22 @@ public class HomePage {
 	public MeetingsPage selectSchedulePage()
 	{
 		LogManager.info("HomePage <=> TabletPage : Clicking on Schedule button");
-		WebElement scheduleBtn = driver.findElement(scheduleButton);
-		if(scheduleBtn.isDisplayed())
-			scheduleBtn.click();
+		if(scheduleButton.isDisplayed())
+			scheduleButton.click();
 		return new MeetingsPage(driver);
 	}
 	
 	public SearchPage selectSearchPage(){
 		LogManager.info("HomePage <=> TabletPage : Clicking on Search button");
-		WebElement searchBtn = driver.findElement(searchButton);
-		if(searchBtn.isDisplayed())
-			searchBtn.click();
+		if(searchButton.isDisplayed())
+			searchButton.click();
 		return new SearchPage(driver);
 	}
 	
 	public HomePage goHomePage(){
 		LogManager.info("HomePage <=> TabletPage : Clicking on Home icon");
-		WebElement homeBtn = driver.findElement(homeButton);
-		if(homeBtn.isDisplayed())
-			homeBtn.click();
+		if(homeButton.isDisplayed())
+			homeButton.click();
 		return new HomePage(driver);
 	}
 	

@@ -3,7 +3,6 @@ package org.rm.automation.tablet.pageobjects.homepage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.rm.automation.tablet.locators.homepage.NextHomePanelLocators;
 import org.rm.automation.utils.Waiters;
 
@@ -13,20 +12,19 @@ public class NextHomePanel extends HomePage {
 	protected WebElement mainPanel;
 	
 	@FindBy(xpath = NextHomePanelLocators.TitleNextLocator)
-	WebElement tittlenext;
+	protected WebElement tittlenext;
 	
 	@FindBy(xpath = NextHomePanelLocators.OrganizerNextLocator)
-	WebElement organizerNext;
+	protected WebElement organizerNext;
 	
 	@FindBy(xpath = NextHomePanelLocators.TimeNextStartLocator)
-	WebElement timenextStar;
+	protected WebElement timenextStar;
 	
 	@FindBy(xpath = NextHomePanelLocators.TimeNextEndLocator)
-	WebElement timeNextEnd;
+	protected WebElement timeNextEnd;
 
 	public NextHomePanel(WebDriver driver){
 		super(driver);
-		PageFactory.initElements(driver, this);
 	}
 	
 	public void waitForMainPanel(){

@@ -5,19 +5,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.rm.automation.admin.locators.emailServers.RemoveServerPageLocator;
 import org.rm.automation.utils.LogManager;
 
 public class RemoveServerpage {
 	
 	  WebDriver driver;
 
-	  @FindBy(xpath="//div[2]/div/div/span")
+	  @FindBy(xpath=RemoveServerPageLocator.popdeleteLocator)
 	  WebElement popdelete;
 	  
-	  @FindBy(xpath="//button[@ng-click='onYes()']")
+	  @FindBy(xpath=RemoveServerPageLocator.btnyesdeleteLocator)
 	  WebElement btnyesdelete;
 	  
-	  @FindBy(xpath="//button[@ng-click='onNo()']")
+	  @FindBy(xpath=RemoveServerPageLocator.btnnodeleteLocator)
 	  WebElement btnnodelete;
 	  
 	  public RemoveServerpage(WebDriver driver)
