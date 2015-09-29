@@ -239,8 +239,6 @@ public class ResourcesPage extends HomePage{
 	private boolean isElementPresent(By by, String expected) {
 	   try{
 		   element = driver.findElement(By.xpath(ResourcesLocators.rowsPath));
-		   
-	    	WebElement element;
 			
 			List<WebElement> list = GetListResources();
 			if (list.isEmpty())
