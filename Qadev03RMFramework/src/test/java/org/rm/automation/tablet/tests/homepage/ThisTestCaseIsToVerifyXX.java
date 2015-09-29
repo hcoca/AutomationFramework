@@ -41,6 +41,7 @@ public class ThisTestCaseIsToVerifyXX {
 	public static void main(String[] ar) throws UnsupportedOperationException, IOException, ParseException{
 		String meetingId = PreConditionHomePageTC.createAfterMeeting("room571", "EXECUTOR");
 		System.out.println("hello word");
+		System.out.println("Is this the best test case ever?");
 //		System.out.println(meetingId);
 //		MeetingsRequests.deleteMeeting("5609021be7f18918243aa731", "room571");
 //		List<JSONObject> list = MeetingsRequests.getRoomMeetings("room571");
