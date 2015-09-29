@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>		
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">		
+<suite name="BVT Tablet Test Cases">		
+	
+ <test name="Tablet Acceptance Test Cases">		
+    <classes>     		
+		
+      <class name="org.rm.automation.admin.tests.tablets.ChangeColorTablet"/>
+    </classes>		
+  </test> <!-- Test -->  		
+</suite> <!-- Suite --> 

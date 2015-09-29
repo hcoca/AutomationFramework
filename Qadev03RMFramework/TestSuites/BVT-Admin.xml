@@ -8,7 +8,8 @@
 		<suite-file path="./ConferenceRooms.xml" />
 		<suite-file path="./Locations.xml" />
 		<suite-file path="./Resources.xml" />
-		<!-- suite-file path="./EmailServices.xml" /-->
+		<suite-file path="./Tablet.xml" />
+		<suite-file path="./EmailServices.xml"/>
 	</suite-files>
 		
 </suite> <!-- Suite --> 		
