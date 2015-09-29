@@ -1,4 +1,4 @@
-package org.rm.automation.tablet.conditions.conferenceRooms;
+package org.rm.automation.admin.conditions.conferenceRooms;
 
 import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.rm.automation.utils.api.ResourcesRequests;
@@ -19,5 +19,9 @@ public class PostConditionConferenceRooms {
 
 	public static void setConferenceRoomName(String roomId, String roomName) {
 		ConferenceRoomsRequests.putRoom(roomId, roomName);
+	}
+
+	public static void setEnabledStatus(String roomId, boolean enabledStatus) {
+		ConferenceRoomsRequests.setValue(roomId, "enabled", String.valueOf(enabledStatus));
 	}
 }

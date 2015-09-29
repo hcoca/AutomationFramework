@@ -1,4 +1,4 @@
-package org.rm.automation.tablet.conditions.conferenceRooms;
+package org.rm.automation.admin.conditions.conferenceRooms;
 
 import java.util.ArrayList;
 
@@ -31,6 +31,11 @@ public class PreConditionConferenceRooms {
 		return allRooms.get(0).get("code").toString();
 	}
 	
+	public static String getRoomEnabledState(){
+		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
+		return allRooms.get(0).get("enabled").toString();
+	}
+	
 	public static int getNumberOfRooms(){
 		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
 		return allRooms.size();
@@ -51,5 +56,9 @@ public class PreConditionConferenceRooms {
 			String resourceDescription) {
 		ResourcesRequests.postResource(resourceName, resourceCustomName, resourceIcon, resourceDescription);
 		return ResourcesRequests.getResourceId(resourceName);
+	}
+
+	public static void setEnabledStatus(String roomId, boolean enabledStatus) {
+		ConferenceRoomsRequests.setValue(roomId, "enabled", String.valueOf(enabledStatus));
 	}
 }

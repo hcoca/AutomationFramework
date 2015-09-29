@@ -2,7 +2,8 @@ package org.rm.automation.admin.tests.conferenceRooms;
 
 import java.util.Properties;
 
-import org.json.simple.JSONObject;
+import org.rm.automation.admin.conditions.conferenceRooms.PostConditionConferenceRooms;
+import org.rm.automation.admin.conditions.conferenceRooms.PreConditionConferenceRooms;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
@@ -15,7 +16,6 @@ import org.testng.AssertJUnit;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 
 /**
  * @author Pedro David Fuentes Antezana.
@@ -43,14 +43,11 @@ public class VerifyRoomStateDisabled extends TestBaseSetup{
 	
  	@BeforeClass
  	public void setup(){
- 		JSONObject room = ConferenceRoomsRequests.getRooms().get(0);
  		LogManager.info("VerifyRoomStateDisabled: Executing Precondition, getting a room");
-		roomId = room.get("_id").toString();
-		roomEnabled = room.get("enabled").toString();
-		roomName = room.get("displayName").toString();
-		if(roomEnabled.equals("false")){
-			ConferenceRoomsRequests.setValue(roomId, "enabled", "true");
-		}
+ 		roomName = PreConditionConferenceRooms.getRoomName();
+ 		roomId = PreConditionConferenceRooms.getRoomId();
+		roomEnabled = PreConditionConferenceRooms.getRoomEnabledState();
+		PreConditionConferenceRooms.setEnabledStatus(roomId, true);
  	}
 	
 	@Test
@@ -73,7 +70,7 @@ public class VerifyRoomStateDisabled extends TestBaseSetup{
 	
 	@AfterClass
 	public void tearDown(){
-		ConferenceRoomsRequests.setValue(roomId, "enabled", roomEnabled);
 		LogManager.info("VerifyRoomStateDisabled: Executing Postcondition, updating room state to its original value");
+		PostConditionConferenceRooms.setEnabledStatus(roomId, Boolean.getBoolean(roomEnabled));
 	}
 }
