@@ -258,23 +258,19 @@ public class MeetingsPage extends TabletPage{
 	}
 	
 	
-	//===> aki fata //
 	public MeetingsPage setStartTime(String begin){
-		//Waiters.WaitByVisibilityOfWebElement("//input[@type='time']",driver);
-		element = driver.findElement(By.xpath("//input[@type='time']"));
-		element.clear();
-		element.sendKeys(begin);		
+		Waiters.WaitByVisibilityOfWebElement(tbStartTime,driver);
+		tbStartTime.clear();
+		tbStartTime.sendKeys(begin);		
 		return this;
 	}
 	public MeetingsPage setEndTime(String end){
-		//Waiters.WaitByVisibilityOfWebElement("(//input[@type='time'])[2]",driver);
-		element = driver.findElement(By.xpath("(//input[@type='time'])[2]"));
-		element.clear();
-		element.sendKeys(end);		
+		Waiters.WaitByVisibilityOfWebElement(tbEndTime,driver);
+		tbEndTime.clear();
+		tbEndTime.sendKeys(end);		
 		return this;
 	}
 	public MeetingsPage selectMeeting(String subjectMeeting){
-		//Waiters.WaitByVisibilityOfWebElement("//span[contains(.,'"+subjectMeeting+"')]",driver);
 		element = driver.findElement(By.xpath("//span[contains(.,'"+subjectMeeting+"')]"));
 		element.click();
 		return this;
