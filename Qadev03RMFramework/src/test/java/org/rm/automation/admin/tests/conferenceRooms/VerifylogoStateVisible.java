@@ -1,10 +1,9 @@
 package org.rm.automation.admin.tests.conferenceRooms;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Properties;
 
-import org.json.simple.JSONObject;
+import org.rm.automation.admin.conditions.conferenceRooms.PreConditionConferenceRooms;
 import org.rm.automation.admin.pageobjects.HomePage;
 import org.rm.automation.admin.pageobjects.LoginPage;
 import org.rm.automation.admin.pageobjects.conferenceRooms.ConferenceRoomsPage;
@@ -13,9 +12,7 @@ import org.rm.automation.admin.pageobjects.conferenceRooms.RoomInfoPage;
 import org.rm.automation.utils.LogManager;
 import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
-import org.rm.automation.utils.api.ConferenceRoomsRequests;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import junit.framework.Assert;
@@ -39,8 +36,7 @@ public class VerifylogoStateVisible extends TestBaseSetup{
 	
  	@BeforeClass
  	public void setup() throws UnsupportedOperationException, IOException{
-		ArrayList<JSONObject> allRooms = ConferenceRoomsRequests.getRooms();
-		roomName = allRooms.get(0).get("displayName").toString();
+		roomName = PreConditionConferenceRooms.getRoomName();
  	}
 	
  	

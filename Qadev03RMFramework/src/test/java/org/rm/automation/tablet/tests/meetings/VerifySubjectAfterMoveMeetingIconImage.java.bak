@@ -1,12 +1,12 @@
 package org.rm.automation.tablet.tests.meetings;
 
-import org.rm.automation.tablet.conditions.homepage.PostContidionHomePageTC;
-import org.rm.automation.tablet.conditions.meetings.PreConditionMeetings;
 import org.rm.automation.tablet.pageobjects.LoginPage;
 import org.rm.automation.tablet.pageobjects.homepage.HomePage;
 import org.rm.automation.tablet.pageobjects.homepage.SchedulePanel;
 import org.rm.automation.tablet.pageobjects.meetings.MeetingsPage;
 import org.rm.automation.tablet.pageobjects.meetings.TimeLinePanel;
+import org.rm.automation.tablet.preconditions.homepage.PostContidionHomePageTC;
+import org.rm.automation.tablet.preconditions.meetings.PreConditionMeetings;
 import org.rm.automation.utils.TestBaseSetup;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -16,10 +16,10 @@ import org.testng.annotations.Test;
 /**
  * @author Pedro David Fuentes Antezana
  * 
- * This test case is to verify the Starting time of a meeting that has already been updated by
+ * This test case is to verify the Subject of a meeting that has already been updated by
  * moving its icon image in the time line panel of the schedule page.   
  */
-public class VerifyStartTimeAfterMoveMeetingIconImage extends TestBaseSetup {
+public class VerifySubjectAfterMoveMeetingIconImage extends TestBaseSetup {
 	// Page objects for this test
 	private LoginPage login;
 	private HomePage homePage;
@@ -40,7 +40,7 @@ public class VerifyStartTimeAfterMoveMeetingIconImage extends TestBaseSetup {
 	private String actualResult;
 	
 	// Error message.
-	private String errorMessage = " The Starting time is different than we exepected.";
+	private String errorMessage = " The Subject is different than we exepected.";
 	
  	@BeforeClass
  	public void setup(){
@@ -50,7 +50,7 @@ public class VerifyStartTimeAfterMoveMeetingIconImage extends TestBaseSetup {
  	}
  	
  	@Test
- 	public void verifyStartTimeAfterMoveMeetingIconImage(){
+ 	public void verifySubjectAfterMoveMeetingIconImage(){
  		login = new LoginPage(driver);
  		homePage = login.access(roomName);
  		schedulePanel = new SchedulePanel(homePage.getDriver());
@@ -58,13 +58,13 @@ public class VerifyStartTimeAfterMoveMeetingIconImage extends TestBaseSetup {
  		timeLinePanel = new TimeLinePanel(meetingsPage.getDriver());
  		timeLinePanel.moveMeetingIconImage(meetingTitle);
  		
- 		expectedResult = timeLinePanel.getStartTimeText();
+ 		expectedResult = timeLinePanel.getSubjectText();
  		
 		timeLinePanel.confirmMeeting();
 		timeLinePanel.confirmUser(userPassword);
 		timeLinePanel.saveMeeting();
  		
-		actualResult = timeLinePanel.getStartTimeText();
+		actualResult = timeLinePanel.getSubjectText();
 
 		Assert.assertEquals(actualResult, expectedResult, errorMessage);
  	}

@@ -15,6 +15,7 @@ import org.rm.automation.utils.ReadPropertyValues;
 import org.rm.automation.utils.TestBaseSetup;
 import org.rm.automation.utils.api.ServicesRequests;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 
 
 public class RemoveServer extends TestBaseSetup {
@@ -58,7 +59,7 @@ public class RemoveServer extends TestBaseSetup {
 	}
   }
   */
-  @AfterClass
+  @AfterTest
   public void AfterTest(){
 	  try {
 			LogManager.info("RemoveServer Test: after test add service");
