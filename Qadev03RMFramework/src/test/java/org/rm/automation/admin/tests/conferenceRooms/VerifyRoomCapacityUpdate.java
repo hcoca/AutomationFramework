@@ -50,7 +50,9 @@ public class VerifyRoomCapacityUpdate extends TestBaseSetup{
  		LogManager.info("VerifyRoomCapacityUpdate: Executing Precondition, getting a room");
  		roomId = PreConditionConferenceRooms.getRoomId();
 		roomName = PreConditionConferenceRooms.getRoomName();
+		System.out.println("The room before getting room capacity: \n" + ConferenceRoomsRequests.getRoom(roomId));
 		roomCapacity = PreConditionConferenceRooms.getCapacity();
+		System.out.println("The room after getting room capacity: \n" + ConferenceRoomsRequests.getRoom(roomId));
  	}
 	
 	@Test
@@ -63,6 +65,7 @@ public class VerifyRoomCapacityUpdate extends TestBaseSetup{
 		roomInfo = conferenceRoom.doubleClickConferenceRoom(roomName);
 		roomInfo = roomInfo.setCapacity(updatedCapacity);
 		conferenceRoom = roomInfo.clickSaveBtn();
+		System.out.println("The room after updating capacity: \n" + ConferenceRoomsRequests.getRoom(roomId));
 		
 		expectedResult = updatedCapacity;
 		actualJSONResult = ConferenceRoomsRequests.getRoom(roomId).get("capacity").toString();
@@ -76,5 +79,6 @@ public class VerifyRoomCapacityUpdate extends TestBaseSetup{
 	public void tearDown(){
 		LogManager.info("VerifyRoomCapacityUpdate: Executing Postcondition, updating capacity to its original value");
 		PostConditionConferenceRooms.setConferenceRoomCapacity(roomId, "capacity", roomCapacity);
+		System.out.println("The room after restoring capacity: \n" + ConferenceRoomsRequests.getRoom(roomId));
 	}
 }

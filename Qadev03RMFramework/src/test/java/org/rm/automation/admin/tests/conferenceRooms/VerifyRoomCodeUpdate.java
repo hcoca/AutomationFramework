@@ -51,6 +51,7 @@ public class VerifyRoomCodeUpdate extends TestBaseSetup{
 		roomId = PreConditionConferenceRooms.getRoomId();
 		roomCode = PreConditionConferenceRooms.getRoomCode();
 		roomName = PreConditionConferenceRooms.getRoomName();
+		System.out.println("The room after getting code value: \n" + ConferenceRoomsRequests.getRoom(roomId));
  	}
 	
 	@Test
@@ -63,6 +64,7 @@ public class VerifyRoomCodeUpdate extends TestBaseSetup{
 		roomInfo = conferenceRoom.doubleClickConferenceRoom(roomName);
 		roomInfo = roomInfo.setCode(updatedCode);
 		conferenceRoom = roomInfo.clickSaveBtn();
+		System.out.println("The room after updating code value: \n" + ConferenceRoomsRequests.getRoom(roomId));
 		
 		expectedResult = updatedCode;
 		actualJSONResult = ConferenceRoomsRequests.getRoom(roomId).get("code").toString();
@@ -76,5 +78,6 @@ public class VerifyRoomCodeUpdate extends TestBaseSetup{
 	public void tearDown(){
 		LogManager.info("VerifyRoomCodeUpdate: Executing Postcondition, updating code to its original value");
 		PostConditionConferenceRooms.setConferenceRoomCode(roomId, "code", roomCode);
+		System.out.println("The room after restoring code value: \n" + ConferenceRoomsRequests.getRoom(roomId));
 	}
 }

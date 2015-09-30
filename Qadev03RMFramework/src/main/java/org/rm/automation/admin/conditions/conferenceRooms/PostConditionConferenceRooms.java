@@ -21,7 +21,7 @@ public class PostConditionConferenceRooms {
 		ConferenceRoomsRequests.putRoom(roomId, roomName);
 	}
 
-	public static void setEnabledStatus(String roomId, boolean enabledStatus) {
-		ConferenceRoomsRequests.setValue(roomId, "enabled", String.valueOf(enabledStatus));
+	public static void setEnabledStatus(String roomId, String enabledStatus) {
+		ConferenceRoomsRequests.setValue(roomId, "enabled", enabledStatus);
 	}
 }

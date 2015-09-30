@@ -47,7 +47,9 @@ public class VerifyRoomStateDisabled extends TestBaseSetup{
  		roomName = PreConditionConferenceRooms.getRoomName();
  		roomId = PreConditionConferenceRooms.getRoomId();
 		roomEnabled = PreConditionConferenceRooms.getRoomEnabledState();
+		System.out.println("The room before updating enabled value: \n" + ConferenceRoomsRequests.getRoom(roomId));
 		PreConditionConferenceRooms.setEnabledStatus(roomId, true);
+		System.out.println("The room after using precondition enabled to true: \n" + ConferenceRoomsRequests.getRoom(roomId));
  	}
 	
 	@Test
@@ -60,6 +62,7 @@ public class VerifyRoomStateDisabled extends TestBaseSetup{
 		roomInfo = conferenceRoom.doubleClickConferenceRoom(roomName);
 		roomInfo = roomInfo.clickPowerOnBtn();
 		conferenceRoom = roomInfo.clickSaveBtn();
+		System.out.println("The room after updating enabled value: \n" + ConferenceRoomsRequests.getRoom(roomId));
 		
 		actualJSONResult = (boolean)ConferenceRoomsRequests.getRoom(roomId).get("enabled");
 		AssertJUnit.assertFalse(actualJSONResult);
@@ -71,6 +74,7 @@ public class VerifyRoomStateDisabled extends TestBaseSetup{
 	@AfterClass
 	public void tearDown(){
 		LogManager.info("VerifyRoomStateDisabled: Executing Postcondition, updating room state to its original value");
-		PostConditionConferenceRooms.setEnabledStatus(roomId, Boolean.getBoolean(roomEnabled));
+		PostConditionConferenceRooms.setEnabledStatus(roomId, roomEnabled);
+		System.out.println("The room after restoring enabled value: \n" + ConferenceRoomsRequests.getRoom(roomId));
 	}
 }
